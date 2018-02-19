@@ -2,7 +2,7 @@
 <aiml version="2.0">
 
 
-<category><pattern><set>greetings</set> ^</pattern>
+<category><pattern><set>greetings</set> </pattern>
     <template>Hello! What is your name?</template>
 </category>
 
