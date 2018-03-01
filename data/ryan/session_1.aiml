@@ -7,13 +7,15 @@
 </category>
 
 <!-- USER'S NAME -->
+
+<!-- There's a duplicate here (can run without below, but not without second one) -->
 <category><pattern>MY NAME IS *</pattern>
     <that>WHAT IS YOUR NAME</that>
     <template>
         <think><set name = "name"><star/></set></think>
         Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?
     </template>
-</category>
+</category> 
 
 <category><pattern>*</pattern>
     <that>WHAT IS YOUR NAME</that>
@@ -30,6 +32,7 @@
 </category>
 
 <!-- USER AGREEMENT/DIAGREEMENT TO TALK TO RYAN -->
+
 <category><pattern><set>yes</set></pattern>
     <that>DOES THAT SOUND GOOD TO YOU</that>
     <template>Awesome! First, I guess I should tell you a little bit about how I work. I use a technique called cognitive behavioral therapy to track your mood in order to help you reshape your thoughts in positive ways. The most important thing to remember is that I'm a robot. This means that I'm going to say some silly things that don't always make a bunch of sense. More importantly, this means that I am not in any way a liscensed therapist or a professional of any sort. If you ever need actual help, please seek out a real person who will be able to help you. Enough about me! Lets focus on you. Are you ready to start?</template>
@@ -69,7 +72,7 @@
     <template>In order for me to be the most helpful for you, I'll need to know a few things about you first. Do you mind answering a few questions for me? It will only take a few moments.</template>
 </category>
 
-<!-- NO PHQ9 -->
+<!-- NO PHQ9 (YES PHQ9 LOCATED IN phq_9)-->
 <category><pattern><set>no</set></pattern>
     <that>IT WILL ONLY TAKE A FEW MOMENTS</that>
     <template>That's okay! The questions just help me to form a broader picture of you that can help me determine the best ways to help you. Maybe next time. Are you ready to move on?</template>
