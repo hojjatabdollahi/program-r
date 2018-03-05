@@ -25,7 +25,8 @@
 
 <!-- QUESTION 2 -->
 <category><pattern>NOT AT ALL</pattern>
-    <that>HOW MANY TIMES IN THE LAST TWO WEEKS HAVE YOU FELT BOTHERED BY HAVING LITTLE INTEREST OR PLEASURE IN DOING THINGS</that>
+   <!-- commenting out the that worked, so it has something to do with that (but broke around question 8) -->
+   <!-- <that>HOW MANY TIMES IN THE LAST TWO WEEKS HAVE YOU FELT BOTHERED BY HAVING LITTLE INTEREST OR PLEASURE IN DOING THINGS</that> -->
     <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the last two weeks, how often have you felt bothered by feeling down, depressed, or hopeless?</template>
 </category>
 
