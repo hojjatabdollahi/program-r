@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
+<!-- test -->
+<!-- this works, but you have to set what the first part is (so set the state in this case to x and it will respond based on what x is -->
+<category>
+    <pattern> HOW ARE YOU FEELING TODAY</pattern>
+    <template>
+        <think><set name="state"> sad</set></think>
+        <condition name="state" value="happy">
+            I am happy!
+        </condition>
+        <condition name="state" value="sad">
+            I am sad!
+        </condition>
+    </template>
+</category>
+
 
 <category><pattern><set>greetings</set> </pattern>
     <template>Hello! What is your name?</template>
