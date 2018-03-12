@@ -2,7 +2,7 @@
 <aiml version="2.0">
 
 <!-- test -->
-<!-- this works, but you have to set what the first part is (so set the state in this case to x and it will respond based on what x is -->
+<!-- this works, but you have to set what the first part is (so set the state in this case to x and it will respond based on what x is, rather than checking the status of a variable or something like that) -->
 <category>
     <pattern> HOW ARE YOU FEELING TODAY</pattern>
     <template>
