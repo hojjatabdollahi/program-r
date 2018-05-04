@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!-- DELETE ME, FOR TESTING PURPOSES ONLY -->
+
+<category>
+    <pattern>CAPISCI</pattern>
+     <!--<that>CAPISCI ANSWER</that>-->
+    <template>Yes! Now let's begin.</template>
+</category>
+
+<category><pattern><set>yes</set></pattern>
+    <!--<that>CAPISCI ANSWER</that>-->
+    <template>Welcome to session 2!</template>
+</category>
+
+<category>
+    <that>WELCOME BACK</that>
+    <template>
+         Hi <get name = "name"/>! I just want you to know what tremendous progress you've made in improving your mood by talking to me. I know that it might not seem like you've made progress on some days, but it is a slow process and you're on the right track.
+    </template>
+
+</category>
+
+
+
+
+</aiml>
