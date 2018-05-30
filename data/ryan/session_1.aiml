@@ -3,7 +3,7 @@
 
 <!-- test -->
 <!-- this works, but you have to set what the first part is (so set the state in this case to x and it will respond based on what x is, rather than checking the status of a variable or something like that) -->
-<category>
+<!-- <category>
     <pattern> HOW ARE YOU FEELING TODAY</pattern>
     <template>
         <think><set name="state"> sad</set></think>
@@ -14,12 +14,11 @@
             I am sad!
         </condition>
     </template>
-</category>
-
+</category> -->
 
 <category><pattern><set>greetings</set> </pattern>
     <template>Hello! What is your name?</template>
-</category>
+</category> 
 
 <!-- USER'S NAME -->
 

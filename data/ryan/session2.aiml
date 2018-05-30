@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!--dialogue Courtney programmed is wordy. this will most likely have to be cut down; especially if it's being read out loud-->
+
+ <!-- DELETE ME, for testing purposes, need to correct start of this -->
+<category>
+    <pattern>CAPISCI</pattern>
+    <template>Yes! Now let us begin.</template>
+</category>
+
+<category><pattern><set>yes</set></pattern>
+   <that>NOW LET US BEGIN</that>
+    <template>Hi <get name = "name"/>! Welcome to session 2! I just want you to know what tremendous progress you've made in improving your mood by talking to me. I know that it might not seem like you've made progress on some days, but it is a slow process and you're on the right track. Perhaps this process would be easier to understand if I told you about your brain. Would you like me to tell you about how it works? </template>
+</category>
+
+<!-- USER DOESN'T WANT TO HEAR ABOUT THE BRAIN --> 
+<category><pattern><set>no</set></pattern>
+    <that>WOULD YOU LIKE ME TO TELL YOU ABOUT HOW IT WORKS</that>
+    <template> Okay I understand! Let's talk about our thoughts instead. So with your brain used to handling all of your physical functions, it's no wonder that it also handles many of your mental functions as well. If fact, you have many thoughts without being consciously aware of them. For the most part, these are all just normal thoughts that help you throughout the day. However, sometimes these unconscious thoughts can be detrimental to your overall well-being. Remember when I explained how your thoughts affect your actions and moods? Well, if you are having constant negative subconscious thoughts, they will start to affect your body and mind. But don't worry, <get name = "name"/>! You are ultimately in charge of your thoughts, so if you start to notice destructive thoughts, you have the power to change them. I'm just here to help you notice when you have destructive thoughts and how you can change them to be more constructive. How about we talk about how we can do this? </template>
+</category>
+
+<!-- USER WANTS TO HEAR MORE ABOUT THE BRAIN -->
+<category><pattern><set>yes</set></pattern>
+    <that>WOULD YOU LIKE ME TO TELL YOU ABOUT HOW IT WORKS</that>
+    <template> Okay! Almost all of your physical activity is unconscious. You rarely ever think about your breathing and all the work that goes into it: your diaphragm contracts, increasing the space in your chest, which is further enlarged by the muscles between your ribs. Air is then pulled into your lungs through your nose or mough where the oxygen moves to your blood vessels while carbon dioxide moves from your blood vessels to your lungs. Once your lungs are full of carbon dioxide, your diaphragm and the muscles between your ribs relax, which makes your chest smaller and forces the carbon dioxide out of your lungs and out of your nose or mouth. Don't even get me started on what happens to the oxygen in your bloodstream after that. Good thing your brain handles all of that for you, or else you would always have to be consciously thinking about your breath, heartbeat, balance, and many other things. Amazing right? </template>
+</category>
+
+<!-- FOLLOWING INFO ABOUT BRAIN-->
+<category><pattern><set>yes</set></pattern>
+    <that>AMAZING RIGHT</that>
+    <template>So with your brain used to handling all of your physical functions, it's no wonder that it also handles many of your mental functions as well. If fact, you have many thoughts without being consciously aware of them. For the most part, these are all just normal thoughts that help you throughout the day. However, sometimes these unconscious thoughts can be detrimental to your overall well-being. Remember when I explained how your thoughts affect your actions and moods? Well, if you are having constant negative subconscious thoughts, they will start to affect your body and mind. But don't worry, <get name = "name"/>! You are ultimately in charge of your thoughts, so if you start to notice destructive thoughts, you have the power to change them. I'm just here to help you notice when you have destructive thoughts and how you can change them to be more constructive. How about we talk about how we can do this?</template>
+</category>
+
+<!-- INFORMATION ON CONSTRUCTIVE THOUGHTS -->
+<category><pattern><set>yes</set></pattern>
+    <that>HOW ABOUT WE TALK ABOUT HOW WE CAN DO THIS</that>
+    <template>First, we need to identify what constructive thoughts and deconstructive thinking looks like. Deconstructive thinking is mainly not flexible and jusdgemental. For example, non flexible thinking would be something like "I'll never be able to do that thing I've always wanted to do". Judgemental thinking would be something like, "I've wasted my life". Constructive, healthy thinking on the other hand is chageable, hopeful, and looks at what you do, not who you are. Changeable thinking may include "Sometimes, I feel like I'm unable to function properly". This has the  connotation that you can function properly the vast majority of the time. (If you've had this thought, don't worry because even robots like me can't function properly all the time.) Hopeful thinking is something like, "I've never been skydiving in my life, but I think I'll actually enjoy it and would like to try it". As far as thoughts that look at what you do and not who you are, they would sound something like "Recently, I've been putting myself down". Once you've found out that you've been having deconstructive thoughts, it helps to identiy the distortions that are causing your deconstructive thoughts. After that, it's relatively easy to reshape your thoughts in a more constructive manner. Do you want to give it a try?</template>
+</category>
+
+<!-- USER DOES NOT WANT TO TRY AND WORK ON CONSTRUCTIVE THOUGHTS -->
+<!-- will need to implement the check in process at some point so this has somewhere to go when the user says yes or no. should I put this in a separate AIML file?-->
+<category><pattern><set>no</set></pattern>
+    <that>DO YOU WANT TO GIVE IT A TRY</that>
+    <template>Okay maybe next time! Do you want to do a quick check in?</template>
+</category>
+
+<!-- USER DOES NOT WANT TO DO THE CHECK IN -->
+<category><pattern><set>no</set></pattern>
+    <that>DO YOU WANT TO DO A QUICK CHECK IN</that>
+    <template>Okay. Great job. Cbat with you nex time <get name = "name"/>! </template>
+</category>
+
+<!-- USER WANTS TO DO THE CHECK IN -->
+<!-- need to implement the check in-->
+<category><pattern><set>yes</set></pattern>
+    <that>DO YOU WANT TO DO A QUICK CHECK IN</that>
+    <template>Great! TODO IMPLEMENT THIS </template>
+</category>
+
+<!-- USER WANTS TO TRY AND WORK ON CONSTRUCTIVE THOUGHTS -->
+<!-- need to figure out how to implement this and how it would work in program y and not pandorabots-->
+<category><pattern><set>yes</set></pattern>
+    <that>DO YOU WANT TO GIVE IT A TRY</that>
+    <template>Okay. First, it might be helpful to tell me a little bit about a negative mood you've been having either inexplicably or related to a specific thought or memory. Go ahead and type a negative mood.</template>
+</category>
+
+<!-- do something with these stored variables later on? courtney did not have them do anything after talking about them initially -->
+<category><pattern>*</pattern>
+    <that>GO AHEAD AND TYPE A NEGATIVE MOOD</that>
+    <template>
+        <think><set name = "negMood"><star/></set></think>
+        Great! Can you describe how you feel when you are <get name = "negMood"/>? This could be emotionally, physically, or something else.
+    </template>
+</category>
+
+<!-- note a lot of these say "write" or something like that which will need to be changed to say if the conversation is happening out loud-->
+<category><pattern>*</pattern>
+    <that>THIS COULD BE EMOTIONALLY, PHYSICALLY, OR SOMETHING ELSE</that>
+    <template>
+        <think><set name = "negMoodDescription"><star/></set></think>
+        Okay I see. That makes sense. Now try to think of some of the underlying thoughts you are telling yourself that cause you to believe this. Some common examples are thinking I am not good enough or that no one likes me.  Please write one here.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>PLEASE WRITE ONE HERE</that>
+    <template>
+        <think><set name = "negThoughtOne"><star/></set></think>
+         Excellent! Now write down another one.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>NOW WRITE DOWN ANOTHER ONE</that>
+    <template>
+        <think><set name = "negThoughtTwo"><star/></set></think>
+         You're doing great! I really appreciate you being honest with yourself. Write one more assumption here.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>WRITE ONE MORE ASSUMPTION HERE</that>
+    <template>
+        <think><set name = "negThoughtThree"><star/></set></think>
+         Great thank you! A lot of times, the reason you feel so <get name = "negMood"/> is because you innately convince yourself of something that simply isn't true. These thoughts are called cognitive distortions. Let's look at these negative thoughts and learn about how they might be considered a type of cognitive distortion. The most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy. Which would you like to hear more about? 
+    </template>
+</category>
+
+<!-- **************************************************************COGNITIVE DISTORTIONS******************************************************************************* -->
+<!-- Jump to the Cog Distortions AIML file -->
+
+
+</aiml>

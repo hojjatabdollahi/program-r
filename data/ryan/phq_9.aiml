@@ -198,10 +198,6 @@
     <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY FEELING BAD ABOUT YOURSELF OR THAT YOU ARE A FAILURE OR HAVE LET YOURSELF OR YOUR FAMILY DOWN</that>
     <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by having trouble concentrating on things, such as reading or watching television?
         <think><set name = "total">2</set><set name = "shaded">1</set></think>
-[[not at all->Question 8]]
-(link: "several days")[(set: $total to it + 1)(goto: "Question 8")]
-(link: "more than half the days")[(set: $total to it + 2, $shaded to it + 1)(goto: "Question 8")]
-(link: "nearly every day")[(set: $total to it + 3, $shaded to it + 1)(goto: "Question 8")]
     </template>
 </category>
 
