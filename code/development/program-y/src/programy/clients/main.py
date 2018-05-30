@@ -12,10 +12,10 @@ noloop = False
 
 
 #FOR ALICE
-#config_filename = "../../../bots/alice2/config.yaml"
-#config_format = "yaml"
-#logging_file = "../../../bots/alice2/logging.yaml"
-#noloop = False
+# config_filename = "../../../bots/alice2/config.yaml"
+# config_format = "yaml"
+# logging_file = "../../../bots/alice2/logging.yaml"
+# noloop = False
 
 
 class ConsoleBotClient(MyBotClient):
