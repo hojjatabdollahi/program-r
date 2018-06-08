@@ -15,8 +15,51 @@
  <!-- FILTERING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE FILTERING APPLIES TO YOU</that>
-    <template> Great job on identifying a distortion! Filtering is such a common distortion, but once you identify it, you can turn it around! The first thing I want you to do is to ... </template>
+    <template> Great job on identifying a distortion! Filtering is such a common distortion, but once you identify it, you can turn it around! The first thing I want you to do is to write down a negative thought. If you've told me one before, it can be the same or something different. Go ahead and give it a try! </template>
 </category>
+
+<!-- do something with these stored variables later on? courtney did not have them do anything after talking about them initially; note might need to change from "write" to "say" or something like that -->
+<category><pattern>*</pattern>
+    <that>GO AHEAD AND GIVE IT A TRY</that>
+    <template>
+        <think><set name = "filteringNegMood"><star/></set></think>
+        Great! Now I want you to think of one positive thing that you maybe aren't taking into too much consideration right now. Write that here.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>WRITE THAT HERE</that>
+    <template>
+        <think><set name = "filteringPosMoodOne"><star/></set></think>
+        Excellent! Now write down another positive thought about the situation.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>NOW WRITE DOWN ANOTHER POSITIVE THOUGHT ABOUT THE SITUATION</that>
+    <template>
+        <think><set name = "filteringPosMoodTwo"><star/></set></think>
+        Great! I know this can be difficult, but think of one more positive thought about you or the situation.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>I KNOW THIS CAN BE DIFFICULT, BUT THINK OF ONE MORE POSITIVE THOUGHT ABOUT YOU OR THE SITUATION</that>
+    <template>
+        <think><set name = "filteringPosMoodThree"><star/></set></think>
+         Incredible! The last thing I want you to do is to rewrite your thought "<get name = "filteringNegMood"/>" in a more positive way now that you've identified some positive things about it. Write it here when you are ready.
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+    <that>WRITE IT HERE WHEN YOU ARE READY</that>
+    <template>
+        <think><set name = "filteringNegMoodCorrected"><star/></set></think>
+        That's great <get name = "name"/>! 
+    </template>
+</category>
+
   
  <!-- FILTERING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
@@ -36,8 +79,51 @@
  <!-- POLARIZED THINKING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE POLARIZED THINKING APPLIES TO YOU</that>
-    <template> Great job on identifying a distortion! I know this one can make things pretty tough for you, so I'm glad we get to work on it today. You know that phrase, "if at first you don't succeed, try, try again"? Did you know that Albert Einstein failed his entrance examinations to Swiss Federal Polytechnic? It's true! After he failed, he went to another school before going back to Swiss Federal Polytechnic for his teaching degree. I want you to ...  </template>
+    <template> Great job on identifying a distortion! I know this one can make things pretty tough for you, so I'm glad we get to work on it today. You know that phrase, "if at first you don't succeed, try, try again"? Did you know that Albert Einstein failed his entrance examinations to Swiss Federal Polytechnic? It's true! After he failed, he went to another school before going back to Swiss Federal Polytechnic for his teaching degree. The first thing I want you to do is to write down a negative situation. It may be one you're in now or have faced before. Go ahead and give it a try!   </template>
 </category>
+
+<!-- do something with these stored variables later on? courtney did not have them do anything after talking about them initially; note might need to change from "write" to "say" or something like that --> 
+<category><pattern>*</pattern>
+    <that>GO AHEAD AND GIVE IT A TRY</that>
+    <template>
+        <think><set name = "polarizedNegSituation"><star/></set></think>
+        Great! Now I want you to describe something you had to try several times before you succeeded.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>NOW I WANT YOU TO DESCRIBE SOMETHING YOU HAD TO TRY SEVERAL TIMES BEFORE YOU SUCCEEDED </that>
+    <template>
+        <think><set name = "polarizedSuccess"><star/></set></think>
+        Wow! That's quite an impressive feat. I think it would have taken me much longer to succeed had I been in your situation. Now I would like for you to think of what would happen if you stopped trying to succeed in that situation.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>NOW I WOULD LIKE FOR YOU TO THINK OF WHAT WOULD HAPPEN IF YOU STOPPED TRYING TO SUCCEED IN THAT SITUATION</that>
+    <template>
+        <think><set name = "polarizedNegOutcome"><star/></set></think>
+        Excellent! I would now like you to think of what would happen if you kept trying in your present situation and were able to succeed.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>I WOULD NOW LIKE YOU TO THINK OF WHAT WOULD HAPPEN IF YOU KEPT TRYING IN YOUR PRESENT SITUATION AND WERE ABLE TO SUCCEED</that>
+    <template>
+        <think><set name = "polarizedPosOutcome"><star/></set></think>
+        Great! Hopefully, this thought experiment has helped you to see that stopping now may seem easier or the better course of action, but the reward for continuing to try is worth it. How about you rewrite your original thought, "<get name = "polarizedNegSituation"/>", in a way so that you will want to keep trying again. Write it when you are ready!
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+    <that>WRITE IT WHEN YOU ARE READY</that>
+    <template>
+        <think><set name = "polarizedNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>! 
+    </template>
+</category>
+
 
  <!-- POLARIZED THINKING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
@@ -57,8 +143,27 @@
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE OVERGENERALIZATION APPLIES TO YOU</that>
    <!-- don't forget to add the second portion for this fallacy -->
-    <template> Way to go in identifying overgeneralization as a cognitive distortion! You're already on the path to better patterns of thought. Since you've already identified overgeneralization, how about you identify what instance caused to you overgeneralize ...  </template>
+    <template> Way to go in identifying overgeneralization as a cognitive distortion! You're already on the path to better patterns of thought. Since you've already identified overgeneralization, how about you identify what instance caused to you overgeneralize. Write it here.  </template>
 </category>
+
+<!-- do something with these stored variables later on? courtney did not have them do anything after talking about them initially; note might need to change from "write" to "say" or something like that --> 
+<category><pattern>*</pattern>
+    <that>WRITE IT HERE</that>
+    <template>
+        <think><set name = "overgeneralizationInstance"><star/></set></think>
+        Good job! It may be easy to think that a single instance defines you, but that is never the case. You are a multifaceted person who has years of experience and life to define you. Everyone makes mistakes. Even robots like me. But you just have to realize that the moment has passed and you can forgive yourself for it. Easier said than done, right? Simply restating your negative thought "<get name = "overgeneralizationInstance"/>" in a way that says its okay to have done that is a great start. For example, if your negative thought was 'I didn't do well with that job interview so I'm therefore horrible at job interviews', you can restate that as 'I didn't do so well on that job interview, but I'll be sure to do better next time'. By changing that thought in your mind, you'll start to see how your overgeneralization is just that. Then you can start to forgive yourself. Try and restate your negative thought.
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+    <that>TRY AND RESTATE YOUR NEGATIVE THOUGHT</that>
+    <template>
+        <think><set name = "overgeneralizationInstanceCorrected"><star/></set></think>
+        That's great <get name = "name"/>! 
+    </template>
+</category>
+
 
 <!-- OVERGENERALIZATION no- try another distortion -->
 <category><pattern><set>no</set></pattern>
@@ -78,8 +183,27 @@
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE JUMPING TO CONCLUSIONS APPLIES TO YOU</that>
    <!-- don't forget to add the second portion for this fallacy -->
-    <template> Great job in identifying a coginitive distortion, <get name = "name"/>! When it comes to jumping to conclusions, you could be jumping to a conclusion about a person or situation. Which would you say it is? ... </template>
+    <template> Great job in identifying a coginitive distortion, <get name = "name"/>! When it comes to jumping to conclusions, you could be jumping to a conclusion about a person or situation. Which would you say it is? Say a person or a situation. </template>
 </category>
+
+<category><pattern>A PERSON</pattern>
+    <that>SAY A PERSON OR A SITUATION</that>
+    <template>
+        I see. What is is that you are assuming about this person?
+    </template>
+</category>  
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- JUMPING TO CONCLUSIONS no- try another distortion -->
 <category><pattern><set>no</set></pattern>

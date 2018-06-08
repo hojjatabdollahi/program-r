@@ -18,7 +18,7 @@
 
 <category><pattern><set>greetings</set> </pattern>
     <template>Hello! What is your name?</template>
-</category> 
+</category>
 
 <!-- USER'S NAME -->
 
