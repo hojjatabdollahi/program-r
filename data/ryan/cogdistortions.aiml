@@ -186,23 +186,55 @@
     <template> Great job in identifying a coginitive distortion, <get name = "name"/>! When it comes to jumping to conclusions, you could be jumping to a conclusion about a person or situation. Which would you say it is? Say a person or a situation. </template>
 </category>
 
+<!-- User decides to talk about a person -->
 <category><pattern>A PERSON</pattern>
     <that>SAY A PERSON OR A SITUATION</that>
     <template>
-        I see. What is is that you are assuming about this person?
+        I see. What is it that you are assuming about this person?
     </template>
 </category>  
 
+<category><pattern>*</pattern>
+    <that>WHAT IS IT THAT YOU ARE ASSUMING ABOUT THIS PERSON </that>
+    <template>
+        <think><set name = "jumpingPersonAssumption"><star/></set></think>
+        That's great <get name = "name"/>! Now try to think of something else that this person may have been going through to give you that impression. Describe a situation you may be going through to give to someone else the impression that this person is giving you. Be as understanding as possible.
+    </template>
+</category>
 
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+        <that>BE AS UNDERSTANDING AS POSSIBLE </that>
+    <template>
+        <think><set name = "jumpingPersonAssumptionCorrected"><star/></set></think>
+        Good job thinking in someone else's shoes. Hopefully this little thought experiment gave you an oppurtunity to explore other conculsions than the one you jumped to. By conducting thought experiments like this one, you can realize that the worst case scenario is really the least likely. Great work! 
+    </template>
+</category>
 
+<!-- User decides to talk about a situation -->
+<category><pattern>A SITUATION</pattern>
+    <that>SAY A PERSON OR A SITUATION</that>
+    <template>
+        I see. What about this situation do you assume will happen?
+    </template>
+</category>  
 
+<category><pattern>*</pattern>
+    <that>WHAT ABOUT THIS SITUATION DO YOU ASSUME WILL HAPPEN</that>
+    <template>
+        <think><set name = "jumpingSituationAssumption"><star/></set></think>
+        That's great <get name = "name"/>! Now imagine that your assumption is incorrect and you put yourself back into that situation. What happens? Are there any better outcomes?
+    </template>
+</category>
 
-
-
-
-
-
-
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+        <that>ARE THERE ANY BETTER OUTCOMES</that>
+    <template>
+        <think><set name = "jumpingSituationAssumptionCorrected"><star/></set></think>
+        Good job thinking about the situation in a different light. Hopefully this little thought experiment gave you an oppurtunity to explore other conculsions than the one you jumped to. By conducting thought experiments like this one, you can realize that the worst case scenario is really the least likely. Great work! 
+    </template>
+</category>
 
 
 <!-- JUMPING TO CONCLUSIONS no- try another distortion -->
@@ -222,8 +254,59 @@
  <!-- CATASTROPHIZING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE CATASTROPHIZING APPLIES TO YOU</that>
-    <template> Great job in identifying a cognitive distortion, <get name = "name"/>! When it comes to catastophizing, you could be either magnifying a less significant event or minimizing a more significant event. Which do you think you are doing? ... </template>
+    <template> Great job in identifying a cognitive distortion, <get name = "name"/>! When it comes to catastophizing, you could be either magnifying a less significant event or minimizing a more significant event. Which do you think you are doing? Just say magnifying or minimizing. </template>
 </category>
+
+<!-- User decides to talk about magnifiying a less significnt event -->
+<category><pattern>MAGNIFYING</pattern>
+    <that>JUST SAY MAGNIFYING OR MINIMIZING</that>
+    <template>
+        Good observation! Now that you realize that you are magnifying, let's try and think of a specific time you feel you've done this. Go ahead and tell me about it! 
+    </template>
+</category>  
+
+<category><pattern>*</pattern>
+    <that>GO AHEAD AND TELL ME ABOUT IT</that>
+    <template>
+        <think><set name = "catastrophizingMagNegSituation"><star/></set></think>
+        Great! Now I want you to try re-writing your negative thought, "<get name = "catastrophizingMagNegSituation"/>". Write it in a way in which you minimize the effect of your catastrophic thought.
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+    <that>WRITE IT IN A WAY IN WHICH YOU MINIMIZE THE EFFECT OF YOUR CATASTROPHIC THOUGHT</that>
+    <template>
+        <think><set name = "catastrophizinMagNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>! 
+    </template>
+</category>
+
+<!-- User decides to talk about minimizing a more significnt event -->
+<category><pattern>MINIMIZING</pattern>
+    <that>JUST SAY MAGNIFYING OR MINIMIZING</that>
+    <template>
+        Good observation! Now that you realize that you are minimizing, let's try and think of a specific time you feel you've done this. Go ahead and tell me all about it! 
+    </template>
+</category>  
+
+<category><pattern>*</pattern>
+    <that>GO AHEAD AND TELL ME ALL ABOUT IT</that>
+    <template>
+        <think><set name = "catastrophizingMinNegSituation"><star/></set></think>
+        Great! Now I want you to try try re-writing your negative thought, "<get name = "catastrophizingMinNegSituation"/>". Write it in a way in which you avoid minimizing the good things. 
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+    <that>WRITE IT IN A WAY IN WHICH YOU AVOID MINIMIZING THE GOOD THINGS</that>
+    <template>
+        <think><set name = "catastrophizinMinNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>! 
+    </template>
+</category>
+
 
 <!-- CATASTROPHIZING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
@@ -242,8 +325,42 @@
  <!-- PERSONALIZATION yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE PERSONALIZATION APPLIES TO YOU</that>
-    <template> Great job in identifying personalization as a distortion, <get name = "name"/>! I would like you to to go through your negative thought  ... </template>
+    <template> Great job in identifying personalization as a distortion, <get name = "name"/>! I would now like you to tell me of the negative thought you told me before or a new one. </template>
 </category>
+
+<category><pattern>*</pattern>
+    <that>I WOULD NOW LIKE YOU TO TELL ME OF THE NEGATIVE THOUGHT YOU TOLD ME BEFORE OR A NEW ONE</that>
+    <template>
+        <think><set name = "personalizationNegSituation"><star/></set></think>
+        Great! Now I would like you to go through your negative thought, "<get name = "personalizationNegSituation"/>". Identify what about it you think is your fault.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>IDENTIFY WHAT ABOUT IT YOU THINK IS YOUR FAULT</that>
+    <template>
+        <think><set name = "personalizationBlame"><star/></set></think>
+        I see. I know that it seems like "<get name = "personalizationBlame"/>" is dependant on you, but I want you to think about how this may not be the case. Write down external factors that make this not dependent on you.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>WRITE DOWN EXTERNAL FACTORS THAT MAKE THIS NOT DEPENDENT ON YOU</that>
+    <template>
+        <think><set name = "personalizationBlameExternalFactors"><star/></set></think>
+        Great work! Finally, please rewrite your negative statement in a way that your effect is minimized.
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+    <that>FINALLY, PLEASE REWRITE YOUR NEGATIVE STATEMENT IN A WAY THAT YOUR EFFECT IS MINIMIZED</that>
+    <template>
+        <think><set name = "catastrophizinMinNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>! Remember what you think about yourself is soley dependent on you.
+    </template>
+</category>
+
 
 <!-- PERSONALIZATION no- try another distortion -->
 <category><pattern><set>no</set></pattern>
@@ -262,8 +379,44 @@
  <!-- CONTROL FALLACIES yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE CONTROL FALLACIES APPLY TO YOU</that>
-    <template> Excellent job in identifying a distortion! When it comes to control fallacies, they can either be external or internal. An external control fallacies are when you assume everything that happens to you is outside your control and internal control fallacies are when you assume everything that happens to you is your fault. In reality, things that happen to you are always a combination of internal and external factors. To help see this, first take your negative thought ... </template>
+    <template> Excellent job in identifying a distortion! When it comes to control fallacies, they can either be external or internal. An external control fallacies are when you assume everything that happens to you is outside your control and internal control fallacies are when you assume everything that happens to you is your fault. In reality, things that happen to you are always a combination of internal and external factors. To help see this, we can discuss a negative thought you told me before or a new one. </template>
 </category>
+
+<category><pattern>*</pattern>
+    <that>TO HELP SEE THIS, WE CAN DISCUSS A NEGATIVE THOUGHT YOU TOLD ME BEFORE OR A NEW ONE</that>
+    <template>
+        <think><set name = "controlFallaciesNegSituation"><star/></set></think>
+        Great! Now I would like you to analyze your negative thought. What is in your control in this situation?
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>WHAT IS IN YOUR CONTROL IN THIS SITUATION</that>
+    <template>
+        <think><set name = "controlFallaciesSituationInControl"><star/></set></think>
+        Excellent observations! Now take your negative thought and analyze what about it is out of your control.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>NOW TAKE YOUR NEGATIVE THOUGHT AND ANALYZE WHAT ABOUT IT IS OUT OF YOUR CONTROL</that>
+    <template>
+        <think><set name = "controlFallaciesSituationOutOfControl"><star/></set></think>
+        Nice! Now that you know what is in your control and what is out of your control, rewrite your negative thought, "<get name = "controlFallaciesNegSituation"/>". Write it so that you take into account what you can and cannot control.
+    </template>
+</category>
+
+<!-- NEED TO FIX THIS LAST PART. SOMETHING IS NOT WORKING -->
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+    <that>WRITE IT SO THAT YOU TAKE INTO ACCOUNT WHAT YOU CAN AND CANNOT CONTROL</that>
+    <template>
+        <think><set name = "controlFallaciesNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>!
+    </template>
+</category>
+
 
 <!-- PERSONALIZATION no- try another distortion -->
 <category><pattern><set>no</set></pattern>
