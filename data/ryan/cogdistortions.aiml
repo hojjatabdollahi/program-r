@@ -402,23 +402,21 @@
     <that>NOW TAKE YOUR NEGATIVE THOUGHT AND ANALYZE WHAT ABOUT IT IS OUT OF YOUR CONTROL</that>
     <template>
         <think><set name = "controlFallaciesSituationOutOfControl"><star/></set></think>
-        Nice! Now that you know what is in your control and what is out of your control, rewrite your negative thought, "<get name = "controlFallaciesNegSituation"/>". Write it so that you take into account what you can and cannot control.
+        Nice! Now that you know what is in your control and what is out of your control, rewrite your negative thought, "<get name = "controlFallaciesNegSituation"/>". Consider phrasing it so that you take into account what you are able to and not able to control.
     </template>
 </category>
-
-<!-- NEED TO FIX THIS LAST PART. SOMETHING IS NOT WORKING -->
 
 <!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-    <that>WRITE IT SO THAT YOU TAKE INTO ACCOUNT WHAT YOU CAN AND CANNOT CONTROL</that>
-    <template>
+   <that>CONSIDER PHRASING IT SO THAT YOU TAKE INTO ACCOUNT WHAT YOU ARE ABLE TO AND NOT ABLE TO CONTROL</that>
+   <template>
         <think><set name = "controlFallaciesNegSituationCorrected"><star/></set></think>
         That's great <get name = "name"/>!
-    </template>
+   </template>
 </category>
 
 
-<!-- PERSONALIZATION no- try another distortion -->
+<!-- CONTROL FALLACIES no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE CONTROL FALLACIES APPLY TO YOU</that>
     <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
@@ -435,10 +433,46 @@
  <!-- FALLACY OF FAIRNESS yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE THE FALLACY OF FAIRNESS APPLIES TO YOU</that>
-    <template> Great job in identifying this fallacy, <get name = "name"/>. The fallacy of fairness can be particularly difficult to identify because it requires you to really reflect on your notions of fairness and to determine if one or more of these isn't entirely correct. When you you think, INSERT NEG THOUGHT VAR HERE, what are you assuming is fair? ... </template>
+    <template> Great job in identifying this fallacy, <get name = "name"/>. The fallacy of fairness can be particularly difficult to identify because it requires you to really reflect on your notions of fairness and to determine if one or more of these isn't entirely correct. To help see this, we can discuss a negative thought you told me before or a new one. Go ahead and remind me of it or explain a new one. </template>
 </category>
 
-<!-- PERSONALIZATION no- try another distortion -->
+<category><pattern>*</pattern>
+    <that>GO AHEAD AND REMIND ME OF IT OR EXPLAIN A NEW ONE</that>
+    <template>
+        <think><set name = "fallacyOfFairnessNegSituation"><star/></set></think>
+        Thanks! Now when you think about this, what are you assuming is fair?
+    </template>
+</category>
+
+<!--Is there a better way to word the question below?-->
+
+<category><pattern>*</pattern>
+    <that>NOW WHEN YOU THINK ABOUT THIS, WHAT ARE YOU ASSUMING IS FAIR</that>
+    <template>
+        <think><set name = "fallacyOfFairnessAssumption"><star/></set></think>
+        Great! Now I would like you to really step outside of your preconcieved notions and think if your assumptions of fairness are really all that fair. Write out what you find to be actually fair.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>WRITE OUT WHAT YOU FIND TO BE ACTUALLY FAIR</that>
+    <template>
+        <think><set name = "fallacyOfFairnessAssumptionFair"><star/></set></think>
+        Thank you so much for this reflection. How about you rewrite your negative thought, "<get name = "fallacyOfFairnessNegSituation"/>"? Try and use the more realistic notion of fairness you just mentioned.
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+   <that>TRY AND USE THE MORE REALISTIC NOTION OF FAIRNESS YOU JUST MENTIONED</that>
+   <template>
+        <think><set name = "fallacyOfFairnessNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>!
+   </template>
+</category>
+
+
+<!-- FALLACY OF FAIRNESS no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE THE FALLACY OF FAIRNESS APPLIES TO YOU</that>
     <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
@@ -455,8 +489,26 @@
  <!-- BLAMING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE BLAMING APPLIES TO YOU</that>
-    <template> Thank you for identifying this distortion, <get name = "name"/>. In order to work through this distortion, I think it would be helpful to ... </template>
+    <template> Thank you for identifying this distortion, <get name = "name"/>. In order to work through this distortion, I think it would be helpful to write down some things that are in your control. </template>
 </category>
+
+<category><pattern>*</pattern>
+    <that>IN ORDER TO WORK THROUGH THIS DISTORTION, I THINK IT WOULD BE HELPFUL TO WRITE DOWN SOME THINGS THAT ARE IN YOUR CONTROL</that>
+    <template>
+        <think><set name = "fallacyOfFairnessAssumption"><star/></set></think>
+        Great! Now I would like you to really step outside of your preconcieved notions and think if your assumptions of fairness are really all that fair. Write out what you find to be actually fair.
+    </template>
+</category>
+
+
+
+
+
+
+
+
+
+
 
 <!-- BLAMING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
