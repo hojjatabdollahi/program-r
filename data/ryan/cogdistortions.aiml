@@ -489,25 +489,42 @@
  <!-- BLAMING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE BLAMING APPLIES TO YOU</that>
-    <template> Thank you for identifying this distortion, <get name = "name"/>. In order to work through this distortion, I think it would be helpful to write down some things that are in your control. </template>
+    <template> Thank you for identifying this distortion, <get name = "name"/>. In order to work through this distortion, I think it would be helpful to think about another negative situation. </template>
 </category>
 
+<!--Is there a better way to word the question below? I'm concerned this won't work super well out loud. Maybe can cut back on some of the vars?-->
 <category><pattern>*</pattern>
-    <that>IN ORDER TO WORK THROUGH THIS DISTORTION, I THINK IT WOULD BE HELPFUL TO WRITE DOWN SOME THINGS THAT ARE IN YOUR CONTROL</that>
+    <that>IN ORDER TO WORK THROUGH THIS DISTORTION, I THINK IT WOULD BE HELPFUL TO THINK ABOUT ANOTHER NEGATIVE SITUATION</that>
     <template>
-        <think><set name = "fallacyOfFairnessAssumption"><star/></set></think>
-        Great! Now I would like you to really step outside of your preconcieved notions and think if your assumptions of fairness are really all that fair. Write out what you find to be actually fair.
+        <think><set name = "blamingNegSituation"><star/></set></think>
+        Nice job! Now in regards to this situation, think of some things that are in your control.
     </template>
 </category>
 
+<category><pattern>*</pattern>
+    <that>NOW IN REGARDS TO THIS SITUATION, THINK OF SOME THINGS THAT ARE IN YOUR CONTROL</that>
+    <template>
+        <think><set name = "blamingInControl"><star/></set></think>
+        I see. What about things out of your control? Are there things you might blame yourself for that really are not your fault?
+    </template>
+</category>
 
+<category><pattern>*</pattern>
+    <that>ARE THERE THINGS YOU MIGHT BLAME YOURSELF FOR THAT REALLY ARE NOT YOUR FAULT</that>
+    <template>
+        <think><set name = "blamingOutOfControl"><star/></set></think>
+        Great! Remember: you are only in control of what you do and how you react to different situations. You can't control anyone or anything else. Now you can rewrite your negative thought in a more positive way that takes into consideration what you are and are not in control of.
+    </template>
+</category>
 
-
-
-
-
-
-
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+   <that>NOW YOU CAN REWRITE YOUR NEGATIVE THOUGHT IN A MORE POSITIVE WAY THAT TAKES INTO CONSIDERATION WHAT YOU ARE AND ARE NOT IN CONTROL OF</that>
+   <template>
+        <think><set name = "blamingNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>!
+   </template>
+</category>
 
 
 <!-- BLAMING no- try another distortion -->
@@ -526,8 +543,51 @@
  <!-- SHOULDS yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE SHOULDS APPLY TO YOU</that>
-    <template> Great job in identifying a distortion! When you think INSERT NEG THOUGHT VAR HERE, there's an implicit list of 'shoulds' assosciated with that thought. These can be either 'I should...' or 'They should...' or 'It should...'. These should statements are little rules you have about yourself or others and if you violate them even a little bit you start to feel bad. Oftentimes, these should statements are impossible to abide by, such as 'I should always try my hardest'. See how that statement sets up someone for failure; it's impossible to always try your hardest in everything you do. Let's start by ... </template>
+    <template> Great job in identifying a distortion! When you think about a situation, there's an implicit list of 'shoulds' assosciated with that thought. These can be either 'I should...' or 'They should...' or 'It should...'. These should statements are little rules you have about yourself or others and if you violate them even a little bit you start to feel bad. Oftentimes, these should statements are impossible to abide by, such as 'I should always try my hardest'. See how that statement sets up someone for failure; it's impossible to always try your hardest in everything you do. We can start breaking this down by considering a negative situation in your life. </template>
 </category>
+
+<!--Is there a better way to word the question below? I'm concerned this won't work super well out loud. Maybe can cut back on some of the vars?-->
+<category><pattern>*</pattern>
+    <that>WE CAN START BREAKING THIS DOWN BY CONSIDERING A NEGATIVE SITUATION IN YOUR LIFE</that>
+    <template>
+        <think><set name = "shouldsNegSituation"><star/></set></think>
+        Thank you for explaining that! Now tell me a "should" statement associated with your situation.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>NOW TELL ME A "SHOULD" STATEMENT ASSOCIATED WITH YOUR SITUATION</that>
+    <template>
+        <think><set name = "shouldsStatementOne"><star/></set></think>
+        Good job! Write down another should statement associated with your thought.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>WRITE DOWN ANOTHER SHOULD STATEMENT ASSOCIATED WITH YOUR THOUGHT</that>
+    <template>
+        <think><set name = "shouldsStatementTwo"><star/></set></think>
+        I see. Finally, write down one last should statement.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>FINALLY, WRITE DOWN ONE LAST SHOULD STATEMENT</that>
+    <template>
+        <think><set name = "shouldsStatementThree"><star/></set></think>
+        Great! Way to identify some should statements. Now rewrite your negative thought in a way that it does not incorporate harmful should statements.
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+   <that>NOW REWRITE YOUR NEGATIVE THOUGHT IN A WAY THAT IT DOES NOT INCORPORATE HARMFUL SHOULD STATEMENTS</that>
+   <template>
+        <think><set name = "shouldsNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>!
+   </template>
+</category>
+
 
 <!-- BLAMING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
@@ -545,8 +605,42 @@
  <!-- EMOTIONAL REASONING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE EMOTIONAL REASONING APPLIES TO YOU</that>
-    <template> Great job in identifying this distortion! It can be very hard to look past how we feel, but feelings aren't objective truths. Just because a person might have a feeling of worthlessness sometimes, that doesn't mean that person is worthless. When you think INSERT NEG THOUGHT VAR HERE, what are some things that you feel are true all the time? Write them down ... </template>
+    <template> Great job in identifying this distortion! It can be very hard to look past how we feel, but feelings aren't objective truths. Just because a person might have a feeling of worthlessness sometimes, that doesn't mean that person is worthless. To make this a little more clear, we can consider a negative thought or situation you have had to deal with. </template>
 </category>
+
+<category><pattern>*</pattern>
+    <that>TO MAKE THIS A LITTLE MORE CLEAR, WE CAN CONSIDER A NEGATIVE THOUGHT OR SITUATION YOU HAVE HAD TO DEAL WITH</that>
+    <template>
+        <think><set name = "emotReasonNegSituation"><star/></set></think>
+        Great. When you think of this thought, what are some things that you feel are true all the time? 
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>WHEN YOU THINK OF THIS THOUGHT, WHAT ARE SOME THINGS THAT YOU FEEL ARE TRUE ALL THE TIME</that>
+    <template>
+        <think><set name = "emotReasonTruths"><star/></set></think>
+        Good. Now write down some emotions that you feel when it comes to your negative thought.
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>NOW WRITE DOWN SOME EMOTIONS THAT YOU FEEL WHEN IT COMES TO YOUR NEGATIVE THOUGHT</that>
+    <template>
+        <think><set name = "emotReasonEmotions"><star/></set></think>
+        Thank you for sharing. These are completely valid feelings, but that doesn't mean that they are true all the time. How about you rewrite your negative thought so that those feelings are not distorting what is really happening?
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+   <that>HOW ABOUT YOU REWRITE YOUR NEGATIVE THOUGHT SO THAT THOSE FEELINGS ARE NOT DISTORTING WHAT IS REALLY HAPPENING</that>
+   <template>
+        <think><set name = "emotReasonNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>!
+   </template>
+</category>
+
 
 <!-- EMOTIONAL REASONING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
@@ -564,8 +658,34 @@
  <!-- FALLACY OF CHANGE yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE THE FALLACY OF CHANGE APPLIES TO YOU</that>
-    <template> Thank you for identifying a distortion! The fallacy of change is a tricky distortion because it says that someone/something needs to change in order for you to be happy. This is a dangerous way to think because only you can be in control of your happiness because you can't make someone or something else change to suit you. When you think INSERT NEG THOUGHT VAR HERE, instead of assuming someone/something needs to change, try to think of something you can do that might make you feel better, or at least give you more control over the situation. Rewrite your thought ... </template>
+    <template> Thank you for identifying a distortion! The fallacy of change is a tricky distortion because it says that someone or something needs to change in order for you to be happy. This is a dangerous way to think because only you can be in control of your happiness and you can't make someone or something else change to suit you. We can start by thinking of a negative situation in your life.  </template>
 </category>
+
+<category><pattern>*</pattern>
+    <that>WE CAN START BY THINKING OF A NEGATIVE SITUATION IN YOUR LIFE</that>
+    <template>
+        <think><set name = "fallacyOfChangeNegSituation"><star/></set></think>
+        Great. When you think "<get name = "fallacyOfChangeNegSituation"/>", instead of assuming someone or something needs to change, try to think of something you can do that might make you feel better, or at least give you more control over the situation. What are some of these options?
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>WHAT ARE SOME OF THESE OPTIONS</that>
+    <template>
+        <think><set name = "fallacyOfChangeAlternatives"><star/></set></think>
+        Thank you for sharing. Now restructure your thought so that the only thing that can change is what you do.
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+   <that>NOW RESTRUCTURE YOUR THOUGHT SO THAT THE ONLY THING THAT CAN CHANGE IS WHAT YOU DO</that>
+   <template>
+        <think><set name = "fallacyOfChangeNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>!
+   </template>
+</category>
+
 
 <!-- FALLACY OF CHANGE no- try another distortion -->
 <category><pattern><set>no</set></pattern>
@@ -583,8 +703,42 @@
  <!-- GLOBAL LABELING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE GLOBAL LABELING APPLIES TO YOU</that>
-    <template> Great job in identifying a distortion. The problem with global labeling is when you see one or two instances of something and assume that something to be the only truth. For example, if Katherine were having a really bad day and you saw her being rude and you immediately labeled her as a rude person, that would be global labeling. When you think INSERT NEG THOUGHT VAR HERE, what is your example of global labeling. Write it down ... </template>
+    <template> Great job in identifying a distortion. The problem with global labeling is when you see one or two instances of something, you assume that something to be the only truth. For example, if Katherine were having a really bad day and you saw her being rude and you immediately labeled her as a rude person, that would be global labeling. What is a negative thought or situation you have had that may reflect this cognitive distortion? </template>
 </category>
+
+<category><pattern>*</pattern>
+    <that>WHAT IS A NEGATIVE THOUGHT OR SITUATION YOU HAVE HAD THAT MAY REFLECT THIS COGNITIVE DISTORTION</that>
+    <template>
+        <think><set name = "globalLabelingNegSituation"><star/></set></think>
+        Great. When you think "<get name = "globalLabelingNegSituation"/>", try and think how global labeling may apply. What is an example of the distortion in this case?
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>WHAT IS AN EXAMPLE OF THE DISTORTION IN THIS CASE</that>
+    <template>
+        <think><set name = "globalLabelingExample"><star/></set></think>
+        Great job picking up on that! Can you see how that global label isn't warranted? How might you not be taking into account external, unknown factors?
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>HOW MIGHT YOU NOT BE TAKING INTO ACCOUNT EXTERNAL, UNKNOWN FACTORS</that>
+    <template>
+        <think><set name = "globalLabelingFactors"><star/></set></think>
+        Absolutely! Now try and rewrite your negative thought without global labeling.
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+   <that>NOW TRY AND REWRITE YOUR NEGATIVE THOUGHT WITHOUT GLOBAL LABELING</that>
+   <template>
+        <think><set name = "globalLabelingNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>!
+   </template>
+</category>
+
 
 <!-- GLOBAL LABELING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
@@ -604,6 +758,17 @@
    <that>DO YOU FEEL LIKE THE ALWAYS BEING RIGHT FALLACY APPLIES TO YOU</that>
     <template> Great job in identifying a distortion. The problem with global labeling is when you see one or two instances of something and assume that something to be the only truth. For example, if Katherine were having a really bad day and you saw her being rude and you immediately labeled her as a rude person, that would be global labeling. When you think INSERT NEG THOUGHT VAR HERE, what is your example of global labeling. Write it down ... </template>
 </category>
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- ALWAYS BEING RIGHT no- try another distortion -->
 <category><pattern><set>no</set></pattern>

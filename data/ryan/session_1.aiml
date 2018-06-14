@@ -6,11 +6,12 @@
 <!-- <category>
     <pattern> HOW ARE YOU FEELING TODAY</pattern>
     <template>
-        <think><set name="state"> sad</set></think>
         <condition name="state" value="happy">
+            <think><set name="state"> happy</set></think>
             I am happy!
         </condition>
         <condition name="state" value="sad">
+            <think><set name="state"> sad</set></think>
             I am sad!
         </condition>
     </template>
