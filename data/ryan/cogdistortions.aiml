@@ -2,6 +2,10 @@
 <aiml version="2.0">
     
   <!-- implement this so there isn't a huge wall of text or explanation for the user -->
+  
+  <!-- also implement way to redirect to goodbye or to talk about another distortion -->
+  
+  <!-- get rid of all the different variables saving the negative moods and other answers? do we need to even store that?? -->
 
 <!-- ***************************************************FILTERING************************************************************* --> 
 <category><pattern>FILTERING</pattern>
@@ -756,43 +760,76 @@
  <!-- ALWAYS BEING RIGHT yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE THE ALWAYS BEING RIGHT FALLACY APPLIES TO YOU</that>
-    <template> Great job in identifying a distortion. The problem with global labeling is when you see one or two instances of something and assume that something to be the only truth. For example, if Katherine were having a really bad day and you saw her being rude and you immediately labeled her as a rude person, that would be global labeling. When you think INSERT NEG THOUGHT VAR HERE, what is your example of global labeling. Write it down ... </template>
+    <template> Great job in identifying a distortion! Always feeling like you need to be right is a hard distortion to do with because it is impossible to always be right and when you are wrong, you will feel badly about yourself. I know this is easier said than done, but when you realize that it is okay to be wrong, you won't feel as bad. Perhaps think of being wrong as an opputunity to learn something new and to grow as a person. Tell me about a negative situation you are experiencing and we can try and work through it. </template>
 </category>
 
+<category><pattern>*</pattern>
+    <that>TELL ME ABOUT A NEGATIVE SITUATION YOU ARE EXPERIENCING AND WE CAN TRY AND WORK THROUGH IT</that>
+    <template>
+        <think><set name = "alwaysRightNegSituation"><star/></set></think>
+        Great! A good start is to rewrite your thought, "<get name = "alwaysRightNegSituation"/>",  in a more positive way. Try and rewrite your negative thought so that it is okay to be wrong.
+    </template>
+</category>
 
-
-
-
-
-
-
-
-
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+   <that>TRY AND REWRITE YOUR NEGATIVE THOUGHT SO THAT IT IS OKAY TO BE WRONG</that>
+   <template>
+        <think><set name = "alwaysRightgNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>!
+   </template>
+</category>
 
 
 <!-- ALWAYS BEING RIGHT no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE THE ALWAYS BEING RIGHT FALLACY APPLIES TO YOU</that>
-    <template> Great job in identifying a distortion! Always feeling like you need to be right is a hard distortion to do with because it is impossible to always be right and when you are wrong, you will feel badly about yourself. I know this is easier said than done, but when you realize that it is okay to be wrong, you won't feel as bad. Perhaps think of being wrong as an opputunity to learn something new and to grow as a person. I know it may seem implausable, but I am wrong about a lot of things and that makes me really upset because I'm supposed to know everything. But everytime I am wrong, I learn something new, so I don't get upset anymore because I've come to realize that everytime I'm wrong, I become a better robot. A good start is to rewrite your thought, INSERT NEG THOUGHT VAR HERE, in a more positive way. Do so ... </template>
+    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy. </template>
 </category>
 
 <!-- ***************************************************HEAVENS REWARD FALLACY************************************************************* --> 
 <category><pattern>HEAVENS REWARD FALLACY</pattern>
     <!--<that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>-->
-    <template> In the heaven's reward fallcy, you feel that there should be a reward after a time of sacrifice and self-denial. When that reward doesn't come, you feel bitter and disappointed. Do you feel like the heaven's reward fallacy applies to you?
+    <template> In the heaven's reward fallcy, you feel that there should be a reward after a time of sacrifice and self-denial. When that reward doesn't come, you feel bitter and disappointed. Do you feel like this fallacy applies to you?
     </template>
 </category>  
 
  <!-- HEAVENS REWARD FALLACY yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
-   <that>DO YOU FEEL LIKE THE HEAVENS REWARD FALLACY APPLIES TO YOU</that>
-    <template> Excellent job in identifying a fallacy. The best way to combat this fallacy is to realize that you are the only one responsible for your actions, and that a reward for self sacrifice or self-denial is not on the way. When you think 'INSERT NEG THOUGHT VAR HERE, what do you expect will be your reward? Write it down ... </template>
+   <that>DO YOU FEEL LIKE THIS FALLACY APPLIES TO YOU</that>
+    <template> Excellent job in identifying a fallacy. The best way to combat this fallacy is to realize that you are the only one responsible for your actions, and that a reward for self sacrifice or self-denial is not on the way. To better understand this, tell me about a negative situation and we can break it down.  </template>
 </category>
+
+<category><pattern>*</pattern>
+    <that>TO BETTER UNDERSTAND THIS, TELL ME ABOUT A NEGATIVE SITUATION AND WE CAN BREAK IT DOWN</that>
+    <template>
+        <think><set name = "heavensRewardNegSituation"><star/></set></think>
+        Great! Now when you think about this, what do you expect will be your reward?
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>NOW WHEN YOU THINK ABOUT THIS, WHAT DO YOU EXPECT WILL BE YOUR REWARD</that>
+    <template>
+        <think><set name = "heavensRewards"><star/></set></think>
+        I see. Just remember that there is no guarantee that you recieve "<get name = "heavensRewards"/>". What you can do is control what reward you give to yourself or what you do assuming you won't be rewarded. Try and rewrite your thought with that in mind.
+    </template>
+</category>
+
+<!-- Eventually redirect this to goodbye -->
+<category><pattern>*</pattern>
+   <that>TRY AND REWRITE YOUR THOUGHT WITH THAT IN MIND</that>
+   <template>
+        <think><set name = "heavensRewardNegSituationCorrected"><star/></set></think>
+        That's great <get name = "name"/>!
+   </template>
+</category>
+
 
 <!-- HEAVENS REWARD FALLACY no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE THE HEAVENS REWARD FALLACY APPLIES TO YOU</that>
-    <template> Great job in identifying a distortion! Always feeling like you need to be right is a hard distortion to do with because it is impossible to always be right and when you are wrong, you will feel badly about yourself. I know this is easier said than done, but when you realize that it is okay to be wrong, you won't feel as bad. Perhaps think of being wrong as an opputunity to learn something new and to grow as a person. I know it may seem implausable, but I am wrong about a lot of things and that makes me really upset because I'm supposed to know everything. But everytime I am wrong, I learn something new, so I don't get upset anymore because I've come to realize that everytime I'm wrong, I become a better robot. A good start is to rewrite your thought, INSERT NEG THOUGHT VAR HERE, in a more positive way. Do so ... </template>
+    <template> GOkay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy. </template>
 </category>
 
 </aiml>

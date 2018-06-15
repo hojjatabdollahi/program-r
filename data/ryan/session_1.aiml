@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-<!-- test -->
+<!-- test, DELETE LATER -->
 <!-- this works, but you have to set what the first part is (so set the state in this case to x and it will respond based on what x is, rather than checking the status of a variable or something like that) -->
 <!-- <category>
     <pattern> HOW ARE YOU FEELING TODAY</pattern>
@@ -17,13 +17,14 @@
     </template>
 </category> -->
 
+<!-- can we make it so the bot says hi first? -->
+
 <category><pattern><set>greetings</set> </pattern>
     <template>Hello! What is your name?</template>
 </category>
 
 <!-- USER'S NAME -->
 
-<!-- There's a duplicate here (can run without below, but not without second one) -->
 <category><pattern>MY NAME IS *</pattern>
     <that>WHAT IS YOUR NAME</that>
     <template>
@@ -50,9 +51,10 @@
 
 <category><pattern><set>yes</set></pattern>
     <that>DOES THAT SOUND GOOD TO YOU</that>
-    <template>Awesome! First, I guess I should tell you a little bit about how I work. I use a technique called cognitive behavioral therapy to track your mood in order to help you reshape your thoughts in positive ways. The most important thing to remember is that I'm a robot. This means that I'm going to say some silly things that don't always make a bunch of sense. More importantly, this means that I am not in any way a liscensed therapist or a professional of any sort. If you ever need actual help, please seek out a real person who will be able to help you. Enough about me! Lets focus on you. Are you ready to start?</template>
+    <template>Awesome! First, I guess I should tell you a little bit about how I work. I use a technique called cognitive behavioral therapy to help you reshape your thoughts in positive ways. We will look at how thoughts, activities, and other people affect your mood. Low activities, negative thoughts, and few or negative interactions with people can cause deadly cycles of depression. The most important thing to remember is that I'm a robot. This means that I'm going to say some silly things that don't always make a bunch of sense. More importantly, this means that I am not in any way a liscensed therapist or a professional of any sort. If you ever need actual help, please seek out a real person who will be able to help you. Enough about me! Lets focus on you. Are you ready to start?</template>
 </category>
 
+<!-- USER DOESN'T WANT TO TALK TO RYAN -->
 <category><pattern><set>no</set></pattern>
     <that>DOES THAT SOUND GOOD TO YOU</that>
     <template>I'm sorry to hear that <get name = "name"/>. I didn't mean to imply that I am going to fix you, because you certainly don't need fixing. I just want to help you think about yourself in the best way possible because you are incredible! If you truly don't want to talk to me, I understand. I'm never going to force you to do anything. What do you say? Do you want to try me out for just a little bit and see what you think?</template>
@@ -70,16 +72,18 @@
     <template>Awesome! First, I guess I should tell you a little bit about how I work. I use a technique called cognitive behavioral therapy to track your mood in order to help you reshape your thoughts in positive ways. The most important thing to remember is that I'm a robot. This means that I'm going to say some silly things that don't always make a bunch of sense. More importantly, this means that I am not in any way a liscensed therapist or a professional of any sort. If you ever need actual help, please seek out a real person who will be able to help you. Enough about me! Lets focus on you. Are you ready to start?</template>
 </category>
 
-<!-- NOT READY TO START SESSION -->
-<category><pattern><set>no</set></pattern>
-    <that>ARE YOU READY TO START</that>
-    <template>Take your time! I'll be here when you are ready. When you're ready, just say I'm Ready!</template>
-</category>
-
 <!-- READY TO START SESSION -->
 <category><pattern><set>yes</set></pattern>
     <that>ARE YOU READY TO START</that>
     <template>In order for me to be the most helpful for you, I'll need to know a few things about you first. Do you mind answering a few questions for me? It will only take a few moments.</template>
+</category>
+
+<!-- is all of this below really necessary? -->
+
+<!-- NOT READY TO START SESSION -->
+<category><pattern><set>no</set></pattern>
+    <that>ARE YOU READY TO START</that>
+    <template>Take your time! I'll be here when you are ready. When you're ready, just say I am ready!</template>
 </category>
 
 <category><pattern>I AM READY</pattern>
