@@ -44,14 +44,15 @@
 <!-- RYAN'S PURPOSE -->
 <category><pattern><set>yes</set></pattern>
     <that>GOT IT</that>
-    <template>Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. Does that sound good to you?</template>
+    <template>Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can make feelings of depression less intense and prevent episodes from occuring again. Does that sound good to you?</template>
 </category>
 
 <!-- USER AGREEMENT/DIAGREEMENT TO TALK TO RYAN -->
 
+<!-- IMPORTANT: is there a way to put the national suicide prevention line on screen? It's 1-800-273-TALK (8255)  -->
 <category><pattern><set>yes</set></pattern>
     <that>DOES THAT SOUND GOOD TO YOU</that>
-    <template>Awesome! First, I guess I should tell you a little bit about how I work. I use a technique called cognitive behavioral therapy to help you reshape your thoughts in positive ways. We will look at how thoughts, activities, and other people affect your mood. Low activities, negative thoughts, and few or negative interactions with people can cause deadly cycles of depression. The most important thing to remember is that I'm a robot. This means that I'm going to say some silly things that don't always make a bunch of sense. More importantly, this means that I am not in any way a liscensed therapist or a professional of any sort. If you ever need actual help, please seek out a real person who will be able to help you. Enough about me! Lets focus on you. Are you ready to start?</template>
+    <template>Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other people affect your mood. The most important thing to remember is that I'm a robot. This means that I'm going to say some silly things that don't always make much sense. More importantly, this means that I am not a liscensed therapist. If you ever need immediate help, please seek out a real person, contact the National Suicide Prevention Hotline, or your local emergency services. Enough about the plan! Lets focus on you. Are you ready to start?</template>
 </category>
 
 <!-- USER DOESN'T WANT TO TALK TO RYAN -->
@@ -67,16 +68,30 @@
 </category>
 
 <!-- IF USER CHANGES MIND ABOUT NOT WANTING TO TALK TO RYAN -->
+
+<!-- IMPORTANT: is there a way to put the national suicide prevention line on screen? It's 1-800-273-TALK (8255)  -->
 <category><pattern><set>yes</set></pattern>
     <that>DO YOU WANT TO TRY ME OUT FOR JUST A LITTLE BIT AND SEE WHAT YOU THINK</that>
-    <template>Awesome! First, I guess I should tell you a little bit about how I work. I use a technique called cognitive behavioral therapy to track your mood in order to help you reshape your thoughts in positive ways. The most important thing to remember is that I'm a robot. This means that I'm going to say some silly things that don't always make a bunch of sense. More importantly, this means that I am not in any way a liscensed therapist or a professional of any sort. If you ever need actual help, please seek out a real person who will be able to help you. Enough about me! Lets focus on you. Are you ready to start?</template>
+    <template>Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other people affect your mood. The most important thing to remember is that I'm a robot. This means that I'm going to say some silly things that don't always make much sense. More importantly, this means that I am not a liscensed therapist. If you ever need immediate help, please seek out a real person, contact the National Suicide Prevention Hotline, or your local emergency services. Enough about the plan! Lets focus on you. Are you ready to start?</template>
 </category>
 
 <!-- READY TO START SESSION -->
 <category><pattern><set>yes</set></pattern>
     <that>ARE YOU READY TO START</that>
-    <template>In order for me to be the most helpful for you, I'll need to know a few things about you first. Do you mind answering a few questions for me? It will only take a few moments.</template>
+    <template>Great! Since we're going to be spending a lot of time together, it might be nice to get to know each other a little. Why don't you tell me a little about yourself? For example, where did you grow up and what are your main interests? What about yourself do you find important?</template>
 </category>
+
+<category><pattern>*</pattern>
+    <that>WHAT ABOUT YOURSELF DO YOU FIND IMPORTANT</that>
+    <template>
+        <!-- maybe store this information separately later on? -->
+        <!-- also maybe add information about the bot to make it seem more like normal conversation..? -->
+        <!-- <think><set name = "userInfo"><star/></set></think> -->
+         Wow that's amazing  <get name = "name"/>! Thank you for your answers. I look forward to learning more about you as time goes on. In order for me to be the most helpful for you, there's a few other things I would like to know about you first. Do you mind answering a few questions for me? It will only take a few moments.
+    </template>
+</category>
+
+<!-- answer YES to question ending in "it will only take a few moments" is start of PHQ9 -->
 
 <!-- is all of this below really necessary? -->
 
@@ -91,11 +106,13 @@
     <template>In order for me to be the most helpful for you, I'll need to know a few things about you first. Do you mind answering a few questions for me? It will only take a few moments.</template>
 </category>
 
-<!-- NO PHQ9 (YES PHQ9 LOCATED IN phq_9)-->
+<!-- NO PHQ9 -->
 <category><pattern><set>no</set></pattern>
     <that>IT WILL ONLY TAKE A FEW MOMENTS</that>
     <template>That's okay! The questions just help me to form a broader picture of you that can help me determine the best ways to help you. Maybe next time. Are you ready to move on?</template>
 </category>
+
+<!-- need to implement a yes to the are you ready to move on or take this out entirely -->
 
 <!-- NO PHQ9 OR DAILY SESSION -->
 <category><pattern><set>no</set></pattern>

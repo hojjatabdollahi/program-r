@@ -20,19 +20,17 @@
 <!-- QUESTION 1 -->
 <category><pattern><set>yes</set></pattern>
     <that>LET US BEGIN</that>
-    <template>Answer the following question by saying either not at all, several days, more than half the days, or nearly every day. How many times in the last two weeks have you felt bothered by having litte interest or pleasure in doing things?</template>
+    <template>Answer the following question by saying either not at all, several days, more than half the days, or nearly every day. How many times in the last two weeks have you felt bothered by having little interest or pleasure in doing things?</template>
 </category>
 
 <!-- QUESTION 2 -->
-<category><pattern><set>notatall</set></pattern>
-    <!-- testing using the set instead of user input, not working? PREV: <category><pattern>NOT AT ALL</pattern> -->
-   <!-- commenting out the that worked, so it has something to do with that (but broke around question 8); THAT STATEMENTS SEEM TO BE THE PROBLEM -->
-  <!-- <that>HOW MANY TIMES IN THE LAST TWO WEEKS HAVE YOU FELT BOTHERED BY HAVING LITTLE INTEREST OR PLEASURE IN DOING THINGS</that> -->
+<category><pattern>NOT AT ALL</pattern>
+    <that>HOW MANY TIMES IN THE LAST TWO WEEKS HAVE YOU FELT BOTHERED BY HAVING LITTLE INTEREST OR PLEASURE IN DOING THINGS</that>
     <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the last two weeks, how often have you felt bothered by feeling down, depressed, or hopeless?</template>
 </category>
 
 <category><pattern>SEVERAL DAYS</pattern>
-  <!--  <that>HOW MANY TIMES IN THE LAST TWO WEEKS HAVE YOU FELT BOTHERED BY HAVING LITTLE INTEREST OR PLEASURE IN DOING THINGS</that> -->
+    <that>HOW MANY TIMES IN THE LAST TWO WEEKS HAVE YOU FELT BOTHERED BY HAVING LITTLE INTEREST OR PLEASURE IN DOING THINGS</that>
     <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the last two weeks, how often have you felt bothered by feeling down, depressed, or hopeless?
         <think>
             <set name = "total"><srai>ADD 1 PLUS <get name = "total"/></srai></set>
@@ -152,12 +150,12 @@
 <!-- QUESTION 6 -->
 <category><pattern>NOT AT ALL</pattern>
     <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY A POOR APPETITE OR OVEREATING</that>
-    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by feeling bad about yourself or that you're a failure or have let yourself or your family down?</template>
+    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by feeling bad about yourself or that you are a failure or have let yourself or your family down?</template>
 </category>
 
 <category><pattern>SEVERAL DAYS</pattern>
     <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY A POOR APPETITE OR OVEREATING</that>
-    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by feeling bad about yourself or that you're a failure or have let yourself or your family down?
+    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by feeling bad about yourself or that you are a failure or have let yourself or your family down?
         <think>
             <set name = "total"><srai>ADD 1 PLUS <get name = "total"/></srai></set>
         </think>
@@ -166,14 +164,14 @@
 
 <category><pattern>MORE THAN HALF THE DAYS</pattern>
     <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY A POOR APPETITE OR OVEREATING</that>
-    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by feeling bad about yourself or that you're a failure or have let yourself or your family down?
+    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by feeling bad about yourself or that you are a failure or have let yourself or your family down?
         <think><set name = "total">2</set><set name = "shaded">1</set></think>
     </template>
 </category>
 
 <category><pattern>NEARLY EVERY DAY</pattern>
     <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY A POOR APPETITE OR OVEREATING</that>
-    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by feeling bad about yourself or that you're a failure or have let yourself or your family down?
+    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by feeling bad about yourself or that you are a failure or have let yourself or your family down?
         <think><set name = "total">3</set><set name = "shaded">1</set></think>
     </template>
 </category>
@@ -211,12 +209,12 @@
 <!-- QUESTION 8 -->
 <category><pattern>NOT AT ALL</pattern>
     <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY HAVING TROUBLE CONCENTRATING ON THINGS, SUCH AS READING OR WATCHING TELEVISION</that>
-    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by moving or speaking so slowly that other people have noticed or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?</template>
+    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by moving or speaking so slowly that other people have noticed or being so fidgety or restless that you have been moving around a lot more than usual?</template>
 </category>
 
 <category><pattern>SEVERAL DAYS</pattern>
     <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY HAVING TROUBLE CONCENTRATING ON THINGS, SUCH AS READING OR WATCHING TELEVISION</that>
-    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by moving or speaking so slowly that other people have noticed or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?
+    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by moving or speaking so slowly that other people have noticed or being so fidgety or restless that you have been moving around a lot more than usual?
         <think>
             <set name = "total"><srai>ADD 1 PLUS <get name = "total"/></srai></set>
         </think>
@@ -225,26 +223,26 @@
 
 <category><pattern>MORE THAN HALF THE DAYS</pattern>
     <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY HAVING TROUBLE CONCENTRATING ON THINGS, SUCH AS READING OR WATCHING TELEVISION</that>
-    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by moving or speaking so slowly that other people have noticed or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?
+    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by moving or speaking so slowly that other people have noticed or being so fidgety or restless that you have been moving around a lot more than usual?
         <think><set name = "total">2</set><set name = "shaded">1</set></think>
     </template>
 </category>
 
 <category><pattern>NEARLY EVERY DAY</pattern>
     <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY HAVING TROUBLE CONCENTRATING ON THINGS, SUCH AS READING OR WATCHING TELEVISION</that>
-    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by moving or speaking so slowly that other people have noticed or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?
+    <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by moving or speaking so slowly that other people have noticed or being so fidgety or restless that you have been moving around a lot more than usual?
         <think><set name = "total">3</set><set name = "shaded">1</set></think>
     </template>
 </category>
 
 <!-- QUESTION 9 -->
 <category><pattern>NOT AT ALL</pattern>
-    <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY MOVING OR SPEAKING SO SLOWLY THAT OTHER PEOPLE HAVE NOTICED OR THE OPPOSITE - BEING SO FIDGETY OR RESTLESS THAT YOU HAVE BEEN MOVING AROUND A LOT MORE THAN USUAL</that>
+    <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY MOVING OR SPEAKING SO SLOWLY THAT OTHER PEOPLE HAVE NOTICED OR BEING SO FIDGETY OR RESTLESS THAT YOU HAVE BEEN MOVING AROUND A LOT MORE THAN USUAL</that>
     <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by thoughts that you would be better off dead or hurting yourself in some way?</template>
 </category>
 
 <category><pattern>SEVERAL DAYS</pattern>
-    <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY MOVING OR SPEAKING SO SLOWLY THAT OTHER PEOPLE HAVE NOTICED OR THE OPPOSITE - BEING SO FIDGETY OR RESTLESS THAT YOU HAVE BEEN MOVING AROUND A LOT MORE THAN USUAL</that>
+    <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY MOVING OR SPEAKING SO SLOWLY THAT OTHER PEOPLE HAVE NOTICED OR BEING SO FIDGETY OR RESTLESS THAT YOU HAVE BEEN MOVING AROUND A LOT MORE THAN USUAL</that>
     <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by thoughts that you would be better off dead or hurting yourself in some way?
         <think>
             <set name = "total"><srai>ADD 1 PLUS <get name = "total"/></srai></set>
@@ -253,14 +251,14 @@
 </category>
 
 <category><pattern>MORE THAN HALF THE DAYS</pattern>
-    <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY MOVING OR SPEAKING SO SLOWLY THAT OTHER PEOPLE HAVE NOTICED OR THE OPPOSITE - BEING SO FIDGETY OR RESTLESS THAT YOU HAVE BEEN MOVING AROUND A LOT MORE THAN USUAL</that>
+    <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY MOVING OR SPEAKING SO SLOWLY THAT OTHER PEOPLE HAVE NOTICED OR BEING SO FIDGETY OR RESTLESS THAT YOU HAVE BEEN MOVING AROUND A LOT MORE THAN USUAL</that>
     <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by thoughts that you would be better off dead or hurting yourself in some way?
         <think><set name = "total">2</set><set name = "shaded">1</set></think>
     </template>
 </category>
 
 <category><pattern>NEARLY EVERY DAY</pattern>
-    <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY MOVING OR SPEAKING SO SLOWLY THAT OTHER PEOPLE HAVE NOTICED OR THE OPPOSITE - BEING SO FIDGETY OR RESTLESS THAT YOU HAVE BEEN MOVING AROUND A LOT MORE THAN USUAL</that>
+    <that>DURING THE PAST TWO WEEKS, HOW OFTEN HAVE YOU BEEN BOTHERED BY MOVING OR SPEAKING SO SLOWLY THAT OTHER PEOPLE HAVE NOTICED OR BEING SO FIDGETY OR RESTLESS THAT YOU HAVE BEEN MOVING AROUND A LOT MORE THAN USUAL</that>
     <template>Answer the following questing by saying either not at all, several days, more than half the days, or nearly every day. During the past two weeks, how often have you been bothered by thoughts that you would be better off dead or hurting yourself in some way?
         <think><set name = "total">3</set><set name = "shaded">1</set></think>
     </template>
