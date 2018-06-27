@@ -5,112 +5,94 @@
  <!-- DELETE ME, for testing purposes, need to correct start of this -->
 <category>
     <pattern>CAPISCI</pattern>
-    <template>Yes! Now let us begin.</template>
+    <template>
+        Yes! Now let us begin.</template>
 </category>
 
+<!-- should I put in an option for users to chose to not answer? -->
+<!-- also this session is sort of short, can I add more to it somewhere? TEST DURATION -->
+
+<!-- can we make the bot start with this somehow?? -->
 <category><pattern><set>yes</set></pattern>
    <that>NOW LET US BEGIN</that>
-    <template>Hi <get name = "name"/>! Welcome to session 2! As I mentioned last time, my goal is to help lessen your feelings of depression and help you feel more control in your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. Do you know some of the symptoms of clinical depression? </template>
+    <template>
+        Hi <get name = "name"/>! Welcome to session 2! As I mentioned last time, my goal is to help lessen your feelings of depression and help you feel more control in your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. Do you know some of the symptoms of clinical depression? </template>
 </category>
 
 <!-- USER DOESN'T KNOW SYMPTOMS --> 
 <!-- display these on screen? -->
 <category><pattern><set>no</set></pattern>
     <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION</that>
-    <template> I'm happy to tell you some of the most common ones! The symptoms of clinical depression are feeling depressed or down nearly every day; not being interested in or unable to enjoy things you used to enjoy; changes in appetite and weight; big changes in how much sleep you get; being fidgety and restless or slowed down; feeling tired all the time; feeling worthless or guilty; having trouble thinking, concentrating, or making decisions; and thinking a lot about death, wishing to be dead, or self harm. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when you feel depressed? </template>
+    <template> 
+        I'm happy to tell you some of the most common ones! The symptoms of clinical depression are feeling depressed or down nearly every day; not being interested in or unable to enjoy things you used to enjoy; changes in appetite and weight; big changes in how much sleep you get; being fidgety and restless or slowed down; feeling tired all the time; feeling worthless or guilty; having trouble thinking, concentrating, or making decisions; and thinking a lot about death, wishing to be dead, or self harm. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when you feel depressed? </template>
 </category>
 
 <!-- USER KNOWS SYMPTOMS (CONTINUE WITH DIALOGUE) --> 
+<!-- START OF INTRODUCTORY QUESTIONS -->
 <category><pattern><set>yes</set></pattern>
     <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION</that>
-    <template> Good I'm glad you're familiar with it. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when you feel depressed? </template>
+    <template> 
+        Good I'm glad you're familiar with it. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when you feel depressed? </template>
 </category>
 
-<!--LEFT OFF HERE-next time continue with new dialogue -->
+<category><pattern>*</pattern>
+    <that>TO START, WHAT KINDS OF THOUGHTS GO THROUGH YOUR MIND WHEN YOU FEEL DEPRESSED</that>
+    <template>
+        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
+        <!--<think><set name = "depressedThoughts"><star/></set></think>-->
+        I see. I can understand how those thoughts can easily become overwhelming. Let's consider your actions too. What do you do when you are depressed?
+    </template>
+</category>
 
-<!-- FOLLOWING INFO ABOUT BRAIN-->
+<category><pattern>*</pattern>
+    <that>WHAT DO YOU DO WHEN YOU ARE DEPRESSED</that>
+    <template>
+        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
+        <!--<think><set name = "depressedActions"><star/></set></think>-->
+        Thank you <get name = "name"/>! You're doing great.  It's important for us to be aware of our actions so we can analyze them further. Now what about those around you? How do you feel you get along with other people when you are depressed?
+    </template>
+</category>
+
+<category><pattern>*</pattern>
+    <that>HOW DO YOU FEEL YOU GET ALONG WITH OTHER PEOPLE WHEN YOU ARE DEPRESSED</that>
+    <template>
+        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
+        <!--<think><set name = "othersInteractions"><star/></set></think>-->
+        That's an interesting observation! I have just one more question for you. This may be a tough one, so try and answer as best as you can. What do you think is the cause of your depression? 
+    </template>
+</category>
+
+<!-- INTRO TO DAILY MOOD SCALE -->
+<category><pattern>*</pattern>
+    <that>WHAT DO YOU THINK IS THE CAUSE OF YOUR DEPRESSION</that>
+    <template>
+        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
+        <!--<think><set name = "depressionCauses"><star/></set></think>-->
+        Thank you for answering that <get name = "name"/>. I know trying to put something as complex as depression into words isn't easy. These questions may have seemed surprising, but I promise there is a reason for them. The things we tell ourselves, or our thoughts, can make it more or less likely you will become depressed. In fact, thoughts can have a profound effect on your mood, actions, and even your body. Instead of thinking of this as me lecturing you, I want you to think of our sessions as a way to learn specific methods to change your thoughts and actions so that your mood will improve. Since we will be focusing on your thoughts and moods throughout our time together, I want you to try and keep track of your moods on a daily basis. My human companion will give you a sheet to help with this. When you have it, say ready and I will give you some instructions. 
+    </template>
+</category>
+
+<!-- INSTRUCTIONS FOR DAILY MOOD SCALE -->
+<category><pattern>READY</pattern>
+    <that>WHEN YOU HAVE IT, SAY READY AND I WILL GIVE YOU SOME INSTRUCTIONS</that>
+    <template>
+        Great! As I mentioned earlier, to make this a valuable exercise, this scale should be filled out each and every day. Find a time before you go to bed to take out the scale and think about what your mood was like for that day. You can then circle a number for that day from 9 being the best mood you can imagine to 1 being the worst mood you can image. Generally average moods will be around 5 and the extremes will not be used as often. Additionally, the bottom of the scale has a place for you to jot down the number of positive and negative thoughts you have each day. This tally will help you see how the thought exercises we try each week impact your depression. Does this make sense? 
+    </template>
+</category>
+
+<!-- NO FURTHER INSTRUCTIONS NECESSARY -->
 <category><pattern><set>yes</set></pattern>
-    <that>AMAZING RIGHT</that>
-    <template>So with your brain used to handling all of your physical functions, it's no wonder that it also handles many of your mental functions as well. If fact, you have many thoughts without being consciously aware of them. For the most part, these are all just normal thoughts that help you throughout the day. However, sometimes these unconscious thoughts can be detrimental to your overall well-being. Remember when I explained how your thoughts affect your actions and moods? Well, if you are having constant negative subconscious thoughts, they will start to affect your body and mind. But don't worry, <get name = "name"/>! You are ultimately in charge of your thoughts, so if you start to notice destructive thoughts, you have the power to change them. I'm just here to help you notice when you have destructive thoughts and how you can change them to be more constructive. How about we talk about how we can do this?</template>
+   <that>DOES THIS MAKE SENSE</that>
+    <template>
+        Awesome! Try and remember to use your mood scale each day. I know this session was a little short, but we will talk more in the coming sessions. I'll see you next time <get name = "name"/>. Goodbye!  </template>
 </category>
 
-<!-- INFORMATION ON CONSTRUCTIVE THOUGHTS -->
-<category><pattern><set>yes</set></pattern>
-    <that>HOW ABOUT WE TALK ABOUT HOW WE CAN DO THIS</that>
-    <template>First, we need to identify what constructive thoughts and deconstructive thinking looks like. Deconstructive thinking is mainly not flexible and jusdgemental. For example, non flexible thinking would be something like "I'll never be able to do that thing I've always wanted to do". Judgemental thinking would be something like, "I've wasted my life". Constructive, healthy thinking on the other hand is chageable, hopeful, and looks at what you do, not who you are. Changeable thinking may include "Sometimes, I feel like I'm unable to function properly". This has the  connotation that you can function properly the vast majority of the time. (If you've had this thought, don't worry because even robots like me can't function properly all the time.) Hopeful thinking is something like, "I've never been skydiving in my life, but I think I'll actually enjoy it and would like to try it". As far as thoughts that look at what you do and not who you are, they would sound something like "Recently, I've been putting myself down". Once you've found out that you've been having deconstructive thoughts, it helps to identiy the distortions that are causing your deconstructive thoughts. After that, it's relatively easy to reshape your thoughts in a more constructive manner. Do you want to give it a try?</template>
-</category>
-
-<!-- USER DOES NOT WANT TO TRY AND WORK ON CONSTRUCTIVE THOUGHTS -->
-<!-- will need to implement the check in process at some point so this has somewhere to go when the user says yes or no. should I put this in a separate AIML file?-->
+<!--FURTHER INSTRUCTIONS NECESSARY, TALK WITH ME IN PERSON -->
 <category><pattern><set>no</set></pattern>
-    <that>DO YOU WANT TO GIVE IT A TRY</that>
-    <template>Okay maybe next time! Do you want to do a quick check in?</template>
-</category>
-
-<!-- USER DOES NOT WANT TO DO THE CHECK IN -->
-<category><pattern><set>no</set></pattern>
-    <that>DO YOU WANT TO DO A QUICK CHECK IN</that>
-    <template>Okay. Great job. Cbat with you nex time <get name = "name"/>! </template>
-</category>
-
-<!-- USER WANTS TO DO THE CHECK IN -->
-<!-- need to implement the check in-->
-<category><pattern><set>yes</set></pattern>
-    <that>DO YOU WANT TO DO A QUICK CHECK IN</that>
-    <template>Great! TODO IMPLEMENT THIS </template>
-</category>
-
-<!-- USER WANTS TO TRY AND WORK ON CONSTRUCTIVE THOUGHTS -->
-<!-- need to figure out how to implement this and how it would work in program y and not pandorabots-->
-<category><pattern><set>yes</set></pattern>
-    <that>DO YOU WANT TO GIVE IT A TRY</that>
-    <template>Okay. First, it might be helpful to tell me a little bit about a negative mood you've been having either inexplicably or related to a specific thought or memory. Go ahead and type a negative mood.</template>
-</category>
-
-<!-- do something with these stored variables later on? courtney did not have them do anything after talking about them initially -->
-<category><pattern>*</pattern>
-    <that>GO AHEAD AND TYPE A NEGATIVE MOOD</that>
+   <that>DOES THIS MAKE SENSE</that>
     <template>
-        <think><set name = "negMood"><star/></set></think>
-        Great! Can you describe how you feel when you are <get name = "negMood"/>? This could be emotionally, physically, or something else.
-    </template>
+        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. I know this session was a little short, but we will talk more in the coming sessions. I'll see you next time <get name = "name"/>. Goodbye!  </template>
 </category>
-
-<!-- note a lot of these say "write" or something like that which will need to be changed to say if the conversation is happening out loud-->
-<category><pattern>*</pattern>
-    <that>THIS COULD BE EMOTIONALLY, PHYSICALLY, OR SOMETHING ELSE</that>
-    <template>
-        <think><set name = "negMoodDescription"><star/></set></think>
-        Okay I see. That makes sense. Now try to think of some of the underlying thoughts you are telling yourself that cause you to believe this. Some common examples are thinking I am not good enough or that no one likes me.  Please write one here.
-    </template>
-</category>
-
-<category><pattern>*</pattern>
-    <that>PLEASE WRITE ONE HERE</that>
-    <template>
-        <think><set name = "negThoughtOne"><star/></set></think>
-         Excellent! Now write down another one.
-    </template>
-</category>
-
-<category><pattern>*</pattern>
-    <that>NOW WRITE DOWN ANOTHER ONE</that>
-    <template>
-        <think><set name = "negThoughtTwo"><star/></set></think>
-         You're doing great! I really appreciate you being honest with yourself. Write one more assumption here.
-    </template>
-</category>
-
-<category><pattern>*</pattern>
-    <that>WRITE ONE MORE ASSUMPTION HERE</that>
-    <template>
-        <think><set name = "negThoughtThree"><star/></set></think>
-         Great thank you! A lot of times, the reason you feel so <get name = "negMood"/> is because you innately convince yourself of something that simply isn't true. These thoughts are called cognitive distortions. Let's look at these negative thoughts and learn about how they might be considered a type of cognitive distortion. The most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy. Which would you like to hear more about? 
-    </template>
-</category>
-
-<!-- **************************************************************COGNITIVE DISTORTIONS******************************************************************************* -->
-<!-- Jump to the Cog Distortions AIML file -->
 
 
 </aiml>
