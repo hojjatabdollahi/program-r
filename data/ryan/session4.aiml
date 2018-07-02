@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  
+<!-- DELETE ME, for testing purposes, need to correct start of this, can we make the bot start? -->
+<!-- is this too long? -->
+<category>
+    <pattern>SESSION 4</pattern>
+    <template>
+         Hi <get name = "name"/>! Welcome to session four. I hope you are still using your daily mood scale. I want you to try and pay attention to the patterns in your mood day to day. It might teach you something. Also, you should have been keeping track of your number of positive and negative thoughts throughout the day. This is important because we want to encourage healthy thinking. A good way to do this is focus on thoughts that produce a better mood. You could increase the number of good thoughts in your mind such as making a list of good things about you and your life. You should also not be afraid to pat yourself on the back sometimes. A lot of what we do isn't noticed by others so you should give yourself credit for what you do. Another good thing to do is take breaks. Allow your mind to relax so your body can feel at peace. Feeling at peace can give you energy. Finally, consider the future. Imagine yourself taking steps toward a time when things are better. Let's try an exercise. Tell me some positive things about yourself.  </template>
+</category>
+
+<!-- EXERCISE - pos things about self -->
+<category>
+    <pattern>*</pattern>
+    <that>TELL ME SOME POSITIVE THINGS ABOUT YOURSELF</that>
+    <template>
+        Great job! I love those ideas. You are an amazing person and you shouldn't forget that. What are some positive things about your life?
+    </template>
+</category>
+
+<!-- EXERCISE - pos things about life -->
+<category>
+    <pattern>*</pattern>
+    <that>WHAT ARE SOME POSITIVE THINGS ABOUT YOUR LIFE</that>
+    <template>
+        Those things really are great! Now think about how you feel after talking positively about yourself and your life. It feels much better this way than say thinking negative thoughts huh? We actually want to try and decrease those thoughts that make us feel bad. If a thought is ruining your mood, you should strive to identify this and tell yourself to think of something that won't disrupt your mood. Another thing you can do is schedule "worry time" or time dedicated to concentrate completely on necessary thinking so the rest of the day can be worry free. This time can be ten minutes long to even thirty minutes long. You can also make fun of your problems by exaggerating them. Having a good sense of humor goes a long way. 
+    </template>
+</category>
+  
+<!-- left off page 18 of manual -->
+
+  
+</aiml>
