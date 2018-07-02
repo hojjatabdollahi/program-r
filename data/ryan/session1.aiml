@@ -69,7 +69,7 @@
 
 <!-- IF USER CHANGES MIND ABOUT NOT WANTING TO TALK TO RYAN -->
 
-<!-- IMPORTANT: is there a way to put the national suicide prevention line on screen? It's 1-800-273-TALK (8255)  -->
+ <!--IMPORTANT: is there a way to put the national suicide prevention line on screen? It's 1-800-273-TALK (8255)  -->
 <category><pattern><set>yes</set></pattern>
     <that>DO YOU WANT TO TRY ME OUT FOR JUST A LITTLE BIT AND SEE WHAT YOU THINK</that>
     <template>Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other people affect your mood. The most important thing to remember is that I'm a robot. This means that I'm going to say some silly things that don't always make much sense. More importantly, this means that I am not a liscensed therapist. If you ever need immediate help, please seek out a real person, contact the National Suicide Prevention Hotline, or your local emergency services. Enough about the plan! Lets focus on you. Are you ready to start?</template>

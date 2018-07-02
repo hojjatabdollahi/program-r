@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-    
-  <!-- implement this so there isn't a huge wall of text or explanation for the user -->
   
-  <!-- also implement way to redirect to goodbye or to talk about another distortion -->
+  <!-- can I eventually find a way to store a list of what the user picks as distortions that apply to them and show it later? -->
   
-  <!-- get rid of all the different variables saving the negative moods and other answers? do we need to even store that?? -->
+  <!-- leaving variables in for now in case chose to do something with them at some point -->
 
 <!-- ***************************************************FILTERING************************************************************* --> 
 <category><pattern>FILTERING</pattern>
@@ -19,30 +17,30 @@
  <!-- FILTERING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE FILTERING APPLIES TO YOU</that>
-    <template> Great job on identifying a distortion! Filtering is such a common distortion, but once you identify it, you can turn it around! The first thing I want you to do is to write down a negative thought. If you've told me one before, it can be the same or something different. Go ahead and give it a try! </template>
+    <template> 
+        Great job on identifying a distortion! Filtering is such a common distortion, but once you identify it, you can turn it around! The first thing I want you to do is tell me a negative thought. </template>
 </category>
 
-<!-- do something with these stored variables later on? courtney did not have them do anything after talking about them initially; note might need to change from "write" to "say" or something like that -->
 <category><pattern>*</pattern>
-    <that>GO AHEAD AND GIVE IT A TRY</that>
+    <that>THE FIRST THING I WANT YOU TO DO IS TELL ME A NEGATIVE THOUGHT</that>
     <template>
-        <think><set name = "filteringNegMood"><star/></set></think>
-        Great! Now I want you to think of one positive thing that you maybe aren't taking into too much consideration right now. Write that here.
+        <!-- <think><set name = "filteringNegMood"><star/></set></think> -->
+        Great! Now I want you to think of one positive thing that you maybe aren't taking into too much consideration right now. Tell me about it when you are ready.
     </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>WRITE THAT HERE</that>
+    <that>TELL ME ABOUT IT WHEN YOU ARE READY</that>
     <template>
-        <think><set name = "filteringPosMoodOne"><star/></set></think>
-        Excellent! Now write down another positive thought about the situation.
+         <!--<think><set name = "filteringPosMoodOne"><star/></set></think> -->
+        Excellent! Now tell me another positive thought about the situation.
     </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>NOW WRITE DOWN ANOTHER POSITIVE THOUGHT ABOUT THE SITUATION</that>
+    <that>NOW TELL ME ANOTHER POSITIVE THOUGHT ABOUT THE SITUATION</that>
     <template>
-        <think><set name = "filteringPosMoodTwo"><star/></set></think>
+        <!--<think><set name = "filteringPosMoodTwo"><star/></set></think>-->
         Great! I know this can be difficult, but think of one more positive thought about you or the situation.
     </template>
 </category>
@@ -50,25 +48,42 @@
 <category><pattern>*</pattern>
     <that>I KNOW THIS CAN BE DIFFICULT, BUT THINK OF ONE MORE POSITIVE THOUGHT ABOUT YOU OR THE SITUATION</that>
     <template>
-        <think><set name = "filteringPosMoodThree"><star/></set></think>
-         Incredible! The last thing I want you to do is to rewrite your thought "<get name = "filteringNegMood"/>" in a more positive way now that you've identified some positive things about it. Write it here when you are ready.
+        <!--<think><set name = "filteringPosMoodThree"><star/></set></think>-->
+         Incredible! The last thing I want you to do is rephrase your initial thought in a more positive way now that you have identified some positive things about it.
     </template>
 </category>
 
 <!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-    <that>WRITE IT HERE WHEN YOU ARE READY</that>
+    <that>THE LAST THING I WANT YOU TO DO IS REPHRASE YOUR INITIAL THOUGHT IN A MORE POSITIVE WAY NOW THAT YOU HAVE IDENTIFIED SOME POSITIVE THINGS ABOUT IT</that>
     <template>
-        <think><set name = "filteringNegMoodCorrected"><star/></set></think>
-        That's great <get name = "name"/>! 
+        <!--<think><set name = "filteringNegMoodCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Would you like to learn about another distortion? 
     </template>
+</category>
+
+ <!-- ANOTHER DISTORTION yes- choose another distortion -->
+ <!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>WOULD YOU LIKE TO LEARN ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>WOULD YOU LIKE TO LEARN ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Sounds good. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
   
  <!-- FILTERING no- try another distortion -->
+ <!-- IMPORTANT: show the list of choices here again -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE FILTERING APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
   
@@ -76,21 +91,21 @@
 <category><pattern>POLARIZED THINKING</pattern>
     <!--<that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>-->
     <template>
-        Polarized thinking is when you assume verything is either "black-or-white"; there is no middle ground. You put people, situations, and yourself into "either/or" categories to the extent that if something isn't absolutely perfect, it's a failure. Do you feel like polarized thinking applies to you?
+        Polarized thinking is when you assume everything is either "black-or-white"; there is no middle ground. You put people, situations, and yourself into "either/or" categories to the extent that if something isn't absolutely perfect, it's a failure. Do you feel like polarized thinking applies to you?
     </template>
 </category>  
   
  <!-- POLARIZED THINKING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE POLARIZED THINKING APPLIES TO YOU</that>
-    <template> Great job on identifying a distortion! I know this one can make things pretty tough for you, so I'm glad we get to work on it today. You know that phrase, "if at first you don't succeed, try, try again"? Did you know that Albert Einstein failed his entrance examinations to Swiss Federal Polytechnic? It's true! After he failed, he went to another school before going back to Swiss Federal Polytechnic for his teaching degree. The first thing I want you to do is to write down a negative situation. It may be one you're in now or have faced before. Go ahead and give it a try!   </template>
+    <template> 
+        Great job on identifying a distortion! I know this one can make things pretty tough for you, so I'm glad we get to work on it today. The first thing I want you to do is think about a negative situation you're in now or have faced before. Go ahead and give it a try!   </template>
 </category>
 
-<!-- do something with these stored variables later on? courtney did not have them do anything after talking about them initially; note might need to change from "write" to "say" or something like that --> 
 <category><pattern>*</pattern>
     <that>GO AHEAD AND GIVE IT A TRY</that>
     <template>
-        <think><set name = "polarizedNegSituation"><star/></set></think>
+        <!--<think><set name = "polarizedNegSituation"><star/></set></think>-->
         Great! Now I want you to describe something you had to try several times before you succeeded.
     </template>
 </category>
@@ -98,7 +113,7 @@
 <category><pattern>*</pattern>
     <that>NOW I WANT YOU TO DESCRIBE SOMETHING YOU HAD TO TRY SEVERAL TIMES BEFORE YOU SUCCEEDED </that>
     <template>
-        <think><set name = "polarizedSuccess"><star/></set></think>
+        <!--<think><set name = "polarizedSuccess"><star/></set></think>-->
         Wow! That's quite an impressive feat. I think it would have taken me much longer to succeed had I been in your situation. Now I would like for you to think of what would happen if you stopped trying to succeed in that situation.
     </template>
 </category>
@@ -106,7 +121,7 @@
 <category><pattern>*</pattern>
     <that>NOW I WOULD LIKE FOR YOU TO THINK OF WHAT WOULD HAPPEN IF YOU STOPPED TRYING TO SUCCEED IN THAT SITUATION</that>
     <template>
-        <think><set name = "polarizedNegOutcome"><star/></set></think>
+        <!--<think><set name = "polarizedNegOutcome"><star/></set></think>-->
         Excellent! I would now like you to think of what would happen if you kept trying in your present situation and were able to succeed.
     </template>
 </category>
@@ -114,25 +129,41 @@
 <category><pattern>*</pattern>
     <that>I WOULD NOW LIKE YOU TO THINK OF WHAT WOULD HAPPEN IF YOU KEPT TRYING IN YOUR PRESENT SITUATION AND WERE ABLE TO SUCCEED</that>
     <template>
-        <think><set name = "polarizedPosOutcome"><star/></set></think>
-        Great! Hopefully, this thought experiment has helped you to see that stopping now may seem easier or the better course of action, but the reward for continuing to try is worth it. How about you rewrite your original thought, "<get name = "polarizedNegSituation"/>", in a way so that you will want to keep trying again. Write it when you are ready!
+        <!--<think><set name = "polarizedPosOutcome"><star/></set></think>-->
+        Great! Hopefully, this thought experiment has helped you to see that stopping now may seem easier or the better course of action, but the reward for continuing to try is worth it. How about you rephrase your original thought in a way so that you will want to keep trying again. 
     </template>
 </category>
 
 <!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-    <that>WRITE IT WHEN YOU ARE READY</that>
+    <that>HOW ABOUT YOU REPHRASE YOUR ORIGINAL THOUGHT IN A WAY SO THAT YOU WILL WANT TO KEEP TRYING AGAIN</that>
     <template>
-        <think><set name = "polarizedNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>! 
+        <!--<think><set name = "polarizedNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Good job working on this distortion. Do you want to learn about another one?
     </template>
+</category>
+
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DO YOU WANT TO LEARN ABOUT ANOTHER ONE</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO LEARN ABOUT ANOTHER ONE</that>
+    <template> 
+        Sounds good. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
 
  <!-- POLARIZED THINKING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE POLARIZED THINKING APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************OVERGENERALIZATION************************************************************* --> 
@@ -146,33 +177,49 @@
  <!-- OVERGENERALIZATION yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE OVERGENERALIZATION APPLIES TO YOU</that>
-   <!-- don't forget to add the second portion for this fallacy -->
-    <template> Way to go in identifying overgeneralization as a cognitive distortion! You're already on the path to better patterns of thought. Since you've already identified overgeneralization, how about you identify what instance caused to you overgeneralize. Write it here.  </template>
+    <template> 
+        Way to go in identifying overgeneralization as a cognitive distortion! You're already on the path to better patterns of thought. Tell me about a time you have overgeneralized.  </template>
 </category>
 
-<!-- do something with these stored variables later on? courtney did not have them do anything after talking about them initially; note might need to change from "write" to "say" or something like that --> 
 <category><pattern>*</pattern>
-    <that>WRITE IT HERE</that>
+    <that>TELL ME ABOUT A TIME YOU HAVE OVERGENERALIZED</that>
     <template>
-        <think><set name = "overgeneralizationInstance"><star/></set></think>
-        Good job! It may be easy to think that a single instance defines you, but that is never the case. You are a multifaceted person who has years of experience and life to define you. Everyone makes mistakes. Even robots like me. But you just have to realize that the moment has passed and you can forgive yourself for it. Easier said than done, right? Simply restating your negative thought "<get name = "overgeneralizationInstance"/>" in a way that says its okay to have done that is a great start. For example, if your negative thought was 'I didn't do well with that job interview so I'm therefore horrible at job interviews', you can restate that as 'I didn't do so well on that job interview, but I'll be sure to do better next time'. By changing that thought in your mind, you'll start to see how your overgeneralization is just that. Then you can start to forgive yourself. Try and restate your negative thought.
+        <!--<think><set name = "overgeneralizationInstance"><star/></set></think>-->
+        Good job! It may be easy to think that a single instance defines you, but that is never the case. You are a multifaceted person who has years of experience and life to define you. you just have to realize that the moment has passed so you can forgive yourself for it. Easier said than done, right? Sometimes reevaluating a situation can help. For example, if your negative thought was 'I didn't do well with that job interview so I'm therefore horrible at job interviews', you can restate that as 'I didn't do so well on that job interview, but I'll be sure to do better next time'. By changing that thought in your mind, you'll start to see how overgeneralizing applies. Try and tell me about the situation again in a way that minimizes overgeneralization. 
     </template>
 </category>
 
 <!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-    <that>TRY AND RESTATE YOUR NEGATIVE THOUGHT</that>
+    <that>TRY AND TELL ME ABOUT THE SITUATION AGAIN IN A WAY THAT MINIMIZES OVERGENERALIZATION. </that>
     <template>
-        <think><set name = "overgeneralizationInstanceCorrected"><star/></set></think>
-        That's great <get name = "name"/>! 
+        <!--<think><set name = "overgeneralizationInstanceCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Hopefully this exercise helps you alter the way you think for the better. Would you like to work on another distortion?
     </template>
+</category>
+
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>WOULD YOU LIKE TO WORK ON ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO LEARN ABOUT ANOTHER ONE</that>
+    <template> 
+        Sounds good. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
 
 <!-- OVERGENERALIZATION no- try another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE OVERGENERALIZATION APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************JUMPING TO CONCLUSIONS************************************************************* --> 
@@ -186,13 +233,15 @@
  <!-- JUMPING TO CONCLUSIONS yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE JUMPING TO CONCLUSIONS APPLIES TO YOU</that>
-   <!-- don't forget to add the second portion for this fallacy -->
-    <template> Great job in identifying a coginitive distortion, <get name = "name"/>! When it comes to jumping to conclusions, you could be jumping to a conclusion about a person or situation. Which would you say it is? Say a person or a situation. </template>
+    <template> 
+        Great job in identifying a cognitive distortion, <get name = "name"/>! When it comes to jumping to conclusions, you could be jumping to a conclusion about a person or situation. Which would you say it is? </template>
 </category>
+
+<!-- IMPORTANT: add choice for person/situation on screen here -->
 
 <!-- User decides to talk about a person -->
 <category><pattern>A PERSON</pattern>
-    <that>SAY A PERSON OR A SITUATION</that>
+    <that>WHICH WOULD YOU SAY IT IS</that>
     <template>
         I see. What is it that you are assuming about this person?
     </template>
@@ -201,23 +250,22 @@
 <category><pattern>*</pattern>
     <that>WHAT IS IT THAT YOU ARE ASSUMING ABOUT THIS PERSON </that>
     <template>
-        <think><set name = "jumpingPersonAssumption"><star/></set></think>
+        <!--<think><set name = "jumpingPersonAssumption"><star/></set></think>-->
         That's great <get name = "name"/>! Now try to think of something else that this person may have been going through to give you that impression. Describe a situation you may be going through to give to someone else the impression that this person is giving you. Be as understanding as possible.
     </template>
 </category>
 
-<!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
         <that>BE AS UNDERSTANDING AS POSSIBLE </that>
     <template>
-        <think><set name = "jumpingPersonAssumptionCorrected"><star/></set></think>
-        Good job thinking in someone else's shoes. Hopefully this little thought experiment gave you an oppurtunity to explore other conculsions than the one you jumped to. By conducting thought experiments like this one, you can realize that the worst case scenario is really the least likely. Great work! 
+        <!--<think><set name = "jumpingPersonAssumptionCorrected"><star/></set></think>-->
+        Good job thinking in someone else's shoes. Hopefully this little thought experiment gave you an opportunity to explore other conclusions than the one you jumped to. By conducting thought experiments like this one, you can realize that the worst case scenario is really the least likely. Great work! Do you want to look at another distortion?
     </template>
 </category>
 
 <!-- User decides to talk about a situation -->
 <category><pattern>A SITUATION</pattern>
-    <that>SAY A PERSON OR A SITUATION</that>
+    <that>WHICH WOULD YOU SAY IT IS</that>
     <template>
         I see. What about this situation do you assume will happen?
     </template>
@@ -226,44 +274,63 @@
 <category><pattern>*</pattern>
     <that>WHAT ABOUT THIS SITUATION DO YOU ASSUME WILL HAPPEN</that>
     <template>
-        <think><set name = "jumpingSituationAssumption"><star/></set></think>
+        <!--<think><set name = "jumpingSituationAssumption"><star/></set></think>-->
         That's great <get name = "name"/>! Now imagine that your assumption is incorrect and you put yourself back into that situation. What happens? Are there any better outcomes?
     </template>
 </category>
 
-<!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
         <that>ARE THERE ANY BETTER OUTCOMES</that>
     <template>
-        <think><set name = "jumpingSituationAssumptionCorrected"><star/></set></think>
-        Good job thinking about the situation in a different light. Hopefully this little thought experiment gave you an oppurtunity to explore other conculsions than the one you jumped to. By conducting thought experiments like this one, you can realize that the worst case scenario is really the least likely. Great work! 
+        <!--<think><set name = "jumpingSituationAssumptionCorrected"><star/></set></think>-->
+        Good job thinking about the situation in a different light. Hopefully this little thought experiment gave you an opportunity to explore other conclusions than the one you jumped to. By conducting thought experiments like this one, you can realize that the worst case scenario is really the least likely. Great work! Do you want to look at another distortion?
     </template>
+</category>
+
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DO YOU WANT TO LOOK AT ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO LOOK AT ANOTHER DISTORTION</that>
+    <template> 
+        Sounds good. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
 
 <!-- JUMPING TO CONCLUSIONS no- try another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE JUMPING TO CONCLUSIONS APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************CATASTROPHIZING************************************************************* --> 
 <category><pattern>CATASTROPHIZING</pattern>
     <!--<that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>-->
     <template>
-        In this distortion, you expect disaster to strike, no matter what. Otherwise known as "magnifiying or minimizing", you might exaggerate insignificant events or minimize more significant events. Do you feel like catastrophizing applies to you?
+        In this distortion, you expect disaster to strike, no matter what. Otherwise known as "magnifying or minimizing", you might exaggerate insignificant events or minimize more significant events. Do you feel like catastrophizing applies to you?
     </template>
 </category>  
 
  <!-- CATASTROPHIZING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE CATASTROPHIZING APPLIES TO YOU</that>
-    <template> Great job in identifying a cognitive distortion, <get name = "name"/>! When it comes to catastophizing, you could be either magnifying a less significant event or minimizing a more significant event. Which do you think you are doing? Just say magnifying or minimizing. </template>
+    <template> 
+        Great job in identifying a cognitive distortion, <get name = "name"/>! When it comes to catastophizing, you could be either magnifying a less significant event or minimizing a more significant event. Which do you think you are doing? </template>
 </category>
 
-<!-- User decides to talk about magnifiying a less significnt event -->
+<!-- IMPORTANT: add choice for magnifying/minimizing  on screen here -->
+
+<!-- User decides to talk about magnifying a less significant event -->
 <category><pattern>MAGNIFYING</pattern>
-    <that>JUST SAY MAGNIFYING OR MINIMIZING</that>
+    <that>WHICH DO YOU THINK YOU ARE DOING</that>
     <template>
         Good observation! Now that you realize that you are magnifying, let's try and think of a specific time you feel you've done this. Go ahead and tell me about it! 
     </template>
@@ -272,23 +339,22 @@
 <category><pattern>*</pattern>
     <that>GO AHEAD AND TELL ME ABOUT IT</that>
     <template>
-        <think><set name = "catastrophizingMagNegSituation"><star/></set></think>
-        Great! Now I want you to try re-writing your negative thought, "<get name = "catastrophizingMagNegSituation"/>". Write it in a way in which you minimize the effect of your catastrophic thought.
+        <!--<think><set name = "catastrophizingMagNegSituation"><star/></set></think>-->
+        Great! Now I want you to try and evaluate the time you just told me about. Rephrase it in a way in which you minimize the effect of your catastrophic thought.
     </template>
 </category>
 
-<!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-    <that>WRITE IT IN A WAY IN WHICH YOU MINIMIZE THE EFFECT OF YOUR CATASTROPHIC THOUGHT</that>
+    <that>REPHRASE IT IN A WAY IN WHICH YOU MINIMIZE THE EFFECT OF YOUR CATASTROPHIC THOUGHT</that>
     <template>
-        <think><set name = "catastrophizinMagNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>! 
+        <!--<think><set name = "catastrophizinMagNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Good job. Do you want to hear about another distortion? 
     </template>
 </category>
 
 <!-- User decides to talk about minimizing a more significnt event -->
 <category><pattern>MINIMIZING</pattern>
-    <that>JUST SAY MAGNIFYING OR MINIMIZING</that>
+    <that>WHICH DO YOU THINK YOU ARE DOING</that>
     <template>
         Good observation! Now that you realize that you are minimizing, let's try and think of a specific time you feel you've done this. Go ahead and tell me all about it! 
     </template>
@@ -297,25 +363,40 @@
 <category><pattern>*</pattern>
     <that>GO AHEAD AND TELL ME ALL ABOUT IT</that>
     <template>
-        <think><set name = "catastrophizingMinNegSituation"><star/></set></think>
-        Great! Now I want you to try try re-writing your negative thought, "<get name = "catastrophizingMinNegSituation"/>". Write it in a way in which you avoid minimizing the good things. 
+        <!--<think><set name = "catastrophizingMinNegSituation"><star/></set></think>-->
+        Great! Now I want you to try and evaluate the time you just told me about. Rephrase it in a way in which you avoid minimizing the good things. 
     </template>
 </category>
 
-<!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-    <that>WRITE IT IN A WAY IN WHICH YOU AVOID MINIMIZING THE GOOD THINGS</that>
+    <that>REPHRASE IT IN A WAY IN WHICH YOU AVOID MINIMIZING THE GOOD THINGS</that>
     <template>
-        <think><set name = "catastrophizinMinNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>! 
+        <!--<think><set name = "catastrophizinMinNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Good job. Do you want to hear about another distortion? 
     </template>
+</category>
+
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DO YOU WANT TO HEAR ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO HEAR ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Sounds good. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
 
 <!-- CATASTROPHIZING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE CATASTROPHIZING APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************PERSONALIZATION************************************************************* --> 
@@ -329,47 +410,62 @@
  <!-- PERSONALIZATION yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE PERSONALIZATION APPLIES TO YOU</that>
-    <template> Great job in identifying personalization as a distortion, <get name = "name"/>! I would now like you to tell me of the negative thought you told me before or a new one. </template>
+    <template> Great job in identifying personalization as a distortion, <get name = "name"/>! To work through this distortion, I would like you to tell me about a negative situation you have experienced that applies. </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>I WOULD NOW LIKE YOU TO TELL ME OF THE NEGATIVE THOUGHT YOU TOLD ME BEFORE OR A NEW ONE</that>
+    <that>TO WORK THROUGH THIS DISTORTION, I WOULD LIKE YOU TO TELL ME ABOUT A NEGATIVE SITUATION YOU HAVE EXPERIENCED THAT APPLIES</that>
     <template>
-        <think><set name = "personalizationNegSituation"><star/></set></think>
-        Great! Now I would like you to go through your negative thought, "<get name = "personalizationNegSituation"/>". Identify what about it you think is your fault.
+        <!--<think><set name = "personalizationNegSituation"><star/></set></think>-->
+        Great! Now I would like you to analyze your negative situation. Identify what about it you think is your fault.
     </template>
 </category>
 
 <category><pattern>*</pattern>
     <that>IDENTIFY WHAT ABOUT IT YOU THINK IS YOUR FAULT</that>
     <template>
-        <think><set name = "personalizationBlame"><star/></set></think>
-        I see. I know that it seems like "<get name = "personalizationBlame"/>" is dependant on you, but I want you to think about how this may not be the case. Write down external factors that make this not dependent on you.
+        <!--<think><set name = "personalizationBlame"><star/></set></think>-->
+        I see. I know that it seems like "this is dependent on you, but I want you to think about how this may not be the case. Think of some external factors that make this not dependent on you.
     </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>WRITE DOWN EXTERNAL FACTORS THAT MAKE THIS NOT DEPENDENT ON YOU</that>
+    <that>THINK OF SOME EXTERNAL FACTORS THAT MAKE THIS NOT DEPENDENT ON YOU</that>
     <template>
-        <think><set name = "personalizationBlameExternalFactors"><star/></set></think>
-        Great work! Finally, please rewrite your negative statement in a way that your effect is minimized.
+        <!--<think><set name = "personalizationBlameExternalFactors"><star/></set></think>-->
+        Great work! Finally, please rephrase your negative statement in a way that your effect is minimized.
     </template>
 </category>
 
-<!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-    <that>FINALLY, PLEASE REWRITE YOUR NEGATIVE STATEMENT IN A WAY THAT YOUR EFFECT IS MINIMIZED</that>
+    <that>FINALLY, PLEASE REPHRASE YOUR NEGATIVE STATEMENT IN A WAY THAT YOUR EFFECT IS MINIMIZED</that>
     <template>
-        <think><set name = "catastrophizinMinNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>! Remember what you think about yourself is soley dependent on you.
+        <!--<think><set name = "catastrophizinMinNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Remember what you think about yourself is solely dependent on you. Do you want to hear about another distortion?
     </template>
+</category>
+
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DO YOU WANT TO HEAR ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO HEAR ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Sounds good. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
 
 <!-- PERSONALIZATION no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE PERSONALIZATION APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************CONTROL FALLACIES************************************************************* --> 
@@ -383,30 +479,31 @@
  <!-- CONTROL FALLACIES yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE CONTROL FALLACIES APPLY TO YOU</that>
-    <template> Excellent job in identifying a distortion! When it comes to control fallacies, they can either be external or internal. An external control fallacies are when you assume everything that happens to you is outside your control and internal control fallacies are when you assume everything that happens to you is your fault. In reality, things that happen to you are always a combination of internal and external factors. To help see this, we can discuss a negative thought you told me before or a new one. </template>
+    <template> 
+        Excellent job in identifying a distortion! When it comes to control fallacies, they can either be external or internal. An external control fallacies are when you assume everything that happens to you is outside your control and internal control fallacies are when you assume everything that happens to you is your fault. In reality, things that happen to you are always a combination of internal and external factors. To help see this, we can discuss a negative situation that applies. </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>TO HELP SEE THIS, WE CAN DISCUSS A NEGATIVE THOUGHT YOU TOLD ME BEFORE OR A NEW ONE</that>
+    <that>TO HELP SEE THIS, WE CAN DISCUSS A NEGATIVE SITUATION THAT APPLIES</that>
     <template>
-        <think><set name = "controlFallaciesNegSituation"><star/></set></think>
-        Great! Now I would like you to analyze your negative thought. What is in your control in this situation?
+        <!--<think><set name = "controlFallaciesNegSituation"><star/></set></think>-->
+        Great! Now I would like you to analyze your negative situation. What is in your control in this situation?
     </template>
 </category>
 
 <category><pattern>*</pattern>
     <that>WHAT IS IN YOUR CONTROL IN THIS SITUATION</that>
     <template>
-        <think><set name = "controlFallaciesSituationInControl"><star/></set></think>
-        Excellent observations! Now take your negative thought and analyze what about it is out of your control.
+        <!--<think><set name = "controlFallaciesSituationInControl"><star/></set></think>-->
+        Excellent observations! Now, do the opposite. What about it is out of your control.
     </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>NOW TAKE YOUR NEGATIVE THOUGHT AND ANALYZE WHAT ABOUT IT IS OUT OF YOUR CONTROL</that>
+    <that>WHAT ABOUT IT IS OUT OF YOUR CONTROL</that>
     <template>
-        <think><set name = "controlFallaciesSituationOutOfControl"><star/></set></think>
-        Nice! Now that you know what is in your control and what is out of your control, rewrite your negative thought, "<get name = "controlFallaciesNegSituation"/>". Consider phrasing it so that you take into account what you are able to and not able to control.
+        <!--<think><set name = "controlFallaciesSituationOutOfControl"><star/></set></think>-->
+        Nice! Now that you know what is in your control and what is out of your control, rephrase your negative situation. Consider phrasing it so that you take into account what you are able to and not able to control.
     </template>
 </category>
 
@@ -414,16 +511,31 @@
 <category><pattern>*</pattern>
    <that>CONSIDER PHRASING IT SO THAT YOU TAKE INTO ACCOUNT WHAT YOU ARE ABLE TO AND NOT ABLE TO CONTROL</that>
    <template>
-        <think><set name = "controlFallaciesNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>!
+        <!--<think><set name = "controlFallaciesNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Would you like to hear about another cognitive distortion?
    </template>
 </category>
 
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>WOULD YOU LIKE TO HEAR ABOUT ANOTHER COGNITIVE DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>WOULD YOU LIKE TO HEAR ABOUT ANOTHER COGNITIVE DISTORTION</that>
+    <template> 
+        Understandable. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
+</category>
 
 <!-- CONTROL FALLACIES no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE CONTROL FALLACIES APPLY TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************FALLACY OF FAIRNESS************************************************************* --> 
@@ -437,49 +549,63 @@
  <!-- FALLACY OF FAIRNESS yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE THE FALLACY OF FAIRNESS APPLIES TO YOU</that>
-    <template> Great job in identifying this fallacy, <get name = "name"/>. The fallacy of fairness can be particularly difficult to identify because it requires you to really reflect on your notions of fairness and to determine if one or more of these isn't entirely correct. To help see this, we can discuss a negative thought you told me before or a new one. Go ahead and remind me of it or explain a new one. </template>
+    <template> 
+        Great job in identifying this fallacy, <get name = "name"/>. The fallacy of fairness can be particularly difficult to identify because it requires you to really reflect on your notions of fairness and to determine if one or more of these isn't entirely correct. To help see this, we can discuss a negative situation. Tell me a little about a time this distortion applied to you. </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>GO AHEAD AND REMIND ME OF IT OR EXPLAIN A NEW ONE</that>
+    <that>TELL ME A LITTLE ABOUT A TIME THIS DISTORTION APPLIED TO YOU</that>
     <template>
-        <think><set name = "fallacyOfFairnessNegSituation"><star/></set></think>
-        Thanks! Now when you think about this, what are you assuming is fair?
+        <!--<think><set name = "fallacyOfFairnessNegSituation"><star/></set></think>-->
+        Thank you for sharing! Now when you think about this, what are you assuming is fair?
     </template>
 </category>
-
-<!--Is there a better way to word the question below?-->
 
 <category><pattern>*</pattern>
     <that>NOW WHEN YOU THINK ABOUT THIS, WHAT ARE YOU ASSUMING IS FAIR</that>
     <template>
-        <think><set name = "fallacyOfFairnessAssumption"><star/></set></think>
-        Great! Now I would like you to really step outside of your preconcieved notions and think if your assumptions of fairness are really all that fair. Write out what you find to be actually fair.
+        <!--<think><set name = "fallacyOfFairnessAssumption"><star/></set></think>-->
+        Great! Now I would like you to really step outside of your preconceived notions and think if your assumptions of fairness are really all that fair. What do you find to be actually fair?
     </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>WRITE OUT WHAT YOU FIND TO BE ACTUALLY FAIR</that>
+    <that>WHAT DO YOU FIND TO BE ACTUALLY FAIR</that>
     <template>
-        <think><set name = "fallacyOfFairnessAssumptionFair"><star/></set></think>
-        Thank you so much for this reflection. How about you rewrite your negative thought, "<get name = "fallacyOfFairnessNegSituation"/>"? Try and use the more realistic notion of fairness you just mentioned.
+        <!--<think><set name = "fallacyOfFairnessAssumptionFair"><star/></set></think>-->
+        Thank you so much for this reflection. How about you rephrase your negative situation? Try and use the more realistic notion of fairness you just mentioned.
     </template>
 </category>
 
-<!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
    <that>TRY AND USE THE MORE REALISTIC NOTION OF FAIRNESS YOU JUST MENTIONED</that>
    <template>
-        <think><set name = "fallacyOfFairnessNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>!
+        <!--<think><set name = "fallacyOfFairnessNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Good job working through this exercise. Do you want to discuss another distortion?
    </template>
+</category>
+
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DO YOU WANT TO DISCUSS ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO DISCUSS ANOTHER DISTORTION</that>
+    <template> 
+        Understandable. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
 
 <!-- FALLACY OF FAIRNESS no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE THE FALLACY OF FAIRNESS APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************BLAMING************************************************************* --> 
@@ -496,11 +622,10 @@
     <template> Thank you for identifying this distortion, <get name = "name"/>. In order to work through this distortion, I think it would be helpful to think about another negative situation. </template>
 </category>
 
-<!--Is there a better way to word the question below? I'm concerned this won't work super well out loud. Maybe can cut back on some of the vars?-->
 <category><pattern>*</pattern>
     <that>IN ORDER TO WORK THROUGH THIS DISTORTION, I THINK IT WOULD BE HELPFUL TO THINK ABOUT ANOTHER NEGATIVE SITUATION</that>
     <template>
-        <think><set name = "blamingNegSituation"><star/></set></think>
+        <!--<think><set name = "blamingNegSituation"><star/></set></think>-->
         Nice job! Now in regards to this situation, think of some things that are in your control.
     </template>
 </category>
@@ -508,7 +633,7 @@
 <category><pattern>*</pattern>
     <that>NOW IN REGARDS TO THIS SITUATION, THINK OF SOME THINGS THAT ARE IN YOUR CONTROL</that>
     <template>
-        <think><set name = "blamingInControl"><star/></set></think>
+        <!--<think><set name = "blamingInControl"><star/></set></think>-->
         I see. What about things out of your control? Are there things you might blame yourself for that really are not your fault?
     </template>
 </category>
@@ -516,45 +641,62 @@
 <category><pattern>*</pattern>
     <that>ARE THERE THINGS YOU MIGHT BLAME YOURSELF FOR THAT REALLY ARE NOT YOUR FAULT</that>
     <template>
-        <think><set name = "blamingOutOfControl"><star/></set></think>
-        Great! Remember: you are only in control of what you do and how you react to different situations. You can't control anyone or anything else. Now you can rewrite your negative thought in a more positive way that takes into consideration what you are and are not in control of.
+        <!--<think><set name = "blamingOutOfControl"><star/></set></think>-->
+        Great! Remember, you are only in control of what you do and how you react to different situations. You can't control anyone or anything else. Now try and rephrase your negative situation in a more positive way that takes into consideration what you are and are not in control of.
     </template>
 </category>
 
 <!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-   <that>NOW YOU CAN REWRITE YOUR NEGATIVE THOUGHT IN A MORE POSITIVE WAY THAT TAKES INTO CONSIDERATION WHAT YOU ARE AND ARE NOT IN CONTROL OF</that>
+   <that>NOW TRY AND REPHRASE YOUR NEGATIVE SITUATION IN A MORE POSITIVE WAY THAT TAKES INTO CONSIDERATION WHAT YOU ARE AND ARE NOT IN CONTROL OF</that>
    <template>
-        <think><set name = "blamingNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>!
+        <!--<think><set name = "blamingNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! You're doing awesome at working through these distortions. Do you want to talk about another distortion?
    </template>
+</category>
+
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DO YOU WANT TO TALK ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO TALK ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Understandable. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
 
 <!-- BLAMING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE BLAMING APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************SHOULDS************************************************************* --> 
 <category><pattern>SHOULDS</pattern>
     <!--<that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>-->
-    <template> With "shoulds" you have a list of rules about how you and others should behave. When those rules are broken, you feel angry or guilty. Often, you used should's and shouldn'ts to motivate yourself. However, this is more like punishing yourself or others before you or someone else has done anything. This can lead to guilt, anger, frustration, or resentment. Do you feel like shoulds apply to you?
+    <template> 
+        With "shoulds" you have a list of rules about how you and others should behave. When those rules are broken, you feel angry or guilty. Often, you used should's and shouldn'ts to motivate yourself. However, this is more like punishing yourself or others before you or someone else has done anything. This can lead to guilt, anger, frustration, or resentment. Do you feel like shoulds apply to you?
     </template>
 </category>  
 
  <!-- SHOULDS yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE SHOULDS APPLY TO YOU</that>
-    <template> Great job in identifying a distortion! When you think about a situation, there's an implicit list of 'shoulds' assosciated with that thought. These can be either 'I should...' or 'They should...' or 'It should...'. These should statements are little rules you have about yourself or others and if you violate them even a little bit you start to feel bad. Oftentimes, these should statements are impossible to abide by, such as 'I should always try my hardest'. See how that statement sets up someone for failure; it's impossible to always try your hardest in everything you do. We can start breaking this down by considering a negative situation in your life. </template>
+    <template> 
+        Great job in identifying a distortion! When you think about a situation, there's an implicit list of 'shoulds' associated with that thought. These can be either 'I should...' or 'They should...' or 'It should...'. These should statements are little rules you have about yourself or others and if you violate them even a little bit you start to feel bad. Oftentimes, these should statements are impossible to abide by, such as 'I should always try my hardest'. See how that statement sets up someone for failure; it's impossible to always try your hardest in everything you do. We can start breaking this down by considering a negative thought in your life. </template>
 </category>
 
-<!--Is there a better way to word the question below? I'm concerned this won't work super well out loud. Maybe can cut back on some of the vars?-->
 <category><pattern>*</pattern>
-    <that>WE CAN START BREAKING THIS DOWN BY CONSIDERING A NEGATIVE SITUATION IN YOUR LIFE</that>
+    <that>WE CAN START BREAKING THIS DOWN BY CONSIDERING A NEGATIVE THOUGHT IN YOUR LIFE</that>
     <template>
-        <think><set name = "shouldsNegSituation"><star/></set></think>
+        <!--<think><set name = "shouldsNegSituation"><star/></set></think>-->
         Thank you for explaining that! Now tell me a "should" statement associated with your situation.
     </template>
 </category>
@@ -562,23 +704,23 @@
 <category><pattern>*</pattern>
     <that>NOW TELL ME A "SHOULD" STATEMENT ASSOCIATED WITH YOUR SITUATION</that>
     <template>
-        <think><set name = "shouldsStatementOne"><star/></set></think>
-        Good job! Write down another should statement associated with your thought.
+        <!--<think><set name = "shouldsStatementOne"><star/></set></think>-->
+        Good job! Tell me about another should statement associated with your thought.
     </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>WRITE DOWN ANOTHER SHOULD STATEMENT ASSOCIATED WITH YOUR THOUGHT</that>
+    <that>TELL ME ABOUT ANOTHER SHOULD STATEMENT ASSOCIATED WITH YOUR THOUGHT</that>
     <template>
-        <think><set name = "shouldsStatementTwo"><star/></set></think>
-        I see. Finally, write down one last should statement.
+        <!--<think><set name = "shouldsStatementTwo"><star/></set></think>-->
+        I see. Finally, what is one last should statement?
     </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>FINALLY, WRITE DOWN ONE LAST SHOULD STATEMENT</that>
+    <that>FINALLY, WHAT IS ONE LAST SHOULD STATEMENT</that>
     <template>
-        <think><set name = "shouldsStatementThree"><star/></set></think>
+        <!--<think><set name = "shouldsStatementThree"><star/></set></think>-->
         Great! Way to identify some should statements. Now rewrite your negative thought in a way that it does not incorporate harmful should statements.
     </template>
 </category>
@@ -587,35 +729,52 @@
 <category><pattern>*</pattern>
    <that>NOW REWRITE YOUR NEGATIVE THOUGHT IN A WAY THAT IT DOES NOT INCORPORATE HARMFUL SHOULD STATEMENTS</that>
    <template>
-        <think><set name = "shouldsNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>!
+        <!--<think><set name = "shouldsNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! You're doing great! Do you want to talk about another distortion?
    </template>
 </category>
 
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DO YOU WANT TO TALK ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO TALK ABOUT ANOTHER DISTORTION</that>
+    <template> 
+        Understandable. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
+</category>
 
 <!-- BLAMING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE SHOULDS APPLY TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************EMOTIONAL REASONING************************************************************* --> 
 <category><pattern>EMOTIONAL REASONING</pattern>
     <!--<that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>-->
-    <template> With this distortion, you assume your emotions and feelings reflect the way things really are. The phrase "only boring people get bored" reflects the idea that if you feel bored, you must be boring, which is not true. Do you feel like emotional reasoning applies to you?
+    <template> 
+        With this distortion, you assume your emotions and feelings reflect the way things really are. The phrase "only boring people get bored" reflects the idea that if you feel bored, you must be boring, which is not true. Do you feel like emotional reasoning applies to you?
     </template>
 </category>  
 
  <!-- EMOTIONAL REASONING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE EMOTIONAL REASONING APPLIES TO YOU</that>
-    <template> Great job in identifying this distortion! It can be very hard to look past how we feel, but feelings aren't objective truths. Just because a person might have a feeling of worthlessness sometimes, that doesn't mean that person is worthless. To make this a little more clear, we can consider a negative thought or situation you have had to deal with. </template>
+    <template> 
+        Great job in identifying this distortion! It can be very hard to look past how we feel, but feelings aren't objective truths. Just because a person might have a feeling of worthlessness sometimes, that doesn't mean that person is worthless. To make this a little more clear, we can consider a negative thought or situation you have had to deal with. </template>
 </category>
 
 <category><pattern>*</pattern>
     <that>TO MAKE THIS A LITTLE MORE CLEAR, WE CAN CONSIDER A NEGATIVE THOUGHT OR SITUATION YOU HAVE HAD TO DEAL WITH</that>
     <template>
-        <think><set name = "emotReasonNegSituation"><star/></set></think>
+        <!--<think><set name = "emotReasonNegSituation"><star/></set></think>-->
         Great. When you think of this thought, what are some things that you feel are true all the time? 
     </template>
 </category>
@@ -623,61 +782,77 @@
 <category><pattern>*</pattern>
     <that>WHEN YOU THINK OF THIS THOUGHT, WHAT ARE SOME THINGS THAT YOU FEEL ARE TRUE ALL THE TIME</that>
     <template>
-        <think><set name = "emotReasonTruths"><star/></set></think>
-        Good. Now write down some emotions that you feel when it comes to your negative thought.
+        <!--<think><set name = "emotReasonTruths"><star/></set></think>-->
+        Good. Now what are some emotions that you feel when it comes to your negative thought?
     </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>NOW WRITE DOWN SOME EMOTIONS THAT YOU FEEL WHEN IT COMES TO YOUR NEGATIVE THOUGHT</that>
+    <that>NOW WHAT ARE SOME EMOTIONS THAT YOU FEEL WHEN IT COMES TO YOUR NEGATIVE THOUGHT</that>
     <template>
-        <think><set name = "emotReasonEmotions"><star/></set></think>
+        <!--<think><set name = "emotReasonEmotions"><star/></set></think>-->
         Thank you for sharing. These are completely valid feelings, but that doesn't mean that they are true all the time. How about you rewrite your negative thought so that those feelings are not distorting what is really happening?
     </template>
 </category>
 
-<!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
    <that>HOW ABOUT YOU REWRITE YOUR NEGATIVE THOUGHT SO THAT THOSE FEELINGS ARE NOT DISTORTING WHAT IS REALLY HAPPENING</that>
    <template>
-        <think><set name = "emotReasonNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>!
+        <!--<think><set name = "emotReasonNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! You're doing amazing! Is there another distortion you would like to discuss?
    </template>
 </category>
 
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>IS THERE ANOTHER DISTORTION YOU WOULD LIKE TO DISCUSS</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>IS THERE ANOTHER DISTORTION YOU WOULD LIKE TO DISCUSS</that>
+    <template> 
+        Understandable. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
+</category>
 
 <!-- EMOTIONAL REASONING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE EMOTIONAL REASONING APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************FALLACY OF CHANGE************************************************************* --> 
 <category><pattern>FALLACY OF CHANGE</pattern>
     <!--<that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>-->
-    <template> This fallacy assumes others will change to suit you. Your hopes for happiness rest entirely on other people. Do you feel like the fallacy of change applies to you?
+    <template> 
+        This fallacy assumes others will change to suit you. Your hopes for happiness rest entirely on other people. Do you feel like the fallacy of change applies to you?
     </template>
 </category>  
 
  <!-- FALLACY OF CHANGE yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE THE FALLACY OF CHANGE APPLIES TO YOU</that>
-    <template> Thank you for identifying a distortion! The fallacy of change is a tricky distortion because it says that someone or something needs to change in order for you to be happy. This is a dangerous way to think because only you can be in control of your happiness and you can't make someone or something else change to suit you. We can start by thinking of a negative situation in your life.  </template>
+    <template> 
+        Thank you for identifying a distortion! The fallacy of change is a tricky distortion because it says that someone or something needs to change in order for you to be happy. This is a dangerous way to think because only you can be in control of your happiness and you can't make someone or something else change to suit you. We can start by thinking of a negative situation in your life.  </template>
 </category>
 
 <category><pattern>*</pattern>
     <that>WE CAN START BY THINKING OF A NEGATIVE SITUATION IN YOUR LIFE</that>
     <template>
-        <think><set name = "fallacyOfChangeNegSituation"><star/></set></think>
-        Great. When you think "<get name = "fallacyOfChangeNegSituation"/>", instead of assuming someone or something needs to change, try to think of something you can do that might make you feel better, or at least give you more control over the situation. What are some of these options?
+        <!--<think><set name = "fallacyOfChangeNegSituation"><star/></set></think>-->
+        Great. When you think of this situation, instead of assuming someone or something needs to change, try to think of something you can do that might make you feel better, or at least give you more control over the situation. What are some of these options?
     </template>
 </category>
 
 <category><pattern>*</pattern>
     <that>WHAT ARE SOME OF THESE OPTIONS</that>
     <template>
-        <think><set name = "fallacyOfChangeAlternatives"><star/></set></think>
-        Thank you for sharing. Now restructure your thought so that the only thing that can change is what you do.
+        <!--<think><set name = "fallacyOfChangeAlternatives"><star/></set></think>-->
+        Thank you for sharing. That's great! Now restructure your thought so that the only thing that can change is what you do.
     </template>
 </category>
 
@@ -685,43 +860,61 @@
 <category><pattern>*</pattern>
    <that>NOW RESTRUCTURE YOUR THOUGHT SO THAT THE ONLY THING THAT CAN CHANGE IS WHAT YOU DO</that>
    <template>
-        <think><set name = "fallacyOfChangeNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>!
+        <!--<think><set name = "fallacyOfChangeNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Good job working through this distortion. Did you want to work on another one?
    </template>
+</category>
+
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DID YOU WANT TO WORK ON ANOTHER ONE</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DID YOU WANT TO WORK ON ANOTHER ONE</that>
+    <template> 
+        Understandable. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
 
 <!-- FALLACY OF CHANGE no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE THE FALLACY OF CHANGE APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************GLOBAL LABELING************************************************************* --> 
 <category><pattern>GLOBAL LABELING</pattern>
-    <!--<that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>-->
-    <template> There are two forms of global labeling: "labeling" or "mislabeling". Labeling is when you label yourself or others, typically after one situation. Mislabeling is describing an event in an unnecessarily emotionally loaded negative way. Do you feel like global labeling applies to you?
+    <that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>
+    <template> 
+        There are two forms of global labeling: "labeling" or "mislabeling". Labeling is when you label yourself or others, typically after one situation. Mislabeling is describing an event in an unnecessarily emotionally loaded negative way. Do you feel like global labeling applies to you?
     </template>
 </category>  
 
- <!-- GLOBAL LABELING yes- continue with exercise -->
+<!--GLOBAL LABELING yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE GLOBAL LABELING APPLIES TO YOU</that>
-    <template> Great job in identifying a distortion. The problem with global labeling is when you see one or two instances of something, you assume that something to be the only truth. For example, if Katherine were having a really bad day and you saw her being rude and you immediately labeled her as a rude person, that would be global labeling. What is a negative thought or situation you have had that may reflect this cognitive distortion? </template>
+    <template> 
+        Great job in identifying a distortion. The problem with global labeling is when you see one or two instances of something, you assume that something to be the only truth. For example, if Katherine were having a really bad day and you saw her being rude and you immediately labeled her as a rude person, that would be global labeling. What is a time in your life that may reflect this cognitive distortion? </template>
 </category>
 
 <category><pattern>*</pattern>
-    <that>WHAT IS A NEGATIVE THOUGHT OR SITUATION YOU HAVE HAD THAT MAY REFLECT THIS COGNITIVE DISTORTION</that>
+    <that>WHAT IS A TIME IN YOUR LIFE THAT MAY REFLECT THIS COGNITIVE DISTORTION</that>
     <template>
-        <think><set name = "globalLabelingNegSituation"><star/></set></think>
-        Great. When you think "<get name = "globalLabelingNegSituation"/>", try and think how global labeling may apply. What is an example of the distortion in this case?
+        <!--<think><set name = "globalLabelingNegSituation"><star/></set></think>-->
+        Great. When you think about this situation, try and think how global labeling may apply. What is an example of the distortion in this case?
     </template>
 </category>
 
 <category><pattern>*</pattern>
     <that>WHAT IS AN EXAMPLE OF THE DISTORTION IN THIS CASE</that>
     <template>
-        <think><set name = "globalLabelingExample"><star/></set></think>
+        <!--<think><set name = "globalLabelingExample"><star/></set></think>-->
         Great job picking up on that! Can you see how that global label isn't warranted? How might you not be taking into account external, unknown factors?
     </template>
 </category>
@@ -729,107 +922,155 @@
 <category><pattern>*</pattern>
     <that>HOW MIGHT YOU NOT BE TAKING INTO ACCOUNT EXTERNAL, UNKNOWN FACTORS</that>
     <template>
-        <think><set name = "globalLabelingFactors"><star/></set></think>
-        Absolutely! Now try and rewrite your negative thought without global labeling.
+        <!--<think><set name = "globalLabelingFactors"><star/></set></think>-->
+        Absolutely! Now try and rephrase your negative thought without global labeling.
     </template>
 </category>
 
-<!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-   <that>NOW TRY AND REWRITE YOUR NEGATIVE THOUGHT WITHOUT GLOBAL LABELING</that>
+   <that>NOW TRY AND REPHRASE YOUR NEGATIVE THOUGHT WITHOUT GLOBAL LABELING</that>
    <template>
-        <think><set name = "globalLabelingNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>!
+        <!--<think><set name = "globalLabelingNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! You're doing awesome! Do you want to look into another distortion? 
    </template>
 </category>
 
+ <!--ANOTHER DISTORTION yes- choose another distortion -->
+ <!--IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DO YOU WANT TO LOOK INTO ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
 
-<!-- GLOBAL LABELING no- try another distortion -->
+ <!--ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO LOOK INTO ANOTHER DISTORTION</that>
+    <template> 
+        Understandable. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
+</category>
+
+
+ <!--GLOBAL LABELING no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE GLOBAL LABELING APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy.  </template>
+    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************ALWAYS BEING RIGHT************************************************************* --> 
 <category><pattern>ALWAYS BEING RIGHT</pattern>
     <!--<that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>-->
-    <template> In this fallacy, you feel as though you have to be right all of the time, even if it would be detrimental to the feelings of those around you. Do you feel like the always being right fallacy applies to you?
+    <template> 
+        In this fallacy, you feel as though you have to be right all of the time, even if it would be detrimental to the feelings of those around you. Do you feel like the always being right fallacy applies to you?
     </template>
 </category>  
 
  <!-- ALWAYS BEING RIGHT yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE THE ALWAYS BEING RIGHT FALLACY APPLIES TO YOU</that>
-    <template> Great job in identifying a distortion! Always feeling like you need to be right is a hard distortion to do with because it is impossible to always be right and when you are wrong, you will feel badly about yourself. I know this is easier said than done, but when you realize that it is okay to be wrong, you won't feel as bad. Perhaps think of being wrong as an opputunity to learn something new and to grow as a person. Tell me about a negative situation you are experiencing and we can try and work through it. </template>
+    <template> 
+        Great job in identifying a distortion! Always feeling like you need to be right is a hard distortion to deal with because it is impossible to always be right and when you are wrong, you will feel badly about yourself. I know this is easier said than done, but when you realize that it is okay to be wrong, you won't feel as bad. Perhaps think of being wrong as an opportunity to learn something new and to grow as a person. Tell me about a negative situation you are experiencing and we can try and work through it. </template>
 </category>
 
 <category><pattern>*</pattern>
     <that>TELL ME ABOUT A NEGATIVE SITUATION YOU ARE EXPERIENCING AND WE CAN TRY AND WORK THROUGH IT</that>
     <template>
-        <think><set name = "alwaysRightNegSituation"><star/></set></think>
-        Great! A good start is to rewrite your thought, "<get name = "alwaysRightNegSituation"/>",  in a more positive way. Try and rewrite your negative thought so that it is okay to be wrong.
+        <!--<think><set name = "alwaysRightNegSituation"><star/></set></think>-->
+        Great! A good start is to rephrase your thought in a more positive way. Try and rephrase your negative thought so that it is okay to be wrong.
     </template>
 </category>
 
 <!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
-   <that>TRY AND REWRITE YOUR NEGATIVE THOUGHT SO THAT IT IS OKAY TO BE WRONG</that>
+   <that>TRY AND REPHRASE YOUR NEGATIVE THOUGHT SO THAT IT IS OKAY TO BE WRONG</that>
    <template>
-        <think><set name = "alwaysRightgNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>!
+        <!--<think><set name = "alwaysRightgNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Don't forget that no one is perfect and you don't always have to be right. Did you want to try and work on another distortion?
    </template>
+</category>
+
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DID YOU WANT TO TRY AND WORK ON ANOTHER DISTORTION</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DID YOU WANT TO TRY AND WORK ON ANOTHER DISTORTION</that>
+    <template> 
+        Understandable. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
 </category>
 
 
 <!-- ALWAYS BEING RIGHT no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE THE ALWAYS BEING RIGHT FALLACY APPLIES TO YOU</that>
-    <template> Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy. </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 <!-- ***************************************************HEAVENS REWARD FALLACY************************************************************* --> 
 <category><pattern>HEAVENS REWARD FALLACY</pattern>
     <!--<that>WHICH WOULD YOU LIKE TO HEAR MORE ABOUT</that>-->
-    <template> In the heaven's reward fallcy, you feel that there should be a reward after a time of sacrifice and self-denial. When that reward doesn't come, you feel bitter and disappointed. Do you feel like this fallacy applies to you?
+    <template> 
+        In the heaven's reward fallacy, you feel that there should be a reward after a time of sacrifice and self-denial. When that reward doesn't come, you feel bitter and disappointed. Do you feel like this fallacy applies to you?
     </template>
 </category>  
 
  <!-- HEAVENS REWARD FALLACY yes- continue with exercise -->
 <category><pattern><set>yes</set></pattern>
    <that>DO YOU FEEL LIKE THIS FALLACY APPLIES TO YOU</that>
-    <template> Excellent job in identifying a fallacy. The best way to combat this fallacy is to realize that you are the only one responsible for your actions, and that a reward for self sacrifice or self-denial is not on the way. To better understand this, tell me about a negative situation and we can break it down.  </template>
+    <template> 
+        Excellent job in identifying a fallacy. The best way to combat this fallacy is to realize that you are the only one responsible for your actions, and that a reward for self sacrifice or self-denial is not on the way. To better understand this, tell me about a negative situation and we can break it down.  </template>
 </category>
 
 <category><pattern>*</pattern>
     <that>TO BETTER UNDERSTAND THIS, TELL ME ABOUT A NEGATIVE SITUATION AND WE CAN BREAK IT DOWN</that>
     <template>
-        <think><set name = "heavensRewardNegSituation"><star/></set></think>
+        <!--<think><set name = "heavensRewardNegSituation"><star/></set></think>-->
         Great! Now when you think about this, what do you expect will be your reward?
     </template>
 </category>
 
 <category><pattern>*</pattern>
     <that>NOW WHEN YOU THINK ABOUT THIS, WHAT DO YOU EXPECT WILL BE YOUR REWARD</that>
+        <!--<think><set name = "heavensRewards"><star/></set></think>-->
     <template>
-        <think><set name = "heavensRewards"><star/></set></think>
-        I see. Just remember that there is no guarantee that you recieve "<get name = "heavensRewards"/>". What you can do is control what reward you give to yourself or what you do assuming you won't be rewarded. Try and rewrite your thought with that in mind.
+        I see. Just remember that there is no guarantee that you receive this reward. What you can do is control what reward you give to yourself or what you do assuming you won't be rewarded. Try and rewrite your thought with that in mind.
     </template>
 </category>
 
-<!-- Eventually redirect this to goodbye -->
 <category><pattern>*</pattern>
    <that>TRY AND REWRITE YOUR THOUGHT WITH THAT IN MIND</that>
    <template>
-        <think><set name = "heavensRewardNegSituationCorrected"><star/></set></think>
-        That's great <get name = "name"/>!
+        <!--<think><set name = "heavensRewardNegSituationCorrected"><star/></set></think>-->
+        That's great <get name = "name"/>! Hopefully this exercise helped explain the fallacy better and showed how it applies to your own thoughts. Do you want to work on any others?
    </template>
 </category>
 
+<!-- ANOTHER DISTORTION yes- choose another distortion -->
+<!-- IMPORTANT: show the list of choices here again -->
+<category><pattern><set>yes</set></pattern>
+   <that>DO YOU WANT TO WORK ON ANY OTHERS</that>
+    <template> 
+        Okay sounds great! Go ahead and pick another from the list. </template>
+</category>
+
+<!-- ANOTHER DISTORTION no- say goodbye -->
+<category><pattern><set>no</set></pattern>
+   <that>DO YOU WANT TO WORK ON ANY OTHERS</that>
+    <template> 
+        Understandable. Great job today. I know we went over a lot, but we will keep reinforcing what you learned in future sessions. I'll see you next time <get name = "name"/>. Goodbye! </template>
+</category>
 
 <!-- HEAVENS REWARD FALLACY no- try another distortion -->
 <category><pattern><set>no</set></pattern>
    <that>DO YOU FEEL LIKE THE HEAVENS REWARD FALLACY APPLIES TO YOU</that>
-    <template> GOkay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. Remember, the most common types are filtering, polarized thinking, overgeneralization, jumping to conclusions, catastrophizing, personalization, control fallacies, the fallacy of fairness, blaming, shoulds, emotional reasoning, the fallacy of change, global labeling, always being right, and heaven's reward fallacy. </template>
+    <template> 
+        Okay great job! We're narrowing down the list of possibilities. Go ahead and pick another one to hear more about. </template>
 </category>
 
 </aiml>
