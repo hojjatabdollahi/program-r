@@ -6,7 +6,14 @@
 <category>
     <pattern>SESSION 4</pattern>
     <template>
-         Hi <get name = "name"/>! Welcome to session four. I hope you are still using your daily mood scale. I want you to try and pay attention to the patterns in your mood day to day. It might teach you something. Also, you should have been keeping track of your number of positive and negative thoughts throughout the day. This is important because we want to encourage healthy thinking. A good way to do this is focus on thoughts that produce a better mood. You could increase the number of good thoughts in your mind such as making a list of good things about you and your life. You should also not be afraid to pat yourself on the back sometimes. A lot of what we do isn't noticed by others so you should give yourself credit for what you do. Another good thing to do is take breaks. Allow your mind to relax so your body can feel at peace. Feeling at peace can give you energy. Finally, consider the future. Imagine yourself taking steps toward a time when things are better. Let's try an exercise. Tell me some positive things about yourself.  </template>
+         Hi <get name = "name"/>! Welcome to session four. I hope you are still using your daily mood scale. I want you to try and pay attention to 
+         the patterns in your mood day to day. It might teach you something. Also, you should have been keeping track of your number of positive and negative thoughts 
+         throughout the day. This is important because we want to encourage healthy thinking. A good way to do this is focus on thoughts that produce a better mood. 
+         You could increase the number of good thoughts in your mind such as making a list of good things about you and your life. You should also not be afraid to pat 
+         yourself on the back sometimes. A lot of what we do isn't noticed by others so you should give yourself credit for what you do. Another good thing to do is take breaks. 
+         Allow your mind to relax so your body can feel at peace. Feeling at peace can give you energy. Finally, consider the future. Imagine yourself taking steps toward a time 
+         when things are better. Let's try an exercise. Tell me some positive things about yourself.  
+    </template>
 </category>
 
 <!-- EXERCISE - pos things about self -->
@@ -19,15 +26,91 @@
 </category>
 
 <!-- EXERCISE - pos things about life -->
+<!-- split this up slightly and include some of the stuff I skipped? It's rather long-->
+
+<!-- COME BACK LATER AND TRANSISTION THE LAST PART OF THIS PARAGRAPH AND BREAK IT UP -->
 <category>
     <pattern>*</pattern>
     <that>WHAT ARE SOME POSITIVE THINGS ABOUT YOUR LIFE</that>
     <template>
-        Those things really are great! Now think about how you feel after talking positively about yourself and your life. It feels much better this way than say thinking negative thoughts huh? We actually want to try and decrease those thoughts that make us feel bad. If a thought is ruining your mood, you should strive to identify this and tell yourself to think of something that won't disrupt your mood. Another thing you can do is schedule "worry time" or time dedicated to concentrate completely on necessary thinking so the rest of the day can be worry free. This time can be ten minutes long to even thirty minutes long. You can also make fun of your problems by exaggerating them. Having a good sense of humor goes a long way. 
+        Those things really are great! Now think about how you feel after talking positively about yourself and your life. It feels much better this way than say thinking 
+        negative thoughts huh? We actually want to try and decrease those thoughts that make us feel bad. If a thought is ruining your mood, you should strive to identify 
+        this and tell yourself to think of something that won't disrupt your well being. What are some things you do to accomplish this?
+    </template>
+</category>
+
+<!-- ABCD method -->
+<!-- IMPORTANT: add two choices- "My diabetes is Type II" | "Diabetes will ruin my life"  -->
+<category>
+    <pattern>*</pattern>
+    <that>WHAT ARE SOME THINGS YOU DO TO ACCOMPLISH THIS</that>
+    <template>
+        I see. That makes sense. I want to discuss an alternate approach to work through your thoughts that I feel can be really rewarding. You can think of it like 
+        talking back to the thought that is hurting you. This method is called the A-B-C-D method. A stands for the activating event. B is the belief you have. C 
+        stands for consequence. Finally, D is the way you dispute the thought. Another way to look at it is consider what happened, what do you tell yourself about 
+        what happened, how do you feel as a result, and how you talk back to the thought. This may seem silly or confusing, but once we walk through some examples, 
+        it will make more sense. To practice, pretend I'm feeling down because I have diabetes. In this situation, this is the A part of the method because it is a fact
+        and something causing my saddness. Of these two choices, which do you think applies to the belief part of the method?
+    </template>
+</category>
+
+<!-- ABCD METHOD EXERCISE - Q1 INCORRECT ANSWER -->
+<!-- IMPORTANT: add two choices- "I'm feeling very sad thinking about my diabetes" | "No one can be happy if they have diabetes."  -->
+<category>
+    <pattern>MY DIABETES IS TYPE II</pattern>
+    <that>OF THESE TWO CHOICES, WHICH DO YOU THINK APPLIES TO THE BELIEF PART OF THE METHOD</that>
+    <template>
+        Good try <get name = "name"/>, but I think the other answer would've been better. This answer is a fact about my diabetes and would be better for the A part of the 
+        method, rather than a belief I have. Let's try the next part. Which statement is a consequence of my thought?
     </template>
 </category>
   
-<!-- left off page 18 of manual -->
-
+<!-- ABCD METHOD EXERCISE - Q1 CORRECT ANSWER -->
+<!-- IMPORTANT: add two choices- "I am feeling very sad thinking about my diabetes" | "No one can be happy if they have diabetes."  -->
+<category>
+    <pattern>DIABETES WILL RUIN MY LIFE</pattern>
+    <that>OF THESE TWO CHOICES, WHICH DO YOU THINK APPLIES TO THE BELIEF PART OF THE METHOD</that>
+    <template>
+        Good job <get name = "name"/>! This answer is a belief I have about my diabetes and not an actual fact. Let's try the next part. Which statement is a consequence 
+        of my thought?
+    </template>
+</category>
+  
+<!-- ABCD METHOD EXERCISE - Q2 CORRECT ANSWER -->
+<category>
+    <pattern>I AM FEELING VERY SAD THINKING ABOUT MY DIABETES</pattern>
+    <that>WHICH STATEMENT IS A CONSEQUENCE OF MY THOUGHT</that>
+    <template>
+        Great! This is a consequence of my thoughts because my negative thoughts are causing me to feel sad. Let's finish this exercise by looking at the final letter of the
+        A-B-C-D method. Do you have any ideas on how I could dispute my negative thoughts about having diabetes?
+    </template>
+</category>  
+  
+<!-- ABCD METHOD EXERCISE - Q2 INCORRECT ANSWER -->
+<category>
+    <pattern>NO ONE CAN BE HAPPY IF THEY HAVE DIABETES</pattern>
+    <that>WHICH STATEMENT IS A CONSEQUENCE OF MY THOUGHT</that>
+    <template>
+        Nice try, but I think this answer is more of a belief than a consequence. Me feeling sad is a direct consequence of my negative thoughts about diabetes. Let's finish 
+        this exercise by looking at the final letter of the A-B-C-D method. Do you have any ideas on how I could dispute my negative thoughts about having diabetes?
+    </template>
+</category>    
+  
+ <!-- FINISH ABCD METHOD EXERCISE --> 
+ <!-- IMPORTANT!: need a print out for this part found on pg 23 (28 in pdf) of handbook -->
+<category>
+    <pattern>*</pattern>
+    <that>DO YOU HAVE ANY IDEAS ON HOW I COULD DISPUTE MY NEGATIVE THOUGHTS ABOUT HAVING DIABETES</that>
+    <template>
+        That's a really good idea! Here's one I thought of. "I have diabetes, but can still live a satisfying life." In fact, this statement is equal parts true as it is
+        optimistic. I hope this exercise made it easier to understand the method. My friend here will give you a print out so you can practice on your own. Until our next
+        session, try and practice this method and work on your daily mood scale. Great job today! Goodbye!
+    </template>
+</category>
+  
+  
+<!-- Can I include some sort of a video at the end here to mix it up? Either something personal or something about thoughts since that's what this entire module
+was about-->  
+  
   
 </aiml>
