@@ -99,3 +99,22 @@ pylint.log
 
 # Ignore license key files
 license.keys
+/bots/y-bot/output/
+bots/y-bot/output/
+/bots/alice2/output/
+/bots/professor/output/
+temp/
+conversations/
+/src/utils/pattern_lister/y-bot.csv
+/src/utils/rdf_lister/rdfs.csv
+
+/bots/scratch/
+bots/scratch/
+/scratch/
+/src/scratch
+
+/bots/multibot/
+bots/multibot/
+
+# Visual Studio code
+.vscode

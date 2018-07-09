@@ -1,12 +1,13 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
 the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
 and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
 THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -14,15 +15,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import logging
+from programy.utils.logging.ylogger import YLogger
 from programy.parser.template.nodes.base import TemplateNode
 from programy.parser.exceptions import ParserException
+from programy.utils.text.text import TextUtils
 
 class TemplateBotNode(TemplateNode):
 
     def __init__(self):
         TemplateNode.__init__(self)
         self._name = None
+        self.local = False
 
     @property
     def name(self):
@@ -32,30 +35,42 @@ class TemplateBotNode(TemplateNode):
     def name(self, name):
         self._name = name
 
-    def resolve(self, bot, clientid):
-        try:
-            name = self.name.resolve(bot, clientid)
-            value = bot.brain.properties.property(name)
-            if value is None:
-                value = bot.brain.properties.property("default-property")
-                if value is None:
-                    value = ""
+    @staticmethod
+    def get_bot_variable(client_context, name):
+        value = client_context.brain.properties.property(name)
+        if value is None:
+            YLogger.error(client_context, "No bot property for [%s]", name)
 
-            logging.debug("[%s] resolved to [%s] = [%s]", self.to_string(), name, value)
-            return value
+            value = client_context.brain.properties.property("default-property")
+            if value is None:
+                YLogger.error(client_context, "No value for default-property")
+
+                value = client_context.brain.configuration.defaults.default_get
+                if value is None:
+                    YLogger.error(client_context, "No value for default default-property, return 'unknown'")
+                    value = "unknown"
+
+        return value
+
+    def resolve_to_string(self, client_context):
+        name = self.name.resolve(client_context)
+        value = TemplateBotNode.get_bot_variable(client_context, name)
+        YLogger.debug(client_context, "[%s] resolved to [%s] = [%s]", self.to_string(), name, value)
+        return value
+
+    def resolve(self, client_context):
+        try:
+            return self.resolve_to_string(client_context)
         except Exception as excep:
-            logging.exception(excep)
+            YLogger.exception(client_context, "Failed to resolve", excep)
             return ""
 
     def to_string(self):
         return "[BOT (%s)]" % (self.name.to_string())
 
-    def output(self, tabs="", output=logging.debug):
-        self.output_child(self, tabs, output)
-
-    def to_xml(self, bot, clientid):
+    def to_xml(self, client_context):
         xml = "<bot "
-        xml += ' name="%s"' % self.name.resolve(bot, clientid)
+        xml += ' name="%s"' % self.name.resolve(client_context)
         xml += " />"
         return xml
 
@@ -74,8 +89,9 @@ class TemplateBotNode(TemplateNode):
         self.parse_text(graph, self.get_text_from_element(expression))
 
         for child in expression:
+            tag_name = TextUtils.tag_from_text(child.tag)
 
-            if child.tag == 'name':
+            if tag_name == 'name':
                 self.name = self.parse_children_as_word_node(graph, child)
                 self.local = False
                 name_found = True
@@ -86,5 +102,4 @@ class TemplateBotNode(TemplateNode):
             self.parse_text(graph, self.get_tail_from_element(child))
 
         if name_found is False:
-            raise ParserException("Error, name not found", xml_element=expression)
-
+            raise ParserException("Name not found in bot", xml_element=expression)

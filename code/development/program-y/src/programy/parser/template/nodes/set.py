@@ -1,12 +1,13 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
 the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
 and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
 THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -14,11 +15,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import logging
+from programy.utils.logging.ylogger import YLogger
 
 from programy.parser.template.nodes.base import TemplateNode
 from programy.parser.exceptions import ParserException
-
+from programy.utils.text.text import TextUtils
 
 
 class TemplateSetNode(TemplateNode):
@@ -43,55 +44,52 @@ class TemplateSetNode(TemplateNode):
     def local(self, local):
         self._local = local
 
-    def resolve_children(self, bot, clientid):
-        if len(self._children) > 0:
-            return self.resolve_children_to_string(bot, clientid)
+    def resolve_children(self, client_context):
+        if self._children:
+            return self.resolve_children_to_string(client_context)
+        return ""
+
+    def resolve_to_string(self, client_context):
+        name = self.name.resolve(client_context)
+        value = self.resolve_children(client_context)
+
+        if self.local is True:
+            YLogger.debug(client_context, "[%s] resolved to local: [%s] => [%s]", self.to_string(), name, value)
+            client_context.bot.get_conversation(client_context).current_question().set_property(name, value)
         else:
-            return ""
-
-    def resolve(self, bot, clientid):
-        try:
-            name = self.name.resolve(bot, clientid)
-            value = self.resolve_children(bot, clientid)
-
-            """
-            #TODO, if local then set per the conversation
-            If globals
-                If exists in predicates then don't replace
-                If not in predicates then set as global to the conversation
-            """
-
-            if self.local is True:
-                logging.debug("[%s] resolved to local: [%s] => [%s]", self.to_string(), name, value)
-                bot.get_conversation(clientid).current_question().set_predicate(name, value)
+            if client_context.bot.override_properties is False and client_context.brain.properties.has_property(name):
+                YLogger.error(client_context, "Global property already exists for name [%s], ignoring set!", name)
+                value = client_context.brain.properties.property(name)
             else:
-                if bot.override_predicates is False and bot.brain.properties.has_property(name):
-                    logging.error("Global property already exists for name [%s], ignoring set!", name)
-                    value = bot.brain.properties.property(name)
-                else:
-                    if bot.brain.properties.has_property(name):
-                        logging.warning("Global property already exists for name [%s], over writing!", name)
-                    logging.debug("[%s] resolved to global: [%s] => [%s]", self.to_string(), name, value)
-                    bot.get_conversation(clientid).set_predicate(name, value)
+                if client_context.brain.properties.has_property(name):
+                    YLogger.warning(client_context, "Global property already exists for name [%s], over writing!", name)
+                YLogger.debug(client_context, "[%s] resolved to global: [%s] => [%s]", self.to_string(), name, value)
+                client_context.bot.get_conversation(client_context).set_property(name, value)
 
-            logging.debug("[%s] resolved to [%s]", self.to_string(), value)
-            return value
+        YLogger.debug(client_context, "[%s] resolved to [%s]", self.to_string(), value)
+
+        return value
+
+    def resolve(self, client_context):
+        try:
+            str = self.resolve_to_string(client_context)
+            client_context.bot.save_conversation(client_context.userid)
+            return str
         except Exception as excep:
-            logging.exception(excep)
+            YLogger.exception(client_context, "Failed to resolve", excep)
             return ""
 
     def to_string(self):
         return "[SET [%s] - %s]" % ("Local" if self.local else "Global", self.name.to_string())
 
-    def to_xml(self, bot, clientid):
+    def to_xml(self, client_context):
         xml = "<set"
         if self.local:
-            xml += ' var="%s"' % self.name.resolve(None, None)
+            xml += ' var="%s"' % self.name.resolve(client_context)
         else:
-            xml += ' name="%s"' % self.name.resolve(None, None)
+            xml += ' name="%s"' % self.name.resolve(client_context)
         xml += ">"
-        for child in self.children:
-            xml += child.to_xml(bot, clientid)
+        xml += self.children_to_xml(client_context)
         xml += "</set>"
         return xml
 
@@ -120,13 +118,14 @@ class TemplateSetNode(TemplateNode):
         self.parse_text(graph, self.get_text_from_element(expression))
 
         for child in expression:
+            tag_name = TextUtils.tag_from_text(child.tag)
 
-            if child.tag == 'name':
+            if tag_name == 'name':
                 self.name = self.parse_children_as_word_node(graph, child)
                 self.local = False
                 name_found = True
 
-            elif child.tag == 'var':
+            elif tag_name == 'var':
                 self.name = self.parse_children_as_word_node(graph, child)
                 self.local = True
                 var_found = True
@@ -137,8 +136,7 @@ class TemplateSetNode(TemplateNode):
             self.parse_text(graph, self.get_tail_from_element(child))
 
         if name_found is True and var_found is True:
-            raise ParserException("Error, set node has both name AND var values", xml_element=expression)
+            raise ParserException("Set node has both name AND var values", xml_element=expression)
 
         if name_found is False and var_found is False:
-            raise ParserException("Error, set node has both name AND var values", xml_element=expression)
-
+            raise ParserException("Set node has both name AND var values", xml_element=expression)

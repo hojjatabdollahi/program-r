@@ -1,12 +1,13 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
 the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
 and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
 THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -14,43 +15,43 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import logging
+from programy.utils.logging.ylogger import YLogger
 
 from programy.parser.template.nodes.indexed import TemplateIndexedNode
-
+from programy.parser.exceptions import ParserException
 
 ######################################################################################################################
 #
 # <request index=”n”/> is replaced with the value of the nth previous multi-sentence input to the bot.
-#
-#TODO Multiple request calls with AGAIN causes stack fault
+# The request element returns the user’s input specified by its historical index value.
+
 class TemplateRequestNode(TemplateIndexedNode):
 
-    def __init__(self, position=1, index=1):
-        TemplateIndexedNode.__init__(self, position, index)
+    def __init__(self, index=1):
+        TemplateIndexedNode.__init__(self, index)
 
-    def resolve(self, bot, clientid):
+    def resolve_to_string(self, client_context):
+        conversation = client_context.bot.get_conversation(client_context)
+        question = conversation.previous_nth_question(self.index)
+        resolved = question.combine_sentences()
+        YLogger.debug(client_context, "[%s] resolved to [%s]", self.to_string(), resolved)
+        return resolved
+
+    def resolve(self, client_context):
         try:
-            nth_question = self.index
-            conversation = bot.get_conversation(clientid)
-            question = conversation.nth_question(nth_question+1)
-            sentences = question.combine_sentences()
-            resolved = sentences
-            logging.debug("[%s] resolved to [%s]", self.to_string(), resolved)
-            return resolved
+            return self.resolve_to_string(client_context)
         except Exception as excep:
-            logging.exception(excep)
+            YLogger.exception(client_context,"Failed to resolve",  excep)
             return ""
 
     def to_string(self):
-        return "REQUEST Index=%s" % (self.index)
+        string = "REQUEST"
+        string += self.get_index_as_str()
+        return string
 
-    def to_xml(self, bot, clientid):
+    def to_xml(self, client_context):
         xml = "<request"
-        if self._position > 1:
-            xml += " position='%d'" % self._position
-        if self._index > 1:
-            xml += " index='%d'" % self._index
+        xml += self.get_index_as_xml()
         xml += ">"
         xml += "</request>"
         return xml
@@ -60,6 +61,5 @@ class TemplateRequestNode(TemplateIndexedNode):
 
     def parse_expression(self, graph, expression):
         self._parse_node_with_attrib(graph, expression, "index", "1")
-        if len(self.children) > 0:
-            logging.warning("<request> node should not contains child text, use <request /> or <request></request> only")
-
+        if self.children:
+            raise ParserException("<request> node should not contain child text, use <request /> or <request></request> only")

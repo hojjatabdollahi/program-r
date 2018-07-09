@@ -1,5 +1,5 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -16,9 +16,10 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 """
 
 import json
-import os
 import urllib.request
+
 from programy.utils.geo.latlong import LatLong
+
 
 class GeoNamesApi(object):
 
@@ -30,12 +31,12 @@ class GeoNamesApi(object):
         if license_keys.has_key('GEO_NAMES_ACCOUNTNAME'):
             self.account_name = license_keys.get_key('GEO_NAMES_ACCOUNTNAME')
         else:
-            raise Exception ("No valid license key GEO_NAMES_ACCOUNTNAME")
+            raise Exception("No valid license key GEO_NAMES_ACCOUNTNAME")
 
         if license_keys.has_key('GEO_NAMES_COUNTRY'):
             self.country = license_keys.get_key('GEO_NAMES_COUNTRY')
         else:
-            raise Exception ("No valid license key GEO_NAMES_COUNTRY")
+            raise Exception("No valid license key GEO_NAMES_COUNTRY")
 
         self.latlong_response_file = None
         if license_keys.has_key('GEONAMES_LATLONG'):
@@ -61,12 +62,12 @@ class GeoNamesApi(object):
         return json.loads(content.decode('utf8'))
 
     def load_get_latlong_for_postcode_from_file(self, filename):
-        with open(filename, "w+") as response_file:
+        with open(filename, "w+", encoding="utf-8") as response_file:
             return json.load(response_file)
 
     def store_get_latlong_for_postcode_to_file(self, postcode, filename):
         content = self._get_latlong_for_postcode_response(postcode)
-        with open(filename, "w+") as response_file:
+        with open(filename, "w+", encoding="utf-8") as response_file:
             json.dump(content, response_file, sort_keys=True, indent=2)
 
     def get_latlong_for_postcode(self, postcode):
@@ -74,33 +75,14 @@ class GeoNamesApi(object):
         if GeoNamesApi.get_latlong_for_postcode_response_file is None:
             data = self._get_latlong_for_postcode_response(postcode)
         else:
-            with open(GeoNamesApi.get_latlong_for_postcode_response_file, "r+") as datafile:
+            with open(GeoNamesApi.get_latlong_for_postcode_response_file, "r", encoding="utf-8") as datafile:
                 data = json.load(datafile)
 
         if 'postalCodes' not in data:
             raise Exception("Invalid/Unknown post code")
-        if len(data['postalCodes']) == 0:
+        if not data['postalCodes']:
             raise Exception("Invalid/Unknown post code")
         if 'lat' not in data['postalCodes'][0] or 'lng' not in data['postalCodes'][0]:
             raise Exception("Invalid/Unknown post code")
 
         return LatLong(data['postalCodes'][0]['lat'], data['postalCodes'][0]['lng'])
-
-
-if __name__ == '__main__':
-
-    # Only to be used to create test data for unit aiml_tests
-
-    from programy.utils.license.keys import LicenseKeys
-
-    license_keys = LicenseKeys()
-    license_keys.load_license_key_file(os.path.dirname(__file__) + '/../../../../bots/y-bot/config/license.keys')
-
-    geonamesapi = GeoNamesApi(license_keys)
-
-    # Running these tools drops test files into the geocode test folder
-    geonamesapi.store_get_latlong_for_postcode_to_file("KY39UR", "../../../test/utils/geocode/geonames_latlong.json")
-    geonamesapi.store_get_latlong_for_postcode_to_file("KY39UR", "../../../test/utils/geo/geonames_latlong.json")
-
-    # Only to be used to create test data for unit aiml_tests
-

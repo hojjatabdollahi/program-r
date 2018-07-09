@@ -1,12 +1,13 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
 the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
 and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
 THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -14,41 +15,51 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import logging
+from programy.utils.logging.ylogger import YLogger
 
 from programy.parser.template.nodes.indexed import TemplateIndexedNode
-
+from programy.parser.exceptions import ParserException
 
 
 ######################################################################################################################
 #
 # <input index=”n”/> is replaced with the value of the nth previous sentence input to the bot.
-#
+# The input element returns the entire user’s input. This is distinct from the star element,
+# which returns only contents captured by a wildcard in the matched pattern.
+
 class TemplateInputNode(TemplateIndexedNode):
 
-    def __init__(self, position=1, index=1):
-        TemplateIndexedNode.__init__(self, position, index)
+    def __init__(self, index=0):
+        TemplateIndexedNode.__init__(self, index)
 
-    def resolve(self, bot, clientid):
+    def get_default_index(self):
+        return 0
+
+    def resolve_to_string(self, client_context):
+        conversation = client_context.bot.get_conversation(client_context)
+        question = conversation.current_question()
+        if self.index == 0:
+            resolved = question.combine_sentences()
+        else:
+            resolved = question.previous_nth_sentence(self.index).text()
+        YLogger.debug(client_context, "[%s] resolved to [%s]", self.to_string(), resolved)
+        return resolved
+
+    def resolve(self, client_context):
         try:
-            conversation = bot.get_conversation(clientid)
-            sentence = conversation.nth_sentence(self.index)
-            resolved = sentence
-            logging.debug("[%s] resolved to [%s]", self.to_string(), resolved)
-            return resolved
+            return self.resolve_to_string(client_context)
         except Exception as excep:
-            logging.exception(excep)
+            YLogger.exception(client_context, "Failed to resolve", excep)
             return ""
 
     def to_string(self):
-        return "INPUT Index=%s" % (self.index)
+        string = "INPUT"
+        string += self.get_index_as_str()
+        return string
 
-    def to_xml(self, bot, clientid):
+    def to_xml(self, client_context):
         xml = "<input"
-        if self._position > 1:
-            xml += ' position="%d"' % self._position
-        if self._index > 1:
-            xml += ' index="%d"' % self._index
+        xml += self.get_index_as_xml()
         xml += ">"
         xml += "</input>"
         return xml
@@ -58,6 +69,5 @@ class TemplateInputNode(TemplateIndexedNode):
 
     def parse_expression(self, graph, expression):
         self._parse_node_with_attrib(graph, expression, "index", "1")
-        if len(self.children) > 0:
-            logging.warning("<input> node should not contains child text, use <input /> or <input></input> only")
-
+        if self.children:
+            raise ParserException("<input> node should not contain child text, use <input /> or <input></input> only")

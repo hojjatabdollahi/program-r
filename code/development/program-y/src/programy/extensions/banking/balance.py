@@ -1,5 +1,5 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -13,19 +13,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
 
-"""
 This is an example extension that allow syou to call an external service to retreive the bank balance
 of the customer. Currently contains no authentication
 """
-import logging
+from programy.utils.logging.ylogger import YLogger
 
-class BankingBalanceExtension(object):
+from programy.extensions.base import Extension
+
+
+class BankingBalanceExtension(Extension):
 
     # execute() is the interface that is called from the <extension> tag in the AIML
-    def execute(self, bot, clientid, data):
-        logging.debug ("Bank Balance - Calling external service for with extra data [%s]"%(data))
+    def execute(self, context, data):
+        YLogger.debug(context, "Bank Balance - Calling external service for with extra data [%s]", data)
 
         #
         # Add the logic to receive the balance and format it into pounds and pence and either CREDIT|DEBIT

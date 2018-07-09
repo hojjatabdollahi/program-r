@@ -1,5 +1,5 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -14,16 +14,20 @@ THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRI
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-
-import logging
+from programy.utils.logging.ylogger import YLogger
 
 from programy.utils.geo.google import GoogleMaps
+from programy.extensions.base import Extension
 
-class GeoCodeExtension(object):
+
+class GeoCodeExtension(Extension):
+
+    def get_geo_locator(self):
+        return  GoogleMaps()
 
     # execute() is the interface that is called from the <extension> tag in the AIML
-    def execute(self, bot, clientid, data):
-        logging.debug ("GeoCode [%s]"%(data))
+    def execute(self, context, data):
+        YLogger.debug(context, "GeoCode [%s]", data)
 
         words = data.split(" ")
         if words[0] == 'POSTCODE1':
@@ -35,7 +39,8 @@ class GeoCodeExtension(object):
         else:
             return None
 
-        googlemaps = GoogleMaps(bot.license_keys)
+        googlemaps = self.get_geo_locator()
+
         latlng = googlemaps.get_latlong_for_location(location)
         if latlng is not None:
             str_lat = str(latlng.latitude)

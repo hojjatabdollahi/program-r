@@ -1,5 +1,5 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -24,6 +24,6 @@ class LatLong(object):
         return self.to_string(precision=6)
 
     def to_string(self, precision=2):
-        format = "%." + str(precision) + "f"
-        string = "Latitude: " + format + ", Longitude: " + format
+        string_format = "%." + str(precision) + "f"
+        string = "Latitude: " + string_format + ", Longitude: " + string_format
         return string % (self.latitude, self.longitude)

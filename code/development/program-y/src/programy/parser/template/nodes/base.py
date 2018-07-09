@@ -1,12 +1,13 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
 the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
 and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
 THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -14,7 +15,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import logging
+from programy.utils.logging.ylogger import YLogger
 import xml.etree.ElementTree as ET
 
 ######################################################################################################################
@@ -39,51 +40,52 @@ class TemplateNode(object):
 
     def output_child(self, node, tabs, eol, output_func):
         for child in node.children:
-            output_func("%s{%s}%s" % (tabs, child.to_string(), eol))
+            output_func(self, "{0}{1}{2}".format(tabs, child.to_string(), eol))
             self.output_child(child, tabs + "\t", eol, output_func)
 
-    def resolve_children_to_string(self, bot, clientid):
-        return (" ".join([child.resolve(bot, clientid) for child in self._children])).strip()
+    def resolve_children_to_string(self, client_context):
+        words = [child.resolve(client_context) for child in self._children]
+        return client_context.brain.tokenizer.words_to_texts(words)
 
-    def resolve(self, bot, clientid):
+    def resolve(self, client_context):
         try:
-            resolved = self.resolve_children_to_string(bot, clientid)
-            logging.debug("[%s] resolved to [%s]", self.to_string(), resolved)
+            resolved = self.resolve_children_to_string(client_context)
+            YLogger.debug(client_context, "[%s] resolved to [%s]", self.to_string(), resolved)
             return resolved
         except Exception as excep:
-            logging.exception(excep)
+            YLogger.exception(client_context, "Failed to resolve", excep)
             return ""
 
     def to_string(self):
         return "[NODE]"
 
-    def xml_tree(self, bot, clientid):
-        param = ["<template>"]
-        self.to_xml_children(param, bot, clientid)
-        param[0] += "</template>"
-        return ET.fromstring(param[0])
+    def to_xml(self, client_context):
+        return self.children_to_xml(client_context)
 
-    def to_xml(self, bot, clientid):
+    def xml_tree(self, client_context):
+        xml = "<template>"
+        xml += self.children_to_xml(client_context)
+        xml += "</template>"
+        return ET.fromstring(xml)
+
+    def children_to_xml(self, client_context):
         xml = ""
-        for child in self.children:
-            xml += child.to_xml(bot, clientid)
-        return xml
-
-    def to_xml_children(self, param, bot, clientid):
         first = True
         for child in self.children:
-            if first is False:
-                param[0] += " "
-            param[0] += child.to_xml(bot, clientid)
+            if first is not True:
+                xml += " "
             first = False
+            xml += child.to_xml(client_context)
+        return xml
 
     def parse_text(self, graph, text):
         if text is not None:
             string = text.strip()
-            if len(string) > 0:
-                words = string.split(" ")
+            if string:
+                words = graph.aiml_parser.brain.tokenizer.texts_to_words(string)
+
                 for word in words:
-                    if word is not None and len(word) > 0:
+                    if word is not None and word:
                         word_class = graph.get_node_class_by_name('word')
                         word_node = word_class(word.strip())
                         self.children.append(word_node)
@@ -122,13 +124,16 @@ class TemplateNode(object):
 
         if head_result is False and found_sub is False:
             if hasattr(pattern, '_end_line_number'):
-                logging.warning("No context in template tag at [line(%d), column(%d)]" %
-                                (pattern._end_line_number,
-                                 pattern._end_column_number))
+                YLogger.warning(self, "No context in template tag at [line(%d), column(%d)]",
+                                    pattern._end_line_number,
+                                    pattern._end_column_number)
             else:
-                logging.warning("No context in template tag")
+                YLogger.warning(self, "No context in template tag")
 
     #######################################################################################################
+
+    def add_default_star(self):
+        return False
 
     def _parse_node(self, graph, expression):
         expression_text = self.parse_text(graph, self.get_text_from_element(expression))
@@ -139,34 +144,12 @@ class TemplateNode(object):
             self.parse_text(graph, self.get_tail_from_element(child))
             expression_children = True
 
-        if expression_text is None and expression_children is False:
-            logging.debug ("Node has no content (text or children), default to <star/>")
-            star_class = graph.get_node_class_by_name('star')
-            star_node = star_class()
-            self.append(star_node)
-
-    #######################################################################################################
-
-    def _parse_node_with_attrib(self, graph, expression, attrib_name, default_value=None):
-
-        attrib_found = True
-        if attrib_name in expression.attrib:
-            self.set_attrib(attrib_name, expression.attrib[attrib_name])
-
-        self.parse_text(graph, self.get_text_from_element(expression))
-
-        for child in expression:
-
-            if child.tag == attrib_name:
-                self.set_attrib(attrib_name, self.get_text_from_element(child))
-            else:
-                graph.parse_tag_expression(child, self)
-
-            self.parse_text(graph, self.get_tail_from_element(child))
-
-        if attrib_found is False:
-            logging.debug("Setting default value for attrib [%s]", attrib_name)
-            self.set_attrib(attrib_name, default_value)
+        if expression_text is False and expression_children is False:
+            if self.add_default_star() is True:
+                YLogger.debug(self, "Node has no content (text or children), default to <star/>")
+                star_class = graph.get_node_class_by_name('star')
+                star_node = star_class()
+                self.append(star_node)
 
     #######################################################################################################
 

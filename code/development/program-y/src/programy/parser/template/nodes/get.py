@@ -1,12 +1,13 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
 the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
 and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
 THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -14,12 +15,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import logging
+from programy.utils.logging.ylogger import YLogger
+import json
 
 from programy.parser.template.nodes.base import TemplateNode
 from programy.parser.exceptions import ParserException
-
-
+from programy.utils.text.text import TextUtils
 
 class TemplateGetNode(TemplateNode):
 
@@ -27,6 +28,7 @@ class TemplateGetNode(TemplateNode):
         TemplateNode.__init__(self)
         self._name = None
         self._local = False
+        self._tuples = None
 
     @property
     def name(self):
@@ -44,59 +46,150 @@ class TemplateGetNode(TemplateNode):
     def local(self, local):
         self._local = local
 
-    def resolve(self, bot, clientid):
-        try:
-            name = self.name.resolve(bot, clientid)
+    @property
+    def tuples(self):
+        return self._tuples
 
-            """
-            Todo, if local then set per the conversation
-            If globals
-                If exists in predicates then don't replace
-                If not in predicates then set as global to the conversation
-            """
+    @tuples.setter
+    def tuples(self, tuples):
+        self._tuples = tuples
 
-            if self.local is True:
-                value = bot.get_conversation(clientid).current_question().predicate(name)
-                if value is None:
-                    logging.warning("No local var for %s, default-get used", name)
-                    value = bot.brain.properties.property("default-get")
-                    if value is None:
-                        logging.error("No value for default-get defined, empty string returned")
-                        value = ""
-                logging.debug("[%s] resolved to local: [%s] <= [%s]", self.to_string(), name, value)
+    @staticmethod
+    #TODO Replace bot with client_context
+    def get_default_value(bot):
+        value = bot.brain.properties.property("default-get")
+        if value is None:
+            YLogger.error(None, "No property defined for default-get, checking defaults")
+
+            value = bot.brain.configuration.defaults.default_get
+            if value is None:
+                YLogger.error(None, "No value defined for default default-get, returning 'unknown'")
+                value = "unknown"
+
+        return value
+
+    @staticmethod
+    def get_property_value(client_context, local, name):
+
+        if local is True:
+
+            value = None
+            #TODO Why would you need this test, when is get_conversation(clientid) == None ?
+            if client_context.bot.get_conversation(client_context) is not None:
+                if client_context.bot.get_conversation(client_context).has_current_question():
+                    value = client_context.bot.get_conversation(client_context).current_question().property(name)
+
+        else:
+
+            if name is not None and client_context.brain.dynamics.is_dynamic_var(name) is True:
+                value = client_context.brain.dynamics.dynamic_var(client_context, name)
             else:
-                value = bot.get_conversation(clientid).predicate(name)
-                if value is None:
-                    value = bot.brain.predicates.predicate(name)
-                    if value is None:
-                        value = bot.brain.properties.property("default-get")
-                        if value is None:
-                            logging.error("No value for default-get defined, empty string returned")
-                            value = ""
-                logging.debug("[%s] resolved to global: [%s] <= [%s]", self.to_string(), name, value)
+                value = client_context.bot.get_conversation(client_context).property(name)
+                #if value is None:
+                #    value = bot.brain.properties.property(name)
 
-            return value
+        if value is None:
+            YLogger.error(client_context, "No property for [%s]", name)
+
+            value = TemplateGetNode.get_default_value(client_context.bot)
+
+        return value
+
+    def resolve_variable(self, client_context):
+        name = self.name.resolve(client_context)
+        value = TemplateGetNode.get_property_value(client_context, self.local, name)
+        if self.local:
+            YLogger.debug(client_context, "[%s] resolved to local: [%s] <= [%s]", self.to_string(), name, value)
+        else:
+            YLogger.debug(client_context, "[%s] resolved to global: [%s] <= [%s]", self.to_string(), name, value)
+        return value
+
+    def decode_tuples(self, tuples):
+        if isinstance(tuples, str):
+            return json.loads(tuples)
+        else:
+            return tuples
+
+    def resolve_tuple(self, client_context):
+        variables = self._name.resolve(client_context).split(" ")
+
+        raw_tuples = self._tuples.resolve(client_context)
+        try:
+            tuples = self.decode_tuples(raw_tuples)
+        except:
+            tuples = []
+
+        resolved = ""
+        if tuples:
+
+            if isinstance(tuples, list): # Is tuples an array of results in the form [[[subj, val],[pred, val],[obj, val]], [[subj, val],[pred, val],[obj, val]]...]
+
+                if variables: #If we are asking for variables, pull out the vars
+                    for atuple in tuples:
+                        if isinstance(atuple[0], list) is True:
+                            for pair in atuple:
+                                for var in variables:
+                                    if pair[0] == var:
+                                        resolved += pair[1]
+                                        resolved += " "
+                        else:
+                            for var in variables:
+                                if atuple[0] == var:
+                                    resolved += atuple[1]
+                                    resolved += " "
+
+                else:
+                    for atuple in tuples:
+                        resolved += atuple[0][1]
+                        resolved += " "
+                        resolved += atuple[1][1]
+                        resolved += " "
+                        resolved += atuple[2][1]
+                        resolved += " "
+
+        YLogger.debug(client_context, "[%s] resolved to [%s]", self.to_string(), resolved)
+
+        return resolved
+
+    def resolve_to_string(self, client_context):
+        if self._tuples is None:
+            value = self.resolve_variable(client_context)
+        else:
+            value = self.resolve_tuple(client_context)
+        return value
+
+    def resolve(self, client_context):
+        try:
+            client_context.bot.load_conversation(client_context.userid)
+            return self.resolve_to_string(client_context)
         except Exception as excep:
-            logging.exception(excep)
+            YLogger.exception(client_context, "Failed to resolve", excep)
             return ""
 
     def to_string(self):
-        if self.name is None:
-            name = "None"
+        if self.tuples is None:
+            if self.name is None:
+                name = "None"
+            else:
+                name = self.name.to_string()
+            return "[GET [%s] - %s]" % ("Local" if self.local else "Global", name)
         else:
-            name = self.name.to_string()
-        return "[GET [%s] - %s]" % ("Local" if self.local else "Global", name)
+            return "[GET [Tuples] - (%s)]" %self.name.to_string()
 
-    def output(self, tabs="", output=logging.debug):
-        self.output_child(self, tabs, output)
-
-    def to_xml(self, bot, clientid):
-        xml = "<get"
-        if self.local:
-            xml += ' var="%s"' % self.name.resolve(bot, clientid)
+    def to_xml(self, client_context):
+        if self.tuples is None:
+            xml = "<get"
+            if self.local:
+                xml += ' var="%s"' % self.name.resolve(client_context)
+            else:
+                xml += ' name="%s"' % self.name.resolve(client_context)
+            xml += " />"
         else:
-            xml += ' name="%s"' % self.name.resolve(bot, clientid)
-        xml += " />"
+            xml = "<get"
+            xml += ' var="%s"' % self.name.resolve(client_context)
+            xml += " >"
+            xml += self.tuples.to_xml(client_context)
+            xml += "</get>"
         return xml
 
     # ######################################################################################################
@@ -122,20 +215,23 @@ class TemplateGetNode(TemplateNode):
             var_found = True
 
         for child in expression:
+            tag_name = TextUtils.tag_from_text(child.tag)
 
-            if child.tag == 'name':
+            if tag_name == 'name':
                 self.name = self.parse_children_as_word_node(graph, child)
                 self.local = False
                 name_found = True
 
-            elif child.tag == 'var':
+            elif tag_name == 'var':
                 self.name = self.parse_children_as_word_node(graph, child)
                 self.local = True
                 var_found = True
 
-            else:
-                raise ParserException("Error, invalid get", xml_element=expression)
+            elif tag_name == "tuple":
+                self._tuples = self.parse_children_as_word_node(graph, child)
+
+        if name_found is False and var_found is False:
+            raise ParserException("Invalid get, missing either name or var", xml_element=expression)
 
         if name_found is True and var_found is True:
-            raise ParserException("Error, get node has both name AND var values", xml_element=expression)
-
+            raise ParserException("Get node has both name AND var values", xml_element=expression)

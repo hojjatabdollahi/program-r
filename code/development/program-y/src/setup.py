@@ -1,80 +1,77 @@
-#!/usr/bin/env python
+from setuptools import setup, find_packages
+from os import path
+import sys
 
-
-"""
-Setup script for programy
-"""
-
-
-import os
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-
-
-with open('README.rst') as f:
-    readme_content = f.read().strip()
-
+here = path.abspath(path.dirname(__file__))
 
 version = None
-author = None
-email = None
-source = None
+with open(path.join(here, 'version.txt'), encoding='utf-8') as f:
+    version = f.read()
+version = version.strip()
 
-with open(os.path.join('programy', '__init__.py')) as f:
-    for line in f:
-        if line.strip().startswith('__version__'):
-            version = line.split('=')[1].strip().replace('"', '').replace("'", '')
-        elif line.strip().startswith('__author__'):
-            author = line.split('=')[1].strip().replace('"', '').replace("'", '')
-        elif line.strip().startswith('__email__'):
-            email = line.split('=')[1].strip().replace('"', '').replace("'", '')
-        elif line.strip().startswith('__source__'):
-            source = line.split('=')[1].strip().replace('"', '').replace("'", '')
-        elif None not in (version, author, email, source):
-            break
+if version is None:
+    print("No version.txt found")
+
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+    long_description = f.read()
+
+download_url = "https://github.com/keiffster/program-y/%s.tar.gz"%version
 
 setup(
-    name='programy',
-    author=author,
-    author_email=email,
-    license='BSD License',
-    keywords=["programy python3 aiml interpreter "],
-    description="AIML Interpreter for Python 3.x",
-    long_description=readme_content,
-    classifiers=[
-        'Development Status :: 3 - Beta',
-        'Intended Audience :: Developers',
-        'Intended Audience :: Developers',
-        'Intended Audience :: Information Technology',
-        'License :: OSI Approved :: BSD License',
-        'License :: OSI Approved :: BSD License',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: Implementation :: PyPy',
-        'Programming Language :: Python',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-        'Topic :: Communications :: Chat',
-    ],
-    include_package_data=True,
-    packages=['programy'],
-    install_requires=[
-        'requests',
-        'flask',
-        'python-dateutil',
-        'beautifulsoup4',
-        'lxml',
-        'wikipedia',
-        'pyyaml',
-        'tweepy',
-        'sleekxmpp',
-        'fbmessenger'
-    ],
-    url=source,
-    version=version,
-    zip_safe=True,
+  name = 'programy',
+  packages=find_packages(),
+  package_data={'': ['*.conf', '*.aiml']},
+  include_package_data=True,
+  version = version,
+  description = 'AIML Framework and Platform',
+  long_description=long_description,
+  author = 'Keith Sterling',
+  author_email = 'keiffster@gmail.com',
+  url = 'https://github.com/keiffster/program-y.git',
+  download_url = download_url,
+  keywords = ['aiml', 'chatbot', 'virtual assistant', 'ai'],
+  classifiers = [
+      # How mature is this project? Common values are
+      #   3 - Alpha
+      #   4 - Beta
+      #   5 - Production/Stable
+      'Development Status :: 5 - Production/Stable',
+
+      # Indicate who your project is intended for
+      'Intended Audience :: Developers',
+
+      # Pick your license as you wish (should match "license" above)
+      'License :: OSI Approved :: MIT License',
+
+      # Specify the Python versions you support here. In particular, ensure
+      # that you indicate whether you support Python 2, Python 3 or both.
+      'Programming Language :: Python :: 3',
+      'Programming Language :: Python :: 3.2',
+      'Programming Language :: Python :: 3.3',
+      'Programming Language :: Python :: 3.4',
+      'Programming Language :: Python :: 3.5',
+      'Programming Language :: Python :: 3.6',
+  ],
+  install_requires=['requests',
+                    'flask',
+                    'python-dateutil',
+                    'beautifulsoup4',
+                    'lxml',
+                    'wikipedia',
+                    'pyyaml',
+                    'tweepy',
+                    'sleekxmpp',
+                    'metoffer',
+                    'python-telegram-bot',
+                    'pymessenger',
+                    'twilio',
+                    'slackclient',
+                    'redis',
+                    'viberbot',
+                    'line-bot-sdk',
+                    'kik',
+                    'APScheduler',
+                    'emoji'
+                    ]
+
 )

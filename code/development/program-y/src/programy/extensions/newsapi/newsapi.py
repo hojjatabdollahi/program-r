@@ -1,5 +1,5 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -14,26 +14,80 @@ THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRI
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-
-import logging
+from programy.utils.logging.ylogger import YLogger
 
 from programy.utils.newsapi.newsapi import NewsAPI
+from programy.extensions.base import Extension
 
-class NewsAPIExtension(object):
 
-    # execute() is the interface that is called from the <extension> tag in the AIML
-    def execute(self, bot, clientid, data):
+class NewsAPIExtension(Extension):
 
-        splits = data.split()
+    def get_news_api_api(self, context):
+        return  NewsAPI(context.client.license_keys)
 
-        source = splits[0]
-        max = 10 # int(splits[1])
-        sort = False#  bool(splits[2])
-        reverse = False# bool(splits[3])
+    def get_news(self, context, source, max_num, sort, reverse):
 
-        newsapi = NewsAPI(bot.license_keys)
+        newsapi = self.get_news_api_api(context)
 
-        results = newsapi.to_program_y_text(newsapi.get_headlines(source, max, sort, reverse))
+        headlines = newsapi.get_headlines(source, max_num, sort, reverse)
+        if headlines is None:
+            YLogger.error(context, "NewsAPIExtension no headlines found!")
+            return ""
+
+        results = newsapi.to_program_y_text(headlines)
+        if results is None:
+            YLogger.error(context, "NewsAPIExtension no results returned!")
+            return ""
 
         return results
 
+    def parse_data(self, context, data):
+        source = None
+        max_num = 10
+        sort = False
+        reverse = False
+
+        splits = data.split()
+        count = 0
+        while count < len(splits):
+            if splits[count] == "SOURCE":
+                count += 1
+                source = splits[count]
+            elif splits[count] == "MAX":
+                count += 1
+                max_num = int(splits[count])
+            elif splits[count] == "SORT":
+                count += 1
+                if splits[count].upper() == 'TRUE':
+                    sort = True
+                elif splits[count].upper() == 'FALSE':
+                    sort = False
+                else:
+                    YLogger.error(context, "Invalid value for NewAPI Data parameter sort [%s]", splits[count])
+                    sort = False
+            elif splits[count] == "REVERSE":
+                count += 1
+                if splits[count].upper() == 'TRUE':
+                    reverse = True
+                elif splits[count].upper() == 'FALSE':
+                    reverse = False
+                else:
+                    YLogger.error(context, "Invalid value for NewAPI Data parameter reverse [%s]", splits[count])
+                    reverse = False
+            else:
+                YLogger.error(context, "Unknown News API Command [%s]", splits[count])
+
+            count += 1
+
+        return source, max_num, sort, reverse
+
+    # execute() is the interface that is called from the <extension> tag in the AIML
+    def execute(self, context, data):
+
+        source, max_num, sort, reverse = self.parse_data(context, data)
+
+        if source is None:
+            YLogger.error(context, "NewsAPIExtension no source passed in as data parameter!")
+            return ""
+
+        return self.get_news(context, source, max_num, sort, reverse)

@@ -1,5 +1,5 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -14,23 +14,27 @@ THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRI
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-
-import logging
+from programy.utils.logging.ylogger import YLogger
 
 from programy.utils.geo.google import GoogleMaps
+from programy.extensions.base import Extension
 
-class GoogleMapsExtension(object):
+
+class GoogleMapsExtension(Extension):
+
+    def get_geo_locator(self):
+        return GoogleMaps()
 
     # execute() is the interface that is called from the <extension> tag in the AIML
-    def execute(self, bot, clientid, data):
-        logging.debug ("GoogleMaps [%s]"%(data))
+    def execute(self, context, data):
+        YLogger.debug(context, "GoogleMaps [%s]", data)
 
         splits = data.split(" ")
         command = splits[0]
         from_place = splits[1]
         to_place = splits[2]
 
-        googlemaps = GoogleMaps(bot.license_keys)
+        googlemaps = self.get_geo_locator()
 
         if command == "DISTANCE":
             distance = googlemaps.get_distance_between_addresses(from_place, to_place)
@@ -39,12 +43,11 @@ class GoogleMapsExtension(object):
             directions = googlemaps.get_directions_between_addresses(from_place, to_place)
             return self._format_directions_for_programy(directions)
         else:
+            YLogger.error(context, "Unknown Google Maps Extension command [%s]", command)
             return None
 
-        return "OK"
-
     def _format_distance_for_programy(self, distance):
-        distance_splits = distance._distance_text.split(" ")
+        distance_splits = distance.distance_text.split(" ")
         value = distance_splits[0]
         if "." in value:
             value_splits = distance_splits[0].split(".")

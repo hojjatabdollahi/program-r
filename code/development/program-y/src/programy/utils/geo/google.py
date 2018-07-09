@@ -1,5 +1,5 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -15,13 +15,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import logging
+from programy.utils.logging.ylogger import YLogger
 import json
 import urllib.request
 
 from programy.utils.geo.latlong import LatLong
 from programy.utils.text.text import TextUtils
-
 
 class GoogleAddressComponent(object):
     def __init__(self):
@@ -33,8 +32,8 @@ class GoogleAddressComponent(object):
         self.long_name = data['long_name']
         self.short_name = data['short_name']
         self.types = []
-        for type in data['types']:
-            self.types.append(type)
+        for address_type in data['types']:
+            self.types.append(address_type)
 
 
 class GoogleBounds(object):
@@ -115,6 +114,10 @@ class GoogleDistance(object):
         self._duration = None
         self._duration_text = None
 
+    @property
+    def distance_text(self):
+        return self._distance_text
+
     def parse_json(self, json_data):
         result = json_data[0]
 
@@ -133,6 +136,7 @@ class GoogleDistance(object):
         self._duration = result['elements'][0]['duration']['value']
         self._duration_text = result['elements'][0]['duration']['text']
 
+
 class DirectionLegStep(object):
     def __init__(self):
         self._distance = None
@@ -141,12 +145,17 @@ class DirectionLegStep(object):
         self._duration_text = None
         self._instructions = None
 
+    @property
+    def instructions(self):
+        return self._instructions
+
     def parse_json(self, data):
         self._distance = data['distance']['value']
         self._distance_text = data['distance']['text']
         self._duration = data['duration']['value']
         self._duration_text = data['duration']['text']
         self._instructions = TextUtils.strip_html(data['html_instructions'])
+
 
 class DirectionLeg(object):
     def __init__(self):
@@ -167,7 +176,8 @@ class DirectionLeg(object):
             self._steps.append(dirlegstep)
 
     def steps_as_a_string(self):
-        return ", ".join([step._instructions for step in self._steps])
+        return ", ".join([step.instructions for step in self._steps])
+
 
 class GoogleDirections(object):
     def __init__(self, origin, destination, country="UK", mode="driving", units="imperial"):
@@ -188,69 +198,50 @@ class GoogleDirections(object):
     def legs_as_a_string(self):
         return ", ".join([leg.steps_as_a_string() for leg in self._legs])
 
+
 class GoogleMaps(object):
 
-    DIRECTIONS = "http://maps.googleapis.com/maps/api/directions/json?origin={0}&destination={1}&country={2}&sensor=false&mode={3}"
-    DISTANCE = "http://maps.googleapis.com/maps/api/distancematrix/json?origins={0}&destinations={1}&country={2}&sensor=false&mode={3}&units={4}"
+    DIRECTIONS = "http://maps.googleapis.com/maps/api/directions/json?origin={0}&destination={1}" \
+                 "&country={2}&sensor=false&mode={3}"
+    DISTANCE = "http://maps.googleapis.com/maps/api/distancematrix/json?origins={0}&destinations={1}" \
+               "&country={2}&sensor=false&mode={3}&units={4}"
     GEOCODE = "http://maps.google.com/maps/api/geocode/json?address={0}&sensor=false"
-
-    def __init__(self, license_keys):
-        self.response_file_for_get_latlong_for_location = None
-        self.response_file_for_get_distance_between_addresses = None
-        self.response_file_for_get_directions_between_addresses = None
-
-        if license_keys is not None:
-            if license_keys.has_key("GOOGLE_LATLONG"):
-                self.response_file_for_get_latlong_for_location = license_keys.get_key("GOOGLE_LATLONG")
-            if license_keys.has_key("GOOGLE_MAPS_DISTANCE"):
-                self.response_file_for_get_distance_between_addresses = license_keys.get_key("GOOGLE_MAPS_DISTANCE")
-            if license_keys.has_key("GOOGLE_MAPS_DIRECTIONS"):
-                self.response_file_for_get_directions_between_addresses = license_keys.get_key("GOOGLE_MAPS_DIRECTIONS")
 
     ##################
 
     def _get_response_as_json(self, url):
-        logging.debug ("GoogleMaps Request = [%s]"%url)
+        YLogger.debug(self, "GoogleMaps Request = [%s]", url)
         response = urllib.request.urlopen(url)
         content = response.read()
         decoded = content.decode('utf8')
-        logging.debug("GoogleMaps Response = [%s]"%decoded)
+        YLogger.debug(self, "GoogleMaps Response = [%s]", decoded)
         return json.loads(decoded)
 
     ##################
-
-    def set_response_file_for_get_latlong_for_location(self, filename):
-        logging.debug ("GoogleMaps: setting response file for get_latlong_for_location = [%s]"%filename)
-        self.response_file_for_get_latlong_for_location = filename
 
     def _get_latlong_for_location_response(self, location):
         location = TextUtils.urlify(location)
         url = GoogleMaps.GEOCODE.format(location)
         return self._get_response_as_json(url)
 
+    def is_error_response(self, response):
+        if 'status' in response:
+            if response['status'] == 'OVER_QUERY_LIMIT' :
+                return True
+        return False
+
     def get_latlong_for_location(self, location):
-        if self.response_file_for_get_latlong_for_location is None:
-            logging.debug("get_latlong_for_location - calling service")
-            response = self._get_latlong_for_location_response(location)
-        else:
-            logging.debug("get_latlong_for_location - using mock file")
-            with open (self.response_file_for_get_latlong_for_location, "r+") as response_file:
-                response = json.load(response_file)
+        YLogger.debug(self, "get_latlong_for_location - calling service")
+        response = self._get_latlong_for_location_response(location)
+
+        if self.is_error_response(response):
+            raise Exception(response['status'])
 
         geodata = GoogelMapsResult()
         geodata.parse_json(response)
         return geodata.locations[0].geometry.location
 
-    def store_get_latlong_for_location_to_file(self, location, filename):
-        response = self._get_latlong_for_location_response(location)
-        with open(filename, "w+") as data_file:
-            json.dump(response, data_file, sort_keys=True, indent=2)
-
     ##################
-
-    def set_response_file_for_get_distance_between_addresses(self, filename):
-        logging.debug ("GoogleMaps: setting response file for get_distance_between_addresses = [%s]"%filename)
-        self.response_file_for_get_distance_between_addresses = filename
 
     def _get_distance_between_addresses(self, origin, destination, country, mode, units):
         origin = TextUtils.urlify(origin)
@@ -259,33 +250,19 @@ class GoogleMaps(object):
         return self._get_response_as_json(url)
 
     def get_distance_between_addresses(self, origin, destination, country="UK", mode="driving", units="imperial"):
-        if self.response_file_for_get_distance_between_addresses is None:
-            logging.debug("get_distance_between_addresses - calling service")
-            response = self._get_distance_between_addresses(origin, destination, country, mode, units)
-        else:
-            logging.debug("get_distance_between_addresses - using mock file")
-            with open(self.response_file_for_get_distance_between_addresses, "r+") as response_file:
-                response = json.load(response_file)
+        YLogger.debug(self, "get_distance_between_addresses - calling service")
+        response = self._get_distance_between_addresses(origin, destination, country, mode, units)
 
         if response['status'] == 'OK':
-            logging.debug("get_distance_between_addresses - OK")
+            YLogger.debug(self, "get_distance_between_addresses - OK")
             distance = GoogleDistance(origin, destination, country, mode, units)
             distance.parse_json(response['rows'])
             return distance
         else:
-            logging.error("get_distance_between_addresses - [%s]"%response['status'])
+            YLogger.error(self, "get_distance_between_addresses - [%s]", response['status'])
             return None
 
-    def store_get_distance_between_addresses_as_file(self, origin, destination, filename, country="UK", mode="driving", units="imperial"):
-        response = self._get_distance_between_addresses(origin, destination, country, mode, units)
-        with open(filename, "w+") as data_file:
-            json.dump(response, data_file, sort_keys=True, indent=2)
-
     ##################
-
-    def set_response_file_for_get_directions_between_addresses(self, filename):
-        logging.debug ("GoogleMaps; setting response file for get_directions_between_addresses = [%s]"%filename)
-        self.response_file_for_get_directions_between_addresses = filename
 
     def _get_directions_between_addresses_response(self, origin, destination, country, mode, units):
         origin = TextUtils.urlify(origin)
@@ -294,40 +271,15 @@ class GoogleMaps(object):
         return self._get_response_as_json(url)
 
     def get_directions_between_addresses(self, origin, destination, country="UK", mode="driving", units="imperial"):
-        if self.response_file_for_get_directions_between_addresses is None:
-            logging.debug("get_directions_between_addresses - calling live service")
-            response = self._get_directions_between_addresses_response(origin, destination, country, mode, units)
-        else:
-            logging.debug("get_directions_between_addresses - using mock file")
-            with open(self.response_file_for_get_directions_between_addresses, "r+") as response_file:
-                response = json.load(response_file)
+        YLogger.debug(self, "get_directions_between_addresses - calling live service")
+        response = self._get_directions_between_addresses_response(origin, destination, country, mode, units)
 
         if response['status'] == 'OK':
-            logging.debug("get_directions_between_addresses - OK")
+            YLogger.debug(self, "get_directions_between_addresses - OK")
             directions = GoogleDirections(origin, destination, country, mode, units)
             directions.parse_json(response['routes'])
             return directions
         else:
-            logging.error("get_directions_between_addresses - %s"%response['status'])
+            YLogger.error(self, "get_directions_between_addresses - %s", response['status'])
             return None
 
-    def store_get_directions_between_addresses_as_file(self, origin, destination, filename, country="UK", mode="driving", units="imperial"):
-        response = self._get_directions_between_addresses_response(origin, destination, country, mode, units)
-        with open(filename, "w+") as data_file:
-            json.dump(response, data_file, sort_keys=True, indent=2)
-
-
-if __name__ == '__main__':
-
-    # Only to be used to create test data for unit aiml_tests
-    googlemaps = GoogleMaps()
-
-    # Running these tools drops test files into the geocode test folder
-    googlemaps.store_get_latlong_for_location_to_file("KY3 9UR", "../../../test/utils/geo/google_latlong.json")
-    googlemaps.store_get_distance_between_addresses_as_file("Edinburgh", "Kinghorn", "../../../test/utils/geo/distance.json")
-    googlemaps.store_get_directions_between_addresses_as_file("Edinburgh", "Kinghorn", "../../../test/utils/geo/directions.json")
-
-    googlemaps.store_get_latlong_for_location_to_file("KY3 9UR", "../../../test/utils/weather/google_latlong.json")
-    googlemaps.store_get_distance_between_addresses_as_file("Edinburgh", "Kinghorn", "../../../test/utils/weather/distance.json")
-    googlemaps.store_get_directions_between_addresses_as_file("Edinburgh", "Kinghorn", "../../../test/utils/weather/directions.json")
-    # Only to be used to create test data for unit aiml_tests

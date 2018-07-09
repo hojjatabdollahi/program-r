@@ -1,12 +1,13 @@
 """
-Copyright (c) 2016 Keith Sterling
+Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation
 the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
 and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
 THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -14,24 +15,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import logging
+from programy.utils.logging.ylogger import YLogger
 
-from programy.parser.template.maps.plural import PluralMap
-from programy.parser.template.maps.singular import SingularMap
-from programy.parser.template.maps.predecessor import PredecessorMap
-from programy.parser.template.maps.successor import SuccessorMap
 from programy.parser.template.nodes.base import TemplateNode
 from programy.parser.exceptions import ParserException
+from programy.utils.text.text import TextUtils
 
 class TemplateMapNode(TemplateNode):
 
     def __init__(self):
         TemplateNode.__init__(self)
         self._name = None
-        self._internal_maps = {PluralMap.get_name(): PluralMap(),
-                               SingularMap.get_name(): SingularMap(),
-                               PredecessorMap.get_name(): PredecessorMap(),
-                               SuccessorMap.get_name(): SuccessorMap()}
 
     @property
     def name(self):
@@ -41,56 +35,56 @@ class TemplateMapNode(TemplateNode):
     def name(self, name):
         self._name = name
 
-    def resolve_children(self, bot, clientid):
-        if len(self._children) > 0:
-            return self.resolve_children_to_string(bot, clientid)
+    def resolve_children(self, client_context):
+        if self._children:
+            return self.resolve_children_to_string(client_context)
+        return ""
+
+    def get_default_value(self, client_context):
+        value = client_context.brain.properties.property("default-map")
+        if value is None:
+            value = client_context.brain.properties.property("default-map")
+            if value is None:
+                YLogger.error(client_context, "No value for default-map defined, empty string returned")
+                value = ""
+        return value
+
+    def resolve_to_string(self, client_context):
+        name = self.name.resolve(client_context).upper()
+        var = self.resolve_children(client_context).upper()
+
+        if client_context.brain.dynamics.is_dynamic_map(name) is True:
+            value = client_context.brain.dynamics.dynamic_map(client_context, name, var)
         else:
-            return ""
-
-    def resolve(self, bot, clientid):
-        try:
-            name = self.name.resolve(bot, clientid).upper()
-            var = self.resolve_children(bot, clientid).upper()
-
-            if name in self._internal_maps:
-                map = self._internal_maps[name]
-                value = map.map(var)
+            if client_context.brain.maps.contains(name) is False:
+                YLogger.error(client_context, "No map defined for [%s], using default-map as value", var)
+                value = self.get_default_value(client_context)
             else:
-                the_map = bot.brain.maps.map(name)
-                if the_map is None:
-                    logging.error("No map defined for [%s], using default-map" % name)
-                    value = bot.brain.properties.property("default-map")
-                    if value is None:
-                        logging.error("No value for default-map defined, empty string returned")
-                        value = ""
+                the_map = client_context.brain.maps.map(name)
+                if var in the_map:
+                    value = the_map[var]
                 else:
-                    if var in the_map:
-                        value = the_map[var]
-                    else:
-                        logging.error("No value defined [%s] in map [%s], using default-map" % (var, name))
-                        value = bot.brain.properties.property("default-map")
-                        if value is None:
-                            logging.error("No value for default-map defined, empty string returned")
-                            value = ""
+                    YLogger.error(client_context, "No value defined for [%s], using default-map as value", var)
+                    value = self.get_default_value(client_context)
 
-            logging.debug("MAP [%s] resolved to [%s] = [%s]", self.to_string(), name, value)
-            return value
+        YLogger.debug(client_context, "MAP [%s] resolved to [%s] = [%s]", self.to_string(), name, value)
+        return value
+
+    def resolve(self, client_context):
+        try:
+            return self.resolve_to_string(client_context)
         except Exception as excep:
-            logging.exception(excep)
+            YLogger.exception(client_context, "Failed to resolve", excep)
             return ""
 
     def to_string(self):
         return "[MAP (%s)]" % (self.name.to_string())
 
-    def output(self, tabs="", output=logging.debug):
-        self.output_child(self, tabs, output=logging.debug)
-
-    def to_xml(self, bot, clientid):
+    def to_xml(self, client_context):
         xml = "<map "
-        xml += ' name="%s"' % self.name.resolve(bot, clientid)
+        xml += ' name="%s"' % self.name.resolve(client_context)
         xml += ">"
-        for child in self.children:
-            xml += child.to_xml(bot, clientid)
+        xml += self.children_to_xml(client_context)
         xml += "</map>"
         return xml
 
@@ -110,8 +104,9 @@ class TemplateMapNode(TemplateNode):
         self.parse_text(graph, self.get_text_from_element(expression))
 
         for child in expression:
+            tag_name = TextUtils.tag_from_text(child.tag)
 
-            if child.tag == 'name':
+            if tag_name == 'name':
                 self.name = self.parse_children_as_word_node(graph, child)
                 name_found = True
 
@@ -121,5 +116,4 @@ class TemplateMapNode(TemplateNode):
             self.parse_text(graph, self.get_tail_from_element(child))
 
         if name_found is False:
-            raise ParserException("Error, name not found", xml_element=expression)
-
+            raise ParserException("Name not found in map", xml_element=expression)
