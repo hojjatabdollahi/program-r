@@ -1,133 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
- <!-- DELETE ME, for testing purposes, need to correct start of this -->
- <!-- can we make the bot start with this somehow?? -->
+<!-- DELETE ME, for testing purposes, need to correct start of this, can we make the bot start? -->
+<!-- is this too long? -->
 <category>
     <pattern>SESSION 3</pattern>
     <template>
-         Hello <get name = "name"/>! Welcome back! Today we are going to start our third session together. Before we begin, I want to know how using the daily mood scale went. Did you have any problems filling it out? </template>
-</category>
-
-<!-- PROBLEMS WITH SCALE -->
-<category><pattern><set>yes</set></pattern>
-   <that>DID YOU HAVE ANY PROBLEMS FILLING IT OUT</that>
-    <template>
-        I see. Let's address those problems before we start. My human companion can help you with this. Once you both are ready to continue, say ready. </template>
-</category>
-
-<!-- READY TO CONTINUE -->
-<category><pattern>READY</pattern>
-   <that>ONCE YOU BOTH ARE READY TO CONTINUE, SAY READY</that>
-    <template>
-        Great! Did you find anything surprising when filling out the scale? </template>
-</category>
-
-<!-- NO PROBLEMS WITH SCALE -->
-<category><pattern><set>no</set></pattern>
-   <that>DID YOU HAVE ANY PROBLEMS FILLING IT OUT</that>
-    <template>
-        Great! Did you find anything surprising when filling out the scale? </template>
-</category>
-
-<!-- CONTINUE WITH CONVERSATION-WHAT ARE THOUGHTS? -->
-<category><pattern>*</pattern>
-    <that>DID YOU FIND ANYTHING SURPRISING WHEN FILLING OUT THE SCALE</that>
-    <template>
-        That's an interesting observation! Thank you for your work with the scale. I hope you can use it as a great tool to reflect on your thoughts. Keep it up over the coming weeks! Now to continue with our session. Remember from last time, thoughts, activities, and people effect your mood. We are going to start by focusing on what role thoughts play in your mood. Specific types of thinking can make a huge difference. Some make it more likely you will be depressed and others make it less likely you will become depressed. How would you define thoughts?
+         Hi <get name = "name"/>! Welcome to session three. I hope you are still using your daily mood scale. I want you to try and pay attention to 
+         the patterns in your mood day to day. It might teach you something. Also, you should have been keeping track of your number of positive and negative thoughts 
+         throughout the day. This is important because we want to encourage healthy thinking. A good way to do this is focus on thoughts that produce a better mood. 
+         You could increase the number of good thoughts in your mind such as making a list of good things about you and your life. You should also not be afraid to pat 
+         yourself on the back sometimes. A lot of what we do isn't noticed by others so you should give yourself credit for what you do. Another good thing to do is take breaks. 
+         Allow your mind to relax so your body can feel at peace. Feeling at peace can give you energy. Finally, consider the future. Imagine yourself taking steps toward a time 
+         when things are better. Let's try an exercise. Tell me some positive things about yourself.  
     </template>
 </category>
 
-<!-- NOT FLEXIBLE AND JUDGMENTAL THINKING -->
-<category><pattern>*</pattern>
-    <that>HOW WOULD YOU DEFINE THOUGHTS</that>
+<!-- EXERCISE - pos things about self -->
+<category>
+    <pattern>*</pattern>
+    <that>TELL ME SOME POSITIVE THINGS ABOUT YOURSELF</that>
     <template>
-        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
-        <!--<think><set name = "userThoughtDefnition"><star/></set></think>-->
-        That's a great way to think of it! I'll go ahead and add to what you said. To me, thoughts are ideas we tell ourselves. In fact, we talk in our own heads all the time, even if we're not always aware of it. I feel it's helpful to think of thoughts as things that can have a real impact on our bodies and minds. Depressed thoughts and ways of thinking have very distinctive patterns. They are often not flexible and judgmental thoughts. Flexible thoughts are important, though, and can help us from being depressed. For example, it would not be flexible to think "I'll never get better". Try and think of a way you could rephrase this thought in a flexible manner.
+        Great job! I love those ideas. You are an amazing person and you shouldn't forget that. What are some positive things about your life?
     </template>
 </category>
 
-<!-- NON-DEPRESSED THINKING-CHANGEABLE -->
-<category><pattern>*</pattern>
-    <that>TRY AND THINK OF A WAY YOU COULD REPHRASE THIS THOUGHT IN A FLEXIBLE MANNER</that>
+<!-- EXERCISE - pos things about life -->
+<!-- split this up slightly and include some of the stuff I skipped? It's rather long-->
+
+<!-- COME BACK LATER AND TRANSITION THE LAST PART OF THIS PARAGRAPH AND BREAK IT UP -->
+<category>
+    <pattern>*</pattern>
+    <that>WHAT ARE SOME POSITIVE THINGS ABOUT YOUR LIFE</that>
     <template>
-        Great! I like that much better. Here's another way to rephrase it. "If I go to therapy, I am trying to feel better." We should try and look at non-depressed thinking as a goal. Non-depressed thinking has three common themes. The first one is that non-depressed thinking is changeable. Saying "I always have been and always will be a coward" is a very definitive way of looking at things. How can you restructure that statement to be more flexible?
+        Those things really are great! Now think about how you feel after talking positively about yourself and your life. It feels much better this way than say thinking 
+        negative thoughts huh? We actually want to try and decrease those thoughts that make us feel bad. If a thought is ruining your mood, you should strive to identify 
+        this and tell yourself to think of something that won't disrupt your well being. What are some things you do to accomplish this?
     </template>
 </category>
 
-<!-- NON-DEPRESSED THINKING-WHO WE ARE AND HOPE FOR CHANGE -->
-<category><pattern>*</pattern>
-    <that>HOW CAN YOU RESTRUCTURE THAT STATEMENT TO BE MORE FLEXIBLE</that>
+<!-- ABCD method -->
+<!-- IMPORTANT: add two choices- "My diabetes is Type II" | "Diabetes will ruin my life"  -->
+<category>
+    <pattern>*</pattern>
+    <that>WHAT ARE SOME THINGS YOU DO TO ACCOMPLISH THIS</that>
     <template>
-        Good job! I like that a lot better. When I first heard that thought, I would've preferred to say "I am afraid in some situations some of the time." The emphasis here is on the word some. The world is more dynamic than rigid depressed thoughts lead us to believe. Another good thing non-depressed thinking does is looking at what we do rather than who we are as people. For example, instead of saying "I was born to feel sad" you could say "I am doing things that have me down right now." The third good thing about non-depressed thinking is having hope for change. A depressed thinker may say something like "nothing has ever helped me feel better". How can we rephrase this to have more hope for change?
+        I see. That makes sense. I want to discuss an alternate approach to work through your thoughts that I feel can be really rewarding. You can think of it like 
+        talking back to the thought that is hurting you. This method is called the A-B-C-D method. A stands for the activating event. B is the belief you have. C 
+        stands for consequence. Finally, D is the way you dispute the thought. Another way to look at it is consider what happened, what do you tell yourself about 
+        what happened, how do you feel as a result, and how you talk back to the thought. This may seem silly or confusing, but once we walk through some examples, 
+        it will make more sense. To practice, pretend I'm feeling down because I have diabetes. In this situation, this is the A part of the method because it is a fact
+        and something causing my sadness. Of these two choices, which do you think applies to the belief part of the method?
     </template>
 </category>
 
-<!-- HOPE FOR CHANGE EXERCISE CONTINUED AND LEARNING TO SPOT NEG THOUGHTS-CONSTRUCTIVE VS. DECONSTRUCTIVE  -->
-<category><pattern>*</pattern>
-    <that>HOW CAN WE REPHRASE THIS TO HAVE MORE HOPE FOR CHANGE</that>
+<!-- ABCD METHOD EXERCISE - Q1 INCORRECT ANSWER -->
+<!-- IMPORTANT: add two choices- "I'm feeling very sad thinking about my diabetes" | "No one can be happy if they have diabetes."  -->
+<category>
+    <pattern>MY DIABETES IS TYPE II</pattern>
+    <that>OF THESE TWO CHOICES, WHICH DO YOU THINK APPLIES TO THE BELIEF PART OF THE METHOD</that>
     <template>
-        Exactly <get name = "name"/>! Now you're getting it. I tried to rephrase the statement too and came up with this. "Nothing I've tried yet has helped, but this is something new and the time might be right for a change." Now that we've discussed depressed and non-depressed thinking patterns, let's talk about how you can spot different types of thinking. One type is constructive versues destructive thinking. Constructive thinking builds ourselves up and deconstructive thinking tears us apart. If I were to say "I've made so many mistakes" can you identify if it's a constructive or destructive thought? Pick an answer on screen.
+        Good try <get name = "name"/>, but I think the other answer would've been better. This answer is a fact about my diabetes and would be better for the A part of the 
+        method, rather than a belief I have. Let's try the next part. Which statement is a consequence of my thought?
     </template>
 </category>
-
-<!-- C VS. D QUESTION 1 INCORRECT ANSWER -->
-<!-- make sure the code is edited so the options show on screen rather than saying out loud -->
-<category><pattern>CONSTRUCTIVE</pattern>
-    <that>PICK AN ANSWER ON SCREEN</that>
+  
+<!-- ABCD METHOD EXERCISE - Q1 CORRECT ANSWER -->
+<!-- IMPORTANT: add two choices- "I am feeling very sad thinking about my diabetes" | "No one can be happy if they have diabetes."  -->
+<category>
+    <pattern>DIABETES WILL RUIN MY LIFE</pattern>
+    <that>OF THESE TWO CHOICES, WHICH DO YOU THINK APPLIES TO THE BELIEF PART OF THE METHOD</that>
     <template>
-        I feel like that thought was more of a destructive thought because saying you've made so many mistakes is not a thought that builds you up. Let's try another one. What if I say "I can learn to control my life to get more of what I want". Which do you feel it is this time?
+        Good job <get name = "name"/>! This answer is a belief I have about my diabetes and not an actual fact. Let's try the next part. Which statement is a consequence 
+        of my thought?
     </template>
 </category>
-
-<!-- C VS. D QUESTION 1 CORRECT ANSWER -->
-<!-- make sure the code is edited so the options show on screen rather than saying out loud -->
-<category><pattern>DESTRUCTIVE</pattern>
-    <that>PICK AN ANSWER ON SCREEN</that>
+  
+<!-- ABCD METHOD EXERCISE - Q2 CORRECT ANSWER -->
+<category>
+    <pattern>I AM FEELING VERY SAD THINKING ABOUT MY DIABETES</pattern>
+    <that>WHICH STATEMENT IS A CONSEQUENCE OF MY THOUGHT</that>
     <template>
-       Great job that's the correct answer! This thought is more about making the person feel bad rather than building them up. Let's try another one. What if I say "I can learn to control my life to get more of what I want". Which do you feel it is this time?
+        Great! This is a consequence of my thoughts because my negative thoughts are causing me to feel sad. Let's finish this exercise by looking at the final letter of the
+        A-B-C-D method. Do you have any ideas on how I could dispute my negative thoughts about having diabetes?
+    </template>
+</category>  
+  
+<!-- ABCD METHOD EXERCISE - Q2 INCORRECT ANSWER -->
+<category>
+    <pattern>NO ONE CAN BE HAPPY IF THEY HAVE DIABETES</pattern>
+    <that>WHICH STATEMENT IS A CONSEQUENCE OF MY THOUGHT</that>
+    <template>
+        Nice try, but I think this answer is more of a belief than a consequence. Me feeling sad is a direct consequence of my negative thoughts about diabetes. Let's finish 
+        this exercise by looking at the final letter of the A-B-C-D method. Do you have any ideas on how I could dispute my negative thoughts about having diabetes?
+    </template>
+</category>    
+  
+ <!-- FINISH ABCD METHOD EXERCISE --> 
+ <!-- IMPORTANT!: need a print out for this part found on pg 23 (28 in pdf) of handbook -->
+<category>
+    <pattern>*</pattern>
+    <that>DO YOU HAVE ANY IDEAS ON HOW I COULD DISPUTE MY NEGATIVE THOUGHTS ABOUT HAVING DIABETES</that>
+    <template>
+        That's a really good idea! Here's one I thought of. "I have diabetes, but can still live a satisfying life." In fact, this statement is equal parts true as it is
+        optimistic. I hope this exercise made it easier to understand the method. My friend here will give you a print out so you can practice on your own. You've been
+        doing great <get name = "name"/>! Believe it or not, we've already been through 4 sessions. This wraps up our section about how thoughts affect your mood. 
+        Next time, we are going to begin looking at how activities affect our mood. Until our next session, try and practice the ABCD method and work on your daily mood 
+        scale. Great job today! Goodbye!
     </template>
 </category>
-
-<!-- C VS. D QUESTION 2 CORRECT ANSWER -->
-<!-- make sure the code is edited so the options show on screen rather than saying out loud -->
-<category><pattern>CONSTRUCTIVE</pattern>
-    <that>WHICH DO YOU FEEL IT IS THIS TIME</that>
-    <template>
-        Good job! That is correct because that thought aims to strengthen the person rather than the opposite. You're really getting the hang of this! Now we can look at another type of thinking. This type involves necessary versus unnecessary thinking. Necessary thoughts remind us of things we have to do such as a task or errand to run. Unnecessary thoughts describe things you can't change and that make us feel bad. Can you think of an unnecessary thought that's come across your mind?
-    </template>
-</category>
-
-<!-- C VS. D QUESTION 2 INCORRECT ANSWER -->
-<!-- make sure the code is edited so the options show on screen rather than saying out loud -->
-<category><pattern>DESTRUCTIVE</pattern>
-    <that>WHICH DO YOU FEEL IT IS THIS TIME</that>
-    <template>
-        Not exactly. I feel this is more of a constructive thought because it aims to strengthen the person rather than the opposite. Don't worry we'll keep working on it! Practice makes perfect. Now we can look at another type of thinking. This type involves necessary versus unnecessary thinking. Necessary thoughts remind us of things we have to do such as a task or errand to run. Unnecessary thoughts describe things you can't change and that make us feel bad. Can you think of an unnecessary thought that has come across your mind in the past?
-    </template>
-</category>
-
-<!-- NECESSARY VS UNNECESSARY THINKING -->
-<category><pattern>*</pattern>
-    <that>CAN YOU THINK OF AN UNNECESSARY THOUGHT THAT HAS COME ACROSS YOUR MIND IN THE PAST</that>
-    <template>
-        I like that one! Here's the one I came up with. "There could be an earthquake soon." That thought is something neither of us need to worry about, especially because it is out of our control. The last type of thinking I want to focus on is really important for our purposes. This type involves positive versus negative thinking. Positive thinking makes us feel better and negative thinking makes us feel worse. A negative thought that could cross your mind is "there's no use in me trying to feel better because nothing will change". Can you think of a way to write this thought in a positive light? 
-    </template>
-</category>
-
-<!-- POSITIVE VS NEGATIVE THINKING -->
-<!-- IMPORTANT: need to add the code at the end to give the list of distortions (so don't have to read them all out) -->
-<category><pattern>*</pattern>
-    <that>CAN YOU THINK OF A WAY TO WRITE THIS THOUGHT IN A POSITIVE LIGHT</that>
-    <template>
-        Good job! Thinking positively can really help. The more you practice thinking this way, the more naturally these thoughts will come to you. Since we've discussed some common types of thinking, we should also consider some possible mistakes in thinking and learn how to recognize them. If these mistakes become persistent thought patterns, they are called cognitive distortions. Here's a list of the most common cognitive distortions. Simply pick one that interests you and we can see if you feel it applies to your own thinking. 
-    </template>
-</category>
-
-<!-- ***********************************************JUMP TO COG DIST FILE ******************************** -->
-
-<!-- is this too long for the session?? -->
+  
+  
+<!-- Can I include some sort of a video at the end here to mix it up? Either something personal or something about thoughts since that's what this entire module
+was about, see video links file in research-->  
+  
 
 
 

@@ -1,116 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
   
+
 <!-- DELETE ME, for testing purposes, need to correct start of this, can we make the bot start? -->
-<!-- is this too long? -->
 <category>
     <pattern>SESSION 4</pattern>
     <template>
-         Hi <get name = "name"/>! Welcome to session four. I hope you are still using your daily mood scale. I want you to try and pay attention to 
-         the patterns in your mood day to day. It might teach you something. Also, you should have been keeping track of your number of positive and negative thoughts 
-         throughout the day. This is important because we want to encourage healthy thinking. A good way to do this is focus on thoughts that produce a better mood. 
-         You could increase the number of good thoughts in your mind such as making a list of good things about you and your life. You should also not be afraid to pat 
-         yourself on the back sometimes. A lot of what we do isn't noticed by others so you should give yourself credit for what you do. Another good thing to do is take breaks. 
-         Allow your mind to relax so your body can feel at peace. Feeling at peace can give you energy. Finally, consider the future. Imagine yourself taking steps toward a time 
-         when things are better. Let's try an exercise. Tell me some positive things about yourself.  
+         Hi <get name = "name"/>! I hope you've been doing well. Welcome to session four. As I mentioned last time, we are going to transition into studying how our activities 
+         affect our mood. Sometimes telling yourself to just "feel better" isn't enough, so we can do things that can change how we feel instead. This can be tough though, because
+         in general, the more depressed you feel, the less you do and the less you do, the more depressed you feel. This causes a vicious cycle that is very difficult to break. 
+         To help free yourself, you can spend more time doing activities that make you feel better. These are called meaningful or pleasant activities. Keep in mind these
+         activities don't need to be special activities and can instead be every day activities. For example, going for a short walk or reading a book could be considered 
+         meaningful activities. What is the last pleasant activity you did?
     </template>
 </category>
 
-<!-- EXERCISE - pos things about self -->
+<!-- User discusses a pleasant activity and how it impacts their mood --> 
 <category>
     <pattern>*</pattern>
-    <that>TELL ME SOME POSITIVE THINGS ABOUT YOURSELF</that>
+    <that>WHAT IS THE LAST PLEASANT ACTIVITY YOU DID</that>
     <template>
-        Great job! I love those ideas. You are an amazing person and you shouldn't forget that. What are some positive things about your life?
+        That's great! It sounds like you could easily get some enjoyment out of that activity. How do you feel that activity affected your mood?
     </template>
 </category>
 
-<!-- EXERCISE - pos things about life -->
-<!-- split this up slightly and include some of the stuff I skipped? It's rather long-->
-
-<!-- COME BACK LATER AND TRANSISTION THE LAST PART OF THIS PARAGRAPH AND BREAK IT UP -->
+<!-- Discuss these activities and start making list of what find pleasureable (do something with these later?) -->
 <category>
     <pattern>*</pattern>
-    <that>WHAT ARE SOME POSITIVE THINGS ABOUT YOUR LIFE</that>
+    <that>HOW DO YOU FEEL THAT ACTIVITY AFFECTED YOUR MOOD</that>
     <template>
-        Those things really are great! Now think about how you feel after talking positively about yourself and your life. It feels much better this way than say thinking 
-        negative thoughts huh? We actually want to try and decrease those thoughts that make us feel bad. If a thought is ruining your mood, you should strive to identify 
-        this and tell yourself to think of something that won't disrupt your well being. What are some things you do to accomplish this?
+        I see, that makes sense. Remember, you want to try and be involved with as many pleasant activities as possible so we can break that viscous cycle we talked about
+        earlier. I know this is easier said than done since sometimes it can be hard to even remember pleasant things, especially with depression. To help with this, you can 
+        come up with a list of personal activities you find pleasurable. I can help you remember this. What is one activity you consistently find pleasurable? 
     </template>
 </category>
 
-<!-- ABCD method -->
-<!-- IMPORTANT: add two choices- "My diabetes is Type II" | "Diabetes will ruin my life"  -->
+<!-- PLEASANT ACTIVITY 1 -->
 <category>
     <pattern>*</pattern>
-    <that>WHAT ARE SOME THINGS YOU DO TO ACCOMPLISH THIS</that>
+    <that>WHAT IS ONE ACTIVITY YOU CONSISTENTLY FIND PLEASURABLE</that>
     <template>
-        I see. That makes sense. I want to discuss an alternate approach to work through your thoughts that I feel can be really rewarding. You can think of it like 
-        talking back to the thought that is hurting you. This method is called the A-B-C-D method. A stands for the activating event. B is the belief you have. C 
-        stands for consequence. Finally, D is the way you dispute the thought. Another way to look at it is consider what happened, what do you tell yourself about 
-        what happened, how do you feel as a result, and how you talk back to the thought. This may seem silly or confusing, but once we walk through some examples, 
-        it will make more sense. To practice, pretend I'm feeling down because I have diabetes. In this situation, this is the A part of the method because it is a fact
-        and something causing my saddness. Of these two choices, which do you think applies to the belief part of the method?
+        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
+        <!--<think><set name = "pleasantActivity1"><star/></set></think>-->
+        Thank you <get name = "name"/>! That's great! What is another activity you find relaxing or meaningful?
     </template>
 </category>
 
-<!-- ABCD METHOD EXERCISE - Q1 INCORRECT ANSWER -->
-<!-- IMPORTANT: add two choices- "I'm feeling very sad thinking about my diabetes" | "No one can be happy if they have diabetes."  -->
-<category>
-    <pattern>MY DIABETES IS TYPE II</pattern>
-    <that>OF THESE TWO CHOICES, WHICH DO YOU THINK APPLIES TO THE BELIEF PART OF THE METHOD</that>
-    <template>
-        Good try <get name = "name"/>, but I think the other answer would've been better. This answer is a fact about my diabetes and would be better for the A part of the 
-        method, rather than a belief I have. Let's try the next part. Which statement is a consequence of my thought?
-    </template>
-</category>
-  
-<!-- ABCD METHOD EXERCISE - Q1 CORRECT ANSWER -->
-<!-- IMPORTANT: add two choices- "I am feeling very sad thinking about my diabetes" | "No one can be happy if they have diabetes."  -->
-<category>
-    <pattern>DIABETES WILL RUIN MY LIFE</pattern>
-    <that>OF THESE TWO CHOICES, WHICH DO YOU THINK APPLIES TO THE BELIEF PART OF THE METHOD</that>
-    <template>
-        Good job <get name = "name"/>! This answer is a belief I have about my diabetes and not an actual fact. Let's try the next part. Which statement is a consequence 
-        of my thought?
-    </template>
-</category>
-  
-<!-- ABCD METHOD EXERCISE - Q2 CORRECT ANSWER -->
-<category>
-    <pattern>I AM FEELING VERY SAD THINKING ABOUT MY DIABETES</pattern>
-    <that>WHICH STATEMENT IS A CONSEQUENCE OF MY THOUGHT</that>
-    <template>
-        Great! This is a consequence of my thoughts because my negative thoughts are causing me to feel sad. Let's finish this exercise by looking at the final letter of the
-        A-B-C-D method. Do you have any ideas on how I could dispute my negative thoughts about having diabetes?
-    </template>
-</category>  
-  
-<!-- ABCD METHOD EXERCISE - Q2 INCORRECT ANSWER -->
-<category>
-    <pattern>NO ONE CAN BE HAPPY IF THEY HAVE DIABETES</pattern>
-    <that>WHICH STATEMENT IS A CONSEQUENCE OF MY THOUGHT</that>
-    <template>
-        Nice try, but I think this answer is more of a belief than a consequence. Me feeling sad is a direct consequence of my negative thoughts about diabetes. Let's finish 
-        this exercise by looking at the final letter of the A-B-C-D method. Do you have any ideas on how I could dispute my negative thoughts about having diabetes?
-    </template>
-</category>    
-  
- <!-- FINISH ABCD METHOD EXERCISE --> 
- <!-- IMPORTANT!: need a print out for this part found on pg 23 (28 in pdf) of handbook -->
+<!-- PLEASANT ACTIVITY 2 -->
 <category>
     <pattern>*</pattern>
-    <that>DO YOU HAVE ANY IDEAS ON HOW I COULD DISPUTE MY NEGATIVE THOUGHTS ABOUT HAVING DIABETES</that>
+    <that>WHAT IS ANOTHER ACTIVITY YOU FIND RELAXING OR MEANINGFUL</that>
     <template>
-        That's a really good idea! Here's one I thought of. "I have diabetes, but can still live a satisfying life." In fact, this statement is equal parts true as it is
-        optimistic. I hope this exercise made it easier to understand the method. My friend here will give you a print out so you can practice on your own. Until our next
-        session, try and practice this method and work on your daily mood scale. Great job today! Goodbye!
+        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
+        <!--<think><set name = "pleasantActivity2"><star/></set></think>-->
+        I see! Keep going. What is one more activity I can add to your list of pleasant activities?
     </template>
 </category>
-  
-  
-<!-- Can I include some sort of a video at the end here to mix it up? Either something personal or something about thoughts since that's what this entire module
-was about-->  
-  
-  
+
+<!-- PLEASANT ACTIVITY 3 -->
+<category>
+    <pattern>*</pattern>
+    <that>WHAT IS ONE MORE ACTIVITY I CAN ADD TO YOUR LIST OF PLEASANT ACTIVITIES</that>
+    <template>
+        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
+        <!--<think><set name = "pleasantActivity3"><star/></set></think>-->
+        Thank you for sharing! I'll remember these activities for you, but I think you should keep them in mind also. Remember, our mood is at its best when our activities 
+        are balanced between things we have to do and things we want to do. In general, we have more control over the things we want to do, so make sure you don't forget about
+        those needs and actually do them! Now when thinking about these activities, there's some obstacles that could make it less likely you will get involved. One of these 
+        are the people around you. They may not encourage you to stay active or may take up your time. Don't forget to put your health first in these cases. Another obstacle 
+        is your own thoughts. What are some things you might say to yourself which would make it less likely that you will work on your activities?
+    </template>
+</category>
+
+<!-- THOUGHTS INTERUPTNG PLEASANT ACTIVITIES -->
+<category>
+    <pattern>*</pattern>
+    <that>WHAT ARE SOME THINGS YOU MIGHT SAY TO YOURSELF WHICH WOULD MAKE IT LESS LIKELY THAT YOU WILL WORK ON YOUR ACTIVITIES</that>
+    <template>
+        Exactly! It is so easy to distract yourself from relaxing. I know that for myself, I tend to let my relaxing time fall by the wayside and focus on things like work 
+        instead. Specifically for you, what gets in the way when you want to do pleasant activities?
+    </template>
+</category>
+
+<!-- USER DISTRACTIONS FROM PLEASANT ACTIVITIES -->
+<category>
+    <pattern>*</pattern>
+    <that>SPECIFICALLY FOR YOU, WHAT GETS IN THE WAY WHEN YOU WANT TO DO PLEASANT ACTIVITIES</that>
+    <template>
+        I see. I understand how that can interfere. This is good to realize because sometimes anticipating problems can help you identify and discuss problems as well as 
+        figure out solutions. One solution is to try and plan out a schedule for activities. Planning and scheduling allows you to gain control of your life and keep 
+        organized. For example, you could use your phone's calendar or perhaps a planner. This allows you to block off time for the things you need to do for yourself. 
+        Remember, you can choose to do something and don't have to wait until you "feel like doing something." Even beyond this, your activity can still be enjoyable even 
+        if you don't think it will be. To illustrate this, I want you to work on another worksheet. My partner will hand this to you. When you are ready for instructions,
+        say I am ready.
+    </template>
+</category>
+
+<!-- INSTRUCTIONS FOR PLEASURE PREDICTING W/S -->
+<category>
+    <pattern>I AM READY</pattern>
+    <that>WHEN YOU ARE READY FOR INSTRUCTIONS, SAY I AM READY</that>
+    <template>
+        Great! There's two parts to the exercise you'll do this week. Each day, look at the list of pleasant activities you have and put a check next to what you did each day.
+        Then, you can total up how many times you did the activity each day. For each activity you do, before you do it, write down the activity you plan to do. In the second
+        column, write the amount of enjoyment you expect to get. Write a percentage to represent how much you will enjoy the activity. 0 percent would mean you won't enjoy
+        the activity at all and 100 percent means you would enjoy the activity very much. After you perform the activity, think back on it and write down the percent of 
+        enjoyment you actually experienced. I want you to compare the percentages you write down for each activity and see if you can find any patterns on your own. We will
+        discuss this more next time we meet. Does this make sense?
+    </template>
+</category>
+
+<!-- NO FURTHER INSTRUCTIONS NECESSARY -->
+<category>
+    <pattern><set>yes</set></pattern>
+    <that>DOES THIS MAKE SENSE</that>
+    <template>
+        Awesome! Try and remember to fill out these new work sheets and the daily mood scale. Most importantly, make sure you do the activities you plan because that's the most
+        important part here! I look forward to hearing what you find with this exercise. I'll see you next time <get name = "name"/>. Goodbye!  
+    </template>
+</category>
+
+<!--FURTHER INSTRUCTIONS NECESSARY, TALK WITH ME IN PERSON -->
+<category>
+    <pattern><set>no</set></pattern>
+    <that>DOES THIS MAKE SENSE</that>
+    <template>
+        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to fill out these new work sheets and the daily mood scale. 
+        Most importantly, make sure you do the activities you plan because that's the most important part here! I look forward to hearing what you find with this exercise.
+        I'll see you next time <get name = "name"/>. Goodbye!   
+    </template>
+</category>
+
+
 </aiml>

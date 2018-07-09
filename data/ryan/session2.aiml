@@ -1,98 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-    
 
  <!-- DELETE ME, for testing purposes, need to correct start of this -->
+ <!-- can we make the bot start with this somehow?? -->
 <category>
-    <pattern>CAPISCI</pattern>
+    <pattern>SESSION 2</pattern>
     <template>
-        Yes! Now let us begin.</template>
+         Hello <get name = "name"/>! Welcome back! Today we are going to start our second session together. Before we begin, I want to know how using the daily mood scale went.
+         Did you have any problems filling it out? </template>
 </category>
 
-<!-- should I put in an option for users to chose to not answer? -->
-<!-- also this session is sort of short, can I add more to it somewhere? TEST DURATION -->
-
-<!-- can we make the bot start with this somehow?? -->
-<category><pattern><set>yes</set></pattern>
-   <that>NOW LET US BEGIN</that>
+<!-- PROBLEMS WITH SCALE -->
+<category>
+    <pattern><set>yes</set></pattern>
+    <that>DID YOU HAVE ANY PROBLEMS FILLING IT OUT</that>
     <template>
-        Hi <get name = "name"/>! Welcome to session 2! As I mentioned last time, my goal is to help lessen your feelings of depression and help you feel more control in your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. Do you know some of the symptoms of clinical depression? </template>
+        I see. Let's address those problems before we start. My human companion can help you with this. Once you both are ready to continue, say ready. </template>
 </category>
 
-<!-- USER DOESN'T KNOW SYMPTOMS --> 
-<!-- display these on screen? -->
-<category><pattern><set>no</set></pattern>
-    <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION</that>
-    <template> 
-        I'm happy to tell you some of the most common ones! The symptoms of clinical depression are feeling depressed or down nearly every day; not being interested in or unable to enjoy things you used to enjoy; changes in appetite and weight; big changes in how much sleep you get; being fidgety and restless or slowed down; feeling tired all the time; feeling worthless or guilty; having trouble thinking, concentrating, or making decisions; and thinking a lot about death, wishing to be dead, or self harm. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when you feel depressed? </template>
+<!-- READY TO CONTINUE -->
+<category>
+    <pattern>READY</pattern>
+    <that>ONCE YOU BOTH ARE READY TO CONTINUE, SAY READY</that>
+    <template>
+        Great! Did you find anything surprising when filling out the scale? </template>
 </category>
 
-<!-- USER KNOWS SYMPTOMS (CONTINUE WITH DIALOGUE) --> 
-<!-- START OF INTRODUCTORY QUESTIONS -->
-<category><pattern><set>yes</set></pattern>
-    <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION</that>
-    <template> 
-        Good I'm glad you're familiar with it. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when you feel depressed? </template>
+<!-- NO PROBLEMS WITH SCALE -->
+<category>
+    <pattern><set>no</set></pattern>
+    <that>DID YOU HAVE ANY PROBLEMS FILLING IT OUT</that>
+    <template>
+        Great! What did you find surprising when filling out the scale? </template>
 </category>
 
-<category><pattern>*</pattern>
-    <that>TO START, WHAT KINDS OF THOUGHTS GO THROUGH YOUR MIND WHEN YOU FEEL DEPRESSED</that>
+<!-- CONTINUE WITH CONVERSATION-WHAT ARE THOUGHTS? -->
+<category>
+    <pattern>*</pattern>
+    <that>DID YOU FIND SURPRISING WHEN FILLING OUT THE SCALE</that>
+    <template>
+        That's an interesting observation! Thank you for your work with the scale. I hope you can use it as a great tool to reflect on your thoughts. Keep it up over the 
+        coming weeks! Now to continue with our session. Remember from last time, thoughts, activities, and people effect your mood. We are going to start by focusing on what
+        role thoughts play in your mood. Specific types of thinking can make a huge difference. Some make it more likely you will be depressed and others make it less likely 
+        you will become depressed. How would you define thoughts?
+    </template>
+</category>
+
+<!-- NOT FLEXIBLE AND JUDGMENTAL THINKING -->
+<category>
+    <pattern>*</pattern>
+    <that>HOW WOULD YOU DEFINE THOUGHTS</that>
     <template>
         <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
-        <!--<think><set name = "depressedThoughts"><star/></set></think>-->
-        I see. I can understand how those thoughts can easily become overwhelming. Let's consider your actions too. What do you do when you are depressed?
+        <!--<think><set name = "userThoughtDefnition"><star/></set></think>-->
+        That's a great way to think of it! I'll go ahead and add to what you said. To me, thoughts are ideas we tell ourselves. In fact, we talk in our own heads all the time,
+        even if we're not always aware of it. I feel it's helpful to think of thoughts as things that can have a real impact on our bodies and minds. Depressed thoughts and 
+        ways of thinking have very distinctive patterns. They are often not flexible and judgmental thoughts. Flexible thoughts are important, though, and can help us from 
+        being depressed. For example, it would not be flexible to think "I'll never get better". Try and think of a way you could rephrase this thought in a flexible manner.
     </template>
 </category>
 
-<category><pattern>*</pattern>
-    <that>WHAT DO YOU DO WHEN YOU ARE DEPRESSED</that>
+<!-- NON-DEPRESSED THINKING-CHANGEABLE -->
+<category>
+    <pattern>*</pattern>
+    <that>TRY AND THINK OF A WAY YOU COULD REPHRASE THIS THOUGHT IN A FLEXIBLE MANNER</that>
     <template>
-        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
-        <!--<think><set name = "depressedActions"><star/></set></think>-->
-        Thank you <get name = "name"/>! You're doing great.  It's important for us to be aware of our actions so we can analyze them further. Now what about those around you? How do you feel you get along with other people when you are depressed?
+        Great! I like that much better. Here's another way to rephrase it. "If I go to therapy, I am trying to feel better." We should try and look at non-depressed thinking
+        as a goal. Non-depressed thinking has three common themes. The first one is that non-depressed thinking is changeable. Saying "I always have been and always will be 
+        a coward" is a very definitive way of looking at things. How can you restructure that statement to be more flexible?
     </template>
 </category>
 
-<category><pattern>*</pattern>
-    <that>HOW DO YOU FEEL YOU GET ALONG WITH OTHER PEOPLE WHEN YOU ARE DEPRESSED</that>
+<!-- NON-DEPRESSED THINKING-WHO WE ARE AND HOPE FOR CHANGE -->
+<category>
+    <pattern>*</pattern>
+    <that>HOW CAN YOU RESTRUCTURE THAT STATEMENT TO BE MORE FLEXIBLE</that>
     <template>
-        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
-        <!--<think><set name = "othersInteractions"><star/></set></think>-->
-        That's an interesting observation! I have just one more question for you. This may be a tough one, so try and answer as best as you can. What do you think is the cause of your depression? 
+        Good job! I like that a lot better. When I first heard that thought, I would've preferred to say "I am afraid in some situations some of the time." The emphasis here 
+        is on the word some. The world is more dynamic than rigid depressed thoughts lead us to believe. Another good thing non-depressed thinking does is looking at what
+        we do rather than who we are as people. For example, instead of saying "I was born to feel sad" you could say "I am doing things that have me down right now." 
+        The third good thing about non-depressed thinking is having hope for change. A depressed thinker may say something like "nothing has ever helped me feel better".
+        How can we rephrase this to have more hope for change?
     </template>
 </category>
 
-<!-- INTRO TO DAILY MOOD SCALE -->
-<category><pattern>*</pattern>
-    <that>WHAT DO YOU THINK IS THE CAUSE OF YOUR DEPRESSION</that>
+<!-- HOPE FOR CHANGE EXERCISE CONTINUED AND LEARNING TO SPOT NEG THOUGHTS-CONSTRUCTIVE VS. DECONSTRUCTIVE  -->
+<category>
+    <pattern>*</pattern>
+    <that>HOW CAN WE REPHRASE THIS TO HAVE MORE HOPE FOR CHANGE</that>
     <template>
-        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
-        <!--<think><set name = "depressionCauses"><star/></set></think>-->
-        Thank you for answering that <get name = "name"/>. I know trying to put something as complex as depression into words isn't easy. These questions may have seemed surprising, but I promise there is a reason for them. The things we tell ourselves, or our thoughts, can make it more or less likely you will become depressed. In fact, thoughts can have a profound effect on your mood, actions, and even your body. Instead of thinking of this as me lecturing you, I want you to think of our sessions as a way to learn specific methods to change your thoughts and actions so that your mood will improve. Since we will be focusing on your thoughts and moods throughout our time together, I want you to try and keep track of your moods on a daily basis. My human companion will give you a sheet to help with this. When you have it, say ready and I will give you some instructions. 
+        Exactly <get name = "name"/>! Now you're getting it. I tried to rephrase the statement too and came up with this. "Nothing I've tried yet has helped, but this is 
+        something new and the time might be right for a change." Now that we've discussed depressed and non-depressed thinking patterns, let's talk about how you can spot
+        different types of thinking. One type is constructive versus destructive thinking. Constructive thinking builds ourselves up and deconstructive thinking tears us apart. 
+        If I were to say "I've made so many mistakes" can you identify if it's a constructive or destructive thought? Use the tablet you've been given to pick an answer on the
+        screen that you feel is correct.
     </template>
 </category>
 
-<!-- INSTRUCTIONS FOR DAILY MOOD SCALE -->
-<category><pattern>READY</pattern>
-    <that>WHEN YOU HAVE IT, SAY READY AND I WILL GIVE YOU SOME INSTRUCTIONS</that>
+<!-- C VS. D QUESTION 1 INCORRECT ANSWER -->
+<!-- make sure the code is edited so the options show on screen rather than saying out loud -->
+<category>
+    <pattern>CONSTRUCTIVE</pattern>
+    <that>PICK AN ANSWER ON SCREEN</that>
     <template>
-        Great! As I mentioned earlier, to make this a valuable exercise, this scale should be filled out each and every day. Find a time before you go to bed to take out the scale and think about what your mood was like for that day. You can then circle a number for that day from 9 being the best mood you can imagine to 1 being the worst mood you can image. Generally average moods will be around 5 and the extremes will not be used as often. Additionally, the bottom of the scale has a place for you to jot down the number of positive and negative thoughts you have each day. This tally will help you see how the thought exercises we try each week impact your depression. Does this make sense? 
+        I feel like that thought was more of a destructive thought because saying you've made so many mistakes is not a thought that builds you up. Let's try another one. 
+        What if I say "I can learn to control my life to get more of what I want". Which do you feel it is this time?
     </template>
 </category>
 
-<!-- NO FURTHER INSTRUCTIONS NECESSARY -->
-<category><pattern><set>yes</set></pattern>
-   <that>DOES THIS MAKE SENSE</that>
+<!-- C VS. D QUESTION 1 CORRECT ANSWER -->
+<!-- make sure the code is edited so the options show on screen rather than saying out loud -->
+<category>
+    <pattern>DESTRUCTIVE</pattern>
+    <that>PICK AN ANSWER ON SCREEN</that>
     <template>
-        Awesome! Try and remember to use your mood scale each day. I know this session was a little short, but we will talk more in the coming sessions. I'll see you next time <get name = "name"/>. Goodbye!  </template>
+       Great job that's the correct answer! This thought is more about making the person feel bad rather than building them up. Let's try another one. What if I say 
+       "I can learn to control my life to get more of what I want". Which do you feel it is this time?
+    </template>
 </category>
 
-<!--FURTHER INSTRUCTIONS NECESSARY, TALK WITH ME IN PERSON -->
-<category><pattern><set>no</set></pattern>
-   <that>DOES THIS MAKE SENSE</that>
+<!-- C VS. D QUESTION 2 CORRECT ANSWER -->
+<!-- make sure the code is edited so the options show on screen rather than saying out loud -->
+<category>
+    <pattern>CONSTRUCTIVE</pattern>
+    <that>WHICH DO YOU FEEL IT IS THIS TIME</that>
     <template>
-        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. I know this session was a little short, but we will talk more in the coming sessions. I'll see you next time <get name = "name"/>. Goodbye!  </template>
+        Good job! That is correct because that thought aims to strengthen the person rather than the opposite. You're really getting the hang of this! Now we can look at
+        another type of thinking. This type involves necessary versus unnecessary thinking. Necessary thoughts remind us of things we have to do such as a task or errand to run.
+        Unnecessary thoughts describe things you can't change and that make us feel bad. Can you think of an unnecessary thought that has come across your mind?
+    </template>
 </category>
 
+<!-- C VS. D QUESTION 2 INCORRECT ANSWER -->
+<!-- make sure the code is edited so the options show on screen rather than saying out loud -->
+<category>
+    <pattern>DESTRUCTIVE</pattern>
+    <that>WHICH DO YOU FEEL IT IS THIS TIME</that>
+    <template>
+        Not exactly. I feel this is more of a constructive thought because it aims to strengthen the person rather than the opposite. Don't worry we'll keep working on it!
+        Practice makes perfect. Now we can look at another type of thinking. This type involves necessary versus unnecessary thinking. Necessary thoughts remind us of things 
+        we have to do such as a task or errand to run. Unnecessary thoughts describe things you can't change and that make us feel bad. Can you think of an unnecessary thought
+        that has come across your mind in the past?
+    </template>
+</category>
+
+<!-- NECESSARY VS UNNECESSARY THINKING -->
+<category>
+    <pattern>*</pattern>
+    <that>CAN YOU THINK OF AN UNNECESSARY THOUGHT THAT HAS COME ACROSS YOUR MIND IN THE PAST</that>
+    <template>
+        I like that one! Here's the one I came up with. "There could be an earthquake soon." That thought is something neither of us need to worry about, especially because it 
+        is out of our control. The last type of thinking I want to focus on is really important for our purposes. This type involves positive versus negative thinking. Positive 
+        thinking makes us feel better and negative thinking makes us feel worse. A negative thought that could cross your mind is "there's no use in me trying to feel better
+        because nothing will change". Can you think of a way to write this thought in a positive light? 
+    </template>
+</category>
+
+<!-- POSITIVE VS NEGATIVE THINKING -->
+<!-- IMPORTANT: need to add the code at the end to give the list of distortions (so don't have to read them all out) -->
+<category>
+    <pattern>*</pattern>
+    <that>CAN YOU THINK OF A WAY TO WRITE THIS THOUGHT IN A POSITIVE LIGHT</that>
+    <template>
+        Good job! Thinking positively can really help. The more you practice thinking this way, the more naturally these thoughts will come to you. Since we've discussed some
+        common types of thinking, we should also consider some possible mistakes in thinking and learn how to recognize them. If these mistakes become persistent thought 
+        patterns, they are called cognitive distortions. Here's a list of the most common cognitive distortions. Simply pick one that interests you and we can see if you feel 
+        it applies to your own thinking. 
+    </template>
+</category>
+
+<!-- ***********************************************JUMP TO COG DIST FILE ******************************** -->
+
+<!-- is this too long for the session?? -->
 
 </aiml>

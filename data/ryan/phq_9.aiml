@@ -3,7 +3,7 @@
 
 <!-- PHQ-9 TEST -->
 <category><pattern><set>yes</set></pattern>
-    <that>IT WILL ONLY TAKE A FEW MOMENTS</that>
+    <!--<that>IT WILL ONLY TAKE A FEW MOMENTS</that>-->
     <template>Thanks! These questions will help me to track your state of mind so I can more fully understand you and help you get in an even better state of mind! Let's begin.
         <think>
             <!-- initialize variables -->
