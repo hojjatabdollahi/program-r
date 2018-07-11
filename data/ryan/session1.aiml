@@ -122,7 +122,7 @@
     <template>
         <!-- <think><set name = "userInfoImportant"><star/></set></think> -->
         That's great! Thank you for your answers. I look forward to learning more about you as time goes on. As I mentioned earlier, my goal is to help lessen your 
-        feelings of depression and help you feel more control in your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts
+        feelings of depression and help you feel more in control of your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts
         a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. Do you know some of the symptoms of clinical depression?
     </template>
 </category>
@@ -154,11 +154,12 @@
     </template>
 </category>
 
+  <!-- THESE VARIABLES BELOW CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
+
 <category>
     <pattern>*</pattern>
     <that>TO START, WHAT KINDS OF THOUGHTS GO THROUGH YOUR MIND WHEN YOU FEEL DEPRESSED</that>
     <template>
-        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
         <!--<think><set name = "depressedThoughts"><star/></set></think>-->
         I see. I can understand how those thoughts can easily become overwhelming. Let's consider your actions too. What do you do when you are depressed?
     </template>
@@ -168,7 +169,6 @@
     <pattern>*</pattern>
     <that>WHAT DO YOU DO WHEN YOU ARE DEPRESSED</that>
     <template>
-        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
         <!--<think><set name = "depressedActions"><star/></set></think>-->
         Thank you <get name = "name"/>! You're doing great.  It's important for us to be aware of our actions so we can analyze them further. Now what about those around 
         you? How do you feel you get along with other people when you are depressed?
@@ -179,7 +179,6 @@
     <pattern>*</pattern>
     <that>HOW DO YOU FEEL YOU GET ALONG WITH OTHER PEOPLE WHEN YOU ARE DEPRESSED</that>
     <template>
-        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
         <!--<think><set name = "othersInteractions"><star/></set></think>-->
         That's an interesting observation! I have just one more question for you. This may be a tough one, so try and answer as best as you can. What do you think is the 
         cause of your depression? 
@@ -191,7 +190,6 @@
     <pattern>*</pattern>
     <that>WHAT DO YOU THINK IS THE CAUSE OF YOUR DEPRESSION</that>
     <template>
-        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
         <!--<think><set name = "depressionCauses"><star/></set></think>-->
         Thank you for answering that <get name = "name"/>. I know trying to put something as complex as depression into words isn't easy. These questions may have seemed 
         surprising, but I promise there is a reason for them. The things we tell ourselves, or our thoughts, can make it more or less likely you will become depressed. 
