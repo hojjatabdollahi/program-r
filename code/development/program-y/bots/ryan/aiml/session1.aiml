@@ -13,7 +13,7 @@
     <that>WHAT IS YOUR NAME?</that>
     <template>
         <think><set name = "name"><star/></set></think>
-        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?
+        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
     </template>
 </category> 
 
@@ -22,7 +22,7 @@
     <that>GOT IT?</that>
     <template>
         Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can
-        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?
+        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)
     </template>
 </category>
 
@@ -34,7 +34,7 @@
     <template>
         Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
         people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please
-        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?
+        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)
     </template>
 </category>
 
@@ -46,7 +46,7 @@
     <template>
         I'm sorry to hear that <get name = "name"/>. I didn't mean to imply that I am going to fix you, because you certainly don't need fixing. I just want to help you
         think about yourself in the best way possible because you are incredible! If you truly don't want to talk to me, I understand. I'm never going to force you to do
-        anything. What do you say? Do you want to try me out for just a little bit and see what you think?
+        anything. What do you say? Do you want to try me out for just a little bit and see what you think?(yes|no)
     </template>
 </category>
 
@@ -69,7 +69,7 @@
     <template>
         Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
         people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please
-        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?
+        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)
     </template>
 </category>
 
@@ -78,7 +78,7 @@
     <pattern><set>no</set></pattern>
     <that>ARE YOU READY TO START?</that>
     <template>
-        Take your time! I'll be here when you are ready. When you're ready, just say I am ready!
+        Take your time! I'll be here when you are ready. When you're ready, just say I am ready!(i am ready)
     </template>
 </category>
 
@@ -120,7 +120,7 @@
         <!-- <think><set name = "userInfoImportant"><star/></set></think> -->
         That's great! Thank you for your answers. I look forward to learning more about you as time goes on. As I mentioned earlier, my goal is to help lessen your
         feelings of depression and help you feel more in control of your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts
-        a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. Do you know some of the symptoms of clinical depression?
+        a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. Do you know some of the symptoms of clinical depression?(yes|no)
     </template>
 </category>
 
@@ -200,7 +200,7 @@
         In fact, thoughts can have a profound effect on your mood, actions, and even your body. Instead of thinking of this as me lecturing you, I want you to think of our
         sessions as a way to learn specific methods to change your thoughts and actions so that your mood will improve. Since we will be focusing on your thoughts and moods
         throughout our time together, I want you to try and keep track of your moods on a daily basis. My human companion will give you a sheet to help with this. When you
-        have it, say ready and I will give you some instructions.
+        have it, say ready and I will give you some instructions.(ready)
     </template>
 </category>
 
@@ -214,7 +214,7 @@
         scale and think about what your mood was like for that day. You can then circle a number for that day from 9 being the best mood you can imagine to 1 being the worst
         mood you can image. Generally average moods will be around 5 and the extremes will not be used as often. Additionally, the bottom of the scale has a place for you to
         jot down the number of positive and negative thoughts you have each day. This tally will help you see how the thought exercises we try each week impact your depression.
-        Does this make sense?
+        Does this make sense?(yes|no)
     </template>
 </category>
 
