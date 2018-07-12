@@ -22,7 +22,7 @@ from programy.clients.client import BotClient
 from programy.majordomo.mdwrkapi import MajorDomoWorker
 
 import os
-
+from datetime import datetime
 
 class EventBotClient(BotClient):
 
@@ -57,6 +57,7 @@ class EventBotClient(BotClient):
 
 
     def worker_run_loop(self):
+        #todo Needs a huge refactor to clean this as much as possible
         #todo read the configuration from the programy configuration mechanism
         #self.configuration.client_configuration.configurations[0]
         import yaml
@@ -70,10 +71,9 @@ class EventBotClient(BotClient):
 
         self._running = True
         conversation_file = "/home/rohola/conv_questions.p"
-        verbose = True
         worker = MajorDomoWorker(str(ip)+":"+str(port), str(service_name))
         response = None
-        client_context = None #TODO check for client context being None before using it
+        client_context = None
         session_file = ""
         while True:
             ### pre dialog computations
@@ -97,7 +97,7 @@ class EventBotClient(BotClient):
 
                     session_file = directory+"/session"+session_num
                     with open(session_file, 'w') as file_writer:
-                        file_writer.write("new session1\n")
+                        file_writer.write("session\n")
 
 
 
@@ -128,14 +128,17 @@ class EventBotClient(BotClient):
 
             elif len(request) > 1 and request[0] == "question":
                 try:
-                    question = request[1]
-                    response = self.process_question(client_context, question)
-                    response_dict = self.dictionary_of_response(response)
-                    ####save question and respose to file
-                    with open(session_file, "a") as file_writer:
-                        file_writer.write(question+" | "+response_dict["conversation"]["response"]+"\n")
-                    #####
-                    response_string = str(response_dict)
+                    if client_context is not None:
+                        question = request[1]
+                        response = self.process_question(client_context, question)
+                        response_dict = self.dictionary_of_response(response)
+                        ####save question and respose to file
+                        with open(session_file, "a") as file_writer:
+                            file_writer.write(str(datetime.now()) + " | "+question+" | "+response_dict["conversation"]["response"]+"\n")
+                        #####
+                        response_string = str(response_dict)
+                    else:
+                        response_string = "client context is None"
                 except:
                     response_string = "chatbot internal failure"
 
@@ -206,8 +209,8 @@ class EventBotClient(BotClient):
 
             self.prior_to_run_loop()
 
-            self.run_loop()
-            #self.worker_run_loop()
+            #self.run_loop()
+            self.worker_run_loop()
 
             self.post_run_loop()
 
@@ -220,9 +223,12 @@ if __name__ == "__main__":
     # directory = "../../../../results/" + "kate" + "/"
     # if not os.path.exists(directory):
     #     os.mkdir(directory)
-    print(os.path.dirname(__file__))
-    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-    directory = os.path.join(root, "results", "kate")
-    if not os.path.exists(directory):
-        os.mkdir(directory)
-        print("done")
+    # print(os.path.dirname(__file__))
+    # root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
+    # directory = os.path.join(root, "results", "kate")
+    # if not os.path.exists(directory):
+    #     os.mkdir(directory)
+    #     print("done")
+    ob = ""
+    if ob is not None:
+        print("yes")
