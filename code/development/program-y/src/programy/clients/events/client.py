@@ -14,9 +14,12 @@ THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRI
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
+from programy.config.file.yaml_file import YamlConfigurationFile
 from programy.utils.logging.ylogger import YLogger
 
 from programy.clients.client import BotClient
+from programy.majordomo.mdwrkapi import MajorDomoWorker
+
 
 class EventBotClient(BotClient):
 
@@ -47,6 +50,100 @@ class EventBotClient(BotClient):
 
             self._running = self.wait_and_answer(client_context)
 
+
+
+
+    def worker_run_loop(self):
+        #todo read the configuration from the programy configuration mechanism
+        #self.configuration.client_configuration.configurations[0]
+        import yaml
+        with open("D://Documents//Projects//Python//programy//RyanCBT//code//development//program-y//bots//tutorial//config.yaml", encoding="utf-8") as file_reader:
+            self._yaml_dict = yaml.load(file_reader)
+
+        ip = self._yaml_dict["broker"]["ip"]
+        port = self._yaml_dict["broker"]["port"]
+        service_name = self._yaml_dict["broker"]["service_name"]
+
+
+        self._running = True
+        conversation_file = "/home/rohola/conv_questions.p"
+        verbose = True
+        worker = MajorDomoWorker(str(ip)+":"+str(port), str(service_name), verbose)
+        response = None
+
+        while True:
+            if self._first_time:
+                try:
+                    if self._session_saving_mode:
+                        client_context = self.load_client_context(
+                            self._configuration.client_configuration.default_userid, conversation_file)
+                    else:
+                        client_context = self.create_client_context(
+                            self._configuration.client_configuration.default_userid)
+                except Exception as exp:
+                    client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
+                finally:
+                    self._first_time = False
+
+
+
+            question = worker.recv(response)
+            if question is None:
+                break  # Worker was interrupted
+            if "print me" == question:
+                print("Received a command.")
+            # response = question # ECHO!
+            response = self.process_question(client_context, question[0])
+            response_dict = self.dictionary_of_response(response)
+            response_string = str(response_dict)
+
+            response = [response_string]
+
+
+
+    def dictionary_of_response(self, response):
+        answers = []
+        image_filename = ""
+        duration = ""
+        video_filename = ""
+        response_part = ""
+        if "(" in response:
+            parts = response.split("(")
+            response_part = parts[0]
+            answers = parts[1].split(")")[0].split("|")
+
+        if "#" in response:
+            parts = response.split("#")
+            response = parts[0]
+            if "image" in parts[1]:
+                image = parts[1].strip("#").split(",")[0]
+                image_filename = image.split(":")[1]
+                if len(parts[1].strip("#").split(",")) > 1:
+                    duration = parts[1].strip("#").split(",")[1]
+                    duration = duration.split(":")[1]
+
+            if "video" in parts[1]:
+                video_filename = parts[1].strip("#").split(",")[0]
+
+        if "#" not in response and "(" not in response:
+            response_part = response
+
+        return {"conversation":
+                    {"question": "",
+                     "response": response_part,
+                     "answer": answers
+                     },
+                "image":
+                    {"filename": image_filename,
+                     "duration": duration
+                     },
+                "video":
+                    {
+                        "filename": video_filename
+                    }
+                }
+
+
     def wait_and_answer(self, client_context):
         raise NotImplementedError("You must override this and implement the logic wait for a question and send an answer back")
 
@@ -61,6 +158,7 @@ class EventBotClient(BotClient):
             self.prior_to_run_loop()
 
             self.run_loop()
+            #self.worker_run_loop()
 
             self.post_run_loop()
 

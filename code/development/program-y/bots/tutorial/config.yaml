@@ -8,7 +8,10 @@ console:
     add_listeners: False
     remove_all_jobs: False
 
-
+broker:
+  ip: "tcp://localhost"
+  port: 5555
+  service_name: "echo"
 
 bot:
     brain: brain

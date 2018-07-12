@@ -59,7 +59,7 @@ class DefaultBotSelector(BotSelector):
 
     def select_bot(self, bots):
         if bots:
-            return next (iter (bots.values()))
+            return next(iter(bots.values()))
         return None
 
 
@@ -213,9 +213,9 @@ class BotClient(ResponseLogger):
 
         if arguments.config_filename is not None:
             self._configuration = ConfigurationFactory.load_configuration_from_file(self.get_client_configuration(),
-                                                                                   arguments.config_filename,
-                                                                                   arguments.config_format,
-                                                                                   arguments.bot_root)
+                                                                                    arguments.config_filename,
+                                                                                    arguments.config_format,
+                                                                                    arguments.bot_root)
         else:
             print("No configuration file specified, using defaults only !")
             self._configuration = ProgramyConfiguration(self.get_client_configuration())
@@ -230,7 +230,6 @@ class BotClient(ResponseLogger):
         client_context.bot = self._bot_factory.select_bot()
         client_context.brain = client_context.bot._brain_factory.select_brain()
         return client_context
-
 
     def load_client_context(self, userid, conversation_question_file):
         file_obj_read = open(conversation_question_file, 'rb')
@@ -252,15 +251,18 @@ class BotClient(ResponseLogger):
     def get_default_renderer(self):
         return TextRenderer(self)
 
+    def get_question(self, client_context):
+        raise NotImplementedError("You must override this and implement the logic")
+
     def process_question(self, client_context, question):
         raise NotImplementedError("You must override this and implement the logic to create a response to the question")
 
     def render_response(self, client_context, response):
-        raise NotImplementedError("You must override this and implement the logic to process the response by rendering using a RCS renderer")
+        raise NotImplementedError(
+            "You must override this and implement the logic to process the response by rendering using a RCS renderer")
 
     def process_response(self, client_context, response):
         raise NotImplementedError("You must override this and implement the logic to display the response to the user")
 
     def run(self):
         raise NotImplementedError("You must override this and implement the logic to run the client")
-

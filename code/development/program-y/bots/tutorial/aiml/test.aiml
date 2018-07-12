@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
     <category>
+        <pattern>session1 *</pattern>
+        <template>
+            Hello <set name="username"><star/></set>. Are you good?
+        </template>
+
+    </category>
+
+    <category>
         <pattern>HELLO ^</pattern>
         <template>
                 im good? How are you doing?(good|bad)

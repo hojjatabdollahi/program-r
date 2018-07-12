@@ -1,5 +1,7 @@
 import re
 import spacy
+import en_core_web_sm
+
 
 class Tokenizer(object):
 
@@ -38,8 +40,8 @@ class RyanTokenizer(Tokenizer):
             return []
 
         text_without_response = texts
-        if "(" in texts:
-            text_without_response = texts.split("(")[0]
+        #if "(" in texts:
+        #    text_without_response = texts.split("(")[0]
 
         doc = self._nlp(text_without_response)
         tokens = [token.text for token in doc if token.text.strip()]
