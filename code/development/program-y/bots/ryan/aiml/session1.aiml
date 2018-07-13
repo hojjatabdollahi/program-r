@@ -21,7 +21,7 @@
     <that>WHAT IS YOUR NAME?</that>
     <template>
         <think><set name = "name"><star/></set></think>
-        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
+        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)#video:v.mp4
     </template>
 </category> 
 
@@ -30,16 +30,16 @@
     <that>WHAT IS YOUR NAME?</that>
     <template>
         <think><set name = "name"><star/></set></think>
-        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
+        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)#video:v.mp4
     </template>
 </category>
 
 <!-- RYAN'S PURPOSE -->
 <category><pattern><set>yes</set></pattern>
-    <that>GOT IT?(YES)</that>
+    <that>GOT IT?(YES)#video:v.mp4</that>
     <template>
         Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can
-        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)
+        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)#image:imfile.jpg,duration:4
     </template>
 </category>
 
@@ -47,7 +47,7 @@
 
 <!-- IMPORTANT: is there a way to put the national suicide prevention line on screen? It's 1-800-273-TALK (8255)  -->
 <category><pattern><set>yes</set></pattern>
-    <that>DOES THAT SOUND GOOD TO YOU?(YES|NO)</that>
+    <that>DOES THAT SOUND GOOD TO YOU?(YES|NO)#image:imfile.jpg,duration:4</that>
     <template>
         Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
         people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please
@@ -59,7 +59,7 @@
 <!-- USER DOESN'T WANT TO TALK TO RYAN -->
 <category>
     <pattern><set>no</set></pattern>
-    <that>DOES THAT SOUND GOOD TO YOU?(YES|NO)</that>
+    <that>DOES THAT SOUND GOOD TO YOU?(YES|NO)#image:imfile.jpg,duration:4</that>
     <template>
         I'm sorry to hear that <get name = "name"/>. I didn't mean to imply that I am going to fix you, because you certainly don't need fixing. I just want to help you
         think about yourself in the best way possible because you are incredible! If you truly don't want to talk to me, I understand. I'm never going to force you to do
