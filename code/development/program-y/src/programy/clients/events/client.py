@@ -59,6 +59,7 @@ class EventBotClient(BotClient):
     def worker_run_loop(self):
         #todo Needs a major refactor to clean this as much as possible
         #todo read the configuration from the programy configuration mechanism
+        #todo login should be done with Ylogger
         #self.configuration.client_configuration.configurations[0]
 
         root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
@@ -117,7 +118,12 @@ class EventBotClient(BotClient):
                     finally:
                         self._first_time = False
 
-
+                #set the bot properties here!
+                response = self.process_question(client_context, "bot properties")
+                if response == "success":
+                    print("bot properties set correctly")
+                else:
+                    print("there is a problem setting bot properties")
 
                 response_string = "user is ready"
 
