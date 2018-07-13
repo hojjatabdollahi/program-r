@@ -550,6 +550,13 @@ class Brain(object):
 
         that_pattern = conversation.get_that_pattern(client_context, srai)
 
+        #TODO: move this part to get that pattern. this is really unclean
+        if "(" in that_pattern:
+            that_pattern = that_pattern.split("(")[0]
+        else:
+            if "#" in that_pattern:
+                that_pattern = that_pattern.split("#")[0]
+
         match_context = self._aiml_parser.match_sentence(client_context,
                                                          sentence,
                                                          topic_pattern=topic_pattern,
