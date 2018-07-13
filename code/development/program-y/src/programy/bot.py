@@ -415,6 +415,7 @@ class Bot(object):
         if response is not None:
             return self.handle_response(client_context, sentence, response, srai, responselogger)
         else:
+            #raise("Error")
             return self.handle_none_response(client_context, sentence, responselogger)
 
         return answer

@@ -9,26 +9,19 @@
     </template>
 </category>
 
-<!-- COMMENTING OUT BECAUSE WE WILL START WITH SESSION1 LINE INSTEAD -->
-<!-- <category><pattern><set>greetings</set> </pattern>
-    <template>
-        Hello! What is your name?
-    </template>
-</category> -->
-
 
 <!-- USER'S NAME -->
-<category><pattern>*</pattern>
+<category>
+    <pattern>*</pattern>
     <that>WHAT IS YOUR NAME?</that>
     <template>
-    	<!-- COMMENT OUT BECAUSE WE ARE SETTING VARIABLE AT START WITHOUT USER ANSWER -->
-        <!-- <think><set name = "name"><star/></set></think> -->
-        Hi <get name = "userName"/>! My name is <get name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
+        Hi <get name = "userName"/>! My name is ryan, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
     </template>
 </category>
 
 <!-- RYAN'S PURPOSE -->
-<category><pattern><set>yes</set></pattern>
+<category>
+    <pattern><set>yes</set></pattern>
     <that>GOT IT?</that>
     <template>
         Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can
@@ -38,7 +31,8 @@
 
 <!-- USER AGREEMENT/DISAGREEMENT TO TALK TO RYAN -->
 <!-- ADD IN LINE OF CODE FOR SUICIDE HOTLINE IMAGE -->
-<category><pattern><set>yes</set></pattern>
+<category>
+    <pattern><set>yes</set></pattern>
     <that>DOES THAT SOUND GOOD TO YOU?</that>
     <template>
         Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other

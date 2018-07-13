@@ -90,6 +90,7 @@ class EventBotClient(BotClient):
                 print("$$$$$$$$$$$$$ready$$$$$$$$$$$")
 
             elif request[0] == "user":
+                print("command user")
                 if len(request) > 1:
                     session_num = str(request[1])
                     username = str(request[2])
@@ -119,17 +120,19 @@ class EventBotClient(BotClient):
                         self._first_time = False
 
                 #set the bot properties here!
-                response = self.process_question(client_context, "bot properties")
-                if response == "success":
-                    print("bot properties set correctly")
-                else:
-                    print("there is a problem setting bot properties")
-
-                response_string = "user is ready"
+                # response = self.process_question(client_context, "bot properties")
+                # if response == "success":
+                #     print("bot properties set correctly")
+                # else:
+                #     print("there is a problem setting bot properties")
+                #
+                # response_string = "user is ready"
 
             elif len(request) > 1 and request[0] == "session":
+                print("session command")
+
                 session_id = request[1]
-                username = request[1]
+                #username = request[1]
                 question = "session"+str(session_id)+" "+username
                 response = self.process_question(client_context, question)
                 response_dict = self.dictionary_of_response(response)
