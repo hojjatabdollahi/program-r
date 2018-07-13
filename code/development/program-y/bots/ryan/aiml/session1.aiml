@@ -214,26 +214,44 @@
     </template>
 </category>
 
-<!-- NO FURTHER INSTRUCTIONS NECESSARY -->
+<!-- NO FURTHER INSTRUCTIONS NECESSARY, SHOW VIDEO-->
 <category>
     <pattern><set>yes</set></pattern>
     <that>DOES THIS MAKE SENSE?</that>
     <template>
-        Awesome! Try and remember to use your mood scale each day. I know this session was a little short, but we will talk more in the coming sessions.
-        I'll see you next time <get name = "userName"/>. Goodbye!
+        Awesome! Try and remember to use your mood scale each day. Before you go, I'm going to show you a video you might find interesting.#video:Depression.mp4
     </template>
 </category>
 
 
-<!--FURTHER INSTRUCTIONS NECESSARY, TALK WITH ME IN PERSON -->
+<!--FURTHER INSTRUCTIONS NECESSARY, TALK WITH ME IN PERSON, SHOW VIDEO -->
 <category>
     <pattern><set>no</set></pattern>
     <that>DOES THIS MAKE SENSE?</that>
     <template>
-        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. I know this session was a
-        little short, but we will talk more in the coming sessions. I'll see you next time <get name = "userName"/>. Goodbye!
+        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. Before you go, I am going to show you a video you might find interesting.#video:Depression.mp4
     </template>
 </category>
+
+<!-- SHOW VIDEO AND ASK ABOUT IT --> 
+<category>
+    <pattern>*</pattern>
+    <that>BEFORE YOU GO, I AM GOING TO SHOW YOU A VIDEO YOU MIGHT FIND INTERESTING.</that>
+    <template>
+        That video is pretty interesting, huh? What did you think about it?
+    </template>
+</category>
+
+<!-- USER'S THOUGHTS ON VIDEO -->
+<category>
+    <pattern>*</pattern>
+    <that>WHAT DID YOU THINK ABOUT IT</that>
+    <template>
+        I'm glad you got something meaningful out of it! It's important to remember that depression has a biological basis that we are learning more about each day. That's all I have for today. I know this session was a little short, but we will talk more in the coming sessions. I'll see you next time <get name = "userName"/>. Goodbye!
+    </template>
+</category>
+
+
 
 
 </aiml>
