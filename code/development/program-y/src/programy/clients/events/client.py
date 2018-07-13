@@ -63,7 +63,7 @@ class EventBotClient(BotClient):
 
         root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
         import yaml
-        filepath = os.path.join(root, "bots//tutorial//config.yaml")
+        filepath = os.path.join(root, "bots//ryan//config.yaml")
         with open(filepath, encoding="utf-8") as file_reader:
             self._yaml_dict = yaml.load(file_reader)
 
