@@ -21,7 +21,7 @@
     <that>WHAT IS YOUR NAME?</that>
     <template>
         <think><set name = "name"><star/></set></think>
-        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
+        Hi <get name = "name"/>! My name is ryan, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)#video:v.mp4
     </template>
 </category> 
 
@@ -30,16 +30,16 @@
     <that>WHAT IS YOUR NAME?</that>
     <template>
         <think><set name = "name"><star/></set></think>
-        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
+        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)#video:v.mp4
     </template>
 </category>
 
 <!-- RYAN'S PURPOSE -->
 <category><pattern><set>yes</set></pattern>
-    <that>GOT IT?(YES)</that>
+    <that>GOT IT?</that>
     <template>
         Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can
-        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)
+        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)#image:imfile.jpg,duration:4
     </template>
 </category>
 
@@ -47,7 +47,7 @@
 
 <!-- IMPORTANT: is there a way to put the national suicide prevention line on screen? It's 1-800-273-TALK (8255)  -->
 <category><pattern><set>yes</set></pattern>
-    <that>DOES THAT SOUND GOOD TO YOU?(YES|NO)</that>
+    <that>DOES THAT SOUND GOOD TO YOU?</that>
     <template>
         Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
         people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please
@@ -59,7 +59,7 @@
 <!-- USER DOESN'T WANT TO TALK TO RYAN -->
 <category>
     <pattern><set>no</set></pattern>
-    <that>DOES THAT SOUND GOOD TO YOU?(YES|NO)</that>
+    <that>DOES THAT SOUND GOOD TO YOU?</that>
     <template>
         I'm sorry to hear that <get name = "name"/>. I didn't mean to imply that I am going to fix you, because you certainly don't need fixing. I just want to help you
         think about yourself in the best way possible because you are incredible! If you truly don't want to talk to me, I understand. I'm never going to force you to do
@@ -71,7 +71,7 @@
 <!-- IF USER STILL DOESN'T WANT TO TALK TO RYAN -->
 <category>
     <pattern><set>no</set></pattern>
-    <that>DO YOU WANT TO TRY ME OUT FOR JUST A LITTLE BIT AND SEE WHAT YOU THINK?(YES|NO)</that>
+    <that>DO YOU WANT TO TRY ME OUT FOR JUST A LITTLE BIT AND SEE WHAT YOU THINK?</that>
     <template>
         Perfectly understandable. It was very nice to meet you <get name = "name"/>. Goodbye.
     </template>
@@ -82,7 +82,7 @@
 <!--IMPORTANT: is there a way to put the national suicide prevention line on screen? It's 1-800-273-TALK (8255)  -->
 <category>
     <pattern><set>yes</set></pattern>
-    <that>DO YOU WANT TO TRY ME OUT FOR JUST A LITTLE BIT AND SEE WHAT YOU THINK?(YES|NO)</that>
+    <that>DO YOU WANT TO TRY ME OUT FOR JUST A LITTLE BIT AND SEE WHAT YOU THINK?</that>
     <template>
         Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
         people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please
@@ -93,7 +93,7 @@
 <!-- NOT READY TO START SESSION -->
 <category>
     <pattern><set>no</set></pattern>
-    <that>ARE YOU READY TO START?(YES|NO)</that>
+    <that>ARE YOU READY TO START?</that>
     <template>
         Take your time! I'll be here when you are ready. When you're ready, just say I am ready!(i am ready)
     </template>
@@ -103,7 +103,7 @@
 <!-- READY TO START SESSION AFTER A PAUSE -->
 <category>
     <pattern>I AM READY</pattern>
-    <that>WHEN YOU'RE READY, JUST SAY I AM READY!(I AM READY)</that>
+    <that>WHEN YOU'RE READY, JUST SAY I AM READY!</that>
     <template>
         Great! Since we're going to be spending a lot of time together, it might be nice to get to know each other a little. As I said, my name is Ryan and I'm a social
         companion robot. My goal is to help people that need it most. Why don't you tell me a little about yourself? For example, where did you grow up?
@@ -114,7 +114,7 @@
 <!-- READY TO START SESSION -->
 <category>
     <pattern><set>yes</set></pattern>
-    <that>ARE YOU READY TO START?(YES|NO)</that>
+    <that>ARE YOU READY TO START?</that>
     <template>
         Great! Since we're going to be spending a lot of time together, it might be nice to get to know each other a little. As I said, my name is Ryan and I'm a social
         companion robot. My goal is to help people that need it most. Why don't you tell me a little about yourself? For example, where did you grow up?
@@ -145,7 +145,7 @@
 <!-- display these on screen eventually using the parantheses syntax -->
 <category>
     <pattern><set>no</set></pattern>
-    <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?(YES|NO)</that>
+    <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?</that>
     <template>
         I'm happy to tell you some of the most common ones! The symptoms of clinical depression are feeling depressed or down nearly every day; not being interested in or
         unable to enjoy things you used to enjoy; changes in appetite and weight; big changes in how much sleep you get; being fidgety and restless or slowed down; feeling
@@ -161,7 +161,7 @@
 <!-- START OF INTRODUCTORY QUESTIONS -->
 <category>
     <pattern><set>yes</set></pattern>
-    <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?(YES|NO)</that>
+    <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?</that>
     <template>
         Good I'm glad you're familiar with it. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone.
         Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of
@@ -223,7 +223,7 @@
 <!-- INSTRUCTIONS FOR DAILY MOOD SCALE -->
 <category>
     <pattern>READY</pattern>
-    <that>WHEN YOU HAVE IT, SAY READY AND I WILL GIVE YOU SOME INSTRUCTIONS.(READY)</that>
+    <that>WHEN YOU HAVE IT, SAY READY AND I WILL GIVE YOU SOME INSTRUCTIONS.</that>
     <template>
         Great! As I mentioned earlier, to make this a valuable exercise, this scale should be filled out each and every day. Find a time before you go to bed to take out the
         scale and think about what your mood was like for that day. You can then circle a number for that day from 9 being the best mood you can imagine to 1 being the worst
@@ -235,7 +235,7 @@
 <!-- NO FURTHER INSTRUCTIONS NECESSARY -->
 <category>
     <pattern><set>yes</set></pattern>
-    <that>DOES THIS MAKE SENSE?(YES|NO)</that>
+    <that>DOES THIS MAKE SENSE?</that>
     <template>
         Awesome! Try and remember to use your mood scale each day. I know this session was a little short, but we will talk more in the coming sessions.
         I'll see you next time <get name = "name"/>. Goodbye!
@@ -246,7 +246,7 @@
 <!--FURTHER INSTRUCTIONS NECESSARY, TALK WITH ME IN PERSON -->
 <category>
     <pattern><set>no</set></pattern>
-    <that>DOES THIS MAKE SENSE?(YES|NO)</that>
+    <that>DOES THIS MAKE SENSE?</that>
     <template>
         Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. I know this session was a
         little short, but we will talk more in the coming sessions. I'll see you next time <get name = "name"/>. Goodbye!

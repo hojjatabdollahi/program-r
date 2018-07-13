@@ -403,6 +403,7 @@ class Bot(object):
         if srai is False:
             self.check_spelling_before(sentence)
 
+
         response = client_context.brain.ask_question(client_context, sentence, srai)
 
         if response is None and srai is False:

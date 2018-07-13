@@ -57,11 +57,14 @@ class EventBotClient(BotClient):
 
 
     def worker_run_loop(self):
-        #todo Needs a huge refactor to clean this as much as possible
+        #todo Needs a major refactor to clean this as much as possible
         #todo read the configuration from the programy configuration mechanism
         #self.configuration.client_configuration.configurations[0]
+
+        root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
         import yaml
-        with open("D://Documents//Projects//Python//programy//RyanCBT//code//development//program-y//bots//tutorial//config.yaml", encoding="utf-8") as file_reader:
+        filepath = os.path.join(root, "bots//ryan//config.yaml")
+        with open(filepath, encoding="utf-8") as file_reader:
             self._yaml_dict = yaml.load(file_reader)
 
         ip = self._yaml_dict["broker"]["ip"]
@@ -70,7 +73,7 @@ class EventBotClient(BotClient):
 
 
         self._running = True
-        conversation_file = "/home/rohola/conv_questions.p"
+        conversation_file = "conv_questions.p"
         worker = MajorDomoWorker(str(ip)+":"+str(port), str(service_name))
         response = None
         client_context = None
@@ -90,13 +93,13 @@ class EventBotClient(BotClient):
                     session_num = str(request[1])
                     username = str(request[2])
                     #directory = os.path.join("../../../../results/", username)
-                    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-                    directory = os.path.join(root, "results", "kate")
+
+                    directory = os.path.join(root, "results", username)
                     if not os.path.exists(directory):
                         os.mkdir(directory)
 
                     session_file = directory+"/session"+session_num
-                    with open(session_file, 'w') as file_writer:
+                    with open(session_file, 'a') as file_writer:
                         file_writer.write("session\n")
 
 
@@ -168,6 +171,7 @@ class EventBotClient(BotClient):
             parts = response.split("#")
             response = parts[0]
             if "image" in parts[1]:
+                print("iiiiiiiiiiiiiiiiiiiiiiiii")
                 image = parts[1].strip("#").split(",")[0]
                 image_filename = image.split(":")[1]
                 if len(parts[1].strip("#").split(",")) > 1:
@@ -195,7 +199,6 @@ class EventBotClient(BotClient):
                     }
                 }
 
-
     def wait_and_answer(self, client_context):
         raise NotImplementedError("You must override this and implement the logic wait for a question and send an answer back")
 
@@ -220,15 +223,47 @@ class EventBotClient(BotClient):
 
 
 if __name__ == "__main__":
-    # directory = "../../../../results/" + "kate" + "/"
-    # if not os.path.exists(directory):
-    #     os.mkdir(directory)
-    # print(os.path.dirname(__file__))
-    # root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-    # directory = os.path.join(root, "results", "kate")
-    # if not os.path.exists(directory):
-    #     os.mkdir(directory)
-    #     print("done")
-    ob = ""
-    if ob is not None:
-        print("yes")
+    def dictionary_of_response(response):
+        answers = []
+        image_filename = ""
+        duration = ""
+        video_filename = ""
+        response_part = ""
+        if "(" in response:
+            parts = response.split("(")
+            response_part = parts[0]
+            answers = parts[1].split(")")[0].split("|")
+
+        if "#" in response:
+            parts = response.split("#")
+            response = parts[0]
+            if "image" in parts[1]:
+                print("iiiiiiiiiiiiiiiiiiiiiiiii")
+                image = parts[1].strip("#").split(",")[0]
+                image_filename = image.split(":")[1]
+                if len(parts[1].strip("#").split(",")) > 1:
+                    duration = parts[1].strip("#").split(",")[1]
+                    duration = duration.split(":")[1]
+
+            if "video" in parts[1]:
+                video_filename = parts[1].split(":")[1]
+
+        if "#" not in response and "(" not in response:
+            response_part = response
+
+        return {"conversation":
+                    {"question": "",
+                     "response": response_part,
+                     "answer": answers
+                     },
+                "image":
+                    {"filename": image_filename,
+                     "duration": duration
+                     },
+                "video":
+                    {
+                        "filename": video_filename
+                    }
+                }
+    r = dictionary_of_response("Hi df! My name is ff, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)#image:imf.jpg#video:v.mp4")
+    print(r)
