@@ -14,11 +14,14 @@ THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRI
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
+
 from programy.config.file.yaml_file import YamlConfigurationFile
 from programy.utils.logging.ylogger import YLogger
 
 from programy.clients.client import BotClient
 from programy.majordomo.mdwrkapi import MajorDomoWorker
+
+import os
 
 
 class EventBotClient(BotClient):
@@ -68,36 +71,82 @@ class EventBotClient(BotClient):
         self._running = True
         conversation_file = "/home/rohola/conv_questions.p"
         verbose = True
-        worker = MajorDomoWorker(str(ip)+":"+str(port), str(service_name), verbose)
+        worker = MajorDomoWorker(str(ip)+":"+str(port), str(service_name))
         response = None
-
+        client_context = None #TODO check for client context being None before using it
+        session_file = ""
         while True:
-            if self._first_time:
-                try:
-                    if self._session_saving_mode:
-                        client_context = self.load_client_context(
-                            self._configuration.client_configuration.default_userid, conversation_file)
-                    else:
-                        client_context = self.create_client_context(
-                            self._configuration.client_configuration.default_userid)
-                except Exception as exp:
-                    client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
-                finally:
-                    self._first_time = False
-
-
-
-            question = worker.recv(response)
-            if question is None:
+            ### pre dialog computations
+            request = worker.recv(response)
+            if request is None:
                 break  # Worker was interrupted
-            if "print me" == question:
-                print("Received a command.")
-            # response = question # ECHO!
-            response = self.process_question(client_context, question[0])
-            response_dict = self.dictionary_of_response(response)
-            response_string = str(response_dict)
+
+            if request[0] == "ready":
+                response_string = "ready"
+                print("$$$$$$$$$$$$$ready$$$$$$$$$$$")
+
+            elif request[0] == "user":
+                if len(request) > 1:
+                    session_num = str(request[1])
+                    username = str(request[2])
+                    #directory = os.path.join("../../../../results/", username)
+                    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
+                    directory = os.path.join(root, "results", "kate")
+                    if not os.path.exists(directory):
+                        os.mkdir(directory)
+
+                    session_file = directory+"/session"+session_num
+                    with open(session_file, 'w') as file_writer:
+                        file_writer.write("new session1\n")
+
+
+
+                if self._first_time:
+                    try:
+                        if self._session_saving_mode:
+                            client_context = self.load_client_context(
+                                self._configuration.client_configuration.default_userid, conversation_file)
+                        else:
+                            client_context = self.create_client_context(
+                                self._configuration.client_configuration.default_userid)
+                    except Exception as exp:
+                        client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
+                    finally:
+                        self._first_time = False
+
+
+
+                response_string = "user is ready"
+
+            elif len(request) > 1 and request[0] == "session":
+                session_id = request[1]
+                username = request[1]
+                question = "session"+str(session_id)+" "+username
+                response = self.process_question(client_context, question)
+                response_dict = self.dictionary_of_response(response)
+                response_string = str(response_dict)
+
+            elif len(request) > 1 and request[0] == "question":
+                try:
+                    question = request[1]
+                    response = self.process_question(client_context, question)
+                    response_dict = self.dictionary_of_response(response)
+                    ####save question and respose to file
+                    with open(session_file, "a") as file_writer:
+                        file_writer.write(question+" | "+response_dict["conversation"]["response"]+"\n")
+                    #####
+                    response_string = str(response_dict)
+                except:
+                    response_string = "chatbot internal failure"
+
 
             response = [response_string]
+            # request = worker.recv(response)
+            # if request is None:
+            #     break  # Worker was interrupted
+            # if "print me" == request:
+            #     print("Received a command.")
+
 
 
 
@@ -164,3 +213,16 @@ class EventBotClient(BotClient):
 
         else:
             YLogger.debug(self, "noloop set to True, exiting...")
+
+
+
+if __name__ == "__main__":
+    # directory = "../../../../results/" + "kate" + "/"
+    # if not os.path.exists(directory):
+    #     os.mkdir(directory)
+    print(os.path.dirname(__file__))
+    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
+    directory = os.path.join(root, "results", "kate")
+    if not os.path.exists(directory):
+        os.mkdir(directory)
+        print("done")

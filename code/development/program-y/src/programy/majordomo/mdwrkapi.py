@@ -91,7 +91,7 @@ class MajorDomoWorker(object):
             try:
                 return item.encode('ascii')
             except:
-                print("Problem cencoding " + str(item) + " to ascii")
+                #print("Problem cencoding " + str(item) + " to ascii")
                 return item
 
         msg2 = [enc(x) for x in msg]
@@ -127,7 +127,7 @@ class MajorDomoWorker(object):
                     try:
                         return item.decode('utf-8')
                     except:
-                        print("couldn't decode this: " + str(item))
+                        #print("couldn't decode this: " + str(item))
                         return item
 
                 msg = [dec(x) for x in msg]

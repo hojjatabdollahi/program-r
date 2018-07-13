@@ -2,6 +2,14 @@
 <aiml version="2.0">
 
 <!-- can we make it so the bot says hi first? -->
+<category>
+    <pattern>session1 *</pattern>
+    <template>
+            Hello <set name="username"><star/></set>. Are you good?
+    </template>
+</category>
+
+
 <category><pattern><set>greetings</set> </pattern>
     <template>
         Hello! What is your name?
@@ -19,7 +27,7 @@
 
 <!-- RYAN'S PURPOSE -->
 <category><pattern><set>yes</set></pattern>
-    <that>GOT IT?</that>
+    <that>GOT IT?(YES)</that>
     <template>
         Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can
         make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)
