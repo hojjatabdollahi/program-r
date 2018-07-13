@@ -221,8 +221,8 @@ class EventBotClient(BotClient):
 
             self.prior_to_run_loop()
 
-            #self.run_loop()
-            self.worker_run_loop()
+            self.run_loop()
+            #self.worker_run_loop()
 
             self.post_run_loop()
 

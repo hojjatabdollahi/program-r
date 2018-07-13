@@ -37,7 +37,7 @@
     <template>
         Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
         people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please
-        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png
+        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png,duration:-1
     </template>
 </category>
 
@@ -72,7 +72,7 @@
     <template>
         Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
         people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please
-        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png
+        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png,duration:-1
     </template>
 </category>
 
@@ -134,7 +134,7 @@
     <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?</that>
     <template>
         I'm happy to show you some of the most common ones! I've displayed some of the most common symptoms on your tablet. Remember each symptom type interact together. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when
-        you feel depressed?#image:symptoms3.jpeg
+        you feel depressed?#image:symptoms3.jpg,duration:-1
     </template>
 </category>
 

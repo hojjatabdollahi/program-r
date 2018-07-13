@@ -269,9 +269,17 @@ class Conversation(object):
         #     that_pattern = '*'
         # return that_pattern
 
+        #todo work on this part to make it cleaner
+        if "(" in response:
+            response = response.split("(")[0]
+        else:
+            if "#" in response:
+                response = response.split("#")[0]
+
         doc = self._nlp(response)
         sentences = list(doc.sents)
         last_sentence = sentences[-1].text
+
         that_pattern = last_sentence.strip()#.strip("?")
         if that_pattern == "":
             that_pattern = "*"
