@@ -1,36 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-<!-- can we make it so the bot says hi first? -->
+<!-- bot will say hi first when user types session1 participantName first behind the scenes -->
 <category>
     <pattern>session1 *</pattern>
     <template>
-            Hello <set name="username"><star/></set>. Are you good?
+            Hello <think><set name="userName"><star/></set></think>! What is your name?
     </template>
 </category>
 
-
-<category><pattern><set>greetings</set> </pattern>
+<!-- COMMENTING OUT BECAUSE WE WILL START WITH SESSION1 LINE INSTEAD -->
+<!-- <category><pattern><set>greetings</set> </pattern>
     <template>
         Hello! What is your name?
     </template>
-</category>
+</category> -->
+
 
 <!-- USER'S NAME -->
-<category><pattern>MY NAME IS *</pattern>
-    <that>WHAT IS YOUR NAME?</that>
-    <template>
-        <think><set name = "name"><star/></set></think>
-        Hi <get name = "name"/>! My name is ryan, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)#video:v.mp4
-    </template>
-</category> 
-
-<!-- ALTERNATE WAY TO ANSWER THEIR NAME -->
 <category><pattern>*</pattern>
     <that>WHAT IS YOUR NAME?</that>
     <template>
-        <think><set name = "name"><star/></set></think>
-        Hi <get name = "name"/>! My name is <bot name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)#video:v.mp4
+    	<!-- COMMENT OUT BECAUSE WE ARE SETTING VARIABLE AT START WITHOUT USER ANSWER -->
+        <!-- <think><set name = "name"><star/></set></think> -->
+        Hi <get name = "userName"/>! My name is <get name = "botname"/>, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
     </template>
 </category>
 
@@ -39,13 +32,12 @@
     <that>GOT IT?</that>
     <template>
         Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can
-        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)#image:imfile.jpg,duration:4
+        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)
     </template>
 </category>
 
 <!-- USER AGREEMENT/DISAGREEMENT TO TALK TO RYAN -->
-
-<!-- IMPORTANT: is there a way to put the national suicide prevention line on screen? It's 1-800-273-TALK (8255)  -->
+<!-- ADD IN LINE OF CODE FOR SUICIDE HOTLINE IMAGE -->
 <category><pattern><set>yes</set></pattern>
     <that>DOES THAT SOUND GOOD TO YOU?</that>
     <template>
@@ -79,7 +71,7 @@
 
 
 <!-- IF USER CHANGES MIND ABOUT NOT WANTING TO TALK TO RYAN -->
-<!--IMPORTANT: is there a way to put the national suicide prevention line on screen? It's 1-800-273-TALK (8255)  -->
+<!-- ADD IN LINE OF CODE FOR SUICIDE HOTLINE IMAGE -->
 <category>
     <pattern><set>yes</set></pattern>
     <that>DO YOU WANT TO TRY ME OUT FOR JUST A LITTLE BIT AND SEE WHAT YOU THINK?</that>
@@ -137,22 +129,18 @@
         <!-- <think><set name = "userInfoImportant"><star/></set></think> -->
         That's great! Thank you for your answers. I look forward to learning more about you as time goes on. As I mentioned earlier, my goal is to help lessen your
         feelings of depression and help you feel more in control of your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts
-        a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. Do you know some of the symptoms of clinical depression?(yes|no)
+        a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. Do you know some of the symptoms of clinical depression?(yes|no) 
     </template>
 </category>
 
 <!-- USER DOESN'T KNOW SYMPTOMS -->
-<!-- display these on screen eventually using the parantheses syntax -->
+<!-- #image:symptomsPicName.jpg,duration:10 -->
 <category>
     <pattern><set>no</set></pattern>
     <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?</that>
     <template>
-        I'm happy to tell you some of the most common ones! The symptoms of clinical depression are feeling depressed or down nearly every day; not being interested in or
-        unable to enjoy things you used to enjoy; changes in appetite and weight; big changes in how much sleep you get; being fidgety and restless or slowed down; feeling
-        tired all the time; feeling worthless or guilty; having trouble thinking, concentrating, or making decisions; and thinking a lot about death, wishing to be dead,
-        or self harm. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions
-        to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when
-        you feel depressed?
+        I'm happy to show you some of the most common ones! I've displayed some of the most common symptoms on your tablet. Remember each symptom type interact together. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when
+        you feel depressed? 
     </template>
 </category>
 
