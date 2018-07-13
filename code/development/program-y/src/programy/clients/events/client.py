@@ -57,11 +57,14 @@ class EventBotClient(BotClient):
 
 
     def worker_run_loop(self):
-        #todo Needs a huge refactor to clean this as much as possible
+        #todo Needs a major refactor to clean this as much as possible
         #todo read the configuration from the programy configuration mechanism
         #self.configuration.client_configuration.configurations[0]
+
+        root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
         import yaml
-        with open("D://Documents//Projects//Python//programy//RyanCBT//code//development//program-y//bots//tutorial//config.yaml", encoding="utf-8") as file_reader:
+        filepath = os.path.join(root, "bots//tutorial//config.yaml")
+        with open(filepath, encoding="utf-8") as file_reader:
             self._yaml_dict = yaml.load(file_reader)
 
         ip = self._yaml_dict["broker"]["ip"]
@@ -90,8 +93,8 @@ class EventBotClient(BotClient):
                     session_num = str(request[1])
                     username = str(request[2])
                     #directory = os.path.join("../../../../results/", username)
-                    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-                    directory = os.path.join(root, "results", "kate")
+
+                    directory = os.path.join(root, "results", username)
                     if not os.path.exists(directory):
                         os.mkdir(directory)
 
@@ -209,8 +212,8 @@ class EventBotClient(BotClient):
 
             self.prior_to_run_loop()
 
-            #self.run_loop()
-            self.worker_run_loop()
+            self.run_loop()
+            #self.worker_run_loop()
 
             self.post_run_loop()
 
