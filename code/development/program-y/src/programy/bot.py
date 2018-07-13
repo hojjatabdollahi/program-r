@@ -281,7 +281,10 @@ class Bot(object):
         #         default_response = self.default_response
         #     return default_response
         # else:
-        response = client_context.bot._conversations["Console"].questions[-2].sentences[-1].response
+        try:
+            response = client_context.bot._conversations["Console"].questions[-2].sentences[-1].response
+        except:
+            response="I don't know"
         return response
 
     def get_initial_question(self, client_context):
