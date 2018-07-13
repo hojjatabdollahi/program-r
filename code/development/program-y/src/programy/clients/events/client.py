@@ -87,7 +87,7 @@ class EventBotClient(BotClient):
 
             if request[0] == "ready":
                 response_string = "ready"
-                print("$$$$$$$$$$$$$ready$$$$$$$$$$$")
+                print("command ready")
 
             elif request[0] == "user":
                 print("command user")
@@ -154,7 +154,7 @@ class EventBotClient(BotClient):
                 except:
                     response_string = "chatbot internal failure"
 
-
+            print(response_string)
             response = [response_string]
             # request = worker.recv(response)
             # if request is None:
@@ -180,7 +180,7 @@ class EventBotClient(BotClient):
             parts = response.split("#")
             response = parts[0]
             if "image" in parts[1]:
-                print("iiiiiiiiiiiiiiiiiiiiiiiii")
+                print("an image is here")
                 image = parts[1].strip("#").split(",")[0]
                 image_filename = image.split(":")[1]
                 if len(parts[1].strip("#").split(",")) > 1:
@@ -188,6 +188,7 @@ class EventBotClient(BotClient):
                     duration = duration.split(":")[1]
 
             if "video" in parts[1]:
+                print("a video is here")
                 video_filename = parts[1].strip("#").split(",")[0]
 
         if "#" not in response and "(" not in response:

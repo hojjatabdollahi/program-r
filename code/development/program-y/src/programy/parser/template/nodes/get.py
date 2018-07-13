@@ -98,10 +98,15 @@ class TemplateGetNode(TemplateNode):
     def resolve_variable(self, client_context):
         name = self.name.resolve(client_context)
         value = TemplateGetNode.get_property_value(client_context, self.local, name)
+
         if self.local:
             YLogger.debug(client_context, "[%s] resolved to local: [%s] <= [%s]", self.to_string(), name, value)
         else:
             YLogger.debug(client_context, "[%s] resolved to global: [%s] <= [%s]", self.to_string(), name, value)
+
+        #todo there should be a better way to do this
+        value = value.title()
+
         return value
 
     def decode_tuples(self, tuples):
