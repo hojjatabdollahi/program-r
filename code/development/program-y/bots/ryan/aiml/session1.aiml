@@ -25,7 +25,7 @@
     <that>GOT IT?</that>
     <template>
         Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can
-        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)#video:Depression.mp4
+        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)
     </template>
 </category>
 
@@ -219,7 +219,7 @@
     <pattern><set>yes</set></pattern>
     <that>DOES THIS MAKE SENSE?</that>
     <template>
-        Awesome! Try and remember to use your mood scale each day. Before you go, I'm going to show you a video you might find interesting.#video:Depression.mp4
+        Awesome! Try and remember to use your mood scale each day. Before you go, I'm going to show you a video you might find interesting.
     </template>
 </category>
 
@@ -229,7 +229,7 @@
     <pattern><set>no</set></pattern>
     <that>DOES THIS MAKE SENSE?</that>
     <template>
-        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. Before you go, I am going to show you a video you might find interesting.#video:Depression.mp4
+        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. Before you go, I am going to show you a video you might find interesting.
     </template>
 </category>
 
@@ -238,7 +238,7 @@
     <pattern>*</pattern>
     <that>BEFORE YOU GO, I AM GOING TO SHOW YOU A VIDEO YOU MIGHT FIND INTERESTING.</that>
     <template>
-        That video is pretty interesting, huh? What did you think about it?
+        I found that video to be fascinating. What did you think about it?#video:Depression.mp4
     </template>
 </category>
 
