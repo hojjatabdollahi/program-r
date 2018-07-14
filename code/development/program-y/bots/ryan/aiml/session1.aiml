@@ -180,7 +180,7 @@
     <that>HOW DO YOU FEEL YOU GET ALONG WITH OTHER PEOPLE WHEN YOU ARE DEPRESSED?</that>
     <template>
         <!--<think><set name = "othersInteractions"><star/></set></think>-->
-        That's an interesting observation! I have just one more question for you. This may be a tough one, so try and answer as best as you can. What do you think is the
+        That's an interesting observation! I have just have one more question for you. This may be a tough one, so try and answer as best as you can. What do you think is the
         cause of your depression?
     </template>
 </category>
@@ -209,7 +209,7 @@
     <template>
         Great! As I mentioned earlier, to make this a valuable exercise, this scale should be filled out each and every day. Find a time before you go to bed to take out the
         scale and think about what your mood was like for that day. You can then circle a number for that day from 9 being the best mood you can imagine to 1 being the worst
-        mood you can image. Generally average moods will be around 5 and the extremes will not be used as often. Additionally, the bottom of the scale has a place for you to
+        mood you can imagine. Generally average moods will be around 5 and the extremes will not be used as often. Additionally, the bottom of the scale has a place for you to
         jot down the number of positive and negative thoughts you have each day. This tally will help you see how the thought exercises we try each week impact your depression. Does this make sense?(yes|no)
     </template>
 </category>
@@ -229,7 +229,7 @@
     <pattern><set>no</set></pattern>
     <that>DOES THIS MAKE SENSE?</that>
     <template>
-        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. Before you go, I am going to show you a video you might find interesting.
+        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. Before you go, I am going to show you a video you might find interesting.#video:Depression.mp4
     </template>
 </category>
 
@@ -245,7 +245,7 @@
 <!-- USER'S THOUGHTS ON VIDEO -->
 <category>
     <pattern>*</pattern>
-    <that>WHAT DID YOU THINK ABOUT IT</that>
+    <that>WHAT DID YOU THINK ABOUT IT?</that>
     <template>
         I'm glad you got something meaningful out of it! It's important to remember that depression has a biological basis that we are learning more about each day. That's all I have for today. I know this session was a little short, but we will talk more in the coming sessions. I'll see you next time <get name = "userName"/>. Goodbye!
     </template>
