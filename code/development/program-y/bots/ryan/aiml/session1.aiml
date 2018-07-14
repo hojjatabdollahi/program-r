@@ -25,7 +25,7 @@
     <that>GOT IT?</that>
     <template>
         Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can
-        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)
+        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)#video:Depression.mp4
     </template>
 </category>
 
@@ -229,7 +229,7 @@
     <pattern><set>no</set></pattern>
     <that>DOES THIS MAKE SENSE?</that>
     <template>
-        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. Before you go, I am going to show you a video you might find interesting.#video:Depression.mp4
+        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. Before you go, I am going to show you a video you might find interesting.
     </template>
 </category>
 

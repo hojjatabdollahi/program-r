@@ -189,7 +189,7 @@ class EventBotClient(BotClient):
 
             if "video" in parts[1]:
                 print("a video is here")
-                video_filename = parts[1].strip("#").split(",")[0]
+                video_filename = parts[1].split(":")[1]
 
         if "#" not in response and "(" not in response:
             response_part = response
@@ -248,7 +248,6 @@ if __name__ == "__main__":
             parts = response.split("#")
             response = parts[0]
             if "image" in parts[1]:
-                print("iiiiiiiiiiiiiiiiiiiiiiiii")
                 image = parts[1].strip("#").split(",")[0]
                 image_filename = image.split(":")[1]
                 if len(parts[1].strip("#").split(",")) > 1:
@@ -275,5 +274,5 @@ if __name__ == "__main__":
                         "filename": video_filename
                     }
                 }
-    r = dictionary_of_response("Hi df! My name is ff, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)#image:imf.jpg#video:v.mp4")
+    r = dictionary_of_response("Hi df! My name is ff, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?#video:v.mp4")
     print(r)
