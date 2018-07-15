@@ -5,7 +5,9 @@
 <category>
     <pattern>session1 *</pattern>
     <template>
-            Hello <think><set name="userName"><star/></set></think>! What is your name?
+    	<!-- SET NAME OF USER BASED ON MY INPUT -->
+    	<think><set name="userName"><star/></set></think>
+    	Hello! What is your name?
     </template>
 </category>
 
@@ -15,7 +17,7 @@
     <pattern>*</pattern>
     <that>WHAT IS YOUR NAME?</that>
     <template>
-        Hi <get name = "userName"/>! My name is ryan, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
+        Hi <get name = "userName"/>! My name is Ryan, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?(yes)
     </template>
 </category>
 
@@ -24,20 +26,18 @@
     <pattern><set>yes</set></pattern>
     <that>GOT IT?</that>
     <template>
-        Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can
-        make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)
+        Great! I'm here to talk to you a little bit every day so I can help you to identify and correct self defeating patterns of thought. We will also discuss how we can make feelings of depression less intense and prevent episodes from occurring again. Does that sound good to you?(yes|no)
     </template>
 </category>
 
 <!-- USER AGREEMENT/DISAGREEMENT TO TALK TO RYAN -->
-<!-- ADD IN LINE OF CODE FOR SUICIDE HOTLINE IMAGE -->
+
+<!-- USER WANTS TO TALK TO RYAN -->
 <category>
     <pattern><set>yes</set></pattern>
     <that>DOES THAT SOUND GOOD TO YOU?</that>
     <template>
-        Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
-        people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please
-        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png,duration:-1
+        Good I'm glad we'll be working together! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please seek out a real person, contact the National Suicide Prevention Lifeline, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png,duration:-1
     </template>
 </category>
 
@@ -47,9 +47,7 @@
     <pattern><set>no</set></pattern>
     <that>DOES THAT SOUND GOOD TO YOU?</that>
     <template>
-        I'm sorry to hear that <get name = "userName"/>. I didn't mean to imply that I am going to fix you, because you certainly don't need fixing. I just want to help you
-        think about yourself in the best way possible because you are incredible! If you truly don't want to talk to me, I understand. I'm never going to force you to do
-        anything. What do you say? Do you want to try me out for just a little bit and see what you think?(yes|no)
+        I'm sorry to hear that <get name = "userName"/>. I didn't mean to imply that I am going to fix you, because you certainly don't need fixing. I just want to help you think about yourself in the best way possible because you are incredible! If you truly don't want to talk to me, I understand. I'm never going to force you to do anything. What do you say? Do you want to try me out for just a little bit and see what you think?(yes|no)
     </template>
 </category>
 
@@ -65,14 +63,12 @@
 
 
 <!-- IF USER CHANGES MIND ABOUT NOT WANTING TO TALK TO RYAN -->
-<!-- ADD IN LINE OF CODE FOR SUICIDE HOTLINE IMAGE -->
 <category>
     <pattern><set>yes</set></pattern>
     <that>DO YOU WANT TO TRY ME OUT FOR JUST A LITTLE BIT AND SEE WHAT YOU THINK?</that>
     <template>
         Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
-        people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please
-        seek out a real person, contact the National Suicide Prevention Hot-line, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png,duration:-1
+        people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please seek out a real person, contact the National Suicide Prevention Lifeline, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png,duration:-1
     </template>
 </category>
 
@@ -91,8 +87,7 @@
     <pattern>I AM READY</pattern>
     <that>WHEN YOU'RE READY, JUST SAY I AM READY!</that>
     <template>
-        Great! Since we're going to be spending a lot of time together, it might be nice to get to know each other a little. As I said, my name is Ryan and I'm a social
-        companion robot. My goal is to help people that need it most. Why don't you tell me a little about yourself? For example, where did you grow up?
+        Great! Since we're going to be spending a lot of time together, it might be nice to get to know each other a little. As I said, my name is Ryan and I'm a social companion robot. My goal is to help people that need it most. Why don't you tell me a little about yourself? For example, where did you grow up?#image:clrscr,duration:-1
     </template>
 </category>
 
@@ -102,10 +97,10 @@
     <pattern><set>yes</set></pattern>
     <that>ARE YOU READY TO START?</that>
     <template>
-        Great! Since we're going to be spending a lot of time together, it might be nice to get to know each other a little. As I said, my name is Ryan and I'm a social
-        companion robot. My goal is to help people that need it most. Why don't you tell me a little about yourself? For example, where did you grow up?#image:clrscr,duration:-1
+        Great! Since we're going to be spending a lot of time together, it might be nice to get to know each other a little. As I said, my name is Ryan and I'm a social companion robot. My goal is to help people that need it most. Why don't you tell me a little about yourself? For example, where did you grow up?#image:clrscr,duration:-1
     </template>
 </category>
+
 
 <category>
     <pattern>*</pattern>
@@ -116,43 +111,27 @@
     </template>
 </category>
 
+
 <category>
     <pattern>*</pattern>
     <that>LIKE WHAT ABOUT YOURSELF DO YOU FIND IMPORTANT?</that>
     <template>
         <!-- <think><set name = "userInfoImportant"><star/></set></think> -->
         That's great! Thank you for your answers. I look forward to learning more about you as time goes on. As I mentioned earlier, my goal is to help lessen your
-        feelings of depression and help you feel more in control of your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts
-        a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. Do you know some of the symptoms of clinical depression?(yes|no) 
+        feelings of depression and help you feel more in control of your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. What do you think are some of the symptoms of clinical depression?
     </template>
 </category>
 
-<!-- USER DOESN'T KNOW SYMPTOMS -->
-<!-- #image:symptomsPicName.jpg,duration:10 -->
+
+<!-- SYMPTOMS OF CLINICAL DEPRESSION -->
 <category>
-    <pattern><set>no</set></pattern>
-    <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?</that>
+    <pattern>*</pattern>
+    <that>WHAT DO YOU THINK ARE SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?</that>
     <template>
-        I'm happy to show you some of the most common ones! I've displayed some of the most common symptoms on your tablet. Remember each symptom type interact together. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when
-        you feel depressed?#image:symptoms3.jpg,duration:-1
+        Those are some great examples! I've displayed some of the most common symptoms on your tablet. Remember all types of symptoms interact with each other. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when you feel depressed?#image:symptoms3.jpg,duration:-1
     </template>
 </category>
 
-
-<!-- USER KNOWS SYMPTOMS (CONTINUE WITH DIALOGUE) -->
-<!-- START OF INTRODUCTORY QUESTIONS -->
-<category>
-    <pattern><set>yes</set></pattern>
-    <that>DO YOU KNOW SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?</that>
-    <template>
-        Good I'm glad you're familiar with it. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone.
-        Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of
-        thoughts go through your mind when you feel depressed?
-    </template>
-</category>
-
-
-<!-- THESE VARIABLES BELOW CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
 
 <category>
     <pattern>*</pattern>
@@ -169,8 +148,7 @@
     <that>WHAT DO YOU DO WHEN YOU ARE DEPRESSED?</that>
     <template>
         <!--<think><set name = "depressedActions"><star/></set></think>-->
-        Thank you <get name = "userName"/>! You're doing great.  It's important for us to be aware of our actions so we can analyze them further. Now what about those around
-        you? How do you feel you get along with other people when you are depressed?
+        Thank you <get name = "userName"/>! You're doing great.  It's important for us to be aware of our actions so we can analyze them further. Now what about those around you? How do you feel you get along with other people when you are depressed?
     </template>
 </category>
 
@@ -180,8 +158,17 @@
     <that>HOW DO YOU FEEL YOU GET ALONG WITH OTHER PEOPLE WHEN YOU ARE DEPRESSED?</that>
     <template>
         <!--<think><set name = "othersInteractions"><star/></set></think>-->
-        That's an interesting observation! I have just have one more question for you. This may be a tough one, so try and answer as best as you can. What do you think is the
-        cause of your depression?
+        That's an interesting observation! This next question may be a tough one, so try and answer as best as you can. What do you think is the cause of your depression?
+    </template>
+</category>
+
+
+<category>
+    <pattern>*</pattern>
+    <that>WHAT DO YOU THINK IS THE CAUSE OF YOUR DEPRESSION?</that>
+    <template>
+        <!--<think><set name = "depressionCauses"><star/></set></think>-->
+        Thank you for answering that <get name = "userName"/>. I know trying to put something as complex as depression into words isn't easy. I have just one more question for you. What do you do to manage your depression? 
     </template>
 </category>
 
@@ -189,15 +176,10 @@
 <!-- INTRO TO DAILY MOOD SCALE -->
 <category>
     <pattern>*</pattern>
-    <that>WHAT DO YOU THINK IS THE CAUSE OF YOUR DEPRESSION?</that>
+    <that>WHAT DO YOU DO TO MANAGE YOUR DEPRESSION?</that>
     <template>
         <!--<think><set name = "depressionCauses"><star/></set></think>-->
-        Thank you for answering that <get name = "userName"/>. I know trying to put something as complex as depression into words isn't easy. These questions may have seemed
-        surprising, but I promise there is a reason for them. The things we tell ourselves, or our thoughts, can make it more or less likely you will become depressed.
-        In fact, thoughts can have a profound effect on your mood, actions, and even your body. Instead of thinking of this as me lecturing you, I want you to think of our
-        sessions as a way to learn specific methods to change your thoughts and actions so that your mood will improve. Since we will be focusing on your thoughts and moods
-        throughout our time together, I want you to try and keep track of your moods on a daily basis. My human companion will give you a sheet to help with this. When you
-        have it, say ready and I will give you some instructions.(ready)
+        I see. These questions may have seemed surprising, but I promise there is a reason for them. The things we tell ourselves, or our thoughts, can make it more or less likely you will become depressed. In fact, thoughts can have a profound effect on your mood, actions, and even your body. Instead of thinking of this as me lecturing you, I want you to think of our sessions as a way to learn specific methods to change your thoughts and actions so that your mood will improve. Since we will be focusing on your thoughts and moods throughout our time together, I want you to try and keep track of your moods on a daily basis. My assistant will give you a sheet to help with this. When you have it, say ready and I will give you some instructions.(ready)
     </template>
 </category>
 
@@ -207,10 +189,7 @@
     <pattern>READY</pattern>
     <that>WHEN YOU HAVE IT, SAY READY AND I WILL GIVE YOU SOME INSTRUCTIONS.</that>
     <template>
-        Great! As I mentioned earlier, to make this a valuable exercise, this scale should be filled out each and every day. Find a time before you go to bed to take out the
-        scale and think about what your mood was like for that day. You can then circle a number for that day from 9 being the best mood you can imagine to 1 being the worst
-        mood you can imagine. Generally average moods will be around 5 and the extremes will not be used as often. Additionally, the bottom of the scale has a place for you to
-        jot down the number of positive and negative thoughts you have each day. This tally will help you see how the thought exercises we try each week impact your depression. Does this make sense?(yes|no)
+        Great! As I mentioned earlier, to make this a valuable exercise, this scale should be filled out each and every day. Find a time before you go to bed to take out the scale and think about what your mood was like for that day. You can then circle a number for that day from 9 being the best mood you can imagine to 1 being the worst mood you can imagine. Generally average moods will be around 5 and the extremes will not be used as often. Additionally, the bottom of the scale has a place for you to jot down the number of positive and negative thoughts you have each day. This tally will help you see how the thought exercises we try each week impact your depression. Does this make sense?(yes|no)
     </template>
 </category>
 
@@ -229,7 +208,7 @@
     <pattern><set>no</set></pattern>
     <that>DOES THIS MAKE SENSE?</that>
     <template>
-        Sorry for the confusion! My assistant here will explain any of the details I missed. Try and remember to use your mood scale each day. Before you go, I am going to show you a video you might find interesting.
+        Sorry for the confusion! My helper here will explain any of the details I missed. Try and remember to use your mood scale each day. Before you go, I am going to show you a video you might find interesting.
     </template>
 </category>
 
@@ -247,7 +226,7 @@
     <pattern>*</pattern>
     <that>WHAT DID YOU THINK ABOUT IT?</that>
     <template>
-        I'm glad you got something meaningful out of it! It's important to remember that depression has a biological basis that we are learning more about each day. That's all I have for today. I know this session was a little short, but we will talk more in the coming sessions. I'll see you next time <get name = "userName"/>. Goodbye!
+        I'm glad you got something meaningful out of it! It's important to remember that depression has a biological basis that we are learning more about each day. That's all I planned for today. I know this session was a little short, but we will talk more in the coming sessions. I'll see you next time <get name = "userName"/>. Goodbye!
     </template>
 </category>
 
