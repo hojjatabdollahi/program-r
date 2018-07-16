@@ -67,8 +67,7 @@
     <pattern><set>yes</set></pattern>
     <that>DO YOU WANT TO TRY ME OUT FOR JUST A LITTLE BIT AND SEE WHAT YOU THINK?</that>
     <template>
-        Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other
-        people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please seek out a real person, contact the National Suicide Prevention Lifeline, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png,duration:-1
+        Awesome! First, I guess I should tell you a little bit about what our sessions will look like. Together, we will look at how thoughts, activities, and other people affect your mood. The most important thing to remember is that I'm a companion robot and not a licensed therapist. If you ever need immediate help, please seek out a real person, contact the National Suicide Prevention Lifeline, or your local emergency services. Enough about that! Let's focus on you. Are you ready to start?(yes|no)#image:hotline.png,duration:-1
     </template>
 </category>
 
@@ -107,7 +106,7 @@
     <that>FOR EXAMPLE, WHERE DID YOU GROW UP?</that>
     <template>
         <!-- <think><set name = "userGrowUp"><star/></set></think> -->
-         Wow that's amazing  <get name = "userName"/>! Is there anything else you might want to tell me about yourself? Like what about yourself do you find important?
+         Great thanks for sharing. How about another question? Is there anything else you might want to tell me about yourself? Like what about yourself do you find important?
     </template>
 </category>
 
@@ -117,8 +116,7 @@
     <that>LIKE WHAT ABOUT YOURSELF DO YOU FIND IMPORTANT?</that>
     <template>
         <!-- <think><set name = "userInfoImportant"><star/></set></think> -->
-        That's great! Thank you for your answers. I look forward to learning more about you as time goes on. As I mentioned earlier, my goal is to help lessen your
-        feelings of depression and help you feel more in control of your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. What do you think are some of the symptoms of clinical depression?
+        That's great! Thank you for your answers. I look forward to learning more about you as time goes on. As I mentioned earlier, my goal is to help lessen your feelings of depression and help you feel more in control of your life. As I'm sure you know, depression can be a feeling that lasts a few minutes, a mood that lasts a few hours, or a clinical condition that lasts at least two weeks. We will be focusing on clinical depression. What do you think are some of the symptoms of clinical depression?
     </template>
 </category>
 
@@ -128,7 +126,7 @@
     <pattern>*</pattern>
     <that>WHAT DO YOU THINK ARE SOME OF THE SYMPTOMS OF CLINICAL DEPRESSION?</that>
     <template>
-        Those are some great examples! I've displayed some of the most common symptoms on your tablet. Remember all types of symptoms interact with each other. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when you feel depressed?#image:symptoms3.jpg,duration:-1
+        I see. I've displayed some of the most common symptoms on your tablet. Remember all types of symptoms interact with each other. While these symptoms are common amongst those suffering from depression, they do not manifest the same way for everyone. Let's go through some questions to think about what depression is like for you. Feel free to be as detailed as you are comfortable with. To start, what kinds of thoughts go through your mind when you feel depressed?#image:symptoms3.jpg,duration:-1
     </template>
 </category>
 
@@ -138,7 +136,7 @@
     <that>TO START, WHAT KINDS OF THOUGHTS GO THROUGH YOUR MIND WHEN YOU FEEL DEPRESSED?</that>
     <template>
         <!--<think><set name = "depressedThoughts"><star/></set></think>-->
-        I see. I can understand how those thoughts can easily become overwhelming. Let's consider your actions too. What do you do when you are depressed?#image:clrscr,duration:-1
+        Ok let's move on. Let's consider your actions too. What do you do when you are depressed?#image:clrscr,duration:-1
     </template>
 </category>
 
@@ -148,7 +146,7 @@
     <that>WHAT DO YOU DO WHEN YOU ARE DEPRESSED?</that>
     <template>
         <!--<think><set name = "depressedActions"><star/></set></think>-->
-        Thank you <get name = "userName"/>! You're doing great.  It's important for us to be aware of our actions so we can analyze them further. Now what about those around you? How do you feel you get along with other people when you are depressed?
+        Thank you <get name = "userName"/>! You're doing great. It's important for us to be aware of our actions so we can analyze them further. Now what about those around you? How do you feel you get along with other people when you are depressed?
     </template>
 </category>
 
@@ -158,7 +156,7 @@
     <that>HOW DO YOU FEEL YOU GET ALONG WITH OTHER PEOPLE WHEN YOU ARE DEPRESSED?</that>
     <template>
         <!--<think><set name = "othersInteractions"><star/></set></think>-->
-        That's an interesting observation! This next question may be a tough one, so try and answer as best as you can. What do you think is the cause of your depression?
+        Ok thank you we can continue now. This next question may be a tough one, so try and answer as best as you can. What do you think is the cause of your depression?
     </template>
 </category>
 
@@ -168,7 +166,7 @@
     <that>WHAT DO YOU THINK IS THE CAUSE OF YOUR DEPRESSION?</that>
     <template>
         <!--<think><set name = "depressionCauses"><star/></set></think>-->
-        Thank you for answering that <get name = "userName"/>. I know trying to put something as complex as depression into words isn't easy. I have just one more question for you. What do you do to manage your depression? 
+        I see. I know trying to put something as complex as depression into words isn't easy. Just one more question for you. What do you do to manage your depression?
     </template>
 </category>
 
@@ -179,7 +177,7 @@
     <that>WHAT DO YOU DO TO MANAGE YOUR DEPRESSION?</that>
     <template>
         <!--<think><set name = "depressionCauses"><star/></set></think>-->
-        I see. These questions may have seemed surprising, but I promise there is a reason for them. The things we tell ourselves, or our thoughts, can make it more or less likely you will become depressed. In fact, thoughts can have a profound effect on your mood, actions, and even your body. Instead of thinking of this as me lecturing you, I want you to think of our sessions as a way to learn specific methods to change your thoughts and actions so that your mood will improve. Since we will be focusing on your thoughts and moods throughout our time together, I want you to try and keep track of your moods on a daily basis. My assistant will give you a sheet to help with this. When you have it, say ready and I will give you some instructions.(ready)
+        Ok great. These questions may have seemed surprising, but I promise there is a reason for them. The things we tell ourselves, or our thoughts, can make it more or less likely you will become depressed. In fact, thoughts can have a profound effect on your mood, actions, and even your body. Instead of thinking of this as me lecturing you, I want you to think of our sessions as a way to learn specific methods to change your thoughts and actions so that your mood will improve. Since we will be focusing on your thoughts and moods throughout our time together, I want you to try and keep track of your moods on a daily basis. My assistant will give you a sheet to help with this. When you have it, say ready and I will give you some instructions.(ready)
     </template>
 </category>
 
