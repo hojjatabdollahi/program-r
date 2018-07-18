@@ -31,7 +31,7 @@ class ClientConnection(object):
         self._max_buffer = max_buffer
 
     def receive_data(self):
-        json_data = self._clientsocket.recv(self._max_buffer).decode()
+        json_data = self._clientsocket._recv(self._max_buffer).decode()
         YLogger.debug(self, "Received: %s", json_data)
         return json.loads(json_data, encoding="utf-8")
 

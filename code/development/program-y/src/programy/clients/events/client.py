@@ -17,12 +17,13 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 from programy.config.file.yaml_file import YamlConfigurationFile
 from programy.utils.logging.ylogger import YLogger
-
+from programy.majordomo.request import ReadyRequest, UserRequest, SessionRequest, QuestionRequest
 from programy.clients.client import BotClient
 from programy.majordomo.mdwrkapi import MajorDomoWorker
 
 import os
 from datetime import datetime
+import yaml
 
 class EventBotClient(BotClient):
 
@@ -55,15 +56,33 @@ class EventBotClient(BotClient):
 
 
 
+    def worker_run_loop_new(self):
+        majordomo_worker = MajorDomoWorker(self.configuration.client_configuration)
+        response = None
+
+        while True:
+            request = majordomo_worker.receive(response)
+            if request is None:
+                break  # Worker was interrupted
+
+            if request is ReadyRequest:
+                response = request.command
+
+            elif request is UserRequest:
+                pass
+
+
+
+
 
     def worker_run_loop(self):
         #todo Needs a major refactor to clean this as much as possible
         #todo read the configuration from the programy configuration mechanism
         #todo login should be done with Ylogger
+        #todo save conversations to database
         #self.configuration.client_configuration.configurations[0]
 
         root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-        import yaml
         filepath = os.path.join(root, "bots//ryan//config.yaml")
         with open(filepath, encoding="utf-8") as file_reader:
             self._yaml_dict = yaml.load(file_reader)
@@ -81,7 +100,7 @@ class EventBotClient(BotClient):
         session_file = ""
         while True:
             ### pre dialog computations
-            request = worker.recv(response)
+            request = worker._recv(response)
             if request is None:
                 break  # Worker was interrupted
 
@@ -216,63 +235,25 @@ class EventBotClient(BotClient):
         pass
 
     def run(self):
+        #todo refactor to move this out of here
+        root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
+        filepath = os.path.join(root, "bots//ryan//config.yaml")
+        with open(filepath, encoding="utf-8") as file_reader:
+            self._yaml_dict = yaml.load(file_reader)
+
+        worker_running = self._yaml_dict["broker"]["running"]
 
         if self.arguments.noloop is False:
             YLogger.info(self, "Entering conversation loop...")
 
             self.prior_to_run_loop()
 
-            self.run_loop()
-            #self.worker_run_loop()
+            if worker_running:
+                self.worker_run_loop()
+            else:
+                self.run_loop()
 
             self.post_run_loop()
 
         else:
             YLogger.debug(self, "noloop set to True, exiting...")
-
-
-
-if __name__ == "__main__":
-    def dictionary_of_response(response):
-        answers = []
-        image_filename = ""
-        duration = ""
-        video_filename = ""
-        response_part = ""
-        if "(" in response:
-            parts = response.split("(")
-            response_part = parts[0]
-            answers = parts[1].split(")")[0].split("|")
-
-        if "#" in response:
-            parts = response.split("#")
-            response = parts[0]
-            if "image" in parts[1]:
-                image = parts[1].strip("#").split(",")[0]
-                image_filename = image.split(":")[1]
-                if len(parts[1].strip("#").split(",")) > 1:
-                    duration = parts[1].strip("#").split(",")[1]
-                    duration = duration.split(":")[1]
-
-            if "video" in parts[1]:
-                video_filename = parts[1].split(":")[1]
-
-        if "#" not in response and "(" not in response:
-            response_part = response
-
-        return {"conversation":
-                    {"question": "",
-                     "response": response_part,
-                     "answer": answers
-                     },
-                "image":
-                    {"filename": image_filename,
-                     "duration": duration
-                     },
-                "video":
-                    {
-                        "filename": video_filename
-                    }
-                }
-    r = dictionary_of_response("Hi df! My name is ff, and I am very pleased to meet you. Just talk to me normally and I will reply the best I can. Got it?#video:v.mp4")
-    print(r)

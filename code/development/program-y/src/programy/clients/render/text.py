@@ -29,11 +29,11 @@ class TextRenderer(RichMediaRenderer):
     def handle_text(self, client_context, text):
         if self._client:
             #TODO the code below added by rohola
-            if client_context.bot._conversations["Console"].questions:
-                if client_context.bot._conversations["Console"].questions[-1].sentences[-1]._no_response:
-                    default_repeat_response = "Can you repeat yourself?"
-                    self._client.process_response(client_context, default_repeat_response)
-                    return default_repeat_response
+            # if client_context.bot._conversations[client_context].questions:
+            #     if client_context.bot._conversations["Console"].questions[-1].sentences[-1]._no_response:
+            #         default_repeat_response = "Can you repeat yourself?"
+            #         self._client.process_response(client_context, default_repeat_response)
+            #         return default_repeat_response
             ################################
             self._client.process_response(client_context, text['text'])
         return text

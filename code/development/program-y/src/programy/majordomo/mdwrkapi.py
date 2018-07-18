@@ -9,6 +9,9 @@ Based on Java example by Arkadiusz Orzechowski
 import logging
 import time
 import zmq
+
+from programy.clients.events.majordomo.config import MajorDomoConfiguration
+from programy.majordomo.request import ReadyRequest, UserRequest, SessionRequest, QuestionRequest
 from programy.majordomo.zhelpers import dump
 # MajorDomo protocol constants:
 from programy.majordomo import MDP
@@ -40,10 +43,10 @@ class MajorDomoWorker(object):
     # Return address, if any
     reply_to = None
 
-    def __init__(self, broker, service, verbose=False):
-        self.broker = broker
-        self.service = service
-        self.verbose = verbose
+    def __init__(self, majordomo_config: MajorDomoConfiguration):
+        self.broker = majordomo_config.ip
+        self.service = majordomo_config.service_name
+        self.verbose = majordomo_config.verbose
         self.ctx = zmq.Context()
         self.poller = zmq.Poller()
         logging.basicConfig(format="%(asctime)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",
@@ -98,7 +101,7 @@ class MajorDomoWorker(object):
 
         self.worker.send_multipart(msg2)
 
-    def recv(self, reply=None):
+    def _recv(self, reply=None):
         """Send reply, if any, to broker and wait for next request."""
         # Format and send the reply if we were provided one
         assert reply is not None or not self.expect_reply
@@ -189,3 +192,34 @@ class MajorDomoWorker(object):
     def destroy(self):
         # context.destroy depends on pyzmq >= 2.1.10
         self.ctx.destroy(0)
+
+
+    def receive(self, reply=None):
+        request = self._recv(reply)
+        request_object = self.convert_to_request_object(request)
+        return request_object
+
+
+    def convert_to_request_object(self, request):
+        if len(request)==1:
+            if request[0]=="ready":
+                ready_request = ReadyRequest("ready")
+                return ready_request
+
+        if len(request)==2:
+            if request[0]=="user":
+                username = request[1]
+                user_request = UserRequest("user", username)
+                return user_request
+
+            if request[0]=="session":
+                session_number = request[1]
+                session_request = SessionRequest("session", session_number)
+                return session_request
+
+            if request[0]=="question":
+                question = request[1]
+                question_request = QuestionRequest("question", question)
+                return question_request
+
+        return None

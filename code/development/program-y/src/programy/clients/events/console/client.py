@@ -78,9 +78,29 @@ class ConsoleBotClient(EventBotClient):
             YLogger.exception(self, "Oops something bad happened !", excep)
         return running
 
+
+    def run_loop(self):
+        print("ok")
+
     def prior_to_run_loop(self):
         client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
         self.display_startup_messages(client_context)
+
+
+    def run(self):
+        if self.arguments.noloop is False:
+            YLogger.info(self, "Entering conversation loop...")
+
+            self.prior_to_run_loop()
+
+            self.run_loop()
+
+            self.post_run_loop()
+
+        else:
+            YLogger.debug(self, "noloop set to True, exiting...")
+
+
 
 
 if __name__ == '__main__':
