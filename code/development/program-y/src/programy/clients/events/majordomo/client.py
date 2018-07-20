@@ -1,37 +1,19 @@
-"""
-Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-documentation files (the "Software"), to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
-and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
-Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
-
+from programy.clients.events.client import EventBotClient
+from programy.clients.events.majordomo.config import MajorDomoConfiguration
 from programy.utils.logging.ylogger import YLogger
 
-from programy.clients.events.client import EventBotClient
-from programy.clients.events.console.config import ConsoleConfiguration
 
-class ConsoleBotClient(EventBotClient):
+class MajorDomoBotClient(EventBotClient):
 
     def __init__(self, argument_parser=None):
         self.running = False
-        EventBotClient.__init__(self, "Console", argument_parser)
-        a=1
+        EventBotClient.__init__(self, "majordomo", argument_parser)
 
     def get_description(self):
-        return 'ProgramY AIML2.0 Console Client'
+        return 'ProgramY AIML2.0 MajorDomo Client'
 
     def get_client_configuration(self):
-        return ConsoleConfiguration()
+        return MajorDomoConfiguration()
 
     def add_client_arguments(self, parser=None):
         return
@@ -50,7 +32,7 @@ class ConsoleBotClient(EventBotClient):
 
     def process_question(self, client_context, question):
         # Returns a response
-        return client_context.bot.ask_question(client_context , question, responselogger=self)
+        return client_context.bot.ask_question(client_context, question, responselogger=self)
 
     def render_response(self, client_context, response):
         # Calls the renderer which handles RCS context, and then calls back to the client to show response
@@ -64,11 +46,10 @@ class ConsoleBotClient(EventBotClient):
         response = self.process_question(client_context, question)
         self.render_response(client_context, response)
 
-
     def wait_and_answer(self, client_context):
         running = True
         try:
-            #client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
+            # client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
             self.process_question_answer(client_context)
         except KeyboardInterrupt as keye:
             running = False
@@ -78,10 +59,9 @@ class ConsoleBotClient(EventBotClient):
             YLogger.exception(self, "Oops something bad happened !", excep)
         return running
 
-
-
     def prior_to_run_loop(self):
-        client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
+        userid = "MajorDomo"
+        client_context = self.create_client_context(userid)
         self.display_startup_messages(client_context)
 
 
@@ -91,7 +71,7 @@ class ConsoleBotClient(EventBotClient):
 
             self.prior_to_run_loop()
 
-            self.run_loop()
+            self.worker_run_loop_new()
 
             self.post_run_loop()
 
@@ -102,10 +82,12 @@ class ConsoleBotClient(EventBotClient):
 
 
 if __name__ == '__main__':
-
     def run():
         print("Loading, please wait...")
-        console_app = ConsoleBotClient()
-        console_app.run()
+        majordomo_app = MajorDomoBotClient()
+        majordomo_app.run()
+
 
     run()
+
+

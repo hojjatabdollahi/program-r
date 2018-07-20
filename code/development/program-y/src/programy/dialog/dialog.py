@@ -82,6 +82,48 @@ class Sentence(object):
         return self._tokenizer.texts_to_words(text)
 
 
+class Answer(object):
+    def __init__(self, srai=False):
+        self._srai = srai
+        self._sentences = []
+        self._properties = {}
+        self._current_sentence_no = -1
+
+    @staticmethod
+    def create_from_text(tokenizer, text, sentence_split_chars: str = ".", split=True, srai=False):
+        answer = Answer(srai)
+        if split is True:
+            answer.split_into_sentences(text, sentence_split_chars, tokenizer)
+        else:
+            answer.sentences.append(Sentence(tokenizer, text))
+        return answer
+
+    @staticmethod
+    def create_from_sentence(sentence: Sentence, srai=False):
+        answer = Answer(srai)
+        answer.sentences.append(sentence)
+        return answer
+
+    @property
+    def sentences(self):
+        return self._sentences
+
+
+    def sentence(self, num: int):
+        if num < len(self._sentences):
+            return self._sentences[num]
+        raise Exception("Num sentence array violation !")
+
+
+    def split_into_sentences(self, text: str, sentence_split_chars: str, tokenizer):
+        if text is not None and text.strip():
+            self._sentences = []
+            all_sentences = text.split(sentence_split_chars)
+            for each_sentence in all_sentences:
+                if each_sentence.rstrip():
+                    self._sentences.append(Sentence(tokenizer, each_sentence))
+
+
 class Question(object):
 
     #TODO Move sentence_split_charts into a property of tokenizer and move functionality into that class
@@ -185,8 +227,14 @@ class Conversation(object):
         self._nlp = spacy.load('en')
         self._client_context = client_context
         self._questions = []
+        self._answers = []
         self._max_histories = client_context.bot.configuration.conversations.max_histories
         self._properties = {'topic': client_context.bot.configuration.conversations.initial_topic}
+
+
+    @property
+    def answers(self):
+        return self._answers
 
     @property
     def questions(self):
@@ -226,11 +274,19 @@ class Conversation(object):
                 return self._properties[name]
         return None
 
-    def record_dialog(self, question: Question):
+    def record_question(self, question: Question):
         if len(self._questions) == self._max_histories:
-            YLogger.info(self, "Conversation history at max [%d], removing oldest", self._max_histories)
+            YLogger.info(self, "Conversation history at max [%d], removing oldest question", self._max_histories)
             self._questions.remove(self._questions[0])
         self._questions.append(question)
+
+
+    def record_answer(self, answer):
+        if len(self._answers) == self._max_histories:
+            YLogger.info(self, "Conversation history at max [%d], removing oldest answer", self._max_histories)
+            self._answers.remove(self._answers[0])
+        self._answers.append(answer)
+
 
     def pop_dialog(self):
         if self._questions:

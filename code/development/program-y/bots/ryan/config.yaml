@@ -15,6 +15,8 @@ majordomo:
   service_name: "echo"
   verbose: false
 
+
+
 bot:
     brain: brain
 
@@ -36,6 +38,18 @@ bot:
       corpus: $BOT_ROOT/spelling/corpus.txt
       check_before: false
       check_and_retry: false
+
+    conversations:
+      max_histories: 100
+      initial_topic: "*"
+      restore_last_topic: false
+      type: file
+      config_name: file_config
+      empty_on_start: false
+
+    file_config:
+      dir: /home/rohola/Codes/Ryan/RyanCBT/code/development/program-y/results
+
 
 brain:
 
@@ -77,6 +91,7 @@ brain:
             errors: /tmp/alice2_errors.txt
             #duplicates: /tmp/alice2_duplicates.txt
             conversation: /tmp/y-bot-conversation.csv
+              #type: file
 #              file: /tmp/y-bot-conversation.csv
 #              format: csv
 #              delete_on_start: true

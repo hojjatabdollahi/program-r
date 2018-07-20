@@ -27,4 +27,5 @@ class ToUpperPreProcessor(PreProcessor):
 
     def process(self, context, word_string):
         YLogger.debug(context, "Making input upper case...")
-        return word_string.upper()
+        #return word_string.upper()
+        return word_string

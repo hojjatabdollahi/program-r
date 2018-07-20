@@ -29,7 +29,7 @@ class ConversationStorage(object):
         """
 
     @abstractmethod
-    def save_conversation(self, conversation, clientid):
+    def save_conversation(self, client_context):
         """
         Never Implemented
         """

@@ -20,7 +20,7 @@ class ConversationRedisStorageTests(unittest.TestCase):
         conversation1.set_property("topic", "topic1")
 
         question = client_context.bot.get_question(client_context, "hello", srai=False)
-        conversation1.record_dialog(question)
+        conversation1.record_question(question)
 
         redis.save_conversation(conversation1, client_context.userid)
 

@@ -50,7 +50,7 @@ class PropertiesAdminExtensionTests(unittest.TestCase):
 
         question = Question()
         conversation = client_context.bot.get_conversation(client_context)
-        conversation.record_dialog(question)
+        conversation.record_question(question)
         conversation.set_property("PROP1", "Value1")
 
         extension = PropertiesAdminExtension()

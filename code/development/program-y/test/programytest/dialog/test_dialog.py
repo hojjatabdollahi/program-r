@@ -185,20 +185,20 @@ class ConversationTests(unittest.TestCase):
             conversation.previous_nth_question(0)
 
         question1 = Question.create_from_text(client_context.brain.tokenizer, "Hello There")
-        conversation.record_dialog(question1)
+        conversation.record_question(question1)
         self.assertEqual(question1, conversation.current_question())
         with self.assertRaises(Exception):
             conversation.previous_nth_question(1)
 
         question2 = Question.create_from_text(client_context.brain.tokenizer, "Hello There Again")
-        conversation.record_dialog(question2)
+        conversation.record_question(question2)
         self.assertEqual(question2, conversation.current_question())
         self.assertEqual(question1, conversation.previous_nth_question(1))
         with self.assertRaises(Exception):
             conversation.previous_nth_question(3)
 
         question3 = Question.create_from_text(client_context.brain.tokenizer, "Hello There Again Again")
-        conversation.record_dialog(question3)
+        conversation.record_question(question3)
         self.assertEqual(question3, conversation.current_question())
         self.assertEqual(question2, conversation.previous_nth_question(1))
         with self.assertRaises(Exception):
@@ -208,7 +208,7 @@ class ConversationTests(unittest.TestCase):
         # Therefore we should see the first question, pop of the stack
 
         question4 = Question.create_from_text(client_context.brain.tokenizer, "Hello There Again Again Again")
-        conversation.record_dialog(question4)
+        conversation.record_question(question4)
         self.assertEqual(question4, conversation.current_question())
         self.assertEqual(question3, conversation.previous_nth_question(1))
         with self.assertRaises(Exception):

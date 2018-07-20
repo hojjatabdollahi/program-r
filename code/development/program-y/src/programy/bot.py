@@ -19,7 +19,7 @@ import logging
 from programy.utils.logging.ylogger import YLogger
 
 from programy.brain import Brain
-from programy.dialog.dialog import Conversation, Question, Sentence
+from programy.dialog.dialog import Conversation, Question, Answer, Sentence
 from programy.dialog.storage.factory import ConversationStorageFactory
 from programy.config.bot.bot import BotConfiguration
 from programy.utils.classes.loader import ClassLoader
@@ -236,7 +236,7 @@ class Bot(object):
                 self._conversation_storage = ConversationStorageFactory.get_storage(self.configuration)
                 if self._conversation_storage is not None:
                     if self.configuration.conversations.empty_on_start is True:
-                        self._conversation_storage.empty ()
+                        self._conversation_storage.empty()
 
     def load_conversation(self, clientid):
         if self._conversation_storage is not None:
@@ -245,13 +245,12 @@ class Bot(object):
                 self._conversation_storage.load_conversation(conversation, clientid,
                                                              self.configuration.conversations.restore_last_topic)
 
-    def save_conversation(self, clientid):
+    def save_conversation(self, client_context):
         if self._conversation_storage is not None:
-            if clientid in self._conversations:
-                conversation = self._conversations[clientid]
-                self._conversation_storage.save_conversation(conversation, clientid)
+            if client_context.userid in self._conversations:
+                self._conversation_storage.save_conversation(client_context)
             else:
-                YLogger.error(self, "Unknown conversation id type [%s] unable tonot persist!", clientid)
+                YLogger.error(self, "Unknown conversation id type [%s] unable tonot persist!", client_context.userid)
 
     def check_spelling_before(self, each_sentence):
         # TODO Move this to spelliing base class
@@ -325,6 +324,15 @@ class Bot(object):
         else:
             return Question.create_from_text(client_context.brain.tokenizer, pre_processed, split=False, srai=srai)
 
+
+    def get_answer(self, client_context, pre_processed, srai=False):
+        pre_processed = ". ".join(pre_processed)
+        if srai is False:
+            return Answer.create_from_text(client_context.brain.tokenizer, pre_processed, srai=srai)
+        else:
+            return Answer.create_from_text(client_context.brain.tokenizer, pre_processed, split=False, srai=srai)
+
+
     def combine_answers(self, answers):
         return ". ".join([sentence for sentence in answers if sentence is not None])
 
@@ -357,23 +365,30 @@ class Bot(object):
 
         question = self.get_question(client_context, pre_processed, srai)
 
-        conversation = self.get_conversation(client_context)
-
-        conversation.record_dialog(question)
-
 
 
         # file_obj_read = open("/home/rohola/conv_questions.p", 'rb')
         # questions = pickle.load(file_obj_read)
         # client_context.brain.bot.set_conversation_question(client_context, questions)
 
+        conversation = self.get_conversation(client_context)
+
+        conversation.record_question(question)
+
+
         answers = []
         sentence_no = 0
         for sentence in question.sentences:
             question.set_current_sentence_no(sentence_no)
-            answer = self.process_sentence(client_context, sentence, srai, responselogger)
-            answers.append(answer)
+            answer_text = self.process_sentence(client_context, sentence, srai, responselogger)
+            answers.append(answer_text)
             sentence_no += 1
+
+
+        answer = self.get_answer(client_context, answers)
+        conversation.record_answer(answer)
+
+
 
         client_context.reset_question()
 

@@ -96,11 +96,11 @@ class TemplateThatStarNodeTests(ParserTestsBaseClass):
 
         question = Question.create_from_text(self._client_context.brain.tokenizer, "Hello world")
         question.current_sentence()._response = "Hello matey"
-        conversation.record_dialog(question)
+        conversation.record_question(question)
 
         question = Question.create_from_text(self._client_context.brain.tokenizer, "How are you")
         question.current_sentence()._response = "Very well thanks"
-        conversation.record_dialog(question)
+        conversation.record_question(question)
 
         self._client_context.bot._conversations["testid"] = conversation
 
@@ -115,17 +115,17 @@ class TemplateThatStarNodeTests(ParserTestsBaseClass):
 
         question = Question.create_from_text(self._client_context.brain.tokenizer, "Hello world")
         question.current_sentence()._response = "Hello matey"
-        conversation.record_dialog(question)
+        conversation.record_question(question)
 
         question = Question.create_from_text(self._client_context.brain.tokenizer, "How are you")
         question.current_sentence()._response = "Very well thanks"
-        conversation.record_dialog(question)
+        conversation.record_question(question)
 
         match = PatternOneOrMoreWildCardNode("*")
         context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
         context.add_match(Match(Match.THAT, match, "Matched"))
         question.current_sentence()._matched_context = context
-        conversation.record_dialog(question)
+        conversation.record_question(question)
 
         self._client_context.bot._conversations["testid"] = conversation
 
@@ -140,18 +140,18 @@ class TemplateThatStarNodeTests(ParserTestsBaseClass):
 
         question = Question.create_from_text(self._client_context.brain.tokenizer, "Hello world")
         question.current_sentence()._response = "Hello matey"
-        conversation.record_dialog(question)
+        conversation.record_question(question)
 
         question = Question.create_from_text(self._client_context.brain.tokenizer, "How are you")
         question.current_sentence()._response = "Very well thanks"
-        conversation.record_dialog(question)
+        conversation.record_question(question)
 
         match = PatternOneOrMoreWildCardNode("*")
         context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
         context.add_match(Match(Match.THAT, match, None))
         question.current_sentence()._matched_context = context
 
-        conversation.record_dialog(question)
+        conversation.record_question(question)
         self._client_context.bot._conversations["testid"] = conversation
 
         self.assertEqual("", root.resolve(self._client_context))

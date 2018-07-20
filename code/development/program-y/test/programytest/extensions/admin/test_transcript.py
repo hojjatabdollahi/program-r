@@ -37,7 +37,7 @@ class TranscriptAdminExtensionTests(unittest.TestCase):
 
         question = Question.create_from_sentence(Sentence(client_context.brain.tokenizer, "Hello World"))
         conversation = client_context.bot.get_conversation(client_context)
-        conversation.record_dialog(question)
+        conversation.record_question(question)
 
         extension = TranscriptAdminExtension()
         self.assertIsNotNone(extension)
@@ -52,7 +52,7 @@ class TranscriptAdminExtensionTests(unittest.TestCase):
 
         question = Question.create_from_sentence(Sentence(client_context.brain.tokenizer, "Hello World"))
         conversation = client_context.bot.get_conversation(client_context)
-        conversation.record_dialog(question)
+        conversation.record_question(question)
 
         extension = TranscriptAdminExtension()
         self.assertIsNotNone(extension)
