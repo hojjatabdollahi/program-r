@@ -14,7 +14,7 @@ THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRI
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-
+from programy.dialog.dialog import Sentence
 from programy.utils.logging.ylogger import YLogger
 import os
 import time
@@ -62,8 +62,19 @@ class ConversationFileStorage(ConversationStorage):
         #todo save conversation based on some standard
         userid = client_context.userid
         bot_properties = client_context.bot.conversations[userid].properties
-        last_question = client_context.bot.conversations[userid].questions[-1].sentences
-        last_answer = client_context.bot.conversations[userid].answers[-1].sentences
+        questions = client_context.bot.conversations[userid].questions
+        answers = client_context.bot.conversations[userid].answers
+        try:
+            last_question = questions[-1].sentences
+        except Exception as e:
+            YLogger.exception(self, "question sentences length is zero", e)
+            raise e
+
+        try:
+            last_answer = answers[-1].sentences
+        except Exception as e:
+            YLogger.exception(self, "answer sentences length is zero", e)
+            raise e
 
         if self._config._dir is not None:
             YLogger.debug(self, "Saving conversation to file")

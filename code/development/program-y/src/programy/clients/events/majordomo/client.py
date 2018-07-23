@@ -35,8 +35,9 @@ class MajorDomoBotClient(EventBotClient):
         return client_context.bot.ask_question(client_context, question, responselogger=self)
 
     def render_response(self, client_context, response):
-        # Calls the renderer which handles RCS context, and then calls back to the client to show response
-        self._renderer.render(client_context, response)
+        response_dict = self.dictionary_of_response(response)
+        response_string = str(response_dict)
+        return [response_string]
 
     def process_response(self, client_context, response):
         print(response)

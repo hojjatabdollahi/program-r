@@ -78,8 +78,6 @@ class ConsoleBotClient(EventBotClient):
             YLogger.exception(self, "Oops something bad happened !", excep)
         return running
 
-
-
     def prior_to_run_loop(self):
         client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
         self.display_startup_messages(client_context)

@@ -121,6 +121,8 @@ class BotClient(ResponseLogger):
         self._scheduler = None
         self.load_scheduler()
 
+        self._session_saving_mode = False
+
         self._renderer = self.load_renderer()
 
     def ylogger_type(self):
@@ -153,6 +155,25 @@ class BotClient(ResponseLogger):
     @property
     def renderer(self):
         return self._renderer
+
+    @property
+    def session_saving_mode(self):
+        return self._session_saving_mode
+
+    @property
+    def client_context(self):
+
+        if self._session_saving_mode:
+            try:
+                #TODO change the load client context from file to a better solution
+                client_context = self.load_client_context(
+                    self._configuration.client_configuration.default_userid, "conv.conv")
+            except Exception as exp:
+                client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
+        else:
+            client_context = self.create_client_context(
+                self._configuration.client_configuration.default_userid)
+        return client_context
 
     def get_description(self):
         raise NotImplementedError("You must override this and return a client description")
@@ -237,6 +258,9 @@ class BotClient(ResponseLogger):
         client_context = self.create_client_context(userid)
         client_context.brain.bot.set_conversation_question(client_context, questions)
         return client_context
+
+
+
 
     def load_renderer(self):
         try:
