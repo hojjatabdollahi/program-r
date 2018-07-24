@@ -44,9 +44,15 @@ class MajorDomoWorker(object):
     reply_to = None
 
     def __init__(self, majordomo_config: MajorDomoConfiguration):
-        self.broker = majordomo_config.ip
+        self.ip = majordomo_config.ip
+        self.port = majordomo_config.port
         self.service = majordomo_config.service_name
         self.verbose = majordomo_config.verbose
+        self.broker = str(self.ip)+":"+str(self.port)
+        print(self.broker)
+        print(self.service)
+        print(self.verbose)
+
         self.ctx = zmq.Context()
         self.poller = zmq.Poller()
         logging.basicConfig(format="%(asctime)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S",
