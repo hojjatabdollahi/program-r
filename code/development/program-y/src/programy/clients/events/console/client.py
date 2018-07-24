@@ -82,7 +82,6 @@ class ConsoleBotClient(EventBotClient):
         client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
         self.display_startup_messages(client_context)
 
-
     def run(self):
         if self.arguments.noloop is False:
             YLogger.info(self, "Entering conversation loop...")
@@ -95,8 +94,6 @@ class ConsoleBotClient(EventBotClient):
 
         else:
             YLogger.debug(self, "noloop set to True, exiting...")
-
-
 
 
 if __name__ == '__main__':

@@ -171,8 +171,7 @@ class BotClient(ResponseLogger):
             except Exception as exp:
                 client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
         else:
-            client_context = self.create_client_context(
-                self._configuration.client_configuration.default_userid)
+            client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
         return client_context
 
     def get_description(self):

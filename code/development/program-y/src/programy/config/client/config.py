@@ -14,7 +14,6 @@ THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRI
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-from programy.config.client.majordomo import MajorDomoConfiguration
 from programy.utils.logging.ylogger import YLogger
 
 from programy.config.container import BaseContainerConfigurationData
@@ -30,7 +29,6 @@ class ClientConfigurationData(BaseContainerConfigurationData):
         self._license_keys = None
         self._bot_selector = None
         self._scheduler = SchedulerConfiguration()
-        self._majordomo = MajorDomoConfiguration()
         self._renderer = None
 
     @property
@@ -73,9 +71,6 @@ class ClientConfigurationData(BaseContainerConfigurationData):
             self._bot_selector = configuration_file.get_option(section, "bot_selector")
 
             self._scheduler.load_config_section(configuration_file, section, bot_root)
-
-            #TODO we dont need to load majordomo configs here
-            #self._majordomo.load_config_section(configuration_file, bot_root)
 
             self._renderer = configuration_file.get_option(section, "renderer")
 

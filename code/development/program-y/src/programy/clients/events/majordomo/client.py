@@ -1,5 +1,7 @@
 from programy.clients.events.client import EventBotClient
 from programy.clients.events.majordomo.config import MajorDomoConfiguration
+from programy.majordomo.mdwrkapi import MajorDomoWorker
+from programy.majordomo.request import ReadyRequest, UserRequest, SessionRequest, QuestionRequest
 from programy.utils.logging.ylogger import YLogger
 
 
@@ -65,6 +67,59 @@ class MajorDomoBotClient(EventBotClient):
         client_context = self.create_client_context(userid)
         self.display_startup_messages(client_context)
 
+    def worker_run_loop(self):
+        majordomo_worker = MajorDomoWorker(self.configuration.client_configuration)
+        response = None
+        username = None
+        client_context = None
+
+        while True:
+            print(response)
+            request = majordomo_worker.receive(response)
+            if request is None:
+                YLogger.debug(self, "worker was interrupted")
+                break
+
+            if type(request) is ReadyRequest:
+                YLogger.info(self, "ready request")
+                response = [request.command]
+
+            elif type(request) is UserRequest:
+                YLogger.info(self, "user request")
+                username = request.username
+                client_context = self.client_context
+                client_context.bot.initiate_conversation_storage()
+
+            elif type(request) is SessionRequest:
+                YLogger.info(self, "session request")
+                if client_context is None:
+                    YLogger.debug(self, "Client context is not initiated. Messages are out of order")
+                    client_context = self.client_context
+                    client_context.bot.initiate_conversation_storage()
+
+                if username is not None:
+                    question = self.initial_question(request, username)
+                    print("question", question)
+                    answer = self.process_question(client_context, question)
+                    print("answer", answer)
+                    response = self.render_response(client_context, answer)
+                else:
+                    response = ["username is not specified"]
+
+            elif type(request) is QuestionRequest:
+                try:
+                    YLogger.info(self, "question request")
+                    if client_context is not None:
+                        print(request.question)
+                        answer = self.process_question(client_context, request.question)
+                        client_context.bot.save_conversation(client_context)
+                        response = self.render_response(client_context, answer)
+                    else:
+                        response = ["client context is not initiated. Initial Session request"]
+
+                except Exception as e:
+                    YLogger.exception(self, "chatbot encounter an internal crash", e)
+
 
     def run(self):
         if self.arguments.noloop is False:
@@ -72,7 +127,7 @@ class MajorDomoBotClient(EventBotClient):
 
             self.prior_to_run_loop()
 
-            self.worker_run_loop_new()
+            self.worker_run_loop()
 
             self.post_run_loop()
 

@@ -15,11 +15,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-from programy.config.file.yaml_file import YamlConfigurationFile
 from programy.utils.logging.ylogger import YLogger
-from programy.majordomo.request import ReadyRequest, UserRequest, SessionRequest, QuestionRequest
 from programy.clients.client import BotClient
-from programy.majordomo.mdwrkapi import MajorDomoWorker
 
 import os
 from datetime import datetime
@@ -37,6 +34,7 @@ class EventBotClient(BotClient):
         pass
 
     def run_loop(self):
+        #todo change this back to work with console
         #client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
         self._running = True
         conversation_file = "/home/rohola/conv_questions.p"
@@ -63,157 +61,116 @@ class EventBotClient(BotClient):
 
 
 
-    def worker_run_loop_new(self):
-        majordomo_worker = MajorDomoWorker(self.configuration.client_configuration)
-        response = None
-        client_context = None
-
-        while True:
-            request = majordomo_worker.receive(response)
-            if request is None:
-                break  # Worker was interrupted
-
-            if request is ReadyRequest:
-                response = request.command
-
-            elif request is UserRequest:
-                client_context = self.client_context()
-                client_context.bot.initiate_conversation_storage()
-
-            elif request is SessionRequest:
-                if client_context is None:
-                    YLogger.debug(self, "Client context is not initiated. Messages are out of order")
-                    client_context = self.client_context()
-                    client_context.bot.initiate_conversation_storage()
-
-                question = self.initial_question(request)
-                answer = self.process_question(client_context, question)
-                response = self.render_response(client_context, answer)
-
-            elif request is QuestionRequest:
-                try:
-                    if client_context is not None:
-                        answer = self.process_question(client_context, request.question)
-                        client_context.bot.save_conversation(client_context)
-                        response = self.render_response(client_context, answer)
-                    else:
-                        response = ["client context is not initiated. Initial Session request"]
-
-                except Exception as e:
-                    YLogger.exception(self, "chatbot encounter an internal crash", e)
-
-
-
-    def initial_question(self, request):
-        question = "session"+str(request.session_number) + " " + request.username
+    def initial_question(self, request, username):
+        question = "session"+str(request.session_number) + " " + username
         return question
 
 
-    def worker_run_loop(self):
-        #todo Needs a major refactor to clean this as much as possible
-        #todo read the configuration from the programy configuration mechanism
-        #todo login should be done with Ylogger
-        #todo save conversations to database
-        #self.configuration.client_configuration.configurations[0]
-
-        root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-        filepath = os.path.join(root, "bots//ryan//config.yaml")
-        with open(filepath, encoding="utf-8") as file_reader:
-            self._yaml_dict = yaml.load(file_reader)
-
-        ip = self._yaml_dict["broker"]["ip"]
-        port = self._yaml_dict["broker"]["port"]
-        service_name = self._yaml_dict["broker"]["service_name"]
-
-
-        self._running = True
-        conversation_file = "conv_questions.p"
-        worker = MajorDomoWorker(str(ip)+":"+str(port), str(service_name))
-        response = None
-        client_context = None
-        session_file = ""
-        while True:
-            ### pre dialog computations
-            request = worker._recv(response)
-            if request is None:
-                break  # Worker was interrupted
-
-            if request[0] == "ready":
-                response_string = "ready"
-                print("command ready")
-
-            elif request[0] == "user":
-                print("command user")
-                if len(request) > 1:
-                    session_num = str(request[1])
-                    username = str(request[2])
-                    #directory = os.path.join("../../../../results/", username)
-
-                    directory = os.path.join(root, "results", username)
-                    if not os.path.exists(directory):
-                        os.mkdir(directory)
-
-                    session_file = directory+"/session"+session_num
-                    with open(session_file, 'a') as file_writer:
-                        file_writer.write("session\n")
-
-
-
-                if self._first_time:
-                    try:
-                        if self._session_saving_mode:
-                            client_context = self.load_client_context(
-                                self._configuration.client_configuration.default_userid, conversation_file)
-                        else:
-                            client_context = self.create_client_context(
-                                self._configuration.client_configuration.default_userid)
-                    except Exception as exp:
-                        client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
-                    finally:
-                        self._first_time = False
-
-                #set the bot properties here!
-                # response = self.process_question(client_context, "bot properties")
-                # if response == "success":
-                #     print("bot properties set correctly")
-                # else:
-                #     print("there is a problem setting bot properties")
-                #
-                # response_string = "user is ready"
-
-            elif len(request) > 1 and request[0] == "session":
-                print("session command")
-
-                session_id = request[1]
-                #username = request[1]
-                question = "session"+str(session_id)+" "+username
-                response = self.process_question(client_context, question)
-                response_dict = self.dictionary_of_response(response)
-                response_string = str(response_dict)
-
-            elif len(request) > 1 and request[0] == "question":
-                try:
-                    if client_context is not None:
-                        question = request[1]
-                        response = self.process_question(client_context, question)
-                        response_dict = self.dictionary_of_response(response)
-                        ####save question and respose to file
-                        with open(session_file, "a") as file_writer:
-                            file_writer.write(str(datetime.now()) + " | "+question+" | "+response_dict["conversation"]["response"]+"\n")
-                        #####
-                        response_string = str(response_dict)
-                    else:
-                        response_string = "client context is None"
-                except:
-                    response_string = "chatbot internal failure"
-
-            print(response_string)
-            response = [response_string]
-            # request = worker.recv(response)
-            # if request is None:
-            #     break  # Worker was interrupted
-            # if "print me" == request:
-            #     print("Received a command.")
+    # def worker_run_loop(self):
+    #     #todo Needs a major refactor to clean this as much as possible
+    #     #todo read the configuration from the programy configuration mechanism
+    #     #todo login should be done with Ylogger
+    #     #todo save conversations to database
+    #     #self.configuration.client_configuration.configurations[0]
+    #
+    #     root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
+    #     filepath = os.path.join(root, "bots//ryan//config.yaml")
+    #     with open(filepath, encoding="utf-8") as file_reader:
+    #         self._yaml_dict = yaml.load(file_reader)
+    #
+    #     ip = self._yaml_dict["broker"]["ip"]
+    #     port = self._yaml_dict["broker"]["port"]
+    #     service_name = self._yaml_dict["broker"]["service_name"]
+    #
+    #
+    #     self._running = True
+    #     conversation_file = "conv_questions.p"
+    #     worker = MajorDomoWorker(str(ip)+":"+str(port), str(service_name))
+    #     response = None
+    #     client_context = None
+    #     session_file = ""
+    #     while True:
+    #         ### pre dialog computations
+    #         request = worker._recv(response)
+    #         if request is None:
+    #             break  # Worker was interrupted
+    #
+    #         if request[0] == "ready":
+    #             response_string = "ready"
+    #             print("command ready")
+    #
+    #         elif request[0] == "user":
+    #             print("command user")
+    #             if len(request) > 1:
+    #                 session_num = str(request[1])
+    #                 username = str(request[2])
+    #                 #directory = os.path.join("../../../../results/", username)
+    #
+    #                 directory = os.path.join(root, "results", username)
+    #                 if not os.path.exists(directory):
+    #                     os.mkdir(directory)
+    #
+    #                 session_file = directory+"/session"+session_num
+    #                 with open(session_file, 'a') as file_writer:
+    #                     file_writer.write("session\n")
+    #
+    #
+    #
+    #             if self._first_time:
+    #                 try:
+    #                     if self._session_saving_mode:
+    #                         client_context = self.load_client_context(
+    #                             self._configuration.client_configuration.default_userid, conversation_file)
+    #                     else:
+    #                         client_context = self.create_client_context(
+    #                             self._configuration.client_configuration.default_userid)
+    #                 except Exception as exp:
+    #                     client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
+    #                 finally:
+    #                     self._first_time = False
+    #
+    #             #set the bot properties here!
+    #             # response = self.process_question(client_context, "bot properties")
+    #             # if response == "success":
+    #             #     print("bot properties set correctly")
+    #             # else:
+    #             #     print("there is a problem setting bot properties")
+    #             #
+    #             # response_string = "user is ready"
+    #
+    #         elif len(request) > 1 and request[0] == "session":
+    #             print("session command")
+    #
+    #             session_id = request[1]
+    #             #username = request[1]
+    #             question = "session"+str(session_id)+" "+username
+    #             response = self.process_question(client_context, question)
+    #             response_dict = self.dictionary_of_response(response)
+    #             response_string = str(response_dict)
+    #
+    #         elif len(request) > 1 and request[0] == "question":
+    #             try:
+    #                 if client_context is not None:
+    #                     question = request[1]
+    #                     response = self.process_question(client_context, question)
+    #                     response_dict = self.dictionary_of_response(response)
+    #                     ####save question and respose to file
+    #                     with open(session_file, "a") as file_writer:
+    #                         file_writer.write(str(datetime.now()) + " | "+question+" | "+response_dict["conversation"]["response"]+"\n")
+    #                     #####
+    #                     response_string = str(response_dict)
+    #                 else:
+    #                     response_string = "client context is None"
+    #             except:
+    #                 response_string = "chatbot internal failure"
+    #
+    #         print(response_string)
+    #         response = [response_string]
+    #         # request = worker.recv(response)
+    #         # if request is None:
+    #         #     break  # Worker was interrupted
+    #         # if "print me" == request:
+    #         #     print("Received a command.")
 
 
 

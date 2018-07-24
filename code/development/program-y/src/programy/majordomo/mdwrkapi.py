@@ -49,9 +49,6 @@ class MajorDomoWorker(object):
         self.service = majordomo_config.service_name
         self.verbose = majordomo_config.verbose
         self.broker = str(self.ip)+":"+str(self.port)
-        print(self.broker)
-        print(self.service)
-        print(self.verbose)
 
         self.ctx = zmq.Context()
         self.poller = zmq.Poller()
@@ -207,6 +204,32 @@ class MajorDomoWorker(object):
 
 
     def convert_to_request_object(self, request):
+        if len(request)==1:
+            if request[0]=="ready":
+                ready_request = ReadyRequest("ready")
+                return ready_request
+
+        if len(request)==3:
+            if request[0]=="user":
+                username = request[2]
+                user_request = UserRequest("user", username)
+                return user_request
+
+        if len(request)==2:
+            if request[0]=="session":
+                session_number = request[1]
+                session_request = SessionRequest("session", session_number)
+                return session_request
+
+            if request[0]=="question":
+                question = request[1]
+                question_request = QuestionRequest("question", question)
+                return question_request
+
+        return None
+
+
+    def convert_to_request_object_orig(self, request):
         if len(request)==1:
             if request[0]=="ready":
                 ready_request = ReadyRequest("ready")

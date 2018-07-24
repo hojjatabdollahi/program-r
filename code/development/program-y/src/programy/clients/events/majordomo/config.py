@@ -5,11 +5,15 @@ class MajorDomoConfiguration(ClientConfigurationData):
 
     def __init__(self):
         ClientConfigurationData.__init__(self, "majordomo")
+        self._default_userid = "majordomo"
         self._service_name = "echo"
         self._ip = "0.0.0.0"
         self._port = 0
         self._verbose = False
 
+    @property
+    def default_userid(self):
+        return self._default_userid
 
     @property
     def service_name(self):
