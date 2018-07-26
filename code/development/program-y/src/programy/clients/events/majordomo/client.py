@@ -36,8 +36,16 @@ class MajorDomoBotClient(EventBotClient):
         # Returns a response
         return client_context.bot.ask_question(client_context, question, responselogger=self)
 
+    def process_question_with_options(self, client_context, question):
+        return client_context.bot.ask_question_with_options(client_context, question, responselogger=self)
+
+    def process_question_answer_with_options(self, client_context):
+        question = self.get_question(client_context)
+        response = self.process_question_with_options(client_context, question)
+        self.render_response(client_context, response)
+
     def render_response(self, client_context, response):
-        response_dict = self.dictionary_of_response(response)
+        response_dict = self.dictionary_of_response(client_context, response)
         response_string = str(response_dict)
         return [response_string]
 
@@ -100,7 +108,8 @@ class MajorDomoBotClient(EventBotClient):
                 if username is not None:
                     question = self.initial_question(request, username)
                     print("question", question)
-                    answer = self.process_question(client_context, question)
+                    #answer = self.process_question(client_context, question)
+                    answer = self.process_question_with_options(client_context, question)
                     print("answer", answer)
                     response = self.render_response(client_context, answer)
                 else:
@@ -111,7 +120,8 @@ class MajorDomoBotClient(EventBotClient):
                     YLogger.info(self, "question request")
                     if client_context is not None:
                         print(request.question)
-                        answer = self.process_question(client_context, request.question)
+                        #answer = self.process_question(client_context, request.question)
+                        answer = self.process_question_with_options(client_context, request.question)
                         client_context.bot.save_conversation(client_context)
                         response = self.render_response(client_context, answer)
                     else:

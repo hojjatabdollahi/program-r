@@ -58,7 +58,7 @@ class EventBotClient(BotClient):
             self._running = self.wait_and_answer(client_context)
             #bot.save_conversation()
             client_context.bot.save_conversation(client_context)
-
+            print(client_context.bot.conversations[client_context.userid].answers[-1].robot)
 
 
     def initial_question(self, request, username):
@@ -173,51 +173,87 @@ class EventBotClient(BotClient):
     #         #     print("Received a command.")
 
 
+    def dictionary_of_response(self, client_context, response):
+        if client_context.bot.conversations[client_context.userid].answers:
+            robot = client_context.bot.conversations[client_context.userid].answers[-1].robot["robot"]
 
+            print(robot)
+            answer = ""
+            if robot is not None and "options" in robot and "option" in robot['options']:
+                answer = robot['options']['option']
 
-    def dictionary_of_response(self, response):
-        answers = []
-        image_filename = ""
-        duration = ""
-        video_filename = ""
-        response_part = ""
-        if "(" in response:
-            parts = response.split("(")
-            response_part = parts[0]
-            answers = parts[1].split(")")[0].split("|")
+            image_filename=""
+            if robot is not None and "image" in robot and "filename" in robot['image']:
+                image_filename = robot['image']['filename']
 
-        if "#" in response:
-            parts = response.split("#")
-            response = parts[0]
-            if "image" in parts[1]:
-                print("an image is here")
-                image = parts[1].strip("#").split(",")[0]
-                image_filename = image.split(":")[1]
-                if len(parts[1].strip("#").split(",")) > 1:
-                    duration = parts[1].strip("#").split(",")[1]
-                    duration = duration.split(":")[1]
+            duration=""
+            if robot is not None and "image" in robot and "duration" in robot["image"]:
+                duration = robot["image"]["duration"]
 
-            if "video" in parts[1]:
-                print("a video is here")
-                video_filename = parts[1].split(":")[1]
+            video_filename = ""
+            if robot is not None and "video" in robot and "filename" in robot["video"]:
+                video_filename = robot["video"]["filename"]
 
-        if "#" not in response and "(" not in response:
-            response_part = response
-
-        return {"conversation":
-                    {"question": "",
-                     "response": response_part,
-                     "answer": answers
-                     },
-                "image":
-                    {"filename": image_filename,
-                     "duration": duration
-                     },
-                "video":
-                    {
-                        "filename": video_filename
+            return {"conversation":
+                        {"question": "",
+                         "response": response,
+                         "answer": answer
+                         },
+                    "image":
+                        {"filename": image_filename,
+                         "duration": duration
+                         },
+                    "video":
+                        {
+                            "filename": video_filename
+                        }
                     }
-                }
+        else:
+            return {}
+
+    # def dictionary_of_response(self, response):
+    #     answers = []
+    #     image_filename = ""
+    #     duration = ""
+    #     video_filename = ""
+    #     response_part = ""
+    #     if "(" in response:
+    #         parts = response.split("(")
+    #         response_part = parts[0]
+    #         answers = parts[1].split(")")[0].split("|")
+    #
+    #     if "#" in response:
+    #         parts = response.split("#")
+    #         response = parts[0]
+    #         if "image" in parts[1]:
+    #             print("an image is here")
+    #             image = parts[1].strip("#").split(",")[0]
+    #             image_filename = image.split(":")[1]
+    #             if len(parts[1].strip("#").split(",")) > 1:
+    #                 duration = parts[1].strip("#").split(",")[1]
+    #                 duration = duration.split(":")[1]
+    #
+    #         if "video" in parts[1]:
+    #             print("a video is here")
+    #             video_filename = parts[1].split(":")[1]
+    #
+    #     if "#" not in response and "(" not in response:
+    #         response_part = response
+    #
+    #     return {"conversation":
+    #                 {"question": "",
+    #                  "response": response_part,
+    #                  "answer": answers
+    #                  },
+    #             "image":
+    #                 {"filename": image_filename,
+    #                  "duration": duration
+    #                  },
+    #             "video":
+    #                 {
+    #                     "filename": video_filename
+    #                 }
+    #             }
 
     def wait_and_answer(self, client_context):
         raise NotImplementedError("You must override this and implement the logic wait for a question and send an answer back")

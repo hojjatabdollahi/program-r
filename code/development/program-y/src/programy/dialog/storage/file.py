@@ -78,13 +78,14 @@ class ConversationFileStorage(ConversationStorage):
 
         if self._config._dir is not None:
             YLogger.debug(self, "Saving conversation to file")
+            #os.path.exists(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))+"\\results")
             if os.path.exists(self._config._dir):
                 try:
                     session_number = bot_properties["session_number"]
                     user_name = bot_properties["user_name"].title()
                 except Exception as e:
                     #todo change them with default values of session_number and user_name
-                    session_number = 1
+                    session_number = "1"
                     user_name = "test"
                     YLogger.exception(self, "Failed to get session number", e)
 

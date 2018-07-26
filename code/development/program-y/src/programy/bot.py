@@ -281,6 +281,7 @@ class Bot(object):
         #     return default_response
         # else:
         try:
+            #client_context.bot._conversations["Console"].answers[-1].sentences[-1].text()
             response = client_context.bot._conversations["Console"].questions[-2].sentences[-1].response
         except:
             response="I don't know"
@@ -406,6 +407,63 @@ class Bot(object):
 
         return response
 
+
+    def ask_question_with_options(self, client_context, text, srai=False, responselogger=None):
+
+        # if srai is False:
+        #     client_context.bot = self
+        #     client_context.brain = client_context.bot.brain
+
+
+
+        client_context.mark_question_start(text)
+
+        pre_processed = self.pre_process_text(client_context, text, srai)
+
+        question = self.get_question(client_context, pre_processed, srai)
+
+
+
+        # file_obj_read = open("/home/rohola/conv_questions.p", 'rb')
+        # questions = pickle.load(file_obj_read)
+        # client_context.brain.bot.set_conversation_question(client_context, questions)
+
+        conversation = self.get_conversation(client_context)
+
+        conversation.record_question(question)
+
+
+        answer_sentences = []
+        sentence_no = 0
+        options = []
+        for sentence in question.sentences:
+            question.set_current_sentence_no(sentence_no)
+            answer_sentence, options = self.process_sentence_with_options(client_context, sentence, srai, responselogger)
+            answer_sentences.append(answer_sentence)
+            sentence_no += 1
+
+
+        #answer = self.get_answer(client_context, answers)
+        answer = Answer.create_from_sentences(answer_sentences,srai)
+        answer.robot = options
+        conversation.record_answer(answer)
+
+
+
+        client_context.reset_question()
+
+
+        if srai is True:
+            conversation.pop_dialog()
+
+        #response = self.combine_answers(answers)
+        response = answer.sentences_text()
+
+        self.log_question_and_answer(client_context, text, response)
+
+        return response
+
+
     def log_question_and_answer(self, client_context, text, response):
         convo_logger = logging.getLogger("conversation")
         if convo_logger:
@@ -423,6 +481,7 @@ class Bot(object):
 
 
         response = client_context.brain.ask_question(client_context, sentence, srai)
+        #response = client_context.brain.ask_question_with_options(client_context, sentence, srai)
 
         if response is None and srai is False:
             response = self.check_spelling_and_retry(client_context, sentence)
@@ -435,17 +494,46 @@ class Bot(object):
 
         return answer
 
-    def handle_response(self, client_context, sentence, response, srai, responselogger):
+    def process_sentence_with_options(self, client_context, sentence, srai, responselogger):
+        client_context.check_max_recursion()
+
+        if srai is False:
+            self.check_spelling_before(sentence)
+
+        response, options = client_context.brain.ask_question_with_options(client_context, sentence, srai)
+
+        if response is None and srai is False:
+            response = self.check_spelling_and_retry(client_context, sentence)
+
+        if response is not None:
+            return self.handle_response(client_context, sentence, response, srai, responselogger, options)
+        else:
+            return self.handle_none_response(client_context, sentence, responselogger, options)
+
+
+
+    def handle_response(self, client_context, sentence, response, srai, responselogger, options=[]):
         YLogger.debug(client_context, "Raw Response (%s): %s", client_context.userid, response)
         sentence.response = response
-        answer = self.post_process_response(client_context, response, srai)
-        self.log_answer(client_context, sentence.text, answer, responselogger)
-        return answer
+        post_processed_response = self.post_process_response(client_context, response, srai)
+        response_sentence = Sentence(client_context.brain.tokenizer, post_processed_response)
+        response_text = response_sentence.text()
+        self.log_answer(client_context, sentence.text, response_text, responselogger)
+        if len(options) == 0:
+            return response_sentence
+        else:
+            return response_sentence, options
 
-    def handle_none_response(self, clientid, sentence, responselogger):
-        sentence.response = self.get_default_response(clientid)
-        sentence._words = "Can you repeat yourself?"
-        sentence._no_response = True
+    def handle_none_response(self, client_context, sentence, responselogger, options = []):
+        sentence.response = self.get_default_response(client_context)
+        non_hanlde_sentence = Sentence(client_context.brain.tokenizer, sentence.response)
+        non_hanlde_sentence._no_response = True
+
+
         if responselogger is not None:
-            responselogger.log_unknown_response(sentence)
-        return sentence.response
+            responselogger.log_unknown_response(non_hanlde_sentence)
+
+        if len(options)==0:
+            return non_hanlde_sentence.response
+        else:
+            return non_hanlde_sentence, options

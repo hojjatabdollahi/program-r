@@ -52,6 +52,10 @@ class ConsoleBotClient(EventBotClient):
         # Returns a response
         return client_context.bot.ask_question(client_context , question, responselogger=self)
 
+    def process_question_with_options(self, client_context, question):
+        return client_context.bot.ask_question_with_options(client_context, question, responselogger=self)
+
+
     def render_response(self, client_context, response):
         # Calls the renderer which handles RCS context, and then calls back to the client to show response
         self._renderer.render(client_context, response)
@@ -64,12 +68,18 @@ class ConsoleBotClient(EventBotClient):
         response = self.process_question(client_context, question)
         self.render_response(client_context, response)
 
+    def process_question_answer_with_options(self, client_context):
+        question = self.get_question(client_context)
+        response = self.process_question_with_options(client_context, question)
+        self.render_response(client_context, response)
+
 
     def wait_and_answer(self, client_context):
         running = True
         try:
             #client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
-            self.process_question_answer(client_context)
+            #self.process_question_answer(client_context)
+            self.process_question_answer_with_options(client_context)
         except KeyboardInterrupt as keye:
             running = False
             client_context = self.create_client_context(self._configuration.client_configuration.default_userid)

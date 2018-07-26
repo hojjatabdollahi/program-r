@@ -48,7 +48,7 @@ bot:
       empty_on_start: false
 
     file_config:
-      dir: /home/rohola/Codes/Ryan/RyanCBT/code/development/program-y/results
+      dir: D:\Documents\Projects\Python\programy\RyanCBT\code\development\program-y\results
 
 
 brain:
@@ -131,6 +131,8 @@ brain:
     oob:
       default:
         classname: programy.oob.default.DefaultOutOfBandProcessor
+      robot:
+        classname: programy.oob.robot.RobotOutOfBandProcessor
       alarm:
         classname: programy.oob.alarm.AlarmOutOfBandProcessor
       camera:
@@ -155,3 +157,5 @@ brain:
         classname: programy.oob.url.URLOutOfBandProcessor
       wifi:
         classname: programy.oob.wifi.WifiOutOfBandProcessor
+
+

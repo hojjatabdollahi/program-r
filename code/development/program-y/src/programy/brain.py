@@ -437,7 +437,7 @@ class Brain(object):
                 except Exception as excep:
                     YLogger.exception(self, "Failed to load OOB Processor", excep)
 
-            for oob_name in  configuration.oob.oobs():
+            for oob_name in configuration.oob.oobs():
                 try:
                     YLogger.info(self, "Loading oob: %s", oob_name)
                     classobject = ClassLoader.instantiate_class(configuration.oob.oob(oob_name).classname)
@@ -520,8 +520,23 @@ class Brain(object):
                 return self.failed_authentication(client_context)
         return None
 
-    def resolve_matched_template(self, client_context, match_context):
+    def resolve_matched_template_with_options(self, client_context, match_context):
 
+        template_node = match_context.template_node()
+
+        YLogger.debug(client_context, "AIML Parser evaluating template [%s]", template_node.to_string())
+
+        response = template_node.template.resolve(client_context)
+
+        options = {}
+        if "<oob>" in response:
+            response, oob = self.strip_oob(response)
+            if oob is not None:
+                options = self.process_oob(client_context, oob)
+
+        return response, options
+
+    def resolve_matched_template(self, client_context, match_context):
         template_node = match_context.template_node()
 
         YLogger.debug(client_context, "AIML Parser evaluating template [%s]", template_node.to_string())
@@ -550,7 +565,29 @@ class Brain(object):
 
         that_pattern = conversation.get_that_pattern(client_context, srai)
 
+        match_context = self._aiml_parser.match_sentence(client_context,
+                                                         sentence,
+                                                         topic_pattern=topic_pattern,
+                                                         that_pattern=that_pattern)
 
+
+        if match_context is not None:
+            return self.resolve_matched_template(client_context, match_context)
+
+        return None
+
+    def ask_question_with_options(self, client_context, sentence, srai=False):
+        client_context.brain = self
+
+        authenticated = self.authenticate_user(client_context)
+        if authenticated is not None:
+            return authenticated
+
+        conversation = client_context.bot.get_conversation(client_context)
+
+        topic_pattern = conversation.get_topic_pattern(client_context)
+
+        that_pattern = conversation.get_that_pattern(client_context, srai)
 
         match_context = self._aiml_parser.match_sentence(client_context,
                                                          sentence,
@@ -558,7 +595,7 @@ class Brain(object):
                                                          that_pattern=that_pattern)
 
         if match_context is not None:
-            return self.resolve_matched_template(client_context, match_context)
+            return self.resolve_matched_template_with_options(client_context, match_context)
 
-        return None
+        return None, {"robot": None}
 

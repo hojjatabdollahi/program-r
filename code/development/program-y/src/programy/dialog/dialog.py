@@ -88,6 +88,7 @@ class Answer(object):
         self._sentences = []
         self._properties = {}
         self._current_sentence_no = -1
+        self.robot = {}
 
     @staticmethod
     def create_from_text(tokenizer, text, sentence_split_chars: str = ".", split=True, srai=False):
@@ -104,15 +105,29 @@ class Answer(object):
         answer.sentences.append(sentence)
         return answer
 
+    @staticmethod
+    def create_from_sentences(sentences, srai=False):
+        answer = Answer(srai)
+        for sentence in sentences:
+            answer = answer.create_from_sentence(sentence)
+
+        return answer
+
     @property
     def sentences(self):
         return self._sentences
+
+
+    def sentences_text(self):
+        return '. '.join([sentence.text() for sentence in self._sentences])
 
 
     def sentence(self, num: int):
         if num < len(self._sentences):
             return self._sentences[num]
         raise Exception("Num sentence array violation !")
+
+
 
 
     def split_into_sentences(self, text: str, sentence_split_chars: str, tokenizer):
