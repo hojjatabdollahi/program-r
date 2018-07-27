@@ -78,8 +78,8 @@ class ConsoleBotClient(EventBotClient):
         running = True
         try:
             #client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
-            #self.process_question_answer(client_context)
-            self.process_question_answer_with_options(client_context)
+            self.process_question_answer(client_context)
+            #self.process_question_answer_with_options(client_context)
         except KeyboardInterrupt as keye:
             running = False
             client_context = self.create_client_context(self._configuration.client_configuration.default_userid)

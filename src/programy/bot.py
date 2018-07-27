@@ -511,7 +511,6 @@ class Bot(object):
             return self.handle_none_response(client_context, sentence, responselogger, options)
 
 
-
     def handle_response(self, client_context, sentence, response, srai, responselogger, options=[]):
         YLogger.debug(client_context, "Raw Response (%s): %s", client_context.userid, response)
         sentence.response = response
@@ -534,6 +533,6 @@ class Bot(object):
             responselogger.log_unknown_response(non_hanlde_sentence)
 
         if len(options)==0:
-            return non_hanlde_sentence.response
+            return non_hanlde_sentence
         else:
             return non_hanlde_sentence, options

@@ -71,6 +71,12 @@ brain:
       pattern_nodes: $BOT_ROOT/config/pattern_nodes.conf
       template_nodes: $BOT_ROOT/config/template_nodes.conf
 
+    # Dynamics
+    dynamic:
+      variables:
+          gettime: programy.dynamic.variables.datetime.GetTime
+          getsentiment: programy.dynamic.variables.sentiment_analysis.GetSentiment
+
     # Binary
     binaries:
       save_binary: true
