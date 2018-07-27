@@ -57,8 +57,8 @@ class EventBotClient(BotClient):
 
             self._running = self.wait_and_answer(client_context)
             #bot.save_conversation()
-            client_context.bot.save_conversation(client_context)
-            print(client_context.bot.conversations[client_context.userid].answers[-1].robot)
+            #client_context.bot.save_conversation(client_context)
+            #print(client_context.bot.conversations[client_context.userid].answers[-1].robot)
 
 
     def initial_question(self, request, username):

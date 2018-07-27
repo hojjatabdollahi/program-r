@@ -282,9 +282,11 @@ class Bot(object):
         # else:
         try:
             #client_context.bot._conversations["Console"].answers[-1].sentences[-1].text()
-            response = client_context.bot._conversations["Console"].questions[-2].sentences[-1].response
+            last_question = client_context.bot._conversations["Console"].questions[-2]
+            last_sentence = last_question.sentences[-1]
+            response = last_sentence.response
         except:
-            response="I don't know"
+            response= self.default_response
         return response
 
     def get_initial_question(self, client_context):
@@ -376,17 +378,15 @@ class Bot(object):
 
         conversation.record_question(question)
 
-
-        answers = []
+        answer_sentences = []
         sentence_no = 0
         for sentence in question.sentences:
             question.set_current_sentence_no(sentence_no)
-            answer_text = self.process_sentence(client_context, sentence, srai, responselogger)
-            answers.append(answer_text)
+            answer_sentence = self.process_sentence(client_context, sentence, srai, responselogger)
+            answer_sentences.append(answer_sentence)
             sentence_no += 1
 
-
-        answer = self.get_answer(client_context, answers)
+        answer = Answer.create_from_sentences(answer_sentences, srai)
         conversation.record_answer(answer)
 
 
@@ -401,7 +401,7 @@ class Bot(object):
         if srai is True:
             conversation.pop_dialog()
 
-        response = self.combine_answers(answers)
+        response = answer.sentences_text()
 
         self.log_question_and_answer(client_context, text, response)
 

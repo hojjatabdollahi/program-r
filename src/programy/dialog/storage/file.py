@@ -71,6 +71,7 @@ class ConversationFileStorage(ConversationStorage):
             raise e
 
         try:
+            #todo this doesn't handle good
             last_answer = answers[-1].sentences
         except Exception as e:
             YLogger.exception(self, "answer sentences length is zero", e)

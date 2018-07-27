@@ -48,7 +48,7 @@ bot:
       empty_on_start: false
 
     file_config:
-      dir: D:\Documents\Projects\Python\programy\RyanCBT\code\program-y\results
+      dir: D:\Documents\Projects\Python\programy\RyanCBT\results
 
 
 brain:

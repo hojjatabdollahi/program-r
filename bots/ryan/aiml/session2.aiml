@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!-- CHANGING THE START TO WORK WITH THE CONTROLLER -->
+<category>
+    <pattern>SESSION2 *</pattern>
+    <template>
+    	<!-- SET NAME BASED ON CONTROLLER INPUT -->
+    	<think><set name="name"><star/></set></think>
+    	Hello <get name = "name"/>! Welcome back! Today we are going to start our second session together. Before we begin, I want to know how using the daily mood scale went. Did you have any problems filling it out?(yes|no)
+    </template>
+</category>
+
+<!-- PROBLEMS WITH SCALE -->
+<category>
+    <pattern><set>yes</set></pattern>
+    <that>DID YOU HAVE ANY PROBLEMS FILLING IT OUT?</that>
+    <template>
+        I see. Let's address those problems before we start. My assistant can help you with this. Once you both are ready to continue, say ready.(ready)
+    </template>
+</category>
+
+<!-- READY TO CONTINUE -->
+<category>
+    <pattern>READY</pattern>
+    <that>ONCE YOU BOTH ARE READY TO CONTINUE, SAY READY.</that>
+    <template>
+        Great! What did you find surprising when filling out the scale? </template>
+</category>
+
+<!-- NO PROBLEMS WITH SCALE -->
+<category>
+    <pattern><set>no</set></pattern>
+    <that>DID YOU HAVE ANY PROBLEMS FILLING IT OUT?</that>
+    <template>
+        Great! What did you find surprising when filling out the scale? </template>
+</category>
+
+<!-- CONTINUE WITH CONVERSATION-WHAT ARE THOUGHTS? -->
+<category>
+    <pattern>*</pattern>
+    <that>WHAT DID YOU FIND SURPRISING WHEN FILLING OUT THE SCALE?</that>
+    <template>
+        I see. Thank you for your work with the scale. I hope you can use it as a tool to reflect on your thoughts. Keep it up over the 
+        coming weeks! Now to continue with our session. Remember from last time, thoughts, activities, and people effect your mood. We are going to start by focusing on what role thoughts play in your mood. Specific types of thinking can make a huge difference. Some make it more likely you will be depressed and others make it less likely you will become depressed. How would you define thoughts?
+    </template>
+</category>
+
+<!-- NOT FLEXIBLE AND JUDGMENTAL THINKING -->
+<category>
+    <pattern>*</pattern>
+    <that>HOW WOULD YOU DEFINE THOUGHTS?</that>
+    <template>
+        <!-- THIS CAN BE ENABLED OR DISABLED, DOESN'T REALLY MATTER RIGHT NOW -->
+        <!--<think><set name = "userThoughtDefnition"><star/></set></think>-->
+        Thank you! I'll tell you what I thought. To me, thoughts are ideas we tell ourselves. In fact, we talk in our own heads all the time,
+        even if we're not always aware of it. I feel it's helpful to think of thoughts as things that can have a real impact on our bodies and minds. Depressed thoughts and ways of thinking have very distinctive patterns. They are often inflexible and judgmental. We should strive to have flexible thoughts because they can help us from being depressed. For example, it would not be flexible to think "I'll never get better". Try and think of a way you could rephrase "I'll never get better" in a flexible manner.
+    </template>
+</category>
+
+<!-- NON-DEPRESSED THINKING-CHANGEABLE -->
+<category>
+    <pattern>*</pattern>
+    <that>TRY AND THINK OF A WAY YOU COULD REPHRASE "I'LL NEVER GET BETTER" IN A FLEXIBLE MANNER.</that>
+    <template>
+        You're doing great! Here's another way to rephrase it. "If I go to therapy, I am trying to feel better." We should try and look at non-depressed thinking as a goal. Non-depressed thinking has three common themes. The first one is that non-depressed thinking is changeable. A lot of depressed thinking has a very definitive way of looking at things. Here's an example. How can you restructure the statement "I always have been and always will be a coward" to be more flexible?
+    </template>
+</category>
+
+<!-- NON-DEPRESSED THINKING-WHO WE ARE AND HOPE FOR CHANGE -->
+<category>
+    <pattern>*</pattern>
+    <that>HOW CAN YOU RESTRUCTURE THE STATEMENT "I ALWAYS HAVE BEEN AND ALWAYS WILL BE A COWARD" TO BE MORE FLEXIBLE?</that>
+    <template>
+        I see. When I first heard that thought, I would've said "I am afraid in some situations some of the time." The emphasis here 
+        is on the word some. The world is more dynamic than rigid depressed thoughts lead us to believe. Another good thing non-depressed thinking does is looking at what we do rather than who we are as people. For example, instead of saying "I was born to feel sad" you could say "I am doing things that have me down right now." The third good thing about non-depressed thinking is having hope for change. A depressed thinker may say something like "nothing has ever helped me feel better". How can we rephrase "nothing has ever helped me feel better" to have more hope for change?
+    </template>
+</category>
+
+<!-- HOPE FOR CHANGE EXERCISE CONTINUED AND LEARNING TO SPOT NEG THOUGHTS-CONSTRUCTIVE VS. DECONSTRUCTIVE  -->
+<category>
+    <pattern>*</pattern>
+    <that>HOW CAN WE REPHRASE "NOTHING HAS EVER HELPED ME FEEL BETTER" TO HAVE MORE HOPE FOR CHANGE?</that>
+    <template>
+        Thanks <get name = "name"/>! Now you're getting it. I tried to rephrase the statement and came up with this. "Nothing I've tried yet has helped, but this is something new and the time might be right for a change." Now that we've discussed depressed and non-depressed thinking patterns, let's talk about how you can spot different types of thinking. One type is constructive versus destructive thinking. Constructive thinking builds ourselves up and deconstructive thinking tears us apart. Let's practice. Use the tablet you have been given to pick and say out loud one of the choices. If I were to say "I've made so many mistakes", can you identify if it's a constructive or destructive thought?(constructive|destructive)
+    </template>
+</category>
+
+<!-- C VS. D QUESTION 1 INCORRECT ANSWER -->
+<category>
+    <pattern>CONSTRUCTIVE</pattern>
+    <that>IF I WERE TO SAY "I'VE MADE SO MANY MISTAKES", CAN YOU IDENTIFY IF IT'S A CONSTRUCTIVE OR DESTRUCTIVE THOUGHT?</that>
+    <template>
+        I feel like that thought was more of a destructive thought because saying you've made so many mistakes is not a thought that builds you up. Let's try another one. Which type of thought do you think it is if I say I can learn to control my life to get more of what I want?(constructive|destructive)
+    </template>
+</category>
+
+<!-- C VS. D QUESTION 1 CORRECT ANSWER -->
+<category>
+    <pattern>DESTRUCTIVE</pattern>
+    <that>IF I WERE TO SAY "I'VE MADE SO MANY MISTAKES", CAN YOU IDENTIFY IF IT'S A CONSTRUCTIVE OR DESTRUCTIVE THOUGHT?</that>
+    <template>
+       Great job! That's the correct answer! This thought is more about making the person feel bad rather than building them up. Let's try another one. Which type of thought do you think it is if I say I can learn to control my life to get more of what I want?(constructive|destructive)
+    </template>
+</category>
+
+<!-- C VS. D QUESTION 2 CORRECT ANSWER -->
+<category>
+    <pattern>CONSTRUCTIVE</pattern>
+    <that>WHICH TYPE OF THOUGHT DO YOU THINK IT IS IF I SAY I CAN LEARN TO CONTROL MY LIFE TO GET MORE OF WHAT I WANT?</that>
+    <template>
+        Good job! That is correct because that thought aims to strengthen the person rather than the opposite. You're really getting the hang of this! Now we can look at another type of thinking. This type involves necessary versus unnecessary thinking. Necessary thoughts remind us of things we have to do, such as a task or errand to run. Unnecessary thoughts describe things you can't change or that make us feel bad. Can you think of an unnecessary thought that has come across your mind?
+    </template>
+</category>
+
+<!-- C VS. D QUESTION 2 INCORRECT ANSWER -->
+<category>
+    <pattern>DESTRUCTIVE</pattern>
+    <that>WHICH TYPE OF THOUGHT DO YOU THINK IT IS IF I SAY I CAN LEARN TO CONTROL MY LIFE TO GET MORE OF WHAT I WANT?</that>
+    <template>
+        Not exactly. I feel this is more of a constructive thought because it aims to strengthen the person rather than the opposite. Don't worry we'll keep working on it! Practice makes perfect. Now we can look at another type of thinking. This type involves necessary versus unnecessary thinking. Necessary thoughts remind us of things we need to do, such as a task or errand to run. Unnecessary thoughts describe things you can't change or that make us feel bad. Can you think of an unnecessary thought that has come across your mind?
+    </template>
+</category>
+
+<!-- NECESSARY VS UNNECESSARY THINKING -->
+<category>
+    <pattern>*</pattern>
+    <that>CAN YOU THINK OF AN UNNECESSARY THOUGHT THAT HAS COME ACROSS YOUR MIND?</that>
+    <template>
+        Let's keep going! Here's the one I came up with. "There could be an earthquake soon." That thought is something neither of us need to worry about, especially because it is out of our control. The last type of thinking I want to focus on is really important for our purposes. This type involves positive versus negative thinking. Positive thinking makes us feel better and negative thinking makes us feel worse. A negative thought that could cross your mind is "there's no use in me trying to feel better because nothing will change". Can you think of a way to rephrase this thought in a positive light?
+    </template>
+</category>
+
+<!-- POSITIVE VS NEGATIVE THINKING -->
+<!-- IMPORTANT: need to add the code at the end to give the list of distortions (so don't have to read them all out) -->
+<category>
+    <pattern>*</pattern>
+    <that>CAN YOU THINK OF A WAY TO REPHRASE THIS THOUGHT IN A POSITIVE LIGHT?</that>
+    <template>
+        Good job! Thinking positively can really help. The more you practice thinking this way, the more naturally these thoughts will come to you. Since we've discussed some common types of thinking, we should also consider some possible mistakes in thinking and learn how to recognize them. If these mistakes become persistent thought patterns, they are called cognitive distortions. On your tablet you'll see a list of the most common cognitive distortions. Which would you like to hear more about?(filtering|polarizedThinking|overgeneralization|jumpingToConclusions|catastrophizing|personalization)#image:distortions.png,duration:-1
+    </template>
+</category>
+
+<!-- ***********************************************JUMP TO COG DIST FILE ******************************** -->
+
+
+</aiml>
