@@ -20,6 +20,7 @@ APScheduler==3.5.1
 emoji==0.5.0
 xmltodict==0.11.0
 zmq
+pycorenlp
 # Uncomment this line on Osx or Linux if you want to use sanic rest client
 # Sanic is not supported on Windows !
 # sanic==0.6.0

@@ -2,9 +2,18 @@
 
 <aiml version = "2.0">
 
+   <category>
+      <pattern> conditionstart </pattern>
+      <template>
+           how you feel?
+      </template>
+   </category>
+
+
 
    <category>
       <pattern> I feel * </pattern>
+       <that>how you feel?</that>
       <template>
          <think><set name = "state"> <star/> </set></think>
            I see let's talk about this.

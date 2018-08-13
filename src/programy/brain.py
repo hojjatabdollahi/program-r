@@ -1,20 +1,3 @@
-"""
-Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-documentation files (the "Software"), to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
-and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
-Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
-
 from programy.utils.logging.ylogger import YLogger
 import re
 import xml.etree.ElementTree as ET
@@ -51,6 +34,7 @@ class Brain(object):
 
         self._tokenizer = self.load_tokenizer()
 
+        self._corenlp = self.load_corenlp()
         self._aiml_parser = self.load_aiml_parser()
 
         self._denormal_collection = DenormalCollection()
@@ -174,6 +158,10 @@ class Brain(object):
     def tokenizer(self):
         return self._tokenizer
 
+    @property
+    def corenlp(self):
+        return self._corenlp
+
     def load_tokenizer(self):
         if self.configuration is not None and self.configuration.tokenizer.classname is not None:
             YLogger.info(self, "Loading tokenizer from class [%s]", self.configuration.tokenizer.classname)
@@ -181,6 +169,20 @@ class Brain(object):
             return tokenizer_class(self.configuration.tokenizer.split_chars)
         else:
             return Tokenizer(self.configuration.tokenizer.split_chars)
+
+
+    def load_corenlp(self,):
+        if self.configuration:
+            if self.configuration.nlp.corenlp.classname:
+                try:
+                    YLogger.info(self, "Loading corenlp from class [%s]", self.configuration.nlp.corenlp.classname)
+                    corenlp = ClassLoader.instantiate_class(self.configuration.nlp.corenlp.classname)
+                    return corenlp(self.configuration.nlp.corenlp)
+                except Exception as excep:
+                    YLogger.exception(self, "Failed to initiate corenlp", excep)
+            else:
+                YLogger.warning(self, "No configuration setting for corenlp")
+
 
     def load_aiml_parser(self):
         return AIMLParser(self)

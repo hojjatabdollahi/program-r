@@ -1,19 +1,3 @@
-"""
-Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-documentation files (the "Software"), to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
-and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
-Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
 from programy.config.container import BaseContainerConfigurationData
 from programy.config.brain.overrides import BrainOverridesConfiguration
 from programy.config.brain.defaults import BrainDefaultsConfiguration
@@ -26,6 +10,7 @@ from programy.config.brain.securities import BrainSecuritiesConfiguration
 from programy.config.brain.oobs import BrainOOBSConfiguration
 from programy.config.brain.dynamic import BrainDynamicsConfiguration
 from programy.config.brain.tokenizer import BrainTokenizerConfiguration
+from programy.config.brain.nlp import BrainNLPConfiguration
 
 
 class BrainConfiguration(BaseContainerConfigurationData):
@@ -42,6 +27,7 @@ class BrainConfiguration(BaseContainerConfigurationData):
         self._oob = BrainOOBSConfiguration()
         self._dynamics = BrainDynamicsConfiguration()
         self._tokenizer = BrainTokenizerConfiguration()
+        self._nlp = BrainNLPConfiguration()
         BaseContainerConfigurationData.__init__(self, section_name)
 
     @property
@@ -88,6 +74,10 @@ class BrainConfiguration(BaseContainerConfigurationData):
     def tokenizer(self):
         return self._tokenizer
 
+    @property
+    def nlp(self):
+        return self._nlp
+
     def load_configuration(self, configuration_file, bot_root):
         brain_config = configuration_file.get_section(self.section_name)
         if brain_config is not None:
@@ -102,6 +92,7 @@ class BrainConfiguration(BaseContainerConfigurationData):
             self._oob.load_config_section(configuration_file, brain_config, bot_root)
             self._dynamics.load_config_section(configuration_file, brain_config, bot_root)
             self._tokenizer.load_config_section(configuration_file, brain_config, bot_root)
+            self._nlp.load_config_section(configuration_file, brain_config, bot_root)
 
     def to_yaml(self, data, defaults=True):
         self.config_to_yaml(data, BrainOverridesConfiguration(), defaults)
@@ -115,3 +106,5 @@ class BrainConfiguration(BaseContainerConfigurationData):
         self.config_to_yaml(data, BrainOOBSConfiguration(), defaults)
         self.config_to_yaml(data, BrainDynamicsConfiguration(), defaults)
         self.config_to_yaml(data, BrainTokenizerConfiguration(), defaults)
+        #todo uncomment after adding to_yaml
+        #self.config_to_yaml(data, BrainNLPConfiguration(), defaults)

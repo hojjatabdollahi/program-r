@@ -96,6 +96,8 @@ class Bot(object):
 
         self._conversations = {}
         self._conversation_storage = None
+        self._corenlp = None
+
         self.initiate_conversation_storage()
 
     def ylogger_type(self):
@@ -112,6 +114,10 @@ class Bot(object):
     @property
     def configuration(self):
         return self._configuration
+
+    @property
+    def corenlp(self):
+        return self._corenlp
 
     @property
     def brain_factory(self):
@@ -133,6 +139,8 @@ class Bot(object):
 
     def set_conversation_question(self, client_context, questions):
         self._conversations[client_context.userid]._questions = questions
+
+
 
     @property
     def spell_checker(self):

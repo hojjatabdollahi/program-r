@@ -26,6 +26,7 @@ var/
 .installed.cfg
 *.egg
 results/*
+libs/stanford-corenlp-full-2018-02-27/*
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
