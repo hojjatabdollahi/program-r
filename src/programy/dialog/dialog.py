@@ -1,20 +1,3 @@
-"""
-Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-documentation files (the "Software"), to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
-and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
-Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
-
 from programy.utils.logging.ylogger import YLogger
 import re
 
@@ -25,8 +8,9 @@ import spacy
 
 class Sentence(object):
 
-    def __init__(self, tokenizer: Tokenizer, text: str = None ):
-        self._tokenizer = tokenizer
+    def __init__(self, nlp, text: str = None ):
+        self._nlp = nlp
+        self._tokenizer = self._nlp.linguistic_features.tokenizer.Tokenizer()
         self._words = self._tokenizer.texts_to_words(text)
         self._response = None
         self._matched_context = None
@@ -141,14 +125,26 @@ class Answer(object):
 
 class Question(object):
 
+    def __init__(self, nlp, srai=False):
+        self._srai = srai
+        self._nlp = nlp
+        self._sentences = []
+        self._properties = {}
+        self._current_sentence_no = -1
+
+
     #TODO Move sentence_split_charts into a property of tokenizer and move functionality into that class
+
     @staticmethod
-    def create_from_text(tokenizer, text, sentence_split_chars: str = ".", split=True, srai=False):
-        question = Question(srai)
-        if split is True:
-            question.split_into_sentences(text, sentence_split_chars, tokenizer)
+    def create_from_text(nlp, text, split=True, srai=False):
+        question = Question(nlp, srai)
+        sentence_segmentation = nlp.linguistic_features.sentence_segmentation.SentenceSegmentation()
+        if split:
+            for sentence_text in sentence_segmentation.segment(text):
+                question.sentences.append(Sentence(nlp, sentence_text))
         else:
-            question.sentences.append(Sentence(tokenizer, text))
+            pass
+            #question.sentences.append(Sentence(tokenizer, text))
         return question
 
     @staticmethod
@@ -163,12 +159,6 @@ class Question(object):
         for each_sentence in question.sentences:
             new_question.sentences.append(each_sentence)
         return new_question
-
-    def __init__(self, srai=False):
-        self._srai = srai
-        self._sentences = []
-        self._properties = {}
-        self._current_sentence_no = -1
 
     def debug_info(self):
         str = ""

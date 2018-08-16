@@ -1,28 +1,47 @@
+from programy.config.brain.sentence_segmentation import BrainSentenceSegmentationConfiguration
+from programy.config.brain.tokenizer import BrainTokenizerConfiguration
 from programy.utils.logging.ylogger import YLogger
 
 from programy.config.section import BaseSectionConfigurationData
-from programy.config.brain.service import BrainServiceConfiguration
 from programy.config.brain.corenlp import BrainCoreNLPConfiguration
 
 
 class BrainNLPConfiguration(BaseSectionConfigurationData):
     def __init__(self):
         BaseSectionConfigurationData.__init__(self, "nlp")
+        self._module_name = None
         self._corenlp = BrainCoreNLPConfiguration()
+        self._toknizer = BrainTokenizerConfiguration()
+        self._sentence_segmentation = BrainSentenceSegmentationConfiguration()
 
+
+    @property
+    def module_name(self):
+        return self._module_name
 
     @property
     def corenlp(self):
         return self._corenlp
 
+    @property
+    def tokenizer(self):
+        return self._toknizer
+
+    @property
+    def sentence_segmentation(self):
+        return self._sentence_segmentation
+
+
     def load_config_section(self, configuration_file, configuration, bot_root):
         nlp = configuration_file.get_section("nlp", configuration)
         if nlp is not None:
+            self._module_name = configuration_file.get_option(nlp, "modulename")
             corenlp = self._corenlp.load_config_section(configuration_file, nlp, bot_root)
-
+            tokenizer = self._toknizer.load_config_section(configuration_file, nlp, bot_root)
+            sentence_segmentation = self._sentence_segmentation.load_config_section(configuration_file, nlp, bot_root)
 
         else:
-            YLogger.warning(self, "Config section [services] missing from Brain, no services loaded")
+            YLogger.warning(self, "Config section [services] missing from Brain, no nlp loaded")
 
     # def to_yaml(self, data, defaults=True):
     #     if defaults is True:

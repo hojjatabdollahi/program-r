@@ -1,6 +1,9 @@
 from programy.utils.logging.ylogger import YLogger
 import re
 import xml.etree.ElementTree as ET
+
+from programy.utils.modules.loader import ModuleLoader
+
 try:
     import _pickle as pickle
 except:
@@ -32,9 +35,14 @@ class Brain(object):
         self._bot = bot
         self._configuration = configuration
 
-        self._tokenizer = self.load_tokenizer()
+        #self._tokenizer = self.load_tokenizer()
+
+        self.nlp = self.load_nlp()
+        #self._spacy_tokenizer = self.load_spacy_tokenizer()
 
         self._corenlp = self.load_corenlp()
+
+
         self._aiml_parser = self.load_aiml_parser()
 
         self._denormal_collection = DenormalCollection()
@@ -162,13 +170,16 @@ class Brain(object):
     def corenlp(self):
         return self._corenlp
 
-    def load_tokenizer(self):
-        if self.configuration is not None and self.configuration.tokenizer.classname is not None:
-            YLogger.info(self, "Loading tokenizer from class [%s]", self.configuration.tokenizer.classname)
-            tokenizer_class = ClassLoader.instantiate_class(self.configuration.tokenizer.classname)
-            return tokenizer_class(self.configuration.tokenizer.split_chars)
+
+    def load_nlp(self):
+        if self.configuration and self.configuration.nlp.module_name:
+            nlp = ModuleLoader.instantiate_module(self.configuration.nlp.module_name)
+            self.load_sentence_segmentation()
+            self.load_tokenizer()
+            return nlp
         else:
-            return Tokenizer(self.configuration.tokenizer.split_chars)
+            #todo change this to handle when it's none
+            return None
 
 
     def load_corenlp(self,):
@@ -183,6 +194,27 @@ class Brain(object):
             else:
                 YLogger.warning(self, "No configuration setting for corenlp")
 
+
+    def load_sentence_segmentation(self):
+        if self.configuration:
+            if self.configuration.nlp.sentence_segmentation.classname:
+                try:
+                    YLogger.info(self, "Loading sentence segmentaion from class [%s]", self.configuration.nlp.sentence_segmentation.classname)
+                    sentence_segmentation = ClassLoader.instantiate_class(self.configuration.nlp.sentence_segmentation.classname)
+                    return sentence_segmentation()
+                except Exception as excep:
+                    YLogger.exception(self, "Failed to initiate sentence segmentation", excep)
+            else:
+                YLogger.warning(self, "No configuration setting found for sentence segmentation")
+
+
+    def load_tokenizer(self):
+        if self.configuration is not None and self.configuration.nlp.tokenizer.classname is not None:
+            YLogger.info(self, "Loading tokenizer from class [%s]", self.configuration.nlp.tokenizer.classname)
+            tokenizer_class = ClassLoader.instantiate_class(self.configuration.nlp.tokenizer.classname)
+            return tokenizer_class()
+        else:
+            return Tokenizer(self.configuration.tokenizer.split_chars)
 
     def load_aiml_parser(self):
         return AIMLParser(self)

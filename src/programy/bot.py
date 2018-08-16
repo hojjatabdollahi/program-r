@@ -1,19 +1,3 @@
-"""
-Copyright (c) 2016-2018 Keith Sterling http://www.keithsterling.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-documentation files (the "Software"), to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
-and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
-Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
 import logging
 
 from programy.utils.logging.ylogger import YLogger
@@ -299,7 +283,7 @@ class Bot(object):
 
     def get_initial_question(self, client_context):
         if self.initial_question_srai is not None:
-            sentence = Sentence(client_context.brain.tokenizer, self.initial_question_srai)
+            sentence = Sentence(client_context.brain.nlp, self.initial_question_srai)
             initial_question = client_context.brain.ask_question(client_context, sentence)
             if initial_question is None or not initial_question:
                 initial_question = self.initial_question
@@ -309,7 +293,7 @@ class Bot(object):
 
     def get_exit_response(self, client_context):
         if self.exit_response_srai is not None:
-            sentence = Sentence(client_context.brain.tokenizer, self.exit_response_srai)
+            sentence = Sentence(client_context.brain.nlp, self.exit_response_srai)
             exit_response = client_context.brain.ask_question(client_context, sentence)
             if exit_response is None or not exit_response:
                 exit_response = self.exit_response
@@ -330,10 +314,12 @@ class Bot(object):
         return pre_processed
 
     def get_question(self, client_context, pre_processed, srai):
+
         if srai is False:
-            return Question.create_from_text(client_context.brain.tokenizer, pre_processed, srai=srai)
+            #return Question.create_from_text(client_context.brain.tokenizer, pre_processed, srai=srai)
+            return Question.create_from_text(client_context.brain.nlp, pre_processed, srai=srai)
         else:
-            return Question.create_from_text(client_context.brain.tokenizer, pre_processed, split=False, srai=srai)
+            return Question.create_from_text(client_context.brain.nlp, pre_processed, split=False, srai=srai)
 
 
     def get_answer(self, client_context, pre_processed, srai=False):
@@ -523,7 +509,7 @@ class Bot(object):
         YLogger.debug(client_context, "Raw Response (%s): %s", client_context.userid, response)
         sentence.response = response
         post_processed_response = self.post_process_response(client_context, response, srai)
-        response_sentence = Sentence(client_context.brain.tokenizer, post_processed_response)
+        response_sentence = Sentence(client_context.brain.nlp, post_processed_response)
         response_text = response_sentence.text()
         self.log_answer(client_context, sentence.text, response_text, responselogger)
         if len(options) == 0:
@@ -533,7 +519,7 @@ class Bot(object):
 
     def handle_none_response(self, client_context, sentence, responselogger, options = []):
         sentence.response = self.get_default_response(client_context)
-        non_hanlde_sentence = Sentence(client_context.brain.tokenizer, sentence.response)
+        non_hanlde_sentence = Sentence(client_context.brain.nlp, sentence.response)
         non_hanlde_sentence._no_response = True
 
 

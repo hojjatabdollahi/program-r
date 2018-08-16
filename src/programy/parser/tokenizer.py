@@ -34,6 +34,7 @@ class RyanTokenizer(Tokenizer):
     def __init__(self, split_chars=' '):
         super().__init__(split_chars)
         self._nlp = spacy.load("en")
+        print("loaded")
 
     def texts_to_words(self, texts):
         if not texts:

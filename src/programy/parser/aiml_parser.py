@@ -472,13 +472,13 @@ class AIMLParser(object):
 
     def match_sentence(self, client_context, pattern_sentence, topic_pattern, that_pattern):
 
-        topic_sentence = Sentence(client_context.brain.tokenizer, topic_pattern)
-        that_sentence = Sentence(client_context.brain.tokenizer, that_pattern)
+        topic_sentence = Sentence(client_context.brain.nlp, topic_pattern)
+        that_sentence = Sentence(client_context.brain.nlp, that_pattern)
 
         YLogger.debug(client_context, "AIML Parser matching sentence [%s], topic=[%s], that=[%s] ",
                           pattern_sentence.text(), topic_pattern, that_pattern)
 
-        sentence = Sentence(client_context.brain.tokenizer)
+        sentence = Sentence(client_context.brain.nlp)
         sentence.append_sentence(pattern_sentence)
         sentence.append_word('__TOPIC__')
         sentence.append_sentence(topic_sentence)
