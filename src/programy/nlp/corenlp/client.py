@@ -29,7 +29,7 @@ class Client():
             return None
 
 
-        return result["sentences"][0]["sentiment"], result["sentences"][0]["sentimentValue"]
+        return result["sentences"][0]["sentiment"].lower(), result["sentences"][0]["sentimentValue"].lower()
 
 
     def get_sentences_sentiments(self, sentences):

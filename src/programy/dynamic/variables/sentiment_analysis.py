@@ -11,7 +11,10 @@ class GetSentiment(DynamicVariable):
         variables = client_context.bot.conversations["Console"].properties
         text = variables["data"]
         sentiment, sentiment_value = client_context.bot.brain.corenlp.get_sentence_sentiment(text)
-        #sentiments, sentiment_values = client_context.bot.brain.corenlp.get_sentences_sentiments(text)
 
+        # sentiments, sentiment_values = client_context.bot.brain.corenlp.get_sentence_sentiments(text)
+        #
+        # sentiment = sentiments[sentiment_values.index(max(sentiment_values))]
+        # print(sentiment)
 
         return sentiment

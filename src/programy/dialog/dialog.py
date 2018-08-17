@@ -10,7 +10,7 @@ class Sentence(object):
 
     def __init__(self, nlp, text: str = None ):
         self._nlp = nlp
-        self._tokenizer = self._nlp.linguistic_features.tokenizer.Tokenizer()
+        self._tokenizer = self._nlp.tokenizer
         self._words = self._tokenizer.texts_to_words(text)
         self._response = None
         self._matched_context = None
@@ -125,9 +125,8 @@ class Answer(object):
 
 class Question(object):
 
-    def __init__(self, nlp, srai=False):
+    def __init__(self, srai=False):
         self._srai = srai
-        self._nlp = nlp
         self._sentences = []
         self._properties = {}
         self._current_sentence_no = -1
@@ -137,10 +136,9 @@ class Question(object):
 
     @staticmethod
     def create_from_text(nlp, text, split=True, srai=False):
-        question = Question(nlp, srai)
-        sentence_segmentation = nlp.linguistic_features.sentence_segmentation.SentenceSegmentation()
+        question = Question(srai)
         if split:
-            for sentence_text in sentence_segmentation.segment(text):
+            for sentence_text in nlp.sentence_segmentation.segment(text):
                 question.sentences.append(Sentence(nlp, sentence_text))
         else:
             pass

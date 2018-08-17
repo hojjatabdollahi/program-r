@@ -28,27 +28,6 @@ class Tokenizer(object):
         return value1 == value2
 
 
-
-class RyanTokenizer(Tokenizer):
-
-    def __init__(self, split_chars=' '):
-        super().__init__(split_chars)
-        self._nlp = spacy.load("en")
-        print("loaded")
-
-    def texts_to_words(self, texts):
-        if not texts:
-            return []
-
-        text_without_response = texts
-        #if "(" in texts:
-        #    text_without_response = texts.split("(")[0]
-
-        doc = self._nlp(text_without_response)
-        tokens = [token.text for token in doc if token.text.strip()]
-        return tokens
-
-
 class CjkTokenizer(Tokenizer):
 
     def __init__(self, split_chars=' '):

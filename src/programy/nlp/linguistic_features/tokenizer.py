@@ -1,14 +1,36 @@
-from programy.nlp.nlp import NLP
+from programy.nlp.spacylib import spacy_lib
+
+class Tokenizer():
+
+    def __init__(self,):
+        self.split_chars = '.'
 
 
-class Tokenizer(NLP):
+    def tokenize(self, text):
+        raise NotImplementedError("Should be override to be used")
+
+
+    @staticmethod
+    def factory(type_):
+        if type_ == "spacy":
+            return SpacyTokenizer()
+
+        elif type_ == "default":
+            return DefualtTokenizer()
+
+        else:
+            return None
+
+
+
+class SpacyTokenizer(Tokenizer):
 
     def __init__(self):
         super().__init__()
-        self.split_chars = '.'
+        self.split_chars = ' '
 
     def tokenize(self, text):
-        doc = self._spacy(text)
+        doc = spacy_lib(text)
         tokens_text = [token.text for token in doc]
         return tokens_text
 
@@ -33,6 +55,8 @@ class Tokenizer(NLP):
         return value1 == value2
 
 
-if __name__ == "__main__":
-    tok = Tokenizer()
-    print(tok.tokenize("I am sad. I am happy"))
+
+class DefualtTokenizer(Tokenizer):
+
+    def __init__(self):
+        pass

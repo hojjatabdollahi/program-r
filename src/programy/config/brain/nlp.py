@@ -9,15 +9,15 @@ from programy.config.brain.corenlp import BrainCoreNLPConfiguration
 class BrainNLPConfiguration(BaseSectionConfigurationData):
     def __init__(self):
         BaseSectionConfigurationData.__init__(self, "nlp")
-        self._module_name = None
+        self._classname = None
         self._corenlp = BrainCoreNLPConfiguration()
         self._toknizer = BrainTokenizerConfiguration()
         self._sentence_segmentation = BrainSentenceSegmentationConfiguration()
 
 
     @property
-    def module_name(self):
-        return self._module_name
+    def classname(self):
+        return self._classname
 
     @property
     def corenlp(self):
@@ -35,7 +35,7 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
     def load_config_section(self, configuration_file, configuration, bot_root):
         nlp = configuration_file.get_section("nlp", configuration)
         if nlp is not None:
-            self._module_name = configuration_file.get_option(nlp, "modulename")
+            self._classname = configuration_file.get_option(nlp, "classname")
             corenlp = self._corenlp.load_config_section(configuration_file, nlp, bot_root)
             tokenizer = self._toknizer.load_config_section(configuration_file, nlp, bot_root)
             sentence_segmentation = self._sentence_segmentation.load_config_section(configuration_file, nlp, bot_root)

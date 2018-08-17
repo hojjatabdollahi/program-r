@@ -60,11 +60,11 @@ class TemplateRequestNodeTests(ParserTestsBaseClass):
         conversation = Conversation(self._client_context)
         self._client_context.bot._conversations["testid"] = conversation
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "Hello world")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "Hello world")
         question.current_sentence()._response = "Hello matey"
         conversation._questions.append(question)
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "What did you say")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "What did you say")
         question.current_sentence()._response = "Hello matey"
         conversation._questions.append(question)
 
@@ -88,11 +88,11 @@ class TemplateRequestNodeTests(ParserTestsBaseClass):
         conversation = Conversation(self._client_context)
         self._client_context.bot._conversations["testid"] = conversation
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "Hello world")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "Hello world")
         question.current_sentence()._response = "Hello matey"
         conversation._questions.append(question)
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "What did you say")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "What did you say")
         question.current_sentence()._response = "Hello matey"
         conversation._questions.append(question)
 
@@ -115,11 +115,11 @@ class TemplateRequestNodeTests(ParserTestsBaseClass):
 
         conversation = Conversation(self._client_context)
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "Hello world")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "Hello world")
         question.current_sentence()._response = "Hello matey"
         conversation.record_question(question)
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "How are you. Are you well")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "How are you. Are you well")
         question.current_sentence()._response = "Fine thanks"
         conversation.record_question(question)
 

@@ -163,20 +163,14 @@ class Brain(object):
         return self._dynamics_collection
 
     @property
-    def tokenizer(self):
-        return self._tokenizer
-
-    @property
     def corenlp(self):
         return self._corenlp
 
 
     def load_nlp(self):
-        if self.configuration and self.configuration.nlp.module_name:
-            nlp = ModuleLoader.instantiate_module(self.configuration.nlp.module_name)
-            self.load_sentence_segmentation()
-            self.load_tokenizer()
-            return nlp
+        if self.configuration and self.configuration.nlp.classname:
+            nlp = ClassLoader.instantiate_class(self.configuration.nlp.classname)
+            return nlp(self.configuration.nlp)
         else:
             #todo change this to handle when it's none
             return None
@@ -195,26 +189,26 @@ class Brain(object):
                 YLogger.warning(self, "No configuration setting for corenlp")
 
 
-    def load_sentence_segmentation(self):
-        if self.configuration:
-            if self.configuration.nlp.sentence_segmentation.classname:
-                try:
-                    YLogger.info(self, "Loading sentence segmentaion from class [%s]", self.configuration.nlp.sentence_segmentation.classname)
-                    sentence_segmentation = ClassLoader.instantiate_class(self.configuration.nlp.sentence_segmentation.classname)
-                    return sentence_segmentation()
-                except Exception as excep:
-                    YLogger.exception(self, "Failed to initiate sentence segmentation", excep)
-            else:
-                YLogger.warning(self, "No configuration setting found for sentence segmentation")
-
-
-    def load_tokenizer(self):
-        if self.configuration is not None and self.configuration.nlp.tokenizer.classname is not None:
-            YLogger.info(self, "Loading tokenizer from class [%s]", self.configuration.nlp.tokenizer.classname)
-            tokenizer_class = ClassLoader.instantiate_class(self.configuration.nlp.tokenizer.classname)
-            return tokenizer_class()
-        else:
-            return Tokenizer(self.configuration.tokenizer.split_chars)
+    # def load_sentence_segmentation(self):
+    #     if self.configuration:
+    #         if self.configuration.nlp.sentence_segmentation.classname:
+    #             try:
+    #                 YLogger.info(self, "Loading sentence segmentaion from class [%s]", self.configuration.nlp.sentence_segmentation.classname)
+    #                 sentence_segmentation = ClassLoader.instantiate_class(self.configuration.nlp.sentence_segmentation.classname)
+    #                 return sentence_segmentation()
+    #             except Exception as excep:
+    #                 YLogger.exception(self, "Failed to initiate sentence segmentation", excep)
+    #         else:
+    #             YLogger.warning(self, "No configuration setting found for sentence segmentation")
+    #
+    #
+    # def load_tokenizer(self):
+    #     if self.configuration is not None and self.configuration.nlp.tokenizer.classname is not None:
+    #         YLogger.info(self, "Loading tokenizer from class [%s]", self.configuration.nlp.tokenizer.classname)
+    #         tokenizer_class = ClassLoader.instantiate_class(self.configuration.nlp.tokenizer.classname)
+    #         return tokenizer_class()
+    #     else:
+    #         return Tokenizer(self.configuration.tokenizer.split_chars)
 
     def load_aiml_parser(self):
         return AIMLParser(self)

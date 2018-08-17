@@ -578,7 +578,7 @@ class AIMLParserTests(unittest.TestCase):
 
         bot = Bot(BotConfiguration())
 
-        context = self.parser.match_sentence(self._client_context, Sentence(bot.brain.tokenizer, "HELLO"), "*", "*")
+        context = self.parser.match_sentence(self._client_context, Sentence(bot.brain.nlp.tokenizer, "HELLO"), "*", "*")
         self.assertIsNotNone(context)
         self.assertEqual("Hiya", context.template_node().template.resolve(self._client_context))
 

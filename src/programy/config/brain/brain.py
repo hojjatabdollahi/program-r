@@ -9,7 +9,7 @@ from programy.config.brain.services import BrainServicesConfiguration
 from programy.config.brain.securities import BrainSecuritiesConfiguration
 from programy.config.brain.oobs import BrainOOBSConfiguration
 from programy.config.brain.dynamic import BrainDynamicsConfiguration
-from programy.config.brain.tokenizer import BrainTokenizerConfiguration
+from programy.config.brain.nlp import BrainTokenizerConfiguration
 from programy.config.brain.nlp import BrainNLPConfiguration
 
 

@@ -73,11 +73,11 @@ class TemplateThatNodeTests(ParserTestsBaseClass):
 
         conversation = Conversation(self._client_context)
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "Hello world")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "Hello world")
         question.current_sentence()._response = "Hello matey"
         conversation.record_question(question)
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "How are you")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "How are you")
         question.current_sentence()._response = "Very well thanks"
         conversation.record_question(question)
 
@@ -101,11 +101,11 @@ class TemplateThatNodeTests(ParserTestsBaseClass):
 
         conversation = Conversation(self._client_context)
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "Hello world")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "Hello world")
         question.current_sentence()._response = "Hello matey"
         conversation.record_question(question)
 
-        question = Question.create_from_text(self._client_context.brain.tokenizer, "How are you")
+        question = Question.create_from_text(self._client_context.brain.nlp.tokenizer, "How are you")
         question.current_sentence()._response = "Very well thanks"
         conversation.record_question(question)
 

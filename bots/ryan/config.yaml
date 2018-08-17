@@ -165,7 +165,7 @@ brain:
         classname: programy.oob.wifi.WifiOutOfBandProcessor
 
     nlp:
-      modulename: programy.nlp
+      classname: programy.nlp.nlp.NLP
       corenlp:
         classname: programy.nlp.corenlp.client.Client
         ip: "http://localhost"
@@ -174,8 +174,8 @@ brain:
 
 
       tokenizer:
-        classname: programy.nlp.linguistic_features.tokenizer.Tokenizer
+        libname: spacy
         split_chars: .
 
       sentence_segmentation:
-        classname: programy.nlp.linguistic_features.sentence_segmentation.SentenceSegmentation
+        libname: spacy

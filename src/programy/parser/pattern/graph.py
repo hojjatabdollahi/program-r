@@ -100,7 +100,7 @@ class PatternGraph(object):
 
         stripped = pattern_text.strip()
 
-        words = self._aiml_parser.brain.tokenizer.texts_to_words(stripped)
+        words = self._aiml_parser.brain.nlp.tokenizer.texts_to_words(stripped)
 
         for word in words:
             if word != '': # Blank nodes add no value, ignore them

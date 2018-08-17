@@ -266,7 +266,7 @@ class Bot(object):
     def get_default_response(self, client_context):
         #TODO I comment out this part of the code
         # if self.default_response_srai is not None:
-        #     sentence = Sentence(client_context.brain.tokenizer, self.default_response_srai)
+        #     sentence = Sentence(client_context.brain.nlp.tokenizer, self.default_response_srai)
         #     default_response = client_context.brain.ask_question(client_context, sentence)
         #     if default_response is None or not default_response:
         #         default_response = self.default_response
@@ -354,19 +354,11 @@ class Bot(object):
         #     client_context.bot = self
         #     client_context.brain = client_context.bot.brain
 
-
-
         client_context.mark_question_start(text)
 
         pre_processed = self.pre_process_text(client_context, text, srai)
 
         question = self.get_question(client_context, pre_processed, srai)
-
-
-
-        # file_obj_read = open("/home/rohola/conv_questions.p", 'rb')
-        # questions = pickle.load(file_obj_read)
-        # client_context.brain.bot.set_conversation_question(client_context, questions)
 
         conversation = self.get_conversation(client_context)
 
@@ -380,9 +372,12 @@ class Bot(object):
             answer_sentences.append(answer_sentence)
             sentence_no += 1
 
+        # sentence = Sentence(client_context.brain.nlp, pre_processed)
+        # answer_sentence = self.process_sentence(client_context, sentence, srai, responselogger)
+        # answer_sentences = [answer_sentence]
+
         answer = Answer.create_from_sentences(answer_sentences, srai)
         conversation.record_answer(answer)
-
 
 
         client_context.reset_question()

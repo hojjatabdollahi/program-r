@@ -43,7 +43,7 @@ class PatternWildCardNodeTests(ParserTestsBaseClass):
         wildcard = MockPatternWildCardNode("*")
         self.assertIsNotNone(wildcard)
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
         matches_added = 1
 
         self.assertTrue(wildcard.invalid_topic_or_that("", self._client_context, PatternTopicNode.TOPIC, context, matches_added))
@@ -56,8 +56,8 @@ class PatternWildCardNodeTests(ParserTestsBaseClass):
         wildcard = MockPatternWildCardNode("*")
         self.assertIsNotNone(wildcard)
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
-        sentence = Sentence(self._client_context.brain.tokenizer, "TEST SENTENCE")
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
+        sentence = Sentence(self._client_context.brain.nlp.tokenizer, "TEST SENTENCE")
         match = wildcard.check_child_is_wildcard("", self._client_context, context, sentence, 0,  Match.WORD, 0)
         self.assertIsNone(match)
 
@@ -68,13 +68,13 @@ class PatternWildCardNodeTests(ParserTestsBaseClass):
         wildcard._0ormore_hash = PatternZeroOrMoreWildCardNode('#')
         wildcard._0ormore_hash._template = PatternTemplateNode(TemplateNode())
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
-        sentence = Sentence(self._client_context.brain.tokenizer, "TEST SENTENCE")
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
+        sentence = Sentence(self._client_context.brain.nlp.tokenizer, "TEST SENTENCE")
         match = wildcard.check_child_is_wildcard("", self._client_context, context, sentence, 1,  Match.WORD, 0)
         self.assertIsNotNone(match)
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
-        sentence = Sentence(self._client_context.brain.tokenizer, "TEST")
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
+        sentence = Sentence(self._client_context.brain.nlp.tokenizer, "TEST")
         match = wildcard.check_child_is_wildcard("", self._client_context, context, sentence, 0,  Match.WORD, 0)
         self.assertIsNotNone(match)
 
@@ -85,13 +85,13 @@ class PatternWildCardNodeTests(ParserTestsBaseClass):
         wildcard._0ormore_arrow = PatternZeroOrMoreWildCardNode('^')
         wildcard._0ormore_arrow._template = PatternTemplateNode(TemplateNode())
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
-        sentence = Sentence(self._client_context.brain.tokenizer, "TEST SENTENCE")
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
+        sentence = Sentence(self._client_context.brain.nlp.tokenizer, "TEST SENTENCE")
         match = wildcard.check_child_is_wildcard("", self._client_context, context, sentence, 1,  Match.WORD, 0)
         self.assertIsNotNone(match)
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
-        sentence = Sentence(self._client_context.brain.tokenizer, "TEST")
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
+        sentence = Sentence(self._client_context.brain.nlp.tokenizer, "TEST")
         match = wildcard.check_child_is_wildcard("", self._client_context, context, sentence, 0,  Match.WORD, 0)
         self.assertIsNotNone(match)
 
@@ -102,13 +102,13 @@ class PatternWildCardNodeTests(ParserTestsBaseClass):
         wildcard._1ormore_star = PatternOneOrMoreWildCardNode('*')
         wildcard._1ormore_star._template = PatternTemplateNode(TemplateNode())
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
-        sentence = Sentence(self._client_context.brain.tokenizer, "TEST SENTENCE")
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
+        sentence = Sentence(self._client_context.brain.nlp.tokenizer, "TEST SENTENCE")
         match = wildcard.check_child_is_wildcard("", self._client_context, context, sentence, 0,  Match.WORD, 0)
         self.assertIsNotNone(match)
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
-        sentence = Sentence(self._client_context.brain.tokenizer, "TEST")
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
+        sentence = Sentence(self._client_context.brain.nlp.tokenizer, "TEST")
         match = wildcard.check_child_is_wildcard("", self._client_context, context, sentence, 0, Match.WORD, 0)
         self.assertIsNone(match)
 
@@ -119,13 +119,13 @@ class PatternWildCardNodeTests(ParserTestsBaseClass):
         wildcard._1ormore_underline = PatternOneOrMoreWildCardNode('_')
         wildcard._1ormore_underline._template = PatternTemplateNode(TemplateNode())
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
-        sentence = Sentence(self._client_context.brain.tokenizer, "TEST SENTENCE")
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
+        sentence = Sentence(self._client_context.brain.nlp.tokenizer, "TEST SENTENCE")
         match = wildcard.check_child_is_wildcard("", self._client_context, context, sentence, 0,  Match.WORD, 0)
         self.assertIsNotNone(match)
 
-        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.tokenizer)
-        sentence = Sentence(self._client_context.brain.tokenizer, "TEST")
+        context = MatchContext(max_search_depth=100, max_search_timeout=-1, tokenizer=self._client_context.brain.nlp.tokenizer)
+        sentence = Sentence(self._client_context.brain.nlp.tokenizer, "TEST")
         match = wildcard.check_child_is_wildcard("", self._client_context, context, sentence, 0,  Match.WORD, 0)
         self.assertIsNone(match)
 
