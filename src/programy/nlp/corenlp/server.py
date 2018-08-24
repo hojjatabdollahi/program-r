@@ -24,7 +24,7 @@ class StanfordCoreNLPServer():
 
     @threaded
     def _run_server(self):
-        command = 'java -mx5g -cp "'+self.corenlp_dir+'"  edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port ' + str(self.port) +' -timeout 10000'
+        command = 'java -mx1g -cp "'+self.corenlp_dir+'"  edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port ' + str(self.port) +' -timeout 10000'
         p = subprocess.Popen(
             command,
             shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)

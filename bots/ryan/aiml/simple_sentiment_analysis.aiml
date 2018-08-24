@@ -7,14 +7,14 @@
         <pattern>START</pattern>
 
         <template>
-            How do you feel bro?
+            How do you feel today?
         </template>
    </category>
 
 
    <category>
       <pattern>*</pattern>
-       <that>How do you feel bro?</that>
+       <that>How do you feel today?</that>
 
       <template>
 
@@ -24,7 +24,7 @@
 
           <condition name = "getsentiment" >
 
-                <li value="verypositive"> It's awesome!</li>
+                <li value="verypositive"> That's awesome!</li>
                 <li value = "positive"> What is making you feel happy? </li>
                 <li value = "negative"> What is making you feel sad? </li>
                 <li value="verynegative">I'm so sorry to hear that.</li>
