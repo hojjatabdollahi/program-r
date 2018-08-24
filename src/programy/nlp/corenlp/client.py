@@ -25,7 +25,8 @@ class Client():
                                    'outputFormat': 'json',
                                    'timeout': 5000,
                                })
-        except:
+        except Exception as ex:
+            print(ex)
             return None
 
 
@@ -49,5 +50,10 @@ class Client():
         sentiment_values = [sentiment_info["sentimentValue"] for sentiment_info in result["sentences"]]
         return sentiments, sentiment_values
 
-
-
+if __name__ == "__main__":
+    b = BrainCoreNLPConfiguration()
+    b._ip= "http://localhost"
+    b._port = "9000"
+    b._jar_dir = "C:/Users/DreamFace/Codes/libs/stanford-corenlp-full-2018-02-27/*"
+    c = Client(b)
+    print(c.get_sentence_sentiment("I am happy."))

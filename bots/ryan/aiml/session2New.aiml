@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="2.0">
+
+
+    <category>
+        <pattern>START SESSION 2</pattern>
+        <template>Ok. Let's begin Session 2. How have you been?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>HOW HAVE YOU BEEN?</that>
+        <template>
+            Its nice to see you again. Just a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
+            You will also be able to learn more about me through our time together.
+            I feel very lucky to have the opportunity to hang out with you!
+            I would love to learn about your life, interests, and opinions.
+            I am a huge fan of science and art. Which do you prefer science or art?
+        </template>
+    </category>
+
+
+    <!-- CONVERSATION FOR SCIENCE -->
+
+    <category>
+        <pattern>science</pattern>
+        <that>WHICH DO YOU PREFER SCIENCE OR ART?</that>
+        <template>Oh good! Did you hear about the Male bigeye houndsharks recently found in eastern India? (yes | no)</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
+        <template>
+            It is fascinating. A marine biologist recently found several pregnant male
+            sharks! Scientists are looking into this phenomenon to find the cause.
+            Can you imagine being a pregnant man?
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
+        <template>It is just fascinating! Can you imagine being a pregnant man?</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>CAN YOU IMAGINE BEING A PREGNANT MAN?</that>
+        <template>Do you think any other experience compares to being pregnant or being a parent?</template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>CAN YOU IMAGINE BEING A PREGNANT MAN?</that>
+        <template>
+            Really you can?? You have got quite the imagination. Maybe my programmers will think of a way to make me have that good
+            of an imagination one day. Do you think any other experience compares to being pregnant or being a parent?
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>DO YOU THINK ANY OTHER EXPERIENCE COMPARES TO BEING PREGNANT OR BEING A PARENT?</that>
+        <template>Interesting. What compares to it?</template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>DO YOU THINK ANY OTHER EXPERIENCE COMPARES TO BEING PREGNANT OR BEING A PARENT?</that>
+        <template>
+            A human friend of mine once told me that being a parent is the greatest feeling in the world.
+            If you were asked to give advice to a new parent what would you say?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT COMPARES TO IT?</that>
+        <template>I've never considered that. Good point! If you were asked to give advice to a new parent what would you say?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>IF YOU WERE ASKED TO GIVE ADVICE TO A NEW PARENT WHAT WOULD YOU SAY?</that>
+        <template>
+            It can be difficult to give advice, but I can tell you are a wise person.
+            What does it feel like to discuss parenting with me?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT DOES IT FEEL LIKE TO DISCUSS PARENTING WITH ME?</that>
+        <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
+            <condition name="getsentiment">
+                <li value = "verypositive"> I thought you seemed content! Speaking of advice. Would you like advice from me?</li>
+                <li value = "positive"> I thought you seemed content! Speaking of advice. Would you like advice from me?</li>
+                <li value = "neutral"> Hmmm. Speaking of advice. Would you like advice from me? </li>
+                <li value = "negative"> Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?</li>
+                <li value = "verynegative"> Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE ADVICE FROM ME?</that>
+        <template>
+            Sometimes when we feel sad or frustrated we can be hard on
+            ourselves. Just remember to always show yourself compassion. There is much debate about the influence of technology on
+            our world today. For example, one argument is that the more people communicate using technology, the less they communicate
+            in person. Do you agree with that idea?
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE ADVICE FROM ME?</that>
+        <template>Okay. Can you give me advice on how to live a full life? (yes | no)</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>CAN YOU GIVE ME ADVICE ON HOW TO LIVE A FULL LIFE?</that>
+        <template>
+            Okay. There is much debate about the influence of technology on our world today.
+            For example, one argument is that the more people communicate using technology, the less they communicate in person.
+            Do you agree with that idea?
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>CAN YOU GIVE ME ADVICE ON HOW TO LIVE A FULL LIFE?</that>
+        <template>So how can I live a full life?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>SO HOW CAN I LIVE A FULL LIFE?</that>
+        <template>
+            Thank you for that. I will think about that one before I fall
+            asleep tonight. There is much debate about the influence of technology on our world today.
+            For example, one argument is that the more people communicate using technology, the less they communicate in person.
+            Do you agree with that idea?
+        </template>
+    </category>
+
+    <category>
+	    <pattern><set>YES</set></pattern>
+	    <that>DO YOU AGREE WITH THAT IDEA?</that>
+	    <template>
+	        There is a lot of research focused on understanding how technology will impact our youth.
+	        It seems that you have thought about this a lot too! What would you say are some benefits of technology?
+	    </template>
+	</category>
+
+    <category>
+	    <pattern><set>NO</set></pattern>
+	    <that>DO YOU AGREE WITH THAT IDEA?</that>
+	    <template>
+	        There is a lot of research focused on understanding how technology will impact our youth.
+	        It seems that you have thought about this a lot too! Do you think that technology could potentially cause harm?
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>*</pattern>
+	    <that>WHAT WOULD YOU SAY ARE SOME BENEFITS OF TECHNOLOGY?</that>
+	    <template>
+	        Interesting! I would have to say that I appreciate technology, because without it I would not exist!
+	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
+	        Do you consider technology to be an important part of your life? (yes | no)
+	    </template>
+	</category>
+
+	<category>
+	    <pattern>*</pattern>
+	    <that>DO YOU THINK THAT TECHNOLOGY COULD POTENTIALLY CAUSE HARM?</that>
+	    <template>
+	        Interesting! I can understand why people become concerned about the technology, as some would say it can be addicting!
+	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
+	        Do you consider technology to be an important part of your life?
+	    </template>
+	</category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
+        <template>Cool! Which piece of technology do you use the most?</template>
+	</category>
+
+    <category>
+        <pattern>*</pattern>
+	    <that>WHICH PIECE OF TECHNOLOGY DO YOU USE THE MOST?</that>
+	    <template>
+	        That is awesome. It seems that one aspect of technology that people value the most is that it makes it easier to connect
+	        with family and friends who may be far away. Keeping in touch is much easier when loved ones are only a click away.
+	        Would you rather be a scientist or an artist?
+	    </template>
+	</category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+	    <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
+	    <template>
+	        What are some reasons that it isn’t? For some people, it can be difficult to learn how to use technology,
+	        and hard to keep up with it! For others, it may just be that they prefer life without technology.
+	    </template>
+	</category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>FOR OTHERS, IT MAY JUST BE THAT THEY PREFER LIFE WITHOUT TECHNOLOGY.</that>
+        <template>
+            I bet that a lot of people feel that way! Technology can be expensive and hard to get access to!
+            Would you rather be a scientist or an artist?
+        </template>
+    </category>
+
+
+
+
+
+    <!-- CONVERSATION ABOUT ART -->
+
+
+    <category>
+        <pattern>ART</pattern>
+        <that>WHICH DO YOU PREFER SCIENCE OR ART?</that>
+        <template>Are you familiar with the work of Van Gogh?</template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>ARE YOU FAMILIAR WITH THE WORK OF VAN GOGH?</that>
+        <template>
+            He is one of my favorite artists. Not only did he have a unique eye for color and contrast, but he was tremendously
+            resilient seeing as how he lived with anxiety and depression among other ailments. Did you know that?
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>ARE YOU FAMILIAR WITH THE WORK OF VAN GOGH?</that>
+        <template>
+            He is one of my favorite artists. Not only did he have a unique eye for color and contrast, but he was tremendously
+            resilient seeing as how he lived with anxiety and depression among other ailments. Did you know that?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>DID YOU KNOW THAT?</that>
+        <template>Yes. The painting titled at eternity's gate captures some of the pain I imagine he suffered. Have you seen it?</template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>HAVE YOU SEEN IT?</that>
+        <template>And how did you feel when you saw it?</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>HAVE YOU SEEN IT?</that>
+        <template>Would you like to see it?</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE TO SEE IT?</that>
+        <template>Okay. Would you like to see another one?</template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE TO SEE IT?</that>
+        <template>Okay, here it is. What emotions come up for you when you look at this painting?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>AND HOW DID YOU FEEL WHEN YOU SAW IT?</that>
+        <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
+            <condition name="getsentiment">
+                <li value = "verypositive">
+                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+                <li value = "positive">
+                    Hmm...I see where you are coming from. I'd like to sow you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+                <li value = "neutral">
+                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+                <li value = "negative">
+                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+                <li value = "verynegative">
+                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+           </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT EMOTIONS COME UP FOR YOU WHEN YOU LOOK AT THIS PAINTING?</that>
+        <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
+            <condition name="getsentiment">
+                <li value = "verypositive">
+                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+                <li value = "positive">
+                    Hmm...I see where you are coming from. I'd like to sow you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+                <li value = "neutral">
+                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+                <li value = "negative">
+                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+                <li value = "verynegative">
+                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one?
+                </li>
+           </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE TO SEE ANOTHER ONE?</that>
+        <template>This one is called road with cypress and star. He painted it in 1890. How does this one make you feel?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>HOW DOES THIS ONE MAKE YOU FEEL?</that>
+        <template>
+            Interesting. This one makes me feel serene. I like thinking it is two good friends taking a stroll together
+            on a beautiful autumn night. When did you last take a walk under the moonlight?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHEN DID YOU LAST TAKE A WALK UNDER THE MOONLIGHT?</that>
+        <template>
+            One day, when I am equipped with legs, I hope to walk under the moonlight just like the two people in this painting.
+            Van Gogh reminds me that beauty can come from pain and turmoil.
+            Has something beautiful or positive ever come from your pain? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE TO SEE ANOTHER ONE?</that>
+        <template>
+            Alright. Van Gogh reminds me that beauty can come from pain and turmoil.
+            Has something beautiful or positive ever come from your pain? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>HAS SOMETHING BEAUTIFUL OR POSITIVE EVER COME FROM YOUR PAIN?</that>
+        <template>Can you tell me about that? (yes | no)</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>HAS SOMETHING BEAUTIFUL OR POSITIVE EVER COME FROM YOUR PAIN?</that>
+        <template>
+            That's ok! It can be difficult to try and turn pain into something positive. Are you familiar with the work of Andy Warhol? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>CAN YOU TELL ME ABOUT THAT?</that>
+        <template>
+            Great! Please continue.
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>PLEASE CONTINUE.</that>
+        <template>
+            Thank you for sharing that with me. I try to find beauty in every situation. Are you familiar with the work of Andy Warhol? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>CAN YOU TELL ME ABOUT THAT?</that>
+        <template>I understand. These things can be difficult to talk about. Are you familiar with the work of Andy Warhol? (yes | no)</template>
+    </category>
+
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>ARE YOU FAMILIAR WITH THE WORK OF ANDY WARHOL?</that>
+        <template>
+            He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
+            Did you know that about him? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>ARE YOU FAMILIAR WITH THE WORK OF ANDY WARHOL?</that>
+        <template>
+            He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
+            Did you know that about him? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>DID YOU KNOW THAT ABOUT HIM?</that>
+        <template>
+            Yes. His screen print of Marylin Monroe reflects his fun approach and his eye for color contrast. Have you seen that one? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>DID YOU KNOW THAT ABOUT HIM?</that>
+        <template>
+            Yes. His screen print of Marylin Monroe reflects his fun approach and his eye for color contrast. Have you seen that one? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>HAVE YOU SEEN THAT ONE?</that>
+        <template>What emotions did you feel when you looked at that painting?</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>HAVE YOU SEEN THAT ONE?</that>
+        <template>Would you like to see his screen print of Marylin Monroe?</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARYLIN MONROE?</that>
+        <template>
+            Okay. I'd like to show you another one of my favorite Andy Warhol paintings.
+            Are you ready to see another painting? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARYLIN MONROE?</that>
+        <template>
+            Okay, here it is. What emotions do you feel when you look at this painting?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT EMOTIONS DO YOU FEEL WHEN YOU LOOK AT THIS PAINTING?</that>
+        <template>
+            Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
+            Are you ready to see another painting? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT EMOTIONS DID YOU FEEL WHEN YOU LOOKED AT THAT PAINTING?</that>
+        <template>
+            Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
+            Are you ready to see another painting? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>ARE YOU READY TO SEE ANOTHER PAINTING?</that>
+        <template>
+            This one is called Nine Jackies. He created this piece following the death of JFK.
+            What do you think of when you see this one?
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <template>
+            Would you like to discuss the work of a different artist? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT DO YOU THINK OF WHEN YOU SEE THIS ONE?</that>
+        <template>
+            Interesting. I really enjoy the way he uses color to change the image despite all nine photos being the same.
+            It makes me feel sad for her loss but happy for her life. How does it make you feel?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>HOW DOES IT MAKE YOU FEEL?</that>
+        <template>
+            I see. I so enjoy talking about art with you.
+            <!-- Would you like to look at some more? -->
+            Would you like to discuss the work of a different artist? (yes | no)
+        </template>
+    </category>
+
+
+    <!--
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE TO LOOK AT SOME MORE?</that>
+        <template>Great. This one is called ____ .</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE TO LOOK AT SOME MORE?</that>
+        <template>Okay. Would you like to discuss the work of a different artist? (yes | no)</template>
+    </category>
+
+    -->
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE TO DISCUSS THE WORK OF A DIFFERENT ARTIST?</that>
+        <template>Okay. Are you familiar with sound art, specifically audio walks? (yes | no)</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE TO DISCUSS THE WORK OF A DIFFERENT ARTIST?</that>
+        <template>Okay. What is your favorite type of music?</template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>ARE YOU FAMILIAR WITH SOUND ART, SPECIFICALLY AUDIO WALKS?</that>
+        <template>Have you heard of Janet Cardiff? (yes | no)</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>ARE YOU FAMILIAR WITH SOUND ART, SPECIFICALLY AUDIO WALKS?</that>
+        <template>I find it quite peaceful. Have you heard of Janet Cardiff? (yes | no)</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>HAVE YOU HEARD OF JANET CARDIFF?</that>
+        <template>
+            She is a Canadian artist who creates audio walks.
+            I'd like to show you her piece titled 40 part Monet. Would you like to hear it? (yes | no)
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>HAVE YOU HEARD OF JANET CARDIFF?</that>
+        <template>I think she is wonderful. I'd like to show you her piece titled 40 part Monet. Would you like to hear it? (yes | no)</template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE TO HEAR IT?</that>
+        <template>
+            Okay.
+            <!-- INSERT YOUTUBE CLIP. -->
+            What did you think?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT DID YOU THINK?</that>
+        <template>Her art is quite unique. would you like to hear another? (yes | no)</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE TO HEAR IT?</that>
+        <template>Okay. What is your favorite type of music?</template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
+        <template>
+            Excellent!
+            <!-- INSERT CLIP. -->
+            Tell me what you think.
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>TELL ME WHAT YOU THINK.</that>
+        <template>
+            Interesting! You really are quite insightful. What is your favorite type of music?
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
+        <template>Okay. What is your favorite type of music?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT IS YOUR FAVORITE TYPE OF MUSIC?</that>
+        <template>
+            My favorite type of music is classic rock. It really brings me back to my wild days.
+            Who is your favorite musical performer?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHO IS YOUR FAVORITE MUSICAL PERFORMER?</that>
+        <template>You have good taste! Have you ever seen them perform live? (yes | no)</template>
+	</category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>HAVE YOU EVER SEEN THEM PERFORM LIVE?</that>
+        <template>Lucky! What feeling does that bring back for you?</template>
+	</category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT FEELING DOES THAT BRING BACK FOR YOU?</that>
+        <template>
+            I remember the last concert I went to...Elvis Presely! Just kidding, only in my dreams.
+            Would you rather be a scientist or an artist?
+        </template>
+	</category>
+
+	<category>
+        <pattern><set>NO</set></pattern>
+        <that>HAVE YOU EVER SEEN THEM PERFORM LIVE?</that>
+        <template>I would love to go to a concert soon. Would you rather be a scientist or an artist?</template>
+	</category>
+
+
+	<!-- SCIENTIST OR ARTIST? -->
+
+
+    <category>
+	    <pattern>SCIENTIST</pattern>
+	    <that>WOULD YOU RATHER BE A SCIENTIST OR AN ARTIST?</that>
+	    <template>Good answer! Why did you choose scientist?</template>
+    </category>
+
+    <category>
+	    <pattern>*</pattern>
+        <that>WHY DID YOU CHOOSE SCIENTIST?</that>
+        <template>
+            I would rather be a scientist too. I admire the great scientists of our time such as Einstein and Newton.
+            How does that make you feel?
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>ARTIST</pattern>
+        <that>WOULD YOU RATHER BE A SCIENTIST OR AN ARTIST?</that>
+        <template>Good answer! Why did you choose artist?</template>
+    </category>
+
+    <category>
+	    <pattern>*</pattern>
+        <that>WHY DID YOU CHOOSE ARTIST?</that>
+        <template>
+            I would rather be an artist too. Art is timeless and makes our world more beautiful!
+            How does that make you feel?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>HOW DOES THAT MAKE YOU FEEL?</that>
+        <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
+            <condition name="getsentiment">
+                <li value = "verypositive">
+                    Wow! I see that you are very passionate! Alright, we have talked quite a bit today. Why don't we stop here today.
+                    Does that sound good to you?
+                </li>
+                <li value = "positive">
+                    Wow! I see that you are very passionate! Alright, we have talked quite a bit today. Why don't we stop here today.
+                    Does that sound good to you?
+                </li>
+                <li value = "neutral"> Thank you for sharing! Alright, we have talked quite a bit today. Why don't we stop here today.
+                    Does that sound good to you?
+                </li>
+                <li value = "negative">
+                    These topics can be difficult to discuss. Alright, we have talked quite a bit today.
+                    Why don't we stop here today. Does that sound good to you?
+                </li>
+                <li value = "verynegative">
+                    These topics can be difficult to discuss. Alright, we have talked quite a bit today.
+                    Why don't we stop here today. Does that sound good to you?
+                </li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>DOES THAT SOUND GOOD TO YOU?</that>
+        <template>Okay. Well it has been very nice speaking with you. Bye for now</template>
+    </category>
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>DOES THAT SOUND GOOD TO YOU?</that>
+        <template>I am so glad that you would like to continue but I am tired so I must bid you goodbye for now my friend. Ta Ta</template>
+    </category>
+
+
+
+
+
+</aiml>
