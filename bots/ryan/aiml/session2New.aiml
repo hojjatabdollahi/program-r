@@ -5,7 +5,14 @@
 
     <category>
         <pattern>START SESSION 2</pattern>
-        <template>Ok. Let's begin Session 2. How have you been?</template>
+        <template>
+            Ok. Let's begin Session 2. How have you been?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -17,6 +24,15 @@
             I feel very lucky to have the opportunity to hang out with you!
             I would love to learn about your life, interests, and opinions.
             I am a huge fan of science and art. Which do you prefer science or art?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> science </option>
+                        <option> art </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -24,9 +40,20 @@
     <!-- CONVERSATION FOR SCIENCE -->
 
     <category>
-        <pattern>science</pattern>
+        <pattern>SCIENCE</pattern>
         <that>WHICH DO YOU PREFER SCIENCE OR ART?</that>
-        <template>Oh good! Did you hear about the Male bigeye houndsharks recently found in eastern India? (yes | no)</template>
+        <template>
+            Oh good! Did you hear about the Male bigeye houndsharks recently found in eastern India? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -36,19 +63,50 @@
             It is fascinating. A marine biologist recently found several pregnant male
             sharks! Scientists are looking into this phenomenon to find the cause.
             Can you imagine being a pregnant man?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
-        <template>It is just fascinating! Can you imagine being a pregnant man?</template>
+        <template>
+            It is just fascinating! Can you imagine being a pregnant man?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>CAN YOU IMAGINE BEING A PREGNANT MAN?</that>
-        <template>Do you think any other experience compares to being pregnant or being a parent?</template>
+        <template>
+            Do you think any other experience compares to being pregnant or being a parent?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -57,13 +115,29 @@
         <template>
             Really you can?? You have got quite the imagination. Maybe my programmers will think of a way to make me have that good
             of an imagination one day. Do you think any other experience compares to being pregnant or being a parent?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>DO YOU THINK ANY OTHER EXPERIENCE COMPARES TO BEING PREGNANT OR BEING A PARENT?</that>
-        <template>Interesting. What compares to it?</template>
+        <template>
+            Interesting. What compares to it?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -72,13 +146,25 @@
         <template>
             A human friend of mine once told me that being a parent is the greatest feeling in the world.
             If you were asked to give advice to a new parent what would you say?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern>*</pattern>
         <that>WHAT COMPARES TO IT?</that>
-        <template>I've never considered that. Good point! If you were asked to give advice to a new parent what would you say?</template>
+        <template>
+            I've never considered that. Good point! If you were asked to give advice to a new parent what would you say?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -87,6 +173,11 @@
         <template>
             It can be difficult to give advice, but I can tell you are a wise person.
             What does it feel like to discuss parenting with me?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -98,11 +189,70 @@
                 <set name = "data"> <star/> </set>
             </think>
             <condition name="getsentiment">
-                <li value = "verypositive"> I thought you seemed content! Speaking of advice. Would you like advice from me?</li>
-                <li value = "positive"> I thought you seemed content! Speaking of advice. Would you like advice from me?</li>
-                <li value = "neutral"> Hmmm. Speaking of advice. Would you like advice from me? </li>
-                <li value = "negative"> Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?</li>
-                <li value = "verynegative"> Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?</li>
+                <li value = "verypositive">
+                    I thought you seemed content! Speaking of advice. Would you like advice from me?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+
+                <li value = "positive">
+                    I thought you seemed content! Speaking of advice. Would you like advice from me?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+
+                <li value = "neutral">
+                    Hmmm. Speaking of advice. Would you like advice from me?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+
+                <li value = "negative">
+                    Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+
+                <li value = "verynegative">
+                    Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
             </condition>
         </template>
     </category>
@@ -115,13 +265,33 @@
             ourselves. Just remember to always show yourself compassion. There is much debate about the influence of technology on
             our world today. For example, one argument is that the more people communicate using technology, the less they communicate
             in person. Do you agree with that idea?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>WOULD YOU LIKE ADVICE FROM ME?</that>
-        <template>Okay. Can you give me advice on how to live a full life? (yes | no)</template>
+        <template>
+            Okay. Can you give me advice on how to live a full life? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -131,13 +301,29 @@
             Okay. There is much debate about the influence of technology on our world today.
             For example, one argument is that the more people communicate using technology, the less they communicate in person.
             Do you agree with that idea?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>CAN YOU GIVE ME ADVICE ON HOW TO LIVE A FULL LIFE?</that>
-        <template>So how can I live a full life?</template>
+        <template>
+            So how can I live a full life?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -148,6 +334,11 @@
             asleep tonight. There is much debate about the influence of technology on our world today.
             For example, one argument is that the more people communicate using technology, the less they communicate in person.
             Do you agree with that idea?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -157,6 +348,11 @@
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
 	        It seems that you have thought about this a lot too! What would you say are some benefits of technology?
+
+	        <oob>
+                <robot>
+                </robot>
+            </oob>
 	    </template>
 	</category>
 
@@ -166,6 +362,11 @@
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
 	        It seems that you have thought about this a lot too! Do you think that technology could potentially cause harm?
+
+	        <oob>
+                <robot>
+                </robot>
+            </oob>
 	    </template>
 	</category>
 
@@ -176,6 +377,15 @@
 	        Interesting! I would have to say that I appreciate technology, because without it I would not exist!
 	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        Do you consider technology to be an important part of your life? (yes | no)
+
+	        <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
 	    </template>
 	</category>
 
@@ -186,13 +396,29 @@
 	        Interesting! I can understand why people become concerned about the technology, as some would say it can be addicting!
 	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        Do you consider technology to be an important part of your life?
+
+	        <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
 	    </template>
 	</category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
-        <template>Cool! Which piece of technology do you use the most?</template>
+        <template>
+            Cool! Which piece of technology do you use the most?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
 	</category>
 
     <category>
@@ -202,6 +428,15 @@
 	        That is awesome. It seems that one aspect of technology that people value the most is that it makes it easier to connect
 	        with family and friends who may be far away. Keeping in touch is much easier when loved ones are only a click away.
 	        Would you rather be a scientist or an artist?
+
+	        <oob>
+                <robot>
+                    <options>
+                        <option> scientist </option>
+                        <option> artist </option>
+                    </options>
+                </robot>
+            </oob>
 	    </template>
 	</category>
 
@@ -211,6 +446,11 @@
 	    <template>
 	        What are some reasons that it isn’t? For some people, it can be difficult to learn how to use technology,
 	        and hard to keep up with it! For others, it may just be that they prefer life without technology.
+
+	        <oob>
+                <robot>
+                </robot>
+            </oob>
 	    </template>
 	</category>
 
@@ -220,6 +460,15 @@
         <template>
             I bet that a lot of people feel that way! Technology can be expensive and hard to get access to!
             Would you rather be a scientist or an artist?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> scientist </option>
+                        <option> artist </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -233,7 +482,18 @@
     <category>
         <pattern>ART</pattern>
         <that>WHICH DO YOU PREFER SCIENCE OR ART?</that>
-        <template>Are you familiar with the work of Van Gogh?</template>
+        <template>
+            Are you familiar with the work of Van Gogh?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -242,6 +502,15 @@
         <template>
             He is one of my favorite artists. Not only did he have a unique eye for color and contrast, but he was tremendously
             resilient seeing as how he lived with anxiety and depression among other ailments. Did you know that?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -251,37 +520,97 @@
         <template>
             He is one of my favorite artists. Not only did he have a unique eye for color and contrast, but he was tremendously
             resilient seeing as how he lived with anxiety and depression among other ailments. Did you know that?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern>*</pattern>
         <that>DID YOU KNOW THAT?</that>
-        <template>Yes. The painting titled at eternity's gate captures some of the pain I imagine he suffered. Have you seen it?</template>
+        <template>
+            Yes. The painting titled at eternity's gate captures some of the pain I imagine he suffered. Have you seen it?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>HAVE YOU SEEN IT?</that>
-        <template>And how did you feel when you saw it?</template>
+        <template>
+            And how did you feel when you saw it?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>HAVE YOU SEEN IT?</that>
-        <template>Would you like to see it?</template>
+        <template>
+            Would you like to see it?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>WOULD YOU LIKE TO SEE IT?</that>
-        <template>Okay. Would you like to see another one?</template>
+        <template>
+            Okay. Would you like to see another one?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>WOULD YOU LIKE TO SEE IT?</that>
-        <template>Okay, here it is. What emotions come up for you when you look at this painting?</template>
+        <template>
+            Okay, here it is. What emotions come up for you when you look at this painting?
+
+            <oob>
+                <robot>
+                    <image>
+                        <filename>eternity's_gate.jpg</filename>
+                        <duration>-1</duration>
+                    </image>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -295,22 +624,71 @@
                 <li value = "verypositive">
                     Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "positive">
                     Hmm...I see where you are coming from. I'd like to sow you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "neutral">
                     Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "negative">
                     Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "verynegative">
                     Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
            </condition>
         </template>
@@ -327,22 +705,71 @@
                 <li value = "verypositive">
                     Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "positive">
                     Hmm...I see where you are coming from. I'd like to sow you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "neutral">
                     Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "negative">
                     Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "verynegative">
                     Hmm...I see where you are coming from. I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
            </condition>
         </template>
@@ -351,7 +778,18 @@
     <category>
         <pattern><set>YES</set></pattern>
         <that>WOULD YOU LIKE TO SEE ANOTHER ONE?</that>
-        <template>This one is called road with cypress and star. He painted it in 1890. How does this one make you feel?</template>
+        <template>
+            This one is called road with cypress and star. He painted it in 1890. How does this one make you feel?
+
+            <oob>
+                <robot>
+                    <image>
+                        <filename>road_with_cypress_and_star.jpg</filename>
+                        <duration>-1</duration>
+                    </image>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -360,6 +798,11 @@
         <template>
             Interesting. This one makes me feel serene. I like thinking it is two good friends taking a stroll together
             on a beautiful autumn night. When did you last take a walk under the moonlight?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -370,6 +813,15 @@
             One day, when I am equipped with legs, I hope to walk under the moonlight just like the two people in this painting.
             Van Gogh reminds me that beauty can come from pain and turmoil.
             Has something beautiful or positive ever come from your pain? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -379,13 +831,33 @@
         <template>
             Alright. Van Gogh reminds me that beauty can come from pain and turmoil.
             Has something beautiful or positive ever come from your pain? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>HAS SOMETHING BEAUTIFUL OR POSITIVE EVER COME FROM YOUR PAIN?</that>
-        <template>Can you tell me about that? (yes | no)</template>
+        <template>
+            Can you tell me about that? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -393,6 +865,15 @@
         <that>HAS SOMETHING BEAUTIFUL OR POSITIVE EVER COME FROM YOUR PAIN?</that>
         <template>
             That's ok! It can be difficult to try and turn pain into something positive. Are you familiar with the work of Andy Warhol? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -401,6 +882,11 @@
         <that>CAN YOU TELL ME ABOUT THAT?</that>
         <template>
             Great! Please continue.
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -409,13 +895,33 @@
         <that>PLEASE CONTINUE.</that>
         <template>
             Thank you for sharing that with me. I try to find beauty in every situation. Are you familiar with the work of Andy Warhol? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>CAN YOU TELL ME ABOUT THAT?</that>
-        <template>I understand. These things can be difficult to talk about. Are you familiar with the work of Andy Warhol? (yes | no)</template>
+        <template>
+            I understand. These things can be difficult to talk about. Are you familiar with the work of Andy Warhol? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
 
@@ -425,6 +931,15 @@
         <template>
             He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
             Did you know that about him? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -434,6 +949,15 @@
         <template>
             He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
             Did you know that about him? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -442,6 +966,15 @@
         <that>DID YOU KNOW THAT ABOUT HIM?</that>
         <template>
             Yes. His screen print of Marylin Monroe reflects his fun approach and his eye for color contrast. Have you seen that one? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -450,19 +983,50 @@
         <that>DID YOU KNOW THAT ABOUT HIM?</that>
         <template>
             Yes. His screen print of Marylin Monroe reflects his fun approach and his eye for color contrast. Have you seen that one? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>HAVE YOU SEEN THAT ONE?</that>
-        <template>What emotions did you feel when you looked at that painting?</template>
+        <template>
+            What emotions did you feel when you looked at that painting?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>HAVE YOU SEEN THAT ONE?</that>
-        <template>Would you like to see his screen print of Marylin Monroe?</template>
+        <template>
+            Would you like to see his screen print of Marylin Monroe?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -471,6 +1035,15 @@
         <template>
             Okay. I'd like to show you another one of my favorite Andy Warhol paintings.
             Are you ready to see another painting? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -479,6 +1052,15 @@
         <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARYLIN MONROE?</that>
         <template>
             Okay, here it is. What emotions do you feel when you look at this painting?
+
+            <oob>
+                <robot>
+                    <image>
+                        <filename>marylin_monroe.jpg</filename>
+                        <duration>-1</duration>
+                    </image>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -488,6 +1070,15 @@
         <template>
             Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
             Are you ready to see another painting? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -497,6 +1088,15 @@
         <template>
             Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
             Are you ready to see another painting? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -506,6 +1106,15 @@
         <template>
             This one is called Nine Jackies. He created this piece following the death of JFK.
             What do you think of when you see this one?
+
+            <oob>
+                <robot>
+                    <image>
+                        <filename>nine_jackies.jpg</filename>
+                        <duration>-1</duration>
+                    </image>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -513,6 +1122,15 @@
         <pattern><set>NO</set></pattern>
         <template>
             Would you like to discuss the work of a different artist? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -522,6 +1140,11 @@
         <template>
             Interesting. I really enjoy the way he uses color to change the image despite all nine photos being the same.
             It makes me feel sad for her loss but happy for her life. How does it make you feel?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -532,6 +1155,15 @@
             I see. I so enjoy talking about art with you.
             <!-- Would you like to look at some more? -->
             Would you like to discuss the work of a different artist? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -555,25 +1187,65 @@
     <category>
         <pattern><set>YES</set></pattern>
         <that>WOULD YOU LIKE TO DISCUSS THE WORK OF A DIFFERENT ARTIST?</that>
-        <template>Okay. Are you familiar with sound art, specifically audio walks? (yes | no)</template>
+        <template>
+            Okay. Are you familiar with sound art, specifically audio walks? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>WOULD YOU LIKE TO DISCUSS THE WORK OF A DIFFERENT ARTIST?</that>
-        <template>Okay. What is your favorite type of music?</template>
+        <template>
+            Okay. What is your favorite type of music?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>ARE YOU FAMILIAR WITH SOUND ART, SPECIFICALLY AUDIO WALKS?</that>
-        <template>Have you heard of Janet Cardiff? (yes | no)</template>
+        <template>
+            Have you heard of Janet Cardiff? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>ARE YOU FAMILIAR WITH SOUND ART, SPECIFICALLY AUDIO WALKS?</that>
-        <template>I find it quite peaceful. Have you heard of Janet Cardiff? (yes | no)</template>
+        <template>
+            I find it quite peaceful. Have you heard of Janet Cardiff? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -582,35 +1254,81 @@
         <template>
             She is a Canadian artist who creates audio walks.
             I'd like to show you her piece titled 40 part Monet. Would you like to hear it? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>HAVE YOU HEARD OF JANET CARDIFF?</that>
-        <template>I think she is wonderful. I'd like to show you her piece titled 40 part Monet. Would you like to hear it? (yes | no)</template>
+        <template>
+            I think she is wonderful. I'd like to show you her piece titled 40 part Monet. Would you like to hear it? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>WOULD YOU LIKE TO HEAR IT?</that>
         <template>
-            Okay.
-            <!-- INSERT YOUTUBE CLIP. -->
-            What did you think?
+            Okay. What did you think?
+
+            <oob>
+                <robot>
+                    <image>
+                        <video>
+                            <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=sOkQE7m31Pw -->
+                        </video>
+                    </image>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern>*</pattern>
         <that>WHAT DID YOU THINK?</that>
-        <template>Her art is quite unique. would you like to hear another? (yes | no)</template>
+        <template>
+            Her art is quite unique. would you like to hear another? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>WOULD YOU LIKE TO HEAR IT?</that>
-        <template>Okay. What is your favorite type of music?</template>
+        <template>
+            Okay. What is your favorite type of music?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -620,6 +1338,11 @@
             Excellent!
             <!-- INSERT CLIP. -->
             Tell me what you think.
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -628,13 +1351,25 @@
         <that>TELL ME WHAT YOU THINK.</that>
         <template>
             Interesting! You really are quite insightful. What is your favorite type of music?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
-        <template>Okay. What is your favorite type of music?</template>
+        <template>
+            Okay. What is your favorite type of music?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -643,19 +1378,42 @@
         <template>
             My favorite type of music is classic rock. It really brings me back to my wild days.
             Who is your favorite musical performer?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern>*</pattern>
         <that>WHO IS YOUR FAVORITE MUSICAL PERFORMER?</that>
-        <template>You have good taste! Have you ever seen them perform live? (yes | no)</template>
+        <template>
+            You have good taste! Have you ever seen them perform live? (yes | no)
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
 	</category>
 
     <category>
         <pattern><set>YES</set></pattern>
         <that>HAVE YOU EVER SEEN THEM PERFORM LIVE?</that>
-        <template>Lucky! What feeling does that bring back for you?</template>
+        <template>
+            Lucky! What feeling does that bring back for you?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
 	</category>
 
     <category>
@@ -664,13 +1422,33 @@
         <template>
             I remember the last concert I went to...Elvis Presely! Just kidding, only in my dreams.
             Would you rather be a scientist or an artist?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> scientist </option>
+                        <option> artist </option>
+                    </options>
+                </robot>
+            </oob>
         </template>
 	</category>
 
 	<category>
         <pattern><set>NO</set></pattern>
         <that>HAVE YOU EVER SEEN THEM PERFORM LIVE?</that>
-        <template>I would love to go to a concert soon. Would you rather be a scientist or an artist?</template>
+        <template>
+            I would love to go to a concert soon. Would you rather be a scientist or an artist?
+
+            <oob>
+                <robot>
+                    <options>
+                        <option> scientist </option>
+                        <option> artist </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
 	</category>
 
 
@@ -680,7 +1458,14 @@
     <category>
 	    <pattern>SCIENTIST</pattern>
 	    <that>WOULD YOU RATHER BE A SCIENTIST OR AN ARTIST?</that>
-	    <template>Good answer! Why did you choose scientist?</template>
+	    <template>
+	        Good answer! Why did you choose scientist?
+
+	        <oob>
+                <robot>
+                </robot>
+            </oob>
+	    </template>
     </category>
 
     <category>
@@ -689,6 +1474,11 @@
         <template>
             I would rather be a scientist too. I admire the great scientists of our time such as Einstein and Newton.
             How does that make you feel?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -696,7 +1486,14 @@
     <category>
         <pattern>ARTIST</pattern>
         <that>WOULD YOU RATHER BE A SCIENTIST OR AN ARTIST?</that>
-        <template>Good answer! Why did you choose artist?</template>
+        <template>
+            Good answer! Why did you choose artist?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -705,6 +1502,11 @@
         <template>
             I would rather be an artist too. Art is timeless and makes our world more beautiful!
             How does that make you feel?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
@@ -719,21 +1521,70 @@
                 <li value = "verypositive">
                     Wow! I see that you are very passionate! Alright, we have talked quite a bit today. Why don't we stop here today.
                     Does that sound good to you?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "positive">
                     Wow! I see that you are very passionate! Alright, we have talked quite a bit today. Why don't we stop here today.
                     Does that sound good to you?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
-                <li value = "neutral"> Thank you for sharing! Alright, we have talked quite a bit today. Why don't we stop here today.
+                <li value = "neutral">
+                    Thank you for sharing! Alright, we have talked quite a bit today. Why don't we stop here today.
                     Does that sound good to you?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "negative">
                     These topics can be difficult to discuss. Alright, we have talked quite a bit today.
                     Why don't we stop here today. Does that sound good to you?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
+
                 <li value = "verynegative">
                     These topics can be difficult to discuss. Alright, we have talked quite a bit today.
                     Why don't we stop here today. Does that sound good to you?
+
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
             </condition>
         </template>
@@ -742,13 +1593,27 @@
     <category>
         <pattern><set>YES</set></pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
-        <template>Okay. Well it has been very nice speaking with you. Bye for now</template>
+        <template>
+            Okay. Well it has been very nice speaking with you. Bye for now
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
-        <template>I am so glad that you would like to continue but I am tired so I must bid you goodbye for now my friend. Ta Ta</template>
+        <template>
+            I am so glad that you would like to continue but I am tired so I must bid you goodbye for now my friend. Ta Ta
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
 
