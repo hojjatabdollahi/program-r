@@ -160,7 +160,6 @@ class MajorDomoBotClient(EventBotClient):
                 client_context.bot.initiate_conversation_storage()
                 response = [request.command]
 
-
             elif type(request) is ServiceRequest:
                 self.service = ServiceFactory.get_service(request.service_name)
 
@@ -189,7 +188,7 @@ class MajorDomoBotClient(EventBotClient):
 
             self.prior_to_run_loop()
 
-            self.worker_run_loop()
+            self.worker_run_loop1()
 
             self.post_run_loop()
 
