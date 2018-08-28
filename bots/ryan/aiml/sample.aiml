@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>BEGIN</pattern>
+        <template>
+            what is on your mind?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># SPORTS ^</pattern>
+        <that> WHAT IS ON YOUR MIND? </that>
+        <template>
+            what is your favorite sport to play?
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
+
+     <!--
+
+     <category>
+        <pattern>_ SPORTS</pattern>
+        <that> WHAT IS ON YOUR MIND? </that>
+        <template>
+            <srai> SPORTS </srai>
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SPORTS _</pattern>
+        <that> WHAT IS ON YOUR MIND? </that>
+        <template>
+            <srai> SPORTS </srai>
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ SPORTS * </pattern>
+        <that> WHAT IS ON YOUR MIND? </that>
+        <template>
+            <srai> SPORTS </srai>
+
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    -->
+
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT IS YOUR FAVORITE SPORT TO PLAY? </that>
+        <template>Very cool! While I can't play any sports, my inventor likes to play basketball with his friends or go skiing in the winter.</template>
+    </category>
+
+</aiml>

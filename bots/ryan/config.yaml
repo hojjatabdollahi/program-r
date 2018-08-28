@@ -180,7 +180,7 @@ brain:
         classname: programy.nlp.corenlp.client.Client
         ip: "http://localhost"
         port: 9000
-        jar_dir: /home/rohola/Codes/Python/program-r/libs/stanford-corenlp-full-2018-02-27/*
+        jar_dir: C:\Users\DreamFace\Codes\libs\stanford-corenlp-full-2018-02-27\*
 
 
       tokenizer:

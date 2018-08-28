@@ -91,7 +91,7 @@
     <pattern>CONSTRUCTIVE</pattern>
     <that>IF I WERE TO SAY "I'VE MADE SO MANY MISTAKES", CAN YOU IDENTIFY IF IT'S A CONSTRUCTIVE OR DESTRUCTIVE THOUGHT?</that>
     <template>
-        I feel like that thought was more of a destructive thought because saying you've made so many mistakes is not a thought that builds you up. Let's try another one. Which type of thought do you think it is if I say I can learn to control my life to get more of what I want?(constructive|destructive)
+        I feel like that thought was more of a destructive thought because saying you've made so many mistakes is not a thought that builds you up. Let's try another one. Which type of thought do you think it is if I say "I can learn to control my life to get more of what I want"?(constructive|destructive)
     </template>
 </category>
 
@@ -100,14 +100,14 @@
     <pattern>DESTRUCTIVE</pattern>
     <that>IF I WERE TO SAY "I'VE MADE SO MANY MISTAKES", CAN YOU IDENTIFY IF IT'S A CONSTRUCTIVE OR DESTRUCTIVE THOUGHT?</that>
     <template>
-       Great job! That's the correct answer! This thought is more about making the person feel bad rather than building them up. Let's try another one. Which type of thought do you think it is if I say I can learn to control my life to get more of what I want?(constructive|destructive)
+       Great job! That's the correct answer! This thought is more about making the person feel bad rather than building them up. Let's try another one. Which type of thought do you think it is if I say "I can learn to control my life to get more of what I want"?(constructive|destructive)
     </template>
 </category>
 
 <!-- C VS. D QUESTION 2 CORRECT ANSWER -->
 <category>
     <pattern>CONSTRUCTIVE</pattern>
-    <that>WHICH TYPE OF THOUGHT DO YOU THINK IT IS IF I SAY I CAN LEARN TO CONTROL MY LIFE TO GET MORE OF WHAT I WANT?</that>
+    <that>WHICH TYPE OF THOUGHT DO YOU THINK IT IS IF I SAY "I CAN LEARN TO CONTROL MY LIFE TO GET MORE OF WHAT I WANT"?</that>
     <template>
         Good job! That is correct because that thought aims to strengthen the person rather than the opposite. You're really getting the hang of this! Now we can look at another type of thinking. This type involves necessary versus unnecessary thinking. Necessary thoughts remind us of things we have to do, such as a task or errand to run. Unnecessary thoughts describe things you can't change or that make us feel bad. Can you think of an unnecessary thought that has come across your mind?
     </template>
@@ -116,7 +116,7 @@
 <!-- C VS. D QUESTION 2 INCORRECT ANSWER -->
 <category>
     <pattern>DESTRUCTIVE</pattern>
-    <that>WHICH TYPE OF THOUGHT DO YOU THINK IT IS IF I SAY I CAN LEARN TO CONTROL MY LIFE TO GET MORE OF WHAT I WANT?</that>
+    <that>WHICH TYPE OF THOUGHT DO YOU THINK IT IS IF I SAY "I CAN LEARN TO CONTROL MY LIFE TO GET MORE OF WHAT I WANT"?</that>
     <template>
         Not exactly. I feel this is more of a constructive thought because it aims to strengthen the person rather than the opposite. Don't worry we'll keep working on it! Practice makes perfect. Now we can look at another type of thinking. This type involves necessary versus unnecessary thinking. Necessary thoughts remind us of things we need to do, such as a task or errand to run. Unnecessary thoughts describe things you can't change or that make us feel bad. Can you think of an unnecessary thought that has come across your mind?
     </template>
