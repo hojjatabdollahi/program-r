@@ -137,7 +137,7 @@ brain:
         Mitsuku:
             classname: programy.services.mitsuku.MitsukuService
             username: epr_finman@yahoo.com
-            password: 23571113
+            password: password
 
         Chomsky:
             classname: programy.services.chomsky.ChomskyService
