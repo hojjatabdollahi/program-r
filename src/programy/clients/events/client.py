@@ -4,6 +4,7 @@ from programy.clients.client import BotClient
 import os
 from datetime import datetime
 import yaml
+from programy.services.service import ServiceFactory
 
 class EventBotClient(BotClient):
 
@@ -23,25 +24,29 @@ class EventBotClient(BotClient):
         conversation_file = "/home/rohola/conv_questions.p"
 
         bot = self.bot_factory.bot("bot")
-        bot.initiate_conversation_storage()
 
-
+        #mitsuku = ServiceFactory.get_service("mitsuku")
+        mitsuku = ServiceFactory.get_service("chomsky")
         while self._running:
-            if self._first_time:
-                try:
-                    if self._session_saving_mode:
-                        client_context = self.load_client_context(self._configuration.client_configuration.default_userid, conversation_file)
-                    else:
-                        client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
-                except Exception as exp:
-                    client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
-                finally:
-                    self._first_time = False
+            message = input(">>")
+            response = mitsuku.ask_question(bot.client.client_context, message)
+            print(response)
 
-            self._running = self.wait_and_answer(client_context)
-            #bot.save_conversation()
-            #client_context.bot.save_conversation(client_context)
-            #print(client_context.bot.conversations[client_context.userid].answers[-1].robot)
+        # bot.initiate_conversation_storage()
+        #
+        # while self._running:
+        #     if self._first_time:
+        #         try:
+        #             if self._session_saving_mode:
+        #                 client_context = self.load_client_context(self._configuration.client_configuration.default_userid, conversation_file)
+        #             else:
+        #                 client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
+        #         except Exception as exp:
+        #             client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
+        #         finally:
+        #             self._first_time = False
+        #
+        #     self._running = self.wait_and_answer(client_context)
 
 
     def initial_question(self, request, username):
@@ -193,50 +198,6 @@ class EventBotClient(BotClient):
                     }
         else:
             return {}
-
-    # def dictionary_of_response(self, response):
-    #     answers = []
-    #     image_filename = ""
-    #     duration = ""
-    #     video_filename = ""
-    #     response_part = ""
-    #     if "(" in response:
-    #         parts = response.split("(")
-    #         response_part = parts[0]
-    #         answers = parts[1].split(")")[0].split("|")
-    #
-    #     if "#" in response:
-    #         parts = response.split("#")
-    #         response = parts[0]
-    #         if "image" in parts[1]:
-    #             print("an image is here")
-    #             image = parts[1].strip("#").split(",")[0]
-    #             image_filename = image.split(":")[1]
-    #             if len(parts[1].strip("#").split(",")) > 1:
-    #                 duration = parts[1].strip("#").split(",")[1]
-    #                 duration = duration.split(":")[1]
-    #
-    #         if "video" in parts[1]:
-    #             print("a video is here")
-    #             video_filename = parts[1].split(":")[1]
-    #
-    #     if "#" not in response and "(" not in response:
-    #         response_part = response
-    #
-    #     return {"conversation":
-    #                 {"question": "",
-    #                  "response": response_part,
-    #                  "answer": answers
-    #                  },
-    #             "image":
-    #                 {"filename": image_filename,
-    #                  "duration": duration
-    #                  },
-    #             "video":
-    #                 {
-    #                     "filename": video_filename
-    #                 }
-    #             }
 
     def wait_and_answer(self, client_context):
         raise NotImplementedError("You must override this and implement the logic wait for a question and send an answer back")

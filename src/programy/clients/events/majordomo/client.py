@@ -1,14 +1,16 @@
 from programy.clients.events.client import EventBotClient
 from programy.clients.events.majordomo.config import MajorDomoConfiguration
 from programy.majordomo.mdwrkapi import MajorDomoWorker
-from programy.majordomo.request import ReadyRequest, UserRequest, SessionRequest, QuestionRequest
+from programy.majordomo.request import ReadyRequest, UserRequest, SessionRequest, QuestionRequest, ServiceRequest
 from programy.utils.logging.ylogger import YLogger
+from programy.services.service import ServiceFactory
 
 
 class MajorDomoBotClient(EventBotClient):
 
     def __init__(self, argument_parser=None):
         self.running = False
+        self.service = None
         EventBotClient.__init__(self, "majordomo", argument_parser)
 
     def get_description(self):
@@ -35,6 +37,9 @@ class MajorDomoBotClient(EventBotClient):
     def process_question(self, client_context, question):
         # Returns a response
         return client_context.bot.ask_question(client_context, question, responselogger=self)
+
+    def process_question_service(self, client_context, question):
+        return self.service.ask_question(client_context, question)
 
     def process_question_with_options(self, client_context, question):
         return client_context.bot.ask_question_with_options(client_context, question, responselogger=self)
@@ -108,8 +113,12 @@ class MajorDomoBotClient(EventBotClient):
                 if username is not None:
                     question = self.initial_question(request, username)
                     print("question", question)
-                    #answer = self.process_question(client_context, question)
+
+
+                    #todo this should be substitute with service
                     answer = self.process_question_with_options(client_context, question)
+
+
                     print("answer", answer)
                     response = self.render_response(client_context, answer)
                 else:
@@ -121,7 +130,10 @@ class MajorDomoBotClient(EventBotClient):
                     if client_context is not None:
                         print(request.question)
                         #answer = self.process_question(client_context, request.question)
+
+                        # todo this should be substitute with service
                         answer = self.process_question_with_options(client_context, request.question)
+
                         client_context.bot.save_conversation(client_context)
                         response = self.render_response(client_context, answer)
                     else:
@@ -129,6 +141,46 @@ class MajorDomoBotClient(EventBotClient):
 
                 except Exception as e:
                     YLogger.exception(self, "chatbot encounter an internal crash", e)
+
+    def worker_run_loop1(self):
+        majordomo_worker = MajorDomoWorker(self.configuration.client_configuration)
+        response = None
+        client_context = None
+
+        while True:
+            print(response)
+            request = majordomo_worker.receive(response)
+            if request is None:
+                YLogger.debug(self, "worker was interrupted")
+                break
+
+            if type(request) is ReadyRequest:
+                YLogger.info(self, "ready request")
+                client_context = self.client_context
+                client_context.bot.initiate_conversation_storage()
+                response = [request.command]
+
+
+            elif type(request) is ServiceRequest:
+                self.service = ServiceFactory.get_service(request.service_name)
+
+            elif type(request) is QuestionRequest:
+                try:
+                    YLogger.info(self, "question request")
+                    if client_context is not None:
+                        print(request.question)
+
+                        answer = self.process_question_service(client_context, request.question)
+
+                        client_context.bot.save_conversation(client_context)
+                        response = self.render_response(client_context, answer)
+                    else:
+                        response = ["client context is not initiated. Initial Session request"]
+
+                except Exception as e:
+                    YLogger.exception(self, "chatbot encounter an internal crash", e)
+
+
 
 
     def run(self):

@@ -19,6 +19,8 @@ kik==1.5.0
 APScheduler==3.5.1
 emoji==0.5.0
 xmltodict==0.11.0
+fbchat==1.3.9
+beautifulsoup4==4.6.3
 zmq
 pycorenlp
 # Uncomment this line on Osx or Linux if you want to use sanic rest client

@@ -243,7 +243,6 @@ class BotClient(ResponseLogger):
 
 
 
-
     def load_renderer(self):
         try:
             if self.get_client_configuration().renderer is not None:

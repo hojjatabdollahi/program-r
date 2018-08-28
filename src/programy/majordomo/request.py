@@ -1,6 +1,4 @@
 
-
-
 class Request():
 
     def __init__(self, command, arguments):
@@ -48,6 +46,16 @@ class QuestionRequest(Request):
     @property
     def question(self):
         return self._question
+
+
+class ServiceRequest(Request):
+    def __init__(self, command, arguments):
+        super().__init__(command, arguments)
+        self._service_name = arguments
+
+    @property
+    def service_name(self):
+        return self._service_name
 
 
 class ReadyRequest(Request):
