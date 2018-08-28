@@ -26,24 +26,50 @@ This release brings some important changes to the overall Program-Y platform and
 - Natively support Pypi installation
 - Asynchronous Scheduling of events
 
-Rich Media
-----------
-Rich media is an exciting enhancement to AIML proposed by the [AIML Foundation](http://aiml.foundation) which adds a range
-of new capabilities to the AIML language to help in building engaging interfaces. Rich media introduces a number of new
-template tags including
-- button
-- card
-- carousel
-- delay
-- image
-- link
-- list
-- location
-- reply
-- split
-- video
-Rather than just returning plain text, using these tags allows you to build conversations that including buttons, clickable links, images, videos
-and more complex UI structures
+Installation
+------------
+# Windows
+To install program-r in windows you should do the following:
+1-
+```
+git clone https://github.com/roholazandie/program-r.git
+```
+
+2- Install virtualenv for windows
+
+3- after creating and activating virtualenv:
+```
+pip install -r requirements.txt
+```
+
+4- Open powershell or cmd and run:
+```
+set-executionpolicy RemoteSigned
+```
+Now you can run /env/Scripts/activate
+5- Install spacy:
+    - Run powershell as admin in project directory
+    - Run:
+    ```
+    ./env/Scripts/activate
+    ```
+    -
+    ```
+    pip install -U spacy
+    ```
+    -
+    ```
+    /env/Scripts/python -m spacy download
+    ```
+    You should see the linking successful message.
+
+4 - Set src:
+    - In pycharm:
+        Right click on src then Mark as directory and then sources root
+
+    - In command line:
+        Add src path to PYTHONPATH
+
 
 Introduction
 ------------
