@@ -50,9 +50,17 @@ class MajorDomoBotClient(EventBotClient):
         self.render_response(client_context, response)
 
     def render_response(self, client_context, response):
-        response_dict = self.dictionary_of_response(client_context, response)
+        if self.service is not None:
+            print(response)
+            response_dict = self.dictionary_of_response(response, None)
+        else:
+            if client_context.bot.conversations[client_context.userid].answers:
+                robot = client_context.bot.conversations[client_context.userid].answers[-1].robot["robot"]
+                response_dict = self.dictionary_of_response(response, robot)
+
         response_string = str(response_dict)
         return [response_string]
+
 
     def process_response(self, client_context, response):
         print(response)
