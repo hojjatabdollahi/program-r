@@ -12,7 +12,7 @@ version = version.strip()
 if version is None:
     print("No version.txt found")
 
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 download_url = "https://github.com/keiffster/program-y/%s.tar.gz"%version

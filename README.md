@@ -1,34 +1,5 @@
-
-Version 2.0
-============
-This release brings some important changes to the overall Program-Y platform and ecosystem including
-
-- Thread Safety across all processing
-- Multiple Bots per Client, useful to mix AIML and ML processing
-- Multiple Brains per Bot, useful to separate grammars, including langauge specific
-- Wide variety of clients including
-  - Console
-  - Web
-  - Facebook
-  - Twitter
-  - SMS
-  - XMPP (Google Hangouts)
-  - Telegram
-  - Slack
-  - Viber
-  - Kik
-  - Line
-  - TCP Socket
-  - REST
-- Improved Logging which now includes more info about client, bot and brain
-- Support for AIML 2.x Rich Media
-- Support for Emojis
-- Natively support Pypi installation
-- Asynchronous Scheduling of events
-
-Installation
-------------
-# Windows
+## Installation
+### Windows
 To install program-r in windows you should do the following:
 1-
 ```
@@ -47,32 +18,35 @@ pip install -r requirements.txt
 set-executionpolicy RemoteSigned
 ```
 Now you can run /env/Scripts/activate
+
 5- Install spacy:
-    - Run powershell as admin in project directory
-    - Run:
-    ```
-    ./env/Scripts/activate
-    ```
-    -
-    ```
-    pip install -U spacy
-    ```
-    -
-    ```
-    /env/Scripts/python -m spacy download
-    ```
-    You should see the linking successful message.
+
+5-1-  Run powershell as admin in project directory
+
+5-2- Run:
+```
+./env/Scripts/activate
+```
+5-3-
+```
+pip install -U spacy
+```
+5-4-
+```
+/env/Scripts/python -m spacy download
+```
+You should see the linking successful message.
 
 4 - Set src:
-    - In pycharm:
-        Right click on src then Mark as directory and then sources root
+- In pycharm:
+    Right click on src then Mark as directory and then sources root
 
-    - In command line:
+- In command line:
         Add src path to PYTHONPATH
 
 
-Introduction
-------------
+## Introduction
+
 Program Y is an AIML interpreter written in Python. It includes an entire Python 3 framework for building you own chat bots using
 Artificial Intelligence Markup Language, or AIML for short. 
 
