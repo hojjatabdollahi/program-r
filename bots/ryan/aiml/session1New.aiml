@@ -962,6 +962,40 @@
     </category>
 
     <category>
+        <pattern>NO I'M FROM *</pattern>
+        <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
+        <template>
+            I have never been to <star/>, I'll have to visit one day.
+            Did you enjoy being from there?
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO I AM FROM *</pattern>
+        <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
+        <template>
+            I have never been to <star/>, I'll have to visit one day.
+            Did you enjoy being from there?
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
         <pattern><set>YES</set></pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
