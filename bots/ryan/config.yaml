@@ -137,7 +137,7 @@ brain:
         Mitsuku:
             classname: programy.services.mitsuku.MitsukuService
             username: epr_finman@yahoo.com
-            password: password
+            password: D:\Documents\Projects\Python\program-r\bots\ryan\password.txt
 
         Chomsky:
             classname: programy.services.chomsky.ChomskyService

@@ -58,7 +58,9 @@ class BrainServiceConfiguration(BaseSectionConfigurationData):
             self._port = configuration_file.get_option(service, "port", missing_value=None)
             self._url = configuration_file.get_option(service, "url", missing_value=None)
             self._username = configuration_file.get_option(service, "username", missing_value=None)
-            self._password = configuration_file.get_option(service, "password", missing_value=None)
+            password_file = configuration_file.get_option(service, "password", missing_value=None)
+            if password_file:
+                self._password = open(password_file).readline()
             self.load_additional_key_values(configuration_file, service)
         else:
             YLogger.warning(self, "'services' section missing from brain config, using to defaults")
