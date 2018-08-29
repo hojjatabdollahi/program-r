@@ -1,7 +1,8 @@
 ## Installation
 ### Windows
 To install program-r in windows you should do the following:
-1-
+
+1- Clone the repository
 ```
 git clone https://github.com/roholazandie/program-r.git
 ```
@@ -21,21 +22,21 @@ Now you can run /env/Scripts/activate
 
 5- Install spacy:
 
-5-1-  Run powershell as admin in project directory
+-  Run powershell as admin in project directory
 
-5-2- Run:
+- Run:
 ```
 ./env/Scripts/activate
 ```
-5-3-
+- Run:
 ```
 pip install -U spacy
 ```
-5-4-
+- Run:
 ```
-/env/Scripts/python -m spacy download
+/env/Scripts/python -m spacy download en
 ```
-You should see the linking successful message.
+You should see the "linking successful" message.
 
 4 - Set src:
 - In pycharm:
@@ -48,7 +49,7 @@ You should see the linking successful message.
 ## Introduction
 
 Program Y is an AIML interpreter written in Python. It includes an entire Python 3 framework for building you own chat bots using
-Artificial Intelligence Markup Language, or AIML for short. 
+Artificial Intelligence Markup Language, or AIML for short.
 
 Program Y is fully cross platform, running on
 
@@ -106,8 +107,3 @@ Getting Started
 Once you have got the system installed and have run one or more of the bots, head over to the
 `Tutorial <https://github.com/keiffster/program-y/wiki/AIML-Tutorial>`_ on the Wiki for a full
 run down of everything possible in AIML
-
-
-
-
-
