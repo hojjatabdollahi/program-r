@@ -10,6 +10,7 @@ class SocketConfiguration(ClientConfigurationData):
         self._debug = False
         self._queue = 5
         self._max_buffer = 1024
+        self._default_userid = None
 
     @property
     def host(self):
@@ -31,6 +32,11 @@ class SocketConfiguration(ClientConfigurationData):
     def max_buffer(self):
         return self._max_buffer
 
+    @property
+    def default_userid(self):
+        return self._default_userid
+
+
     def load_configuration(self, configuration_file, bot_root):
         socket = configuration_file.get_section(self.section_name)
         if socket is not None:
@@ -39,6 +45,7 @@ class SocketConfiguration(ClientConfigurationData):
             self._debug = configuration_file.get_bool_option(socket, "debug", missing_value=False)
             self._workers = configuration_file.get_option(socket, "queue", missing_value=5)
             self._max_buffer = configuration_file.get_option(socket, "max_buffer", missing_value=1024)
+            self._default_userid = configuration_file.get_option(socket, "default_userid", missing_value="socket")
         super(SocketConfiguration, self).load_configuration(configuration_file, socket, bot_root)
 
     def to_yaml(self, data, defaults=True):
