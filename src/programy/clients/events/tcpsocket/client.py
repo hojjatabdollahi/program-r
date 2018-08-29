@@ -5,6 +5,7 @@ import json
 from programy.clients.events.client import EventBotClient
 from programy.clients.events.tcpsocket.config import SocketConfiguration
 from programy.clients.render.json import JSONRenderer
+from programy.services.service import ServiceFactory
 
 class ClientConnection(object):
 
@@ -14,12 +15,12 @@ class ClientConnection(object):
         self._max_buffer = max_buffer
 
     def receive_data(self):
-        json_data = self._clientsocket._recv(self._max_buffer).decode()
+        json_data = self._clientsocket.recv(self._max_buffer).decode()
         YLogger.debug(self, "Received: %s", json_data)
         return json.loads(json_data, encoding="utf-8")
 
     def send_response(self, userid, answer):
-        return_payload = {"result": "OK", "answer": answer, "userid": userid}
+        return_payload = {"result": {"status": "OK", "userid": userid}, "answer": answer}
         json_data = json.dumps(return_payload)
 
         YLogger.debug(self, "Sent %s:", json_data)
@@ -28,11 +29,11 @@ class ClientConnection(object):
 
     def send_error(self, error):
         if hasattr(error, 'message') is True:
-            return_payload = {"result": "ERROR", "message": error.message}
+            return_payload = {"result": {"status":"ERROR", "message": error.message}}
         elif hasattr(error, 'msg') is True:
-            return_payload = {"result": "ERROR", "message": error.msg}
+            return_payload = {"result": {"status": "ERROR", "message": error.msg}}
         else:
-            return_payload = {"result": "ERROR", "message": str(error)}
+            return_payload = {"result": {"status": "ERROR", "message": str(error)}}
 
         json_data = json.dumps(return_payload)
 
@@ -83,6 +84,11 @@ class SocketBotClient(EventBotClient):
 
         self._renderer = JSONRenderer(self)
 
+        config = self.client_context.brain.configuration
+        self.client_context.brain.load_services(config)
+
+
+
     def get_description(self):
         return 'ProgramY AIML2.0 TCP Socket Client'
 
@@ -111,6 +117,20 @@ class SocketBotClient(EventBotClient):
             raise Exception("Clientid missing from payload")
         return userid
 
+    def extract_servicename(self, receive_payload):
+        servicename = None
+        if 'servicename' in receive_payload:
+            servicename = receive_payload['servicename']
+        if servicename is None or servicename == "":
+            raise Exception("servicename missing from payload")
+        return servicename
+
+    def ask_question_from_service(self, servicename, question):
+        service = ServiceFactory.get_service(servicename)
+        answer = service.ask_question(self.client_context, question)
+        return answer
+
+
     def create_socket_connection(self, host, port, queue, max_buffer):
         return SocketConnection(host, port, queue, max_buffer)
 
@@ -125,7 +145,17 @@ class SocketBotClient(EventBotClient):
     def process_response(self, client_context, response):
         self._client_connection.send_response(client_context.userid, response)
 
-    def wait_and_answer(self):
+
+    def run_loop(self):
+        bot = self.bot_factory.bot("bot")
+        self._running = True
+        bot.initiate_conversation_storage()
+
+        while self._running:
+            self._running = self.wait_and_answer()
+
+
+    def wait_and_answer(self,):
         running = True
         try:
             self._client_connection = self._server_socket.accept_connection()
@@ -134,9 +164,11 @@ class SocketBotClient(EventBotClient):
 
             question = self.extract_question(receive_payload)
             userid = self.extract_userid(receive_payload)
+            service_name = self.extract_servicename(receive_payload)
 
             client_context = self.create_client_context(userid)
-            answer = self.process_question(client_context, question)
+
+            answer = self.ask_question_from_service(service_name, question)
 
             self.render_response(client_context, answer)
 
@@ -153,6 +185,20 @@ class SocketBotClient(EventBotClient):
                 self._client_connection.close()
 
         return running
+
+
+    def run(self):
+        if self.arguments.noloop is False:
+            YLogger.info(self, "Entering conversation loop...")
+
+            self.prior_to_run_loop()
+
+            self.run_loop()
+
+            self.post_run_loop()
+
+        else:
+            YLogger.debug(self, "noloop set to True, exiting...")
 
 
 if __name__ == '__main__':
