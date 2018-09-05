@@ -24,6 +24,9 @@ no thanks
 please don't
 no thank you
 no i have not
+no i haven't
+no sir
+no mam
 no!
 hell no
 no way
@@ -34,3 +37,5 @@ unfortunately no
 unfortunately not
 thankfully no
 not exactly
+not at all
+no i don't

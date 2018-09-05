@@ -6,6 +6,9 @@
     <category>
         <pattern>START SESSION 2 *</pattern>
         <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
             Ok. Let's begin Session 2. How have you been <star/>?
             <think><set name = "username"><star/></set></think>
             <oob>
@@ -19,7 +22,8 @@
         <pattern>*</pattern>
         <that>HOW HAVE YOU BEEN * ?</that>
         <template>
-            Its nice to see you again <get name="username"/>. Just a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
+            Its nice to see you again <get name="username"/>.
+            Just a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
             <!--
                 You will also be able to learn more about me through our time together.
                 I feel very lucky to have the opportunity to hang out with you!
@@ -467,7 +471,6 @@
         <that>WHICH DO YOU PREFER SCIENCE OR ART?</that>
         <template>
             Are you familiar with the work of Van Gogh?
-
             <oob>
                 <robot>
                     <options>
@@ -485,7 +488,6 @@
         <template>
             He is one of my favorite artists. Not only did he have a unique eye for color and contrast, but he was tremendously
             resilient seeing as how he lived with anxiety and depression among other ailments. Did you know that?
-
             <oob>
                 <robot>
                     <options>
@@ -503,7 +505,6 @@
         <template>
             He is one of my favorite artists. Not only did he have a unique eye for color and contrast, but he was tremendously
             resilient seeing as how he lived with anxiety and depression among other ailments. Did you know that?
-
             <oob>
                 <robot>
                     <options>
@@ -520,7 +521,6 @@
         <that>DID YOU KNOW THAT?</that>
         <template>
             Yes. The painting titled at eternity's gate captures some of the pain I imagine he suffered. Have you seen it?
-
             <oob>
                 <robot>
                     <options>
@@ -537,7 +537,6 @@
         <that>HAVE YOU SEEN IT?</that>
         <template>
             And how did you feel when you saw it?
-
             <oob>
                 <robot>
                 </robot>
@@ -550,7 +549,6 @@
         <that>HAVE YOU SEEN IT?</that>
         <template>
             Would you like to see it?
-
             <oob>
                 <robot>
                     <options>
@@ -634,7 +632,6 @@
                 <li value = "neutral">
                     I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
-
                     <oob>
                         <robot>
                             <options>
