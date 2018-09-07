@@ -383,7 +383,6 @@
 	        Interesting! I can understand why people become concerned about the technology, as some would say it can be addicting!
 	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        Do you consider technology to be an important part of your life?
-
 	        <oob>
                 <robot>
                     <options>
@@ -1256,7 +1255,6 @@
         <that>WOULD YOU LIKE TO HEAR IT?</that>
         <template>
             Okay. What did you think?
-
             <oob>
                 <robot>
                     <image>
