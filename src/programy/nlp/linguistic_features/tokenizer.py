@@ -16,7 +16,7 @@ class Tokenizer():
             return SpacyTokenizer()
 
         elif type_ == "default":
-            return DefualtTokenizer()
+            return DefaultTokenizer()
 
         else:
             return None
@@ -56,7 +56,7 @@ class SpacyTokenizer(Tokenizer):
 
 
 
-class DefualtTokenizer(Tokenizer):
+class DefaultTokenizer(Tokenizer):
 
     def __init__(self):
         pass

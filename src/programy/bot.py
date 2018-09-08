@@ -273,10 +273,29 @@ class Bot(object):
         #     return default_response
         # else:
         try:
-            #client_context.bot._conversations["Console"].answers[-1].sentences[-1].text()
+            import numpy as np
+
+            sen = ["Sorry!. ",
+                   "I couldn't hear you. ",
+                   "I think I have to repeat the question. ",
+                   "I didn't understand you, I repeat the question. ",
+                   ]
+
+
             last_question = client_context.bot._conversations["Console"].questions[-2]
             last_sentence = last_question.sentences[-1]
-            response = last_sentence.response
+
+            r = np.random.randint(0, len(sen), 1)[0]
+
+            results = [last_sentence.response.startswith(s) for s in sen]
+
+            if any(results):
+                sentences = last_sentence.response.split(".")
+                response = " ".join(sentences[1:])
+                response = sen[r] + response
+            else:
+                response = sen[r] + last_sentence.response
+
         except:
             response= self.default_response
         return response
@@ -433,7 +452,7 @@ class Bot(object):
 
 
         #answer = self.get_answer(client_context, answers)
-        answer = Answer.create_from_sentences(answer_sentences,srai)
+        answer = Answer.create_from_sentences(answer_sentences, srai)
         answer.robot = options
         conversation.record_answer(answer)
 

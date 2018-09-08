@@ -50,6 +50,10 @@ class Client():
         sentiment_values = [sentiment_info["sentimentValue"] for sentiment_info in result["sentences"]]
         return sentiments, sentiment_values
 
+
+
+
+
 if __name__ == "__main__":
     b = BrainCoreNLPConfiguration()
     b._ip= "http://localhost"

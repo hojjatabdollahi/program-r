@@ -28,3 +28,4 @@ class BrainSentenceSegmentationConfiguration(BaseConfigurationData):
     #     else:
     #         data['classname'] = self._classname
     #         data['split_chars'] = self._split_chars
+

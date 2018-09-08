@@ -8,10 +8,20 @@ console:
     add_listeners: False
     remove_all_jobs: False
 
-broker:
+majordomo:
+  bot: bot
   ip: "tcp://localhost"
   port: 5555
   service_name: "echo"
+  verbose: false
+
+socket:
+  host: 127.0.0.1
+  port: 9999
+  queue: 5
+  max_buffer: 1024
+  debug: true
+
 
 bot:
     brain: brain
@@ -37,11 +47,15 @@ bot:
 
     conversations:
       max_histories: 100
-      initial_topic: None
-      restore_last_topic: False
+      initial_topic: "*"
+      restore_last_topic: false
       type: file
-      config_name: ss
-      empty_on_start: True
+      config_name: file_config
+      empty_on_start: false
+
+    file_config:
+      dir: D:\Documents\Projects\Python\programy\RyanCBT\results
+
 
 brain:
 
@@ -63,16 +77,23 @@ brain:
       pattern_nodes: $BOT_ROOT/config/pattern_nodes.conf
       template_nodes: $BOT_ROOT/config/template_nodes.conf
 
+    # Dynamics
+    dynamic:
+      variables:
+          gettime: programy.dynamic.variables.datetime.GetTime
+          getsentiment: programy.dynamic.variables.sentiment_analysis.GetSentiment
+
     # Binary
+    #because we added tensorflow it can't save binary anymore
     binaries:
-      save_binary: true
+      save_binary: false
       load_binary: false
-      binary_filename: /tmp/ryan.brain
+      binary_filename: /tmp/tutorial.brain
       load_aiml_on_binary_fail: false
 
     # Braintree
     braintree:
-      file: /tmp/ryanbraintree.xml
+      file: /tmp/braintree.xml
       content: xml
 
     files:
@@ -80,9 +101,10 @@ brain:
             files: $BOT_ROOT/aiml
             extension: .aiml
             directories: true
-            errors: /tmp/ryan_errors.txt
+            errors: /tmp/alice2_errors.txt
             #duplicates: /tmp/alice2_duplicates.txt
-            conversation: /tmp/ryan-conversation.csv
+            conversation: /tmp/y-bot-conversation.csv
+              #type: file
 #              file: /tmp/y-bot-conversation.csv
 #              format: csv
 #              delete_on_start: true
@@ -119,12 +141,21 @@ brain:
         Wikipedia:
             classname: programy.services.wikipediaservice.WikipediaService
 
-    tokenizer:
-       classname: "programy.parser.tokenizer.RyanTokenizer"
+        Mitsuku:
+            classname: programy.services.mitsuku.MitsukuService
+            username: epr_finman@yahoo.com
+            password: /home/rohola/Codes/Python/program-r/bots/ryan/password.txt
+
+        Chomsky:
+            classname: programy.services.chomsky.ChomskyService
+            url: http://demo.vhost.pandorabots.com/pandora/talk?botid=b0dafd24ee35a477
+
 
     oob:
       default:
         classname: programy.oob.default.DefaultOutOfBandProcessor
+      robot:
+        classname: programy.oob.robot.RobotOutOfBandProcessor
       alarm:
         classname: programy.oob.alarm.AlarmOutOfBandProcessor
       camera:
@@ -149,3 +180,23 @@ brain:
         classname: programy.oob.url.URLOutOfBandProcessor
       wifi:
         classname: programy.oob.wifi.WifiOutOfBandProcessor
+
+    nlp:
+      classname: programy.nlp.nlp.NLP
+      corenlp:
+        classname: programy.nlp.corenlp.client.Client
+        ip: "http://localhost"
+        port: 9000
+        jar_dir: C:\Users\DreamFace\Codes\libs\stanford-corenlp-full-2018-02-27\*
+
+
+      tokenizer:
+        libname: spacy
+        split_chars: .
+
+      sentence_segmentation:
+        libname: spacy
+
+      #embedding
+      semantic_similarity:
+        method: embedding

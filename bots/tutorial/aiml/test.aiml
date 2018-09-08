@@ -1,51 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-    <category>
-        <pattern>session1 *</pattern>
-        <template>
-            Hello <set name="username"><star/></set>. Are you good?
-        </template>
-
-    </category>
 
     <category>
-        <pattern>HELLO ^</pattern>
+        <pattern>start</pattern>
         <template>
-                im good? How are you doing?(good|bad)
-        </template>
-    </category>
-
-
-    <category>
-        <pattern>GOOD</pattern>
-        <that>How are you doing?(good|bad)</that>
-        <template>
-            excellent#http://www.google.com
-        </template>
-    </category>
-
-
-    <category>
-        <pattern>WHAT ELSE</pattern>
-        <that>excellent#http://www.google.com</that>
-        <template>
-            nothing
+            what do you like?
+            <oob>
+                <robot></robot>
+            </oob>
         </template>
     </category>
 
     <category>
-        <pattern>ARE YOU SURE</pattern>
-        <that>NOTHING</that>
+        <pattern>art</pattern>
+        <that>what do you like?</that>
         <template>
-            yes
-        </template>
-    </category>
-
-    <category>
-        <pattern>OK</pattern>
-        <that>YES</that>
-        <template>
-            bye.
+            Wow! Art is amazing.
+            <oob>
+                <robot></robot>
+            </oob>
         </template>
     </category>
 

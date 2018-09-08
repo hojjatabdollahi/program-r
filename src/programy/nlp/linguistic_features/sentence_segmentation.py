@@ -16,7 +16,7 @@ class SentenceSegmentation():
             return SpacySentenceSegmentation()
 
         elif type_ == "default":
-            return DefualtSentenceSegmentation()
+            return DefaultSentenceSegmentation()
 
         else:
             YLogger.warning(SentenceSegmentation, "the module is unknown, defaulting to DefualtSentenceSegmentation")
@@ -35,7 +35,7 @@ class SpacySentenceSegmentation(SentenceSegmentation):
         return sentences
 
 
-class DefualtSentenceSegmentation(SentenceSegmentation):
+class DefaultSentenceSegmentation(SentenceSegmentation):
 
     def __init__(self):
         super().__init__()

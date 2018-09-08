@@ -1,3 +1,4 @@
+from programy.config.brain.semantic_similarity import BrainSemanticSimilarityConfiguration
 from programy.config.brain.sentence_segmentation import BrainSentenceSegmentationConfiguration
 from programy.config.brain.tokenizer import BrainTokenizerConfiguration
 from programy.utils.logging.ylogger import YLogger
@@ -13,6 +14,7 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
         self._corenlp = BrainCoreNLPConfiguration()
         self._toknizer = BrainTokenizerConfiguration()
         self._sentence_segmentation = BrainSentenceSegmentationConfiguration()
+        self._semantic_similarity = BrainSemanticSimilarityConfiguration()
 
 
     @property
@@ -31,6 +33,10 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
     def sentence_segmentation(self):
         return self._sentence_segmentation
 
+    @property
+    def semantic_similarity(self):
+        return self._semantic_similarity
+
 
     def load_config_section(self, configuration_file, configuration, bot_root):
         nlp = configuration_file.get_section("nlp", configuration)
@@ -39,6 +45,7 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
             corenlp = self._corenlp.load_config_section(configuration_file, nlp, bot_root)
             tokenizer = self._toknizer.load_config_section(configuration_file, nlp, bot_root)
             sentence_segmentation = self._sentence_segmentation.load_config_section(configuration_file, nlp, bot_root)
+            semantic_similarity = self._semantic_similarity.load_config_section(configuration_file, nlp, bot_root)
 
         else:
             YLogger.warning(self, "Config section [services] missing from Brain, no nlp loaded")
