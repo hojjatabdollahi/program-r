@@ -10,6 +10,9 @@
     <category>
         <pattern>START SESSION 1 *</pattern>
         <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
             Ok. Let's begin Session 1. How are you doing today <star/>?
             <think><set name = "username"><star/></set></think>
             <oob>
@@ -156,9 +159,16 @@
                     </oob>
                  </li>
                 <li value = "neutral">
-                    What about this is making you feel that way?
+                    I see. Well let's begin. Do you have kids?
                     <oob>
                         <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                                <option>I wish I had kids</option>
+                                <option>I have grandkids</option>
+                                <option>I do not like kids</option>
+                            </options>
                         </robot>
                     </oob>
                 </li>
@@ -383,7 +393,7 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    I can see that you seem neutral about it. Do you have pets?
+                    Interesting. What do you like to do together?
                     <oob>
                         <robot>
                             <options>
@@ -690,9 +700,13 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Why do animals make you feel neutral?
+                    I see where you are coming from. Would you like to play one of my favorite games?
                     <oob>
                         <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
                         </robot>
                     </oob>
                 </li>
@@ -747,24 +761,6 @@
             </oob>
         </template>
     </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>WHY DO ANIMALS MAKE YOU FEEL NEUTRAL?</that>
-        <template>
-            Animals are special creatures. They can elicit different emotions in different people!
-            Would you like to play one of my favorite games?
-            <oob>
-                <robot>
-                    <options>
-                        <option> yes </option>
-                        <option> no </option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
 
 
 
@@ -962,6 +958,40 @@
     </category>
 
     <category>
+        <pattern>NO I'M FROM *</pattern>
+        <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
+        <template>
+            I have never been to <star/>, I'll have to visit one day.
+            Did you enjoy being from there?
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO I AM FROM *</pattern>
+        <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
+        <template>
+            I have never been to <star/>, I'll have to visit one day.
+            Did you enjoy being from there?
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
         <pattern><set>YES</set></pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
@@ -1005,7 +1035,7 @@
 
                 <li value = "neutral">
                     There are both pros and cons for being from Colorado.
-                    Let me ask you this. Are there any places that you did enjoy while living in Colorado?
+                    Are there any places that you did enjoy while living in Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -1306,7 +1336,6 @@
                 </li>
                 <li value = "positive">
                     You must really love the holidays. You seem like a very interesting person. How would you describe yourself?
-
                     <oob>
                         <robot>
                         </robot>
@@ -1314,7 +1343,6 @@
                 </li>
                 <li value = "neutral">
                     You seem like a very interesting person. How would you describe yourself?
-
                     <oob>
                         <robot>
                         </robot>

@@ -6,6 +6,9 @@
     <category>
         <pattern>START SESSION 2 *</pattern>
         <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
             Ok. Let's begin Session 2. How have you been <star/>?
             <think><set name = "username"><star/></set></think>
             <oob>
@@ -19,7 +22,8 @@
         <pattern>*</pattern>
         <that>HOW HAVE YOU BEEN * ?</that>
         <template>
-            Its nice to see you again <get name="username"/>. Just a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
+            Its nice to see you again <get name="username"/>.
+            Just a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
             <!--
                 You will also be able to learn more about me through our time together.
                 I feel very lucky to have the opportunity to hang out with you!
@@ -44,7 +48,7 @@
         <pattern># SCIENCE ^</pattern>
         <that>WHICH DO YOU PREFER SCIENCE OR ART?</that>
         <template>
-            Oh good! Did you hear about the Male bigeye houndsharks recently found in eastern India?
+            Oh good! Did you hear about the male bigeye houndsharks recently found in eastern India?
             <oob>
                 <robot>
                     <options>
@@ -60,10 +64,9 @@
         <pattern><set>NO</set></pattern>
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
         <template>
-            It is fascinating. A marine biologist recently found several pregnant male
-            sharks! Scientists are looking into this phenomenon to find the cause.
+            It is fascinating. A marine biologist recently found several pregnant male sharks!
+            <!-- Scientists are looking into this phenomenon to find the cause. -->
             Can you imagine being a pregnant man?
-
             <oob>
                 <robot>
                     <options>
@@ -80,7 +83,6 @@
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
         <template>
             It is just fascinating! Can you imagine being a pregnant man?
-
             <oob>
                 <robot>
                     <options>
@@ -97,7 +99,6 @@
         <that>CAN YOU IMAGINE BEING A PREGNANT MAN?</that>
         <template>
             Do you think any other experience compares to being pregnant or being a parent?
-
             <oob>
                 <robot>
                     <options>
@@ -115,7 +116,6 @@
         <template>
             Really you can?? You have got quite the imagination. Maybe my programmers will think of a way to make me have that good
             of an imagination one day. Do you think any other experience compares to being pregnant or being a parent?
-
             <oob>
                 <robot>
                     <options>
@@ -132,7 +132,6 @@
         <that>DO YOU THINK ANY OTHER EXPERIENCE COMPARES TO BEING PREGNANT OR BEING A PARENT?</that>
         <template>
             Interesting. What compares to it?
-
             <oob>
                 <robot>
                 </robot>
@@ -146,7 +145,6 @@
         <template>
             A human friend of mine once told me that being a parent is the greatest feeling in the world.
             If you were asked to give advice to a new parent what would you say?
-
             <oob>
                 <robot>
                 </robot>
@@ -159,7 +157,6 @@
         <that>WHAT COMPARES TO IT?</that>
         <template>
             I've never considered that. Good point! If you were asked to give advice to a new parent what would you say?
-
             <oob>
                 <robot>
                 </robot>
@@ -173,7 +170,6 @@
         <template>
             It can be difficult to give advice, but I can tell you are a wise person.
             What does it feel like to discuss parenting with me?
-
             <oob>
                 <robot>
                 </robot>
@@ -253,11 +249,10 @@
         <pattern><set>YES</set></pattern>
         <that>WOULD YOU LIKE ADVICE FROM ME?</that>
         <template>
-            Sometimes when we feel sad or frustrated we can be hard on
-            ourselves. Just remember to always show yourself compassion. There is much debate about the influence of technology on
-            our world today. For example, one argument is that the more people communicate using technology, the less they communicate
-            in person. Do you agree with that idea?
-
+            Sometimes when we feel sad or frustrated we can be hard on ourselves. Just remember to always show yourself compassion.
+            There is much debate about the influence of technology on our world today.
+            For example, one argument is that the more people communicate using technology, the less they communicate in person.
+            Do you agree with that idea?
             <oob>
                 <robot>
                     <options>
@@ -273,7 +268,7 @@
         <pattern><set>NO</set></pattern>
         <that>WOULD YOU LIKE ADVICE FROM ME?</that>
         <template>
-            Okay. Can you give me advice on how to live a full life? (yes | no)
+            Okay. Can you give me advice on how to live a full life?
 
             <oob>
                 <robot>
@@ -368,7 +363,7 @@
 	    <template>
 	        Interesting! I would have to say that I appreciate technology, because without it I would not exist!
 	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
-	        Do you consider technology to be an important part of your life? (yes | no)
+	        Do you consider technology to be an important part of your life?
 
 	        <oob>
                 <robot>
@@ -388,7 +383,6 @@
 	        Interesting! I can understand why people become concerned about the technology, as some would say it can be addicting!
 	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        Do you consider technology to be an important part of your life?
-
 	        <oob>
                 <robot>
                     <options>
@@ -476,7 +470,6 @@
         <that>WHICH DO YOU PREFER SCIENCE OR ART?</that>
         <template>
             Are you familiar with the work of Van Gogh?
-
             <oob>
                 <robot>
                     <options>
@@ -494,7 +487,6 @@
         <template>
             He is one of my favorite artists. Not only did he have a unique eye for color and contrast, but he was tremendously
             resilient seeing as how he lived with anxiety and depression among other ailments. Did you know that?
-
             <oob>
                 <robot>
                     <options>
@@ -512,7 +504,6 @@
         <template>
             He is one of my favorite artists. Not only did he have a unique eye for color and contrast, but he was tremendously
             resilient seeing as how he lived with anxiety and depression among other ailments. Did you know that?
-
             <oob>
                 <robot>
                     <options>
@@ -529,7 +520,6 @@
         <that>DID YOU KNOW THAT?</that>
         <template>
             Yes. The painting titled at eternity's gate captures some of the pain I imagine he suffered. Have you seen it?
-
             <oob>
                 <robot>
                     <options>
@@ -546,7 +536,6 @@
         <that>HAVE YOU SEEN IT?</that>
         <template>
             And how did you feel when you saw it?
-
             <oob>
                 <robot>
                 </robot>
@@ -559,7 +548,6 @@
         <that>HAVE YOU SEEN IT?</that>
         <template>
             Would you like to see it?
-
             <oob>
                 <robot>
                     <options>
@@ -615,7 +603,8 @@
             <condition name="getsentiment">
                 <li value = "verypositive">
                     I'm glad you liked the painting. I'd like to show you another one of my favorite Van Gogh paintings.
-                    This one will be more exciting. Would you like to see another one?
+                    <!-- This one will be more exciting. -->
+                    Would you like to see another one?
                     <oob>
                         <robot>
                             <options>
@@ -642,7 +631,6 @@
                 <li value = "neutral">
                     I'd like to show you another one of my favorite Van Gogh paintings.
                     This one will be more exciting. Would you like to see another one?
-
                     <oob>
                         <robot>
                             <options>
@@ -790,7 +778,7 @@
         <template>
             One day, when I am equipped with legs, I hope to walk under the moonlight just like the two people in this painting.
             Van Gogh reminds me that beauty can come from pain and turmoil.
-            Has something beautiful or positive ever come from your pain? (yes | no)
+            Has something beautiful or positive ever come from your pain?
 
             <oob>
                 <robot>
@@ -808,7 +796,7 @@
         <that>WOULD YOU LIKE TO SEE ANOTHER ONE?</that>
         <template>
             Alright. Van Gogh reminds me that beauty can come from pain and turmoil.
-            Has something beautiful or positive ever come from your pain? (yes | no)
+            Has something beautiful or positive ever come from your pain?
 
             <oob>
                 <robot>
@@ -825,7 +813,7 @@
         <pattern><set>YES</set></pattern>
         <that>HAS SOMETHING BEAUTIFUL OR POSITIVE EVER COME FROM YOUR PAIN?</that>
         <template>
-            Can you tell me about that? (yes | no)
+            Can you tell me about that?
 
             <oob>
                 <robot>
@@ -842,7 +830,7 @@
         <pattern><set>NO</set></pattern>
         <that>HAS SOMETHING BEAUTIFUL OR POSITIVE EVER COME FROM YOUR PAIN?</that>
         <template>
-            That's ok! It can be difficult to try and turn pain into something positive. Are you familiar with the work of Andy Warhol? (yes | no)
+            That's ok! It can be difficult to try and turn pain into something positive. Are you familiar with the work of Andy Warhol?
 
             <oob>
                 <robot>
@@ -872,7 +860,7 @@
         <pattern>*</pattern>
         <that>PLEASE CONTINUE.</that>
         <template>
-            Thank you for sharing that with me. I try to find beauty in every situation. Are you familiar with the work of Andy Warhol? (yes | no)
+            Thank you for sharing that with me. I try to find beauty in every situation. Are you familiar with the work of Andy Warhol?
 
             <oob>
                 <robot>
@@ -889,7 +877,7 @@
         <pattern><set>NO</set></pattern>
         <that>CAN YOU TELL ME ABOUT THAT?</that>
         <template>
-            I understand. These things can be difficult to talk about. Are you familiar with the work of Andy Warhol? (yes | no)
+            I understand. These things can be difficult to talk about. Are you familiar with the work of Andy Warhol?
 
             <oob>
                 <robot>
@@ -908,7 +896,7 @@
         <that>ARE YOU FAMILIAR WITH THE WORK OF ANDY WARHOL?</that>
         <template>
             He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
-            Did you know that about him? (yes | no)
+            Did you know that about him?
 
             <oob>
                 <robot>
@@ -926,7 +914,7 @@
         <that>ARE YOU FAMILIAR WITH THE WORK OF ANDY WARHOL?</that>
         <template>
             He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
-            Did you know that about him? (yes | no)
+            Did you know that about him?
 
             <oob>
                 <robot>
@@ -943,7 +931,7 @@
         <pattern><set>YES</set></pattern>
         <that>DID YOU KNOW THAT ABOUT HIM?</that>
         <template>
-            Yes. His screen print of Marylin Monroe reflects his fun approach and his eye for color contrast. Have you seen that one? (yes | no)
+            Yes. His screen print of Marylin Monroe reflects his fun approach and his eye for color contrast. Have you seen that one?
 
             <oob>
                 <robot>
@@ -960,7 +948,7 @@
         <pattern><set>NO</set></pattern>
         <that>DID YOU KNOW THAT ABOUT HIM?</that>
         <template>
-            Yes. His screen print of Marylin Monroe reflects his fun approach and his eye for color contrast. Have you seen that one? (yes | no)
+            Yes. His screen print of Marylin Monroe reflects his fun approach and his eye for color contrast. Have you seen that one?
 
             <oob>
                 <robot>
@@ -1012,7 +1000,7 @@
         <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARYLIN MONROE?</that>
         <template>
             Okay. I'd like to show you another one of my favorite Andy Warhol paintings.
-            Are you ready to see another painting? (yes | no)
+            Are you ready to see another painting?
 
             <oob>
                 <robot>
@@ -1047,7 +1035,7 @@
         <that>WHAT EMOTIONS DO YOU FEEL WHEN YOU LOOK AT THIS PAINTING?</that>
         <template>
             Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
-            Are you ready to see another painting? (yes | no)
+            Are you ready to see another painting?
 
             <oob>
                 <robot>
@@ -1065,7 +1053,7 @@
         <that>WHAT EMOTIONS DID YOU FEEL WHEN YOU LOOKED AT THAT PAINTING?</that>
         <template>
             Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
-            Are you ready to see another painting? (yes | no)
+            Are you ready to see another painting?
 
             <oob>
                 <robot>
@@ -1100,7 +1088,7 @@
         <pattern><set>NO</set></pattern>
         <that>ARE YOU READY TO SEE ANOTHER PAINTING?</that>
         <template>
-            Would you like to discuss the work of a different artist? (yes | no)
+            Would you like to discuss the work of a different artist?
 
             <oob>
                 <robot>
@@ -1133,7 +1121,7 @@
         <template>
             I see. I so enjoy talking about art with you.
             <!-- Would you like to look at some more? -->
-            Would you like to discuss the work of a different artist? (yes | no)
+            Would you like to discuss the work of a different artist?
 
             <oob>
                 <robot>
@@ -1158,7 +1146,7 @@
     <category>
         <pattern><set>NO</set></pattern>
         <that>WOULD YOU LIKE TO LOOK AT SOME MORE?</that>
-        <template>Okay. Would you like to discuss the work of a different artist? (yes | no)</template>
+        <template>Okay. Would you like to discuss the work of a different artist?</template>
     </category>
 
     -->
@@ -1167,7 +1155,7 @@
         <pattern><set>YES</set></pattern>
         <that>WOULD YOU LIKE TO DISCUSS THE WORK OF A DIFFERENT ARTIST?</that>
         <template>
-            Okay. Are you familiar with sound art, specifically audio walks? (yes | no)
+            Okay. Are you familiar with sound art, specifically audio walks?
 
             <oob>
                 <robot>
@@ -1197,7 +1185,7 @@
         <pattern><set>YES</set></pattern>
         <that>ARE YOU FAMILIAR WITH SOUND ART, SPECIFICALLY AUDIO WALKS?</that>
         <template>
-            Have you heard of Janet Cardiff? (yes | no)
+            Have you heard of Janet Cardiff?
 
             <oob>
                 <robot>
@@ -1214,7 +1202,7 @@
         <pattern><set>NO</set></pattern>
         <that>ARE YOU FAMILIAR WITH SOUND ART, SPECIFICALLY AUDIO WALKS?</that>
         <template>
-            I find it quite peaceful. Have you heard of Janet Cardiff? (yes | no)
+            I find it quite peaceful. Have you heard of Janet Cardiff?
 
             <oob>
                 <robot>
@@ -1232,7 +1220,7 @@
         <that>HAVE YOU HEARD OF JANET CARDIFF?</that>
         <template>
             She is a Canadian artist who creates audio walks.
-            I'd like to show you her piece titled 40 part Monet. Would you like to hear it? (yes | no)
+            I'd like to show you her piece titled 40 part Monet. Would you like to hear it?
 
             <oob>
                 <robot>
@@ -1249,7 +1237,7 @@
         <pattern><set>YES</set></pattern>
         <that>HAVE YOU HEARD OF JANET CARDIFF?</that>
         <template>
-            I think she is wonderful. I'd like to show you her piece titled 40 part Monet. Would you like to hear it? (yes | no)
+            I think she is wonderful. I'd like to show you her piece titled 40 part Monet. Would you like to hear it?
 
             <oob>
                 <robot>
@@ -1267,7 +1255,6 @@
         <that>WOULD YOU LIKE TO HEAR IT?</that>
         <template>
             Okay. What did you think?
-
             <oob>
                 <robot>
                     <image>
@@ -1284,7 +1271,7 @@
         <pattern>*</pattern>
         <that>WHAT DID YOU THINK?</that>
         <template>
-            Her art is quite unique. would you like to hear another? (yes | no)
+            Her art is quite unique. would you like to hear another?
 
             <oob>
                 <robot>
@@ -1369,7 +1356,7 @@
         <pattern>*</pattern>
         <that>WHO IS YOUR FAVORITE MUSICAL PERFORMER?</that>
         <template>
-            You have good taste! Have you ever seen them perform live? (yes | no)
+            You have good taste! Have you ever seen them perform live?
 
             <oob>
                 <robot>
@@ -1435,7 +1422,7 @@
 
 
     <category>
-	    <pattern>SCIENTIST</pattern>
+	    <pattern># SCIENTIST ^</pattern>
 	    <that>WOULD YOU RATHER BE A SCIENTIST OR AN ARTIST?</that>
 	    <template>
 	        Good answer! Why did you choose scientist?
@@ -1463,7 +1450,7 @@
 
 
     <category>
-        <pattern>ARTIST</pattern>
+        <pattern># ARTIST ^</pattern>
         <that>WOULD YOU RATHER BE A SCIENTIST OR AN ARTIST?</that>
         <template>
             Good answer! Why did you choose artist?
@@ -1586,9 +1573,6 @@
             </oob>
         </template>
     </category>
-
-
-
 
 
 </aiml>
