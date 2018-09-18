@@ -34,7 +34,6 @@
                   </options>
               </robot>
             </oob>
-
         </template>
     </category>
 
@@ -716,7 +715,7 @@
 	    <that>HAVE YOU READ THE GREAT GATSBY?</that>
 	    <template>
 	        We have lots in common. In 2013, The Great Gatsby was made into a movie.
-	        Would you like to watch the preview?
+	        Would you like to watch the trailer?
 	        <oob>
                 <robot>
                     <options>
@@ -759,7 +758,7 @@
 
     <category>
 	    <pattern><set>YES</set></pattern>
-	    <that>WOULD YOU LIKE TO WATCH THE PREVIEW?</that>
+	    <that>WOULD YOU LIKE TO WATCH THE TRAILER?</that>
 	    <template>
 	        Okay great! When it is done please answer this question I have for you.
 	        How did that video make you feel?
@@ -1190,7 +1189,7 @@
 	    <pattern><set>NO</set></pattern>
 	    <that>WOULD YOU LIKE TO WATCH A SHORT CLIP?</that>
 	    <template>
-	        Okay!
+	        Okay! What is your favorite romance novel?
 	        <oob>
                 <robot>
                 </robot>
