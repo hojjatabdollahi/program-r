@@ -16,7 +16,7 @@
         </template>
     </category>
 
-    <topic = "session3">
+    <topic name = "session3">
 
     <category>
             <pattern>*</pattern>
