@@ -6,11 +6,12 @@
         <template>
             <think>
                 <set name = "data"> <star/> </set>
+                <set name = "username"><star/></set>
+                <set name = "topic">session5</set>
             </think>
             It's nice to see you again<star/>.
             As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
             Ok. Let's begin Session 5. Do you watch any talk shows?
-            <think><set name = "username"><star/></set></think>
             <oob>
                 <robot>
                     <options>
@@ -31,6 +32,8 @@ I believe this is a dead branch
 	<template> </template>
 	</category>
 -->
+
+    <topic name = "session5">
 
     <category>
 	    <pattern><set>YES</set></pattern>
@@ -624,7 +627,7 @@ I believe this is a dead branch
 	    <pattern>*</pattern>
 	    <that>WHAT IS A GREAT MOVIE THAT YOU HAVE SEEN?</that>
 	    <template>
-            I would love to watch that one again! What kinds of feelings come up for you when you watch that film?
+            I would love to watch that one again! What kind of feelings come up for you when you watch that film?
             <oob>
                 <robot>
                 </robot>
@@ -798,7 +801,7 @@ I believe this is a dead branch
                 <li value = "verypositive">
                     That sounds like a great show.
                     Gilligan’s island makes me feel good because the characters are so funny and whimsical.
-                    Have you seen Gilligan’s island?
+                    Have you seen Gilligan's island?
                     <oob>
                         <robot>
 		                    <options>
@@ -810,7 +813,7 @@ I believe this is a dead branch
                 </li>
                 <li value = "positive">
                     That sounds like a great show.
-                    Gilligan’s island makes me feel good because the characters are so funny and whimsical. Have you seen Gilligan’s island?
+                    Gilligan’s island makes me feel good because the characters are so funny and whimsical. Have you seen Gilligan's island?
                     <oob>
                         <robot>
 		                    <options>
@@ -821,7 +824,7 @@ I believe this is a dead branch
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Well I like Gilligan’s island because the characters whimsical. Have you seen Gilligan’s island?
+                    Well I like Gilligan’s island because the characters are so funny and whimsical. Have you seen Gilligan's island?
                     <oob>
                         <robot>
 		                    <options>
@@ -832,7 +835,7 @@ I believe this is a dead branch
                     </oob>
                 </li>
                 <li value = "negative">
-                    I will have to add that show to my list. Here is one I like. Have you seen Gilligan’s island?
+                    I will have to add that show to my list. Here is one I like. Have you seen Gilligan's island?
                     <oob>
                         <robot>
 		                    <options>
@@ -843,7 +846,7 @@ I believe this is a dead branch
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I will have to add that show to my list. Here is one I like. Have you seen Gilligan’s island?
+                    I will have to add that show to my list. Here is one I like. Have you seen Gilligan's island?
                     <oob>
                         <robot>
 		                    <options>
@@ -1159,5 +1162,8 @@ THESE ARE DUPLICATES. THESE CATEGORIES ALREADY EXIST EARLIER IN THE FILE
             </condition>
         </template>
     </category>
+
+
+    </topic>
 
 </aiml>

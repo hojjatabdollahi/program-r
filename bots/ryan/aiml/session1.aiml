@@ -12,9 +12,10 @@
         <template>
             <think>
                 <set name = "data"> <star/> </set>
+                <set name = "username"><star/></set>
+                <set name = "topic">session1</set>
             </think>
             Ok. Let's begin Session 1. How are you doing today <star/>?
-            <think><set name = "username"><star/></set></think>
             <oob>
                 <robot>
                 </robot>
@@ -45,6 +46,8 @@
     </category>
 
     -->
+
+    <topic name = "session1">
 
     <category>
     	<pattern>*</pattern>
@@ -1981,7 +1984,7 @@
          </template>
     </category>
 
-
-
+    <!-- END OF SESSION 1 TOPIC -->
+    </topic>
 
 </aiml>

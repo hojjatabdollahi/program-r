@@ -8,15 +8,20 @@
         <template>
             <think>
                 <set name = "data"> <star/> </set>
+                <set name = "username"><star/></set>
+                <set name = "topic">session2</set>
             </think>
             Ok. Let's begin Session 2. How have you been <star/>?
-            <think><set name = "username"><star/></set></think>
             <oob>
                 <robot>
                 </robot>
             </oob>
         </template>
     </category>
+
+
+    <topic name = "session2">
+
 
     <category>
         <pattern>*</pattern>
@@ -37,7 +42,11 @@
         </template>
     </category>
 
-    <!-– SENTIMENT ONE -->
+
+
+    <!-- SENTIMENT ONE -->
+
+
     <category>
         <pattern>*</pattern>
         <that>HOW ARE YOU FEELING ABOUT THIS SO FAR?</that>
@@ -1738,5 +1747,6 @@
         </template>
     </category>
 
+    </topic>
 
 </aiml>

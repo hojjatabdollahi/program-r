@@ -3,20 +3,24 @@
 
 <!-- STARTING THE SESSION -->
 
-   <category>
-       <pattern>START SESSION 4 *</pattern>
-       <template>
-           Ok. Let's begin Session 4. How have you been doing lately <star/>?
-           <think><set name = "username"><star/></set></think>
-           <oob>
-               <robot>
-               </robot>
-           </oob>
+    <category>
+        <pattern>START SESSION 4 *</pattern>
+        <template>
+            <think>
+                <set name = "username"><star/></set>
+                <set name = "topic">session4</set>
+            </think>
+            Ok. Let's begin Session 4. How have you been doing lately <star/>?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
 
-       </template>
-   </category>
+    <topic name = "session4">
 
-   <category>
+    <category>
         <pattern>*</pattern>
   	    <that>HOW HAVE YOU BEEN DOING LATELY * ?</that>
    	    <template>
@@ -1266,9 +1270,6 @@
         </template>
     </category>
 
-<!-- SAME AS ENDING FOR SESSION 2, CAN COMMENT OUT AND LET SESSION 2 HANDLE THIS -->
-
-<!--
     <category>
         <pattern><set>YES</set></pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
@@ -1284,6 +1285,8 @@
             bid you goodbye for now my friend. Ta Ta
         </template>
     </category>
--->
+
+    </topic>
+
 
 </aiml>

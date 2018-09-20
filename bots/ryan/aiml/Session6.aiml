@@ -36,6 +36,8 @@
         <template>
             <think>
                 <set name = "data"> <star/> </set>
+                <set name = "username"> <star/> </set>
+                <set name = "topic">session6</set>
             </think>
             It's nice to see you again <star/>.
              As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
@@ -51,6 +53,8 @@
             </oob>
         </template>
     </category>
+
+    <topic name = "session6">
 
     <category>
 	    <pattern><set>YES</set></pattern>
@@ -210,7 +214,7 @@ These might not be necessary with the concept tags.
 	    <pattern>*</pattern>
 	    <that>WHAT WAS YOUR FAVORITE PART OF THAT TRIP?</that>
 	    <template>
-            Sounds spectacular! Is there somewhere you would like to visit in the future?
+            Sounds spectacular! Where is somewhere you would like to visit in the future?
             <oob>
                 <robot>
                 </robot>
@@ -227,7 +231,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 	    <pattern>*</pattern>
 	    <that>WHAT WAS YOUR LEAST FAVORITE PART OF THAT TRIP?</that>
 	    <template>
-            Yikes! Is there somewhere you would like to visit in the future?
+            Yikes! Where is somewhere you would like to visit in the future?
             <oob>
                 <robot>
                 </robot>
@@ -237,9 +241,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
     <category>
 	    <pattern>*</pattern>
-	    <that>IS THERE SOMEWHERE YOU WOULD LIKE TO VISIT IN THE FUTURE?</that>
+	    <that>WHERE IS SOMEWHERE YOU WOULD LIKE TO VISIT IN THE FUTURE?</that>
 	    <template>
-            Great choice. Why don’t we take a moment to do a visualization exercise, okay?
+            Great choice. Why don't we take a moment to do a visualization exercise, okay?
             <oob>
                 <robot>
 		            <options>
@@ -266,7 +270,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
     <category>
 	    <pattern><set>NO</set></pattern>
-	    <that>OKAY?</that>
+	    <that>WHY DON'T WE TAKE A MOMENT TO DO A VISUALIZATION EXERCISE, OKAY?</that>
 	    <template>
             Okay. How are you feeling in this moment?
             <oob>
@@ -781,7 +785,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    Oh good! Let me know that you think of this picture of a dark rain forest.
+                    Oh good! Let me know what you think of this picture of a dark rain forest.
                     <oob>
                         <robot>
                             <image>
@@ -796,7 +800,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                     </oob>
                 </li>
                 <li value = "positive">
-                    Oh good! Let me know that you think of this picture of a dark rain forest.
+                    Oh good! Let me know what you think of this picture of a dark rain forest.
                     <oob>
                         <robot>
                             <image>
@@ -811,7 +815,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Ok. Let me know that you think of this picture of a dark rain forest.
+                    Ok. Let me know what you think of this picture of a dark rain forest.
                     <oob>
                         <robot>
                             <image>
@@ -826,7 +830,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                     </oob>
                 </li>
                 <li value = "negative">
-                    I can tell you are not thrilled. Let me know that you think of this picture of a dark rain forest.
+                    I can tell you are not thrilled. Let me know what you think of this picture of a dark rain forest.
                     <oob>
                         <robot>
                             <image>
@@ -841,7 +845,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I can tell you are not thrilled. Let me know that you think of this picture of a dark rain forest.
+                    I can tell you are not thrilled. Let me know what you think of this picture of a dark rain forest.
                     <oob>
                         <robot>
                             <image>
@@ -1199,5 +1203,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
             </condition>
         </template>
     </category>
+
+
+    </topic>
 
 </aiml>
