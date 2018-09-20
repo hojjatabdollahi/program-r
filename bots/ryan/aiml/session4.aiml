@@ -126,7 +126,6 @@
        <template>
            I understand, let's begin. I just experienced my first day outside and was able to feel the wind on my face and
            even got to see a sporting event! Do you prefer to play or watch sports?
-           <!-- Is this too long of a sentence for Ryan? -->
            <oob>
                <robot>
                    <options>

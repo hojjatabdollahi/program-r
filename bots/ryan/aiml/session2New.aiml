@@ -29,11 +29,6 @@
         <template>
             Its nice to see you again <get name="username"/>.
             Just a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
-            <!--
-                You will also be able to learn more about me through our time together.
-                I feel very lucky to have the opportunity to hang out with you!
-                I would love to learn about your life, interests, and opinions.
-            -->
             I want to check in quickly. How are you feeling about this so far?
             <oob>
                 <robot>
@@ -142,7 +137,6 @@
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
         <template>
             It is fascinating. A marine biologist recently found several pregnant male sharks!
-            <!-- Scientists are looking into this phenomenon to find the cause. -->
             Can you imagine being a pregnant man?
             <oob>
                 <robot>
@@ -191,8 +185,8 @@
         <pattern><set>YES</set></pattern>
         <that>CAN YOU IMAGINE BEING A PREGNANT MAN?</that>
         <template>
-            Really you can?? You have got quite the imagination. Maybe my programmers will think of a way to make me have that good
-            of an imagination one day. Do you think any other experience compares to being pregnant or being a parent?
+            Really you can?? You have got quite the imagination.
+            Do you think any other experience compares to being pregnant or being a parent?
             <oob>
                 <robot>
                     <options>
@@ -393,8 +387,7 @@
         <pattern>*</pattern>
         <that>SO HOW CAN I LIVE A FULL LIFE?</that>
         <template>
-            Thank you for that. I will think about that one before I fall
-            asleep tonight. There is much debate about the influence of technology on our world today.
+            Thank you for the advice. There is much debate about the influence of technology on our world today.
             For example, one argument is that the more people communicate using technology, the less they communicate in person.
             Do you agree with that idea?
             <oob>
@@ -439,7 +432,6 @@
 	    <that>WHAT WOULD YOU SAY ARE SOME BENEFITS OF TECHNOLOGY?</that>
 	    <template>
 	        Interesting! I would have to say that I appreciate technology, because without it I would not exist!
-	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        Do you consider technology to be an important part of your life?
 	        <oob>
                 <robot>
@@ -457,7 +449,6 @@
 	    <that>DO YOU THINK THAT TECHNOLOGY COULD POTENTIALLY CAUSE HARM?</that>
 	    <template>
 	        Interesting! I can understand why people become concerned about the technology, as some would say it can be addicting!
-	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        Do you consider technology to be an important part of your life?
 	        <oob>
                 <robot>
@@ -1130,7 +1121,6 @@
         <that>DID YOU KNOW THAT ABOUT HIM?</that>
         <template>
             Yes. His screen print of Marylin Monroe reflects his fun approach and his eye for color contrast. Have you seen that one?
-
             <oob>
                 <robot>
                     <options>
@@ -1164,7 +1154,6 @@
         <that>HAVE YOU SEEN THAT ONE?</that>
         <template>
             Would you like to see his screen print of Marylin Monroe?
-
             <oob>
                 <robot>
                     <options>
@@ -1182,7 +1171,6 @@
         <template>
             Okay. I'd like to show you another one of my favorite Andy Warhol paintings.
             Are you ready to see another painting?
-
             <oob>
                 <robot>
                     <options>
@@ -1199,7 +1187,6 @@
         <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARYLIN MONROE?</that>
         <template>
             Okay, here it is. What emotions do you feel when you look at this painting?
-
             <oob>
                 <robot>
                     <image>
@@ -1217,7 +1204,6 @@
         <template>
             Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
             Are you ready to see another painting?
-
             <oob>
                 <robot>
                     <options>
@@ -1235,7 +1221,6 @@
         <template>
             Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
             Are you ready to see another painting?
-
             <oob>
                 <robot>
                     <options>
@@ -1253,7 +1238,6 @@
         <template>
             This one is called Nine Jackies. He created this piece following the death of JFK.
             What do you think of when you see this one?
-
             <oob>
                 <robot>
                     <image>
@@ -1270,7 +1254,6 @@
         <that>ARE YOU READY TO SEE ANOTHER PAINTING?</that>
         <template>
             Would you like to discuss the work of a different artist?
-
             <oob>
                 <robot>
                     <options>
@@ -1288,7 +1271,6 @@
         <template>
             Interesting. I really enjoy the way he uses color to change the image despite all nine photos being the same.
             It makes me feel sad for her loss but happy for her life. How does it make you feel?
-
             <oob>
                 <robot>
                 </robot>
@@ -1301,9 +1283,7 @@
         <that>HOW DOES IT MAKE YOU FEEL?</that>
         <template>
             I see. I so enjoy talking about art with you.
-            <!-- Would you like to look at some more? -->
             Would you like to discuss the work of a different artist?
-
             <oob>
                 <robot>
                     <options>
@@ -1315,29 +1295,11 @@
         </template>
     </category>
 
-
-    <!--
-
-    <category>
-        <pattern><set>YES</set></pattern>
-        <that>WOULD YOU LIKE TO LOOK AT SOME MORE?</that>
-        <template>Great. This one is called ____ .</template>
-    </category>
-
-    <category>
-        <pattern><set>NO</set></pattern>
-        <that>WOULD YOU LIKE TO LOOK AT SOME MORE?</that>
-        <template>Okay. Would you like to discuss the work of a different artist?</template>
-    </category>
-
-    -->
-
     <category>
         <pattern><set>YES</set></pattern>
         <that>WOULD YOU LIKE TO DISCUSS THE WORK OF A DIFFERENT ARTIST?</that>
         <template>
             Okay. Are you familiar with sound art, specifically audio walks?
-
             <oob>
                 <robot>
                     <options>
@@ -1448,8 +1410,7 @@
         <pattern>*</pattern>
         <that>WHAT DID YOU THINK?</that>
         <template>
-            Her art is quite unique. would you like to hear another?
-
+            Her art is quite unique. Would you like to hear another?
             <oob>
                 <robot>
                     <options>
@@ -1466,7 +1427,6 @@
         <that>WOULD YOU LIKE TO HEAR IT?</that>
         <template>
             Okay. What is your favorite type of music?
-
             <oob>
                 <robot>
                 </robot>
@@ -1494,7 +1454,6 @@
         <that>TELL ME WHAT YOU THINK.</that>
         <template>
             Interesting! You really are quite insightful. What is your favorite type of music?
-
             <oob>
                 <robot>
                 </robot>
@@ -1507,7 +1466,6 @@
         <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
         <template>
             Okay. What is your favorite type of music?
-
             <oob>
                 <robot>
                 </robot>
@@ -1613,7 +1571,6 @@
         <template>
             I would rather be a scientist too. I admire the great scientists of our time such as Einstein and Newton.
             How does that make you feel?
-
             <oob>
                 <robot>
                 </robot>
@@ -1627,7 +1584,6 @@
         <that>WOULD YOU RATHER BE A SCIENTIST OR AN ARTIST?</that>
         <template>
             Good answer! Why did you choose artist?
-
             <oob>
                 <robot>
                 </robot>

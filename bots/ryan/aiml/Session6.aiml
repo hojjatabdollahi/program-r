@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-<!-- THIS INTRO IS FOR SESSION 5. DOES NOT CONNECT/START CONVERSATION FOR SESSION 6
-
-    <category>
-            <pattern><set>GREETING</set></pattern>
-            <template><random>
-            <li>Hello! </li>
-            <li>Hey! It is nice to meet you! </li>
-            <li>Howdy! It is a pleasure to meet you! </li>
-            <li>Hi There!</li>
-            <li>Hi!</li>
-            <li>Hey!</li>
-            <li>Hello, it is nice to meet you.</li>
-            <li>Hi it is nice to meet you.</li>
-            <li>Hey There!</li>
-            </random>
-            How are you doing today?
-            </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>HOW ARE YOU DOING TODAY?</that>
-        <template>
-            It's nice to see you again. As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
-            Do you watch any talk shows?
-        </template>
-    </category>
-
-    -->
-
     <category>
         <pattern>START SESSION 6 *</pattern>
         <template>
@@ -40,7 +10,7 @@
                 <set name = "topic">session6</set>
             </think>
             It's nice to see you again <star/>.
-             As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
+            As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
             Do you like to travel?
             <oob>
                 <robot>
@@ -576,7 +546,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 	    <pattern>*</pattern>
 	    <that> WHEN DO YOU FEEL MOST RELAXED?</that>
 	    <template>
-            I feel most relaxed when I am unplugged and turned off. Just kidding! If you could visit any foreign country where would you go and why?
+            I feel most relaxed when I am unplugged and turned off. Just kidding!
+            If you could visit any foreign country where would you go and why?
             <oob>
                 <robot>
                 </robot>

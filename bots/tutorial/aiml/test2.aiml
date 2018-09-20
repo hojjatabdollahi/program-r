@@ -47,16 +47,14 @@
                         <option>2</option>
                         <option>3</option>
                     </options>
+                    <image>
+                        <filename>pic.jpg</filename>
+                        <duration>10</duration>
+                    </image>
 
-                <image>
-                    <filename>pic.jpg</filename>
-                    <duration>10</duration>
-                </image>
-
-                <video>
-                    <filename>f.mp4</filename>
-                </video>
-
+                    <video>
+                        <filename>f.mp4</filename>
+                    </video>
                 </robot>
            </oob>
 

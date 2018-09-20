@@ -24,15 +24,6 @@
         </template>
     </category>
 
-<!--
-I believe this is a dead branch
-<category>
-	<pattern>*</pattern>
-	<that>I AM HAPPY TO BE CHATTING WITH YOU</that>
-	<template> </template>
-	</category>
--->
-
     <topic name = "session5">
 
     <category>
@@ -1083,33 +1074,6 @@ I believe this is a dead branch
             </condition>
         </template>
     </category>
-
-<!--
-THESE ARE DUPLICATES. THESE CATEGORIES ALREADY EXIST EARLIER IN THE FILE
-
-<category>
-	<pattern><set>yes</set></pattern>
-	<that>DO YOU WATCH TV SHOWS</that>
-	<template> which show do you like? </template>
-	</category>
-
-<category>
-	<pattern><set>no</set></pattern>
-	<that>DO YOU WATCH TV SHOWS</that>
-	<template> many believe that television is a waste of valuable time. Do you agree with that statement? </template>
-	</category>
--->
-
-
-<!-- NOT SURE WHAT IS GOING ON HERE -->
-
-<!--
-<category>
-	<pattern>xxxxx</pattern>
-	<that>XXXXXX</that>
-	<template> We have covered a lot today and I thoroughly enjoyed doing so. Before we finish up I would like to know. How do you feel right now?</template>
-	</category>
--->
 
 
 
