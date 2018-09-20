@@ -63,5 +63,17 @@ class ReadyRequest(Request):
         super().__init__(command, arguments=None)
 
 
+class SessionUserRequest(Request):
 
+    def __init__(self, command, arguments):
+        super().__init__(command, arguments)
+        self._username = arguments[1]
+        self._session_number = arguments[2] #this should be changed
 
+    @property
+    def session_number(self):
+        return self._session_number
+
+    @property
+    def username(self):
+        return self._username

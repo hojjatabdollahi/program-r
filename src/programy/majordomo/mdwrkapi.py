@@ -11,7 +11,7 @@ import time
 import zmq
 
 from programy.clients.events.majordomo.config import MajorDomoConfiguration
-from programy.majordomo.request import ReadyRequest, UserRequest, SessionRequest, QuestionRequest, ServiceRequest
+from programy.majordomo.request import ReadyRequest, UserRequest, SessionUserRequest, SessionRequest, QuestionRequest, ServiceRequest
 from programy.majordomo.zhelpers import dump
 # MajorDomo protocol constants:
 from programy.majordomo import MDP
@@ -204,6 +204,14 @@ class MajorDomoWorker(object):
 
 
     def convert_to_request_object(self, request):
+        '''
+        ["ready"]
+        ["session", 1, "user", rohola]
+        ["question", hello]
+        :param request:
+        :return:
+        '''
+
         if len(request)==1:
             if request[0]=="ready":
                 ready_request = ReadyRequest("ready")
@@ -214,6 +222,11 @@ class MajorDomoWorker(object):
                 username = request[2]
                 user_request = UserRequest("user", username)
                 return user_request
+
+            if request[0]=="start":
+                session_user_request = SessionUserRequest("session_user_request", request[1:])
+                return session_user_request
+
 
         if len(request)==2:
             if request[0]=="session":

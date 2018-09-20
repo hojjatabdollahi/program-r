@@ -1,7 +1,8 @@
 from programy.clients.events.client import EventBotClient
 from programy.clients.events.majordomo.config import MajorDomoConfiguration
 from programy.majordomo.mdwrkapi import MajorDomoWorker
-from programy.majordomo.request import ReadyRequest, UserRequest, SessionRequest, QuestionRequest, ServiceRequest
+from programy.majordomo.request import ReadyRequest, UserRequest, SessionRequest, QuestionRequest, ServiceRequest, \
+    SessionUserRequest
 from programy.utils.logging.ylogger import YLogger
 from programy.services.service import ServiceFactory
 
@@ -123,7 +124,6 @@ class MajorDomoBotClient(EventBotClient):
                     print("question", question)
 
 
-                    #todo this should be substitute with service
                     answer = self.process_question_with_options(client_context, question)
 
 
@@ -148,7 +148,8 @@ class MajorDomoBotClient(EventBotClient):
                         response = ["client context is not initiated. Initial Session request"]
 
                 except Exception as e:
-                    YLogger.exception(self, "chatbot encounter an internal crash", e)
+                    YLogger.exception(self, "chatbot encountered an internal crash", e)
+
 
     def worker_run_loop1(self):
         majordomo_worker = MajorDomoWorker(self.configuration.client_configuration)
@@ -168,8 +169,18 @@ class MajorDomoBotClient(EventBotClient):
                 client_context.bot.initiate_conversation_storage()
                 response = [request.command]
 
-            elif type(request) is ServiceRequest:
-                self.service = ServiceFactory.get_service(request.service_name)
+            # elif type(request) is ServiceRequest:
+            #     self.service = ServiceFactory.get_service(request.service_name)
+            elif type(request) is SessionUserRequest:
+                YLogger.info(self, "session user request")
+
+                question = self.initial_question(request, request.username)
+                print("question", question)
+
+                answer = self.process_question_with_options(client_context, question)
+
+                print("answer", answer)
+                response = self.render_response(client_context, answer)
 
             elif type(request) is QuestionRequest:
                 try:
