@@ -49,13 +49,22 @@ bot:
       max_histories: 100
       initial_topic: "*"
       restore_last_topic: false
-      type: file
-      config_name: file_config
+      type: mongodb
+      config_name: database_config
       empty_on_start: false
 
+    #this is for file configuration
     file_config:
       dir: D:\Documents\Projects\Python\programy\RyanCBT\results
 
+    #this is for mongodb configuration
+    database_config:
+      host: "localhost"
+      port: 27017
+      password: "password"
+      root: "/home/rohola/mongodbtest-data"
+      name: "programr"
+      collection_name: "conversations"
 
 brain:
 
@@ -144,7 +153,7 @@ brain:
         Mitsuku:
             classname: programy.services.mitsuku.MitsukuService
             username: epr_finman@yahoo.com
-            password: C:/Users/DreamFace/Codes/bots/tutorial/password.txt
+            password: /home/rohola/Codes/Python/program-r/bots/tutorial/password.txt
 
         Chomsky:
             classname: programy.services.chomsky.ChomskyService
@@ -199,4 +208,4 @@ brain:
 
       #embedding
       semantic_similarity:
-        method: embedding
+        method: ""

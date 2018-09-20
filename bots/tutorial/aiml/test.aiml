@@ -6,7 +6,12 @@
         <template>
             what do you like?
             <oob>
-                <robot></robot>
+                <robot>
+                    <image>
+                        <filename>someimage.jpg </filename>
+                        <duration>10</duration>
+                    </image>
+                </robot>
             </oob>
         </template>
     </category>
