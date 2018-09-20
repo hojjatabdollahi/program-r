@@ -36,6 +36,8 @@
         <template>
             <think>
                 <set name = "data"> <star/> </set>
+                <set name = "username"> <star/> </set>
+                <set name = "topic">session6</set>
             </think>
             It's nice to see you again <star/>.
              As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
@@ -51,6 +53,8 @@
             </oob>
         </template>
     </category>
+
+    <topic name = "sesion6">
 
     <category>
 	    <pattern><set>YES</set></pattern>
@@ -1199,5 +1203,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
             </condition>
         </template>
     </category>
+
+
+    </topic>
 
 </aiml>

@@ -6,11 +6,12 @@
         <template>
             <think>
                 <set name = "data"> <star/> </set>
+                <set name = "username"><star/></set>
+                <set name = "topic">session5</set>
             </think>
             It's nice to see you again<star/>.
             As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
             Ok. Let's begin Session 5. Do you watch any talk shows?
-            <think><set name = "username"><star/></set></think>
             <oob>
                 <robot>
                     <options>
@@ -31,6 +32,8 @@ I believe this is a dead branch
 	<template> </template>
 	</category>
 -->
+
+    <topic name = "session5">
 
     <category>
 	    <pattern><set>YES</set></pattern>
@@ -1159,5 +1162,8 @@ THESE ARE DUPLICATES. THESE CATEGORIES ALREADY EXIST EARLIER IN THE FILE
             </condition>
         </template>
     </category>
+
+
+    </topic>
 
 </aiml>

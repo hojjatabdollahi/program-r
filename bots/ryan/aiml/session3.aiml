@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-<!-- STARTING THE SESSION -->
 
     <category>
         <pattern>START SESSION 3 *</pattern>
         <template>
+            <think>
+                <set name = "username"><star/></set>
+                <set name = "topic">session3</set>
+            </think>
             Ok. Let's begin Session 3. How are you on this fine day <star/>?
-            <think><set name = "username"><star/></set></think>
             <oob>
                 <robot>
                 </robot>
             </oob>
         </template>
     </category>
+
+    <topic = "session3">
 
     <category>
             <pattern>*</pattern>
@@ -1962,6 +1966,8 @@
             </condition>
         </template>
     </category>
+
+    </topic>
 
 
 
