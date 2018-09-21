@@ -20,7 +20,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW ARE YOU ON THIS FINE DAY * ?</that>
+        <that>HOW ARE YOU ON THIS FINE DAY *?</that>
         <template>
             I am happy to be here with you <get name="username"/>. It is nice to see you again.
             Are you ready to get started with session 3?

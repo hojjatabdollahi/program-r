@@ -153,7 +153,7 @@ brain:
         Mitsuku:
             classname: programy.services.mitsuku.MitsukuService
             username: epr_finman@yahoo.com
-            password: /home/rohola/Codes/Python/program-r/bots/tutorial/password.txt
+            password: C:\Users\DreamFace\Codes\bots\ryan\password.txt
 
         Chomsky:
             classname: programy.services.chomsky.ChomskyService
@@ -208,4 +208,4 @@ brain:
 
       #embedding
       semantic_similarity:
-        method: ""
+        method: "embedding"

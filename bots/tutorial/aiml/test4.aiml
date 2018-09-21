@@ -2,7 +2,7 @@
 <aiml>
 
     <category>
-        <pattern>painting test</pattern>
+        <pattern>paintingtest</pattern>
         <template>
             Have you seen this painting before?
             <oob>
@@ -16,7 +16,7 @@
         <pattern><concept>Have seen painting|Have not seen painting</concept></pattern>
         <that>HAVE YOU SEEN THIS PAINTING BEFORE?</that>
         <template>
-            You have! How lucky
+            You have!. How lucky.
             <oob>
                 <robot></robot>
             </oob>
@@ -35,7 +35,7 @@
     </category>
 
     <category>
-        <pattern>travel test</pattern>
+        <pattern>traveltest</pattern>
         <template>
             Do you like to travel?
             <oob>

@@ -52,6 +52,16 @@ class ConversationMongodbStorage(ConversationStorage):
             video_filename = None
 
 
+        try:
+            session_number = bot_properties["session_number"]
+        except Exception as e:
+            session_number = None
+
+        try:
+            username = bot_properties["username"]
+        except Exception as e:
+            username = None
+
         question_sentence_text, answer_sentence_text = self.create_conversation(last_question, last_answer)
 
 
@@ -62,8 +72,8 @@ class ConversationMongodbStorage(ConversationStorage):
             },
 
             "session_info": {
-                "session_number": bot_properties["session_number"],
-                "username": bot_properties["username"]
+                "session_number": session_number ,
+                "username": username
             },
 
             "image": {

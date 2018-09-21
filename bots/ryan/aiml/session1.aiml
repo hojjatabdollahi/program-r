@@ -1,48 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <aiml version="2.0">
 
-
-
-    <!-- STARTING THE SESSION -->
 
 
     <category>
         <pattern>START SESSION 1 *</pattern>
         <template>
             <think>
-                <set name = "data"> <star/> </set>
-                <set name = "username"><star/></set>
-                <set name = "topic">session1</set>
+                <set name="username"><star/></set>
+                <set name="topic">session1</set>
             </think>
             Ok. Let's begin Session 1. How are you doing today <star/>?
             <oob>
                 <robot>
                 </robot>
             </oob>
-
         </template>
     </category>
 
 
-    <topic name = "session1">
+<!--<topic name="session1">-->
+
 
     <category>
     	<pattern>*</pattern>
    	    <that>HOW ARE YOU DOING TODAY * ?</that>
     	<template>
-    	    I am happy to be here with you <get name="username"/>. My name is Ryan and I am very excited to be meeting you!
+    	    I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
     	    Would you like to hear a little more about me?
-
     	    <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
-
         </template>
     </category>
 
@@ -55,8 +48,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -72,8 +65,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -89,8 +82,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -137,8 +130,8 @@
                     <oob>
                         <robot>
                             <options>
-                                <option>yes</option>
-                                <option>no</option>
+                                <option>Yes</option>
+                                <option>No</option>
                                 <option>I wish I had kids</option>
                                 <option>I have grandkids</option>
                                 <option>I do not like kids</option>
@@ -174,8 +167,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option>yes</option>
-                        <option>no</option>
+                        <option>Yes</option>
+                        <option>No</option>
                         <option>I wish I had kids</option>
                         <option>I have grandkids</option>
                         <option>I do not like kids</option>
@@ -214,8 +207,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -266,8 +259,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -307,8 +300,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -366,8 +359,8 @@
                     <oob>
                         <robot>
                             <options>
-                                <option> yes </option>
-                                <option> no </option>
+                                <option>Yes</option>
+                                <option>No</option>
                             </options>
                         </robot>
                     </oob>
@@ -417,8 +410,8 @@
                     <oob>
                         <robot>
                             <options>
-                                <option> yes </option>
-                                <option> no </option>
+                                <option>Yes</option>
+                                <option>No</option>
                             </options>
                         </robot>
                     </oob>
@@ -458,15 +451,12 @@
         <that>AND WHAT WOULD YOU DO TOGETHER?</that>
         <template>
             That sounds like a great way to spend time together.
-            <!--
-                When I am with my friends I enjoy heading up to the beautiful Colorado mountains.
-            -->
             Are you originally from Colorado?
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -483,8 +473,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -512,8 +502,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -528,12 +518,11 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
-
         </template>
     </category>
 
@@ -545,8 +534,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -1929,6 +1918,5 @@
     </category>
 
 
-    </topic>
-
+    <!--</topic>-->
 </aiml>
