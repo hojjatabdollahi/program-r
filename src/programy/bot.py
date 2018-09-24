@@ -432,12 +432,6 @@ class Bot(object):
 
         question = self.get_question(client_context, pre_processed, srai)
 
-
-
-        # file_obj_read = open("/home/rohola/conv_questions.p", 'rb')
-        # questions = pickle.load(file_obj_read)
-        # client_context.brain.bot.set_conversation_question(client_context, questions)
-
         conversation = self.get_conversation(client_context)
 
         conversation.record_question(question)

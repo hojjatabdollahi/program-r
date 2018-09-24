@@ -153,7 +153,7 @@ brain:
         Mitsuku:
             classname: programy.services.mitsuku.MitsukuService
             username: epr_finman@yahoo.com
-            password: C:\Users\DreamFace\Codes\bots\ryan\password.txt
+            password: /home/rohola/Codes/Python/program-r/bots/tutorial/password.txt
 
         Chomsky:
             classname: programy.services.chomsky.ChomskyService
@@ -196,16 +196,16 @@ brain:
         classname: programy.nlp.corenlp.client.Client
         ip: "http://localhost"
         port: 9000
-        jar_dir: C:\Users\DreamFace\Codes\libs\stanford-corenlp-full-2018-02-27\*
+        jar_dir: /home/rohola/Codes/Python/program-r/libs/stanford-corenlp-full-2018-02-27/*
 
 
       tokenizer:
         libname: spacy
         split_chars: .
-
+embedding
       sentence_segmentation:
         libname: spacy
 
       #embedding
       semantic_similarity:
-        method: "embedding"
+        method: ""
