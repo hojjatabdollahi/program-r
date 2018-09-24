@@ -1,7 +1,7 @@
 from programy.utils.logging.ylogger import YLogger
 from programy.config.section import BaseSectionConfigurationData
 from programy.config.brain.service import BrainServiceConfiguration
-
+import os
 
 class BrainCoreNLPConfiguration(BaseSectionConfigurationData):
     def __init__(self):
@@ -36,6 +36,9 @@ class BrainCoreNLPConfiguration(BaseSectionConfigurationData):
             self._ip = configuration_file.get_option(corenlp, "ip")
             self._port = configuration_file.get_option(corenlp, "port")
             self._jar_dir = configuration_file.get_option(corenlp, "jar_dir")
+            if not os.path.isabs(self._jar_dir):
+                programr_root = os.path.dirname(os.path.dirname(bot_root))
+                self._jar_dir = os.path.join(programr_root, self._jar_dir)
 
 
         else:

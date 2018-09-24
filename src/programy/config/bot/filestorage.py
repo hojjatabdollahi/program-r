@@ -1,7 +1,7 @@
-
 from programy.utils.logging.ylogger import YLogger
 
 from programy.config.base import BaseConfigurationData
+import os
 
 class BotConversationsFileStorageConfiguration(BaseConfigurationData):
 
@@ -16,9 +16,10 @@ class BotConversationsFileStorageConfiguration(BaseConfigurationData):
     def load_config_section(self, configuration_file, configuration, bot_root):
         ConversationsFileStorage = configuration_file.get_section(self._section_name, configuration)
         if ConversationsFileStorage is not None:
-            dir = configuration_file.get_option(ConversationsFileStorage, "dir", missing_value=None)
-            if dir is not None:
-                self._dir = self.sub_bot_root(dir, bot_root)
+            self._dir = configuration_file.get_option(ConversationsFileStorage, "dir", missing_value=None)
+            if not os.path.isabs(self._dir):
+                self._dir = self.sub_bot_root(self._dir, bot_root)
+
         else:
             YLogger.warning(self, "'BotConversationsFileStorageConfiguration' section missing from bot config, using defaults")
 

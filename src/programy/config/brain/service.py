@@ -1,7 +1,6 @@
 from programy.utils.logging.ylogger import YLogger
-
 from programy.config.section import BaseSectionConfigurationData
-
+import os
 
 class BrainServiceConfiguration(BaseSectionConfigurationData):
 
@@ -59,8 +58,14 @@ class BrainServiceConfiguration(BaseSectionConfigurationData):
             self._url = configuration_file.get_option(service, "url", missing_value=None)
             self._username = configuration_file.get_option(service, "username", missing_value=None)
             password_file = configuration_file.get_option(service, "password", missing_value=None)
+
             if password_file:
-                self._password = open(password_file).readline()
+                password_file = self.sub_bot_root(password_file, bot_root)
+                try:
+                    self._password = open(password_file).readline()
+                except Exception as e:
+                    YLogger.error(self, "couldn't open password file")
+
             self.load_additional_key_values(configuration_file, service)
         else:
             YLogger.warning(self, "'services' section missing from brain config, using to defaults")
