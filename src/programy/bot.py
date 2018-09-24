@@ -278,7 +278,9 @@ class Bot(object):
             sen = ["Sorry!. ",
                    "I couldn't hear you. ",
                    "I think I have to repeat the question. ",
-                   "I didn't understand you, I repeat the question. ",
+                   "I didn't understand you, Let me repeat the question. ",
+                   "I'm sorry I didn't quite understand you. Let me ask you again. ",
+                   "Let's please try to stay on topic, we have limited time together. ",
                    ]
 
 

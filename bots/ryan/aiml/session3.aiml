@@ -19,17 +19,11 @@
     <topic name = "session3">
 
     <category>
-            <pattern>*</pattern>
-                <that>HOW ARE YOU ON THIS FINE DAY * ?</that>
-            <template>
-                I am happy to be here with you <get name="username"/>. It is nice to see you again. As a reminder, my name is Ryan and I have a lot of fun things for us to talk about!
-                <!--
-                    I have a lot of interesting videos to watch, and games to play.
-                    Feel free to just talk to me normally and I will reply to the
-                    best of my ability!
-                -->
+        <pattern>*</pattern>
+        <that>HOW ARE YOU ON THIS FINE DAY *?</that>
+        <template>
+            I am happy to be here with you <get name="username"/>. It is nice to see you again.
             Are you ready to get started with session 3?
-
             <oob>
                 <robot>
                   <options>
@@ -61,7 +55,8 @@
       <pattern><set>NO</set></pattern>
       <that>ARE YOU READY TO GET STARTED WITH SESSION 3?</that>
       <template>
-          Please talk to my assistant if you are running into any troubles. When you are ready please say yes. Are you ready to get started with session 3?
+          Please talk to my assistant if you are running into any troubles.
+          When you are ready please say yes. Are you ready to get started with session 3?
           <oob>
               <robot>
                   <options>
@@ -139,13 +134,7 @@
         <that>WHAT IS MAKING YOU FEEL THIS WAY?</that>
         <template>
             I am an emotion recognizing robot, it allows me to be a better companion.
-            <!--
-                which means that I can see when you are feeling different emotions, like happy, sad, neutral,
-                surprised or scared! Please continue to share your feelings and thoughts with me,
-                that way I’ll be able to be a better companion! Thank you for sharing your honest feelings with me!
-            -->
             Let’s begin. Which activity do you enjoy the most. Playing cards, sewing, or reading?
-            <!-- Is this too long of a sentence for Ryan? -->
             <oob>
                 <robot>
                     <options>
@@ -210,7 +199,10 @@
         </template>
 	</category>
 
-<!-- SENTIMENT TWO -->
+
+    <!-- SENTIMENT TWO -->
+
+
     <category>
         <pattern>*</pattern>
         <that>HOW DOES PLAYING CARDS MAKE YOU FEEL?</that>
@@ -464,7 +456,13 @@
     <category>
 	    <pattern>DONE</pattern>
 	    <that>PLEASE SAY DONE WHEN YOU ARE FINISHED.</that>
-	<template>You stumped me. That was great! Would you like to talk about history?</template>
+	    <template>
+	        You stumped me. That was great! Would you like to talk about history?
+	        <oob>
+	            <robot>
+                </robot>
+            </oob>
+        </template>
 	</category>
 
 <!-- END OF CARD -->
@@ -701,7 +699,6 @@
 	    <pattern>*</pattern>
 	    <that>WHAT ABOUT READING FICTION DO YOU ENJOY THE MOST?</that>
 	    <template>
-	        <!-- Need some sort of acknowledgement of the user's response here instead of just continuing with the conversation -->
 	        One of the most popular fiction books is The Great Gatsby. Have you read the Great Gatsby?
 	        <oob>
                 <robot>

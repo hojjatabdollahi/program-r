@@ -46,7 +46,7 @@ class EventBotClient(BotClient):
                 finally:
                     self._first_time = False
 
-            client_context.bot.conversations["Console"]._properties = {"session_number": 1, "username": "rohola"}
+            # client_context.bot.conversations["Console"]._properties = {"session_number": 1, "username": "rohola"}
 
             self._running = self.wait_and_answer(client_context)
 
