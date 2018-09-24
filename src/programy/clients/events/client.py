@@ -50,7 +50,7 @@ class EventBotClient(BotClient):
 
             self._running = self.wait_and_answer(client_context)
 
-            bot.save_conversation(client_context)
+            #bot.save_conversation(client_context)
 
 
 
