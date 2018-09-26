@@ -19,7 +19,7 @@
     </category>
 
 
-<!--<topic name="session1">-->
+    <topic name="session1">
 
 
     <category>
@@ -1918,5 +1918,7 @@
     </category>
 
 
-    <!--</topic>-->
+    </topic>
+
+
 </aiml>
