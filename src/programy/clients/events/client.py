@@ -18,22 +18,18 @@ class EventBotClient(BotClient):
         pass
 
     def run_loop(self):
-        #todo change this back to work with console
-        #client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
         self._running = True
-        conversation_file = "/home/rohola/conv_questions.p"
 
-        bot = self.bot_factory.bot("bot")
-
+        # config = self.client_context.brain.configuration
+        # self.client_context.brain.load_services(config)
         # mitsuku = ServiceFactory.get_service("mitsuku")
         # while self._running:
         #     message = input(">>")
         #     response = mitsuku.ask_question(bot.client.client_context, message)
         #     print(response)
 
+        bot = self.bot_factory.bot("bot")
         bot.initiate_conversation_storage()
-
-
         while self._running:
             if self._first_time:
                 try:
@@ -50,7 +46,7 @@ class EventBotClient(BotClient):
 
             self._running = self.wait_and_answer(client_context)
 
-            bot.save_conversation(client_context)
+            #bot.save_conversation(client_context)
 
 
 

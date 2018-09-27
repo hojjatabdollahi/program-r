@@ -139,7 +139,6 @@ class MajorDomoBotClient(EventBotClient):
                         print(request.question)
                         #answer = self.process_question(client_context, request.question)
 
-                        # todo this should be substitute with service
                         answer = self.process_question_with_options(client_context, request.question)
 
                         client_context.bot.save_conversation(client_context)
@@ -187,8 +186,10 @@ class MajorDomoBotClient(EventBotClient):
                     YLogger.info(self, "question request")
                     if client_context is not None:
                         print(request.question)
+                        #todo here I have to get the FER as a sentiment value
 
-                        answer = self.process_question_service(client_context, request.question)
+                        #answer = self.process_question_service(client_context, request.question)
+                        answer = self.process_question_with_options(client_context, request.question)
 
                         client_context.bot.save_conversation(client_context)
                         response = self.render_response(client_context, answer)

@@ -30,7 +30,7 @@ class ConversationMongodbStorage(ConversationStorage):
             raise e
 
         try:
-            # todo this doesn't handle good
+            # todo this doesn't handle good when sentence is empty
             last_answer = answers[-1].sentences
         except Exception as e:
             YLogger.exception(self, "answer sentences length is zero", e)

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version = "2.0">
+
+
+    <category>
+        <pattern>sentiment</pattern>
+
+        <template>
+            How do you feel today?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+   </category>
+
+
+   <category>
+      <pattern>*</pattern>
+       <that>How do you feel today?</that>
+
+      <template>
+
+        <think>
+            <set name = "data"> <star/> </set>
+        </think>
+
+          <condition name = "getsentiment" >
+
+                <li value="verypositive"> That's awesome!</li>
+                <li value = "positive"> What is making you feel happy? </li>
+                <li value = "negative"> What is making you feel sad? </li>
+                <li value="verynegative">I'm so sorry to hear that.</li>
+                <li value= "neutral"> I'm not familiar with that emotion. Can you describe it? </li>
+
+           </condition>
+          <oob>
+                <robot>
+                </robot>
+          </oob>
+      </template>
+   </category>
+</aiml>

@@ -12,7 +12,7 @@ majordomo:
   bot: bot
   ip: "tcp://localhost"
   port: 5555
-  service_name: "echo"
+  service_name: "programr"
   verbose: false
 
 socket:
