@@ -16,6 +16,12 @@ class Client():
         self._url = str(configuration.ip) + ":" + str(configuration.port)
 
     def get_sentence_sentiment(self, sentence):
+        '''
+        return values are these
+        "Very negative" = 0 "Negative" = 1 "Neutral" = 2 "Positive" = 3 "Very positive" = 4
+        :param sentence:
+        :return:
+        '''
         try:
 
             stanford_corenlp = StanfordCoreNLP(self._url)
@@ -29,8 +35,9 @@ class Client():
             print(ex)
             return None
 
-
-        return result["sentences"][0]["sentiment"].lower(), result["sentences"][0]["sentimentValue"].lower()
+        sentiment = result["sentences"][0]["sentiment"].lower()
+        sentiment_distribution = result["sentences"][0]["sentimentDistribution"]
+        return sentiment, sentiment_distribution
 
 
     def get_sentences_sentiments(self, sentences):
