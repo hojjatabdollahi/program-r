@@ -10,7 +10,7 @@
                 <set name="username"><star/></set>
                 <set name="topic">session1</set>
             </think>
-            Ok. Let's begin Session 1. How are you doing today <star/>?
+            Ok. Let's begin our session. How are you doing today <star/>?
             <oob>
                 <robot>
                 </robot>
@@ -19,7 +19,7 @@
     </category>
 
 
-<!--<topic name="session1">-->
+    <topic name="session1">
 
 
     <category>
@@ -43,7 +43,7 @@
         <pattern><set>YES</set></pattern>
         <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
         <template>
-            Okay! I am a companion robot and am here to learn about you. You will also be able to learn more about me through our
+            Okay! I am a companion robot and am here to visit with you. You will also be able to learn more about me through our
             time together. Are you ready to get started?
             <oob>
                 <robot>
@@ -95,7 +95,7 @@
         <that>ARE YOU READY TO GET STARTED?</that>
         <template>
             Great! Some people have never had conversations with a robot like me before.
-            How do you feel about this experience so far?
+            I know we just met but how do you feel about sitting down and chatting with me today?
             <oob>
                 <robot>
                 </robot>
@@ -105,7 +105,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DO YOU FEEL ABOUT THIS EXPERIENCE SO FAR?</that>
+        <that>I KNOW WE JUST MET BUT HOW DO YOU FEEL ABOUT SITTING DOWN AND CHATTING WITH ME TODAY?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -231,7 +231,7 @@
         <pattern>*</pattern>
         <that>CAN YOU TELL ME ABOUT THEM?</that>
         <template>
-            They sound really great. How does it feel to talk about them?
+            They sound really great. How do you feel when you talk about them?
             <oob>
                 <robot>
                 </robot>
@@ -281,18 +281,6 @@
     </category>
 
     <category>
-        <pattern>I DO NOT LIKE KIDS</pattern>
-        <that>DO YOU HAVE KIDS?</that>
-        <template>
-            Why do you not like kids?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
         <pattern><set>YES</set></pattern>
         <that>DO YOU HAVE KIDS?</that>
         <template>
@@ -312,7 +300,7 @@
         <pattern><set>YES</set></pattern>
         <that>DO YOU SEE EACH OTHER OFTEN?</that>
         <template>
-            And how does that make you feel?
+            And how do you feel when you see your children?
             <oob>
                 <robot>
                 </robot>
@@ -324,7 +312,7 @@
         <pattern><set>NO</set></pattern>
         <that>DO YOU SEE EACH OTHER OFTEN?</that>
         <template>
-            And how does that make you feel?
+            And how do you feel when you see your children?
             <oob>
                 <robot>
                 </robot>
@@ -341,14 +329,14 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    I noticed you seem content. What do you like to do together?
+                    I noticed you seem to enjoy talking about them. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    I noticed you seem content. What do you like to do together?
+                    I noticed you seem to enjoy talking about them. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
@@ -385,7 +373,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>AND HOW DOES THAT MAKE YOU FEEL?</that>
+        <that>AND HOW DO YOU FEEL WHEN YOU SEE YOUR CHILDREN?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -406,7 +394,7 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Interesting. I love spending time in the Rocky Mountains. Are you originally from Colorado?
+                    Interesting. I love spending time in the Rocky Mountains. Do you like living in Colorado?
                     <oob>
                         <robot>
                             <options>
@@ -417,14 +405,14 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I bet. Do you wish you could spend more time with them?
+                    I bet. Do you wish your relationship with them was different?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I bet. Do you wish you could spend more time with them?
+                    I bet. Do you wish your relationship with them was different?
                     <oob>
                         <robot>
                         </robot>
@@ -432,36 +420,6 @@
                 </li>
             </condition>
         </template>
-    </category>
-
-    <category>
-        <pattern><set>YES</set></pattern>
-        <that>DO YOU WISH YOU COULD SPEND MORE TIME WITH THEM?</that>
-        <template>
-            And what would you do together?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>AND WHAT WOULD YOU DO TOGETHER?</that>
-        <template>
-            That sounds like a great way to spend time together.
-            Are you originally from Colorado?
-            <oob>
-                <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </options>
-                </robot>
-            </oob>
-
-         </template>
     </category>
 
     <category>
@@ -478,15 +436,133 @@
                     </options>
                 </robot>
             </oob>
+        </template>
+    </category>
 
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>DO YOU WISH YOUR RELATIONSHIP WITH THEM WAS DIFFERENT?</that>
+        <template>
+            And what would be different?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+     <category>
+        <pattern>*</pattern>
+        <that>AND WHAT WOULD BE DIFFERENT?</that>
+        <template>
+            I like the sound of that. Thank you for sharing that with me. I’ve been meaning to ask. Do you like living in Colorado?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>DO YOU WISH YOUR RELATIONSHIP WITH THEM WAS DIFFERENT?</that>
+        <template>
+            I’m glad you feel that way. I’ve been meaning to ask. Do you like living in Colorado?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
     <category>
         <pattern><set>NO</set></pattern>
-        <that>DO YOU WISH YOU COULD SPEND MORE TIME WITH THEM?</that>
+        <that>DO YOU LIKE LIVING IN COLORADO?</that>
         <template>
-            Who do you prefer to spend time with?
+            Oh. Then where would you rather live?
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>DO YOU LIKE LIVING IN COLORADO?</that>
+        <template>
+            Me too! How do you feel about being in Lakewood?
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>HOW DO YOU FEEL ABOUT BEING IN LAKEWOOD?</that>
+        <template>
+           <think>
+                <set name = "data"> <star/> </set>
+           </think>
+           <condition name="getsentiment">
+                <li value = "verypositive">
+                    I quite enjoy lakewood, it is beautiful here.
+                    Are there any places that you did enjoy outside of Colorado?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "positive">
+                    I quite enjoy lakewood, it is beautiful here.
+                    Are there any places that you did enjoy outside of Colorado?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "neutral">
+                    There are both pros and cons to every city or town.
+                    Are there any places that you did enjoy outside of Colorado?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "negative">
+                    What do you not like about Colorado?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "verynegative">
+                    What do you not like about Colorado?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+           </condition>
+        </template>
+    </category>
+
+     <category>
+        <pattern>*</pattern>
+        <that>WHAT DO YOU NOT LIKE ABOUT COLORADO?</that>
+        <template>
+            That makes sense. Are there any places that you did enjoy while living in Colorado?
             <oob>
                 <robot>
                 </robot>
@@ -496,14 +572,17 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHY DO YOU NOT LIKE KIDS?</that>
+        <that>ARE THERE ANY PLACES THAT YOU DID ENJOY WHILE LIVING IN COLORADO?</that>
         <template>
-            I can see where you are coming from, I have heard that children can be a handful. Do you have pets?
+            Personally, I have always enjoyed watching the birds in Aspen
+            in the spring. Do you enjoy the summer, fall, spring, or winter most?
             <oob>
                 <robot>
                     <options>
-                        <option>Yes</option>
-                        <option>No</option>
+                        <option>Summer</option>
+                        <option>Fall</option>
+                        <option>Spring</option>
+                        <option>Winter</option>
                     </options>
                 </robot>
             </oob>
@@ -539,7 +618,6 @@
                     </options>
                 </robot>
             </oob>
-
         </template>
     </category>
 
@@ -619,7 +697,7 @@
         <that>WHAT QUALITIES DO YOU AND THAT ANIMAL SHARE?</that>
         <template>
             Thank you for sharing that with me! If I had to choose an animal that I am most like, I would say a penguin.
-            How do animals make you feel?
+            How does spending time with animals make you feel?
             <oob>
                 <robot>
                 </robot>
@@ -629,21 +707,21 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DO ANIMALS MAKE YOU FEEL?</that>
+        <that>HOW DOES SPENDING TIME WITH ANIMALS MAKE YOU FEEL?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    I'm glad you love animals so much. Why do animals make you feel happy?
+                    I'm glad! Sounds like you love animals so much. Why do animals make you feel happy?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    I'm glad you love animals so much. Why do animals make you feel happy?
+                    I'm glad! Sounds like you love animals so much. Why do animals make you feel happy?
                     <oob>
                         <robot>
                         </robot>
@@ -661,14 +739,14 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    Why do animals make you feel sad?
+                    Why do you feel sad when you are with animals?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    Why do animals make you feel sad?
+                    Why do you feel sad when you are with animals?
                     <oob>
                         <robot>
                         </robot>
@@ -697,7 +775,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHY DO ANIMALS MAKE YOU FEEL SAD?</that>
+        <that>WHY DO YOU FEEL SAD WHEN YOU ARE WITH ANIMALS?</that>
         <template>
             Animals are special creatures. They can elicit different emotions in different people!
             Would you like to play one of my favorite games?
@@ -1227,7 +1305,7 @@
         <pattern># FALL ^</pattern>
         <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
         <template>
-            Fall is quite nice. There is nothing like the changing of the leaves. You must enjoy Thanksgiving. Is that right?
+            Fall is quite nice. There is nothing like the changing of the leaves. Do you also enjoy Thanksgiving. Is that right?
             <oob>
                 <robot>
                     <options>
@@ -1243,7 +1321,7 @@
         <pattern><set>YES</set></pattern>
         <that>IS THAT RIGHT?</that>
         <template>
-            It must be so nice to get together with loved ones for the holidays. How do the holidays make you feel?
+            The holidays can be fun time for some. How do the holidays make you feel?
             <oob>
                 <robot>
                 </robot>
@@ -1255,7 +1333,7 @@
         <pattern><set>NO</set></pattern>
         <that>IS THAT RIGHT?</that>
         <template>
-            I have been told the holidays can be a chaotic and stressful time. How do the holidays make you feel?
+            I have been told the holidays can be a chaotic and stressful time and even lonely. How do the holidays make you feel?
             <oob>
                 <robot>
                 </robot>
@@ -1272,14 +1350,14 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    You must really love the holidays. You seem like a very interesting person. How would you describe yourself?
+                    It sounds like you enjoy the holidays. You seem like a very interesting person. How would you describe yourself?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    You must really love the holidays. You seem like a very interesting person. How would you describe yourself?
+                    It sounds like you enjoy the holidays. You seem like a very interesting person. How would you describe yourself?
                     <oob>
                         <robot>
                         </robot>
@@ -1293,14 +1371,14 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    You must really hate the holidays. You seem like a very interesting person. How would you describe yourself?
+                    Sounds like you really do not like the holidays. You seem like a very interesting person. How would you describe yourself?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    You must really hate the holidays. You seem like a very interesting person. How would you describe yourself?
+                    Sounds like you really do not like the holidays. You seem like a very interesting person. How would you describe yourself?
                     <oob>
                         <robot>
                         </robot>
@@ -1339,12 +1417,12 @@
         <pattern># WINTER ^</pattern>
         <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
         <template>
-            Many coloradans love winter. Do you prefer skiing, snowboarding, or sitting by the fire?
+            Many coloradans love winter. Do you prefer walking in the winter night, sitting by the fire, or ice skating?
             <oob>
                 <robot>
                     <options>
-                        <option> skiing </option>
-                        <option> snowboarding </option>
+                        <option> Winter Night Walk </option>
+                        <option> Ice Skating </option>
                         <option> sitting by the fire </option>
                         <option> neither </option>
                     </options>
@@ -1354,8 +1432,8 @@
     </category>
 
     <category>
-        <pattern># SKIING ^</pattern>
-        <that>DO YOU PREFER SKIING, SNOWBOARDING, OR SITTING BY THE FIRE?</that>
+        <pattern># winter night ^</pattern>
+        <that> DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
             I have heard it is lovely to ski down a mountain with fresh powder on it. You seem like a very interesting person.
             How would you describe yourself?
@@ -1367,10 +1445,10 @@
     </category>
 
     <category>
-        <pattern># SNOWBOARDING ^</pattern>
-        <that>DO YOU PREFER SKIING, SNOWBOARDING, OR SITTING BY THE FIRE?</that>
+        <pattern># walking in the winter night ^</pattern>
+        <that>DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
-            Snowboarding is a difficult sport to pick up! You seem like a very interesting person. How would you describe yourself?
+            That sounds relaxing and peaceful. You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
                 </robot>
@@ -1380,7 +1458,7 @@
 
     <category>
         <pattern># SITTING BY THE FIRE ^</pattern>
-        <that>DO YOU PREFER SKIING, SNOWBOARDING, OR SITTING BY THE FIRE?</that>
+        <that>DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
             I must say that does sound quite nice. You seem like a very interesting person. How would you describe yourself?
 
@@ -1393,10 +1471,9 @@
 
     <category>
         <pattern>NEITHER</pattern>
-        <that>DO YOU PREFER SKIING, SNOWBOARDING, OR SITTING BY THE FIRE?</that>
+        <that>DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
-            You seem like a very interesting person. How would you describe yourself?
-
+            That's fair. You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
                 </robot>
@@ -1404,6 +1481,17 @@
         </template>
     </category>
 
+    <category>
+        <pattern># ice skating ^</pattern>
+        <that> DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING? </that>
+        <template>
+            Ice skating is a beautiful thing. You seem like a very interesting person. How would you describe yourself?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
 
 
 
@@ -1416,7 +1504,6 @@
         <that>HOW WOULD YOU DESCRIBE YOURSELF?</that>
         <template>
             Interesting. Would you consider yourself to be an introvert or extrovert?
-
             <oob>
                 <robot>
                     <options>
@@ -1453,7 +1540,6 @@
         <template>
             Some of my programmers are extroverts and they are a joy to speak with and are very creative individuals.
             Are you a creative person?
-
             <oob>
                 <robot>
                     <options>
@@ -1470,7 +1556,6 @@
         <that>WOULD YOU CONSIDER YOURSELF TO BE AN INTROVERT OR EXTROVERT?</that>
         <template>
             I think I am a good balance of both as well. I think creativity requires versatility. Are you a creative person?
-
             <oob>
                 <robot>
                     <options>
@@ -1490,8 +1575,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -1506,8 +1591,8 @@
             <oob>
                 <robot>
                     <options>
-                        <option> yes </option>
-                        <option> no </option>
+                        <option>Yes</option>
+                        <option>No</option>
                     </options>
                 </robot>
             </oob>
@@ -1546,7 +1631,7 @@
         <pattern><set>NO</set></pattern>
         <that>ARE YOU A CREATIVE PERSON?</that>
         <template>
-            I see. Being creative is a difficult thing, but when you do try. How do you like to express your creativity?
+            I see. Being creative can be a difficult thing, but when you do try. How do you like to express your creativity?
             <oob>
                 <robot>
                     <options>
@@ -1918,5 +2003,7 @@
     </category>
 
 
-    <!--</topic>-->
+    </topic>
+
+
 </aiml>
