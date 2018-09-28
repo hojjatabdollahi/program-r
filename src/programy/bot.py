@@ -283,7 +283,7 @@ class Bot(object):
         try:
             import numpy as np
 
-            sen = ["Sorry!. ",
+            sen = ["Sorry, I had trouble processing that. ",
                    "I couldn't hear you. ",
                    "I think I have to repeat the question. ",
                    "I didn't understand you, Let me repeat the question. ",

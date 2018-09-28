@@ -40,7 +40,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
         <template>
             Okay! I am a companion robot and am here to visit with you. You will also be able to learn more about me through our
@@ -58,7 +58,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
         <template>
             No worries! We will have plenty of time to learn about each other. Are you ready to get started?
@@ -74,7 +74,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU READY TO GET STARTED?</that>
         <template>
             Please talk to my assistant if you are running into any troubles.
@@ -91,7 +91,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU READY TO GET STARTED?</that>
         <template>
             Great! Some people have never had conversations with a robot like me before.
@@ -140,15 +140,14 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I can see that you seem sad! What about this is making you feel that way?
+                    I can see where you are coming from. What about this is making you feel that way?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
-
                 </li>
                 <li value = "verynegative">
-                    I can see that you seem sad! What about this is making you feel that way?
+                    I can see where you are coming from. What about this is making you feel that way?
                     <oob>
                         <robot>
                         </robot>
@@ -216,7 +215,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU HAVE CHILDREN IN YOUR LIFE THAT YOU CARE ABOUT?</that>
         <template>
             Can you tell me about them?
@@ -281,7 +280,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU HAVE KIDS?</that>
         <template>
             Oh how nice. Do you see each other often?
@@ -297,7 +296,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU SEE EACH OTHER OFTEN?</that>
         <template>
             And how do you feel when you see your children?
@@ -309,7 +308,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU SEE EACH OTHER OFTEN?</that>
         <template>
             And how do you feel when you see your children?
@@ -440,7 +439,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU WISH YOUR RELATIONSHIP WITH THEM WAS DIFFERENT?</that>
         <template>
             And what would be different?
@@ -465,7 +464,7 @@
 
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU WISH YOUR RELATIONSHIP WITH THEM WAS DIFFERENT?</that>
         <template>
             I’m glad you feel that way. I’ve been meaning to ask. Do you like living in Colorado?
@@ -477,7 +476,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU LIKE LIVING IN COLORADO?</that>
         <template>
             Oh. Then where would you rather live?
@@ -493,7 +492,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU LIKE LIVING IN COLORADO?</that>
         <template>
             Me too! How do you feel about being in Lakewood?
@@ -590,7 +589,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU HAVE KIDS?</that>
         <template>
             Do you have pets?
@@ -606,7 +605,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU HAVE CHILDREN IN YOUR LIFE THAT YOU CARE ABOUT?</that>
         <template>
             Okay. Do you have pets?
@@ -633,7 +632,7 @@
 
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU HAVE PETS?</that>
         <template>
             I love animals! What type of pet do you have?
@@ -645,10 +644,10 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU HAVE PETS?</that>
         <template>
-            I love animals! What animal would you say you have the most in common with?
+            I see. What animal would you say you have the most in common with?
             <oob>
                 <robot>
                 </robot>
@@ -797,7 +796,7 @@
     <!-- WOULD YOU RATHER -->
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO PLAY ONE OF MY FAVORITE GAMES?</that>
         <template>
             Ok. Are you originally from Colorado?
@@ -816,7 +815,7 @@
 
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO PLAY ONE OF MY FAVORITE GAMES?</that>
         <template>
             It is called Would You Rather. Have you ever played?
@@ -832,7 +831,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER PLAYED?</that>
         <template>
             It is one of my favorite games. Are you ready?
@@ -848,7 +847,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER PLAYED?</that>
         <template>
             Here's how it works. I will give you two options and you tell me which one you would rather. Are you ready?
@@ -864,7 +863,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU READY?</that>
         <template>
             Would you rather be a dog or a cat?
@@ -965,7 +964,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
             Oh. Then where from?
@@ -1015,10 +1014,10 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            Me too! Aren’t we lucky. How do you feel about being from Colorado?
+            Me too! I love Colorado, although I'm usually stuck in a lab. How do you feel about being from Colorado?
             <oob>
                 <robot>
                     <options>
@@ -1130,7 +1129,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DID YOU ENJOY BEING FROM THERE?</that>
         <template>
             I bet. I’d like to visit someday. When you think back to growing up there how do you feel?
@@ -1142,7 +1141,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DID YOU ENJOY BEING FROM THERE?</that>
         <template>
             That’s too bad. How long have you lived here?
@@ -1318,7 +1317,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>IS THAT RIGHT?</that>
         <template>
             The holidays can be fun time for some. How do the holidays make you feel?
@@ -1330,7 +1329,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>IS THAT RIGHT?</that>
         <template>
             I have been told the holidays can be a chaotic and stressful time and even lonely. How do the holidays make you feel?
@@ -1608,7 +1607,7 @@
 
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU A CREATIVE PERSON?</that>
         <template>
             How do you like to express your creativity?
@@ -1628,7 +1627,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU A CREATIVE PERSON?</that>
         <template>
             I see. Being creative can be a difficult thing, but when you do try. How do you like to express your creativity?
@@ -1890,7 +1889,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU HAVE A PIECE YOU COULD SHOW ME?</that>
         <template>
             Oh great! Just say ready when you are ready
@@ -1922,7 +1921,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU HAVE A PIECE YOU COULD SHOW ME?</that>
         <template>
             That’s alright. I am always so impressed by the joy and uniqueness that I find in the world. I am a little bit creative.
@@ -1941,7 +1940,7 @@
 
     <!-- DOES CONVERSATION END AFTER THIS? -->
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE HOW?</that>
         <template>
             We have talked about quite a bit today. Why don't we stop here today. Does that sound good to you?
@@ -1962,7 +1961,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE HOW?</that>
         <template>
             Alright. We have talked about quite a bit today. Why don't we stop here today. Does that sound good to you?
@@ -1979,7 +1978,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
         <template>
             Okay. Well it has been very nice speaking with you. Bye for now.
@@ -1991,7 +1990,7 @@
     </category>
 
     <category>
-         <pattern><set>NO</set></pattern>
+         <pattern># <set>NO</set> ^</pattern>
          <that>DOES THAT SOUND GOOD TO YOU?</that>
          <template>
             I am so glad that you would like to continue but I am tired so I must bid you goodbye for now my friend. Ta Ta
