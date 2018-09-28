@@ -12,7 +12,7 @@ majordomo:
   bot: bot
   ip: "tcp://localhost"
   port: 5555
-  service_name: "echo"
+  service_name: "programr"
   verbose: false
 
 socket:
@@ -49,8 +49,8 @@ bot:
       max_histories: 100
       initial_topic: "*"
       restore_last_topic: false
-      type: file
-      config_name: file_config
+      type: mongodb
+      config_name: database_config
       empty_on_start: false
 
     #this is for file configuration

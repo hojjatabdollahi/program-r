@@ -46,6 +46,12 @@ You should see the "linking successful" message.
         Add src path to PYTHONPATH
 
 
+## Running
+
+Before running in windows you need to make sure that you have a tmp folder in the root of dive C:. This will keep track of
+log files. In linux the folder is /tmp and is already created so you don't need any configuration.
+
+
 ## Introduction
 
 Program Y is an AIML interpreter written in Python. It includes an entire Python 3 framework for building you own chat bots using

@@ -156,7 +156,7 @@ class MajorDomoBotClient(EventBotClient):
         client_context = None
 
         while True:
-            print(response)
+            print(str(response))
             request = majordomo_worker.receive(response)
             if request is None:
                 YLogger.debug(self, "worker was interrupted")
@@ -173,8 +173,12 @@ class MajorDomoBotClient(EventBotClient):
             elif type(request) is SessionUserRequest:
                 YLogger.info(self, "session user request")
 
+                session_number = request.session_number
+                username = request.username
                 question = self.initial_question(request, request.username)
                 print("question", question)
+
+
 
                 answer = self.process_question_with_options(client_context, question)
 
@@ -187,6 +191,11 @@ class MajorDomoBotClient(EventBotClient):
                     if client_context is not None:
                         print(request.question)
                         #todo here I have to get the FER as a sentiment value
+
+                        userid = client_context.userid
+                        client_context.bot.conversations[userid].set_property("session_number", session_number)
+                        client_context.bot.conversations[userid].set_property("username", username)
+
 
                         #answer = self.process_question_service(client_context, request.question)
                         answer = self.process_question_with_options(client_context, request.question)

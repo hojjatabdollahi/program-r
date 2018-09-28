@@ -42,17 +42,22 @@ class EventBotClient(BotClient):
                 finally:
                     self._first_time = False
 
-            # client_context.bot.conversations["Console"]._properties = {"session_number": 1, "username": "rohola"}
+            session_number = 1
+            username = "test_user"
 
-            client_context.bot.facial_expression_recognition.append(-0.1)
+            userid = client_context.userid
+            client_context.bot.conversations[userid].set_property("session_number", session_number)
+            client_context.bot.conversations[userid].set_property("username", username)
+
+            #client_context.bot.facial_expression_recognition.append(-0.1)
             self._running = self.wait_and_answer(client_context)
 
-            #bot.save_conversation(client_context)
+            bot.save_conversation(client_context)
 
 
 
     def initial_question(self, request, username):
-        question = "session"+str(request.session_number) + " " + username
+        question = "START SESSION "+str(request.session_number) + " " + username
         return question
 
 

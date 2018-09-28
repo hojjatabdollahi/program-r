@@ -7,7 +7,8 @@ class GetSentiment(DynamicVariable):
         DynamicVariable.__init__(self, config)
 
     def get_value(self, client_context, value=None):
-        variables = client_context.bot.conversations["Console"].properties
+        userid = client_context.userid
+        variables = client_context.bot.conversations[userid].properties
         text = variables["data"]
         try:
             sentiment, sentiment_distribution = client_context.bot.brain.corenlp.get_sentence_sentiment(text)
@@ -15,22 +16,24 @@ class GetSentiment(DynamicVariable):
             YLogger.exception(self, "sentiment analysis module broke", exception)
             raise exception
 
-        last_fer_value = client_context.bot.facial_expression_recognition.last_fer_value
+        if client_context.bot.facial_expression_recognition is not None:
+            if len(client_context.bot.facial_expression_recognition.values):
+                last_fer_value = client_context.bot.facial_expression_recognition.last_fer_value
 
-        #the logic of mixing fer and sentiment goes here
-        alpha = 0.1
-        threshold1 = 0.2
-        threshold2 = -0.2
-        sentiment_value = self.expected_sentiment_value(sentiment, sentiment_distribution)
+                #the logic of mixing fer and sentiment goes here
+                alpha = 0.1
+                threshold1 = 0.2
+                threshold2 = -0.2
+                sentiment_value = self.expected_sentiment_value(sentiment, sentiment_distribution)
 
-        final_sentiment_value = alpha * last_fer_value + (1-alpha)*sentiment_value
-        print(final_sentiment_value)
-        if final_sentiment_value > threshold1:
-            sentiment = "positive"
-        elif final_sentiment_value < threshold1 and final_sentiment_value > threshold2:
-            sentiment = "neutral"
-        else:
-            sentiment = "negative"
+                final_sentiment_value = alpha * last_fer_value + (1-alpha)*sentiment_value
+                print(final_sentiment_value)
+                if final_sentiment_value > threshold1:
+                    sentiment = "positive"
+                elif final_sentiment_value < threshold1 and final_sentiment_value > threshold2:
+                    sentiment = "neutral"
+                else:
+                    sentiment = "negative"
 
 
         print(sentiment)
