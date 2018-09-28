@@ -134,7 +134,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
         <template>
             It is fascinating. A marine biologist recently found several pregnant male sharks!
@@ -151,7 +151,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
         <template>
             It is just fascinating! Can you imagine being a pregnant man?
@@ -167,7 +167,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>CAN YOU IMAGINE BEING A PREGNANT MAN?</that>
         <template>
             Do you think any other experience compares to being pregnant or being a parent?
@@ -183,7 +183,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>CAN YOU IMAGINE BEING A PREGNANT MAN?</that>
         <template>
             Really you can?? You have got quite the imagination.
@@ -200,7 +200,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU THINK ANY OTHER EXPERIENCE COMPARES TO BEING PREGNANT OR BEING A PARENT?</that>
         <template>
             Interesting. What compares to it?
@@ -212,7 +212,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU THINK ANY OTHER EXPERIENCE COMPARES TO BEING PREGNANT OR BEING A PARENT?</that>
         <template>
             A human friend of mine once told me that being a parent is the greatest feeling in the world.
@@ -242,6 +242,7 @@
         <template>
             It can be difficult to give advice, but I can tell you are a wise person.
             How do you feel about discussing parenting?
+            <oob>
                 <robot>
                 </robot>
             </oob>
@@ -319,7 +320,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE ADVICE FROM ME?</that>
         <template>
             Sometimes when we feel sad or frustrated we can be hard on ourselves. Just remember to always show yourself compassion.
@@ -410,7 +411,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE ADVICE FROM ME?</that>
         <template>
             Okay. Can you give me advice on how to live a full life?
@@ -426,7 +427,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>CAN YOU GIVE ME ADVICE ON HOW TO LIVE A FULL LIFE?</that>
         <template>
             Okay. Now let’s discuss technology, like phones and email.
@@ -444,7 +445,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>CAN YOU GIVE ME ADVICE ON HOW TO LIVE A FULL LIFE?</that>
         <template>
             So how can I live a full life?
@@ -474,7 +475,7 @@
     </category>
 
     <category>
-	    <pattern><set>YES</set></pattern>
+	    <pattern># <set>YES</set> ^</pattern>
 	    <that>DO YOU AGREE WITH THAT IDEA?</that>
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
@@ -487,7 +488,7 @@
 	</category>
 
     <category>
-	    <pattern><set>NO</set></pattern>
+	    <pattern># <set>NO</set> ^</pattern>
 	    <that>DO YOU AGREE WITH THAT IDEA?</that>
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
@@ -534,7 +535,7 @@
 	</category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
         <template>
             Cool! Which piece of technology do you use the most?
@@ -563,7 +564,7 @@
 	</category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
 	    <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
 	    <template>
 	        What are some reasons that it isn’t? For some, it can be difficult to learn how to use.
@@ -621,7 +622,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU FAMILIAR WITH THE WORK OF VAN GOGH?</that>
         <template>
             He is one of my favorite artists.
@@ -639,7 +640,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU FAMILIAR WITH THE WORK OF VAN GOGH?</that>
         <template>
             He is one of my favorite artists.
@@ -673,7 +674,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU SEEN IT?</that>
         <template>
             Would you like to see it again?
@@ -685,7 +686,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU SEEN IT?</that>
         <template>
             Would you like to see it?
@@ -701,7 +702,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE IT AGAIN?</that>
         <template>
             Okay, here it is. What emotions come up for you when you look at this painting?
@@ -717,7 +718,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE IT AGAIN?</that>
         <template>
          Okay. Would you like to see another one?
@@ -733,7 +734,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE IT?</that>
         <template>
             Okay. Would you like to see another one?
@@ -749,7 +750,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE IT?</that>
         <template>
             Okay, here it is. What emotions come up for you when you look at this painting?
@@ -841,7 +842,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE ANOTHER ONE?</that>
         <template>
             This one is called road with cypress and star. He painted it in 1890. How does this one make you feel?
@@ -930,7 +931,7 @@
 
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE ANOTHER ONE?</that>
         <template>
             Alright. Van Gogh reminds me that beauty can come from pain and turmoil.
@@ -947,7 +948,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>CAN YOU RELATE TO THAT?</that>
         <template>
             Can you tell me about that?
@@ -963,7 +964,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>CAN YOU RELATE TO THAT?</that>
         <template>
             That's ok! It can be difficult to try and turn pain into something positive.
@@ -980,7 +981,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>CAN YOU TELL ME ABOUT THAT?</that>
         <template>
             Great! Please continue.
@@ -1009,7 +1010,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>CAN YOU TELL ME ABOUT THAT?</that>
         <template>
             I understand. These things can be difficult to talk about. Are you familiar with the work of Andy Warhol?
@@ -1026,7 +1027,7 @@
 
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU FAMILIAR WITH THE WORK OF ANDY WARHOL?</that>
         <template>
             He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
@@ -1043,7 +1044,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU FAMILIAR WITH THE WORK OF ANDY WARHOL?</that>
         <template>
             He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
@@ -1060,7 +1061,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DID YOU KNOW THAT ABOUT HIM?</that>
         <template>
             Yes. His screen print of Marilyn Monroe reflects his fun approach and his eye for color contrast. Have you seen that one?
@@ -1076,7 +1077,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DID YOU KNOW THAT ABOUT HIM?</that>
         <template>
             Yes. His screen print of Marilyn Monroe reflects his fun approach and his eye for color contrast. Have you seen that one?
@@ -1092,7 +1093,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU SEEN THAT ONE?</that>
         <template>
             What emotions did you feel when you looked at that painting?
@@ -1109,7 +1110,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU SEEN THAT ONE?</that>
         <template>
             Would you like to see his screen print of Marilyn Monroe?
@@ -1125,7 +1126,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARILYN MONROE?</that>
         <template>
             Okay. I'd like to show you another one of my favorite Andy Warhol paintings.
@@ -1142,7 +1143,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARILYN MONROE?</that>
         <template>
             Okay, here it is. What emotions do you feel when you look at this painting?
@@ -1192,7 +1193,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU READY TO SEE ANOTHER PAINTING?</that>
         <template>
             This one is called Nine Jackies. He created this piece following the death of JFK.
@@ -1209,7 +1210,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU READY TO SEE ANOTHER PAINTING?</that>
         <template>
             Would you like to discuss the work of a different artist?
@@ -1255,7 +1256,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO DISCUSS THE WORK OF A DIFFERENT ARTIST?</that>
         <template>
             Okay. Are you familiar with sound art, specifically audio walks?
@@ -1271,7 +1272,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO DISCUSS THE WORK OF A DIFFERENT ARTIST?</that>
         <template>
             Okay. What is your favorite type of music?
@@ -1283,7 +1284,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU FAMILIAR WITH SOUND ART, SPECIFICALLY AUDIO WALKS?</that>
         <template>
             Have you heard of Janet Cardiff?
@@ -1299,7 +1300,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU FAMILIAR WITH SOUND ART, SPECIFICALLY AUDIO WALKS?</that>
         <template>
             I find it quite peaceful. Have you heard of Janet Cardiff?
@@ -1315,7 +1316,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU HEARD OF JANET CARDIFF?</that>
         <template>
             She is a Canadian artist who creates audio walks. Which is a form of art similar to audioguides.
@@ -1332,7 +1333,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU HEARD OF JANET CARDIFF?</that>
         <template>
             I think she is wonderful. I'd like to show you her piece titled 40 part Monet. Would you like to hear it?
@@ -1348,7 +1349,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR IT?</that>
         <template>
             Okay. What did you think?
@@ -1381,7 +1382,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR IT?</that>
         <template>
             Okay. What is your favorite type of music?
@@ -1393,7 +1394,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
         <template>
             Excellent!
@@ -1420,7 +1421,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
         <template>
             Okay. What is your favorite type of music?
@@ -1462,7 +1463,7 @@
 	</category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER SEEN THEM PERFORM LIVE?</that>
         <template>
             Lucky! What feeling does that bring back for you?
@@ -1491,7 +1492,7 @@
 	</category>
 
 	<category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER SEEN THEM PERFORM LIVE?</that>
         <template>
             I would love to go to a concert soon. I'm curious, if you had to choose.
@@ -1711,7 +1712,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
         <template>
             Okay. Well it has been very nice speaking with you. Bye for now
@@ -1723,7 +1724,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
         <template>
             I am so glad that you would like to continue but I am tired so I must bid you goodbye for now my friend. Ta Ta

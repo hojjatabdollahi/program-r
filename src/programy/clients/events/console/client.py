@@ -1,5 +1,4 @@
 from programy.utils.logging.ylogger import YLogger
-
 from programy.clients.events.client import EventBotClient
 from programy.clients.events.console.config import ConsoleConfiguration
 
