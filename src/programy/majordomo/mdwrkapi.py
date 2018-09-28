@@ -223,8 +223,11 @@ class MajorDomoWorker(object):
                 user_request = UserRequest("user", username)
                 return user_request
 
-            if request[0]=="start":
-                session_user_request = SessionUserRequest("session_user_request", request[1:])
+        if len(request)==4:
+            if request[0] == "session":
+                session_number = request[1]
+                username = request[3]
+                session_user_request = SessionUserRequest("session_user_request", session_number, username)
                 return session_user_request
 
 

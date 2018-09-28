@@ -44,7 +44,7 @@ class EventBotClient(BotClient):
 
             # client_context.bot.conversations["Console"]._properties = {"session_number": 1, "username": "rohola"}
 
-            client_context.bot.facial_expression_recognition.append(0.5)
+            client_context.bot.facial_expression_recognition.append(-0.1)
             self._running = self.wait_and_answer(client_context)
 
             #bot.save_conversation(client_context)
