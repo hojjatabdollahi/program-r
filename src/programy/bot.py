@@ -8,7 +8,7 @@ from programy.dialog.dialog import Conversation, Question, Answer, Sentence
 from programy.dialog.storage.factory import ConversationStorageFactory
 from programy.config.bot.bot import BotConfiguration
 from programy.utils.classes.loader import ClassLoader
-
+import numpy as np
 
 class BrainSelector(object):
 
@@ -78,6 +78,8 @@ class Bot(object):
 
         self._spell_checker = None
         self.initiate_spellchecker()
+
+        self._rephase_clauses = []
 
         self._conversations = {}
         self._conversation_storage = None
@@ -177,6 +179,23 @@ class Bot(object):
         return BotConfiguration.DEFAULT_INITIAL_QUESTION
 
     @property
+    def rephrase_clauses(self):
+        if self.configuration is not None:
+            if len(self._rephase_clauses)==0:
+                rephrase_file = self.configuration.rephrase_clauses_file.replace("$BOT_ROOT", self.client.arguments.bot_root)
+                with open(rephrase_file) as file_reader:
+                    for line in file_reader:
+                        line = line.rstrip()
+                        if not line.endswith("."):
+                            line = line+"."
+                        self._rephase_clauses.append(line)
+                return self._rephase_clauses
+            else:
+                return self._rephase_clauses
+        else:
+            return [""]
+
+    @property
     def initial_question_srai(self):
         if self.configuration is not None:
             return self.configuration.initial_question_srai
@@ -272,39 +291,21 @@ class Bot(object):
         return None
 
     def get_default_response(self, client_context):
-        #TODO I comment out this part of the code
-        # if self.default_response_srai is not None:
-        #     sentence = Sentence(client_context.brain.nlp.tokenizer, self.default_response_srai)
-        #     default_response = client_context.brain.ask_question(client_context, sentence)
-        #     if default_response is None or not default_response:
-        #         default_response = self.default_response
-        #     return default_response
-        # else:
         try:
-            import numpy as np
-
-            sen = ["Sorry, I had trouble processing that. ",
-                   "I couldn't hear you. ",
-                   "I think I have to repeat the question. ",
-                   "I didn't understand you, Let me repeat the question. ",
-                   "I'm sorry I didn't quite understand you. Let me ask you again. ",
-                   "Let's please try to stay on topic, we have limited time together. ",
-                   ]
-
-
-            last_question = client_context.bot._conversations["Console"].questions[-2]
+            rephrased_clauses = client_context.bot.rephrase_clauses
+            last_question = client_context.bot._conversations[client_context.userid].questions[-2]
             last_sentence = last_question.sentences[-1]
 
-            r = np.random.randint(0, len(sen), 1)[0]
+            r = np.random.randint(0, len(rephrased_clauses), 1)[0]
 
-            results = [last_sentence.response.startswith(s) for s in sen]
+            results = [last_sentence.response.startswith(sentence) for sentence in rephrased_clauses]
 
             if any(results):
                 sentences = last_sentence.response.split(".")
-                response = " ".join(sentences[1:])
-                response = sen[r] + response
+                response = ". ".join(sentences[1:])
+                response = rephrased_clauses[r] + response
             else:
-                response = sen[r] + last_sentence.response
+                response = rephrased_clauses[r] + last_sentence.response
 
         except:
             response= self.default_response

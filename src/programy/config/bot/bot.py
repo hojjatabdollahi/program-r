@@ -22,6 +22,7 @@ class BotConfiguration(BaseContainerConfigurationData):
     DEFAULT_MAX_SEARCH_DEPTH = 100
     DEFAULT_MAX_SEARCH_TIMEOUT = -1
     DEFAULT_TAB_PARSE_OUTPUT = True
+    DEFAULT_REPHRASE_FILE = None
 
     def __init__(self, section_name="bot"):
 
@@ -43,6 +44,7 @@ class BotConfiguration(BaseContainerConfigurationData):
         self._max_search_depth = BotConfiguration.DEFAULT_MAX_SEARCH_DEPTH
         self._max_search_timeout = BotConfiguration.DEFAULT_MAX_SEARCH_TIMEOUT
         self._tab_parse_output = BotConfiguration.DEFAULT_TAB_PARSE_OUTPUT
+        self._rephrase_sentences_file = BotConfiguration.DEFAULT_REPHRASE_FILE
         self._spelling = BotSpellingConfiguration()
         self._conversations = BotConversationsConfiguration()
 
@@ -78,6 +80,8 @@ class BotConfiguration(BaseContainerConfigurationData):
                                                                          BotConfiguration.DEFAULT_MAX_SEARCH_TIMEOUT)
             self._tab_parse_output = configuration_file.get_bool_option(bot, "tab_parse_output",
                                                                         BotConfiguration.DEFAULT_TAB_PARSE_OUTPUT)
+            self._rephrase_sentences_file = configuration_file.get_option(bot, "rephrase_sentences_file",
+                                                                          BotConfiguration.DEFAULT_REPHRASE_FILE)
 
             self._spelling.load_config_section(configuration_file, bot, bot_root)
             self._conversations.load_config_section(configuration_file, bot, bot_root)
@@ -202,6 +206,10 @@ class BotConfiguration(BaseContainerConfigurationData):
     @property
     def tab_parse_output(self):
         return self._tab_parse_output
+
+    @property
+    def rephrase_clauses_file(self):
+        return self._rephrase_sentences_file
 
     @property
     def spelling(self):
