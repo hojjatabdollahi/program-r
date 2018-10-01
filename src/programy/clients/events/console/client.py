@@ -54,6 +54,7 @@ class ConsoleBotClient(EventBotClient):
     def process_question_answer_with_options(self, client_context):
         question = self.get_question(client_context)
         response = self.process_question_with_options(client_context, question)
+        response.encode("ascii")
         self.render_response(client_context, response)
 
 
