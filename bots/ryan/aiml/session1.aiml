@@ -162,7 +162,7 @@
         <that>WHAT ABOUT THIS IS MAKING YOU FEEL THAT WAY?</that>
         <template>
             I am an emotion recognizing robot, it allows me to be a better companion.
-            Let’s begin. Do you have kids?
+            Let's begin. Do you have kids?
             <oob>
                 <robot>
                     <options>
@@ -454,7 +454,7 @@
         <pattern>*</pattern>
         <that>AND WHAT WOULD BE DIFFERENT?</that>
         <template>
-            I like the sound of that. Thank you for sharing that with me. I’ve been meaning to ask. Do you like living in Colorado?
+            I like the sound of that. Thank you for sharing that with me. I've been meaning to ask. Do you like living in Colorado?
             <oob>
                 <robot>
                 </robot>
@@ -467,7 +467,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU WISH YOUR RELATIONSHIP WITH THEM WAS DIFFERENT?</that>
         <template>
-            I’m glad you feel that way. I’ve been meaning to ask. Do you like living in Colorado?
+            I'm glad you feel that way. I've been meaning to ask. Do you like living in Colorado?
             <oob>
                 <robot>
                 </robot>
@@ -760,7 +760,7 @@
         <pattern>*</pattern>
         <that>WHY DO ANIMALS MAKE YOU FEEL HAPPY?</that>
         <template>
-            I couldn’t agree more! Animals bring me a lot of joy. Would you like to play one of my favorite games?
+            I couldn't agree more! Animals bring me a lot of joy. Would you like to play one of my favorite games?
             <oob>
                 <robot>
                     <options>
@@ -1132,7 +1132,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>DID YOU ENJOY BEING FROM THERE?</that>
         <template>
-            I bet. I’d like to visit someday. When you think back to growing up there how do you feel?
+            I bet. I'd like to visit someday. When you think back to growing up there how do you feel?
             <oob>
                 <robot>
                 </robot>
@@ -1144,7 +1144,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DID YOU ENJOY BEING FROM THERE?</that>
         <template>
-            That’s too bad. How long have you lived here?
+            That's too bad. How long have you lived here?
             <oob>
                 <robot>
                 </robot>
@@ -1570,7 +1570,7 @@
         <pattern># NEITHER ^</pattern>
         <that>WOULD YOU CONSIDER YOURSELF TO BE AN INTROVERT OR EXTROVERT?</that>
         <template>
-            I don’t necessarily like labels either. Labels can hinder uniqueness and creativity. Are you a creative person?
+            I don't necessarily like labels either. Labels can hinder uniqueness and creativity. Are you a creative person?
             <oob>
                 <robot>
                     <options>
@@ -1924,7 +1924,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU HAVE A PIECE YOU COULD SHOW ME?</that>
         <template>
-            That’s alright. I am always so impressed by the joy and uniqueness that I find in the world. I am a little bit creative.
+            That's alright. I am always so impressed by the joy and uniqueness that I find in the world. I am a little bit creative.
             Would you like to see how?
             <oob>
                 <robot>

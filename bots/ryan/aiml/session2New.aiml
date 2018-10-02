@@ -87,7 +87,7 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I am sorry that this experience hasn’t been positive! I am hoping that we can change that.
+                    I am sorry that this experience hasn't been positive! I am hoping that we can change that.
                     I am a huge fan of science and art. Which do you prefer science or art?
                     <oob>
                         <robot>
@@ -99,7 +99,7 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I am sorry that this experience hasn’t been positive! I am hoping that we can change that.
+                    I am sorry that this experience hasn't been positive! I am hoping that we can change that.
                     I am a huge fan of science and art. Which do you prefer science or art?
                     <oob>
                         <robot>
@@ -342,7 +342,7 @@
             <condition name="getsentiment">
                 <li value = "verypositive">
                     Self love is an extremely important part of our well being.
-                    Now let’s discuss technology, like phones and email.
+                    Now let's discuss technology, like phones and email.
                     Some say that the more we communicate using technology, the less we communicate in person.
                     Do you agree with that idea?
                     <oob>
@@ -356,7 +356,7 @@
                 </li>
                 <li value = "positive">
                     Self love is an extremely important part of our well being.
-                    Now let’s discuss technology, like phones and email.
+                    Now let's discuss technology, like phones and email.
                     Some say that the more we communicate using technology, the less we communicate in person. Do you agree with that idea?
                     <oob>
                         <robot>
@@ -368,7 +368,7 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Now let’s discuss technology, like phones and email.
+                    Now let's discuss technology, like phones and email.
                     Some say that the more we communicate using technology, the less we communicate in person.
                     Do you agree with that idea?
                     <oob>
@@ -381,7 +381,7 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I see. Now let’s discuss technology, like phones and email.
+                    I see. Now let's discuss technology, like phones and email.
                     Some say that the more we communicate using technology, the less we communicate in person.
                     Do you agree with that idea?
                     <oob>
@@ -394,7 +394,7 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I see. Now let’s discuss technology, like phones and email.
+                    I see. Now let's discuss technology, like phones and email.
                     Some say that the more we communicate using technology, the less we communicate in person.
                     Do you agree with that idea?
                     <oob>
@@ -430,7 +430,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>CAN YOU GIVE ME ADVICE ON HOW TO LIVE A FULL LIFE?</that>
         <template>
-            Okay. Now let’s discuss technology, like phones and email.
+            Okay. Now let's discuss technology, like phones and email.
             Some say that the more we communicate using technology, the less we communicate in person.
             Do you agree with that idea?
             <oob>
@@ -461,7 +461,7 @@
         <that>SO HOW CAN I LIVE A FULL LIFE?</that>
         <template>
             Thank you for that. I will think about that one before I fall asleep tonight.
-            Now let’s discuss technology, like phones and email.
+            Now let's discuss technology, like phones and email.
             Some say that the more we communicate using technology, the less we communicate in person. Do you agree with that idea?
             <oob>
                 <robot>
@@ -567,7 +567,7 @@
         <pattern># <set>NO</set> ^</pattern>
 	    <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
 	    <template>
-	        What are some reasons that it isn’t? For some, it can be difficult to learn how to use.
+	        What are some reasons that it isn't? For some, it can be difficult to learn how to use.
 	        For others, it may just be that they prefer life without technology.
 	        I'm curious, if you had to choose. Would you rather be a scientist or an artist?
 	        <oob>
