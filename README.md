@@ -46,10 +46,15 @@ You should see the "linking successful" message.
         Add src path to PYTHONPATH
 
 
+## Points on using
+1 - the rephrase file should contain only one sentence phrases.
+
+
 ## Running
 
 Before running in windows you need to make sure that you have a tmp folder in the root of dive C:. This will keep track of
 log files. In linux the folder is /tmp and is already created so you don't need any configuration.
+
 
 
 ## Introduction

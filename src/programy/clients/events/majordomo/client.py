@@ -196,7 +196,14 @@ class MajorDomoBotClient(EventBotClient):
                         client_context.bot.facial_expression_recognition.append(request.emotion)
 
                         #answer = self.process_question_service(client_context, request.question)
-                        answer = self.process_question_with_options(client_context, request.question)
+
+                        # todo this part should be cleaned up preprocessing question string
+                        import string
+                        exclude = set(string.punctuation)
+                        question_no_punctuation = ''.join(ch for ch in request.question if ch not in exclude)
+
+
+                        answer = self.process_question_with_options(client_context, question_no_punctuation)
 
                         #client_context.bot.save_conversation(client_context)
                         response = self.render_response(client_context, answer)

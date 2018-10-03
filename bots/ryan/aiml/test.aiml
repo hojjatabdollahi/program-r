@@ -2,7 +2,7 @@
 
 <aiml version = "2.0">
    <category>
-      <pattern>test </pattern>
+      <pattern>test</pattern>
 
       <template>
            ARE YOU ORIGINALLY FROM COLORADO?
@@ -36,7 +36,26 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            Oh. Then where from?
+            Oh!
+
+            Then where from?
+            <oob>
+                <robot>
+                    <options>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>*</pattern>
+        <that>Then where from?</that>
+        <template>
+            Oh.
             <oob>
                 <robot>
                     <options>
