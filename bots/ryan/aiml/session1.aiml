@@ -1112,6 +1112,24 @@
 
     </category>
 
+
+    <category>
+        <pattern>*</pattern>
+        <that>DID YOU ENJOY IT?</that>
+        <template>
+            whatever.
+            <oob>
+                <robot>
+                    <options>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
     <category>
         <pattern>*</pattern>
         <that>ARE THERE ANY PLACES THAT YOU DID ENJOY WHILE LIVING IN COLORADO?</that>
@@ -1125,24 +1143,6 @@
                         <option>Fall</option>
                         <option>Spring</option>
                         <option>Winter</option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-
-
-    <category>
-        <pattern>*</pattern>
-        <that>DID YOU ENJOY IT?</that>
-        <template>
-            whatever.
-            <oob>
-                <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
                     </options>
                 </robot>
             </oob>
