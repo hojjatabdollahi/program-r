@@ -38,14 +38,20 @@ class UserRequest(Request):
 
 
 class QuestionRequest(Request):
-    def __init__(self, command, arguments):
+    def __init__(self, command, question, emotion):
+        arguments = [question, emotion]
         super().__init__(command, arguments)
-        self._question = arguments
+        self._question = question
+        self._emotion = emotion
 
 
     @property
     def question(self):
         return self._question
+
+    @property
+    def emotion(self):
+        return self._emotion
 
 
 class ServiceRequest(Request):

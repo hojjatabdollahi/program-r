@@ -5,7 +5,7 @@
       <pattern>test </pattern>
 
       <template>
-           hmmm?
+           ARE YOU ORIGINALLY FROM COLORADO?
 
            <oob>
                 <robot>
@@ -29,5 +29,24 @@
 
       </template>
    </category>
+
+
+
+   <category>
+        <pattern># <set>NO</set> ^</pattern>
+        <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
+        <template>
+            Oh. Then where from?
+            <oob>
+                <robot>
+                    <options>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
 
 </aiml>

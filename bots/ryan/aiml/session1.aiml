@@ -26,7 +26,8 @@
     	<pattern>*</pattern>
    	    <that>HOW ARE YOU DOING TODAY * ?</that>
     	<template>
-    	    I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+
+            I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
     	    Would you like to hear a little more about me?
     	    <oob>
                 <robot>
@@ -36,6 +37,7 @@
                     </options>
                 </robot>
             </oob>
+
         </template>
     </category>
 
@@ -517,7 +519,7 @@
            <condition name="getsentiment">
                 <li value = "verypositive">
                     I quite enjoy lakewood, it is beautiful here.
-                    Are there any places that you did enjoy while living in Colorado?
+                    Are there any places that you did enjoy outside of Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -525,7 +527,7 @@
                 </li>
                 <li value = "positive">
                     I quite enjoy lakewood, it is beautiful here.
-                    Are there any places that you did enjoy while living in Colorado?
+                    Are there any places that you did enjoy outside of Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -533,7 +535,7 @@
                 </li>
                 <li value = "neutral">
                     There are both pros and cons to every city or town.
-                    Are there any places that you did enjoy while living in Colorado?
+                    Are there any places that you did enjoy outside of Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -983,7 +985,8 @@
         <pattern>NO I'M FROM *</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            I have never been to <star/>, I'll have to visit one day. Did you enjoy being from there?
+            I have never been to <star/>, I'll have to visit one day.
+            Did you enjoy being from there?
             <oob>
                 <robot>
                     <options>
@@ -999,7 +1002,8 @@
         <pattern>NO I AM FROM *</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            I have never been to <star/>, I'll have to visit one day. Did you enjoy being from there?
+            I have never been to <star/>, I'll have to visit one day.
+            Did you enjoy being from there?
             <oob>
                 <robot>
                     <options>
@@ -1095,7 +1099,25 @@
         <pattern>*</pattern>
         <that>THEN WHERE FROM?</that>
         <template>
-             Did you enjoy being from there?
+            I have never been there. Did you enjoy it?
+            <oob>
+                <robot>
+                    <options>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+
+    </category>
+
+
+    <category>
+        <pattern>*</pattern>
+        <that>DID YOU ENJOY IT?</that>
+        <template>
+            whatever.
             <oob>
                 <robot>
                     <options>
@@ -1106,6 +1128,7 @@
             </oob>
         </template>
     </category>
+
 
     <category>
         <pattern>*</pattern>
@@ -1126,30 +1149,6 @@
         </template>
     </category>
 
-
-    <category>
-        <pattern>YES</pattern>
-        <that>DID YOU ENJOY BEING FROM THERE?</that>
-        <template>
-            I bet. I'd like to visit someday. When you think back to growing up there how do you feel?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>DID YOU ENJOY BEING FROM THERE?</that>
-        <template>
-            That's too bad. How long have you lived here?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
 
     <category>
         <pattern>*</pattern>
