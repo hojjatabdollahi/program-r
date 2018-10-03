@@ -178,8 +178,6 @@ class MajorDomoBotClient(EventBotClient):
                 question = self.initial_question(request, request.username)
                 print("question", question)
 
-
-
                 answer = self.process_question_with_options(client_context, question)
 
                 print("answer", answer)
@@ -190,17 +188,17 @@ class MajorDomoBotClient(EventBotClient):
                     YLogger.info(self, "question request")
                     if client_context is not None:
                         print(request.question)
-                        #todo here I have to get the FER as a sentiment value
 
                         userid = client_context.userid
                         client_context.bot.conversations[userid].set_property("session_number", session_number)
                         client_context.bot.conversations[userid].set_property("username", username)
 
+                        client_context.bot.facial_expression_recognition.append(request.emotion)
 
                         #answer = self.process_question_service(client_context, request.question)
                         answer = self.process_question_with_options(client_context, request.question)
 
-                        client_context.bot.save_conversation(client_context)
+                        #client_context.bot.save_conversation(client_context)
                         response = self.render_response(client_context, answer)
                     else:
                         response = ["client context is not initiated. Initial Session request"]

@@ -26,7 +26,8 @@
     	<pattern>*</pattern>
    	    <that>HOW ARE YOU DOING TODAY * ?</that>
     	<template>
-    	    I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+
+            I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
     	    Would you like to hear a little more about me?
     	    <oob>
                 <robot>
@@ -36,6 +37,7 @@
                     </options>
                 </robot>
             </oob>
+
         </template>
     </category>
 
@@ -1097,7 +1099,7 @@
         <pattern>*</pattern>
         <that>THEN WHERE FROM?</that>
         <template>
-            I have never been there. Did you enjoy being from there?
+            I have never been there. Did you enjoy it?
             <oob>
                 <robot>
                     <options>
@@ -1107,6 +1109,7 @@
                 </robot>
             </oob>
         </template>
+
     </category>
 
     <category>
@@ -1128,29 +1131,24 @@
         </template>
     </category>
 
+
+
     <category>
-        <pattern># <set>YES</set> ^</pattern>
-        <that>DID YOU ENJOY BEING FROM THERE?</that>
+        <pattern>*</pattern>
+        <that>DID YOU ENJOY IT?</that>
         <template>
-            I bet. I'd like to visit someday. When you think back to growing up there how do you feel?
+            whatever.
             <oob>
                 <robot>
+                    <options>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </options>
                 </robot>
             </oob>
         </template>
     </category>
 
-    <category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>DID YOU ENJOY BEING FROM THERE?</that>
-        <template>
-            That's too bad. How long have you lived here?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
 
     <category>
         <pattern>*</pattern>

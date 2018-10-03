@@ -203,48 +203,102 @@ class MajorDomoWorker(object):
         return request_object
 
 
+
     def convert_to_request_object(self, request):
         '''
-        ["ready"]
-        ["session", 1, "user", rohola]
-        ["question", hello]
+        request can be one of these inputs
+        ['{"Command":1}']
+        ['{"SessionNumber":1,"UserName":"Josh","Command":9}']
+        ['{"Question":"hello","Emotion":"0.4","Command":10}']
         :param request:
         :return:
         '''
+        import ast
+        request = request[0]
+        request_dict = ast.literal_eval(request)
 
-        if len(request)==1:
-            if request[0]=="ready":
-                ready_request = ReadyRequest("ready")
-                return ready_request
+        if request_dict["Command"] == 1:
+            ready_request = ReadyRequest("ready")
+            return ready_request
 
-        if len(request)==3:
-            if request[0]=="user":
-                username = request[2]
-                user_request = UserRequest("user", username)
-                return user_request
+        if request_dict["Command"] == 9:
+            session_number = request_dict["SessionNumber"]
+            username = request_dict["UserName"]
+            session_user_request = SessionUserRequest("session_user_request", session_number, username)
+            return session_user_request
 
-        if len(request)==4:
-            if request[0] == "session":
-                session_number = request[1]
-                username = request[3]
-                session_user_request = SessionUserRequest("session_user_request", session_number, username)
-                return session_user_request
+        if request_dict["Command"] == 10:
+            question = request_dict["Question"]
+            emotion = float(request_dict["Emotion"]) # a float number between -1 and 1
+            question_request = QuestionRequest("question", question, emotion)
+            return question_request
 
 
-        if len(request)==2:
-            if request[0]=="session":
-                session_number = request[1]
-                session_request = SessionRequest("session", session_number)
-                return session_request
 
-            if request[0]=="question":
-                question = request[1]
-                question_request = QuestionRequest("question", question)
-                return question_request
 
-            if request[0]=="service":
-                service_name = request[1]
-                service_request = ServiceRequest("service", service_name)
-                return service_request
+    # def convert_to_request_object(self, request):
+    #     '''
+    #     ["ready"]
+    #     ["session", 1, "user", rohola]
+    #     ["question", hello]
+    #     :param request:
+    #     :return:
+    #     '''
+    #
+    #     if len(request)==1:
+    #         if request[0]=="ready":
+    #             ready_request = ReadyRequest("ready")
+    #             return ready_request
+    #
+    #     if len(request)==3:
+    #         if request[0]=="user":
+    #             username = request[2]
+    #             user_request = UserRequest("user", username)
+    #             return user_request
+    #
+    #     if len(request)==4:
+    #         if request[0] == "session":
+    #             session_number = request[1]
+    #             username = request[3]
+    #             session_user_request = SessionUserRequest("session_user_request", session_number, username)
+    #             return session_user_request
+    #
+    #
+    #     if len(request)==2:
+    #         if request[0]=="session":
+    #             session_number = request[1]
+    #             session_request = SessionRequest("session", session_number)
+    #             return session_request
+    #
+    #         if request[0]=="question":
+    #             question = request[1]
+    #             question_request = QuestionRequest("question", question)
+    #             return question_request
+    #
+    #         if request[0]=="service":
+    #             service_name = request[1]
+    #             service_request = ServiceRequest("service", service_name)
+    #             return service_request
+    #
+    #     return None
 
-        return None
+
+if __name__ == "__main__":
+    config = MajorDomoConfiguration()
+    config._ip = "tcp://localhost"
+    config._port = 5456
+    config._service_name = "programr"
+    worker = MajorDomoWorker(config)
+
+    response = None
+    while True:
+        request = worker.receive(response)
+        if type(request) is ReadyRequest:
+            response = [request.command]
+            print("ready")
+
+        if type(request) is SessionUserRequest:
+            print("session")
+
+    #res = worker.convert_to_request_object(['{"Command":1}'])
+    #print(res)

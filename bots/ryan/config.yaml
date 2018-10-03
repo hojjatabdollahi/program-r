@@ -11,7 +11,7 @@ console:
 majordomo:
   bot: bot
   ip: "tcp://localhost"
-  port: 5555
+  port: 5456
   service_name: "programr"
   verbose: false
 

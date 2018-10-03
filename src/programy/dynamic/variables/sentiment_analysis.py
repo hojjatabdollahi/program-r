@@ -20,11 +20,15 @@ class GetSentiment(DynamicVariable):
             if len(client_context.bot.facial_expression_recognition.values):
                 last_fer_value = client_context.bot.facial_expression_recognition.last_fer_value
 
+                print(last_fer_value)
                 #the logic of mixing fer and sentiment goes here
                 alpha = 0.1
                 threshold1 = 0.2
                 threshold2 = -0.2
                 sentiment_value = self.expected_sentiment_value(sentiment, sentiment_distribution)
+
+                print(last_fer_value)
+                print(sentiment_value)
 
                 final_sentiment_value = alpha * last_fer_value + (1-alpha)*sentiment_value
                 print(final_sentiment_value)
