@@ -550,6 +550,54 @@
 
 <!-- SENTIMENT FOUR -->
 
+    <category>
+       <pattern>*</pattern>
+       <that>HOW DOES KNITTING MAKE YOU FEEL?</that>
+       <template>
+           <think>
+               <set name = "data"> <star/> </set>
+           </think>
+           <condition name="getsentiment">
+               <li value = "verypositive">
+                   Why do you think it makes you happy?
+                   <oob>
+                       <robot>
+                       </robot>
+                   </oob>
+               </li>
+               <li value = "positive">
+                   Why do you think it makes you happy?
+                   <oob>
+                       <robot>
+                       </robot>
+                   </oob>
+               </li>
+               <li value = "neutral">
+                   What purpose does knitting serve for you?
+                   <oob>
+                       <robot>
+                       </robot>
+                   </oob>
+               </li>
+               <li value = "negative">
+                   Why do you think it makes you sad?
+                   <oob>
+                       <robot>
+                       </robot>
+                   </oob>
+               </li>
+               <li value = "verynegative">
+                   Why do you think it makes you sad?
+                   <oob>
+                       <robot>
+                       </robot>
+                   </oob>
+               </li>
+           </condition>
+       </template>
+   </category>
+
+
    <category>
        <pattern>*</pattern>
        <that>HOW DO YOU FEEL WHEN YOU ARE KNITTING?</that>
@@ -840,7 +888,7 @@
 
    <category>
 	   <pattern># NONFICTION ^</pattern>
-	   <that>F WHICH WOULD YOU PICK?</that>
+	   <that>WHICH WOULD YOU PICK?</that>
 	   <template>
 	       Nonfiction is also my favorite genre.
 	       What about reading nonfiction do you enjoy the most?
@@ -1091,7 +1139,7 @@
 
    <category>
        <pattern># ROMANCE ^</pattern>
-       <that> WHICH WOULD YOU PICK?</that>
+       <that>WHICH WOULD YOU PICK?</that>
        <template>
            I agree. What about reading romance do you enjoy the most?
            <oob>
@@ -1277,7 +1325,7 @@
 
    <category>
 	   <pattern># CRIME ^</pattern>
-	   <that> WHICH WOULD YOU PICK?</that>
+	   <that>WHICH WOULD YOU PICK?</that>
 	   <template>
 	       Crime is also one of my favorite genres.
 	       What about reading crime novels do you enjoy the most?

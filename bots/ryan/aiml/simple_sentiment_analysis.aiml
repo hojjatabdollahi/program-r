@@ -8,6 +8,10 @@
 
         <template>
             How do you feel today?
+            <oob>
+	           <robot>
+	           </robot>
+           </oob>
         </template>
    </category>
 
@@ -31,7 +35,10 @@
                 <li value= "neutral"> I'm not familiar with that emotion. Can you describe it? </li>
 
            </condition>
-
+            <oob>
+	           <robot>
+	           </robot>
+           </oob>
       </template>
    </category>
 </aiml>

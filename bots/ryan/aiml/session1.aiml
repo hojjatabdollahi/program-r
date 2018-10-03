@@ -517,7 +517,7 @@
            <condition name="getsentiment">
                 <li value = "verypositive">
                     I quite enjoy lakewood, it is beautiful here.
-                    Are there any places that you did enjoy outside of Colorado?
+                    Are there any places that you did enjoy while living in Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -525,7 +525,7 @@
                 </li>
                 <li value = "positive">
                     I quite enjoy lakewood, it is beautiful here.
-                    Are there any places that you did enjoy outside of Colorado?
+                    Are there any places that you did enjoy while living in Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -533,7 +533,7 @@
                 </li>
                 <li value = "neutral">
                     There are both pros and cons to every city or town.
-                    Are there any places that you did enjoy outside of Colorado?
+                    Are there any places that you did enjoy while living in Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -983,8 +983,7 @@
         <pattern>NO I'M FROM *</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            I have never been to <star/>, I'll have to visit one day.
-            Did you enjoy being from there?
+            I have never been to <star/>, I'll have to visit one day. Did you enjoy being from there?
             <oob>
                 <robot>
                     <options>
@@ -1000,8 +999,7 @@
         <pattern>NO I AM FROM *</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            I have never been to <star/>, I'll have to visit one day.
-            Did you enjoy being from there?
+            I have never been to <star/>, I'll have to visit one day. Did you enjoy being from there?
             <oob>
                 <robot>
                     <options>
@@ -1097,7 +1095,7 @@
         <pattern>*</pattern>
         <that>THEN WHERE FROM?</that>
         <template>
-            I have never been there. Did you enjoy being from there?
+             Did you enjoy being from there?
             <oob>
                 <robot>
                     <options>
@@ -1128,8 +1126,9 @@
         </template>
     </category>
 
+
     <category>
-        <pattern># <set>YES</set> ^</pattern>
+        <pattern>YES</pattern>
         <that>DID YOU ENJOY BEING FROM THERE?</that>
         <template>
             I bet. I'd like to visit someday. When you think back to growing up there how do you feel?

@@ -305,7 +305,7 @@ class Bot(object):
                 response = ". ".join(sentences[1:])
                 response = rephrased_clauses[r] + response
             else:
-                response = rephrased_clauses[r] + last_sentence.response
+                response = rephrased_clauses[r] + " "+ last_sentence.response
 
         except:
             response= self.default_response

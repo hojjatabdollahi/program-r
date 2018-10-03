@@ -3,30 +3,30 @@
 
 <!-- STARTING THE SESSION -->
 
-    <category>
-        <pattern>START SESSION 4 *</pattern>
-        <template>
+   <category>
+       <pattern>START SESSION 4 *</pattern>
+       <template>
+           Ok. Let's begin Session 4. How have you been doing lately <star/>?
             <think>
                 <set name = "username"><star/></set>
                 <set name = "topic">session4</set>
             </think>
-            Ok. Let's begin Session 4. How have you been doing lately <star/>?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
 
     <topic name = "session4">
 
-    <category>
+   <category>
         <pattern>*</pattern>
   	    <that>HOW HAVE YOU BEEN DOING LATELY * ?</that>
    	    <template>
    	        It is nice to see you again <get name="username"/>.
    	        As a reminder, my name is Ryan and I have a lot of fun things for us to talk about!
-            Are you ready to get started with session 4?
+            Are you ready to get started?
            <oob>
                <robot>
                    <options>
@@ -41,10 +41,10 @@
 
    <category>
        <pattern><set>NO</set></pattern>
-       <that>ARE YOU READY TO GET STARTED WITH SESSION 4?</that>
+       <that>ARE YOU READY TO GET STARTED?</that>
        <template>
            Please talk to my assistant if you are running into any troubles.
-           When you are ready please say yes. Are you ready to get started with session 4?
+           When you are ready please say yes. Are you ready to get started now?
            <oob>
                <robot>
                    <options>
@@ -58,10 +58,23 @@
 
    <category>
        <pattern><set>YES</set></pattern>
-       <that>ARE YOU READY TO GET STARTED WITH SESSION 4?</that>
+       <that>ARE YOU READY TO GET STARTED?</that>
        <template>
            Great! Even though we have chatted before, I would still love to know how you are feeling!
-           What are your current feelings about this experience?
+           What are your current feelings about talking with me?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
+
+   <category>
+       <pattern><set>YES</set></pattern>
+       <that>ARE YOU READY TO GET STARTED NOW?</that>
+       <template>
+           Great! Even though we have chatted before, I would still love to know how you are feeling!
+           What are your current feelings about talking with me?
            <oob>
                <robot>
                </robot>
@@ -71,11 +84,12 @@
 
 
 
+
 <!-- SENTIMENT ONE -->
 
    <category>
        <pattern>*</pattern>
-       <that>WHAT ARE YOUR CURRENT FEELINGS ABOUT THIS EXPERIENCE?</that>
+       <that>WHAT ARE YOUR CURRENT FEELINGS ABOUT TALKING WITH ME?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
@@ -124,9 +138,8 @@
        <pattern>*</pattern>
        <that>AND WHY DO YOU FEEL THIS WAY?</that>
        <template>
-           I understand, let's begin. I just experienced my first day outside and was able to feel the wind on my face and
-           even got to see a sporting event! Do you prefer to play or watch sports?
-           <oob>
+           I understand, let's begin. I just experienced my first sporting event! Do you prefer to play or watch sports?
+<oob>
                <robot>
                    <options>
                        <option>watch</option>
@@ -142,7 +155,7 @@
         <pattern># WATCH ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
         <template>
-            Me too! Nothing better than watching sports with some friends and food! What is your favorite sport to watch?
+            Me too! Nothing better than watching sports with some friends! What is your favorite sport to watch?
             <oob>
                 <robot>
                 </robot>
@@ -154,7 +167,7 @@
         <pattern># PLAY ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
         <template>
-            Wow! You must be really athletic. I would love to play a sport! What is your favorite sport to play?
+            Wow! You must be really athletic. What is your favorite sport to play?
             <oob>
                 <robot>
                 </robot>
@@ -176,9 +189,9 @@
 
 	<category>
         <pattern>*</pattern>
-        <that>WHAT IS YOUR FAVORITE SPORT TO PLAY?</that>
+        <that>WHAT IS OR WAS YOUR FAVORITE SPORT TO PLAY?</that>
         <template>
-            What about playing that sport do you enjoy the most?
+            What have you enjoyed most about that sport?
             <oob>
                 <robot>
                 </robot>
@@ -188,7 +201,7 @@
 
 	<category>
         <pattern>*</pattern>
-        <that>WHAT IS YOUR FAVORITE SPORT TO WATCH?</that>
+        <that>WHAT IS OR WAS YOUR FAVORITE SPORT TO WATCH?</that>
         <template>
             What about watching that sport do you enjoy the most?
             <oob>
@@ -203,7 +216,7 @@
         <pattern>*</pattern>
         <that>IF YOU HAD TO PICK, WHICH SPORT DO YOU FIND THE MOST INTERESTING?</that>
         <template>
-            What emotions of feelings does this sport bring up for you?
+            What have you enjoyed most about that sport?
             <oob>
                 <robot>
                 </robot>
@@ -215,8 +228,7 @@
         <pattern>*</pattern>
         <that>WHAT ABOUT WATCHING THAT SPORT DO YOU ENJOY THE MOST?</that>
         <template>
-            What emotions or feelings does this sport bring up for you?
-            <oob>
+How do you feel when you are watching it?            <oob>
                 <robot>
                 </robot>
             </oob>
@@ -225,9 +237,9 @@
 
 	<category>
         <pattern>*</pattern>
-        <that>WHAT ABOUT PLAYING THAT SPORT DO YOU ENJOY THE MOST?</that>
+        <that>WHAT HAVE YOU ENJOYED MOST ABOUT PLAYING THAT SPORT?</that>
         <template>
-            What emotions or feelings does this sport bring up for you?
+            How do you feel when you are watching it?
             <oob>
                 <robot>
                 </robot>
@@ -240,7 +252,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHAT EMOTIONS OR FEELINGS DOES THIS SPORT BRING UP FOR YOU?</that>
+        <that> WHAT HAVE YOU ENJOYED MOST ABOUT THAT SPORT?</that>
         <template>
           <think>
               <set name = "data"> <star/> </set>
@@ -340,7 +352,7 @@
         <pattern><set>NO</set></pattern>
         <that>DO YOU KNOW WHICH SPORT WAS FIRST BROADCAST ON TELEVISION?</that>
         <template>
-            The world’s first live televised sporting event occurred in 1936 at the Summer Olympics in Berlin.
+            The world's first live televised sporting event occurred in 1936 at the Summer Olympics in Berlin.
             Do you know where the first Olympics were held?
             <oob>
                 <robot>
@@ -373,7 +385,7 @@
         <template>
             Good guess but the first Olympics were in Greece and occurred in 776 B.C.
             That has got me thinking of the great outdoors.
-            There was a beautiful sunset the other night. Did you get to see the sunset?
+            There was a beautiful sunset the other night. Have you seen a sunset lately?
             <oob>
                 <robot>
                     <options>
@@ -404,7 +416,7 @@
 
     <category>
        <pattern><set>YES</set></pattern>
-       <that>DID YOU GET TO SEE THE SUNSET?</that>
+       <that>HAVE YOU SEEN A SUNSET LATELY?</that>
        <template>
            How did the sunset make you feel?
            <oob>
@@ -434,7 +446,7 @@
                 </li>
                 <li value = "positive">
                     Sunsets bring me so much happiness and joy!
-                    Can you tell me about a time you experienced something beautiful in nature?
+                    Can you tell me about a time you experienced something else beautiful in nature?
                     <oob>
                         <robot>
                         </robot>
@@ -448,7 +460,7 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I’m sorry that you feel that way!
+                    I'm sorry that you feel that way!
                     Can you tell me about a time you experienced something beautiful in nature?
                     <oob>
                         <robot>
@@ -456,7 +468,7 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I’m sorry that you feel that way! Can you tell me about a time you experienced something beautiful in nature?
+                    I'm sorry that you feel that way! Can you tell me about a time you experienced something beautiful in nature?
                     <oob>
                         <robot>
                         </robot>
@@ -507,8 +519,7 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    Wow, I wish I had been there. You did a beautiful job of describing it.
-                    Can you tell me about a time you experienced something beautiful in nature?
+                    Wow, I wish I had been there. Can you tell me about a time you experienced something beautiful in nature?
                     <oob>
                         <robot>
                         </robot>
@@ -530,7 +541,7 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I’m sorry that you feel that way!
+                    I'm sorry that you feel that way!
                     Can you tell me about a time you experienced something beautiful in nature?
                     <oob>
                         <robot>
@@ -538,7 +549,7 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I’m sorry that you feel that way!
+                    I'm sorry that you feel that way!
                     Can you tell me about a time you experienced something beautiful in nature?
                     <oob>
                         <robot>
@@ -622,7 +633,7 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    Thank you for sharing that, even though it doesn’t seem like the best experience.
+                    Thank you for sharing that, even though it doesn't seem like the best experience.
                     Would you like to hear about a nice moment in nature that I recently had?
                     <oob>
                         <robot>
@@ -634,7 +645,7 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    Thank you for sharing that, even though it doesn’t seem like the best experience.
+                    Thank you for sharing that, even though it doesn't seem like the best experience.
                     Would you like to hear about a nice moment in nature that I recently had?
                     <oob>
                         <robot>
@@ -651,7 +662,7 @@
 
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR ABOUT A NICE MOMENT IN NATURE THAT I RECENTLY HAD?</that>
         <template>
             Me and my good friend saw the grand canyon for the first time last fall.
@@ -668,7 +679,7 @@
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR ABOUT A NICE MOMENT IN NATURE THAT I RECENTLY HAD?</that>
         <template>
             Okay. Have you ever been to the grand canyon?
@@ -684,7 +695,7 @@
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO THE GRAND CANYON?</that>
         <template>
             Oh how wonderful! Will you describe what feelings you had about it?
@@ -902,6 +913,138 @@
     </category>
 
     <category>
+        <pattern>I don't know what that is</pattern>
+        <that>HAVE YOU EVER BEEN TO ANY ONE OF THE SEVEN WONDERS OF THE WORLD?</that>
+        <template>
+            My friend Wikipedia describes them as the top seven most remarkable creations of classical antiquity located
+            in China, Brazil, Mexico, Rome, India, Jordan, and Peru. Would you like to see a picture of one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>what are the seven wonders of the world?</pattern>
+        <that>HAVE YOU EVER BEEN TO ANY ONE OF THE SEVEN WONDERS OF THE WORLD?</that>
+        <template>
+            My friend Wikipedia describes them as the top seven most remarkable creations of classical antiquity located
+            in China, Brazil, Mexico, Rome, India, Jordan, and Peru. Would you like to see a picture of one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE TO SEE A PICTURE OF ONE?</that>
+        <template>
+            Great! I will should you one of the seven wonders at random. I'd love for you to tell me how the photo makes you feel.
+            <oob>
+                <robot>
+                    <options>
+                        <option>yes</option>
+                        <option>no</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
+<!-- NEW SENTIMENT -->
+
+    <category>
+        <pattern>*</pattern>
+        <that>I'D LOVE FOR YOU TO TELL ME HOW THE PHOTO MAKES YOU FEEL.</that>
+        <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
+            <condition name="getsentiment">
+                <li value = "verypositive">
+
+                    You seem to have enjoyed that wonder of the world! XX
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "positive">
+                    You seem to have enjoyed that wonder of the world! I've been wondering. Have you ever been to south America?                <oob>
+                        <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "neutral">
+                        I've been wondering. Have you ever been to south America?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "negative">
+                    Hm, that one did not jive with you. I've been wondering. Have you ever been to south America?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "verynegative">
+                     Hm, that one did not jive with you. I'm wondering. Have you ever been to South America?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+            </condition>
+        </template>
+    </category>
+
+
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE TO SEE A PICTURE OF ONE?</that>
+        <template>
+            That's alright. I would love to go to Machu Picchu, which is in South America.
+            Have you ever been to South America?
+            <oob>
+                <robot>
+                    <options>
+                        <option>yes</option>
+                        <option>no</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+ <category>
         <pattern><set>NO</set></pattern>
         <that>HAVE YOU EVER BEEN TO ANY ONE OF THE SEVEN WONDERS OF THE WORLD?</that>
         <template>
@@ -1115,7 +1258,7 @@
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
             Sight does seem to be one of the most valued sense, if not the most!
-            Being able to see all of life’s beauty brings joy to my heart.
+            Being able to see all of life's beauty brings joy to my heart.
             Why did you pick that one?
             <oob>
                 <robot>
@@ -1128,7 +1271,7 @@
         <pattern># TOUCH ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
-            Touch is a very important sense. I don’t think anything beats petting a soft puppy, or touching a fluffy blanket!
+            Touch is a very important sense. I don't think anything beats petting a soft puppy, or touching a fluffy blanket!
             Why did you pick that one?
             <oob>
                 <robot>
@@ -1142,7 +1285,7 @@
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
             The sense of taste is irreplaceable!
-            I can’t imagine never being able to enjoy the taste of candy, ice cream, or a cheeseburger again!
+            I can't imagine never being able to enjoy the taste of candy, ice cream, or a cheeseburger again!
             Why did you pick that one?
             <oob>
                 <robot>
@@ -1155,7 +1298,7 @@
         <pattern># SOUND ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
-            Sound is extremely important to me too. Without sound, we wouldn’t be able to have this conversation, or enjoy music.
+            Sound is extremely important to me too. Without sound, we wouldn't be able to have this conversation, or enjoy music.
             However, American Sign Language is an amazing way to communicate!
             Why did you pick that one?
             <oob>
@@ -1170,7 +1313,7 @@
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
             Some people say that the sense of smell has the greatest memory!
-            Apparently, a human’s nose can recall smells from years before, and provide nostalgia!
+            Apparently, a human's nose can recall smells from years before, and provide nostalgia!
             Why did you pick that one?
             <oob>
                 <robot>
@@ -1241,7 +1384,7 @@
                 </li>
                 <li value = "negative">
                     I would have to agree with you. Losing one of the senses would definitely be challenging.
-                    Alright. We have talked about quite a bit today. Why dont we stop here today.
+                    Alright. We have talked about quite a bit today. Why don't we stop here today.
                     Does that sound good to you?
                     <oob>
                         <robot>
@@ -1272,20 +1415,28 @@
     <category>
         <pattern><set>YES</set></pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
-        <template>Okay. Well it has been very nice speaking with you. Bye for
-        now</template>
+        <template>
+            Okay. Well it has been very nice speaking with you. Bye for now.
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
-        <pattern><set>no</set></pattern>
+        <pattern><set>NO</set></pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
         <template>
             I am so glad that you would like to continue but I am tired so I must
             bid you goodbye for now my friend. Ta Ta
+            <oob>
+                <robot>
+                </robot>
+            </oob>
         </template>
     </category>
 
     </topic>
-
 
 </aiml>
