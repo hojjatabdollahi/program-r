@@ -51,13 +51,14 @@ class MajorDomoBotClient(EventBotClient):
         self.render_response(client_context, response)
 
     def render_response(self, client_context, response):
+        response_dict = {}
         if self.service is not None:
-            print(response)
             response_dict = self.dictionary_of_response(response, None)
         else:
             if client_context.bot.conversations[client_context.userid].answers:
                 robot = client_context.bot.conversations[client_context.userid].answers[-1].robot["robot"]
-                response_dict = self.dictionary_of_response(response, robot)
+                sentiment = client_context.bot.sentiment.last_sentiment_value
+                response_dict = self.dictionary_of_response(response, sentiment, robot)
 
         response_string = str(response_dict)
         return [response_string]
@@ -205,7 +206,7 @@ class MajorDomoBotClient(EventBotClient):
 
                         answer = self.process_question_with_options(client_context, question_no_punctuation)
 
-                        #client_context.bot.save_conversation(client_context)
+                        client_context.bot.save_conversation(client_context)
                         response = self.render_response(client_context, answer)
                     else:
                         response = ["client context is not initiated. Initial Session request"]

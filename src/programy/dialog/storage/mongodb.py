@@ -23,11 +23,24 @@ class ConversationMongodbStorage(ConversationStorage):
         bot_properties = client_context.bot.conversations[userid].properties
         questions = client_context.bot.conversations[userid].questions
         answers = client_context.bot.conversations[userid].answers
+
+
         try:
             last_question = questions[-1].sentences
         except Exception as e:
             YLogger.exception(self, "question sentences length is zero", e)
             raise e
+
+
+        try:
+            last_sentiment_value = client_context.bot.sentiment.last_sentiment_value
+        except Exception as e:
+            last_sentiment_value = None
+
+        try:
+            last_fer_value = client_context.bot.facial_expression_recognition.last_fer_value
+        except Exception as e:
+            last_fer_value = None
 
         try:
             # todo this doesn't handle good when sentence is empty
@@ -68,7 +81,9 @@ class ConversationMongodbStorage(ConversationStorage):
         document = {"conversation": {
             "question": question_sentence_text,
             "answer": answer_sentence_text,
-            "timestamp": datetime.datetime.now()
+            "timestamp": datetime.datetime.now(),
+            "sentiment": last_sentiment_value,
+            "fer": last_fer_value,
             },
 
             "session_info": {

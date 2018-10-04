@@ -61,7 +61,7 @@ class EventBotClient(BotClient):
         return question
 
 
-    def dictionary_of_response(self, response, robot):
+    def dictionary_of_response(self, response, sentiment, robot):
         answer = ""
         image_filename = ""
         duration = ""
@@ -87,7 +87,8 @@ class EventBotClient(BotClient):
         return {"conversation":
                     {"question": "",
                      "response": response,
-                     "answer": answer
+                     "answer": answer,
+                     "sentiment": sentiment,
                      },
                 "image":
                     {"filename": image_filename,
