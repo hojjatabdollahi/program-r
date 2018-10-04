@@ -50,13 +50,21 @@ bot:
       max_histories: 100
       initial_topic: "*"
       restore_last_topic: false
-      type: file
-      config_name: file_config
+      type: mongodb
+      config_name: database_config
       empty_on_start: false
 
     file_config:
       dir: D:\Documents\Projects\Python\programy\RyanCBT\results
 
+    #this is for mongodb configuration
+    database_config:
+      host: "localhost"
+      port: 27017
+      password: "password"
+      root: "/home/rohola/mongodbtest-data"
+      name: "programr"
+      collection_name: "conversations"
 
 brain:
 

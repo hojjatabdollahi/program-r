@@ -52,14 +52,7 @@ class MajorDomoBotClient(EventBotClient):
 
     def render_response(self, client_context, response):
         response_dict = {}
-        if self.service is not None:
-            response_dict = self.dictionary_of_response(response, None)
-        else:
-            if client_context.bot.conversations[client_context.userid].answers:
-                robot = client_context.bot.conversations[client_context.userid].answers[-1].robot["robot"]
-                sentiment = client_context.bot.sentiment.last_sentiment_value
-                response_dict = self.dictionary_of_response(response, sentiment, robot)
-
+        response_dict = self.dictionary_of_response(client_context, response)
         response_string = str(response_dict)
         return [response_string]
 
@@ -174,15 +167,19 @@ class MajorDomoBotClient(EventBotClient):
             elif type(request) is SessionUserRequest:
                 YLogger.info(self, "session user request")
 
-                session_number = request.session_number
-                username = request.username
-                question = self.initial_question(request, request.username)
-                print("question", question)
+                if client_context:
+                    session_number = request.session_number
+                    username = request.username
+                    question = self.initial_question(request, request.username)
+                    print("question", question)
 
-                answer = self.process_question_with_options(client_context, question)
+                    answer = self.process_question_with_options(client_context, question)
+                    print("answer", answer)
+                    response = self.render_response(client_context, answer)
+                else:
+                    response = ["client context is not initiated. Initial Session request"]
 
-                print("answer", answer)
-                response = self.render_response(client_context, answer)
+
 
             elif type(request) is QuestionRequest:
                 try:

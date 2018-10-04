@@ -467,7 +467,10 @@ class Bot(object):
         answer.robot = options
         conversation.record_answer(answer)
 
-
+        if len(self.conversations[client_context.userid].answers) != len(self.sentiment.values):
+            self.sentiment.append_sentiment(None)
+            self.sentiment.append_sentiment_distribution([])
+            self.sentiment.append_final_sentiment(None)
 
         client_context.reset_question()
 
@@ -475,7 +478,6 @@ class Bot(object):
         if srai is True:
             conversation.pop_dialog()
 
-        #response = self.combine_answers(answers)
         response = answer.sentences_text()
 
         self.log_question_and_answer(client_context, text, response)
