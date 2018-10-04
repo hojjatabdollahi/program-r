@@ -1,6 +1,7 @@
 import logging
 
 from programy.robot.facial_expression_recognition import FacialExpressionRecognition
+from programy.robot.sentiment import Sentiment
 from programy.utils.logging.ylogger import YLogger
 
 from programy.brain import Brain
@@ -87,6 +88,8 @@ class Bot(object):
 
         self._facial_expression_recognition = FacialExpressionRecognition()
 
+        self._sentiment = Sentiment()
+
         self.initiate_conversation_storage()
 
     def ylogger_type(self):
@@ -108,10 +111,13 @@ class Bot(object):
     def corenlp(self):
         return self._corenlp
 
-
     @property
     def facial_expression_recognition(self):
         return self._facial_expression_recognition
+
+    @property
+    def sentiment(self):
+        return self._sentiment
 
     @property
     def brain_factory(self):

@@ -9,23 +9,25 @@ class GetSentiment(DynamicVariable):
     def get_value(self, client_context, value=None):
         userid = client_context.userid
         variables = client_context.bot.conversations[userid].properties
+        bot = client_context.bot
         text = variables["data"]
         try:
-            sentiment, sentiment_distribution = client_context.bot.brain.corenlp.get_sentence_sentiment(text)
+            sentiment, sentiment_distribution = bot.brain.corenlp.get_sentence_sentiment(text)
         except Exception as exception:
             YLogger.exception(self, "sentiment analysis module broke", exception)
             raise exception
 
-        if client_context.bot.facial_expression_recognition is not None:
-            if len(client_context.bot.facial_expression_recognition.values):
-                last_fer_value = client_context.bot.facial_expression_recognition.last_fer_value
+        if bot.facial_expression_recognition is not None:
+            if len(bot.facial_expression_recognition.values):
+                last_fer_value = bot.facial_expression_recognition.last_fer_value
 
 
                 #the logic of mixing fer and sentiment goes here
                 alpha = 0.1
                 threshold1 = 0.2
                 threshold2 = -0.2
-                sentiment_value = self.expected_sentiment_value(sentiment, sentiment_distribution)
+                sentiment_value = bot.sentiment.expected_sentiment_value(sentiment_distribution)
+
 
                 print("FER: ", last_fer_value)
                 print("Sentiment:", sentiment_value)
@@ -39,14 +41,10 @@ class GetSentiment(DynamicVariable):
                 else:
                     sentiment = "negative"
 
+                bot.sentiment.append_sentiment(sentiment_value)
+                bot.sentiment.append_sentiment_distribution(sentiment_distribution)
+                bot.sentiment.append_final_sentiment(final_sentiment_value)
+
 
         print(sentiment)
         return sentiment
-
-    def expected_sentiment_value(self, sentiment, sentiment_distribution):
-        shorten_sentiment_distribution = [sentiment_distribution[0]+sentiment_distribution[1],
-                                          sentiment_distribution[2],
-                                          sentiment_distribution[3]+ sentiment_distribution[4]]
-        value = -shorten_sentiment_distribution[0] + shorten_sentiment_distribution[2]
-
-        return value
