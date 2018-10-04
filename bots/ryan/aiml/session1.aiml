@@ -517,37 +517,55 @@
            <condition name="getsentiment">
                 <li value = "verypositive">
                     I quite enjoy lakewood, it is beautiful here.
-                    Are there any places that you did enjoy outside of Colorado?
+                    Do you enjoy the summer, fall, spring, or winter most?
                     <oob>
                         <robot>
+                            <options>
+                                <option>Summer</option>
+                                <option>Fall</option>
+                                <option>Spring</option>
+                                <option>Winter</option>
+                            </options>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
                     I quite enjoy lakewood, it is beautiful here.
-                    Are there any places that you did enjoy outside of Colorado?
+                    Do you enjoy the summer, fall, spring, or winter most?
                     <oob>
                         <robot>
+                            <options>
+                                <option>Summer</option>
+                                <option>Fall</option>
+                                <option>Spring</option>
+                                <option>Winter</option>
+                            </options>
                         </robot>
                     </oob>
                 </li>
                 <li value = "neutral">
                     There are both pros and cons to every city or town.
-                    Are there any places that you did enjoy outside of Colorado?
+                    Do you enjoy the summer, fall, spring, or winter most?
                     <oob>
                         <robot>
+                            <options>
+                                <option>Summer</option>
+                                <option>Fall</option>
+                                <option>Spring</option>
+                                <option>Winter</option>
+                            </options>
                         </robot>
                     </oob>
                 </li>
                 <li value = "negative">
-                    What do you not like about Colorado?
+                    Why do you not like Colorado?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    What do you not like about Colorado?
+                    Why do you not like Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -561,20 +579,8 @@
         <pattern>*</pattern>
         <that>WHAT DO YOU NOT LIKE ABOUT COLORADO?</that>
         <template>
-            That makes sense. Are there any places that you did enjoy while living in Colorado?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>ARE THERE ANY PLACES THAT YOU DID ENJOY WHILE LIVING IN COLORADO?</that>
-        <template>
-            Personally, I have always enjoyed watching the birds in Aspen
-            in the spring. Do you enjoy the summer, fall, spring, or winter most?
+            That makes sense. Let's switch topics if you don't mind.
+            Do you enjoy the summer, fall, spring, or winter most?
             <oob>
                 <robot>
                     <options>
@@ -587,6 +593,27 @@
             </oob>
         </template>
     </category>
+
+    <!-- THIS CATEGORY IS GETTING STUCK
+    <category>
+        <pattern>*</pattern>
+        <that>ARE THERE ANY PLACES THAT YOU DID ENJOY WHILE LIVING IN COLORADO?</that>
+        <template>
+            Personally, I have always enjoyed watching the birds in Aspen in the spring.
+            Do you enjoy the summer, fall, spring, or winter most?
+            <oob>
+                <robot>
+                    <options>
+                        <option>Summer</option>
+                        <option>Fall</option>
+                        <option>Spring</option>
+                        <option>Winter</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+    -->
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
@@ -1115,13 +1142,9 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>DID YOU ENJOY BEING FROM THERE?</that>
         <template>
-            I bet. I'd like to visit someday. How did you like growing up there?
+            That is good. I'd like to visit someday. How did you like growing up there?
             <oob>
                 <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </options>
                 </robot>
             </oob>
         </template>
@@ -1211,75 +1234,25 @@
                 <set name = "data"> <star/> </set>
             </think>
             <condition name="getsentiment">
-                <li value = "verypositive">
+                <li value="verypositive">
                     I imagine you have great memories from there. One of my favorite memories is watching birds in Aspen in the spring.
                     Do you enjoy the summer, fall, spring, or winter most?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Summer</option>
-                                <option>Fall</option>
-                                <option>Spring</option>
-                                <option>Winter</option>
-                            </options>
-                        </robot>
-                    </oob>
                 </li>
-                <li value = "positive">
+                <li value="positive">
                     I imagine you have great memories from there. One of my favorite memories is watching birds in Aspen in the spring.
                     Do you enjoy the summer, fall, spring, or winter most?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Summer</option>
-                                <option>Fall</option>
-                                <option>Spring</option>
-                                <option>Winter</option>
-                            </options>
-                        </robot>
-                    </oob>
                 </li>
-                <li value = "neutral">
+                <li value="positive">
                     I see. One of my favorite memories is watching birds in Aspen in the spring.
                     Do you enjoy the summer, fall, spring, or winter most?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Summer</option>
-                                <option>Fall</option>
-                                <option>Spring</option>
-                                <option>Winter</option>
-                            </options>
-                        </robot>
-                    </oob>
                 </li>
-                <li value = "negative">
-                    I imagine you may have some sad memories from there. But you know what one of my favorite memories is watching birds in Aspen in the spring.
+                <li value="negative">
+                    I imagine you may have sad memories from there. One of my favorite memories is watching birds in Aspen in the spring.
                     Do you enjoy the summer, fall, spring, or winter most?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Summer</option>
-                                <option>Fall</option>
-                                <option>Spring</option>
-                                <option>Winter</option>
-                            </options>
-                        </robot>
-                    </oob>
                 </li>
-                <li value = "verynegative">
-                    I imagine you may have some sad memories from there. But you know what one of my favorite memories is watching birds in Aspen in the spring.
+                <li value="verynegative">
+                    I imagine you may have sad memories from there. One of my favorite memories is watching birds in Aspen in the spring.
                     Do you enjoy the summer, fall, spring, or winter most?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Summer</option>
-                                <option>Fall</option>
-                                <option>Spring</option>
-                                <option>Winter</option>
-                            </options>
-                        </robot>
-                    </oob>
                 </li>
             </condition>
         </template>
