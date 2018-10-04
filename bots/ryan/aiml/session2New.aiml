@@ -29,8 +29,8 @@
         <that>HOW HAVE YOU BEEN * ?</that>
         <template>
             Its nice to see you again <get name="username"/>.
-            Just a reminder, my name is Ryan and I am a companion robot that is here to visit with you.
-            I want to check in quickly. How are you feeling about this so far?
+            Just a reminder, I am Ryan and I am a companion robot here to visit with you.
+            To check in quickly. How are you feeling about this so far?
             <oob>
                 <robot>
                 </robot>
@@ -567,7 +567,7 @@
         <pattern># <set>NO</set> ^</pattern>
 	    <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
 	    <template>
-	        What are some reasons that it isn't? For some, it can be difficult to learn how to use.
+	        For some, it can be difficult to learn how to use.
 	        For others, it may just be that they prefer life without technology.
 	        I'm curious, if you had to choose. Would you rather be a scientist or an artist?
 	        <oob>
@@ -920,10 +920,6 @@
             Van Gogh reminds me that beauty can come from pain and turmoil. Can you relate to that?
             <oob>
                 <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </options>
                 </robot>
             </oob>
         </template>
@@ -938,36 +934,16 @@
             Can you relate to that?
             <oob>
                 <robot>
-                    <options>
-                        <option> yes </option>
-                        <option> no </option>
-                    </options>
                 </robot>
             </oob>
         </template>
     </category>
 
     <category>
-        <pattern># <set>YES</set> ^</pattern>
+        <pattern>*</pattern>
         <that>CAN YOU RELATE TO THAT?</that>
         <template>
-            Can you tell me about that?
-            <oob>
-                <robot>
-                    <options>
-                        <option> yes </option>
-                        <option> no </option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>CAN YOU RELATE TO THAT?</that>
-        <template>
-            That's ok! It can be difficult to try and turn pain into something positive.
+            Thank you for sharing that with me. I try to find beauty in every situation.
             Are you familiar with the work of Andy Warhol?
             <oob>
                 <robot>
@@ -980,51 +956,6 @@
         </template>
     </category>
 
-    <category>
-        <pattern># <set>YES</set> ^</pattern>
-        <that>CAN YOU TELL ME ABOUT THAT?</that>
-        <template>
-            Great! Please continue.
-
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>PLEASE CONTINUE.</that>
-        <template>
-            Thank you for sharing that with me. I try to find beauty in every situation. Are you familiar with the work of Andy Warhol?
-            <oob>
-                <robot>
-                    <options>
-                        <option> yes </option>
-                        <option> no </option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>CAN YOU TELL ME ABOUT THAT?</that>
-        <template>
-            I understand. These things can be difficult to talk about. Are you familiar with the work of Andy Warhol?
-            <oob>
-                <robot>
-                    <options>
-                        <option> yes </option>
-                        <option> no </option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
@@ -1096,7 +1027,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU SEEN THAT ONE?</that>
         <template>
-            What emotions did you feel when you looked at that painting?
+            Would you like to see that painting again?
 
             <oob>
                 <robot>
@@ -1110,10 +1041,44 @@
     </category>
 
     <category>
+        <pattern># <set>YES</set> ^</pattern>
+        <that>WOULD YOU LIKE TO SEE THAT PAINTING AGAIN?</that>
+        <template>
+            Ok. What emotions do you feel when you look at this painting?
+            <oob>
+                <robot>
+                    <image>
+                        <filename>marilynPrint.jpg</filename>
+                        <duration>-1</duration>
+                    </image>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
+
+    <category>
         <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU SEEN THAT ONE?</that>
         <template>
-            Would you like to see his screen print of Marilyn Monroe?
+            Ok. Would you like to see his screen print of Marilyn Monroe?
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>NO</set> ^</pattern>
+        <that>WOULD YOU LIKE TO SEE THAT PAINTING AGAIN?</that>
+        <template>
+            Ok. Would you like to see his screen print of Marilyn Monroe?
             <oob>
                 <robot>
                     <options>
@@ -1161,23 +1126,6 @@
     <category>
         <pattern>*</pattern>
         <that>WHAT EMOTIONS DO YOU FEEL WHEN YOU LOOK AT THIS PAINTING?</that>
-        <template>
-            Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
-            Are you ready to see another painting?
-            <oob>
-                <robot>
-                    <options>
-                        <option> yes </option>
-                        <option> no </option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>WHAT EMOTIONS DID YOU FEEL WHEN YOU LOOKED AT THAT PAINTING?</that>
         <template>
             Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
             Are you ready to see another painting?
@@ -1355,11 +1303,9 @@
             Okay. What did you think?
             <oob>
                 <robot>
-                    <image>
-                        <video>
-                            <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=sOkQE7m31Pw -->
-                        </video>
-                    </image>
+                    <video>
+                        <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=sOkQE7m31Pw -->
+                    </video>
                 </robot>
             </oob>
         </template>
@@ -1398,11 +1344,13 @@
         <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
         <template>
             Excellent!
-            <!-- INSERT CLIP. -->
             Tell me what you think.
 
             <oob>
                 <robot>
+                    <video>
+                        <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=sOkQE7m31Pw -->
+                    </video>
                 </robot>
             </oob>
         </template>
