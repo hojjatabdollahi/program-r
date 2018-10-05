@@ -1257,43 +1257,6 @@
         </template>
     </category>
 
-
-    <!-- WHEN TRYING TO GET HERE GETTING
-    'SENTENCE' OBJECT IS NOT ITERABLE
-    <category>
-        <pattern>*</pattern>
-        <that>HOW DID YOU LIKE GROWING UP THERE?</that>
-        <template>
-            <think>
-                <set name = "data"> <star/> </set>
-            </think>
-            <condition name="getsentiment">
-                <li value="verypositive">
-                    I imagine you have great memories from there. One of my favorite memories is watching birds in Aspen in the spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
-                </li>
-                <li value="positive">
-                    I imagine you have great memories from there. One of my favorite memories is watching birds in Aspen in the spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
-                </li>
-                <li value="neutral">
-                    I see. One of my favorite memories is watching birds in Aspen in the spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
-                </li>
-                <li value="negative">
-                    I imagine you may have sad memories from there. One of my favorite memories is watching birds in Aspen in the spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
-                </li>
-                <li value="verynegative">
-                    I imagine you may have sad memories from there. One of my favorite memories is watching birds in Aspen in the spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
-                </li>
-            </condition>
-        </template>
-    </category>
-
-    -->
-
     <category>
         <pattern># SUMMER ^</pattern>
         <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>

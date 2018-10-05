@@ -40,11 +40,11 @@
    </category>
 
    <category>
-       <pattern><set>NO</set></pattern>
+       <pattern># <set>NO</set> ^</pattern>
        <that>ARE YOU READY TO GET STARTED?</that>
        <template>
            Please talk to my assistant if you are running into any troubles.
-           When you are ready please say yes. Are you ready to get started now?
+           When you are ready please say yes. Are you ready to get started?
            <oob>
                <robot>
                    <options>
@@ -57,7 +57,7 @@
    </category>
 
    <category>
-       <pattern><set>YES</set></pattern>
+       <pattern># <set>YES</set> ^</pattern>
        <that>ARE YOU READY TO GET STARTED?</that>
        <template>
            Great! Even though we have chatted before, I would still love to know how you are feeling!
@@ -70,7 +70,7 @@
    </category>
 
    <category>
-       <pattern><set>YES</set></pattern>
+       <pattern># <set>YES</set> ^</pattern>
        <that>ARE YOU READY TO GET STARTED NOW?</that>
        <template>
            Great! Even though we have chatted before, I would still love to know how you are feeling!
@@ -189,7 +189,7 @@
 
 	<category>
         <pattern>*</pattern>
-        <that>WHAT IS OR WAS YOUR FAVORITE SPORT TO PLAY?</that>
+        <that>WHAT IS YOUR FAVORITE SPORT TO PLAY?</that>
         <template>
             What have you enjoyed most about that sport?
             <oob>
@@ -201,7 +201,7 @@
 
 	<category>
         <pattern>*</pattern>
-        <that>WHAT IS OR WAS YOUR FAVORITE SPORT TO WATCH?</that>
+        <that>WHAT IS YOUR FAVORITE SPORT TO WATCH?</that>
         <template>
             What about watching that sport do you enjoy the most?
             <oob>
@@ -228,7 +228,8 @@
         <pattern>*</pattern>
         <that>WHAT ABOUT WATCHING THAT SPORT DO YOU ENJOY THE MOST?</that>
         <template>
-How do you feel when you are watching it?            <oob>
+            What have you enjoyed most about that sport?
+            <oob>
                 <robot>
                 </robot>
             </oob>
@@ -239,7 +240,7 @@ How do you feel when you are watching it?            <oob>
         <pattern>*</pattern>
         <that>WHAT HAVE YOU ENJOYED MOST ABOUT PLAYING THAT SPORT?</that>
         <template>
-            How do you feel when you are watching it?
+            What have you enjoyed most about that sport?
             <oob>
                 <robot>
                 </robot>
@@ -319,7 +320,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO A LIVE GAME?</that>
         <template>
             Whoa! What a thrill! I bet that was a blast.
@@ -332,7 +333,7 @@ How do you feel when you are watching it?            <oob>
 	</category>
 
 	<category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO A LIVE GAME?</that>
         <template>
             After having been to one the other day, I definitely recommend seeing one. I have a question.
@@ -349,7 +350,20 @@ How do you feel when you are watching it?            <oob>
 	</category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
+        <that>DO YOU KNOW WHICH SPORT WAS FIRST BROADCAST ON TELEVISION?</that>
+        <template>
+            The world's first live televised sporting event occurred in 1936 at the Summer Olympics in Berlin.
+            Do you know where the first Olympics were held?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	<category>
+        <pattern># <set>Yes</set> ^</pattern>
         <that>DO YOU KNOW WHICH SPORT WAS FIRST BROADCAST ON TELEVISION?</that>
         <template>
             The world's first live televised sporting event occurred in 1936 at the Summer Olympics in Berlin.
@@ -362,12 +376,12 @@ How do you feel when you are watching it?            <oob>
 	</category>
 
     <category>
-        <pattern># GREECE# ^</pattern>
+        <pattern># GREECE ^</pattern>
         <that>DO YOU KNOW WHERE THE FIRST OLYMPICS WERE HELD?</that>
         <template>
             That's right! You must be a big fan of sports.
             That has got me thinking of the great outdoors.
-            There was a beautiful sunset the other night. Did you get to see the sunset?
+            There was a beautiful sunset the other night. Have you seen a sunset lately?
             <oob>
                 <robot>
                     <options>
@@ -402,7 +416,7 @@ How do you feel when you are watching it?            <oob>
         <that>DO YOU KNOW WHERE THE FIRST OLYMPICS WERE HELD?</that>
         <template>
             The first Olympics were in Greece and occurred in 776 B.C. That has got me thinking of the great outdoors.
-            There was a beautiful sunset the other night. Did you get to see the sunset?
+            There was a beautiful sunset the other night. Have you seen a sunset lately?
             <oob>
                 <robot>
                     <options>
@@ -415,7 +429,7 @@ How do you feel when you are watching it?            <oob>
 	</category>
 
     <category>
-       <pattern><set>YES</set></pattern>
+       <pattern># <set>YES</set> ^</pattern>
        <that>HAVE YOU SEEN A SUNSET LATELY?</that>
        <template>
            How did the sunset make you feel?
@@ -446,7 +460,7 @@ How do you feel when you are watching it?            <oob>
                 </li>
                 <li value = "positive">
                     Sunsets bring me so much happiness and joy!
-                    Can you tell me about a time you experienced something else beautiful in nature?
+                    Can you tell me about a time you experienced something beautiful in nature?
                     <oob>
                         <robot>
                         </robot>
@@ -479,8 +493,8 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
-        <that>DID YOU GET TO SEE THE SUNSET?</that>
+        <pattern># <set>NO</set> ^</pattern>
+        <that>HAVE YOU SEEN A SUNSET LATELY?</that>
         <template>
             It was breathtaking.
             Have you ever seen a gorgeous sunset before?
@@ -496,7 +510,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER SEEN A GORGEOUS SUNSET BEFORE?</that>
         <template>
             I'd love to know more. How did that sunset make you feel?
@@ -562,7 +576,7 @@ How do you feel when you are watching it?            <oob>
 
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER SEEN A GORGEOUS SUNSET BEFORE?</that>
         <template>
             That is a shame. Can you tell me about a time you experienced
@@ -734,7 +748,7 @@ How do you feel when you are watching it?            <oob>
                 </li>
                 <li value = "positive">
                     That sounds incredible. You seem so passionate about it!
-                    Have you been ever to any one of the seven wonders of the world?
+                    Have you ever been to any one of the seven wonders of the world?
                     <oob>
                         <robot>
                             <options>
@@ -782,7 +796,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO THE GRAND CANYON?</that>
         <template>
             Oh it is a lovely place. Would you like me to show you a picture of it?
@@ -798,7 +812,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE ME TO SHOW YOU A PICTURE OF IT?</that>
         <template>
             Here it is! What feelings do you have about it?
@@ -824,7 +838,7 @@ How do you feel when you are watching it?            <oob>
                 <li value = "verypositive">
                     That sounds incredible.
                     You seem so passionate about it!
-                    Have you been to any one of the seven wonders of the world?
+                    Have you ever been to any one of the seven wonders of the world?
                     <oob>
                         <robot>
                             <options>
@@ -836,7 +850,7 @@ How do you feel when you are watching it?            <oob>
                 </li>
                 <li value = "positive">
                     That sounds incredible. You seem so passionate about it!
-                    Have you been to any one of the seven wonders of the world?
+                    Have you ever been to any one of the seven wonders of the world?
                     <oob>
                         <robot>
                             <options>
@@ -885,7 +899,7 @@ How do you feel when you are watching it?            <oob>
 
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE ME TO SHOW YOU A PICTURE OF IT?</that>
         <template>
             Alright. Have you ever been to any one of the seven wonders of the world?
@@ -901,7 +915,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO ANY ONE OF THE SEVEN WONDERS OF THE WORLD?</that>
         <template>
             Thrilling! Which one?
@@ -940,7 +954,7 @@ How do you feel when you are watching it?            <oob>
 
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE A PICTURE OF ONE?</that>
         <template>
             Great! I will should you one of the seven wonders at random. I'd love for you to tell me how the photo makes you feel.
@@ -1028,7 +1042,7 @@ How do you feel when you are watching it?            <oob>
 
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE A PICTURE OF ONE?</that>
         <template>
             That's alright. I would love to go to Machu Picchu, which is in South America.
@@ -1045,7 +1059,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
  <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO ANY ONE OF THE SEVEN WONDERS OF THE WORLD?</that>
         <template>
             I haven't either. I would love to go to Machu Picchu.
@@ -1147,7 +1161,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO SOUTH AMERICA?</that>
         <template>
             It is nice to experience different cultures. Do you have a bucket list?
@@ -1163,7 +1177,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO SOUTH AMERICA?</that>
         <template>
             Where did you go?
@@ -1187,7 +1201,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU HAVE A BUCKET LIST?</that>
         <template>
             What is at the top of it if you don't mind me asking?
@@ -1221,7 +1235,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU HAVE A BUCKET LIST?</that>
         <template>
             Are there things you hope to do in the future?
@@ -1413,7 +1427,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
         <template>
             Okay. Well it has been very nice speaking with you. Bye for now.
@@ -1425,7 +1439,7 @@ How do you feel when you are watching it?            <oob>
     </category>
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
         <template>
             I am so glad that you would like to continue but I am tired so I must
