@@ -1114,6 +1114,20 @@
 
 <!-- ROMANCE -->
 
+
+    <category>
+        <pattern>test1</pattern>
+        <that>WHAT WOULD YOU CHOOSE?</that>
+        <template>
+            This worked!!
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
    <category>
        <pattern># ROMANCE ^</pattern>
        <that>WHAT WOULD YOU CHOOSE?</that>
@@ -1224,80 +1238,6 @@
 	</category>
 
 
-<!-- SENTIMENT EIGHT -->
-
-   <category>
-       <pattern>*</pattern>
-       <that>HOW DID THAT PREVIEW MAKE YOU FEEL?</that>
-       <template>
-           <think>
-               <set name = "data"> <star/> </set>
-           </think>
-           <condition name="getsentiment">
-               <li value = "verypositive">
-                   I am very glad that the video made you feel good! Would you like to talk about history?
-                   <oob>
-                       <robot>
-                           <options>
-                               <option>yes</option>
-                               <option>no</option>
-                           </options>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "positive">
-                   I am very glad that the video made you feel good! Would you like to talk about history?
-                   <oob>
-                       <robot>
-                           <options>
-                               <option>yes</option>
-                               <option>no</option>
-                           </options>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "neutral">
-                   Okay. Would you like to talk about history?
-                   <oob>
-                       <robot>
-                           <options>
-                               <option>yes</option>
-                               <option>no</option>
-                           </options>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "negative">
-                   I understand that sometimes videos can elicit sadness in humans.
-                   Would you like to talk about history?
-                   <oob>
-                       <robot>
-                           <options>
-                               <option>yes</option>
-                               <option>no</option>
-                           </options>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "verynegative">
-                   I understand that sometimes videos can elicit sadness in humans.
-                   Would you like to talk about history?
-                   <oob>
-                       <robot>
-                           <options>
-                               <option>yes</option>
-                               <option>no</option>
-                           </options>
-                       </robot>
-                   </oob>
-               </li>
-           </condition>
-       </template>
-   </category>
-
-
-
-    <!-- CRIME -->
     <category>
         <pattern># CRIME ^</pattern>
         <that>WHAT WOULD YOU CHOOSE?</that>
@@ -1311,7 +1251,7 @@
         </template>
     </category>
 
-	<category>
+    <category>
        <pattern>*</pattern>
        <that> WHAT ABOUT READING CRIME NOVELS DO YOU ENJOY THE MOST?</that>
        <template>
@@ -1521,44 +1461,6 @@
 
 
 
-    <!-- GETTING STUCK HERE BUT WHY???
-
-    <category>
-        <pattern># <set>YES</set> ^</pattern>
-        <that>WOULD YOU LIKE TO TALK ABOUT HISTORY?</that>
-        <template>
-            I am fascinated by American history.
-            Which president would you consider to be your favorite?
-            <oob>
-                <robot>
-                    <options>
-                        <option>Pick a president</option>
-                        <option>I do not like any presidents</option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>WOULD YOU LIKE TO TALK ABOUT HISTORY?</that>
-        <template>
-            Well why dwell on the past when the future awaits us.
-            Of the following, which is your favorite holiday Christmas, Hanukkah, or Thanksgiving?
-            <oob>
-                <robot>
-                    <options>
-                        <option>Christmas</option>
-                        <option>Hanukkah</option>
-                        <option>Thanksgiving</option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    -->
 
 	<category>
        <pattern>*</pattern>
@@ -1980,8 +1882,85 @@
        </template>
    </category>
 
+<!-- SENTIMENT EIGHT -->
+
+   <category>
+       <pattern>*</pattern>
+       <that>HOW DID THAT PREVIEW MAKE YOU FEEL?</that>
+       <template>
+           <think>
+               <set name = "data"> <star/> </set>
+           </think>
+           <condition name="getsentiment">
+               <li value = "verypositive">
+                   I am very glad that the video made you feel good! Would you like to talk about history?
+                   <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                   </oob>
+               </li>
+               <li value = "positive">
+                   I am very glad that the video made you feel good! Would you like to talk about history?
+                   <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                   </oob>
+               </li>
+               <li value = "neutral">
+                   Okay. Would you like to talk about history?
+                   <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                   </oob>
+               </li>
+               <li value = "negative">
+                   I understand that sometimes videos can elicit sadness in humans.
+                   Would you like to talk about history?
+                   <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                   </oob>
+               </li>
+               <li value = "verynegative">
+                   I understand that sometimes videos can elicit sadness in humans.
+                   Would you like to talk about history?
+                   <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                   </oob>
+               </li>
+           </condition>
+       </template>
+   </category> <!-- NOTHING IN THE FILE IS GETTING MATCHED BEYOND THIS POINT. BUT WHY????? -->
+
+
+
+   <!-- CRIME -->
+
+
+
+
+
     </topic>
 
 </aiml>
-
-

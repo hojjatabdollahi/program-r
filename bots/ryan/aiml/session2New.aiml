@@ -479,7 +479,7 @@
 	    <that>DO YOU AGREE WITH THAT IDEA?</that>
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
-	        It seems that you have thought about this a lot too! What would you say are some benefits of technology?
+	        What would you say are some benefits of technology?
 	        <oob>
                 <robot>
                 </robot>
@@ -492,7 +492,7 @@
 	    <that>DO YOU AGREE WITH THAT IDEA?</that>
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
-	        It seems that you have thought about this a lot too! Do you think that technology could potentially cause harm?
+	        Do you think that technology could potentially cause harm?
 	        <oob>
                 <robot>
                 </robot>

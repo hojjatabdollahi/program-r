@@ -1225,7 +1225,6 @@
 
     <!-- BRANCHES TO TALK ABOUT THE SEASONS -->
 
-
     <category>
         <pattern>*</pattern>
         <that>HOW DID YOU LIKE GROWING UP THERE?</that>
@@ -1242,7 +1241,42 @@
                     I imagine you have great memories from there. One of my favorite memories is watching birds in Aspen in the spring.
                     Do you enjoy the summer, fall, spring, or winter most?
                 </li>
+                <li value="neutral">
+                    I see. One of my favorite memories is watching birds in Aspen in the spring.
+                    Do you enjoy the summer, fall, spring, or winter most?
+                </li>
+                <li value="negative">
+                    I image you may have sad memories from there. One of my favorite memories is watching birds in Aspen in the spring.
+                    Do you enjoy the summer, fall, spring, or winter most?
+                </li>
+                <li value="verynegative">
+                    I image you may have sad memories from there. One of my favorite memories is watching birds in Aspen in the spring.
+                    Do you enjoy the summer, fall, spring, or winter most?
+                </li>
+            </condition>
+        </template>
+    </category>
+
+
+    <!-- WHEN TRYING TO GET HERE GETTING
+    'SENTENCE' OBJECT IS NOT ITERABLE
+    <category>
+        <pattern>*</pattern>
+        <that>HOW DID YOU LIKE GROWING UP THERE?</that>
+        <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    I imagine you have great memories from there. One of my favorite memories is watching birds in Aspen in the spring.
+                    Do you enjoy the summer, fall, spring, or winter most?
+                </li>
                 <li value="positive">
+                    I imagine you have great memories from there. One of my favorite memories is watching birds in Aspen in the spring.
+                    Do you enjoy the summer, fall, spring, or winter most?
+                </li>
+                <li value="neutral">
                     I see. One of my favorite memories is watching birds in Aspen in the spring.
                     Do you enjoy the summer, fall, spring, or winter most?
                 </li>
@@ -1257,6 +1291,8 @@
             </condition>
         </template>
     </category>
+
+    -->
 
     <category>
         <pattern># SUMMER ^</pattern>
@@ -1438,7 +1474,7 @@
     </category>
 
     <category>
-        <pattern># SITTING BY THE FIRE ^</pattern>
+        <pattern># FIRE ^</pattern>
         <that>DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
             I must say that does sound quite nice. You seem like a very interesting person. How would you describe yourself?
@@ -1981,6 +2017,18 @@
                 </robot>
             </oob>
          </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>DOES THAT SOUND GOOD TO YOU?</that>
+        <template>
+            Okay. Well it has been very nice speaking with you. Bye for now.
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
 
