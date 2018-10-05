@@ -61,11 +61,17 @@ class EventBotClient(BotClient):
         return question
 
 
-    def dictionary_of_response(self, response, sentiment, robot):
+    def dictionary_of_response(self, client_context, response):
         answer = ""
         image_filename = ""
         duration = ""
         video_filename = ""
+
+        if client_context.bot.conversations[client_context.userid].answers:
+            robot = client_context.bot.conversations[client_context.userid].answers[-1].robot["robot"]
+        else:
+            robot = None
+
         if robot:
 
             if robot is not None and "options" in robot and "option" in robot['options']:
@@ -82,6 +88,15 @@ class EventBotClient(BotClient):
 
             if robot is not None and "video" in robot and "filename" in robot["video"]:
                 video_filename = robot["video"]["filename"]
+
+
+        if len(client_context.bot.sentiment.values) > 0:
+            try:
+                sentiment = client_context.bot.sentiment.final_sentiment_values[-1]
+            except Exception as exep:
+                sentiment = None
+        else:
+            sentiment = None
 
 
         return {"conversation":

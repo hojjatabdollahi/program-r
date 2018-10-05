@@ -17,6 +17,9 @@ class GetSentiment(DynamicVariable):
             YLogger.exception(self, "sentiment analysis module broke", exception)
             raise exception
 
+        sentiment_value = None
+        final_sentiment_value = None
+
         if bot.facial_expression_recognition is not None:
             if len(bot.facial_expression_recognition.values):
                 last_fer_value = bot.facial_expression_recognition.last_fer_value
@@ -41,9 +44,21 @@ class GetSentiment(DynamicVariable):
                 else:
                     sentiment = "negative"
 
-                bot.sentiment.append_sentiment(sentiment_value)
-                bot.sentiment.append_sentiment_distribution(sentiment_distribution)
-                bot.sentiment.append_final_sentiment(final_sentiment_value)
+        else:
+            if sentiment == "positive":
+                sentiment_value = 1
+                final_sentiment_value = 1
+            elif sentiment == "neutral":
+                sentiment_value = 0
+                final_sentiment_value = 0
+            elif sentiment == "negative":
+                sentiment_value = -1
+                final_sentiment_value = -1
+
+
+        bot.sentiment.append_sentiment(sentiment_value)
+        bot.sentiment.append_sentiment_distribution(sentiment_distribution)
+        bot.sentiment.append_final_sentiment(final_sentiment_value)
 
 
         print(sentiment)

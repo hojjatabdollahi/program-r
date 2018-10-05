@@ -43,7 +43,6 @@ class ConversationFileStorage(ConversationStorage):
         #client_context.userid
         #client_context.bot.conversations["Console"].questions[-1].sentences[0].words
         #client_context.bot.conversations['Console'].properties
-        #todo save conversation based on some standard
         userid = client_context.userid
         bot_properties = client_context.bot.conversations[userid].properties
         questions = client_context.bot.conversations[userid].questions
