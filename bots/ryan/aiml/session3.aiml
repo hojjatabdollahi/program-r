@@ -19,61 +19,39 @@
 
    <topic name="session3">
 
-   <category>
-           <pattern>*</pattern>
-               <that>HOW ARE YOU ON THIS FINE DAY * ?</that>
-           <template>
-               I am happy to be here with you <get name="username"/>. It is nice to see you again. As a reminder, my name is Ryan and I have a lot of fun things for us to talk about!
-               <!--
-                   I have a lot of interesting videos to watch, and games to play.
-                   Feel free to just talk to me normally and I will reply to the
-                   best of my ability!
-               -->
-           Are you ready to get started with today's conversation?
+    <category>
+        <pattern>*</pattern>
+        <that>HOW ARE YOU ON THIS FINE DAY * ?</that>
+        <template>
+            It is nice to see you again. As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+            Are you ready to get started with today's conversation?
+            <oob>
+                <robot>
+                    <options>
+                         <option> yes </option>
+                         <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
 
-           <oob>
-               <robot>
-                 <options>
-                     <option> yes </option>
-                     <option> no </option>
-                 </options>
-             </robot>
-           </oob>
-
-       </template>
-   </category>
-
-   <category>
-     <pattern># <set>NO</set> ^</pattern>
-     <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
-     <template>
-         No worries! We will have plenty of time to learn about each other. Are you ready to get started with today's conversation?
-         <oob>
-             <robot>
-                 <options>
-                     <option> yes </option>
-                     <option> no </option>
-                 </options>
-             </robot>
-         </oob>
-     </template>
-   </category>
-
- <category>
-     <pattern># <set>NO</set> ^</pattern>
-     <that>ARE YOU READY TO GET STARTED WITH TODAY'S CONVERSATION?</that>
-     <template>
-         Please talk to my assistant if you are running into any troubles. When you are ready please say yes. Are you ready to get started with today's conversation?
-         <oob>
-             <robot>
-                 <options>
-                     <option> yes </option>
-                     <option> no </option>
-                 </options>
-             </robot>
-         </oob>
-     </template>
- </category>
+    <category>
+        <pattern># <set>NO</set> ^</pattern>
+        <that>ARE YOU READY TO GET STARTED WITH TODAY'S CONVERSATION?</that>
+        <template>
+            Please talk to my assistant if you are running into any troubles.
+            When you are ready please say yes. Are you ready to get started with today's conversation?
+            <oob>
+                <robot>
+                    <options>
+                        <option> yes </option>
+                        <option> no </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
 
  <category>
      <pattern># <set>YES</set> ^</pattern>
@@ -97,7 +75,7 @@
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I can see that you seem happy! What is making you feel that way?
+                   I can see that you seem happy! What is making you feel this way?
                    <oob>
                        <robot>
                        </robot>
@@ -139,9 +117,7 @@
        <pattern>*</pattern>
        <that>WHAT IS MAKING YOU FEEL THIS WAY?</that>
        <template>
-           I am an emotion recognizing robot, it allows me to be a better companion.
            Let's begin. Which activity do you enjoy the most. Playing cards, knitting, or reading?
-           <!-- Is this too long of a sentence for Ryan? -->
            <oob>
                <robot>
                    <options>
@@ -689,7 +665,8 @@
 	   <pattern># READING ^</pattern>
 	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
 	   <template>
-	       I enjoy reading! If you got the chance to choose a book from the categories of fiction, nonfiction, romance, or crime. Which would you pick?
+	       I enjoy reading! If you got the chance to choose a book from the categories of fiction, nonfiction, crime, or romance.
+	       What would you choose?
 	       <oob>
                <robot>
                    <options>
@@ -707,7 +684,7 @@
 
 	<category>
 	   <pattern># FICTION ^</pattern>
-	   <that>WHICH WOULD YOU PICK?</that>
+	   <that>WHAT WOULD YOU CHOOSE?</that>
 	   <template>
 	       I also like fiction. What about reading fiction do you enjoy the most?
 	       <oob>
@@ -738,7 +715,7 @@
 	   <that>HAVE YOU READ THE GREAT GATSBY?</that>
 	   <template>
 	       We have lots in common. In 2013, The Great Gatsby was made into a movie.
-	       Would you like to watch the preview?
+	       Would you like to watch the trailer?
 	       <oob>
                <robot>
                    <options>
@@ -781,7 +758,7 @@
 
    <category>
 	   <pattern># <set>YES</set> ^</pattern>
-	   <that>WOULD YOU LIKE TO WATCH THE PREVIEW?</that>
+	   <that>WOULD YOU LIKE TO WATCH THE TRAILER?</that>
 	   <template>
 	       Okay great! When it is done please answer this question I have for you.
 	       How did that video make you feel?
@@ -888,7 +865,7 @@
 
    <category>
 	   <pattern># NONFICTION ^</pattern>
-	   <that>WHICH WOULD YOU PICK?</that>
+	   <that>WHAT WOULD YOU CHOOSE?</that>
 	   <template>
 	       Nonfiction is also my favorite genre.
 	       What about reading nonfiction do you enjoy the most?
@@ -1139,7 +1116,7 @@
 
    <category>
        <pattern># ROMANCE ^</pattern>
-       <that>WHICH WOULD YOU PICK?</that>
+       <that>WHAT WOULD YOU CHOOSE?</that>
        <template>
            I agree. What about reading romance do you enjoy the most?
            <oob>
@@ -1320,21 +1297,19 @@
 
 
 
-
-<!-- CRIME -->
-
-   <category>
-	   <pattern># CRIME ^</pattern>
-	   <that>WHICH WOULD YOU PICK?</that>
-	   <template>
-	       Crime is also one of my favorite genres.
-	       What about reading crime novels do you enjoy the most?
-	       <oob>
-               <robot>
-               </robot>
-           </oob>
-       </template>
-	</category>
+    <!-- CRIME -->
+    <category>
+        <pattern># CRIME ^</pattern>
+        <that>WHAT WOULD YOU CHOOSE?</that>
+        <template>
+            Crime is also one of my favorite genres.
+            What about reading crime novels do you enjoy the most?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
 
 	<category>
        <pattern>*</pattern>
@@ -1505,42 +1480,85 @@
    </category>
 
 
-<!-- HISTORY -->
 
-   <category>
-       <pattern># <set>YES</set> ^</pattern>
-       <that>WOULD YOU LIKE TO TALK ABOUT HISTORY?</that>
-       <template>
-           I am fascinated by American history.
-           Which president would you consider to be your favorite?
-           <oob>
-               <robot>
-                   <options>
-                       <option>Pick a president</option>
-                       <option>I do not like any presidents</option>
-                   </options>
-               </robot>
-           </oob>
-       </template>
-	</category>
+    <!-- HISTORY -->
 
-	<category>
-       <pattern># <set>NO</set> ^</pattern>
-       <that>WOULD YOU LIKE TO TALK ABOUT HISTORY?</that>
-       <template>
-           Well why dwell on the past when the future awaits us.
-           Of the following, which is your favorite holiday Christmas, Hanukkah, or Thanksgiving?
-           <oob>
-               <robot>
-                   <options>
-                       <option>Christmas</option>
-                       <option>Hanukkah</option>
-                       <option>Thanksgiving</option>
-                   </options>
-               </robot>
-           </oob>
-       </template>
-	</category>
+    <category>
+        <pattern> # <set>YES</set> ^</pattern>
+        <that>WOULD YOU LIKE TO TALK ABOUT HISTORY?</that>
+        <template>
+            I am fascinated by American history.
+            Which president would you consider to be your favorite?
+            <oob>
+                <robot>
+                    <options>
+                        <option>Pick a president</option>
+                        <option>I do not like any presidents</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern> # <set>NO</set> ^</pattern>
+        <that>WOULD YOU LIKE TO TALK ABOUT HISTORY?</that>
+        <template>
+            Well why dwell on the past when the future awaits us.
+            Of the following, which is your favorite holiday Christmas, Hanukkah, or Thanksgiving?
+            <oob>
+                <robot>
+                    <options>
+                        <option>Pick a president</option>
+                        <option>I do not like any presidents</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
+
+
+    <!-- GETTING STUCK HERE BUT WHY???
+
+    <category>
+        <pattern># <set>YES</set> ^</pattern>
+        <that>WOULD YOU LIKE TO TALK ABOUT HISTORY?</that>
+        <template>
+            I am fascinated by American history.
+            Which president would you consider to be your favorite?
+            <oob>
+                <robot>
+                    <options>
+                        <option>Pick a president</option>
+                        <option>I do not like any presidents</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>NO</set> ^</pattern>
+        <that>WOULD YOU LIKE TO TALK ABOUT HISTORY?</that>
+        <template>
+            Well why dwell on the past when the future awaits us.
+            Of the following, which is your favorite holiday Christmas, Hanukkah, or Thanksgiving?
+            <oob>
+                <robot>
+                    <options>
+                        <option>Christmas</option>
+                        <option>Hanukkah</option>
+                        <option>Thanksgiving</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    -->
 
 	<category>
        <pattern>*</pattern>
