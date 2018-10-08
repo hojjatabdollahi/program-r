@@ -29,7 +29,7 @@
         <that>HOW HAVE YOU BEEN * ?</that>
         <template>
             Its nice to see you again <get name="username"/>.
-            Just a reminder, I am Ryan and I am a companion robot here to visit with you.
+            Just a reminder, I am Ryan and I am a companion robot.
             To check in quickly. How are you feeling about this so far?
             <oob>
                 <robot>
@@ -87,7 +87,7 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I am sorry that this experience hasn't been positive! I am hoping that we can change that.
+                    I am sorry that this experience hasn't been positive! Hopefully we can change that.
                     I am a huge fan of science and art. Which do you prefer science or art?
                     <oob>
                         <robot>
@@ -99,7 +99,7 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I am sorry that this experience hasn't been positive! I am hoping that we can change that.
+                    I am sorry that this experience hasn't been positive! Hopefully we can change that.
                     I am a huge fan of science and art. Which do you prefer science or art?
                     <oob>
                         <robot>
