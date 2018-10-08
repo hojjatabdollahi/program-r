@@ -54,3 +54,7 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
             sentiment_analysis = self._sentiment_analysis.load_config_section(configuration_file, nlp, bot_root)
         else:
             YLogger.warning(self, "Config section [services] missing from Brain, no nlp loaded")
+
+
+    def to_yaml(self, data, defaults=True):
+        data['classname'] = self._classname

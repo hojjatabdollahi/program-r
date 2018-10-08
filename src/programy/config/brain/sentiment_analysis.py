@@ -39,3 +39,16 @@ class BrainSentimentAnalysisConfiguration(BaseConfigurationData):
             self._alpha = configuration_file.get_float_option(sentiment_analysis, "alpha", missing_value=0.0)
         else:
             YLogger.warning(self, "'sentiment_analysis' section missing from bot config, using defaults")
+
+
+    def to_yaml(self, data, defaults=True):
+        if defaults:
+            data['method'] = "corenlp"
+            data['positive_threshold'] = 0.2
+            data['negative_threshold'] = -0.2
+            data['alpha'] = 0.1
+        else:
+            data['method'] = self._method
+            data['positive_threshold'] = self._positive_thresehold
+            data['negative_threshold'] = self._negative_threshold
+            data['alpha'] = self._alpha

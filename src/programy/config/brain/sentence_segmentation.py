@@ -21,11 +21,8 @@ class BrainSentenceSegmentationConfiguration(BaseConfigurationData):
         else:
             YLogger.warning(self, "'sentence_segmentation' section missing from bot config, using defaults")
 
-    # def to_yaml(self, data, defaults=True):
-    #     if defaults is True:
-    #         data['classname'] = "programy.parser.tokenizer.Tokenizer"
-    #         data['split_chars'] = ' '
-    #     else:
-    #         data['classname'] = self._classname
-    #         data['split_chars'] = self._split_chars
-
+    def to_yaml(self, data, defaults=True):
+        if defaults is True:
+            data['libname'] = "spacy"
+        else:
+            data['libname'] = self._libname

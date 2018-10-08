@@ -127,25 +127,26 @@ class EventBotClient(BotClient):
         pass
 
     def run(self):
-        #todo refactor to move this out of here
-        root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-        filepath = os.path.join(root, "bots//ryan//config.yaml")
-        with open(filepath, encoding="utf-8") as file_reader:
-            self._yaml_dict = yaml.load(file_reader)
+        raise NotImplementedError("You must override this and implement the logic")
+        # root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
+        # filepath = os.path.join(root, "bots//ryan//config.yaml")
+        # with open(filepath, encoding="utf-8") as file_reader:
+        #     self._yaml_dict = yaml.load(file_reader)
+        #
+        # worker_running = self._yaml_dict["broker"]["running"]
+        #
+        # if self.arguments.noloop is False:
+        #     YLogger.info(self, "Entering conversation loop...")
+        #
+        #     self.prior_to_run_loop()
+        #
+        #     if worker_running:
+        #         self.worker_run_loop()
+        #     else:
+        #         self.run_loop()
+        #
+        #     self.post_run_loop()
+        #
+        # else:
+        #     YLogger.debug(self, "noloop set to True, exiting...")
 
-        worker_running = self._yaml_dict["broker"]["running"]
-
-        if self.arguments.noloop is False:
-            YLogger.info(self, "Entering conversation loop...")
-
-            self.prior_to_run_loop()
-
-            if worker_running:
-                self.worker_run_loop()
-            else:
-                self.run_loop()
-
-            self.post_run_loop()
-
-        else:
-            YLogger.debug(self, "noloop set to True, exiting...")
