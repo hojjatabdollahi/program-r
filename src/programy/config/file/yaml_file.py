@@ -63,6 +63,13 @@ class YamlConfigurationFile(BaseConfigurationFile):
             YLogger.warning(self, "Missing value for [%s] in config, return default value %d", option_name, missing_value)
             return missing_value
 
+    def get_float_option(self, section, option_name, missing_value=0.0):
+        if option_name in section:
+            return float(section[option_name])
+        else:
+            YLogger.warning(self, "Missing value for [%s] in config, return default value %d", option_name, missing_value)
+            return missing_value
+
     def get_multi_option(self, section, option_name, missing_value=None):
 
         if missing_value is None:

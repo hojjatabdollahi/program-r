@@ -23,6 +23,7 @@ class BotConfiguration(BaseContainerConfigurationData):
     DEFAULT_MAX_SEARCH_TIMEOUT = -1
     DEFAULT_TAB_PARSE_OUTPUT = True
     DEFAULT_REPHRASE_FILE = None
+    DEFAULT_EMOTIVE = True
 
     def __init__(self, section_name="bot"):
 
@@ -45,6 +46,7 @@ class BotConfiguration(BaseContainerConfigurationData):
         self._max_search_timeout = BotConfiguration.DEFAULT_MAX_SEARCH_TIMEOUT
         self._tab_parse_output = BotConfiguration.DEFAULT_TAB_PARSE_OUTPUT
         self._rephrase_sentences_file = BotConfiguration.DEFAULT_REPHRASE_FILE
+        self._emotive = BotConfiguration.DEFAULT_EMOTIVE
         self._spelling = BotSpellingConfiguration()
         self._conversations = BotConversationsConfiguration()
 
@@ -82,6 +84,7 @@ class BotConfiguration(BaseContainerConfigurationData):
                                                                         BotConfiguration.DEFAULT_TAB_PARSE_OUTPUT)
             self._rephrase_sentences_file = configuration_file.get_option(bot, "rephrase_sentences_file",
                                                                           BotConfiguration.DEFAULT_REPHRASE_FILE)
+            self._emotive = configuration_file.get_bool_option(bot, "emotive", BotConfiguration.DEFAULT_EMOTIVE)
 
             self._spelling.load_config_section(configuration_file, bot, bot_root)
             self._conversations.load_config_section(configuration_file, bot, bot_root)
@@ -212,6 +215,10 @@ class BotConfiguration(BaseContainerConfigurationData):
         return self._rephrase_sentences_file
 
     @property
+    def emotive(self):
+        return self._emotive
+
+    @property
     def spelling(self):
         return self._spelling
 
@@ -235,5 +242,7 @@ class BotConfiguration(BaseContainerConfigurationData):
         data['max_search_depth'] = self.max_search_depth
         data['max_search_timeout'] = self.max_search_timeout
         data['tab_parse_output'] = self.tab_parse_output
+        data['rephrase_clauses_file'] = self.rephrase_clauses_file
+        data['emotive'] = self.emotive
         self.config_to_yaml(data, BotSpellingConfiguration(), defaults)
         self.config_to_yaml(data, BotConversationsConfiguration(), defaults)

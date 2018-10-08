@@ -33,6 +33,7 @@ bot:
     empty_string: YEMPTY
     exit_response: So long, and thanks for the fish!
     override_properties: true
+    emotive: true
 
     max_question_recursion: 1000
     max_question_timeout: 60
@@ -192,12 +193,12 @@ brain:
 
     nlp:
       classname: programy.nlp.nlp.NLP
-      corenlp:
-        classname: programy.nlp.corenlp.client.Client
-        ip: "http://localhost"
-        port: 9000
-        jar_dir: libs/stanford-corenlp-full-2018-02-27/*
 
+      sentiment_analysis:
+        method: corenlp
+        alpha: 0.1
+        positive_threshold: 0.2
+        negative_threshold: -0.2
 
       tokenizer:
         libname: spacy
@@ -209,3 +210,10 @@ brain:
       #embedding
       semantic_similarity:
         method: ""
+
+
+      corenlp:
+        classname: programy.nlp.corenlp.client.Client
+        ip: "http://localhost"
+        port: 9000
+        jar_dir: libs/stanford-corenlp-full-2018-02-27/*

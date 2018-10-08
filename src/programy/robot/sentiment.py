@@ -1,6 +1,5 @@
 
 
-
 class Sentiment():
 
     def __init__(self):
@@ -32,13 +31,5 @@ class Sentiment():
 
     def append_final_sentiment(self, final_sentiment):
         self._final_sentiment_values.append(final_sentiment)
-
-    def expected_sentiment_value(self, sentiment_distribution):
-        shorten_sentiment_distribution = [sentiment_distribution[0]+sentiment_distribution[1],
-                                          sentiment_distribution[2],
-                                          sentiment_distribution[3]+ sentiment_distribution[4]]
-        value = -shorten_sentiment_distribution[0] + shorten_sentiment_distribution[2]
-
-        return value
 
 

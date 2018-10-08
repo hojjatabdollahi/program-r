@@ -98,6 +98,10 @@ class EventBotClient(BotClient):
         else:
             sentiment = None
 
+        #todo: added by hojjat, should be fixed
+        if sentiment is None:
+            sentiment = -2.0
+
 
         return {"conversation":
                     {"question": "",

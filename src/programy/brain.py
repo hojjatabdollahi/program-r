@@ -35,13 +35,7 @@ class Brain(object):
         self._bot = bot
         self._configuration = configuration
 
-        #self._tokenizer = self.load_tokenizer()
-
         self.nlp = self.load_nlp()
-        #self._spacy_tokenizer = self.load_spacy_tokenizer()
-
-        self._corenlp = self.load_corenlp()
-
 
         self._aiml_parser = self.load_aiml_parser()
 
@@ -162,9 +156,9 @@ class Brain(object):
     def dynamics(self):
         return self._dynamics_collection
 
-    @property
-    def corenlp(self):
-        return self._corenlp
+    # @property
+    # def corenlp(self):
+    #     return self._corenlp
 
 
     def load_nlp(self):
@@ -176,17 +170,17 @@ class Brain(object):
             return None
 
 
-    def load_corenlp(self,):
-        if self.configuration:
-            if self.configuration.nlp.corenlp.classname:
-                try:
-                    YLogger.info(self, "Loading corenlp from class [%s]", self.configuration.nlp.corenlp.classname)
-                    corenlp = ClassLoader.instantiate_class(self.configuration.nlp.corenlp.classname)
-                    return corenlp(self.configuration.nlp.corenlp)
-                except Exception as excep:
-                    YLogger.exception(self, "Failed to initiate corenlp", excep)
-            else:
-                YLogger.warning(self, "No configuration setting for corenlp")
+    # def load_corenlp(self,):
+    #     if self.configuration:
+    #         if self.configuration.nlp.corenlp.classname:
+    #             try:
+    #                 YLogger.info(self, "Loading corenlp from class [%s]", self.configuration.nlp.corenlp.classname)
+    #                 corenlp = ClassLoader.instantiate_class(self.configuration.nlp.corenlp.classname)
+    #                 return corenlp(self.configuration.nlp.corenlp)
+    #             except Exception as excep:
+    #                 YLogger.exception(self, "Failed to initiate corenlp", excep)
+    #         else:
+    #             YLogger.warning(self, "No configuration setting for corenlp")
 
 
     # def load_sentence_segmentation(self):
