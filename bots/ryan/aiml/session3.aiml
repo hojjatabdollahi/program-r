@@ -289,11 +289,9 @@
 	       How do you feel when you watch that card trick?
 	       <oob>
                <robot>
-                   <image>
-                       <video>
-                           <!-- need to convert this video into a .mp4 file: https://www.youtube.com/watch?v=rB0wzy-xbwM -->
-                       </video>
-                   </image>
+                   <video>
+                       cardTrick.mp4
+                   </video>
                </robot>
            </oob>
        </template>
@@ -764,11 +762,9 @@
 	       How did that video make you feel?
 	       <oob>
                <robot>
-                   <image>
-                       <video>
-                           <!-- need to convert this video into a .mp4 file: https://www.youtube.com/watch?v=QrUpispJGNw -->
-                       </video>
-                   </image>
+                   <video>
+                       greatGatsby.mp4
+                   </video>
                </robot>
            </oob>
        </template>
@@ -946,11 +942,9 @@
            How did that preview make you feel?
            <oob>
                <robot>
-                   <image>
-                       <video>
-                           <!-- need to convert this video into a .mp4 file: https://www.youtube.com/watch?v=lwtZgBFKlzs -->
-                       </video>
-                   </image>
+                   <video>
+                       IntoWild.mp4
+                   </video>
                </robot>
            </oob>
        </template>
@@ -1211,11 +1205,9 @@
            How did that preview make you feel?
            <oob>
                <robot>
-                   <image>
-                       <video>
-                           <!-- need to convert this video into a .mp4 file: https://www.youtube.com/watch?v=MpuUzQygt8s  -->
-                       </video>
-                   </image>
+                   <video>
+                       GonewiththeWind.mp4
+                   </video>
                </robot>
            </oob>
        </template>
@@ -1323,11 +1315,9 @@
            How did that clip make you feel?
            <oob>
                <robot>
-                   <image>
-                       <video>
-                           <!-- need to convert this video into a .mp4 file: https://www.youtube.com/watch?v=mojQrEQpbSs. -->
-                       </video>
-                   </image>
+                   <video>
+                       MurderOrientExpress.mp4
+                   </video>
                </robot>
            </oob>
        </template>

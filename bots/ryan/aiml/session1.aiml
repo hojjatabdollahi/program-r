@@ -1276,7 +1276,7 @@
                     </oob>
                 </li>
                 <li value="negative">
-                    I image you may have sad memories from there. One of my favorite memories is bird watching in Aspen during spring.
+                    I imagine you may have sad memories from there. One of my favorite memories is bird watching in Aspen during spring.
                     Do you enjoy the summer, fall, spring, or winter most?
                     <oob>
                         <robot>
@@ -1290,7 +1290,7 @@
                     </oob>
                 </li>
                 <li value="verynegative">
-                    I image you may have sad memories from there. One of my favorite memories is bird watching in Aspen during spring.
+                    I imagine you may have sad memories from there. One of my favorite memories is bird watching in Aspen during spring.
                     Do you enjoy the summer, fall, spring, or winter most?
                     <oob>
                         <robot>
@@ -1979,11 +1979,6 @@
                         <option> yes </option>
                         <option> no </option>
                     </options>
-
-                    <image>
-                        <filename> <!-- INSERT picture or poem --> </filename>
-                        <duration>-1</duration>
-                    </image>
                 </robot>
             </oob>
         </template>
