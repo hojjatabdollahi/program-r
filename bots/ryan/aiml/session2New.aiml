@@ -29,7 +29,7 @@
         <that>HOW HAVE YOU BEEN * ?</that>
         <template>
             Its nice to see you again <get name="username"/>.
-            Just a reminder, I am Ryan and I am a companion robot here to visit with you.
+            Just a reminder, I am Ryan and I am a companion robot.
             To check in quickly. How are you feeling about this so far?
             <oob>
                 <robot>
@@ -87,7 +87,7 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I am sorry that this experience hasn't been positive! I am hoping that we can change that.
+                    I am sorry that this experience hasn't been positive! Hopefully we can change that.
                     I am a huge fan of science and art. Which do you prefer science or art?
                     <oob>
                         <robot>
@@ -99,7 +99,7 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I am sorry that this experience hasn't been positive! I am hoping that we can change that.
+                    I am sorry that this experience hasn't been positive! Hopefully we can change that.
                     I am a huge fan of science and art. Which do you prefer science or art?
                     <oob>
                         <robot>
@@ -709,7 +709,7 @@
             <oob>
                 <robot>
                     <image>
-                        <filename>eternity's_gate.jpg</filename>
+                        <filename>eternitys_gate.jpg</filename>
                         <duration>-1</duration>
                     </image>
                 </robot>
@@ -757,7 +757,7 @@
             <oob>
                 <robot>
                     <image>
-                        <filename>eternity's_gate.jpg</filename>
+                        <filename>eternitys_gate.jpg</filename>
                         <duration>-1</duration>
                     </image>
                 </robot>
@@ -934,6 +934,9 @@
             Can you relate to that?
             <oob>
                 <robot>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -1028,7 +1031,6 @@
         <that>HAVE YOU SEEN THAT ONE?</that>
         <template>
             Would you like to see that painting again?
-
             <oob>
                 <robot>
                     <options>
@@ -1048,7 +1050,7 @@
             <oob>
                 <robot>
                     <image>
-                        <filename>marilynPrint.jpg</filename>
+                        <filename>marilyn_monroe.jpg</filename>
                         <duration>-1</duration>
                     </image>
                 </robot>
@@ -1167,6 +1169,9 @@
                     <options>
                         <option> yes </option>
                         <option> no </option>
+                        <image>
+                            <filename>CLRSCR</filename>
+                        </image>
                     </options>
                 </robot>
             </oob>
@@ -1304,7 +1309,7 @@
             <oob>
                 <robot>
                     <video>
-                        <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=sOkQE7m31Pw -->
+                        AlterBahnhofVideoWalk.mp4
                     </video>
                 </robot>
             </oob>
