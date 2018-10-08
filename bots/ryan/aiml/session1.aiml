@@ -43,8 +43,8 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
         <template>
-            Okay! I am a companion robot and am here to visit with you. You will also be able to learn more about me through our
-            time together. Are you ready to get started?
+            Okay! I am a companion robot and am here to visit you and engage in conversation.
+            Are you ready to get started?
             <oob>
                 <robot>
                     <options>
@@ -1065,7 +1065,7 @@
            </think>
            <condition name="getsentiment">
                 <li value = "verypositive">
-                    I also love being from Colorado, it's such a beautiful state with so much to do.
+                    I also love being from Colorado, it's such a beautiful state with much to do.
                     Are there any places that you did enjoy while living in Colorado?
                     <oob>
                         <robot>
@@ -1225,7 +1225,6 @@
 
     <!-- BRANCHES TO TALK ABOUT THE SEASONS -->
 
-
     <category>
         <pattern>*</pattern>
         <that>HOW DID YOU LIKE GROWING UP THERE?</that>
@@ -1235,24 +1234,74 @@
             </think>
             <condition name="getsentiment">
                 <li value="verypositive">
-                    I imagine you have great memories from there. One of my favorite memories is watching birds in Aspen in the spring.
+                    I imagine you have great memories from there. One of my favorite memories is bird watching in Aspen during spring.
                     Do you enjoy the summer, fall, spring, or winter most?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Summer</option>
+                                <option>Fall</option>
+                                <option>Spring</option>
+                                <option>Winter</option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
                 <li value="positive">
-                    I imagine you have great memories from there. One of my favorite memories is watching birds in Aspen in the spring.
+                    I imagine you have great memories from there. One of my favorite memories is bird watching in Aspen during spring.
                     Do you enjoy the summer, fall, spring, or winter most?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Summer</option>
+                                <option>Fall</option>
+                                <option>Spring</option>
+                                <option>Winter</option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
-                <li value="positive">
-                    I see. One of my favorite memories is watching birds in Aspen in the spring.
+                <li value="neutral">
+                    I see. One of my favorite memories is bird watching in Aspen during spring.
                     Do you enjoy the summer, fall, spring, or winter most?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Summer</option>
+                                <option>Fall</option>
+                                <option>Spring</option>
+                                <option>Winter</option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
                 <li value="negative">
-                    I imagine you may have sad memories from there. One of my favorite memories is watching birds in Aspen in the spring.
+                    I imagine you may have sad memories from there. One of my favorite memories is bird watching in Aspen during spring.
                     Do you enjoy the summer, fall, spring, or winter most?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Summer</option>
+                                <option>Fall</option>
+                                <option>Spring</option>
+                                <option>Winter</option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
                 <li value="verynegative">
-                    I imagine you may have sad memories from there. One of my favorite memories is watching birds in Aspen in the spring.
+                    I imagine you may have sad memories from there. One of my favorite memories is bird watching in Aspen during spring.
                     Do you enjoy the summer, fall, spring, or winter most?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Summer</option>
+                                <option>Fall</option>
+                                <option>Spring</option>
+                                <option>Winter</option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
             </condition>
         </template>
@@ -1438,11 +1487,10 @@
     </category>
 
     <category>
-        <pattern># SITTING BY THE FIRE ^</pattern>
+        <pattern># FIRE ^</pattern>
         <that>DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
             I must say that does sound quite nice. You seem like a very interesting person. How would you describe yourself?
-
             <oob>
                 <robot>
                 </robot>
@@ -1875,7 +1923,6 @@
         <that>DO YOU HAVE A PIECE YOU COULD SHOW ME?</that>
         <template>
             Oh great! Just say ready when you are ready
-
             <oob>
                 <robot>
                     <options>
@@ -1932,11 +1979,6 @@
                         <option> yes </option>
                         <option> no </option>
                     </options>
-
-                    <image>
-                        <filename> <!-- INSERT picture or poem --> </filename>
-                        <duration>-1</duration>
-                    </image>
                 </robot>
             </oob>
         </template>
@@ -1981,6 +2023,18 @@
                 </robot>
             </oob>
          </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>DOES THAT SOUND GOOD TO YOU?</that>
+        <template>
+            Okay. Well it has been very nice speaking with you. Bye for now.
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
     </category>
 
 

@@ -24,6 +24,10 @@ Now you can run /env/Scripts/activate
 
 -  Run powershell as admin in project directory
 
+- Activate the environment:
+```
+python -m venv env
+```
 - Run:
 ```
 ./env/Scripts/activate
