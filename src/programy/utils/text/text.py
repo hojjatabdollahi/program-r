@@ -3,7 +3,7 @@ import os
 
 class TextUtils:
 
-    #todo Do I need to change this class cuz I already have a nlp class??
+    #todo Move this to nlp package
 
     DEFAULT_TAB_SPACE = "  "
 

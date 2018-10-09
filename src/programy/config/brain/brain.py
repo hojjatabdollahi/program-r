@@ -106,5 +106,4 @@ class BrainConfiguration(BaseContainerConfigurationData):
         self.config_to_yaml(data, BrainOOBSConfiguration(), defaults)
         self.config_to_yaml(data, BrainDynamicsConfiguration(), defaults)
         self.config_to_yaml(data, BrainTokenizerConfiguration(), defaults)
-        #todo uncomment after adding to_yaml
-        #self.config_to_yaml(data, BrainNLPConfiguration(), defaults)
+        self.config_to_yaml(data, BrainNLPConfiguration(), defaults)

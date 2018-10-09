@@ -21,10 +21,8 @@ class BrainSemanticSimilarityConfiguration(BaseConfigurationData):
         else:
             YLogger.warning(self, "'semantic_similarity' section missing from bot config, using defaults")
 
-    # def to_yaml(self, data, defaults=True):
-    #     if defaults is True:
-    #         data['classname'] = "programy.parser.tokenizer.Tokenizer"
-    #         data['split_chars'] = ' '
-    #     else:
-    #         data['classname'] = self._classname
-    #         data['split_chars'] = self._split_chars
+    def to_yaml(self, data, defaults=True):
+        if defaults is True:
+            data['method'] = "embedding"
+        else:
+            data['method'] = self._method

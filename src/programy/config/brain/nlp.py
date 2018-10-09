@@ -1,6 +1,7 @@
 from programy.config.brain.semantic_similarity import BrainSemanticSimilarityConfiguration
 from programy.config.brain.sentence_segmentation import BrainSentenceSegmentationConfiguration
 from programy.config.brain.tokenizer import BrainTokenizerConfiguration
+from programy.config.brain.sentiment_analysis import BrainSentimentAnalysisConfiguration
 from programy.utils.logging.ylogger import YLogger
 
 from programy.config.section import BaseSectionConfigurationData
@@ -15,7 +16,7 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
         self._toknizer = BrainTokenizerConfiguration()
         self._sentence_segmentation = BrainSentenceSegmentationConfiguration()
         self._semantic_similarity = BrainSemanticSimilarityConfiguration()
-
+        self._sentiment_analysis = BrainSentimentAnalysisConfiguration()
 
     @property
     def classname(self):
@@ -37,6 +38,10 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
     def semantic_similarity(self):
         return self._semantic_similarity
 
+    @property
+    def sentiment_analysis(self):
+        return self._sentiment_analysis
+
 
     def load_config_section(self, configuration_file, configuration, bot_root):
         nlp = configuration_file.get_section("nlp", configuration)
@@ -46,28 +51,10 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
             tokenizer = self._toknizer.load_config_section(configuration_file, nlp, bot_root)
             sentence_segmentation = self._sentence_segmentation.load_config_section(configuration_file, nlp, bot_root)
             semantic_similarity = self._semantic_similarity.load_config_section(configuration_file, nlp, bot_root)
-
+            sentiment_analysis = self._sentiment_analysis.load_config_section(configuration_file, nlp, bot_root)
         else:
             YLogger.warning(self, "Config section [services] missing from Brain, no nlp loaded")
 
-    # def to_yaml(self, data, defaults=True):
-    #     if defaults is True:
-    #         data['REST'] = {}
-    #         data['REST']['classname'] = 'programy.services.rest.GenericRESTService'
-    #         data['REST']['method'] = 'GET'
-    #         data['REST']['host'] = '0.0.0.0'
-    #
-    #         data['Pannous'] = {}
-    #         data['Pannous']['classname'] = 'programy.services.pannous.PannousService'
-    #         data['Pannous']['url'] = 'http://weannie.pannous.com/api'
-    #
-    #         data['Pandora'] = {}
-    #         data['Pandora']['classname'] = 'programy.services.pandora.PandoraService'
-    #         data['Pandora']['url'] = 'http://www.pandorabots.com/pandora/talk-xml'
-    #
-    #         data['Wikipedia'] = {}
-    #         data['Wikipedia']['classname'] = 'programy.services.wikipediaservice.WikipediaService'
-    #
-    #         data['DuckDuckGo'] = {}
-    #         data['DuckDuckGo']['classname'] = 'programy.services.duckduckgo.DuckDuckGoService'
-    #         data['DuckDuckGo']['url'] = 'http://api.duckduckgo.com'
+
+    def to_yaml(self, data, defaults=True):
+        data['classname'] = self._classname

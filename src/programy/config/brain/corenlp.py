@@ -19,7 +19,6 @@ class BrainCoreNLPConfiguration(BaseSectionConfigurationData):
     def ip(self):
         return self._ip
 
-
     @property
     def port(self):
         return self._port
@@ -44,5 +43,8 @@ class BrainCoreNLPConfiguration(BaseSectionConfigurationData):
         else:
             YLogger.warning(self, "Config section [services] missing from Brain, no services loaded")
 
-
-    #todo needs to_yaml function
+    def to_yaml(self, data, defaults=True):
+        data['classname'] = self._classname
+        data['ip'] = self._ip
+        data['port'] = self._port
+        data['jar_dir'] = self._jar_dir
