@@ -290,7 +290,7 @@
 	       <oob>
                <robot>
                    <video>
-                       cardTrick.mp4
+                       <filename> cardTrick.mp4 </filename>
                    </video>
                </robot>
            </oob>
@@ -763,7 +763,7 @@
 	       <oob>
                <robot>
                    <video>
-                       greatGatsby.mp4
+                       <filename> greatGatsby.mp4 </filename>
                    </video>
                </robot>
            </oob>
@@ -943,7 +943,7 @@
            <oob>
                <robot>
                    <video>
-                       IntoWild.mp4
+                       <filename> IntoWild.mp4 </filename>
                    </video>
                </robot>
            </oob>
@@ -1206,7 +1206,7 @@
            <oob>
                <robot>
                    <video>
-                       GonewiththeWind.mp4
+                       <filename> GonewiththeWind.mp4 </filename>
                    </video>
                </robot>
            </oob>
@@ -1316,7 +1316,7 @@
            <oob>
                <robot>
                    <video>
-                       MurderOrientExpress.mp4
+                       <filename> MurderOrientExpress.mp4 </filename>
                    </video>
                </robot>
            </oob>
