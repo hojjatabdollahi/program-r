@@ -43,6 +43,11 @@ class ConversationMongodbStorage(ConversationStorage):
             last_fer_value = None
 
         try:
+            last_final_sentiment_value = client_context.bot.sentiment.last_final_sentiment_value
+        except Exception as e:
+            last_final_sentiment_value = None
+
+        try:
             # todo this doesn't handle good when sentence is empty
             last_answer = answers[-1].sentences
         except Exception as e:
@@ -84,6 +89,7 @@ class ConversationMongodbStorage(ConversationStorage):
             "timestamp": datetime.datetime.now(),
             "sentiment": last_sentiment_value,
             "fer": last_fer_value,
+            "final_sentiment_value": last_final_sentiment_value
             },
 
             "session_info": {
