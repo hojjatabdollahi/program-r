@@ -5,11 +5,11 @@
    <category>
        <pattern>START SESSION 3 *</pattern>
        <template>
-           Welcome back! I am happy to be chatting with you again. How are you on this fine day <star/>?
             <think>
                 <set name = "username"><star/></set>
                 <set name="topic">session3</set>
             </think>
+            Welcome back <get name="username"/>! I am happy to be chatting with you again. How are you?
            <oob>
                <robot>
                </robot>
@@ -23,16 +23,71 @@
         <pattern>*</pattern>
         <that>HOW ARE YOU ON THIS FINE DAY * ?</that>
         <template>
-            It is nice to see you again. As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
-            Are you ready to get started with today's conversation?
-            <oob>
-                <robot>
-                    <options>
-                         <option> yes </option>
-                         <option> no </option>
-                    </options>
-                </robot>
-            </oob>
+            <think>
+                <set name="data"><star/></set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    That is so good to hear! As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="positive">
+                    That is so good to hear! As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="neutral">
+                    It is nice to see you again. As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="negative">
+                    I'm sorry to hear that. As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="verynegative">
+                    I'm sorry to hear that. As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+            </condition>
         </template>
     </category>
 
@@ -1698,7 +1753,7 @@
                    </oob>
                </li>
                <li value = "neutral">
-                   What is your favorite food?
+                   That makes sense to me. What is your favorite food?
                    <oob>
                        <robot>
                        </robot>
@@ -1906,7 +1961,7 @@
        </template>
    </category>
 
-   <-- START OF SESSION 4. WE ARE MERGING THE SESSIONS TO INCREASE THE LENGTH -->
+   <!-- START OF SESSION 4. WE ARE MERGING THE SESSIONS TO INCREASE THE LENGTH -->
 
    <category>
         <pattern># WATCH ^</pattern>

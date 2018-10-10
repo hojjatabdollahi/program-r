@@ -26,16 +26,71 @@
     	<pattern>*</pattern>
    	    <that>HOW ARE YOU DOING TODAY * ?</that>
     	<template>
-            I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
-    	    Would you like to hear a little more about me?
-    	    <oob>
-                <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </options>
-                </robot>
-            </oob>
+    	    <think>
+                <set name="data"><star/></set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="positive">
+                    I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="neutral">
+                    I see. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="negative">
+                    I am sorry to hear that <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="verynegative">
+                    I am sorry to hear that <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+            </condition>
         </template>
     </category>
 
@@ -1335,7 +1390,7 @@
         <pattern># FALL ^</pattern>
         <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
         <template>
-            Fall is quite nice. There is nothing like the changing of the leaves. Do you also enjoy Thanksgiving. Is that right?
+            Fall is quite nice. There is nothing like the changing of the leaves. Do you also enjoy Thanksgiving?
             <oob>
                 <robot>
                     <options>
@@ -1349,7 +1404,7 @@
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
-        <that>IS THAT RIGHT?</that>
+        <that>DO YOU ALSO ENJOY THANKSGIVING?</that>
         <template>
             The holidays can be fun time for some. How do the holidays make you feel?
             <oob>
@@ -1361,7 +1416,7 @@
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-        <that>IS THAT RIGHT?</that>
+        <that>DO YOU ALSO ENJOY THANKSGIVING?</that>
         <template>
             I have been told the holidays can be a chaotic and stressful time and even lonely. How do the holidays make you feel?
             <oob>
@@ -3112,7 +3167,7 @@
             <oob>
                 <robot>
                     <video>
-                        AlterBahnhofVideoWalk.mp4
+                        <filename>AudioWalk1.mp4</filename>
                     </video>
                 </robot>
             </oob>
@@ -3157,7 +3212,7 @@
             <oob>
                 <robot>
                     <video>
-                        <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=sOkQE7m31Pw -->
+                        <filename>AudioWalk2.mp4</filename>
                     </video>
                 </robot>
             </oob>
