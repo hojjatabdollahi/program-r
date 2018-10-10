@@ -139,7 +139,7 @@
        <that>AND WHY DO YOU FEEL THIS WAY?</that>
        <template>
            I understand, let's begin. I just experienced my first sporting event! Do you prefer to play or watch sports?
-<oob>
+            <oob>
                <robot>
                    <options>
                        <option>watch</option>
