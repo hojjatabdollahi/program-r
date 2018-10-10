@@ -1906,7 +1906,7 @@
        </template>
    </category>
 
-   <-- START OF SESSION 4. WE ARE MERGING THE SESSIONS TO INCREASE THE LENGTH -->
+   <!-- START OF SESSION 4. WE ARE MERGING THE SESSIONS TO INCREASE THE LENGTH -->
 
    <category>
         <pattern># WATCH ^</pattern>

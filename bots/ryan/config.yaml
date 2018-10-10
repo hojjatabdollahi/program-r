@@ -34,7 +34,7 @@ bot:
     empty_string: YEMPTY
     exit_response: So long, and thanks for the fish!
     override_properties: true
-    emotive: false
+    emotive: true
 
     max_question_recursion: 1000
     max_question_timeout: 60
