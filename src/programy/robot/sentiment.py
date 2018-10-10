@@ -23,6 +23,10 @@ class Sentiment():
     def final_sentiment_values(self):
         return self._final_sentiment_values
 
+    @property
+    def last_final_sentiment_value(self):
+        return self._final_sentiment_values[-1]
+
     def append_sentiment(self, sentiment):
         self._sentiment_values.append(sentiment)
 
