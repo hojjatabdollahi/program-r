@@ -1127,7 +1127,7 @@
     </category>
 
 
-   <category>
+    <category>
        <pattern># ROMANCE ^</pattern>
        <that>WHAT WOULD YOU CHOOSE?</that>
        <template>
@@ -1173,7 +1173,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern># <set>NO</set> ^</pattern>
 	   <that>HAVE YOU READ GONE WITH THE WIND?</that>
 	   <template>
@@ -1190,7 +1190,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern># <set>NO</set> ^</pattern>
 	   <that>WOULD YOU LIKE TO WATCH A SHORT CLIP?</that>
 	   <template>
@@ -1202,7 +1202,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
        <pattern># <set>YES</set> ^</pattern>
        <that>WOULD YOU LIKE TO WATCH A SHORT CLIP?</that>
        <template>
@@ -1217,7 +1217,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern>*</pattern>
 	   <that>WHAT IS YOUR FAVORITE ROMANCE NOVEL?</that>
 	   <template>
@@ -1530,7 +1530,7 @@
    </category>
 
 
-   <category>
+    <category>
        <pattern>*</pattern>
 	   <that>WHO IS YOUR LEAST FAVORITE PRESIDENT?</that>
 	   <template>
@@ -1542,7 +1542,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
        <pattern>*</pattern>
        <that>WHY DID YOU CHOOSE HIM AS YOUR LEAST FAVORITE?</that>
        <template>
@@ -1559,7 +1559,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 	<category>
        <pattern>*</pattern>
@@ -1608,7 +1608,7 @@
        </template>
    </category>
 
-   <category>
+    <category>
        <pattern># CHRISTMAS ^</pattern>
        <that>OF THE FOLLOWING, WHICH IS YOUR FAVORITE HOLIDAY CHRISTMAS, HANUKKAH, OR THANKSGIVING?</that>
        <template>
@@ -1621,7 +1621,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern># HANUKKAH ^</pattern>
 	   <that> OF THE FOLLOWING, WHICH IS YOUR FAVORITE HOLIDAY CHRISTMAS, HANUKKAH, OR THANKSGIVING?</that>
 	   <template>
@@ -1634,7 +1634,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
        <pattern># THANKSGIVING ^</pattern>
        <that> OF THE FOLLOWING, WHICH IS YOUR FAVORITE HOLIDAY CHRISTMAS, HANUKKAH, OR THANKSGIVING?</that>
        <template>
@@ -1647,7 +1647,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
        <pattern>*</pattern>
        <that>WHAT IS YOUR FAVORITE THING TO EAT ON THAT HOLIDAY?</that>
        <template>
@@ -1794,7 +1794,8 @@
        <pattern># <set>NO</set> ^</pattern>
        <that>DO YOU ENJOY COOKING?</that>
        <template>
-           I've found that cooking can be very rewarding! What are your general thoughts about food?
+           I've found that cooking can be very rewarding!
+           Do you like spending time to sit down and eat?
            <oob>
                <robot>
                </robot>
@@ -1820,7 +1821,7 @@
        <that>WHAT IS YOUR FAVORITE PART ABOUT COOKING?</that>
        <template>
            I love that we both have an interest in food!
-           What are your general thoughts about food?
+           Do you like spending time to sit down and eat?
            <oob>
                <robot>
                </robot>
@@ -1833,7 +1834,7 @@
 
    <category>
        <pattern>*</pattern>
-       <that>WHAT ARE YOUR GENERAL THOUGHTS ABOUT FOOD?</that>
+       <that>DO YOU LIKE SPENDING TIME TO SIT DOWN AND EAT?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
@@ -3215,7 +3216,7 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    I think it would extremely difficult! Alright.
+                    I think it would extremely difficult but I am glad you can see the positive in it. Alright.
                     We have talked about quite a bit today. Why dont we stop here today. Does that sound good to you?
                     <oob>
                         <robot>
@@ -3227,7 +3228,7 @@
                     </oob>
                 </li>
                 <li value = "positive">
-                    I think it would extremely difficult! Alright.
+                    I think it would extremely difficult but I am glad you can see the positive in it. Alright.
                     We have talked about quite a bit today. Why don't we stop here today.
                     Does that sound good to you?
                     <oob>

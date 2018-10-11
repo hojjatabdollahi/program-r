@@ -437,14 +437,14 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    That is nice. What do you like to do together?
+                    That must be very nice to spend quality time with your children. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    That is nice. What do you like to do together?
+                    That must be very nice to spend quality time with your children. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
@@ -462,14 +462,14 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I bet. Do you wish your relationship with them was different?
+                    Being around your children can be difficult at times. Do you wish your relationship with them was different?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I bet. Do you wish your relationship with them was different?
+                    Being around your children can be difficult at times. Do you wish your relationship with them was different?
                     <oob>
                         <robot>
                         </robot>
@@ -483,7 +483,7 @@
         <pattern>*</pattern>
         <that>WHAT DO YOU LIKE TO DO TOGETHER?</that>
         <template>
-           That sounds like a great way to spend time together.
+            That sounds like a great way to spend time together.
             Are you originally from Colorado?
             <oob>
                 <robot>
@@ -1132,7 +1132,6 @@
                         </robot>
                     </oob>
                 </li>
-
                 <li value = "positive">
                     I also love being from Colorado, it's such a beautiful state with so much to do.
                     Are there any places that you did enjoy while living in Colorado?
@@ -1141,7 +1140,6 @@
                         </robot>
                     </oob>
                 </li>
-
                 <li value = "neutral">
                     There are both pros and cons for being from Colorado.
                     Are there any places that you did enjoy while living in Colorado?
@@ -2167,7 +2165,6 @@
                         </robot>
                     </oob>
                 </li>
-
                 <li value = "verynegative">
                     Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?
                     <oob>
