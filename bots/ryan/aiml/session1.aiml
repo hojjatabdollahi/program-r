@@ -3163,7 +3163,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR IT?</that>
         <template>
-            Okay. What did you think?
+            What did you think about that video?
             <oob>
                 <robot>
                     <video>
@@ -3176,7 +3176,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHAT DID YOU THINK?</that>
+        <that>WHAT DID YOU THINK ABOUT THAT VIDEO?</that>
         <template>
             Her art is quite unique. Would you like to hear another?
             <oob>
@@ -3206,9 +3206,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
         <template>
-            Excellent!
-            Tell me what you think.
-
+            What did you think of that piece?
             <oob>
                 <robot>
                     <video>
@@ -3221,7 +3219,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>TELL ME WHAT YOU THINK.</that>
+        <that>WHAT DID YOU THINK OF THAT PIECE?</that>
         <template>
             Interesting! You really are quite insightful. What is your favorite type of music?
             <oob>

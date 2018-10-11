@@ -341,7 +341,7 @@
    	<pattern># <set>YES</set> ^</pattern>
 	   <that>WOULD YOU LIKE TO SEE A CARD TRICK?</that>
 	   <template>
-	       How do you feel when you watch that card trick?
+	       What were your thoughts on that card trick?
 	       <oob>
                <robot>
                    <video>
@@ -373,7 +373,7 @@
 
    <category>
        <pattern>*</pattern>
-       <that>HOW DO YOU FEEL WHEN YOU WATCH THAT CARD TRICK?</that>
+       <that>WHAT WERE YOUR THOUGHTS ON THAT CARD TRICK?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
@@ -813,7 +813,6 @@
 	   <pattern># <set>YES</set> ^</pattern>
 	   <that>WOULD YOU LIKE TO WATCH THE TRAILER?</that>
 	   <template>
-	       Okay great! When it is done please answer this question I have for you.
 	       How did that video make you feel?
 	       <oob>
                <robot>
@@ -993,7 +992,6 @@
        <pattern># <set>YES</set> ^</pattern>
        <that>WOULD YOU LIKE TO WATCH THE PREVIEW?</that>
        <template>
-           Okay great!
            How did that preview make you feel?
            <oob>
                <robot>
@@ -1256,7 +1254,6 @@
        <pattern># <set>YES</set> ^</pattern>
        <that>WOULD YOU LIKE TO WATCH A SHORT CLIP?</that>
        <template>
-           Okay great! When finished please let me know.
            How did that preview make you feel?
            <oob>
                <robot>
@@ -1366,7 +1363,6 @@
        <pattern># <set>YES</set> ^</pattern>
        <that> DO YOU WANT TO WATCH THE TRAILER?</that>
        <template>
-           Here it is.
            How did that clip make you feel?
            <oob>
                <robot>
