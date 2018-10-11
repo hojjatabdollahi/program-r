@@ -2918,13 +2918,13 @@
             Have you ever been to South America?
             <oob>
                 <robot>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                     <options>
                         <option>yes</option>
                         <option>no</option>
                     </options>
-                    <image>
-                        <filename>CLRSCR</filename>
-                    </image>
                 </robot>
             </oob>
         </template>
