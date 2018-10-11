@@ -1923,6 +1923,18 @@
             </oob>
         </template>
 	</category>
+	
+	<category>
+        <pattern># WATCHING ^</pattern>
+        <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
+        <template>
+            Me too! Nothing better than watching sports with some friends! What is your favorite sport to watch?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
 
 	<category>
         <pattern># PLAY ^</pattern>
@@ -1936,6 +1948,19 @@
         </template>
 	</category>
 
+	<category>
+        <pattern># PLAYING ^</pattern>
+        <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
+        <template>
+            Wow! You must be really athletic. What is your favorite sport to play?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	
     <category>
         <pattern># NEITHER ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
@@ -2173,7 +2198,7 @@
 	</category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>^</pattern>
         <that>DO YOU KNOW WHERE THE FIRST OLYMPICS WERE HELD?</that>
         <template>
             The first Olympics were in Greece and occurred in 776 B.C. That has got me thinking of the great outdoors.
@@ -2599,8 +2624,10 @@
             Here it is! What are your thoughts about it?
             <oob>
                 <robot>
-                    <filename>grand_canyon.jpg</filename>
-                    <duration>-1</duration>
+					<image>
+						<filename>grand_canyon.jpg</filename>
+						<duration>-1</duration>
+					</image>
                 </robot>
             </oob>
         </template>
