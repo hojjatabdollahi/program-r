@@ -1685,7 +1685,8 @@
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   Wonderful! I recently watched the cooking channel and thought about my favorite foods!
+                   You really seem to enjoy that holiday. I am happy to hear that from you.
+                   I recently watched the cooking channel and thought about my favorite foods!
                    What is your favorite food?
                    <oob>
                        <robot>
@@ -1693,7 +1694,8 @@
                    </oob>
                </li>
                <li value = "positive">
-                   Wonderful! I recently watched the cooking channel and thought about my favorite foods!
+                   You really seem to enjoy that holiday. I am happy to hear that from you.
+                   I recently watched the cooking channel and thought about my favorite foods!
                    What is your favorite food?
                    <oob>
                        <robot>
@@ -2105,6 +2107,19 @@
                         <option>yes</option>
                         <option>no</option>
                     </options>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	<category>
+	    <pattern># <set>SPORTS</set> ^</pattern>
+	    <that>DO YOU KNOW WHICH SPORT WAS FIRST BROADCAST ON TELEVISION?</that>
+	    <template>
+	        Good guess! But the world's first live televised sporting event occurred in 1936 at the Summer Olympics in Berlin.
+            Do you know where the first Olympics were held?
+            <oob>
+                <robot>
                 </robot>
             </oob>
         </template>
