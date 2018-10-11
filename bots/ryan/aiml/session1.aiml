@@ -99,6 +99,7 @@
         <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
         <template>
             Okay! I am a companion robot and am here to visit you and engage in conversation.
+            Feel free to just talk to me normally and I will reply to the best of my ability!
             Are you ready to get started?
             <oob>
                 <robot>
@@ -217,6 +218,8 @@
         <that>WHAT ABOUT THIS IS MAKING YOU FEEL THAT WAY?</that>
         <template>
             I am an emotion recognizing robot, it allows me to be a better companion.
+            This means that I can see when you are feeling different emotions, like happy, sad, or no feeling at all!
+            Please continue to share your feelings and thoughts with me, that way I’ll be able to be a better companion!
             Let's begin. Do you have kids?
             <oob>
                 <robot>
@@ -778,6 +781,8 @@
         <that>WHAT QUALITIES DO YOU AND THAT ANIMAL SHARE?</that>
         <template>
             Thank you for sharing that with me! If I had to choose an animal that I am most like, I would say a penguin.
+            Did you know that some species of penguins find one partner that they stay with for their whole lives?
+            I like to think of myself as a romantic, and hope to find love like penguins do one day!
             How does spending time with animals make you feel?
             <oob>
                 <robot>
@@ -1996,6 +2001,7 @@
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
         <template>
             It is fascinating. A marine biologist recently found several pregnant male sharks!
+            Scientists are looking into this phenomenon to find the cause.
             Can you imagine being a pregnant man?
             <oob>
                 <robot>
@@ -2337,6 +2343,7 @@
 	    <that>DO YOU AGREE WITH THAT IDEA?</that>
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
+	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        What would you say are some benefits of technology?
 	        <oob>
                 <robot>
@@ -2350,6 +2357,7 @@
 	    <that>DO YOU AGREE WITH THAT IDEA?</that>
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
+	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        Do you think that technology could potentially cause harm?
 	        <oob>
                 <robot>
@@ -2408,7 +2416,8 @@
         <pattern>*</pattern>
 	    <that>WHICH PIECE OF TECHNOLOGY DO YOU USE THE MOST?</that>
 	    <template>
-	        Awesome! Technology makes it easier to connect with family and friends who may be far away.
+	        Awesome! It seems that one aspect of technology that people value the most is communication.
+	        Technology makes family and friends who may be far only one click away.
 	        I'm curious, if you had to choose. Would you rather be a scientist or an artist?
 	        <oob>
                 <robot>
