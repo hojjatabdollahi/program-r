@@ -2551,6 +2551,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2563,6 +2567,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2574,6 +2582,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2585,6 +2597,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2596,6 +2612,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2653,6 +2673,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2665,6 +2689,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2676,6 +2704,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2687,6 +2719,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2698,6 +2734,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2717,6 +2757,10 @@
                         <option>yes</option>
                         <option>no</option>
                     </options>
+                    <image>
+                        <filename>SevenWonders.png</filename>
+                        <duration>-1</duration>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -2729,6 +2773,9 @@
             Thrilling! Which one?
             <oob>
                 <robot>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -2742,6 +2789,9 @@
             in China, Brazil, Mexico, Rome, India, Jordan, and Peru. Would you like to see a picture of one?
             <oob>
                 <robot>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -2755,6 +2805,9 @@
             in China, Brazil, Mexico, Rome, India, Jordan, and Peru. Would you like to see a picture of one?
             <oob>
                 <robot>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -2768,10 +2821,6 @@
             Great! I will should you one of the seven wonders at random. I'd love for you to tell me how the photo makes you feel.
             <oob>
                 <robot>
-                    <options>
-                        <option>yes</option>
-                        <option>no</option>
-                    </options>
                 </robot>
             </oob>
         </template>
@@ -2790,7 +2839,7 @@
             <condition name="getsentiment">
                 <li value = "verypositive">
 
-                    You seem to have enjoyed that wonder of the world! XX
+                    You seem to have enjoyed that wonder of the world!
                     <oob>
                         <robot>
                             <options>
@@ -2878,6 +2927,9 @@
                         <option>yes</option>
                         <option>no</option>
                     </options>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                 </robot>
             </oob>
         </template>
