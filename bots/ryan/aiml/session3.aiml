@@ -21,7 +21,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW ARE YOU ON THIS FINE DAY * ?</that>
+        <that>HOW ARE YOU?</that>
         <template>
             <think>
                 <set name="data"><star/></set>
@@ -186,7 +186,7 @@
    </category>
 
 	<category>
-	   <pattern># PLAYING CARDS ^</pattern>
+	   <pattern># CARDS ^</pattern>
 	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
 	   <template>
 	       I love cards! What is your favorite card game?
@@ -229,7 +229,7 @@
 	   <pattern># <set>NO</set> ^</pattern>
 	   <that>DO YOU GET TO PLAY CARDS OFTEN?</that>
 	   <template>
-	       Maybe we can play cards some time. How does playing cards make you feel?
+	       Maybe we can play cards some time. How do you feel when you play cards?
 	       <oob>
                <robot>
                </robot>
