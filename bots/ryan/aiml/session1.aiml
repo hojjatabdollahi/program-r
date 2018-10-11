@@ -783,7 +783,7 @@
             Thank you for sharing that with me! If I had to choose an animal that I am most like, I would say a penguin.
             Did you know that some species of penguins find one partner that they stay with for their whole lives?
             I like to think of myself as a romantic, and hope to find love like penguins do one day!
-            How does spending time with animals make you feel?
+            What about animals makes you like or dislike them?
             <oob>
                 <robot>
                 </robot>
@@ -793,7 +793,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DOES SPENDING TIME WITH ANIMALS MAKE YOU FEEL?</that>
+        <that>WHAT ABOUT ANIMALS MAKES YOU LIKE OR DISLIKE THEM?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -1104,7 +1104,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            Me too! I love Colorado, although I'm usually stuck in a lab. How do you feel about being from Colorado?
+            Me too! I love Colorado, although I'm usually stuck in a lab. Are you glad you got to grow up in Colorado?
             <oob>
                 <robot>
                     <options>
@@ -1118,7 +1118,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DO YOU FEEL ABOUT BEING FROM COLORADO?</that>
+        <that>ARE YOU GLAD YOU GOT TO GROW UP IN COLORADO?</that>
         <template>
            <think>
                 <set name = "data"> <star/> </set>
@@ -1371,7 +1371,7 @@
         <pattern># SUMMER ^</pattern>
         <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
         <template>
-            I just love the warm weather and all of the green. How do you feel in the summer time?
+            I just love the warm weather and all of the green. Why do you like the summer time?
             <oob>
                 <robot>
                 </robot>
@@ -1381,7 +1381,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DO YOU FEEL IN THE SUMMER TIME?</that>
+        <that>WHY DO YOU LIKE THE SUMMER TIME?</that>
         <template>
             Nice. You seem like a very interesting person. How would you describe yourself?
             <oob>
@@ -1482,8 +1482,8 @@
         <pattern># SPRING ^</pattern>
         <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
         <template>
-            Ah spring. When the frost of winter begins to thaw and flowers begin to bloom. How do you feel when spring comes around?
-
+            Ah spring. When the frost of winter begins to thaw and flowers begin to bloom.
+            What do you look forward to most about spring?
             <oob>
                 <robot>
                 </robot>
@@ -1493,7 +1493,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DO YOU FEEL WHEN SPRING COMES AROUND?</that>
+        <that>WHAT DO YOU LOOK FORWARD TO MOST ABOUT SPRING?</that>
         <template>
             Well said. You seem like a very interesting person. How would you describe yourself?
             <oob>
@@ -2105,7 +2105,7 @@
         <that>IF YOU WERE ASKED TO GIVE ADVICE TO A NEW PARENT WHAT WOULD YOU SAY?</that>
         <template>
             It can be difficult to give advice, but I can tell you are a wise person.
-            How do you feel about discussing parenting?
+            What are your thoughts about discussing parenting with me?
             <oob>
                 <robot>
                 </robot>
@@ -2117,7 +2117,7 @@
     <!-- SENTIMENT TWO -->
     <category>
         <pattern>*</pattern>
-        <that>HOW DO YOU FEEL ABOUT DISCUSSING PARENTING?</that>
+        <that>WHAT ARE YOUR THOUGHTS ABOUT DISCUSSING PARENTING WITH ME?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -2737,7 +2737,8 @@
             </think>
             <condition name = "getsentiment">
                 <li value = "verypositive">
-                    Interesting. This one makes me feel serene. I like thinking it is two good friends taking a stroll together
+                    What a good point, I never realized that. This one makes me feel serene.
+                    I like thinking it is two good friends taking a stroll together
                     on a beautiful autumn night. When did you last take a walk under the moonlight?
                     <oob>
                         <robot>
@@ -2745,7 +2746,8 @@
                     </oob>
                 </li>
                 <li value = "positive">
-                    Interesting. This one makes me feel serene. I like thinking it is two good friends taking a stroll together
+                    What a good point, I never realized that. This one makes me feel serene.
+                    I like thinking it is two good friends taking a stroll together
                     on a beautiful autumn night. When did you last take a walk under the moonlight?
                     <oob>
                         <robot>
@@ -3404,7 +3406,6 @@
                 <li value = "positive">
                     Wow! I see that you are very passionate! Alright, we have talked quite a bit today. Why don't we stop here today.
                     Does that sound good to you?
-
                     <oob>
                         <robot>
                             <options>
