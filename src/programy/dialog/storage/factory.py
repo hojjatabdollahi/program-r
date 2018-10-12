@@ -30,7 +30,6 @@ class ConversationStorageFactory(object):
 
     @staticmethod
     def get_storage(config):
-        #TODO here we set the configuration for storage
         if config.conversations.type == 'file':
             return ConversationFileStorage(config.conversations.storage)
         elif config.conversations.type == 'redis':

@@ -56,8 +56,6 @@ class TemplateSetNode(TemplateNode):
     def resolve(self, client_context):
         try:
             str = self.resolve_to_string(client_context)
-            # todo weird place to save conversation, why here?
-            #client_context.bot.save_conversation(client_context.userid)
             return str
         except Exception as excep:
             YLogger.exception(client_context, "Failed to resolve", excep)
