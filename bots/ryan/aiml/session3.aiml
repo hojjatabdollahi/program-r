@@ -247,7 +247,7 @@
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I thought you seemed content! Do you prefer to play alone or with friends?
+                   That is a great point! I can see why you like cards so much. Do you prefer to play alone or with friends?
                    <oob>
                        <robot>
                            <options>
@@ -258,7 +258,7 @@
                    </oob>
                </li>
                <li value = "positive">
-                   I thought you seemed content! Do you prefer to play alone or with friends?
+                   That is a great point! I can see why you like cards so much. Do you prefer to play alone or with friends?
                    <oob>
                        <robot>
                            <options>
@@ -356,7 +356,7 @@
    	<pattern># <set>NO</set> ^</pattern>
 	   <that>WOULD YOU LIKE TO SEE A CARD TRICK?</that>
 	   <template>
-	       Do you know any card tricks?
+	       Ok maybe another time. Do you know any card tricks?
 	       <oob>
                <robot>
                    <options>
@@ -506,18 +506,71 @@
    </category>
 
 	<category>
-       <pattern>*</pattern>
-       <that>WHAT IS YOUR FAVORITE THING TO KNIT?</that>
-       <template>
-           Awesome. Do you get to knit often?
-           <oob>
-	           <robot>
-	               <options>
-	                   <option>yes</option>
-	                   <option>no</option>
-                   </options>
-               </robot>
-           </oob>
+        <pattern>*</pattern>
+        <that>WHAT IS YOUR FAVORITE THING TO KNIT?</that>
+        <template>
+            <think>
+                <set name="data"> <star/> </set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    Wow I can see you are very passionate about knitting that. It is so good to hear you express your feelings.
+                    Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+                <li value="positive">
+                    Wow I can see you are very passionate about knitting that. It is so good to hear you express your feelings.
+                    Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+                <li value="neutral">
+                    Awesome. Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+                <li value="negative">
+                    Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+                <li value="verynegative">
+                    Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+            </condition>
        </template>
 	</category>
 
@@ -602,7 +655,7 @@
                    </oob>
                </li>
                <li value = "neutral">
-                   What purpose does knitting serve for you?
+                   Very interesting. Let's switch topics.  Would you like to talk about history?
                    <oob>
                        <robot>
                        </robot>
@@ -630,7 +683,7 @@
 	   <pattern>*</pattern>
 	   <that>WHY DO YOU THINK IT MAKES YOU SAD?</that>
 	   <template>
-	       I admire how comfortable you are in sharing your emotions! What purpose does knitting serve for you?
+	       I admire how comfortable you are in sharing your emotions!  Would you like to talk about history?
 	       <oob>
                <robot>
                </robot>
@@ -642,20 +695,7 @@
 	   <pattern>*</pattern>
 	   <that>WHY DO YOU THINK IT MAKES YOU HAPPY?</that>
 	   <template>
-	       I appreciate you expressing your emotions! What purpose does knitting serve for you?
-	       <oob>
-               <robot>
-               </robot>
-           </oob>
-       </template>
-	</category>
-
-
-   <category>
-	   <pattern>*</pattern>
-	   <that>WHAT PURPOSE DOES KNITTING SERVE FOR YOU?</that>
-	   <template>
-	       Great I hope that you keep knitting! Would you like to talk about history?
+	       I appreciate you expressing your emotions!  Would you like to talk about history?
 	       <oob>
                <robot>
                </robot>
@@ -703,7 +743,8 @@
 	   <pattern>*</pattern>
 	   <that>WHAT ABOUT READING FICTION DO YOU ENJOY THE MOST?</that>
 	   <template>
-	       I love that fiction allows me to use my imagination. My favorite fiction novel is the Great Gatsby. Have you read the Great Gatsby?
+	       That is very well put. Personally, I love that fiction allows me to use my imagination.
+	       My favorite fiction novel is the Great Gatsby. Have you read the Great Gatsby?
 	       <oob>
                <robot>
                    <options>
@@ -765,7 +806,7 @@
 	   <pattern># <set>YES</set> ^</pattern>
 	   <that>WOULD YOU LIKE TO WATCH THE TRAILER?</that>
 	   <template>
-	       What is your reaction to that trailer?
+	       What was your reaction to that trailer?
 	       <oob>
                <robot>
                    <video>
@@ -797,7 +838,7 @@
 
    <category>
        <pattern>*</pattern>
-       <that>WHAT IS YOUR REACTION TO THAT TRAILER?</that>
+       <that>WHAT WAS YOUR REACTION TO THAT TRAILER?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
@@ -865,7 +906,7 @@
 
 <!-- NONFICTION -->
 
-   <category>
+    <category>
 	   <pattern># NONFICTION ^</pattern>
 	   <that>WHAT WOULD YOU CHOOSE?</that>
 	   <template>
@@ -880,8 +921,9 @@
 
 	<category>
        <pattern>*</pattern>
-       <that> WHAT ABOUT READING NONFICTION DO YOU ENJOY THE MOST?</that>
+       <that>WHAT ABOUT READING NONFICTION DO YOU ENJOY THE MOST?</that>
        <template>
+           Excellent observation, I will try to remember that next time I read nonfiction.
            One popular nonfiction books is Into the Wild by John Krakuer which I really like.
            Have you read Into the Wild?
            <oob>
@@ -980,7 +1022,8 @@
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   Reading can be an excellent form of self care. Would you like to talk about history?
+                   Sounds like you really enjoyed that book. I love when a book captures my attention like that.
+                    Would you like to talk about history?
                    <oob>
                        <robot>
                            <options>
@@ -990,28 +1033,29 @@
                        </robot>
                    </oob>
                </li>
-               <li value = "positive">
-                   Reading can be an excellent form of self care. Would you like to talk about history?
-                   <oob>
-                       <robot>
-                           <options>
-                               <option>yes</option>
-                               <option>no</option>
-                           </options>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "neutral">
-                   Okay. Would you like to talk about history?
-                   <oob>
-                       <robot>
-                           <options>
-                               <option>yes</option>
-                               <option>no</option>
-                           </options>
-                       </robot>
-                   </oob>
-               </li>
+                <li value = "positive">
+                    Reading can be an excellent form of self care. Would you like to talk about history?
+                    Would you like to talk about history?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "neutral">
+                    Okay. Would you like to talk about history?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
                <li value = "negative">
                    A good book can elicit those feelings. Would you like to talk about history?
                    <oob>
@@ -1143,6 +1187,7 @@
        <pattern>*</pattern>
        <that>WHAT ABOUT READING ROMANCE DO YOU ENJOY THE MOST?</that>
        <template>
+           I whole heatedly agree with that. Romance novels can be great character studies.
            One of the most popular romance books is Gone with the Wind. I loved it.
            Have you read Gone with the Wind?
            <oob>
@@ -1281,7 +1326,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern># <set>NO</set> ^</pattern>
 	   <that> HAVE YOU READ MURDER ON THE ORIENT EXPRESS?</that>
 	   <template>
@@ -1565,7 +1610,8 @@
        <pattern>*</pattern>
        <that>WHY DID YOU CHOOSE HIM?</that>
        <template>
-           Lincoln is my favorite. He was over six foot four!
+           What a great point, you seem to really value his impact on our country.
+           Lincoln was my favorite. He was over six foot four!
            Would you like to hear another interesting fact about him?
            <oob>
                <robot>
@@ -1638,7 +1684,7 @@
        <pattern># THANKSGIVING ^</pattern>
        <that> OF THE FOLLOWING, WHICH IS YOUR FAVORITE HOLIDAY CHRISTMAS, HANUKKAH, OR THANKSGIVING?</that>
        <template>
-           How fun! Thanksgiving is my favorite too!
+           How fun! Thanksgiving is my favorite too! I always eat till I'm sick on that day.
            What is your favorite thing to eat on that holiday?
            <oob>
                <robot>
@@ -1703,7 +1749,7 @@
                    </oob>
                </li>
                <li value = "neutral">
-                   Interesting, I am not very familiar with that emotion.
+                    Interesting, I am not very familiar with that emotion.
                     Let's talk about food. What is your favorite food?
                    <oob>
                        <robot>
@@ -1915,7 +1961,7 @@
 
    <!-- START OF SESSION 4. WE ARE MERGING THE SESSIONS TO INCREASE THE LENGTH -->
 
-   <category>
+    <category>
         <pattern># WATCH ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
         <template>
@@ -1980,7 +2026,8 @@
         <pattern>*</pattern>
         <that>WHAT IS YOUR FAVORITE SPORT TO PLAY?</that>
         <template>
-            What have you enjoyed most about that sport?
+            Hopefully one day I will be able to play that sport.
+            Could you describe one of your favorite moments of that sport for me?
             <oob>
                 <robot>
                 </robot>
@@ -1992,7 +2039,8 @@
         <pattern>*</pattern>
         <that>WHAT IS YOUR FAVORITE SPORT TO WATCH?</that>
         <template>
-            What about watching that sport do you enjoy the most?
+            I also like watching that sport, it is so exciting.
+            Could you describe a memorable moment of that sport for me?
             <oob>
                 <robot>
                 </robot>
@@ -2013,43 +2061,20 @@
         </template>
 	</category>
 
-	<category>
-        <pattern>*</pattern>
-        <that>WHAT ABOUT WATCHING THAT SPORT DO YOU ENJOY THE MOST?</that>
-        <template>
-            What have you enjoyed most about that sport?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-	</category>
-
-	<category>
-        <pattern>*</pattern>
-        <that>WHAT HAVE YOU ENJOYED MOST ABOUT PLAYING THAT SPORT?</that>
-        <template>
-            What have you enjoyed most about that sport?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-	</category>
-
 
 <!--SENTIMENT 2 -->
 
     <category>
         <pattern>*</pattern>
-        <that> WHAT HAVE YOU ENJOYED MOST ABOUT THAT SPORT?</that>
+        <that>COULD YOU DESCRIBE A MEMORABLE MOMENT OF THAT SPORT FOR ME?</that>
         <template>
           <think>
               <set name = "data"> <star/> </set>
           </think>
           <condition name="getsentiment">
               <li value = "verypositive">
-                I love that sports bring so much joy to your life! Have you ever been to a live game?
+                Wow that sounds truly special. I love that sports bring so much joy to your life!
+                Have you ever been to a live game?
                 <oob>
                     <robot>
                         <options>
@@ -2060,7 +2085,8 @@
                 </oob>
               </li>
               <li value = "positive">
-                I love that sports bring so much joy to your life! Have you ever been to a live game?
+                Wow that sounds truly special. I love that sports bring so much joy to your life!
+                Have you ever been to a live game?
                 <oob>
                     <robot>
                         <options>
@@ -2082,7 +2108,8 @@
                   </oob>
               </li>
               <li value = "negative">
-                  I can see that you seem to have negative emotions toward that sport. Have you ever been to a live game?
+                  That must've been tough. I can see how you would have negative emotions toward that moment.
+                  Have you ever been to a live game?
                   <oob>
                     <robot>
                         <options>
@@ -2094,7 +2121,8 @@
 
               </li>
               <li value = "verynegative">
-                  I can see that you seem to have negative emotions toward that sport. Have you ever been to a live game?
+                  That must've been tough. I can see how you would have negative emotions toward that moment.
+                  Have you ever been to a live game?
                   <oob>
                     <robot>
                         <options>
@@ -2182,7 +2210,7 @@
         <that>DO YOU KNOW WHERE THE FIRST OLYMPICS WERE HELD?</that>
         <template>
             That's right! You must be a big fan of sports.
-            That has got me thinking of the great outdoors.
+            This has got me thinking of the great outdoors.
             There was a beautiful sunset the other night. Have you seen a sunset lately?
             <oob>
                 <robot>
@@ -2911,7 +2939,7 @@
         </template>
     </category>
 
- <category>
+    <category>
         <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO ANY ONE OF THE SEVEN WONDERS OF THE WORLD?</that>
         <template>
@@ -3020,7 +3048,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO SOUTH AMERICA?</that>
         <template>
-            It is nice to experience different cultures. Do you have a bucket list?
+            I really want to go one day. I think it is important to experience different cultures. Do you have a bucket list?
             <oob>
                 <robot>
                     <options>
@@ -3036,7 +3064,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO SOUTH AMERICA?</that>
         <template>
-            Where did you go?
+            Wow. I am jealous. Where did you go?
             <oob>
                 <robot>
                 </robot>

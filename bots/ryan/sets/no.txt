@@ -52,3 +52,5 @@ maybe later
 thanks but no thanks
 not now
 not possible
+i rather not
+i would rather not
