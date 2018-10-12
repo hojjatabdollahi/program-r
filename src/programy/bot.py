@@ -309,9 +309,10 @@ class Bot(object):
             if any(results):
                 sentences = last_sentence.response.split(".")
                 response = ". ".join(sentences[1:])
+                response = response.split('.')[-1]
                 response = rephrased_clauses[r] + " "+response
             else:
-                response = rephrased_clauses[r] + " "+ last_sentence.response
+                response = rephrased_clauses[r] + " " + last_sentence.response.split(".")[-1]
 
         except:
             response= self.default_response

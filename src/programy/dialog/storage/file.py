@@ -38,7 +38,6 @@ class ConversationFileStorage(ConversationStorage):
             os.mkdir(user_dir)
         return user_dir
 
-    # TODO clientid could be replaced with context
     def save_conversation(self, client_context):
         #client_context.userid
         #client_context.bot.conversations["Console"].questions[-1].sentences[0].words
