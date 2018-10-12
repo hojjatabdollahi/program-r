@@ -218,7 +218,7 @@
         <template>
             I am an emotion recognizing robot, it allows me to be a better companion.
             This means that I can see when you are feeling different emotions, like happy, sad, or no feeling at all!
-            Please continue to share your feelings and thoughts with me, that way I’ll be able to be a better companion!
+            Please continue to share your feelings and thoughts with me, that way I'll be able to be a better companion!
             Let's begin. Do you have kids?
             <oob>
                 <robot>
