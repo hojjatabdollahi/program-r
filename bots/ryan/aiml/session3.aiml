@@ -196,6 +196,18 @@
            </oob>
        </template>
    </category>
+   
+   <category>
+	   <pattern># CARD ^</pattern>
+	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
+	   <template>
+	       I love cards! What is your favorite card game?
+	       <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
 
 	<category>
 	   <pattern>*</pattern>
@@ -2027,7 +2039,7 @@
         <that>WHAT IS YOUR FAVORITE SPORT TO PLAY?</that>
         <template>
             Hopefully one day I will be able to play that sport.
-            Could you describe one of your favorite moments of that sport for me?
+            Could you describe a memorable moment of that sport for me?
             <oob>
                 <robot>
                 </robot>
