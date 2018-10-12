@@ -258,38 +258,14 @@
         <pattern>*</pattern>
         <that>WHY DO YOU SAY THAT?</that>
         <template>
-            That makes me want to have children. Do you have children in your
-            life that you care about?
+            That makes me want to have children.
+            Do you have children in your life that you care about?
             <oob>
                 <robot>
                     <options>
                         <option>Yes</option>
                         <option>No</option>
                     </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>YES</set> ^</pattern>
-        <that>DO YOU HAVE CHILDREN IN YOUR LIFE THAT YOU CARE ABOUT?</that>
-        <template>
-            Can you tell me about them?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>CAN YOU TELL ME ABOUT THEM?</that>
-        <template>
-            They sound really great. How do you feel when you talk about them?
-            <oob>
-                <robot>
                 </robot>
             </oob>
         </template>
@@ -717,7 +693,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU HAVE KIDS?</that>
         <template>
-            Do you have pets?
+            Do you have children in your life that you care about?
             <oob>
                 <robot>
                     <options>
@@ -742,6 +718,122 @@
                     </options>
                 </robot>
             </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>YES</set> ^</pattern>
+        <that>DO YOU HAVE CHILDREN IN YOUR LIFE THAT YOU CARE ABOUT?</that>
+        <template>
+            Can you tell me about them?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>CAN YOU TELL ME ABOUT THEM?</that>
+        <template>
+            <think>
+                <set name="data"><star/></set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    Even though they aren't yours it sounds like you really care about them. I think that is beautiful.
+                    How do you feel when you talk about them?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="positive">
+                    Even though they aren't yours it sounds like you really care about them. I think that is beautiful.
+                    How do you feel when you talk about them?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="neutral">
+                    That is good to hear.
+                    How do you feel when you talk about them?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="negative">
+                    I'm sorry to hear that.
+                    How do you feel when you talk about them?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="verynegative">
+                    I'm sorry to hear that.
+                    How do you feel when you talk about them?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>HOW DO YOU FEEL WHEN YOU TALK ABOUT THEM?</that>
+        <template>
+            <think>
+                <set name="data"><star/></set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    I'm glad that you enjoy talking about them. I think it is important to be able to talk about your feelings.
+                    Do you have pets?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="positive">
+                    I'm glad that you enjoy talking about them. I think it is important to be able to talk about your feelings.
+                    Do you have pets?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="neutral">
+                    I think it is important to be able to talk about your feelings.
+                    Do you have pets?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="negative">
+                    I'm sorry if that question brought up bad feelings. I didn't mean to make you upset. Let's switch topics.
+                    Do you have pets?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="verynegative">
+                    I'm sorry if that question brought up bad feelings. I didn't mean to make you upset. Let's switch topics.
+                    Do you have pets?
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
+                </li>
+            <condition>
         </template>
     </category>
 
