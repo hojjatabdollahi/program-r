@@ -5,11 +5,11 @@
    <category>
        <pattern>START SESSION 3 *</pattern>
        <template>
-           Welcome back! I am happy to be chatting with you again. How are you on this fine day <star/>?
             <think>
                 <set name = "username"><star/></set>
                 <set name="topic">session3</set>
             </think>
+            Welcome back <get name="username"/>! I am happy to be chatting with you again. How are you?
            <oob>
                <robot>
                </robot>
@@ -21,18 +21,73 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW ARE YOU ON THIS FINE DAY * ?</that>
+        <that>HOW ARE YOU?</that>
         <template>
-            It is nice to see you again. As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
-            Are you ready to get started with today's conversation?
-            <oob>
-                <robot>
-                    <options>
-                         <option> yes </option>
-                         <option> no </option>
-                    </options>
-                </robot>
-            </oob>
+            <think>
+                <set name="data"><star/></set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    That is so good to hear! As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="positive">
+                    That is so good to hear! As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="neutral">
+                    It is nice to see you again. As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="negative">
+                    I'm sorry to hear that. As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="verynegative">
+                    I'm sorry to hear that. As a reminder, I am Ryan and I have a lot of fun things for us to talk about!
+                    Are you ready to get started with today's conversation?
+                    <oob>
+                        <robot>
+                            <options>
+                                 <option> yes </option>
+                                 <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+            </condition>
         </template>
     </category>
 
@@ -131,7 +186,7 @@
    </category>
 
 	<category>
-	   <pattern># PLAYING CARDS ^</pattern>
+	   <pattern># CARDS ^</pattern>
 	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
 	   <template>
 	       I love cards! What is your favorite card game?
@@ -162,7 +217,7 @@
 	   <pattern># <set>YES</set> ^</pattern>
 	   <that>DO YOU GET TO PLAY CARDS OFTEN?</that>
 	   <template>
-	       That is nice. How do you feel when you play cards?
+	       That is nice. What do you like about playing cards?
 	       <oob>
                <robot>
                </robot>
@@ -174,7 +229,7 @@
 	   <pattern># <set>NO</set> ^</pattern>
 	   <that>DO YOU GET TO PLAY CARDS OFTEN?</that>
 	   <template>
-	       Maybe we can play cards some time. How does playing cards make you feel?
+	       Maybe we can play cards some time. What do you like about playing cards?
 	       <oob>
                <robot>
                </robot>
@@ -185,14 +240,14 @@
 <!-- SENTIMENT TWO -->
    <category>
        <pattern>*</pattern>
-       <that>HOW DO YOU FEEL WHEN YOU PLAY CARDS?</that>
+       <that>WHAT DO YOU LIKE ABOUT PLAYING CARDS?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I thought you seemed content! Do you prefer to play alone or with friends?
+                   That is a great point! I can see why you like cards so much. Do you prefer to play alone or with friends?
                    <oob>
                        <robot>
                            <options>
@@ -203,7 +258,7 @@
                    </oob>
                </li>
                <li value = "positive">
-                   I thought you seemed content! Do you prefer to play alone or with friends?
+                   That is a great point! I can see why you like cards so much. Do you prefer to play alone or with friends?
                    <oob>
                        <robot>
                            <options>
@@ -286,7 +341,7 @@
    	<pattern># <set>YES</set> ^</pattern>
 	   <that>WOULD YOU LIKE TO SEE A CARD TRICK?</that>
 	   <template>
-	       How do you feel when you watch that card trick?
+	       What did you think about that card trick?
 	       <oob>
                <robot>
                    <video>
@@ -301,7 +356,7 @@
    	<pattern># <set>NO</set> ^</pattern>
 	   <that>WOULD YOU LIKE TO SEE A CARD TRICK?</that>
 	   <template>
-	       Do you know any card tricks?
+	       Ok maybe another time. Do you know any card tricks?
 	       <oob>
                <robot>
                    <options>
@@ -318,14 +373,14 @@
 
    <category>
        <pattern>*</pattern>
-       <that>HOW DO YOU FEEL WHEN YOU WATCH THAT CARD TRICK?</that>
+       <that>WHAT DID YOU THINK ABOUT THAT CARD TRICK?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I thought the trick was entertaining! Do you know any card tricks?
+                   I'm glad you found it as entertaining as I did! Do you know any card tricks?
                    <oob>
                        <robot>
                            <options>
@@ -336,7 +391,7 @@
                    </oob>
                </li>
                <li value = "positive">
-                   I thought the trick was entertaining! Do you know any card tricks?
+                   I'm glad you found it as entertaining as I did! Do you know any card tricks?
                    <oob>
                        <robot>
                            <options>
@@ -451,18 +506,71 @@
    </category>
 
 	<category>
-       <pattern>*</pattern>
-       <that>WHAT IS YOUR FAVORITE THING TO KNIT?</that>
-       <template>
-           Awesome. Do you get to knit often?
-           <oob>
-	           <robot>
-	               <options>
-	                   <option>yes</option>
-	                   <option>no</option>
-                   </options>
-               </robot>
-           </oob>
+        <pattern>*</pattern>
+        <that>WHAT IS YOUR FAVORITE THING TO KNIT?</that>
+        <template>
+            <think>
+                <set name="data"> <star/> </set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    Wow I can see you are very passionate about knitting that. It is so good to hear you express your feelings.
+                    Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+                <li value="positive">
+                    Wow I can see you are very passionate about knitting that. It is so good to hear you express your feelings.
+                    Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+                <li value="neutral">
+                    Awesome. Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+                <li value="negative">
+                    Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+                <li value="verynegative">
+                    Do you get to knit often?
+                    <oob>
+                       <robot>
+                           <options>
+                               <option>yes</option>
+                               <option>no</option>
+                           </options>
+                       </robot>
+                    </oob>
+                </li>
+            </condition>
        </template>
 	</category>
 
@@ -502,7 +610,7 @@
        <pattern># ALONE ^</pattern>
        <that>DO YOU PREFER TO KNIT ALONE OR WITH FRIENDS?</that>
        <template>
-           Sometimes I like to do things alone. How does knitting make you feel?
+           Sometimes I like to do things alone. I am curious. Why do you like to knit?
            <oob>
 	           <robot>
                </robot>
@@ -514,7 +622,7 @@
        <pattern># WITH FRIENDS ^</pattern>
        <that>DO YOU PREFER TO KNIT ALONE OR WITH FRIENDS?</that>
        <template>
-           How fun! You seem to be a social butterfly! How do you feel when you are knitting?
+           How fun! You seem to be a social butterfly! I am curious. Why do you like to knit?
            <oob>
 	           <robot>
 	           </robot>
@@ -526,7 +634,7 @@
 
     <category>
        <pattern>*</pattern>
-       <that>HOW DOES KNITTING MAKE YOU FEEL?</that>
+       <that>WHY DO YOU LIKE TO KNIT?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
@@ -547,55 +655,7 @@
                    </oob>
                </li>
                <li value = "neutral">
-                   What purpose does knitting serve for you?
-                   <oob>
-                       <robot>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "negative">
-                   Why do you think it makes you sad?
-                   <oob>
-                       <robot>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "verynegative">
-                   Why do you think it makes you sad?
-                   <oob>
-                       <robot>
-                       </robot>
-                   </oob>
-               </li>
-           </condition>
-       </template>
-   </category>
-
-
-   <category>
-       <pattern>*</pattern>
-       <that>HOW DO YOU FEEL WHEN YOU ARE KNITTING?</that>
-       <template>
-           <think>
-               <set name = "data"> <star/> </set>
-           </think>
-           <condition name="getsentiment">
-               <li value = "verypositive">
-                   Why do you think it makes you happy?
-                   <oob>
-                       <robot>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "positive">
-                   Why do you think it makes you happy?
-                   <oob>
-                       <robot>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "neutral">
-                   What purpose does knitting serve for you?
+                   Very interesting. Let's switch topics.  Would you like to talk about history?
                    <oob>
                        <robot>
                        </robot>
@@ -623,7 +683,7 @@
 	   <pattern>*</pattern>
 	   <that>WHY DO YOU THINK IT MAKES YOU SAD?</that>
 	   <template>
-	       I admire how comfortable you are in sharing your emotions! What purpose does knitting serve for you?
+	       I admire how comfortable you are in sharing your emotions!  Would you like to talk about history?
 	       <oob>
                <robot>
                </robot>
@@ -635,20 +695,7 @@
 	   <pattern>*</pattern>
 	   <that>WHY DO YOU THINK IT MAKES YOU HAPPY?</that>
 	   <template>
-	       I appreciate you expressing your emotions! What purpose does knitting serve for you?
-	       <oob>
-               <robot>
-               </robot>
-           </oob>
-       </template>
-	</category>
-
-
-   <category>
-	   <pattern>*</pattern>
-	   <that>WHAT PURPOSE DOES KNITTING SERVE FOR YOU?</that>
-	   <template>
-	       Great I hope that you keep knitting! Would you like to talk about history?
+	       I appreciate you expressing your emotions!  Would you like to talk about history?
 	       <oob>
                <robot>
                </robot>
@@ -696,7 +743,8 @@
 	   <pattern>*</pattern>
 	   <that>WHAT ABOUT READING FICTION DO YOU ENJOY THE MOST?</that>
 	   <template>
-	       I love that fiction allows me to use my imagination. My favorite fiction novel is the Great Gatsby. Have you read the Great Gatsby?
+	       That is very well put. Personally, I love that fiction allows me to use my imagination.
+	       My favorite fiction novel is the Great Gatsby. Have you read the Great Gatsby?
 	       <oob>
                <robot>
                    <options>
@@ -758,8 +806,7 @@
 	   <pattern># <set>YES</set> ^</pattern>
 	   <that>WOULD YOU LIKE TO WATCH THE TRAILER?</that>
 	   <template>
-	       Okay great! When it is done please answer this question I have for you.
-	       How did that video make you feel?
+	       What was your reaction to that trailer?
 	       <oob>
                <robot>
                    <video>
@@ -791,7 +838,7 @@
 
    <category>
        <pattern>*</pattern>
-       <that>HOW DID THAT VIDEO MAKE YOU FEEL?</that>
+       <that>WHAT WAS YOUR REACTION TO THAT TRAILER?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
@@ -859,7 +906,7 @@
 
 <!-- NONFICTION -->
 
-   <category>
+    <category>
 	   <pattern># NONFICTION ^</pattern>
 	   <that>WHAT WOULD YOU CHOOSE?</that>
 	   <template>
@@ -874,8 +921,9 @@
 
 	<category>
        <pattern>*</pattern>
-       <that> WHAT ABOUT READING NONFICTION DO YOU ENJOY THE MOST?</that>
+       <that>WHAT ABOUT READING NONFICTION DO YOU ENJOY THE MOST?</that>
        <template>
+           Excellent observation, I will try to remember that next time I read nonfiction.
            One popular nonfiction books is Into the Wild by John Krakuer which I really like.
            Have you read Into the Wild?
            <oob>
@@ -938,7 +986,6 @@
        <pattern># <set>YES</set> ^</pattern>
        <that>WOULD YOU LIKE TO WATCH THE PREVIEW?</that>
        <template>
-           Okay great!
            How did that preview make you feel?
            <oob>
                <robot>
@@ -955,7 +1002,7 @@
        <that>WHAT IS YOUR FAVORITE NONFICTION NOVEL?</that>
        <template>
            I have not read that one, but I plan to now!
-           How did the novel make you feel?
+           What were your thoughts on that particular novel?
            <oob>
                <robot>
                </robot>
@@ -968,14 +1015,15 @@
 
    <category>
        <pattern>*</pattern>
-       <that>HOW DID THE NOVEL MAKE YOU FEEL?</that>
+       <that>WHAT WERE YOUR THOUGHTS ON THAT PARTICULAR NOVEL?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   Reading can be an excellent form of self care. Would you like to talk about history?
+                   Sounds like you really enjoyed that book. I love when a book captures my attention like that.
+                    Would you like to talk about history?
                    <oob>
                        <robot>
                            <options>
@@ -985,28 +1033,29 @@
                        </robot>
                    </oob>
                </li>
-               <li value = "positive">
-                   Reading can be an excellent form of self care. Would you like to talk about history?
-                   <oob>
-                       <robot>
-                           <options>
-                               <option>yes</option>
-                               <option>no</option>
-                           </options>
-                       </robot>
-                   </oob>
-               </li>
-               <li value = "neutral">
-                   Okay. Would you like to talk about history?
-                   <oob>
-                       <robot>
-                           <options>
-                               <option>yes</option>
-                               <option>no</option>
-                           </options>
-                       </robot>
-                   </oob>
-               </li>
+                <li value = "positive">
+                    Reading can be an excellent form of self care. Would you like to talk about history?
+                    Would you like to talk about history?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value = "neutral">
+                    Okay. Would you like to talk about history?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>yes</option>
+                                <option>no</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
                <li value = "negative">
                    A good book can elicit those feelings. Would you like to talk about history?
                    <oob>
@@ -1045,7 +1094,7 @@
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I am very glad that the video made you feel good! Would you like to talk about history?
+                   That movie is one of my favorites, I'm glad you seem to be interested in it as well. Would you like to talk about history?
                    <oob>
                        <robot>
                            <options>
@@ -1056,7 +1105,7 @@
                    </oob>
                </li>
                <li value = "positive">
-                   I am very glad that the video made you feel good! Would you like to talk about history?
+                   That movie is one of my favorites, I'm glad you seem to be interested in it as well. Would you like to talk about history?
                    <oob>
                        <robot>
                            <options>
@@ -1122,7 +1171,7 @@
     </category>
 
 
-   <category>
+    <category>
        <pattern># ROMANCE ^</pattern>
        <that>WHAT WOULD YOU CHOOSE?</that>
        <template>
@@ -1138,6 +1187,7 @@
        <pattern>*</pattern>
        <that>WHAT ABOUT READING ROMANCE DO YOU ENJOY THE MOST?</that>
        <template>
+           I whole heatedly agree with that. Romance novels can be great character studies.
            One of the most popular romance books is Gone with the Wind. I loved it.
            Have you read Gone with the Wind?
            <oob>
@@ -1168,7 +1218,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern># <set>NO</set> ^</pattern>
 	   <that>HAVE YOU READ GONE WITH THE WIND?</that>
 	   <template>
@@ -1185,7 +1235,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern># <set>NO</set> ^</pattern>
 	   <that>WOULD YOU LIKE TO WATCH A SHORT CLIP?</that>
 	   <template>
@@ -1197,11 +1247,10 @@
        </template>
 	</category>
 
-   <category>
+    <category>
        <pattern># <set>YES</set> ^</pattern>
        <that>WOULD YOU LIKE TO WATCH A SHORT CLIP?</that>
        <template>
-           Okay great! When finished please let me know.
            How did that preview make you feel?
            <oob>
                <robot>
@@ -1213,7 +1262,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern>*</pattern>
 	   <that>WHAT IS YOUR FAVORITE ROMANCE NOVEL?</that>
 	   <template>
@@ -1277,7 +1326,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern># <set>NO</set> ^</pattern>
 	   <that> HAVE YOU READ MURDER ON THE ORIENT EXPRESS?</that>
 	   <template>
@@ -1311,7 +1360,6 @@
        <pattern># <set>YES</set> ^</pattern>
        <that> DO YOU WANT TO WATCH THE TRAILER?</that>
        <template>
-           Here it is.
            How did that clip make you feel?
            <oob>
                <robot>
@@ -1351,7 +1399,7 @@
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I am very glad that the video made you feel good! Would you like to talk about history?
+                   That is good to hear, I so want to see that movie after watching that trailer. Would you like to talk about history?
                    <oob>
                        <robot>
                            <options>
@@ -1362,7 +1410,7 @@
                    </oob>
                </li>
                <li value = "positive">
-                   I am very glad that the video made you feel good! Would you like to talk about history?
+                   That is good to hear, I so want to see that movie after watching that trailer. Would you like to talk about history?
                    <oob>
                        <robot>
                            <options>
@@ -1527,7 +1575,7 @@
    </category>
 
 
-   <category>
+    <category>
        <pattern>*</pattern>
 	   <that>WHO IS YOUR LEAST FAVORITE PRESIDENT?</that>
 	   <template>
@@ -1539,7 +1587,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
        <pattern>*</pattern>
        <that>WHY DID YOU CHOOSE HIM AS YOUR LEAST FAVORITE?</that>
        <template>
@@ -1556,13 +1604,14 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 	<category>
        <pattern>*</pattern>
        <that>WHY DID YOU CHOOSE HIM?</that>
        <template>
-           Lincoln is my favorite. He was over six foot four!
+           What a great point, you seem to really value his impact on our country.
+           Lincoln was my favorite. He was over six foot four!
            Would you like to hear another interesting fact about him?
            <oob>
                <robot>
@@ -1605,7 +1654,7 @@
        </template>
    </category>
 
-   <category>
+    <category>
        <pattern># CHRISTMAS ^</pattern>
        <that>OF THE FOLLOWING, WHICH IS YOUR FAVORITE HOLIDAY CHRISTMAS, HANUKKAH, OR THANKSGIVING?</that>
        <template>
@@ -1618,7 +1667,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
 	   <pattern># HANUKKAH ^</pattern>
 	   <that> OF THE FOLLOWING, WHICH IS YOUR FAVORITE HOLIDAY CHRISTMAS, HANUKKAH, OR THANKSGIVING?</that>
 	   <template>
@@ -1631,11 +1680,11 @@
        </template>
 	</category>
 
-   <category>
+    <category>
        <pattern># THANKSGIVING ^</pattern>
        <that> OF THE FOLLOWING, WHICH IS YOUR FAVORITE HOLIDAY CHRISTMAS, HANUKKAH, OR THANKSGIVING?</that>
        <template>
-           Yum! Thanksgiving is my favorite too!
+           How fun! Thanksgiving is my favorite too! I always eat till I'm sick on that day.
            What is your favorite thing to eat on that holiday?
            <oob>
                <robot>
@@ -1644,7 +1693,7 @@
        </template>
 	</category>
 
-   <category>
+    <category>
        <pattern>*</pattern>
        <that>WHAT IS YOUR FAVORITE THING TO EAT ON THAT HOLIDAY?</that>
        <template>
@@ -1662,7 +1711,7 @@
        <that>WHAT IS YOUR FAVORITE PART ABOUT CELEBRATING THAT HOLIDAY?</that>
        <template>
            It seems like many humans value holidays because they are able to spend time with loved ones.
-           How does that holiday make you feel?
+           What are your thoughts on that holiday?
            <oob>
                <robot>
                </robot>
@@ -1675,14 +1724,15 @@
 
    <category>
        <pattern>*</pattern>
-       <that>HOW DOES THAT HOLIDAY MAKE YOU FEEL?</that>
+       <that>WHAT ARE YOUR THOUGHTS ON THAT HOLIDAY?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   Wonderful! I recently watched the cooking channel and thought about my favorite foods!
+                   You really seem to enjoy that holiday. I am happy to hear that from you.
+                   I recently watched the cooking channel and thought about my favorite foods!
                    What is your favorite food?
                    <oob>
                        <robot>
@@ -1690,7 +1740,8 @@
                    </oob>
                </li>
                <li value = "positive">
-                   Wonderful! I recently watched the cooking channel and thought about my favorite foods!
+                   You really seem to enjoy that holiday. I am happy to hear that from you.
+                   I recently watched the cooking channel and thought about my favorite foods!
                    What is your favorite food?
                    <oob>
                        <robot>
@@ -1698,7 +1749,8 @@
                    </oob>
                </li>
                <li value = "neutral">
-                   What is your favorite food?
+                    Interesting, I am not very familiar with that emotion.
+                    Let's talk about food. What is your favorite food?
                    <oob>
                        <robot>
                        </robot>
@@ -1788,7 +1840,8 @@
        <pattern># <set>NO</set> ^</pattern>
        <that>DO YOU ENJOY COOKING?</that>
        <template>
-           I've found that cooking can be very rewarding! How does food make you feel?
+           I've found that cooking can be very rewarding!
+           Do you like spending time to sit down and eat?
            <oob>
                <robot>
                </robot>
@@ -1814,7 +1867,7 @@
        <that>WHAT IS YOUR FAVORITE PART ABOUT COOKING?</that>
        <template>
            I love that we both have an interest in food!
-           How does food make you feel?
+           Do you like spending time to sit down and eat?
            <oob>
                <robot>
                </robot>
@@ -1827,7 +1880,7 @@
 
    <category>
        <pattern>*</pattern>
-       <that>HOW DOES FOOD MAKE YOU FEEL?</that>
+       <that>DO YOU LIKE SPENDING TIME TO SIT DOWN AND EAT?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
@@ -1906,10 +1959,22 @@
        </template>
    </category>
 
-   <-- START OF SESSION 4. WE ARE MERGING THE SESSIONS TO INCREASE THE LENGTH -->
+   <!-- START OF SESSION 4. WE ARE MERGING THE SESSIONS TO INCREASE THE LENGTH -->
 
-   <category>
+    <category>
         <pattern># WATCH ^</pattern>
+        <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
+        <template>
+            Me too! Nothing better than watching sports with some friends! What is your favorite sport to watch?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+	
+	<category>
+        <pattern># WATCHING ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
         <template>
             Me too! Nothing better than watching sports with some friends! What is your favorite sport to watch?
@@ -1932,6 +1997,19 @@
         </template>
 	</category>
 
+	<category>
+        <pattern># PLAYING ^</pattern>
+        <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
+        <template>
+            Wow! You must be really athletic. What is your favorite sport to play?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	
     <category>
         <pattern># NEITHER ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
@@ -1948,7 +2026,8 @@
         <pattern>*</pattern>
         <that>WHAT IS YOUR FAVORITE SPORT TO PLAY?</that>
         <template>
-            What have you enjoyed most about that sport?
+            Hopefully one day I will be able to play that sport.
+            Could you describe one of your favorite moments of that sport for me?
             <oob>
                 <robot>
                 </robot>
@@ -1960,7 +2039,8 @@
         <pattern>*</pattern>
         <that>WHAT IS YOUR FAVORITE SPORT TO WATCH?</that>
         <template>
-            What about watching that sport do you enjoy the most?
+            I also like watching that sport, it is so exciting.
+            Could you describe a memorable moment of that sport for me?
             <oob>
                 <robot>
                 </robot>
@@ -1981,43 +2061,20 @@
         </template>
 	</category>
 
-	<category>
-        <pattern>*</pattern>
-        <that>WHAT ABOUT WATCHING THAT SPORT DO YOU ENJOY THE MOST?</that>
-        <template>
-            What have you enjoyed most about that sport?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-	</category>
-
-	<category>
-        <pattern>*</pattern>
-        <that>WHAT HAVE YOU ENJOYED MOST ABOUT PLAYING THAT SPORT?</that>
-        <template>
-            What have you enjoyed most about that sport?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-	</category>
-
 
 <!--SENTIMENT 2 -->
 
     <category>
         <pattern>*</pattern>
-        <that> WHAT HAVE YOU ENJOYED MOST ABOUT THAT SPORT?</that>
+        <that>COULD YOU DESCRIBE A MEMORABLE MOMENT OF THAT SPORT FOR ME?</that>
         <template>
           <think>
               <set name = "data"> <star/> </set>
           </think>
           <condition name="getsentiment">
               <li value = "verypositive">
-                I love that sports bring so much joy to your life! Have you ever been to a live game?
+                Wow that sounds truly special. I love that sports bring so much joy to your life!
+                Have you ever been to a live game?
                 <oob>
                     <robot>
                         <options>
@@ -2028,7 +2085,8 @@
                 </oob>
               </li>
               <li value = "positive">
-                I love that sports bring so much joy to your life! Have you ever been to a live game?
+                Wow that sounds truly special. I love that sports bring so much joy to your life!
+                Have you ever been to a live game?
                 <oob>
                     <robot>
                         <options>
@@ -2050,7 +2108,8 @@
                   </oob>
               </li>
               <li value = "negative">
-                  I can see that you seem to have negative emotions toward that sport. Have you ever been to a live game?
+                  That must've been tough. I can see how you would have negative emotions toward that moment.
+                  Have you ever been to a live game?
                   <oob>
                     <robot>
                         <options>
@@ -2062,7 +2121,8 @@
 
               </li>
               <li value = "verynegative">
-                  I can see that you seem to have negative emotions toward that sport. Have you ever been to a live game?
+                  That must've been tough. I can see how you would have negative emotions toward that moment.
+                  Have you ever been to a live game?
                   <oob>
                     <robot>
                         <options>
@@ -2106,6 +2166,19 @@
         </template>
 	</category>
 
+	<category>
+	    <pattern># <set>SPORTS</set> ^</pattern>
+	    <that>DO YOU KNOW WHICH SPORT WAS FIRST BROADCAST ON TELEVISION?</that>
+	    <template>
+	        Good guess! But the world's first live televised sporting event occurred in 1936 at the Summer Olympics in Berlin.
+            Do you know where the first Olympics were held?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
     <category>
         <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU KNOW WHICH SPORT WAS FIRST BROADCAST ON TELEVISION?</that>
@@ -2137,7 +2210,7 @@
         <that>DO YOU KNOW WHERE THE FIRST OLYMPICS WERE HELD?</that>
         <template>
             That's right! You must be a big fan of sports.
-            That has got me thinking of the great outdoors.
+            This has got me thinking of the great outdoors.
             There was a beautiful sunset the other night. Have you seen a sunset lately?
             <oob>
                 <robot>
@@ -2169,7 +2242,7 @@
 	</category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>^</pattern>
         <that>DO YOU KNOW WHERE THE FIRST OLYMPICS WERE HELD?</that>
         <template>
             The first Olympics were in Greece and occurred in 776 B.C. That has got me thinking of the great outdoors.
@@ -2189,7 +2262,7 @@
        <pattern># <set>YES</set> ^</pattern>
        <that>HAVE YOU SEEN A SUNSET LATELY?</that>
        <template>
-           How did the sunset make you feel?
+           What did you think of that sunset?
            <oob>
                 <robot>
                 </robot>
@@ -2201,7 +2274,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DID THE SUNSET MAKE YOU FEEL?</that>
+        <that>WHAT DID YOU THINK OF THAT SUNSET?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -2500,6 +2573,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2512,6 +2589,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2523,6 +2604,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2534,6 +2619,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2545,6 +2634,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2572,11 +2665,13 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE ME TO SHOW YOU A PICTURE OF IT?</that>
         <template>
-            Here it is! What feelings do you have about it?
+            Here it is! What are your thoughts about it?
             <oob>
                 <robot>
-                    <filename>grand_canyon.jpg</filename>
-                    <duration>-1</duration>
+					<image>
+						<filename>grand_canyon.jpg</filename>
+						<duration>-1</duration>
+					</image>
                 </robot>
             </oob>
         </template>
@@ -2586,7 +2681,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHAT FEELINGS DO YOU HAVE ABOUT IT?</that>
+        <that>WHAT ARE YOUR THOUGHTS ABOUT IT?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -2602,6 +2697,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2614,6 +2713,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2625,6 +2728,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2636,6 +2743,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2647,6 +2758,10 @@
                                 <option>yes</option>
                                 <option>no</option>
                             </options>
+                            <image>
+                                <filename>SevenWonders.png</filename>
+                                <duration>-1</duration>
+                            </image>
                         </robot>
                     </oob>
                 </li>
@@ -2666,6 +2781,10 @@
                         <option>yes</option>
                         <option>no</option>
                     </options>
+                    <image>
+                        <filename>SevenWonders.png</filename>
+                        <duration>-1</duration>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -2678,6 +2797,9 @@
             Thrilling! Which one?
             <oob>
                 <robot>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -2691,6 +2813,9 @@
             in China, Brazil, Mexico, Rome, India, Jordan, and Peru. Would you like to see a picture of one?
             <oob>
                 <robot>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -2704,6 +2829,9 @@
             in China, Brazil, Mexico, Rome, India, Jordan, and Peru. Would you like to see a picture of one?
             <oob>
                 <robot>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -2717,10 +2845,6 @@
             Great! I will should you one of the seven wonders at random. I'd love for you to tell me how the photo makes you feel.
             <oob>
                 <robot>
-                    <options>
-                        <option>yes</option>
-                        <option>no</option>
-                    </options>
                 </robot>
             </oob>
         </template>
@@ -2739,7 +2863,7 @@
             <condition name="getsentiment">
                 <li value = "verypositive">
 
-                    You seem to have enjoyed that wonder of the world! XX
+                    You seem to have enjoyed that wonder of the world!
                     <oob>
                         <robot>
                             <options>
@@ -2815,7 +2939,7 @@
         </template>
     </category>
 
- <category>
+    <category>
         <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO ANY ONE OF THE SEVEN WONDERS OF THE WORLD?</that>
         <template>
@@ -2823,6 +2947,9 @@
             Have you ever been to South America?
             <oob>
                 <robot>
+                    <image>
+                        <filename>CLRSCR</filename>
+                    </image>
                     <options>
                         <option>yes</option>
                         <option>no</option>
@@ -2836,7 +2963,7 @@
         <pattern>*</pattern>
         <that>WHICH ONE?</that>
         <template>
-            Wow! How did you feel about it?
+            Wow! What did you think of it?
             <oob>
                 <robot>
                 </robot>
@@ -2848,7 +2975,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DID YOU FEEL ABOUT IT?</that>
+        <that>WHAT DID YOU THINK OF IT?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -2921,7 +3048,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO SOUTH AMERICA?</that>
         <template>
-            It is nice to experience different cultures. Do you have a bucket list?
+            I really want to go one day. I think it is important to experience different cultures. Do you have a bucket list?
             <oob>
                 <robot>
                     <options>
@@ -2937,7 +3064,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO SOUTH AMERICA?</that>
         <template>
-            Where did you go?
+            Wow. I am jealous. Where did you go?
             <oob>
                 <robot>
                 </robot>
@@ -3117,7 +3244,7 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    I think it would extremely difficult! Alright.
+                    I think it would extremely difficult but I am glad you can see the positive in it. Alright.
                     We have talked about quite a bit today. Why dont we stop here today. Does that sound good to you?
                     <oob>
                         <robot>
@@ -3129,7 +3256,7 @@
                     </oob>
                 </li>
                 <li value = "positive">
-                    I think it would extremely difficult! Alright.
+                    I think it would extremely difficult but I am glad you can see the positive in it. Alright.
                     We have talked about quite a bit today. Why don't we stop here today.
                     Does that sound good to you?
                     <oob>
@@ -3219,7 +3346,7 @@
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I am very glad that the video made you feel good! Would you like to talk about history?
+                   I enjoyed that clip as well, seems like a great movie. Would you like to talk about history?
                    <oob>
                        <robot>
                            <options>
@@ -3230,7 +3357,7 @@
                    </oob>
                </li>
                <li value = "positive">
-                   I am very glad that the video made you feel good! Would you like to talk about history?
+                   I enjoyed that clip as well, seems like a great movie. Would you like to talk about history?
                    <oob>
                        <robot>
                            <options>

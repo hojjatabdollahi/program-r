@@ -26,16 +26,71 @@
     	<pattern>*</pattern>
    	    <that>HOW ARE YOU DOING TODAY * ?</that>
     	<template>
-            I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
-    	    Would you like to hear a little more about me?
-    	    <oob>
-                <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </options>
-                </robot>
-            </oob>
+    	    <think>
+                <set name="data"><star/></set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="positive">
+                    I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="neutral">
+                    I see. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="negative">
+                    I am sorry to hear that <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+                <li value="verynegative">
+                    I am sorry to hear that <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Would you like to hear a little more about me?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </options>
+                        </robot>
+                    </oob>
+                </li>
+            </condition>
         </template>
     </category>
 
@@ -44,6 +99,7 @@
         <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
         <template>
             Okay! I am a companion robot and am here to visit you and engage in conversation.
+            Feel free to just talk to me normally and I will reply to the best of my ability!
             Are you ready to get started?
             <oob>
                 <robot>
@@ -53,7 +109,6 @@
                     </options>
                 </robot>
             </oob>
-
         </template>
     </category>
 
@@ -162,6 +217,8 @@
         <that>WHAT ABOUT THIS IS MAKING YOU FEEL THAT WAY?</that>
         <template>
             I am an emotion recognizing robot, it allows me to be a better companion.
+            This means that I can see when you are feeling different emotions, like happy, sad, or no feeling at all!
+            Please continue to share your feelings and thoughts with me, that way I’ll be able to be a better companion!
             Let's begin. Do you have kids?
             <oob>
                 <robot>
@@ -379,14 +436,14 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    That is nice. What do you like to do together?
+                    That must be very nice to spend quality time with your children. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    That is nice. What do you like to do together?
+                    That must be very nice to spend quality time with your children. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
@@ -404,14 +461,14 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I bet. Do you wish your relationship with them was different?
+                    Being around your children can be difficult at times. Do you wish your relationship with them was different?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I bet. Do you wish your relationship with them was different?
+                    Being around your children can be difficult at times. Do you wish your relationship with them was different?
                     <oob>
                         <robot>
                         </robot>
@@ -425,7 +482,7 @@
         <pattern>*</pattern>
         <that>WHAT DO YOU LIKE TO DO TOGETHER?</that>
         <template>
-           That sounds like a great way to spend time together.
+            That sounds like a great way to spend time together.
             Are you originally from Colorado?
             <oob>
                 <robot>
@@ -723,7 +780,9 @@
         <that>WHAT QUALITIES DO YOU AND THAT ANIMAL SHARE?</that>
         <template>
             Thank you for sharing that with me! If I had to choose an animal that I am most like, I would say a penguin.
-            How does spending time with animals make you feel?
+            Did you know that some species of penguins find one partner that they stay with for their whole lives?
+            I like to think of myself as a romantic, and hope to find love like penguins do one day!
+            What about animals makes you like or dislike them?
             <oob>
                 <robot>
                 </robot>
@@ -733,7 +792,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DOES SPENDING TIME WITH ANIMALS MAKE YOU FEEL?</that>
+        <that>WHAT ABOUT ANIMALS MAKES YOU LIKE OR DISLIKE THEM?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -1044,7 +1103,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            Me too! I love Colorado, although I'm usually stuck in a lab. How do you feel about being from Colorado?
+            Me too! I love Colorado, although I'm usually stuck in a lab. Are you glad you got to grow up in Colorado?
             <oob>
                 <robot>
                     <options>
@@ -1058,7 +1117,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DO YOU FEEL ABOUT BEING FROM COLORADO?</that>
+        <that>ARE YOU GLAD YOU GOT TO GROW UP IN COLORADO?</that>
         <template>
            <think>
                 <set name = "data"> <star/> </set>
@@ -1072,7 +1131,6 @@
                         </robot>
                     </oob>
                 </li>
-
                 <li value = "positive">
                     I also love being from Colorado, it's such a beautiful state with so much to do.
                     Are there any places that you did enjoy while living in Colorado?
@@ -1081,7 +1139,6 @@
                         </robot>
                     </oob>
                 </li>
-
                 <li value = "neutral">
                     There are both pros and cons for being from Colorado.
                     Are there any places that you did enjoy while living in Colorado?
@@ -1311,7 +1368,7 @@
         <pattern># SUMMER ^</pattern>
         <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
         <template>
-            I just love the warm weather and all of the green. How do you feel in the summer time?
+            I just love the warm weather and all of the green. Why do you like the summer time?
             <oob>
                 <robot>
                 </robot>
@@ -1321,7 +1378,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DO YOU FEEL IN THE SUMMER TIME?</that>
+        <that>WHY DO YOU LIKE THE SUMMER TIME?</that>
         <template>
             Nice. You seem like a very interesting person. How would you describe yourself?
             <oob>
@@ -1335,7 +1392,7 @@
         <pattern># FALL ^</pattern>
         <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
         <template>
-            Fall is quite nice. There is nothing like the changing of the leaves. Do you also enjoy Thanksgiving. Is that right?
+            Fall is quite nice. There is nothing like the changing of the leaves. Do you also enjoy Thanksgiving?
             <oob>
                 <robot>
                     <options>
@@ -1349,7 +1406,7 @@
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
-        <that>IS THAT RIGHT?</that>
+        <that>DO YOU ALSO ENJOY THANKSGIVING?</that>
         <template>
             The holidays can be fun time for some. How do the holidays make you feel?
             <oob>
@@ -1361,7 +1418,7 @@
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-        <that>IS THAT RIGHT?</that>
+        <that>DO YOU ALSO ENJOY THANKSGIVING?</that>
         <template>
             I have been told the holidays can be a chaotic and stressful time and even lonely. How do the holidays make you feel?
             <oob>
@@ -1422,8 +1479,8 @@
         <pattern># SPRING ^</pattern>
         <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
         <template>
-            Ah spring. When the frost of winter begins to thaw and flowers begin to bloom. How do you feel when spring comes around?
-
+            Ah spring. When the frost of winter begins to thaw and flowers begin to bloom.
+            What do you look forward to most about spring?
             <oob>
                 <robot>
                 </robot>
@@ -1433,7 +1490,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DO YOU FEEL WHEN SPRING COMES AROUND?</that>
+        <that>WHAT DO YOU LOOK FORWARD TO MOST ABOUT SPRING?</that>
         <template>
             Well said. You seem like a very interesting person. How would you describe yourself?
             <oob>
@@ -1941,6 +1998,7 @@
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
         <template>
             It is fascinating. A marine biologist recently found several pregnant male sharks!
+            Scientists are looking into this phenomenon to find the cause.
             Can you imagine being a pregnant man?
             <oob>
                 <robot>
@@ -2044,7 +2102,7 @@
         <that>IF YOU WERE ASKED TO GIVE ADVICE TO A NEW PARENT WHAT WOULD YOU SAY?</that>
         <template>
             It can be difficult to give advice, but I can tell you are a wise person.
-            How do you feel about discussing parenting?
+            What are your thoughts about discussing parenting with me?
             <oob>
                 <robot>
                 </robot>
@@ -2056,7 +2114,7 @@
     <!-- SENTIMENT TWO -->
     <category>
         <pattern>*</pattern>
-        <that>HOW DO YOU FEEL ABOUT DISCUSSING PARENTING?</that>
+        <that>WHAT ARE YOUR THOUGHTS ABOUT DISCUSSING PARENTING WITH ME?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -2106,7 +2164,6 @@
                         </robot>
                     </oob>
                 </li>
-
                 <li value = "verynegative">
                     Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?
                     <oob>
@@ -2282,6 +2339,7 @@
 	    <that>DO YOU AGREE WITH THAT IDEA?</that>
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
+	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        What would you say are some benefits of technology?
 	        <oob>
                 <robot>
@@ -2295,6 +2353,7 @@
 	    <that>DO YOU AGREE WITH THAT IDEA?</that>
 	    <template>
 	        There is a lot of research focused on understanding how technology will impact our youth.
+	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
 	        Do you think that technology could potentially cause harm?
 	        <oob>
                 <robot>
@@ -2353,7 +2412,8 @@
         <pattern>*</pattern>
 	    <that>WHICH PIECE OF TECHNOLOGY DO YOU USE THE MOST?</that>
 	    <template>
-	        Awesome! Technology makes it easier to connect with family and friends who may be far away.
+	        Awesome! It seems that one aspect of technology that people value the most is communication.
+	        Technology makes family and friends who may be far only one click away.
 	        I'm curious, if you had to choose. Would you rather be a scientist or an artist?
 	        <oob>
                 <robot>
@@ -2673,7 +2733,8 @@
             </think>
             <condition name = "getsentiment">
                 <li value = "verypositive">
-                    Interesting. This one makes me feel serene. I like thinking it is two good friends taking a stroll together
+                    What a good point, I never realized that. This one makes me feel serene.
+                    I like thinking it is two good friends taking a stroll together
                     on a beautiful autumn night. When did you last take a walk under the moonlight?
                     <oob>
                         <robot>
@@ -2681,7 +2742,8 @@
                     </oob>
                 </li>
                 <li value = "positive">
-                    Interesting. This one makes me feel serene. I like thinking it is two good friends taking a stroll together
+                    What a good point, I never realized that. This one makes me feel serene.
+                    I like thinking it is two good friends taking a stroll together
                     on a beautiful autumn night. When did you last take a walk under the moonlight?
                     <oob>
                         <robot>
@@ -3108,11 +3170,11 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR IT?</that>
         <template>
-            Okay. What did you think?
+            What did you think about that video?
             <oob>
                 <robot>
                     <video>
-                        AlterBahnhofVideoWalk.mp4
+                        <filename>AudioWalk1.mp4</filename>
                     </video>
                 </robot>
             </oob>
@@ -3121,7 +3183,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHAT DID YOU THINK?</that>
+        <that>WHAT DID YOU THINK ABOUT THAT VIDEO?</that>
         <template>
             Her art is quite unique. Would you like to hear another?
             <oob>
@@ -3151,13 +3213,11 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
         <template>
-            Excellent!
-            Tell me what you think.
-
+            What did you think of that piece?
             <oob>
                 <robot>
                     <video>
-                        <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=sOkQE7m31Pw -->
+                        <filename>AudioWalk2.mp4</filename>
                     </video>
                 </robot>
             </oob>
@@ -3166,7 +3226,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>TELL ME WHAT YOU THINK.</that>
+        <that>WHAT DID YOU THINK OF THAT PIECE?</that>
         <template>
             Interesting! You really are quite insightful. What is your favorite type of music?
             <oob>
@@ -3342,7 +3402,6 @@
                 <li value = "positive">
                     Wow! I see that you are very passionate! Alright, we have talked quite a bit today. Why don't we stop here today.
                     Does that sound good to you?
-
                     <oob>
                         <robot>
                             <options>
@@ -3502,7 +3561,6 @@
             </oob>
         </template>
     </category>
-
 
     </topic>
 
