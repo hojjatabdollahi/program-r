@@ -858,6 +858,42 @@
     <!-- BRANCH TO TALKING ABOUT PETS -->
 
 
+	
+	<category>
+        <pattern><set>YES</set> I HAVE A *</pattern>
+        <that>DO YOU HAVE PETS?</that>
+        <template>
+            Wow that is so cool. I love <star/>s How would you describe your pet?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>I HAVE A *</pattern>
+        <that>DO YOU HAVE PETS?</that>
+        <template>
+            Wow that is so cool. I love <star/>s How would you describe your pet?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>* I HAVE A *</pattern>
+        <that>DO YOU HAVE PETS?</that>
+        <template>
+            Wow that is so cool. I love <star/>s How would you describe your pet?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
 
 
     <category>
@@ -1274,7 +1310,7 @@
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
             I have never been to <star/>, I'll have to visit one day.
-            Did you enjoy being from there?
+            Did you enjoy growing up there?
             <oob>
                 <robot>
                     <options>
@@ -1291,7 +1327,7 @@
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
             I have never been to <star/>, I'll have to visit one day.
-            Did you enjoy being from there?
+            Did you enjoy growing up there?
             <oob>
                 <robot>
                     <options>
@@ -1382,7 +1418,7 @@
         <pattern>*</pattern>
         <that>THEN WHERE FROM?</that>
         <template>
-            I have never been there. Did you enjoy being from there?
+            I have never been there. Did you enjoy growing up there?
             <oob>
                 <robot>
                     <options>
@@ -1398,9 +1434,9 @@
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
-        <that>DID YOU ENJOY BEING FROM THERE?</that>
+        <that>DID YOU ENJOY GROWING UP THERE?</that>
         <template>
-            That is good. I'd like to visit someday. How did you like growing up there?
+            That is good. I'd like to visit someday. How would you describe growing up there?
             <oob>
                 <robot>
                 </robot>
@@ -1410,7 +1446,7 @@
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-        <that>DID YOU ENJOY BEING FROM THERE?</that>
+        <that>DID YOU ENJOY GROWING UP THERE?</that>
         <template>
             That's too bad. How long have you lived here?
             <oob>
@@ -1565,7 +1601,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW DID YOU LIKE GROWING UP THERE?</that>
+        <that>HOW WOULD YOU DESCRIBE GROWING UP THERE?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
@@ -3201,7 +3237,7 @@
         <that>WHEN DID YOU LAST TAKE A WALK UNDER THE MOONLIGHT?</that>
         <template>
             One day I hope to walk under the moonlight.
-            Van Gogh reminds me that beauty can come from pain and turmoil. Can you relate to that?
+            Van Gogh reminds me that beauty can come from pain and turmoil. What do you think about that statement?
             <oob>
                 <robot>
                 </robot>
@@ -3215,7 +3251,7 @@
         <that>WOULD YOU LIKE TO SEE ANOTHER ONE?</that>
         <template>
             Alright. Van Gogh reminds me that beauty can come from pain and turmoil.
-            Can you relate to that?
+            What do you think about that statement?
             <oob>
                 <robot>
                     <image>
@@ -3228,7 +3264,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>CAN YOU RELATE TO THAT?</that>
+        <that>WHAT DO YOU THINK ABOUT THAT STATEMENT?</that>
         <template>
             Thank you for sharing that with me. I try to find beauty in every situation.
             Are you familiar with the work of Andy Warhol?
@@ -3330,11 +3366,11 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE THAT PAINTING AGAIN?</that>
         <template>
-            Ok. What emotions do you feel when you look at this painting?
+            Ok. What do you think of the art work of this painting?
             <oob>
                 <robot>
                     <image>
-                        <filename>marilyn_monroe.jpg</filename>
+                        <filename>marylin_monroe.jpg</filename>
                         <duration>-1</duration>
                     </image>
                 </robot>
@@ -3397,7 +3433,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARILYN MONROE?</that>
         <template>
-            Okay, here it is. What emotions do you feel when you look at this painting?
+            Okay, here it is. What do you think of the art work of this painting?
             <oob>
                 <robot>
                     <image>
@@ -3411,18 +3447,70 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHAT EMOTIONS DO YOU FEEL WHEN YOU LOOK AT THIS PAINTING?</that>
+        <that>WHAT DO YOU THINK OF THE ART WORK OF THIS PAINTING?</that>
         <template>
-            Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
-            Are you ready to see another painting?
-            <oob>
-                <robot>
-                    <options>
-                        <option> yes </option>
-                        <option> no </option>
-                    </options>
-                </robot>
-            </oob>
+			<condition name="getsentiment">
+				<li value="verypositive">
+					Wow good eye, I can tell you really like this painting. I'd like to show you another one of my favorite Andy Warhol paintings.
+					Are you ready to see another painting?
+					<oob>
+						<robot>
+							<options>
+								<option> yes </option>
+								<option> no </option>
+							</options>
+						</robot>
+					</oob>
+				</li>
+				<li value="positive">
+					Wow good eye, I can tell you really like this painting. I'd like to show you another one of my favorite Andy Warhol paintings.
+					Are you ready to see another painting?
+					<oob>
+						<robot>
+							<options>
+								<option> yes </option>
+								<option> no </option>
+							</options>
+						</robot>
+					</oob>
+				</li>
+				<li value="neutral">
+					Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
+					Are you ready to see another painting?
+					<oob>
+						<robot>
+							<options>
+								<option> yes </option>
+								<option> no </option>
+							</options>
+						</robot>
+					</oob>
+				</li>
+				<li value="negative">
+					I see. I can tell you aren't a huge fan of this painting. I'd like to show you another one of my favorite Andy Warhol paintings.
+					Are you ready to see another painting?
+					<oob>
+						<robot>
+							<options>
+								<option> yes </option>
+								<option> no </option>
+							</options>
+						</robot>
+					</oob>
+				</li>
+				<li value="verynegative">
+					I see. I can tell you aren't a huge fan of this painting. I'd like to show you another one of my favorite Andy Warhol paintings.
+					Are you ready to see another painting?
+					<oob>
+						<robot>
+							<options>
+								<option> yes </option>
+								<option> no </option>
+							</options>
+						</robot>
+					</oob>
+				</li>
+			</condition>
         </template>
     </category>
 
@@ -3431,7 +3519,7 @@
         <that>ARE YOU READY TO SEE ANOTHER PAINTING?</that>
         <template>
             This one is called Nine Jackies. He created this piece following the death of JFK.
-            What do you think of when you see this one?
+            How would you describe the art style of this painting?
             <oob>
                 <robot>
                     <image>
@@ -3464,7 +3552,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHAT DO YOU THINK OF WHEN YOU SEE THIS ONE?</that>
+        <that>HOW WOULD YOU DESCRIBE THE ART STYLE OF THIS PAINTING?</that>
         <template>
             <think>
                 <set name="data"><star/></set>
@@ -3655,7 +3743,7 @@
         <pattern>*</pattern>
         <that>WHAT DID YOU THINK ABOUT THAT VIDEO?</that>
         <template>
-            Her art is quite unique. Would you like to hear another?
+            Her art is quite unique. Would you like to hear another one of her pieces?
             <oob>
                 <robot>
                     <options>
@@ -3681,7 +3769,7 @@
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
-        <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
+        <that>WOULD YOU LIKE TO HEAR ANOTHER ONE OF HER PIECES?</that>
         <template>
             What did you think of that piece?
             <oob>

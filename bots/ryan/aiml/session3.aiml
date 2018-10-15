@@ -930,6 +930,19 @@
            </oob>
        </template>
 	</category>
+	
+	<category>
+	   <pattern># NON FICTION ^</pattern>
+	   <that>WHAT WOULD YOU CHOOSE?</that>
+	   <template>
+	       Nonfiction is also my favorite genre.
+	       What about reading nonfiction do you enjoy the most?
+	       <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+	</category>
 
 	<category>
        <pattern>*</pattern>
