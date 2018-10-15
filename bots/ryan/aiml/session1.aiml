@@ -564,6 +564,18 @@
             </oob>
         </template>
     </category>
+	
+	<category>
+		<pattern>*</pattern>
+		<that>THEN WHERE WOULD YOU RATHER LIVE?</that>
+		<template>
+			That does sound like a great place to live. How do you feel about being in Lakewood?
+			<oob>
+				<robot>
+				</robot>
+			</oob>
+		</template>
+	</category>
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
