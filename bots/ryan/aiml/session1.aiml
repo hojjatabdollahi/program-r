@@ -3382,7 +3382,7 @@
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-        <that>HAVE YOU SEEN THAT ONE?</that>
+        <!-- <that>HAVE YOU SEEN THAT ONE?</that> -->
         <template>
             Ok. Would you like to see his screen print of Marilyn Monroe?
             <oob>
@@ -3400,7 +3400,8 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE THAT PAINTING AGAIN?</that>
         <template>
-            Ok. Would you like to see his screen print of Marilyn Monroe?
+            Ok. I'd like to show you one last painting by Andy Warhol.
+            Are you ready to see another painting?
             <oob>
                 <robot>
                     <options>
@@ -3416,7 +3417,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARILYN MONROE?</that>
         <template>
-            Okay. I'd like to show you another one of my favorite Andy Warhol paintings.
+            I understand, I won't take it personally. I'd like to show you one last painting by Andy Warhol.
             Are you ready to see another painting?
             <oob>
                 <robot>
@@ -3449,6 +3450,9 @@
         <pattern>*</pattern>
         <that>WHAT DO YOU THINK OF THE ART WORK OF THIS PAINTING?</that>
         <template>
+			<think>
+				<set name="data"><star/></set>
+			</think>
 			<condition name="getsentiment">
 				<li value="verypositive">
 					Wow good eye, I can tell you really like this painting. I'd like to show you another one of my favorite Andy Warhol paintings.
