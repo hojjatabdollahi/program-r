@@ -43,7 +43,7 @@
        <pattern># <set>NO</set> ^</pattern>
       <that>DO YOU LIKE TO TRAVEL?</that>
       <template>
-           I see. Do you enjoy exploring different areas of Colorado?
+           I see. Do you enjoy exploring different areas of Colorado and if so where?
            <oob>
                <robot>
                  <options>
