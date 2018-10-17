@@ -1,3 +1,4 @@
+from programy.config.bot.session import BotSessionConfiguration
 from programy.utils.logging.ylogger import YLogger
 
 from programy.config.brain.brain import BrainConfiguration
@@ -49,6 +50,7 @@ class BotConfiguration(BaseContainerConfigurationData):
         self._emotive = BotConfiguration.DEFAULT_EMOTIVE
         self._spelling = BotSpellingConfiguration()
         self._conversations = BotConversationsConfiguration()
+        self._session = BotSessionConfiguration()
 
         BaseContainerConfigurationData.__init__(self, section_name)
 
@@ -88,6 +90,7 @@ class BotConfiguration(BaseContainerConfigurationData):
 
             self._spelling.load_config_section(configuration_file, bot, bot_root)
             self._conversations.load_config_section(configuration_file, bot, bot_root)
+            self._session.load_config_section(configuration_file, bot, bot_root)
         else:
             YLogger.warning(self, "Config section [%s] missing, using default values", self.section_name)
 
@@ -225,6 +228,10 @@ class BotConfiguration(BaseContainerConfigurationData):
     @property
     def conversations(self):
         return self._conversations
+
+    @property
+    def session(self):
+        return self._session
 
     def to_yaml(self, data, defaults=True):
 

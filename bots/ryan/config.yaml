@@ -55,6 +55,10 @@ bot:
       config_name: database_config
       empty_on_start: false
 
+    session:
+      session_saving_mode: true
+      session_saving_dir: $BOT_ROOT/session_data
+
     file_config:
       dir: D:\Documents\Projects\Python\programy\RyanCBT\results
 
