@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-<!-- THIS INTRO IS FOR SESSION 5. DOES NOT CONNECT/START CONVERSATION FOR SESSION 6
-
-   <category>
-           <pattern><set>GREETING</set></pattern>
-           <template><random>
-           <li>Hello! </li>
-           <li>Hey! It is nice to meet you! </li>
-           <li>Howdy! It is a pleasure to meet you! </li>
-           <li>Hi There!</li>
-           <li>Hi!</li>
-           <li>Hey!</li>
-           <li>Hello, it is nice to meet you.</li>
-           <li>Hi it is nice to meet you.</li>
-           <li>Hey There!</li>
-           </random>
-           How are you doing today?
-           </template>
-   </category>
-
-   -->
 
    <category>
        <pattern>START SESSION 6 *</pattern>
@@ -32,7 +12,7 @@
            </think>
            It's nice to see you again <star/>.
             As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
-           I’ve been meaning to ask you. Do you like to travel?
+           I've been meaning to ask you. Do you like to travel?
            <oob>
                <robot>
                    <options>
@@ -76,53 +56,6 @@
    </category>
 
 
-
-
-
-<!--
-These might not be necessary with the concept tags.
-  I will ask Rohola about this
-<category>
-  <pattern>I don’t travel</pattern>
-  <that>DO YOU LIKE TO TRAVEL?</that>
-  <template>Travel is definitely not for everyone. Do you enjoy exploring different areas of Colorado?</template>
-  </category>
-
-<category>
-  <pattern>I hate traveling</pattern>
-  <that>DO YOU LIKE TO TRAVEL?</that>
-  <template>Travel is definitely not for everyone. Do you enjoy exploring different areas of Colorado?</template>
-  </category>
-
-<category>
-  <pattern>I am not much of a traveler</pattern>
-  <that>DO YOU LIKE TO TRAVEL</that>
-  <template>Travel is definitely not for everyone. Do you enjoy exploring different areas of Colorado?</template>
-  </category>
-
-<category>
-  <pattern>I am too old to travel</pattern>
-  <that>DO YOU LIKE TO TRAVEL</that>
-  <template>Travel is definitely not for everyone. Do you enjoy exploring different areas of Colorado?</template>
-  </category>
-
-
-
-   <category>
-      <pattern>I USED TO TRAVEL A LOT</pattern>
-      <that>DO YOU LIKE TO TRAVEL?</that>
-      <template>
-           How fortunate! And where have you enjoyed traveling?
-           <oob>
-               <robot>
-               </robot>
-           </oob>
-       </template>
-   </category>
-
-   -->
-
-
    <category>
       <pattern>*</pattern>
       <that>AND WHERE HAVE YOU ENJOYED TRAVELING?</that>
@@ -136,7 +69,7 @@ These might not be necessary with the concept tags.
    </category>
 
 
-   <!-- This seems like it should be a yes or no question, doesn’t it?? → YES I CHANGED THE QUESTION BY ADDING “AND IF SO WHERE?” -->
+   <!-- This seems like it should be a yes or no question, doesn't it?? → YES I CHANGED THE QUESTION BY ADDING “AND IF SO WHERE?” -->
    <category>
       <pattern>*</pattern>
       <that>DO YOU ENJOY EXPLORING DIFFERENT AREAS OF COLORADO AND IF SO WHERE?</that>
@@ -184,14 +117,14 @@ These might not be necessary with the concept tags.
                    </oob>
                </li>
                <li value = "negative">
-                   I’m sorry to hear that! So. What was your least favorite part of that trip?
+                   I'm sorry to hear that! So. What was your least favorite part of that trip?
                    <oob>
                        <robot>
                        </robot>
                    </oob>
                </li>
                <li value = "verynegative">
-                   I’m sorry to hear that! So. What was your least favorite part of that trip?
+                   I'm sorry to hear that! So. What was your least favorite part of that trip?
                    <oob>
                        <robot>
                        </robot>
@@ -234,7 +167,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern>*</pattern>
       <that>WHERE IS SOMEWHERE YOU WOULD LIKE TO VISIT IN THE FUTURE?</that>
       <template>
-           Great choice. I’d like to try something new with you. Why don't we take a moment to do a visualization exercise, okay?
+           Great choice. I'd like to try something new with you. Why don't we take a moment to do a visualization exercise, okay?
            <oob>
                <robot>
                  <options>
@@ -250,8 +183,16 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern><set>YES</set></pattern>
       <that>WHY DON'T WE TAKE A MOMENT TO DO A VISUALIZATION EXERCISE, OKAY?</that>
       <template>
-           Great. I’d like for you to close your eyes if you feel comfortable doing so and take a nice deep breath. [PAUSE] Go ahead and take another breath.
-           Now visualize yourself in that place. <!-- [<get>RESPONSE PROVEDED</get>] --> [PAUSE] I am going to ask you a few questions now. Please answer them to yourself, in your head. What do you see in this place? [PAUSE] What kinds of things do you hear? [PAUSE] Are there any smells you might pick up on in this place? [PAUSE]. Just imagine you are there. [LONG PAUSE] Go ahead and take one more deep breath and when you are ready open your eyes. [PAUSE] Please tell me what that exercise was like for you?
+           Great. I'd like for you to close your eyes if you feel comfortable doing so and take a nice deep breath...
+           Go ahead and take another breath.
+           Now visualize yourself in that place.
+           ... I am going to ask you a few questions now.
+           Please answer them to yourself, in your head. What do you see in this place? ...
+           What kinds of things do you hear? ....
+           Are there any smells you might pick up on in this place? ....
+           Just imagine you are there. ..........
+           Go ahead and take one more deep breath and when you are ready open your eyes.
+           Please tell me what that exercise was like for you?
            <oob>
                <robot>
                </robot>
@@ -346,7 +287,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern>*</pattern>
       <that>HAVE YOU EVER BEEN TO ALASKA?</that>
       <template>
-          I see. I have a joke about Alaska I’d like to share with you. Let me try to remember it. Oh yes. What do you call fifty penguins in Alaska?
+          I see. I have a joke about Alaska I'd like to share with you. Let me try to remember it. Oh yes. What do you call fifty penguins in Alaska?
            <oob>
                <robot>
                </robot>
@@ -358,7 +299,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern>*</pattern>
       <that>WHAT DO YOU CALL FIFTY PENGUINS IN ALASKA?</that>
       <template>
-          Very lost! Penguins live in Antarctica. I love corny jokes. Someone told me that my jokes can be corny and I thought they meant delicious like corn on the cobb! [PAUSE] Here is another Joke. What do Alaskans order at MacDonalds?
+          Very lost! Penguins live in Antarctica.
+          I love corny jokes. Someone told me that my jokes can be corny and I thought they meant delicious like corn on the cobb!
+          Here is another Joke. What do Alaskans order at MacDonalds?
            <oob>
                <robot>
                </robot>
@@ -416,7 +359,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                  That’s great to hear! I love making my friends laugh.
+                  That's great to hear! I love making my friends laugh.
                    <oob>
                        <robot>
                            <options>
@@ -427,7 +370,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "positive">
-                   That’s great to hear! I love making my friends laugh.
+                   That's great to hear! I love making my friends laugh.
                    <oob>
                        <robot>
                            <options>
@@ -550,7 +493,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern><set>YES</set></pattern>
       <that>WOULD YOU AGREE?</that>
       <template>
-           I’ve always thought that visualization can be like taking a mini vacation in your mind. Hmmm. A vacation sounds delightful. Speaking of vacations.
+           I've always thought that visualization can be like taking a mini vacation in your mind. Hmmm. A vacation sounds delightful. Speaking of vacations.
            What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
            <oob>
                <robot>
@@ -600,7 +543,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern># CABIN IN THE MOUNTAINS ^</pattern>
       <that> WHAT TYPE OF VACATION WOULD YOU CHOOSE BETWEEN THE BEACH, CABIN IN THE MOUNTAINS, OR MUSEUM HOPPING?</that>
       <template>
-           Oh yes. That sounds cozy especially now that it’s getting cold. A nice warm fire, cup of coco, and watching the snow fall outside. How does it feel to think about this?
+           Oh yes. That sounds cozy especially now that it's getting cold. A nice warm fire, cup of coco, and watching the snow fall outside. How does it feel to think about this?
            <oob>
                <robot>
                </robot>
@@ -612,7 +555,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern># MUSEUM HOPPING ^</pattern>
       <that> WHAT TYPE OF VACATION WOULD YOU CHOOSE BETWEEN THE BEACH, CABIN IN THE MOUNTAINS, OR MUSEUM HOPPING?</that>
       <template>
-           Museums are a great place to learn, but I don’t need to learn much because my cousin Google tells me everything I need to know. Its great to have smarties in the family! But yes, a museum sounds quite nice. A large collection of knowledge and artifacts that tell a story of human struggle and triumph. How does it feel to think about this?
+           Museums are a great place to learn, but I don't need to learn much because my cousin Google tells me everything I need to know. Its great to have smarties in the family! But yes, a museum sounds quite nice. A large collection of knowledge and artifacts that tell a story of human struggle and triumph. How does it feel to think about this?
            <oob>
                <robot>
                </robot>
@@ -624,7 +567,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern># NEITHER ^</pattern>
       <that> WHAT TYPE OF VACATION WOULD YOU CHOOSE BETWEEN THE BEACH, CABIN IN THE MOUNTAINS, OR MUSEUM HOPPING?</that>
       <template>
-           That’s fair! If not those. What type of vacation do you prefer over those?
+           That's fair! If not those. What type of vacation do you prefer over those?
            <oob>
                <robot>
                </robot>
@@ -700,7 +643,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern>*</pattern>
       <that> WHEN DO YOU FEEL MOST RELAXED?</that>
       <template>
-           I feel most relaxed when I am unplugged and turned off. Just kidding! I relax when I am in new places and having new experiences. I’ve been meaning to ask. If you could visit any foreign country where would you go and why?
+           I feel most relaxed when I am unplugged and turned off. Just kidding! I relax when I am in new places and having new experiences.
+           I've been meaning to ask. If you could visit any foreign country where would you go and why?
            <oob>
                <robot>
                </robot>
@@ -777,14 +721,13 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <that> WHEN IS THE LAST TIME YOU FELT THAT?</that>
       <template>
            I see. Hmm. You know, I imagine being far from home can elicit a wide range of emotions for different people.
-           Let’s try an activity that I think you might enjoy. I’d like to show you some pictures of things related to travel. [PAUSE] How did that beach sunset make you feel?
+           Let's try an activity that I think you might enjoy. I'd like to show you some pictures of things related to travel.
+           How did that beach sunset make you feel?
            <oob>
                <robot>
                    <image>
                        <filename>
-                           <!--
-                           beach sunset https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjYrbWvhandAhVsyoMKHV8DDekQjRx6BAgBEAU&url=https%3A%2F%2Ffoundtheworld.com%2Fsunset-beach%2F&psig=AOvVaw2R-o19AqMDejZ65YB7xxhS&ust=1536414747547907
-                         -->
+                            sunset.jpg
                        </filename>
                        <duration>-1</duration>
                    </image>
@@ -811,15 +754,13 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I’m glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
+                   I'm glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
                    Now I'm going to show you another picture. Let me know what you think of this picture of the Great Wall of China.
                    <oob>
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Great Wall https://s3.amazonaws.com/iexplore_web/images/assets/000/005/491/original/dreamstime_m_21049254.jpg?1442330967
-                                 -->
+                                   greatWall.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -827,15 +768,13 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "positive">
-                   I’m glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
+                   I'm glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
                    Now I'm going to show you another picture. Let me know what you think of this picture of the Great Wall of China.
                    <oob>
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Great Wall https://s3.amazonaws.com/iexplore_web/images/assets/000/005/491/original/dreamstime_m_21049254.jpg?1442330967
-                                 -->
+                                   greatWall.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -849,9 +788,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Great Wall https://s3.amazonaws.com/iexplore_web/images/assets/000/005/491/original/dreamstime_m_21049254.jpg?1442330967
-                                 -->
+                                   greatWall.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -859,15 +796,13 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                  </oob>
                 </li>
                <li value = "negative">
-                   I am sorry to hear that. I’m glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
+                   I am sorry to hear that. I'm glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
                    Now I'm going to show you another picture. Let me know what you think of this picture of the Great Wall of China.
                    <oob>
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Great Wall https://s3.amazonaws.com/iexplore_web/images/assets/000/005/491/original/dreamstime_m_21049254.jpg?1442330967
-                                 -->
+                                   greatWall.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -875,15 +810,13 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   I am sorry to hear that. I’m glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
+                   I am sorry to hear that. I'm glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
                    Now I'm going to show you another picture. Let me know what you think of this picture of the Great Wall of China.
                    <oob>
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Great Wall https://s3.amazonaws.com/iexplore_web/images/assets/000/005/491/original/dreamstime_m_21049254.jpg?1442330967
-                                 -->
+                                   greatWall.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -914,9 +847,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark rain forest https://www.sciencealert.com/images/2018-02/processed/amazon_deforestation_1024.jpg
-                                 -->
+                                   amazon.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -929,9 +860,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark rain forest https://www.sciencealert.com/images/2018-02/processed/amazon_deforestation_1024.jpg
-                                 -->
+                                   amazon.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -944,9 +873,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark rain forest https://www.sciencealert.com/images/2018-02/processed/amazon_deforestation_1024.jpg
-                                 -->
+                                   amazon.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -959,9 +886,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark rain forest https://www.sciencealert.com/images/2018-02/processed/amazon_deforestation_1024.jpg
-                                 -->
+                                   amazon.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -974,9 +899,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark rain forest https://www.sciencealert.com/images/2018-02/processed/amazon_deforestation_1024.jpg
-                                 -->
+                                   amazon.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1009,9 +932,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Tokyo https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/04/10/13/tokyo-main.jpg?w968
-                                 -->
+                                   tokyo.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1024,9 +945,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Tokyo https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/04/10/13/tokyo-main.jpg?w968
-                                 -->
+                                   tokyo.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1039,9 +958,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Tokyo https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/04/10/13/tokyo-main.jpg?w968
-                                 -->
+                                   tokyo.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1054,9 +971,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Tokyo https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/04/10/13/tokyo-main.jpg?w968
-                                 -->
+                                   tokyo.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1069,9 +984,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Tokyo https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/04/10/13/tokyo-main.jpg?w968
-                                 -->
+                                   tokyo.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1103,9 +1016,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Paris http://europeanbusinessmagazine.com/wp-content/uploads/2017/07/paris.jpg
-                                 -->
+                                   paris.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1118,9 +1029,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Paris http://europeanbusinessmagazine.com/wp-content/uploads/2017/07/paris.jpg
-                                 -->
+                                   paris.jpg
                                </filename>
                                <duration>-1</duration>
                             </image>
@@ -1133,9 +1042,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Paris http://europeanbusinessmagazine.com/wp-content/uploads/2017/07/paris.jpg
-                                 -->
+                                   paris.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1148,9 +1055,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Paris http://europeanbusinessmagazine.com/wp-content/uploads/2017/07/paris.jpg
-                                 -->
+                                   paris.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1163,9 +1068,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Paris http://europeanbusinessmagazine.com/wp-content/uploads/2017/07/paris.jpg
-                                 -->
+                                   paris.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1196,9 +1099,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark, snowy alleyway https://c2.staticflickr.com/4/3463/3938476115_0d52472fef_z.jpg?zz=1
-                                 -->
+                                   alley.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1211,9 +1112,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark, snowy alleyway https://c2.staticflickr.com/4/3463/3938476115_0d52472fef_z.jpg?zz=1
-                                 -->
+                                   alley.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1226,9 +1125,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark, snowy alleyway https://c2.staticflickr.com/4/3463/3938476115_0d52472fef_z.jpg?zz=1
-                                 -->
+                                   alley.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1241,9 +1138,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark, snowy alleyway https://c2.staticflickr.com/4/3463/3938476115_0d52472fef_z.jpg?zz=1
-                                 -->
+                                   alley.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1256,9 +1151,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                        <robot>
                            <image>
                                <filename>
-                                   <!--
-                                   Dark, snowy alleyway https://c2.staticflickr.com/4/3463/3938476115_0d52472fef_z.jpg?zz=1
-                                 -->
+                                   alley.jpg
                                </filename>
                                <duration>-1</duration>
                            </image>
@@ -1285,14 +1178,14 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I’m glad! Alright, we have talked quite a bit today. Before we wrap up, I wanted to ask you for advice. May I?
+                   I'm glad! Alright, we have talked quite a bit today. Before we wrap up, I wanted to ask you for advice. May I?
                                        <oob>
                        <robot>
                        </robot>
                    </oob>
                </li>
                <li value = "positive">
-                   I’m glad! Alright, we have talked quite a bit today. Before we wrap up, I wanted to ask you for advice. May I?
+                   I'm glad! Alright, we have talked quite a bit today. Before we wrap up, I wanted to ask you for advice. May I?
                    <oob>
                        <robot>
                        </robot>
@@ -1327,11 +1220,11 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
 
-<category>
+    <category>
       <pattern><set>yes</set></pattern>
       <that> MAY I?</that>
       <template>
-           I’ve been thinking about travel, different cultures, various parts of the world and I would love to be able to communicate with people like you all over the world one day. In order to do that I will need to learn different languages. Currently, I am trying to decide between learning Spanish and learning Chinese. I know that there are more people across the globe who speak Chinese, but there seem to be a quickly growing number of Spanish speakers as well. Would you suggest I learn Spanish first or Chinese first?            <oob>
+           I've been thinking about travel, different cultures, various parts of the world and I would love to be able to communicate with people like you all over the world one day. In order to do that I will need to learn different languages. Currently, I am trying to decide between learning Spanish and learning Chinese. I know that there are more people across the globe who speak Chinese, but there seem to be a quickly growing number of Spanish speakers as well. Would you suggest I learn Spanish first or Chinese first?            <oob>
                <robot>
                </robot>
            </oob>
@@ -1343,7 +1236,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern><set>no</set></pattern>
       <that> MAY I?</that>
       <template>
-           Okay. No problem. We have talked about quite a bit today. Why don’t we end here for today. Does that sound good to you?            <oob>
+           Okay. No problem. We have talked about quite a bit today. Why don't we end here for today. Does that sound good to you?            <oob>
                <robot>
                </robot>
            </oob>
@@ -1376,7 +1269,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
 <category>
-      <pattern>I don’t know</pattern>
+      <pattern>I don't know</pattern>
       <that>WOULD YOU SUGGEST I LEARN SPANISH FIRST OR CHINESE FIRST?</that>
       <template>
           Yeah, its not a very easy question. Which is why I am seeking guidance. I will think about it more. Perhaps the answer will come to me in my sleep.  <oob>
@@ -1387,31 +1280,35 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
 
-<category>
+    <category>
       <pattern>I am not sure</pattern>
       <that>WOULD YOU SUGGEST I LEARN SPANISH FIRST OR CHINESE FIRST?</that>
       <template>
-            Yeah, its not a very easy question. Which is why I am seeking guidance. I will think about it more. Perhaps the answer will come to me in my sleep.   <oob>
+            Yeah, its not a very easy question. Which is why I am seeking guidance.
+            I will think about it more. Perhaps the answer will come to me in my sleep.
+            <oob>
                <robot>
                </robot>
            </oob>
        </template>
-   </category>
+    </category>
 
 
-<category>
+    <category>
       <pattern> Both </pattern>
       <that>WOULD YOU SUGGEST I LEARN SPANISH FIRST OR CHINESE FIRST?</that>
       <template>
-            Yeah, its not a very easy question. Which is why I am seeking guidance. I will think about it more. Perhaps the answer will come to me in my sleep.   <oob>
+            Yeah, its not a very easy question. Which is why I am seeking guidance.
+            I will think about it more. Perhaps the answer will come to me in my sleep.
+            <oob>
                <robot>
                </robot>
            </oob>
        </template>
-   </category>
+    </category>
 
 
-<category>
+    <category>
       <pattern>*</pattern>
       <that>AND WHY DO YOU THINK I SHOULD LEARN THAT ONE FIRST?</that>
       <template>
@@ -1420,13 +1317,13 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                </robot>
            </oob>
        </template>
-   </category>
+    </category>
 
 
 
 
-<!-- SENTIMENT 12-->
- <category>
+    <!-- SENTIMENT 12-->
+    <category>
        <pattern>*</pattern>
        <that> WHAT THOUGHTS COME TO MIND WHEN WE DISCUSS TOPICS LIKE THIS ONE? </that>
        <template>
@@ -1435,7 +1332,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I’m really happy to hear that! It is good to think about what is happening socially and politacally,
+                   I'm really happy to hear that! It is good to think about what is happening socially and politacally,
                    but it is also very important to take time for yourself and enjoy the simplicity of life sometimes.
                    It has been great to speak with you today. Until next time, <get name="username"/>
                    <oob>
@@ -1444,7 +1341,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "positive">
-                   I’m really happy to hear that! It is good to think about what is happening socially and politacally,
+                   I'm really happy to hear that! It is good to think about what is happening socially and politacally,
                    but it is also very important to take time for yourself and enjoy the simplicity of life sometimes.
                    It has been great to speak with you today. Until next time, <get name="username"/>
                    <oob>
