@@ -11,7 +11,6 @@ class EventBotClient(BotClient):
     def __init__(self, id, argument_parser=None):
         self._running = False
         self._first_time = True
-        self._session_saving_mode = False
         BotClient.__init__(self, id, argument_parser=argument_parser)
 
     def prior_to_run_loop(self):
@@ -30,17 +29,11 @@ class EventBotClient(BotClient):
 
         bot = self.bot_factory.bot("bot")
         bot.initiate_conversation_storage()
+
         while self._running:
             if self._first_time:
-                try:
-                    if self._session_saving_mode:
-                        client_context = self.load_client_context(self._configuration.client_configuration.default_userid, conversation_file)
-                    else:
-                        client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
-                except Exception as exp:
-                    client_context = self.create_client_context("default_userid")
-                finally:
-                    self._first_time = False
+                client_context = self.client_context
+                self._first_time = False
 
             session_number = 1
             username = "test_user"

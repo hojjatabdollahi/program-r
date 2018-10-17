@@ -9,7 +9,14 @@ from programy.dialog.dialog import Conversation, Question, Answer, Sentence
 from programy.dialog.storage.factory import ConversationStorageFactory
 from programy.config.bot.bot import BotConfiguration
 from programy.utils.classes.loader import ClassLoader
+
+try:
+    import _pickle as pickle
+except:
+    import pickle
+
 import numpy as np
+import os
 
 class BrainSelector(object):
 
@@ -475,6 +482,9 @@ class Bot(object):
 
         client_context.reset_question()
 
+        # each time we save the last conversation, loads happen just in the run_loop
+
+        self.save_session(client_context, conversation)
 
         if srai is True:
             conversation.pop_dialog()
@@ -484,6 +494,17 @@ class Bot(object):
         self.log_question_and_answer(client_context, text, response)
 
         return response
+
+
+    def save_session(self, client_context, conversation):
+        saving_dir = client_context.bot.configuration.session.session_saving_dir
+        question_save_dir = os.path.join(saving_dir, "questions.p")
+        properties_save_dir = os.path.join(saving_dir, "properties.p")
+        questions_pickle_file = open(question_save_dir, 'wb')
+        properties_pickle_file = open(properties_save_dir, 'wb')
+        pickle.dump(conversation.questions, questions_pickle_file)
+        pickle.dump(conversation.properties, properties_pickle_file)
+
 
 
     def log_question_and_answer(self, client_context, text, response):
