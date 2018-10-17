@@ -695,12 +695,11 @@
         <pattern># <set>yes</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE?</that>
         <template>
-            Okay! Here it is! Insert lamb picture.
             What did you think about that?
             <oob>
                 <robot>
                     <video>
-                        <filename>you tube vid </filename>
+                        <filename>lambFetus.mp4</filename>
                     </video>
                 </robot>
             </oob>
@@ -795,6 +794,9 @@
             This discovery gives me hope that we have more to find out about our past! What are your thoughts?
             <oob>
                 <robot>
+                    <image>
+                        <filename>rock.jpg</filename>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -1030,10 +1032,10 @@
         <pattern># <set>yes</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR ONE OF MY FAVORITE SONGS? </that>
         <template>
-            Okay. One of my favorite songs is by The Beatles, called Hey Jude.
-            Here it is! INSERT CLIP. Let me know what you think!
+            What did you think of that performance?
             <oob>
                 <robot>
+                    heyJude.mp4
                 </robot>
             </oob>
         </template>
@@ -1041,7 +1043,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>LET ME KNOW WHAT YOU THINK!</that>
+        <that>WHAT DID YOU THINK OF THAT PERFORMANCE?</that>
         <template>
             I find this to be a beautiful song. It brings a tear to my eye.
             There is a lot of fascinating history from the Beatles.
