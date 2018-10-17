@@ -241,7 +241,7 @@
                <robot>
                    <image>
                        <video>
-                           <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=XYviM5xevC8 -->
+                           <filename>Fallon.mp4</filename>
                        </video>
                    </image>
                </robot>
@@ -427,7 +427,7 @@
                <robot>
                    <image>
                        <video>
-                           <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=Qr1DSLoHni0 -->
+                           <filename>Robin.mp4</filename>
                        </video>
                    </image>
                </robot>
@@ -873,7 +873,7 @@
                <robot>
                    <image>
                        <video>
-                           <!-- need to convert this video into a  .mp4 file: https://www.youtube.com/watch?v=mIoli11taSY -->
+                           <filename>Gilligan.mp4</filename>
                        </video>
                    </image>
                </robot>
