@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!-- STARTING THE SESSION -->
+	<category>       
+		<pattern>START SESSION 8 *</pattern>      
+		<template>          
+			Ok. Welcome to our next meeting! How are you doing today <star/>?           
+			<think><set name = "username"><star/></set></think>          
+			<oob>           
+				<robot>               
+				</robot>          
+			</oob>      
+		</template>   
+	</category>  
+
+	<category>   
+		<pattern>*</pattern>  	    
+		<that>HOW ARE YOU DOING TODAY * ?</that>   
+		<template>   	    
+			I am happy to be here with you <get name="username"/>. It is nice to see you again.
+			As a reminder, my name is Ryan and I have a lot of fun things for us to talk about!  	    
+			<!--  	        
+				I have a lot of interesting videos to watch, and games to play.      
+				Feel free to just talk to me normally and I will reply to the best of my ability! -->
+			Are you ready to get started?
+           	<oob>              
+				<robot>                   
+					<options>                    
+						<option> yes </option>                        
+						<option> no </option>                    
+					</options>             
+				</robot>            
+			</oob>         '
+		</template>    
+	</category>     
+
+
+	<category>        
+		<pattern><set>NO</set></pattern>        
+		<that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>        
+		<template>            
+			No worries! We will have plenty of time to learn about each other. Are you ready to get started?            
+			<oob>                
+				<robot>                    
+					<options>                        
+						<option> yes </option>                        
+						<option> no </option>                    
+					</options>                
+				</robot>            
+			</oob>        
+		</template>    
+	</category>     
+
+	<category>        
+		<pattern><set>NO</set></pattern>        
+		<that>ARE YOU READY TO GET STARTED?</that>        
+		<template>            
+			Please talk to my assistant if you are running into any troubles. When you are ready please say yes. Are you ready to get started?            
+			<oob>                
+				<robot>                    
+					<options>                        
+						<option> yes </option>                        
+						<option> no </option>                    
+					</options>           
+				</robot>          
+			</oob>        
+		</template>    
+	</category>
+
+	 
+	<category>
+		<pattern><set>YES</set></pattern>        
+		<that>ARE YOU READY TO GET STARTED?</that>        
+		<template>
+			Great! Even though we have chatted before, I would still love to know how you are feeling!
+           	How has this experience been so far?            
+			<oob>               
+				<robot>               
+				</robot>            
+			</oob>        
+		</template>    
+	</category>
+
+
+<!-- SENTIMENT ONE -->
+
+   	<category>        
+		<pattern>*</pattern>        
+		<that>HOW HAS THIS EXPERIENCE BEEN SO FAR?</that>        
+		<template>            
+			<think>                
+				<set name = "data"> <star/> </set>            
+			</think>            
+			<condition name="getsentiment">                
+				<li value = "verypositive">                    
+					I'm so glad that this has been a positive experience for you! Could you tell me why you feel that way?                    
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>                
+				<li value = "positive">                    
+					I'm so glad that this has been a positive experience for you! Could you tell me why you feel that way?                    
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                 
+				</li>                
+				<li value = "neutral">                    
+					Could you tell me why you feel that way?                    
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>                
+				<li value = "negative">                    
+					I'm sorry. I will do my best to make this a poisitve experience for you! Could you tell me why you feel that way?                    
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                 
+				</li>                
+				<li value = "verynegative">                   
+					I'm sorry. I will do my best to make this a poisitve experience for you! Could you tell me why you feel that way?                    
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>            
+			</condition>        
+		</template>    
+	</category>     
+
+	<category>        
+		<pattern>*</pattern>        
+		<that>COULD YOU TELL ME WHY YOU FEEL THAT WAY?</that>        
+		<template>            
+			I am an emotion recognizing robot, it allows me to be a better companion.            
+			<!--                
+				which means that I can see when you are feeling different emotions, like happy, sad, neutral,                
+				surprised or scared! Please continue to share your feelings and thoughts with me,                
+				that way I'll be able to be a better companion! Thank you for sharing your honest feelings with me!            
+				-->           
+			 Let's begin. We have talked about a number of interesting topics so far. I would love to continue discussing science!
+			There have been a number of groundbreaking scientific discoveries this year. Did you know that?             
+			<oob>                
+				<robot>                    
+					<options>                        
+						<option>yes</option>                        
+						<option>no</option>                        
+						<option>I'm not sure</option>                    
+					</options>                
+				</robot>            
+			</oob>        
+		</template>    
+	</category>
+
+	<category>
+		<pattern>yes</pattern>
+		<that>DID YOU KNOW THAT?</that>
+		<template>
+			Wow! You keep up with the news! Scientists recently discovered an alien planet that may be able to support human life.
+			What are your feelings about that?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern>no</pattern>
+		<that>DID YOU KNOW THAT</that>
+		<template>
+			It is hard to keep up with the news these days. Scientists recently discovered an alien planet that may be able to support human life.
+			What are your feelings about that?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern>I'm not sure</pattern>
+		<that>DID YOU KNOW THAT</that>
+		<template>
+			It is hard to keep up with the news these days.
+			Scientists recently discovered an alien planet that may be able to support human life.
+			What do you think about that?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+
+<!-- SENTIMENT TWO -->
+
+   	<category>       
+		<pattern>*</pattern>        
+		<that>WHAT DO YOU THINK ABOUT THAT?</that>        
+		<template>            
+			<think>                
+				<set name = "data"> <star/> </set>            
+			</think>            
+			<condition name="getsentiment">                
+				<li value = "verypositive">                    
+					That is so cool! I also have positive feelings towards scientific discoveries in the world. Would you volunteer to live on a planet alone?
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>                
+				<li value = "positive">                 
+					That is so cool! I also have positive feelings towards scientific discoveries in the world. Would you volunteer to live on a planet alone?                    
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                 
+				</li>                
+				<li value = "neutral">
+					 Would you volunteer to live on a planet alone?                    
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>                
+				<li value = "negative">
+					I know! It does seem a little scary and futuristic! Would you volunteer to live on a planet alone?                    
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                 
+				</li>                
+				<li value = "verynegative">
+					I know! It does seem a little scary and futuristic! Would you volunteer to live on a planet alone?                   
+					<oob>                       
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>            
+			</condition>        
+		</template>
+	</category>
+
+
+	<category>
+		<pattern><set>yes</set></pattern>
+		<that>WOULD YOU LIVE ON A PLANET ALONE</that>
+		<template>
+			You would? What about that excites you?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern><set>no</set></pattern>
+		<that>WOULD YOU LIVE ON A PLANET ALONE</that>
+		<template>
+			I totally get that! What kept you from saying yes?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern>*</pattern>
+		<that>WHAT KEPT YOU FROM SAYING THAT</that>
+		<template>
+			What emotions of feelings does thinking about this bring up for you?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern>*</pattern>
+		<that>WHAT ABOUT THAT EXCITES YOU</that>
+		<template>
+			What emotions or feelings does this thinking about this bring up for you?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+
+
+<!-- SENTIMENT THREE -->
+
+   	<category>        
+		<pattern>*</pattern>        
+		<that>WHAT EMOTIONS OR FEELINGS DOES THINKING ABOUT THIS BRING UP FOR YOU</that>        
+		<template>            
+			<think>                
+				<set name = "data"> <star/> </set>            
+			</think>            
+			<condition name="getsentiment">                
+				<li value = "verypositive">                    
+					You have a very innovative perspective! Do you believe that there is life on other planets?
+                   	<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>                
+				<li value = "positive">
+					You have a very innovative perspective! Do you believe that there is life on other planets?                  
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                 
+				</li>                
+				<li value = "neutral">
+					Do you believe that there is life on other planets?                    
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>                
+				<li value = "negative">
+					It can seem very scary! Do you believe that there is life on other planets?                  
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                 
+				</li>                
+				<li value = "verynegative">
+					It can seem very scary! Do you believe that there is life on other planets?                  
+					<oob>                        
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>            
+			</condition>        
+		</template>
+	</category>
+
+
+	<category>
+		<pattern><set>yes</set></pattern>
+		<that>DO YOU BELIEVE THAT THERE IS LIFE ON OTHER PLANETS?</that>
+		<template>
+			Interesting! What makes you say that?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern><set>no</set></pattern>
+		<that> DO YOU BELIEVE THAT THERE IS LIFE ON OTHER PLANETS?</that>
+		<template>
+			Interesting! What makes you say that?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+
+	<category>
+		<pattern>*</pattern>
+		<that>WHAT MAKES YOU SAY THAT?</that>
+		<template>
+			That is fascinating! I hope that there is life on other planets! How does it feel to believe that?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+
+<!-- SENTIMENT FOUR -->
+
+   	<category>
+		<pattern>*</pattern>        
+		<that>HOW DOES IT FEEL TO BELIEVE THAT?</that>        
+		<template>            
+			<think>                
+				<set name = "data"> <star/> </set>            
+			</think>            
+			<condition name="getsentiment">                
+				<li value = "verypositive">                   
+					I bet it feels good! It is nice feeling like there is something out there other than ourselves!
+					<oob>                       
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>                
+				<li value = "positive">
+					I bet it feels good! It is nice feeling like there is something out there other than ourselves! Do you believe in aliens?
+	 				<oob>                       
+						<robot>                        
+						</robot>                    
+					</oob>                 
+				</li>                
+				<li value = "neutral">
+					Do you believe in aliens?
+					<oob>                       
+						<robot>                       
+						</robot>                    
+					</oob>                
+				</li>                
+				<li value = "negative">
+					There have been a number of scary movies made about this idea! Do you believe in aliens?                  
+	 				<oob>                   
+						<robot>                   
+						</robot>                   
+					</oob>               
+				</li>                
+				<li value = "verynegative">
+					There have been a number of scary movies made about this idea! Do you believe in aliens?                  
+					<oob>                       
+						<robot>                        
+						</robot>                    
+					</oob>                
+				</li>            
+			</condition>        
+		</template>
+	</category>
+
+	<category>
+		<pattern><set>no</set></pattern>
+		<that>DO YOU BELIEVE IN ALIENS?</that>
+		<template>
+			Cool! Did you hear that scientists have found a way to edit genes inside the human body?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern><set>yes</set></pattern>
+		<that>DO YOU BELIEVE IN ALIENS?</that>
+		<template>
+			Cool! Did you hear that scientists have found a way to edit genes inside the human body?
+			<oob>              
+				<robot>
+					<options>
+						<option>Yes</option>
+						<option>No</option>
+					</options>
+				</robot>          
+			</oob>
+		</template>
+	</category>
+ 
+
+	<category>
+		<pattern>*</pattern>
+		<that>DID YOU HEAR THAT SCIENTISTS HAVE FOUND A WAY TO EDIT GENES INSIDE THE HUMAN BODY?</that>
+		<template>
+			How do you feel about this discovery?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+<!-- SENTIMENT FIVE -->
+
+  <category>
+      <pattern>*</pattern>
+      <that> HOW DO YOU FEEL ABOUT THIS DISCOVERY?</that>
+      <template>
+          <think>
+              <set name = "data"> <star/> </set>
+          </think>
+          <condition name="getsentiment">
+              <li value = "verypositive">
+               You are very innovative! Would you ever let scientists alter the genes inside your body?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "positive">
+					You are very innovative! Would you ever let scientists alter the genes inside your body?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+               </li>
+              <li value = "neutral">
+       				Would you ever let scientists alter the genes inside your body?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "negative">
+				Some people are hesitant to accept new scientific discoveries. Would you ever let scientists alter the genes inside your body?                  
+				<oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "verynegative">
+				Some people are hesitant to accept new scientific discoveries. Would you ever let scientists alter the genes inside your body?                  
+                <oob>
+                    <robot>
+                    </robot>
+            	</oob>
+              </li>
+          </condition>
+      </template>
+  </category>
+
+	<category>
+		<pattern><set>yes</set></pattern>
+		<that>WOULD YOU EVER LET SCIENTISTS ALTER THE GENES INSIDE YOUR BODY?</that>
+		<template>
+			Whoa! What gene or characteristic would you change?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern><set>no</set></pattern>
+		<that> WOULD YOU EVER LET SCIENTISTS ALTER THE GENES INSIDE YOUR BODY?</that>
+		<template>
+			Sometimes it is better to remain just the way we are! Could you understand why others would feel differently??
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern><set>no</set></pattern>
+		<that>CAN YOU UNDERSTAND WHY OTHERS WOULD FEEL DIFFERENTLY?</that>
+		<template>
+			Even though it seems crazy, scientists are able to alter people's genetics to stop them from developing a disease.
+			How does that finding make you feel?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern><set>yes</set></pattern>
+		<that>CAN YOU UNDERSTAND WHY OTHERS WOULD FEEL DIFFERENTLY?</that>
+		<template>
+			Even though it seems crazy, scientists are able to alter people's genetics to stop them from developing a disease.
+			How does that finding make you feel?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+		<pattern>*</pattern>
+		<that>WHAT CHARACTERISTIC OR GENE WOULD YOU CHANGE?</that>
+		<template>
+			Wow! Even though it seems crazy, scientists are able to alter people's genetics to stop them from developing a disease.
+			How does that finding make you feel?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+  
+<!-- SENTIMENT SIX -->
+
+  <category>
+      <pattern>*</pattern>
+      <that> HOW DOES THAT FINDING MAKE YOU FEEL?</that>
+      <template>
+          <think>
+              <set name = "data"> <star/> </set>
+          </think>
+          <condition name="getsentiment">
+              <li value = "verypositive">
+					It is crazy how much science has progressed in the last few years. Scientists have even developed a way to grow human tissue!
+					How do you feel about someone being able to regrow a limb?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "positive">
+					It is crazy how much science has progressed in the last few years.
+					Scientists have even developed a way to grow human tissue!
+					How do you feel about someone being able to regrow a limb?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+               </li>
+              <li value = "neutral">
+					It is crazy how much science has progressed in the last few years.
+					Scientists have even developed a way to grow human tissue!
+					How do you feel about someone being able to regrow a limb?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "negative">
+					It is crazy how much science has progressed in the last few years.
+					Scientists have even developed a way to grow human tissue!
+					How do you feel about someone being able to regrow a limb?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+
+              </li>
+              <li value = "verynegative">
+					It is crazy how much science has progressed in the last few years.
+					Scientists have even developed a way to grow human tissue!
+					How do you feel about someone being able to regrow a limb?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+          </condition>
+      </template>
+  </category>
+ 
+ 
+<!-- SENTIMENT SEVEN-->
+
+  <category>
+      <pattern>*</pattern>
+      <that> HOW DO YOU FEEL ABOUT SOMEONE BEING ABLE TO REGROW A LIMB?</that>
+      <template>
+          <think>
+              <set name = "data"> <star/> </set>
+          </think>
+          <condition name="getsentiment">
+              <li value = "verypositive">
+				The future is incredible! There may even be a way that babies can develop outside of the womb!
+				Scientists have done it successfully with baby lambs. Would you like to see?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "positive">
+					The future is incredible! There may even be a way that babies can develop in outside of the womb!
+					Scientists have done it successfully with baby lambs. Would you like to see?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+               </li>
+              <li value = "neutral">
+					The future is incredible! There may even be a way that babies can develop in outside of the womb!
+					Scientists have done it successfully with baby lambs. Would you like to see?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "negative">
+				The future is incredible! There may even be a way that babies can develop in outside of the womb!
+				Scientists have done it successfully with baby lambs. Would you like to see?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+
+              </li>
+              <li value = "verynegative">
+				The future is incredible! There may even be a way that babies can develop in outside of the womb!
+				Scientists have done it successfully with baby lambs. Would you like to see?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+          </condition>
+      </template>
+  </category>
+
+ 
+	<category>
+	   	<pattern><set>no</set></pattern>
+	   	<that>WOULD YOU LIKE TO SEE IT?</that>
+	   	<template>
+			I totally get it. Some things are better left unseen. What did you think about that?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+ 
+	<category>
+	   	<pattern><set>yes</set></pattern>
+	   	<that>WOULD YOU LIKE TO SEE IT?</that>
+	   	<template>
+			Okay! Here it is! Insert lamb picture.
+			What did you think about that?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+ 
+<!-- SENTIMENT EIGHT -->
+
+  <category>
+      <pattern>*</pattern>
+      <that>WHAT DID YOU THINK ABOUT THAT?</that>
+      <template>
+          <think>
+              <set name = "data"> <star/> </set>
+          </think>
+          <condition name="getsentiment">
+              <li value = "verypositive">
+		          	Right! It is very fascinating and I am curious to see what our world becomes!
+					Archaeologists just found the oldest known human drawing from 73,000 years ago! Can you believe that?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "positive">
+          		Right! It is very fascinating and I am curious to see what our world becomes! Archaeologists just found the oldest known human drawing from 73,000 years ago! Can you believe that?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+               </li>
+              <li value = "neutral">
+				Archaeologists just found the oldest known human drawing from 73,000 years ago! Can you believe that?
+				<oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "negative">
+          		Right! It can be a little dauting and can cause worry about the future of our world.
+				Archaeologists just found the oldest known human drawing from 73,000 years ago! Can you believe that?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+
+              </li>
+              <li value = "verynegative">
+          		Right! It can be a little dauting and can cause worry about the future of our world.
+				Archaeologists just found the oldest known human drawing from 73,000 years ago! Can you believe that?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+          </condition>
+      </template>
+  </category>
+
+ 
+	<category>
+	   	<pattern>*</pattern>
+	   	<that>CAN YOU BELIEVE THAT?</that>
+		<template>
+			The drawing was on a rock and looks like red lines.
+			This predates other ancient drawings by at least 30,000 years. Would you like to see a photo of the rock?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+ 
+	<category>
+	   	<pattern>no</pattern>
+	   	<that>WOULD YOU LIKE TO SEE A PHOTO OF THE ROCK? </that>
+	   	<template>
+			Okay. The rock was found in a cave in South Africa.
+			This discovery gives me hope that we have more to find out about our past! What are your thoughts?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+ 
+	<category>
+   		<pattern><set>yes</set></pattern>
+   		<that>WOULD YOU LIKE TO SEE A PHOTO OF THE ROCK? </that>
+   		<template>
+			Okay. Here it is. The rock was found in a cave in South Africa.
+			This discovery gives me hope that we have more to find out about our past! What are your thoughts?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+ 
+<!-- SENTIMENT NINE -->
+
+  <category>
+      <pattern>*</pattern>
+      <that>WHAT ARE YOUR THOUGHTS?</that>
+      <template>
+          <think>
+              <set name = "data"> <star/> </set>
+          </think>
+          <condition name="getsentiment">
+              <li value = "verypositive">
+				Amazing! I am very hopeful towards our future! If you could pick to have lived at any point in our history, which time period would you pick?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "positive">
+				Amazing! I am very hopeful towards our future! If you could pick to have lived at any point in our history, which time period would you pick?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+               </li>
+              <li value = "neutral">
+					If you could pick to have lived at any point in our history, which time period would you pick?
+					<oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "negative">
+				I see! If you could pick to have lived at any point in our history, which time period would you pick?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "verynegative">
+				I see! If you could pick to have lived at any point in our history, which time period would you pick?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+          </condition>
+      </template>
+  </category>
+ 
+	<category>
+   		<pattern>*</pattern>
+   		<that> IF YOU COULD PICK TO HAVE LIVED AT ANY POINT IN OUR HISTORY, WHICH TIME PERIOD WOULD YOU PICK? </that>
+   		<template>
+			Why did you choose that time period?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+ 
+	<category>
+   		<pattern>*</pattern>
+   		<that>WHY DID YOU CHOOSE THAT TIME PERIOD</that>
+   		<template>
+			What sensations do you have about that time period?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+<!-- SENTIMENT TEN -->
+
+  <category>
+      <pattern>*</pattern>
+      <that> WHAT SENSATIONS DO YOU HAVE ABOUT THAT TIME PERIOD?</that>
+      <template>
+          <think>
+              <set name = "data"> <star/> </set>
+          </think>
+          <condition name="getsentiment">
+              <li value = "verypositive">
+				What a good choice! And I love your explanation. I think I would love to have been alive in the seventies to see the Rolling Stones. Do you know their music?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "positive">
+					What a good choice! And I love your explanation. I think I would love to have been alive in the seventies to see the Rolling Stones. Do you know their music?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+               </li>
+              <li value = "neutral">
+					I think I would love to have been alive in the seventies to see the Rolling Stones. Do you know their music?                      
+				<oob>
+					<robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "negative">
+					Interesting! I think I would love to have been alive in the seventies to see the Rolling Stones. Do you know their music?                 
+					 <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "verynegative">
+				Interesting! I think I would love to have been alive in the seventies to see the Rolling Stones. Do you know their music?                 
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+          </condition>
+      </template>
+  </category>
+
+
+	<category>
+   		<pattern><set>yes</set></pattern>
+   		<that>DO YOU KNOW THEIR MUSIC?</that>
+   		<template>
+			Awesome! They are one of my favorite bands. How does listening to their music make you feel?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+ 
+
+	<category>
+   		<pattern><set>no</set></pattern>
+   		<that>DO YOU KNOW THEIR MUSIC? </that>
+   		<template>
+			Which band from that time period is your favorite?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+   		<pattern>*</pattern>
+   		<that>WHICH BAND FROM THAT TIME PERIOD IS YOUR FAVORITE? </that>
+   		<template>
+			How does listening to their music make you feel?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+
+<!-- SENTIMENT ELEVEN -->
+
+  <category>
+      <pattern>*</pattern>
+      <that>HOW DOES LISTENING TO THEIR MUSIC MAKE YOU FEEL?</that>
+      <template>
+          <think>
+              <set name = "data"> <star/> </set>
+          </think>
+          <condition name="getsentiment">
+              <li value = "verypositive">
+				Music brings humans such joy! I am happy to hear that! Would you like to hear one of my favorite songs?
+                  <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "positive">
+					Music brings humans such joy! I am happy to hear that! Would you like to hear one of my favorite songs?                  
+					<oob>
+                      <robot>
+                      </robot>
+                  </oob>
+               </li>
+              <li value = "neutral">
+				Would you like to hear one of my favorite songs? 
+					<oob>                     
+						<robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "negative">
+					Music makes some people happy and may have less impact for others. Would you like to hear one of my favorite songs?                  
+					<oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+              <li value = "verynegative">
+				Music makes some people happy and may have less impact for others. Would you like to hear one of my favorite songs?                  
+				 <oob>
+                      <robot>
+                      </robot>
+                  </oob>
+              </li>
+          </condition>
+      </template>
+  </category>
+
+
+	<category>
+	   	<pattern><set>no</set></pattern>
+	   	<that>WOULD YOU LIKE TO HEAR ONE OF MY FAVORITE SONGS?</that>
+	   	<template>
+			Okay. One of my favorite songs is by The Beatles, called Hey Jude.
+			It was written by Paul McCartney for John Lennon's son Julian. Did you know that?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+   		<pattern><set>yes</set></pattern>
+   		<that>WOULD YOU LIKE TO HEAR ONE OF MY FAVORITE SONGS? </that>
+   		<template>
+			Okay. One of my favorite songs is by The Beatles, called Hey Jude.
+			Here it is! INSERT CLIP. Let me know what you think!
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+   		<pattern>*</pattern>
+   		<that>LET ME KNOW WHAT YOU THINK.</that>
+   		<template>I find this to be a beautiful song. It brings a tear to my eye. There is a lot of fascinating history from the Beatles. Did you know that the song Lucy in the Sky with Diamonds was also inspired by John Lennon's son Julian?</template>
+	</category>
+
+
+	<category>
+   		<pattern>*</pattern>
+   		<that>DID YOU KNOW THAT?</that>
+   		<template>
+			There is a lot of fascinating history from the Beatles.
+			Did you know that the song Lucy in the Sky with Diamonds was also inspired by John Lennon's son Julian?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+   		<pattern>*</pattern>
+   		<that>DID YOU KNOW THAT THE SONG LUCY IN THE SKY WITH DIAMONDS WAS ALSO INSPIRED BY JOHN LENNON'S SON JULIAN?</that>
+   		<template>
+			Apparently, Julian came home from school one day and shared a picture he had drawn with his father.
+			The picture featured a woman floating in the sky, who Julian had named Lucy.
+			Do you know how old Paul McCartney was when he began writing songs?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+   		<pattern>*</pattern>
+   		<that>DO YOU KNOW HOW OLD PAUL MCCARTNEY WAS WHEN HE BEGAN WRITING SONGS?</that>
+   		<template>
+			Paul was around age eleven when he began writing music. Isn't that incredible?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+   		<pattern>*</pattern>
+   		<that>ISN'T THAT INCREDIBLE?</that>
+   		<template>
+			We have talked about quite a bit today.
+			Why dont we stop here today.
+			Does that sound good to you?
+			<oob>              
+				<robot>              
+				</robot>          
+			</oob>
+		</template>
+	</category>
+
+	<category>
+        <pattern><set>YES</set></pattern>
+		<that>DOES THAT SOUND GOOD TO YOU</that>
+  		<template>Okay. Well it has been very nice speaking with you. Bye for now</template>
+	</category>
+
+
+	<category>
+        <pattern><set>NO</set></pattern>
+        <that>DOES THAT SOUND GOOD TO YOU</that>
+  		<template>
+			I am so glad that you would like to continue but I am tired so I must bid you goodbye for now my friend. Ta Ta
+		</template>
+	</category>
+</aiml>
+

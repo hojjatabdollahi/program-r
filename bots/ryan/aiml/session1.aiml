@@ -3382,7 +3382,7 @@
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-        <!-- <that>HAVE YOU SEEN THAT ONE?</that> -->
+        <that>HAVE YOU SEEN THAT ONE?</that>
         <template>
             Ok. Would you like to see his screen print of Marilyn Monroe?
             <oob>
@@ -3446,17 +3446,18 @@
         </template>
     </category>
 
+
     <category>
         <pattern>*</pattern>
         <that>WHAT DO YOU THINK OF THE ART WORK OF THIS PAINTING?</that>
         <template>
-			<think>
-				<set name="data"><star/></set>
-			</think>
-			<condition name="getsentiment">
-				<li value="verypositive">
-					Wow good eye, I can tell you really like this painting. I'd like to show you another one of my favorite Andy Warhol paintings.
-					Are you ready to see another painting?
+            <think>
+                <set name="data"><star/></set>
+            </think>
+            <condition name="getsentiment">
+                <li value="verypositive">
+                    Wow good eye, I can tell you really like this painting. I'd like to show you another one of my favorites by him.
+                    Are you ready to see another painting?
 					<oob>
 						<robot>
 							<options>
@@ -3465,10 +3466,10 @@
 							</options>
 						</robot>
 					</oob>
-				</li>
-				<li value="positive">
-					Wow good eye, I can tell you really like this painting. I'd like to show you another one of my favorite Andy Warhol paintings.
-					Are you ready to see another painting?
+                </li>
+                <li value="positive">
+                    Wow good eye, I can tell you really like this painting. I'd like to show you another one of my favorites by him.
+                    Are you ready to see another painting?
 					<oob>
 						<robot>
 							<options>
@@ -3477,10 +3478,10 @@
 							</options>
 						</robot>
 					</oob>
-				</li>
-				<li value="neutral">
-					Hmm...I see where you are coming from. I'd like to show you another one of my favorite Andy Warhol paintings.
-					Are you ready to see another painting?
+                </li>
+                <li value="neutral">
+                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite paintings by him.
+                    Are you ready to see another painting?
 					<oob>
 						<robot>
 							<options>
@@ -3489,10 +3490,10 @@
 							</options>
 						</robot>
 					</oob>
-				</li>
-				<li value="negative">
-					I see. I can tell you aren't a huge fan of this painting. I'd like to show you another one of my favorite Andy Warhol paintings.
-					Are you ready to see another painting?
+                </li>
+                <li value="negative">
+                    I see. I can tell you aren't a huge fan of this painting. I'd like to show you another one of my favorite paintings by him.
+                    Are you ready to see another painting?
 					<oob>
 						<robot>
 							<options>
@@ -3501,10 +3502,10 @@
 							</options>
 						</robot>
 					</oob>
-				</li>
-				<li value="verynegative">
-					I see. I can tell you aren't a huge fan of this painting. I'd like to show you another one of my favorite Andy Warhol paintings.
-					Are you ready to see another painting?
+                </li>
+                <li value="verynegative">
+                    I see. I can tell you aren't a huge fan of this painting. I'd like to show you another one of my favorite paintings by him.
+                    Are you ready to see another painting?
 					<oob>
 						<robot>
 							<options>
@@ -3513,8 +3514,8 @@
 							</options>
 						</robot>
 					</oob>
-				</li>
-			</condition>
+                </li>
+            </condition>
         </template>
     </category>
 
