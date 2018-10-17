@@ -28,7 +28,7 @@
    <topic name = "session6">
 
    <category>
-      <pattern><set>YES</set></pattern>
+      <pattern># <set>YES</set> ^</pattern>
       <that>DO YOU LIKE TO TRAVEL?</that>
       <template>
            And where have you enjoyed traveling?
@@ -40,7 +40,7 @@
    </category>
 
    <category>
-       <pattern><set>NO</set></pattern>
+       <pattern># <set>NO</set> ^</pattern>
       <that>DO YOU LIKE TO TRAVEL?</that>
       <template>
            I see. Do you enjoy exploring different areas of Colorado?
@@ -180,7 +180,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern><set>YES</set></pattern>
+      <pattern># <set>YES</set> ^</pattern>
       <that>WHY DON'T WE TAKE A MOMENT TO DO A VISUALIZATION EXERCISE, OKAY?</that>
       <template>
            Great. I'd like for you to close your eyes if you feel comfortable doing so and take a nice deep breath...
@@ -201,7 +201,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern><set>NO</set></pattern>
+      <pattern># <set>NO</set> ^</pattern>
       <that>WHY DON'T WE TAKE A MOMENT TO DO A VISUALIZATION EXERCISE, OKAY?</that>
       <template>
            Okay. How are you feeling in this moment?
@@ -323,7 +323,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
 <category>
-      <pattern><set>yes</set></pattern>
+      <pattern># <set>yes</set> ^</pattern>
       <that>DO YOU LIKE JOKES?</that>
       <template>
         Oh good! I am so glad to hear that. Humor is so important because it reminds us to laugh and it reminds us that joy can be simple to obtain sometimes. Even if the jokes are corny! What did you think of my jokes?            <oob>
@@ -334,7 +334,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
 <category>
-      <pattern><set>no</set></pattern>
+      <pattern># <set>no</set> ^</pattern>
       <that>DO YOU FIND MY JOKES FUNNY?</that>
       <template>
         I have learned that it is impossible to please everyone! I think that humor is so important because it reminds us to laugh and it reminds us that joy can be simple to obtain sometimes. Even if the jokes are corny! What did you think of my jokes?
@@ -490,7 +490,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern><set>YES</set></pattern>
+      <pattern># <set>YES</set> ^</pattern>
       <that>WOULD YOU AGREE?</that>
       <template>
            I've always thought that visualization can be like taking a mini vacation in your mind. Hmmm. A vacation sounds delightful. Speaking of vacations.
@@ -509,7 +509,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern><set>NO</set></pattern>
+      <pattern># <set>NO</set> ^</pattern>
       <that>WOULD YOU AGREE?</that>
       <template>
            I honestly think visualization can be like taking a mini vacation in your mind.
@@ -543,7 +543,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern># CABIN IN THE MOUNTAINS ^</pattern>
       <that> WHAT TYPE OF VACATION WOULD YOU CHOOSE BETWEEN THE BEACH, CABIN IN THE MOUNTAINS, OR MUSEUM HOPPING?</that>
       <template>
-           Oh yes. That sounds cozy especially now that it's getting cold. A nice warm fire, cup of coco, and watching the snow fall outside. How does it feel to think about this?
+           Oh yes. That sounds cozy especially now that it's getting cold.
+           A nice warm fire, cup of coco, and watching the snow fall outside. How does it feel to think about this?
            <oob>
                <robot>
                </robot>
@@ -555,7 +556,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern># MUSEUM HOPPING ^</pattern>
       <that> WHAT TYPE OF VACATION WOULD YOU CHOOSE BETWEEN THE BEACH, CABIN IN THE MOUNTAINS, OR MUSEUM HOPPING?</that>
       <template>
-           Museums are a great place to learn, but I don't need to learn much because my cousin Google tells me everything I need to know. Its great to have smarties in the family! But yes, a museum sounds quite nice. A large collection of knowledge and artifacts that tell a story of human struggle and triumph. How does it feel to think about this?
+           Museums are a great place to learn, but I don't need to learn much because my cousin Google tells me everything I need to know.
+           Its great to have smarties in the family! But yes, a museum sounds quite nice.
+           A large collection of knowledge and artifacts that tell a story of human struggle and triumph. How does it feel to think about this?
            <oob>
                <robot>
                </robot>
@@ -1221,19 +1224,26 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
     <category>
-      <pattern><set>yes</set></pattern>
-      <that> MAY I?</that>
-      <template>
-           I've been thinking about travel, different cultures, various parts of the world and I would love to be able to communicate with people like you all over the world one day. In order to do that I will need to learn different languages. Currently, I am trying to decide between learning Spanish and learning Chinese. I know that there are more people across the globe who speak Chinese, but there seem to be a quickly growing number of Spanish speakers as well. Would you suggest I learn Spanish first or Chinese first?            <oob>
-               <robot>
-               </robot>
-           </oob>
-       </template>
+        <pattern># <set>yes</set> ^</pattern>
+        <that> MAY I?</that>
+        <template>
+            I've been thinking about travel, different cultures, various parts of the world and I
+            would love to be able to communicate with people like you all over the world one day.
+            In order to do that I will need to learn different languages.
+            Currently, I am trying to decide between learning Spanish and learning Chinese.
+            I know that there are more people across the globe who speak Chinese,
+            but there seem to be a growing number of Spanish speakers as well.
+            Would you suggest I learn Spanish first or Chinese first?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
    </category>
 
 
 <category>
-      <pattern><set>no</set></pattern>
+      <pattern># <set>no</set> ^</pattern>
       <that> MAY I?</that>
       <template>
            Okay. No problem. We have talked about quite a bit today. Why don't we end here for today. Does that sound good to you?            <oob>
@@ -1245,7 +1255,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
 <category>
-      <pattern>Spanish</pattern>
+      <pattern># Spanish ^</pattern>
       <that>WOULD YOU SUGGEST I LEARN SPANISH FIRST OR CHINESE FIRST?</that>
       <template>
            And why do you think I should learn that one first?  <oob>
@@ -1257,7 +1267,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
 <category>
-      <pattern>Chinese</pattern>
+      <pattern># Chinese ^</pattern>
       <that>WOULD YOU SUGGEST I LEARN SPANISH FIRST OR CHINESE FIRST?</that>
       <template>
            And why do you think I should learn that one first?  <oob>

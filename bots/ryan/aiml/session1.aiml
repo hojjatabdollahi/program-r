@@ -98,8 +98,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
         <template>
-            I am an emotion recognizing robot, it allows me to be a better companion.
-            This means that I can see when you are feeling different emotions, like happy, sad, or no feeling at all!
+            I am a what is called a companion bot.
             Please continue to share your feelings and thoughts with me, that way I'll be able to be a better companion!
             Are you ready to get started?
             <oob>
@@ -217,7 +216,7 @@
         <pattern>*</pattern>
         <that>WHAT ABOUT THIS IS MAKING YOU FEEL THAT WAY?</that>
         <template>
-            Interesting to hear. Okay! I am a companion robot and am here to visit you and engage in conversation.
+            Interesting to hear.
             Feel free to just talk to me normally and I will reply to the best of my ability!
             Let's begin. Do you have kids?
             <oob>
