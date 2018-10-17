@@ -1,4 +1,4 @@
-archery
+﻿archery
 clout shooting
 field archery
 flight shooting
@@ -148,7 +148,8 @@ field hockey
 fives
 football
 Australian rules football
-football (soccer)
+football 
+soccer
 Gaelic football
 gridiron football
 rugby

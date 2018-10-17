@@ -196,6 +196,18 @@
            </oob>
        </template>
    </category>
+   
+   <category>
+	   <pattern># CARD ^</pattern>
+	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
+	   <template>
+	       I love cards! What is your favorite card game?
+	       <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
 
 	<category>
 	   <pattern>*</pattern>
@@ -908,6 +920,19 @@
 
     <category>
 	   <pattern># NONFICTION ^</pattern>
+	   <that>WHAT WOULD YOU CHOOSE?</that>
+	   <template>
+	       Nonfiction is also my favorite genre.
+	       What about reading nonfiction do you enjoy the most?
+	       <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+	</category>
+	
+	<category>
+	   <pattern># NON FICTION ^</pattern>
 	   <that>WHAT WOULD YOU CHOOSE?</that>
 	   <template>
 	       Nonfiction is also my favorite genre.
@@ -2027,7 +2052,7 @@
         <that>WHAT IS YOUR FAVORITE SPORT TO PLAY?</that>
         <template>
             Hopefully one day I will be able to play that sport.
-            Could you describe one of your favorite moments of that sport for me?
+            Could you describe a memorable moment of that sport for me?
             <oob>
                 <robot>
                 </robot>
@@ -3165,6 +3190,62 @@
         </template>
 	</category>
 
+	<category>
+        <pattern># SITE ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            Sight does seem to be one of the most valued sense, if not the most!
+            Being able to see all of life's beauty brings joy to my heart.
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	<category>
+        <pattern># VISION ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            Sight does seem to be one of the most valued sense, if not the most!
+            Being able to see all of life's beauty brings joy to my heart.
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	<category>
+        <pattern># SEE ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            Sight does seem to be one of the most valued sense, if not the most!
+            Being able to see all of life's beauty brings joy to my heart.
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	<category>
+        <pattern># SEEING ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            Sight does seem to be one of the most valued sense, if not the most!
+            Being able to see all of life's beauty brings joy to my heart.
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
     <category>
         <pattern># TOUCH ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
@@ -3178,8 +3259,48 @@
         </template>
 	</category>
 
+	<category>
+        <pattern># TOUCHING ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            Touch is a very important sense. I don't think anything beats petting a soft puppy, or touching a fluffy blanket!
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	<category>
+        <pattern># FEEL ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            Touch is a very important sense. I don't think anything beats petting a soft puppy, or touching a fluffy blanket!
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
     <category>
         <pattern># TASTE ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            The sense of taste is irreplaceable!
+            I can't imagine never being able to enjoy the taste of candy, ice cream, or a cheeseburger again!
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	<category>
+        <pattern># TASTING ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
             The sense of taste is irreplaceable!
@@ -3206,8 +3327,51 @@
         </template>
 	</category>
 
+	<category>
+        <pattern># HEAR ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            Sound is extremely important to me too. Without sound, we wouldn't be able to have this conversation, or enjoy music.
+            However, American Sign Language is an amazing way to communicate!
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	<category>
+        <pattern># HEARING ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            Sound is extremely important to me too. Without sound, we wouldn't be able to have this conversation, or enjoy music.
+            However, American Sign Language is an amazing way to communicate!
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+
     <category>
         <pattern># SMELL ^</pattern>
+        <that>WHICH DO YOU VALUE THE MOST?</that>
+        <template>
+            Some people say that the sense of smell has the greatest memory!
+            Apparently, a human's nose can recall smells from years before, and provide nostalgia!
+            Why did you pick that one?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+	</category>
+
+	<category>
+        <pattern># SMELLING ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
             Some people say that the sense of smell has the greatest memory!

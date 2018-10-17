@@ -1,180 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <aiml version = "2.0">
-   <category>
+  <category>
+    <pattern>RESPONSE</pattern>
+    <template>
+        <srai>we did it</srai>
+        <oob>
+            <robot>
+            </robot>
+        </oob>
+    </template>
+</category>
+
+<category>
         <pattern>test</pattern>
-        <that>*</that>
         <template>
-            Personally, I have always enjoyed watching the birds in Aspen
-            in the spring. Do you enjoy the summer, fall, spring, or winter most?
+            What do you like to do the most?
+            watching movies, playing board games, or hiking?
             <oob>
-                <robot>
-                    <options>
-                        <option>Summer</option>
-                        <option>Fall</option>
-                        <option>Spring</option>
-                        <option>Winter</option>
-                    </options>
-                </robot>
-            </oob>
+            <robot>
+            </robot>
+        </oob>
         </template>
     </category>
 
 
 
    <category>
-        <pattern># SUMMER ^</pattern>
-        <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
-        <template>
-            I just love the warm weather and all of the green. How do you feel in the summer time?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
+	   <pattern>MOVIES</pattern>
+	   <template>
+	   <that>WATCHING MOVIES, PLAYING BOARD GAMES, OR HIKING?</that>
+	       <srai>RESPONSE</srai>
+	       <oob>
+            <robot>
+            </robot>
+        </oob>
+       </template>
+   </category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>HOW DO YOU FEEL IN THE SUMMER TIME?</that>
-        <template>
-            Nice. You seem like a very interesting person. How would you describe yourself?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># FALL ^</pattern>
-        <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
-        <template>
-            Fall is quite nice. There is nothing like the changing of the leaves. Do you also enjoy Thanksgiving. Is that right?
-            <oob>
-                <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>YES</set> ^</pattern>
-        <that>IS THAT RIGHT?</that>
-        <template>
-            The holidays can be fun time for some. How do the holidays make you feel?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>IS THAT RIGHT?</that>
-        <template>
-            I have been told the holidays can be a chaotic and stressful time and even lonely. How do the holidays make you feel?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>HOW DO THE HOLIDAYS MAKE YOU FEEL?</that>
-        <template>
-            <think>
-                <set name = "data"> <star/> </set>
-            </think>
-            <condition name="getsentiment">
-                <li value = "verypositive">
-                    It sounds like you enjoy the holidays. You seem like a very interesting person. How would you describe yourself?
-                    <oob>
-                        <robot>
-                        </robot>
-                    </oob>
-                </li>
-                <li value = "positive">
-                    It sounds like you enjoy the holidays. You seem like a very interesting person. How would you describe yourself?
-                    <oob>
-                        <robot>
-                        </robot>
-                    </oob>
-                </li>
-                <li value = "neutral">
-                    You seem like a very interesting person. How would you describe yourself?
-                    <oob>
-                        <robot>
-                        </robot>
-                    </oob>
-                </li>
-                <li value = "negative">
-                    Sounds like you really do not like the holidays. You seem like a very interesting person. How would you describe yourself?
-                    <oob>
-                        <robot>
-                        </robot>
-                    </oob>
-                </li>
-                <li value = "verynegative">
-                    Sounds like you really do not like the holidays. You seem like a very interesting person. How would you describe yourself?
-                    <oob>
-                        <robot>
-                        </robot>
-                    </oob>
-                </li>
-            </condition>
-        </template>
-    </category>
-
-    <category>
-        <pattern># SPRING ^</pattern>
-        <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
-        <template>
-            Ah spring. When the frost of winter begins to thaw and flowers begin to bloom. How do you feel when spring comes around?
-
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>HOW DO YOU FEEL WHEN SPRING COMES AROUND?</that>
-        <template>
-            Well said. You seem like a very interesting person. How would you describe yourself?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># WINTER ^</pattern>
-        <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
-        <template>
-            Many coloradans love winter. Do you prefer walking in the winter night, sitting by the fire, or ice skating?
-            <oob>
-                <robot>
-                    <options>
-                        <option> Winter Night Walk </option>
-                        <option> Ice Skating </option>
-                        <option> sitting by the fire </option>
-                        <option> neither </option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
 
 
 </aiml>
