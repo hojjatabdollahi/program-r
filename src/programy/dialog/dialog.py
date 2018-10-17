@@ -271,6 +271,10 @@ class Conversation(object):
                 value = '*'
         self._properties[name] = value
 
+    def set_properties(self, properties):
+        for key in properties:
+            self._properties[key] = properties[key]
+
     def property(self, name: str):
         if self._properties is not None:
             if name in self._properties:

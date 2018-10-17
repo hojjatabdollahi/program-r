@@ -104,7 +104,8 @@ class BotClient(ResponseLogger):
         self._scheduler = None
         self.load_scheduler()
 
-        self._session_saving_mode = False
+        #todo read from config file
+        self._session_saving_mode = True
 
         self._renderer = self.load_renderer()
 
@@ -145,12 +146,13 @@ class BotClient(ResponseLogger):
 
     @property
     def client_context(self):
-
+        session_pickle_dir = "/home/rohola/"
         if self._session_saving_mode:
             try:
                 #TODO change the load client context from file to a better solution
                 client_context = self.load_client_context(
-                    self._configuration.client_configuration.default_userid, "conv.conv")
+                    self.configuration.client_configuration.default_userid, session_pickle_dir)
+
             except Exception as exp:
                 client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
         else:
@@ -234,11 +236,14 @@ class BotClient(ResponseLogger):
         client_context.brain = client_context.bot._brain_factory.select_brain()
         return client_context
 
-    def load_client_context(self, userid, conversation_question_file):
-        file_obj_read = open(conversation_question_file, 'rb')
-        questions = pickle.load(file_obj_read)
+    def load_client_context(self, userid, session_pickle_dir):
+        questions_pickle_file = open(session_pickle_dir+"questions.p", 'rb')
+        properties_pickle_file = open(session_pickle_dir+"properties.p", 'rb')
+        questions = pickle.load(questions_pickle_file)
+        properties = pickle.load(properties_pickle_file)
         client_context = self.create_client_context(userid)
         client_context.brain.bot.set_conversation_question(client_context, questions)
+        client_context.bot.conversations[userid].set_properties(properties)
         return client_context
 
 

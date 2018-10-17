@@ -475,6 +475,17 @@ class Bot(object):
 
         client_context.reset_question()
 
+        # each time we save the last conversation, loads happen just in the run_loop
+        try:
+            import _pickle as pickle
+        except:
+            import pickle
+
+        questions_pickle_file = open("/home/rohola/questions.p", 'wb')
+        properties_pickle_file = open("/home/rohola/properties.p", 'wb')
+        pickle.dump(conversation.questions, questions_pickle_file)
+        pickle.dump(conversation.properties, properties_pickle_file)
+
 
         if srai is True:
             conversation.pop_dialog()
