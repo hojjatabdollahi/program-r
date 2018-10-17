@@ -1178,22 +1178,47 @@
 <!-- ADD PAUSE FOR PERSON TO ANSWER OR ADD JEOPARDY MUSIC-->
 
 
-
     <category>
         <pattern># AUTOMATIC ^</pattern>
         <that>WHAT IS YOUR GUESS?</that>
         <template>
-            You are right! I know you seemed smart
-            Okay the next category is Pop Culture.
-            Thank you for playing Jeopardy!
-            I hope we can do this again soon! I would like to do one last check in before I say goodbye.
-            How would you describe your mood right now?
+            You are right! I know you seemed smart. To finish our conversation about Jeopardy, I would like to show you a clip!
+            Would you like to see a funny clip from a Jeopardy episode that always makes me laugh?
            <oob>
                <robot>
                </robot>
            </oob>
        </template>
-    </category>
+   </category>
+
+
+    <category>
+        <pattern><set>YES</set></pattern>
+        <that>WOULD YOU LIKE TO SEE A FUNNY CLIP FROM A JEOPARDY EPISODE THAT ALWAYS MAKES ME LAUGH?</that>
+        <template>
+             Exciting! Here is the clip. Let me know what you think about it! <!----https://www.youtube.com/watch?v=hQ5lk735-Fk--->
+            <oob>
+                <robot>
+                    <video>
+                        <filename>jeopardy.mp4</filename>
+                    </video>
+                </robot>
+           </oob>
+           </template>
+   </category>
+
+
+    <category>
+        <pattern><set>NO</set></pattern>
+        <that>WOULD YOU LIKE TO SEE A FUNNY CLIP FROM A JEOPARDY EPISODE THAT ALWAYS MAKES ME LAUGH?</that>
+        <template>
+         Okay! Would you prefer that I just share some interesting jeopardy information with you?
+        <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
 
    <category>
       <pattern>*</pattern>
@@ -1207,7 +1232,6 @@
            </oob>
        </template>
    </category>
-
 
 
 
@@ -1239,7 +1263,9 @@
       <pattern>*</pattern>
       <that>ISN'T THAT CRAZY?</that>
       <template>
-           It's a very popular show. And it can be very rewarding! The record for the highest cumulative amount of money won by a single player is over three million dollars! Could you imagine winning that much money?
+           It's a very popular show. And it can be very rewarding!
+           The record for the highest cumulative amount of money won by a single player is over three million dollars!
+           Could you imagine winning that much money?
            <oob>
                <robot>
                </robot>
@@ -1252,7 +1278,9 @@
       <pattern># <set>NO</set> ^</pattern>
       <that> WOULD YOU PREFER THAT I JUST SHARE SOME INTERESTING JEOPARDY INFORMATION WITH YOU?</that>
       <template>
-            Okay. Well there is one fact that I have to share. The record for the highest cumulative amount of money won by a single player is over three million dollars! Could you imagine winning that much money?
+            Okay. Well there is one fact that I have to share.
+            The record for the highest cumulative amount of money won by a single player is over three million dollars!
+            Could you imagine winning that much money?
            <oob>
                <robot>
                </robot>
@@ -1261,7 +1289,7 @@
    </category>
 
 
-<category>
+    <category>
       <pattern>*</pattern>
       <that>COULD YOU IMAGINE WINNING THAT MUCH MONEY?</that>
       <template>
@@ -1271,14 +1299,16 @@
                </robot>
            </oob>
        </template>
-   </category>
+    </category>
 
 
 <category>
       <pattern>*</pattern>
       <that>HOW WOULD YOU SPEND IT?</that>
       <template>
-           I think I would buy an island, and spend all day basking in the sun and enjoying the view. It has been a pleasure chatting with you today. I would love to check in once more before we end. How would you describe your mood right now?
+           I think I would buy an island, and spend all day basking in the sun and enjoying the view.
+           It has been a pleasure chatting with you today. I would love to check in once more before we end.
+           How would you describe your mood right now?
            <oob>
                <robot>
                </robot>
