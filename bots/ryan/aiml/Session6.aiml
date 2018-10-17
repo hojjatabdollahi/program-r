@@ -603,21 +603,24 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   That must feel nice indeed. I would love to do all three, I can be greedy sometimes! I like to do things that relax me because self care is very important. When do you feel most relaxed?
+                   That must feel nice indeed. I would love to do all three, I can be greedy sometimes!
+                   I like to do things that relax me because self care is very important. When do you feel most relaxed?
                    <oob>
                        <robot>
                        </robot>
                    </oob>
                </li>
                <li value = "positive">
-                   That must feel nice indeed. I would love to do all three, I can be greedy sometimes! I like to do things that relax me because self care is very important. When do you feel most relaxed?
+                   That must feel nice indeed. I would love to do all three, I can be greedy sometimes!
+                   I like to do things that relax me because self care is very important. When do you feel most relaxed?
                    <oob>
                        <robot>
                        </robot>
                    </oob>
                </li>
                <li value = "neutral">
-                   I would love to do all three! I like to do things that relax me because self care is very important. When do you feel most relaxed?
+                   I would love to do all three! I like to do things that relax me because self care is very important.
+                   When do you feel most relaxed?
                    <oob>
                        <robot>
                        </robot>
@@ -631,7 +634,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   Aw that is too bad. I would love to do all three, I can be greedy sometimes! I like to do things that relax me because self care is very important. When do you feel most relaxed?
+                   Aw that is too bad. I would love to do all three, I can be greedy sometimes!
+                   I like to do things that relax me because self care is very important. When do you feel most relaxed?
                    <oob>
                        <robot>
                        </robot>
