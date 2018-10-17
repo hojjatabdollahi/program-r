@@ -239,11 +239,9 @@
            Ha ha. I think he is so funny. What did you think of that segment?
            <oob>
                <robot>
-                   <image>
-                       <video>
-                           <filename>Fallon.mp4</filename>
-                       </video>
-                   </image>
+                   <video>
+                       <filename>Fallon.mp4</filename>
+                   </video>
                </robot>
            </oob>
        </template>
@@ -425,11 +423,9 @@
            How did Robin and Johnny make you feel?
            <oob>
                <robot>
-                   <image>
-                       <video>
-                           <filename>Robin.mp4</filename>
-                       </video>
-                   </image>
+                   <video>
+                       <filename>Robin.mp4</filename>
+                   </video>
                </robot>
            </oob>
        </template>
@@ -871,11 +867,9 @@
            What a funny show. Let's move on. How are things going for you at this moment?
            <oob>
                <robot>
-                   <image>
-                       <video>
-                           <filename>Gilligan.mp4</filename>
-                       </video>
-                   </image>
+                   <video>
+                       <filename>Gilligan.mp4</filename>
+                   </video>
                </robot>
            </oob>
        </template>
@@ -1119,7 +1113,22 @@
 
 <!-- ADD PAUSE FOR PERSON TO ANSWER OR ADD JEOPARDY MUSIC -->
 
-<category>
+    <category>
+        <pattern># CALL OF THE WILD ^</pattern>
+        <that>WHICH BOOK IS IT?</that>
+        <template>
+            That is correct! You must read a lot of books.
+            Okay the next category is Pop Culture.
+            Here is the clue. Carrie Fischer auditioned for Star Wars and this horror film at the same time.
+            Take your time! What is the name of the horror film?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+    </category>
+
+    <category>
       <pattern>*</pattern>
       <that>WHICH BOOK IS IT?</that>
       <template>
@@ -1131,17 +1140,32 @@
                </robot>
            </oob>
        </template>
-   </category>
+    </category>
 
 
 <!-- ADD PAUSE FOR PERSON TO ANSWER OR ADD JEOPARDY MUSIC-->
 
 
+    <category>
+        <pattern># CARRIE ^</pattern>
+        <that>WHAT IS THE NAME OF THE HORROR FILM?</that>
+        <template>
+            That is correct! You are pretty good at this.
+            Okay the next category is Pop Culture.
+            Here is your next question. The category is Adjectives that begin with the letter A.
+            The clue is. Done without thinking or shifting. What is your guess?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+    </category>
+
    <category>
       <pattern>*</pattern>
       <that>WHAT IS THE NAME OF THE HORROR FILM?</that>
       <template>
-            Drumroll! The answer is Carrie! That was a horror film indeed! Here is your last clue.
+            Drumroll! The answer is Carrie! That was a horror film indeed! Here is your next question.
             The category is Adjectives that begin with the letter A. The clue is. Done without thinking or shifting. What is your guess?
            <oob>
                <robot>
@@ -1153,11 +1177,30 @@
 
 <!-- ADD PAUSE FOR PERSON TO ANSWER OR ADD JEOPARDY MUSIC-->
 
+
+
+    <category>
+        <pattern># AUTOMATIC ^</pattern>
+        <that>WHAT IS YOUR GUESS?</that>
+        <template>
+            You are right! I know you seemed smart
+            Okay the next category is Pop Culture.
+            Thank you for playing Jeopardy!
+            I hope we can do this again soon! I would like to do one last check in before I say goodbye.
+            How would you describe your mood right now?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+    </category>
+
    <category>
       <pattern>*</pattern>
       <that>WHAT IS YOUR GUESS?</that>
       <template>
-            Ready? The answer is automatic! That one was tricky! Thank you for playing Jeopardy! I hope we can do this again soon! I would like to do one last check in before I say goodbye. How would you describe your mood right now?
+            Ready? The answer is automatic! That one was tricky! Thank you for playing Jeopardy!
+            I hope we can do this again soon! I would like to do one last check in before I say goodbye. How would you describe your mood right now?
            <oob>
                <robot>
                </robot>
