@@ -733,6 +733,7 @@
                     </oob>
                 </li>
                 <li value = "neutral">
+                    I think that it will open the door for a lot of possibility.
                     Archaeologists just found the oldest known human drawing from 73,000 years ago! Can you believe that?
                     <oob>
                         <robot>
@@ -910,10 +911,10 @@
                 </li>
                 <li value = "negative">
                     Interesting! I think I would love to have been alive in the seventies to see the Rolling Stones. Do you know their music?
-                        <oob>
-                            <robot>
-                            </robot>
-                        </oob>
+                    <oob>
+                        <robot>
+                        </robot>
+                    </oob>
                 </li>
                 <li value = "verynegative">
                     Interesting! I think I would love to have been alive in the seventies to see the Rolling Stones. Do you know their music?
@@ -1039,7 +1040,9 @@
             What did you think of that performance?
             <oob>
                 <robot>
-                    heyJude.mp4
+                    <video>
+                        <filename>heyJude.mp4</filename
+                    </video>
                 </robot>
             </oob>
         </template>
