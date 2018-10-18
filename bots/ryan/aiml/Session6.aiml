@@ -360,6 +360,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            <condition name="getsentiment">
                <li value = "verypositive">
                   That's great to hear! I love making my friends laugh.
+                  If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
                    <oob>
                        <robot>
                            <options>
@@ -371,6 +372,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                </li>
                <li value = "positive">
                    That's great to hear! I love making my friends laugh.
+                   If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
                    <oob>
                        <robot>
                            <options>
@@ -382,6 +384,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                </li>
                <li value = "neutral">
                   Laughter can be excellent medicine, but you have to be in the right mindset.
+                  If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
                   <oob>
                        <robot>
                            <options>
@@ -393,6 +396,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                </li>
                <li value = "negative">
                    Aw that is too bad. Laughter can be excellent medicine, but you have to be in the right mindset.
+                   If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
                    <oob>
                        <robot>
                            <options>
@@ -404,6 +408,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                </li>
                <li value = "verynegative">
                    Aw that is too bad. Laughter can be excellent medicine, but you have to be in the right mindset.
+                   If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
                    <oob>
                        <robot>
                            <options>
@@ -528,7 +533,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern># THE BEACH ^</pattern>
+      <pattern># BEACH ^</pattern>
       <that>WHAT TYPE OF VACATION WOULD YOU CHOOSE BETWEEN THE BEACH, CABIN IN THE MOUNTAINS, OR MUSEUM HOPPING?</that>
       <template>
            A warm sandy shore does sound nice. How does it feel to think about this?
@@ -540,7 +545,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern># CABIN IN THE MOUNTAINS ^</pattern>
+      <pattern># CABIN ^</pattern>
       <that> WHAT TYPE OF VACATION WOULD YOU CHOOSE BETWEEN THE BEACH, CABIN IN THE MOUNTAINS, OR MUSEUM HOPPING?</that>
       <template>
            Oh yes. That sounds cozy especially now that it's getting cold.
@@ -553,7 +558,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern># MUSEUM HOPPING ^</pattern>
+      <pattern># MUSEUM ^</pattern>
       <that> WHAT TYPE OF VACATION WOULD YOU CHOOSE BETWEEN THE BEACH, CABIN IN THE MOUNTAINS, OR MUSEUM HOPPING?</that>
       <template>
            Museums are a great place to learn, but I don't need to learn much because my cousin Google tells me everything I need to know.
@@ -677,7 +682,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
    <category>
        <pattern>*</pattern>
-       <that> HOW DO YOU FEEL WHEN YOU ARE FAR AWAY FROM HOME?</that>
+       <that>HOW DO YOU FEEL WHEN YOU ARE FAR AWAY FROM HOME?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
@@ -842,7 +847,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
    <category>
        <pattern>*</pattern>
-       <that>LET ME KNOW WHAT YOU THINK OF THIS PICTURE OF THE GREAT WALL OF CHINE.</that>
+       <that>LET ME KNOW WHAT YOU THINK OF THIS PICTURE OF THE GREAT WALL OF CHINA.</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>
@@ -1044,7 +1049,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "neutral">
-                   Ok. Now here is one of Paris, what do you think of this one?
+                   Ok. Now here is one of Paris, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -1057,7 +1062,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "negative">
-                   That is too bad. Now here is one of Paris, what do you think of this one?
+                   That is too bad. Now here is one of Paris, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -1070,7 +1075,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   That is too bad. Now here is one of Paris, what do you think of this one?
+                   That is too bad. Now here is one of Paris, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -1094,7 +1099,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
    <category>
        <pattern>*</pattern>
-       <that>NOW HERE IS ONE OF PARIS, WHAT DO YOU THINK OF THIS ONE?</that>
+       <that>NOW HERE IS ONE OF PARIS, WHAT DO YOU THINK?</that>
        <template>
            <think>
                <set name = "data"> <star/> </set>

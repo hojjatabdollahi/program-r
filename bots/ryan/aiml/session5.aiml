@@ -1196,7 +1196,7 @@
         <pattern><set>YES</set></pattern>
         <that>WOULD YOU LIKE TO SEE A FUNNY CLIP FROM A JEOPARDY EPISODE THAT ALWAYS MAKES ME LAUGH?</that>
         <template>
-             Exciting! Here is the clip. Let me know what you think about it! <!----https://www.youtube.com/watch?v=hQ5lk735-Fk--->
+             Exciting! Here is the clip. Let me know what you think about it!
             <oob>
                 <robot>
                     <video>
