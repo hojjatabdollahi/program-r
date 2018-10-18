@@ -976,35 +976,39 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    Music brings humans such joy! I am happy to hear that! Would you like to hear one of my favorite songs?
+                    Music brings humans such joy! I am happy to hear that!
+                    Would you like to hear one of my favorite songs by the beatles?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    Music brings humans such joy! I am happy to hear that! Would you like to hear one of my favorite songs?
+                    Music brings humans such joy! I am happy to hear that!
+                    Would you like to hear one of my favorite songs by the beatles?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Would you like to hear one of my favorite songs?
+                    Would you like to hear one of my favorite songs by the beatles?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "negative">
-                    Music makes some people happy and may have less impact for others. Would you like to hear one of my favorite songs?
+                    Music makes some people happy and may have less impact for others.
+                    Would you like to hear one of my favorite songs by the beatles?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    Music makes some people happy and may have less impact for others. Would you like to hear one of my favorite songs?
+                    Music makes some people happy and may have less impact for others.
+                    Would you like to hear one of my favorite songs by the beatles?
                     <oob>
                         <robot>
                         </robot>
@@ -1030,7 +1034,7 @@
 
     <category>
         <pattern># <set>yes</set> ^</pattern>
-        <that>WOULD YOU LIKE TO HEAR ONE OF MY FAVORITE SONGS? </that>
+        <that>WOULD YOU LIKE TO HEAR ONE OF MY FAVORITE SONGS BY THE BEATLES?</that>
         <template>
             What did you think of that performance?
             <oob>
