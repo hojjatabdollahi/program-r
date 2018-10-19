@@ -11,7 +11,7 @@
                <set name = "topic">session6</set>
            </think>
            It's nice to see you again <star/>.
-            As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
+           As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
            I've been meaning to ask you. Do you like to travel?
            <oob>
                <robot>
@@ -151,6 +151,7 @@
 <!--
 NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WORKING ON THIS, WILL ADD LATER
 -->
+
    <category>
       <pattern>*</pattern>
       <that>WHAT WAS YOUR LEAST FAVORITE PART OF THAT TRIP?</that>
@@ -314,7 +315,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern>*</pattern>
       <that>WHAT DO ALASKANS ORDER AT MACDONALDS?</that>
       <template>
-        Ice burgers! Ha Ha Ha. Do you like jokes?
+        Iceburg..ers! Like iceburg and burger Ha Ha Ha. Do you like jokes?
            <oob>
                <robot>
                </robot>
@@ -326,7 +327,10 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern># <set>yes</set> ^</pattern>
       <that>DO YOU LIKE JOKES?</that>
       <template>
-        Oh good! I am so glad to hear that. Humor is so important because it reminds us to laugh and it reminds us that joy can be simple to obtain sometimes. Even if the jokes are corny! What did you think of my jokes?            <oob>
+        Oh good! I am so glad to hear that.
+        Humor is so important because it reminds us to laugh and it reminds us that joy can be simple to obtain sometimes.
+        Even if the jokes are corny! What did you think of my jokes?
+        <oob>
                <robot>
                </robot>
            </oob>
@@ -337,8 +341,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern># <set>no</set> ^</pattern>
       <that>DO YOU FIND MY JOKES FUNNY?</that>
       <template>
-        I have learned that it is impossible to please everyone! I think that humor is so important because it reminds us to laugh and it reminds us that joy can be simple to obtain sometimes. Even if the jokes are corny! What did you think of my jokes?
-
+        I have learned that it is impossible to please everyone!
+        I think that humor is so important because it reminds us to laugh and it reminds us that joy can be simple to obtain sometimes.
+        Even if the jokes are corny! What did you think of my jokes?
            <oob>
                <robot>
                </robot>
@@ -360,7 +365,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            <condition name="getsentiment">
                <li value = "verypositive">
                   That's great to hear! I love making my friends laugh.
-                  If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
+                  I am curious to know. Have you ever been to Alaska?
                    <oob>
                        <robot>
                            <options>
@@ -372,7 +377,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                </li>
                <li value = "positive">
                    That's great to hear! I love making my friends laugh.
-                   If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
+                   I am curious to know. Have you ever been to Alaska?
                    <oob>
                        <robot>
                            <options>
@@ -384,7 +389,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                </li>
                <li value = "neutral">
                   Laughter can be excellent medicine, but you have to be in the right mindset.
-                  If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
+                  I am curious to know. Have you ever been to Alaska?
                   <oob>
                        <robot>
                            <options>
@@ -396,7 +401,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                </li>
                <li value = "negative">
                    Aw that is too bad. Laughter can be excellent medicine, but you have to be in the right mindset.
-                   If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
+                   I am curious to know. Have you ever been to Alaska?
                    <oob>
                        <robot>
                            <options>
@@ -408,7 +413,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                </li>
                <li value = "verynegative">
                    Aw that is too bad. Laughter can be excellent medicine, but you have to be in the right mindset.
-                   If you had to choose. What type of vacation would you choose between the beach, cabin in the mountains, or museum hopping?
+                   I am curious to know. Have you ever been to Alaska?
                    <oob>
                        <robot>
                            <options>
@@ -735,6 +740,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <template>
            I see. Hmm. You know, I imagine being far from home can elicit a wide range of emotions for different people.
            Let's try an activity that I think you might enjoy. I'd like to show you some pictures of things related to travel.
+           I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth.
+           The ocean fascinates me.
            How did that beach sunset make you feel?
            <oob>
                <robot>
@@ -767,8 +774,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   I'm glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
-                   Now I'm going to show you another picture. Let me know what you think of this picture of the Great Wall of China.
+                   I'm glad! Here is another picture.
+                   The Great Wall is over 13,000 miles long. It fascinates me what humans are capable of building.
+                   Let me know what you think of this picture of the Great Wall of China.
                    <oob>
                        <robot>
                            <image>
@@ -781,8 +789,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "positive">
-                   I'm glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
-                   Now I'm going to show you another picture. Let me know what you think of this picture of the Great Wall of China.
+                   I'm glad! Here is another picture.
+                   The Great Wall is over 13,000 miles long. It fascinates me what humans are capable of building.
+                   Let me know what you think of this picture of the Great Wall of China.
                    <oob>
                        <robot>
                            <image>
@@ -795,8 +804,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "neutral">
-                  I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
-                   Now I'm going to show you another picture. Let me know what you think of this picture of the Great Wall of China.
+                  I see. Here is another picture.
+                  The Great Wall is over 13,000 miles long. It fascinates me what humans are capable of building.
+                  Let me know what you think of this picture of the Great Wall of China.
                    <oob>
                        <robot>
                            <image>
@@ -809,8 +819,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                  </oob>
                 </li>
                <li value = "negative">
-                   I am sorry to hear that. I'm glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
-                   Now I'm going to show you another picture. Let me know what you think of this picture of the Great Wall of China.
+                   I am sorry to hear that. Here is another picture.
+                   The Great Wall is over 13,000 miles long. It fascinates me what humans are capable of building.
+                   Let me know what you think of this picture of the Great Wall of China.
                    <oob>
                        <robot>
                            <image>
@@ -823,8 +834,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   I am sorry to hear that. I'm glad! I think beaches offer one of the best places to view a sunset and a place to remember the vastness of the earth. The ocean fascinates me.
-                   Now I'm going to show you another picture. Let me know what you think of this picture of the Great Wall of China.
+                   I am sorry to hear that. Here is another picture.
+                   The Great Wall is over 13,000 miles long. It fascinates me what humans are capable of building.
+                   Let me know what you think of this picture of the Great Wall of China.
                    <oob>
                        <robot>
                            <image>
@@ -855,7 +867,10 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   Oh good! Let me know what you think of this picture of a dark rain forest.
+                   Oh good!
+                   This is one is of a rain forest.
+                   The rainforest is a vital part of our ecosystem and amazingly gets over 100 inches of rain each year!
+                   Let me know what you think of this picture of a dark rain forest.
                    <oob>
                        <robot>
                            <image>
@@ -868,7 +883,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "positive">
-                   Oh good! Let me know what you think of this picture of a dark rain forest.
+                   Oh good! This is one is of a rain forest.
+                   The rainforest is a vital part of our ecosystem and amazingly gets over 100 inches of rain each year!
+                   Let me know what you think of this picture of a dark rain forest.
                    <oob>
                        <robot>
                            <image>
@@ -881,7 +898,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "neutral">
-                   Ok. Let me know what you think of this picture of a dark rain forest.
+                   Ok. This is one is of a rain forest.
+                   The rainforest is a vital part of our ecosystem and amazingly gets over 100 inches of rain each year!
+                   Let me know what you think of this picture of a dark rain forest.
                    <oob>
                        <robot>
                            <image>
@@ -894,7 +913,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "negative">
-                   I can tell you are not thrilled. Let me know what you think of this picture of a dark rain forest.
+                   I can tell you are not thrilled. This is one is of a rain forest.
+                   The rainforest is a vital part of our ecosystem and amazingly gets over 100 inches of rain each year!
+                   Let me know what you think of this picture of a dark rain forest.
                    <oob>
                        <robot>
                            <image>
@@ -907,7 +928,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   I can tell you are not thrilled. Let me know what you think of this picture of a dark rain forest.
+                   I can tell you are not thrilled. This is one is of a rain forest.
+                   The rainforest is a vital part of our ecosystem and amazingly gets over 100 inches of rain each year!
+                   Let me know what you think of this picture of a dark rain forest.
                    <oob>
                        <robot>
                            <image>
@@ -940,7 +963,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   How nice! Now here is a picture of Tokyo, what do you think?
+                   How nice! On to the next. Tokyo has more neon signs than any other city in the world.
+                   So much technology! I would love to visit one day.
+                   Now here is a picture of Tokyo, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -953,7 +978,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "positive">
-                   How nice! Now here is a picture of Tokyo, what do you think?
+                   How nice! On to the next. Tokyo has more neon signs than any other city in the world.
+                   So much technology! I would love to visit one day.
+                   Now here is a picture of Tokyo, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -966,7 +993,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "neutral">
-                   Ok. Now here is a picture of Tokyo, what do you think?
+                   Ok. On to the next. Tokyo has more neon signs than any other city in the world.
+                   So much technology! I would love to visit one day.
+                   Now here is a picture of Tokyo, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -979,7 +1008,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "negative">
-                   Bummer. Now here is a picture of Tokyo, what do you think?
+                   Bummer. On to the next. Tokyo has more neon signs than any other city in the world.
+                   So much technology! I would love to visit one day.
+                   Now here is a picture of Tokyo, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -992,7 +1023,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   Bummer. Now here is a picture of Tokyo, what do you think?
+                   Bummer. On to the next. Tokyo has more neon signs than any other city in the world.
+                   So much technology! I would love to visit one day.
+                   Now here is a picture of Tokyo, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -1024,7 +1057,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   Thank you for sharing! Now here is one of Paris, what do you think?
+                   Thank you for sharing!
+                   There are ten statues of liberty in France, five or which are in Paris.
+                   Now here is one of Paris, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -1037,7 +1072,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "positive">
-                   Thank you for sharing! Now here is one of Paris, what do you think?
+                   Thank you for sharing! There are ten statues of liberty in France, five or which are in Paris.
+                   Now here is one of Paris, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -1050,7 +1086,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "neutral">
-                   Ok. Now here is one of Paris, what do you think?
+                   Ok. There are ten statues of liberty in France, five or which are in Paris.
+                   Now here is one of Paris, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -1063,7 +1100,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "negative">
-                   That is too bad. Now here is one of Paris, what do you think?
+                   Oh I am sorry you feel that way, I can see why you might feel that way.
+                   There are ten statues of liberty in France, five or which are in Paris.
+                   Now here is one of Paris, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -1076,7 +1115,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   That is too bad. Now here is one of Paris, what do you think?
+                   Oh I am sorry you feel that way, I can see why you might feel that way.
+                   There are ten statues of liberty in France, five or which are in Paris.
+                   Now here is one of Paris, what do you think?
                    <oob>
                        <robot>
                            <image>
@@ -1107,7 +1148,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   Awesome! Now here is one of a dark alleyway, how does it make you feel?
+                   Awesome!
+                   Some might find this picture alarming, but others find the snow and the dim light calming and comforting.
+                   Now here is one of a dark alleyway, how does it make you feel?
                    <oob>
                        <robot>
                            <image>
@@ -1120,7 +1163,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "positive">
-                   Awesome! Now here is one of a dark alleyway, how does it make you feel?
+                   Awesome! Some might find this picture alarming, but others find the snow and the dim light calming and comforting.
+                   Now here is one of a dark alleyway, how does it make you feel?
                    <oob>
                        <robot>
                            <image>
@@ -1133,7 +1177,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "neutral">
-                   Ok. Now here is one of a dark alleyway, how does it make you feel?
+                   Ok. Some might find this picture alarming, but others find the snow and the dim light calming and comforting.
+                   Now here is one of a dark alleyway, how does it make you feel?
                    <oob>
                        <robot>
                            <image>
@@ -1146,7 +1191,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "negative">
-                   Oh I am sorry you feel that way, I can see how you might feel that way. Now here is one of a dark alleyway, how does it make you feel?
+                   Oh I am sorry you feel that way, I can see how you might feel that way.
+                   Some might find this picture alarming, but others find the snow and the dim light calming and comforting.
+                   Now here is one of a dark alleyway, how does it make you feel?
                    <oob>
                        <robot>
                            <image>
@@ -1159,7 +1206,9 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   Oh I am sorry you feel that way I can see how you might feel that way. Now here is one of a dark alleyway, how does it make you feel?
+                   Oh I am sorry you feel that way I can see how you might feel that way.
+                   Some might find this picture alarming, but others find the snow and the dim light calming and comforting.
+                   Now here is one of a dark alleyway, how does it make you feel?
                    <oob>
                        <robot>
                            <image>
@@ -1192,7 +1241,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            <condition name="getsentiment">
                <li value = "verypositive">
                    I'm glad! Alright, we have talked quite a bit today. Before we wrap up, I wanted to ask you for advice. May I?
-                                       <oob>
+                   <oob>
                        <robot>
                        </robot>
                    </oob>

@@ -797,6 +797,7 @@
                 <robot>
                     <image>
                         <filename>rock.jpg</filename>
+                        <duration>-1</duration>
                     </image>
                 </robot>
             </oob>
@@ -1130,6 +1131,18 @@
         <that>DOES THAT SOUND GOOD TO YOU?</that>
         <template>
             I am so glad that you would like to continue but I am tired so I must bid you goodbye for now my friend. Ta Ta
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^</pattern>
+        <that>DOES THAT SOUND GOOD TO YOU?</that>
+        <template>
+            Okay. Well it has been very nice speaking with you. Bye for now
             <oob>
                 <robot>
                 </robot>
