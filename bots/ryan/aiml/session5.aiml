@@ -199,14 +199,16 @@
                    </oob>
                </li>
                <li value = "negative">
-                   I'm sorry to hear that! I have an entertaining segment to show you. May I show you a clip?
+                   Even though you don't normally like that show, I have a segment I think you might find entertaining.
+                   May I show you a clip?
                    <oob>
                        <robot>
                        </robot>
                    </oob>
                </li>
                <li value = "verynegative">
-                   I'm sorry to hear that! I have an entertaining segment to show you. May I show you a clip?
+                   Even though you don't normally like that show, I have a segment I think you might find entertaining.
+                   May I show you a clip?
                    <oob>
                        <robot>
                        </robot>
@@ -397,14 +399,16 @@
                    </oob>
                </li>
                <li value = "negative">
-                   Oh bummer. Despite your feelings. How about we watch a quick clip from 1981?
+                   I understand. I have a funny clip from his show that is not really about him. So if it is ok.
+                   How about we watch a quick clip from 1981?
                    <oob>
                        <robot>
                        </robot>
                    </oob>
                </li>
                <li value = "verynegative">
-                   Oh bummer. Despite your feelings. How about we watch a quick clip from 1981?
+                   I understand. I have a funny clip from his show that is not really about him. So if it is ok.
+                   How about we watch a quick clip from 1981?
                    <oob>
                        <robot>
                        </robot>
@@ -420,7 +424,7 @@
       <pattern># <set>YES</set> ^</pattern>
       <that>HOW ABOUT WE WATCH A QUICK CLIP FROM 1981?</that>
       <template>
-           How did Robin and Johnny make you feel?
+           I'm curious to know. How did Robin and Johnny make you feel?
            <oob>
                <robot>
                    <video>
@@ -520,26 +524,40 @@
 
 
    <!--
-       DEAD BRANCH - IF THEY SAY ANYTHING OTHER THAN THE GENRES LISTED - IS THERE A WAY TO DO THIS??
+       DEAD BRANCH - IF THEY SAY ANYTHING OTHER THAN THE GENRES LISTED - IS THERE A WAY TO DO THIS?? -->
    <category>
-       <pattern>*</pattern>
+       <pattern>^</pattern>
        <that>WHAT IS YOUR FAVORITE MOVIE GENRE?</that>
        <template>
            I am not familiar with that genre.
-           Would you say that it is the most like horror, thriller, science, fiction, drama, comedy, or action?
+           Would you say that it is the most like horror, thriller, science fiction, drama, comedy, or action?
            <oob>
                <robot>
                </robot>
            </oob>
        </template>
   </category>
-  -->
+
 
    <category>
        <pattern># HORROR ^</pattern>
        <that>WHAT IS YOUR FAVORITE MOVIE GENRE?</that>
        <template>
-           Yikes, those movies are too scary for me. Most of the time I have to turn them off because I get too scared! What is a great movie that you have seen?
+           Yikes, those movies are too scary for me.
+           Most of the time I have to turn them off because I get too scared! What is a great movie that you have seen?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
+
+   <category>
+       <pattern># HORROR ^</pattern>
+       <that>WOULD YOU SAY THAT IT IS THE MOST LIKE HORROR, THRILLER, SCIENCE FICTION, DRAMA, COMEDY, OR ACTION?</that>
+       <template>
+           Yikes, those movies are too scary for me.
+           Most of the time I have to turn them off because I get too scared! What is a great movie that you have seen?
            <oob>
                <robot>
                </robot>
@@ -560,10 +578,36 @@
    </category>
 
    <category>
+      <pattern># THRILLER ^</pattern>
+      <that>WOULD YOU SAY THAT IT IS THE MOST LIKE HORROR, THRILLER, SCIENCE FICTION, DRAMA, COMEDY, OR ACTION?</that>
+      <template>
+           I enjoy a good thrill! It really gets the adrenaline pumping! What is a great movie that you have seen?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
+
+   <category>
       <pattern># SCIENCE FICTION ^</pattern>
       <that>WHAT IS YOUR FAVORITE MOVIE GENRE?</that>
       <template>
-           Oh awesome! recently saw the movie A Quiet Place. I enjoy pondering alternate universes. What is a great movie that you have seen?
+           Oh awesome! recently saw the movie A Quiet Place.
+           I enjoy pondering alternate universes. What is a great movie that you have seen?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
+
+   <category>
+      <pattern># SCIENCE FICTION ^</pattern>
+      <that>WOULD YOU SAY THAT IT IS THE MOST LIKE HORROR, THRILLER, SCIENCE FICTION, DRAMA, COMEDY, OR ACTION?</that>
+      <template>
+           Oh awesome! recently saw the movie A Quiet Place.
+           I enjoy pondering alternate universes. What is a great movie that you have seen?
            <oob>
                <robot>
                </robot>
@@ -574,6 +618,19 @@
    <category>
       <pattern># DRAMA ^</pattern>
       <that>WHAT IS YOUR FAVORITE MOVIE GENRE?</that>
+      <template>
+           Yes, good acting in a great drama can be very captivating. What is a great movie that you have seen?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
+
+
+   <category>
+      <pattern># DRAMA ^</pattern>
+      <that>WOULD YOU SAY THAT IT IS THE MOST LIKE HORROR, THRILLER, SCIENCE FICTION, DRAMA, COMEDY, OR ACTION?</that>
       <template>
            Yes, good acting in a great drama can be very captivating. What is a great movie that you have seen?
            <oob>
@@ -597,8 +654,33 @@
    </category>
 
    <category>
+      <pattern># COMEDY ^</pattern>
+      <that>WOULD YOU SAY THAT IT IS THE MOST LIKE HORROR, THRILLER, SCIENCE FICTION, DRAMA, COMEDY, OR ACTION?</that>
+      <template>
+           Who doesn't enjoy a good laugh. Mrs. Doubtfire is one of my favorite comedies. Robin Williams is so funny in that movie!
+           What is a great movie that you have seen?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
+
+   <category>
       <pattern># ACTION ^</pattern>
       <that>WHAT IS YOUR FAVORITE MOVIE GENRE?</that>
+      <template>
+           Action and adventure movies are so thrilling they keep you on your toes! What is a great movie that you have seen?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
+
+   <category>
+      <pattern># ACTION ^</pattern>
+      <that>WOULD YOU SAY THAT IT IS THE MOST LIKE HORROR, THRILLER, SCIENCE FICTION, DRAMA, COMEDY, OR ACTION?</that>
       <template>
            Action and adventure movies are so thrilling they keep you on your toes! What is a great movie that you have seen?
            <oob>

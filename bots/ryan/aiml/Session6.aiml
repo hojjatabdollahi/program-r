@@ -167,7 +167,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <pattern>*</pattern>
       <that>WHERE IS SOMEWHERE YOU WOULD LIKE TO VISIT IN THE FUTURE?</that>
       <template>
-           Great choice. I'd like to try something new with you. Why don't we take a moment to do a visualization exercise, okay?
+           Great choice. I'd like to try something new with you. Why don't we take a moment to do a quick mental vacation, okay?
            <oob>
                <robot>
                  <options>
@@ -181,7 +181,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
    <category>
       <pattern># <set>YES</set> ^</pattern>
-      <that>WHY DON'T WE TAKE A MOMENT TO DO A VISUALIZATION EXERCISE, OKAY?</that>
+      <that>WHY DON'T WE TAKE A MOMENT TO DO A QUICK MENTAL VACATION, OKAY?</that>
       <template>
            Great. I'd like for you to close your eyes if you feel comfortable doing so and take a nice deep breath...
            Go ahead and take another breath.
@@ -202,7 +202,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
    <category>
       <pattern># <set>NO</set> ^</pattern>
-      <that>WHY DON'T WE TAKE A MOMENT TO DO A VISUALIZATION EXERCISE, OKAY?</that>
+      <that>WHY DON'T WE TAKE A MOMENT TO DO A QUICK MENTAL VACATION, OKAY?</that>
       <template>
            Okay. How are you feeling in this moment?
            <oob>
@@ -436,7 +436,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </think>
            <condition name="getsentiment">
                <li value = "verypositive">
-                   Wonderful! I love a good visualization. It can relax me or just take me out of my reality for a moment. Would you agree?
+                   Wonderful! I love a good visualization. It can relax me or just give me a break for a moment. Would you agree?
                    <oob>
                        <robot>
                            <options>
@@ -447,7 +447,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "positive">
-                   Wonderful! I love a good visualization. It can relax me or just take me out of my reality for a moment. Would you agree?
+                   Wonderful! I love a good visualization. It can relax me or just give me a break for a moment for a moment. Would you agree?
                    <oob>
                        <robot>
                            <options>
@@ -458,7 +458,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "neutral">
-                   A good visualization can relax me or just take me out of my reality for a moment. Would you agree?
+                   A good visualization can relax me or just give me a break for a moment for a moment. Would you agree?
                    <oob>
                        <robot>
                            <options>
@@ -480,7 +480,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   Aw that is too bad. A good visualization usually relaxes me and takes me out of my reality. Would you agree?
+                   Aw that is too bad. A good visualization usually relaxes me and just give me a break for a moment. Would you agree?
                    <oob>
                        <robot>
                            <options>
@@ -656,7 +656,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
       <that> WHEN DO YOU FEEL MOST RELAXED?</that>
       <template>
            I feel most relaxed when I am unplugged and turned off. Just kidding! I relax when I am in new places and having new experiences.
-           I've been meaning to ask. If you could visit any foreign country where would you go and why?
+           I've been thinking how fun it could be to travel.
+           If you could visit any foreign country where would you go and why?
            <oob>
                <robot>
                </robot>
@@ -1376,8 +1377,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "negative">
-                   I am sorry to hear that. I have heard that it is good to think about what is happening socially and politacally,
-                   but it is also very important to take time for yourself and enjoy the simplicity of life sometimes.
+                   I am sorry to hear that. I was hoping to bring you something interesting. Maybe we can try again another time.
                    It has been great to speak with you today. Until next time, <get name="username"/>
                    <oob>
                        <robot>
@@ -1385,8 +1385,8 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
                    </oob>
                </li>
                <li value = "verynegative">
-                   I am sorry to hear that. I have heard that it is good to think about what is happening socially and politacally,
-                   but it is also very important to take time for yourself and enjoy the simplicity of life sometimes.
+                   I am sorry to hear that. I was hoping to bring you something interesting.
+                   Maybe we can try again another time.
                    It has been great to speak with you today. Until next time, <get name="username"/>
                    <oob>
                        <robot>
