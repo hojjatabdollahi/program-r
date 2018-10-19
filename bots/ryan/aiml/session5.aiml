@@ -106,17 +106,9 @@
       <pattern># <set>NO</set> ^</pattern>
       <that>DO YOU WATCH ANY TALK SHOWS?</that>
       <template>
-           I see. Hmm...I'm wondering. What is your favorite movie genre?
+           I see. I really enjoy watching jimmy kimmel. Have you seen his show?
            <oob>
                <robot>
-               <options>
-                       <option>Horror</option>
-                       <option>Thriller</option>
-                       <option>Sci Fi</option>
-                       <option>Comedy</option>
-                       <option>Action</option>
-                       <option>Other</option>
-               </options>
                </robot>
            </oob>
        </template>
