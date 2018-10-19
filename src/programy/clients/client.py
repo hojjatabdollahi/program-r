@@ -151,6 +151,7 @@ class BotClient(ResponseLogger):
                 client_context = self.load_client_context(
                     self.configuration.client_configuration.default_userid, session_pickle_dir)
             except Exception as exp:
+                YLogger.exception(self, "could not load the session pickles", exp)
                 client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
         else:
             client_context = self.create_client_context(self._configuration.client_configuration.default_userid)
@@ -244,8 +245,6 @@ class BotClient(ResponseLogger):
         client_context.brain.bot.set_conversation_question(client_context, questions)
         client_context.bot.conversations[userid].set_properties(properties)
         return client_context
-
-
 
     def load_renderer(self):
         try:

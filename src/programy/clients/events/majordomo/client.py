@@ -158,7 +158,13 @@ class MajorDomoBotClient(EventBotClient):
 
             if type(request) is ReadyRequest:
                 YLogger.info(self, "ready request")
-                client_context = self.client_context
+
+                # if the robot sends the ready message again
+                # it will NOT reload anything.
+                # we can change this part to use it as a signal
+                # to initialize client_context
+                client_context = self.client_context #MAYBE initialize client context??!
+
                 client_context.bot.initiate_conversation_storage()
                 response = [request.command]
 
@@ -186,6 +192,11 @@ class MajorDomoBotClient(EventBotClient):
                     YLogger.info(self, "question request")
                     if client_context is not None:
                         print(request.question)
+
+                        if self._first_time:
+                            client_context = self.client_context
+                            self._first_time = False
+
 
                         userid = client_context.userid
                         client_context.bot.conversations[userid].set_property("session_number", session_number)
