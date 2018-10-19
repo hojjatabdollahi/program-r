@@ -79,7 +79,7 @@ class MajorDomoBotClient(EventBotClient):
         return running
 
     def prior_to_run_loop(self):
-        userid = "MajorDomo"
+        userid = "majordomo"
         client_context = self.create_client_context(userid)
         self.display_startup_messages(client_context)
 
@@ -193,9 +193,9 @@ class MajorDomoBotClient(EventBotClient):
                     if client_context is not None:
                         print(request.question)
 
-                        if self._first_time:
-                            client_context = self.client_context
-                            self._first_time = False
+                        # if self._first_time:
+                        #     client_context = self.client_context
+                        #     self._first_time = False
 
 
                         userid = client_context.userid

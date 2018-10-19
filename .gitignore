@@ -9,7 +9,7 @@ __pycache__/
 *.so
 
 ##Avoiding to commit session data
-bots/ryan/session_data/
+bots/ryan/session_data/*
 
 # Distribution / packaging
 .Python

@@ -67,8 +67,29 @@ class GetSentiment(DynamicVariable):
 
         else:
             YLogger.info(self, "bot is in non emotive mode")
-            sentiment = "neutral"
 
+            #do sentiment analysis even if we return neutral sentiment
+            try:
+                sentiment, sentiment_distribution = nlp.sentiment_analysis.get_sentence_sentiment(text)
+            except Exception as exception:
+                YLogger.exception(self, "sentiment analysis module broke", exception)
+                raise exception
+
+            if sentiment == "positive":
+                sentiment_value = 1
+                final_sentiment_value = 1
+            elif sentiment == "neutral":
+                sentiment_value = 0
+                final_sentiment_value = 0
+            elif sentiment == "negative":
+                sentiment_value = -1
+                final_sentiment_value = -1
+
+            bot.sentiment.append_sentiment(sentiment_value)
+            bot.sentiment.append_final_sentiment(final_sentiment_value)
+
+
+            sentiment = "neutral"
 
         print(sentiment)
         return sentiment
