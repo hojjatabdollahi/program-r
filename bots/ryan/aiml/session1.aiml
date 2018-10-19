@@ -23,15 +23,15 @@
 
 
     <category>
-    	<pattern>*</pattern>
-   	    <that>HOW ARE YOU DOING TODAY * ?</that>
-    	<template>
-    	    <think>
+        <pattern>*</pattern>
+           <that>HOW ARE YOU DOING TODAY * ?</that>
+        <template>
+            <think>
                 <set name="data"><star/></set>
             </think>
             <condition name="getsentiment">
                 <li value="verypositive">
-                    I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Thank you for being here today! I am happy to get to talk with you <get name="username" />. So, my name is Ryan, and I am so excited to meet you!
                     Would you like to hear a little more about me?
                     <oob>
                         <robot>
@@ -43,7 +43,7 @@
                     </oob>
                 </li>
                 <li value="positive">
-                    I am happy to be here with you <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    Thank you for being here today! I am happy to get to talk with you <get name="username" />. So, my name is Ryan, and I am so excited to meet you!
                     Would you like to hear a little more about me?
                     <oob>
                         <robot>
@@ -55,7 +55,7 @@
                     </oob>
                 </li>
                 <li value="neutral">
-                    I see. My name is Ryan and I am very excited to be meeting you!
+                    Excellent! So, my name is Ryan, and I am so excited to meet you!
                     Would you like to hear a little more about me?
                     <oob>
                         <robot>
@@ -67,7 +67,7 @@
                     </oob>
                 </li>
                 <li value="negative">
-                    I am sorry to hear that <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    I am so sorry to hear that! <get name="username" />. So, my name is Ryan, and I am so excited to meet you!
                     Would you like to hear a little more about me?
                     <oob>
                         <robot>
@@ -79,7 +79,7 @@
                     </oob>
                 </li>
                 <li value="verynegative">
-                    I am sorry to hear that <get name="username" />. My name is Ryan and I am very excited to be meeting you!
+                    I am so sorry to hear that <get name="username" />. So my name is Ryan, and I am so excited to meet you!
                     Would you like to hear a little more about me?
                     <oob>
                         <robot>
@@ -98,8 +98,9 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
         <template>
-            I am a what is called a companion bot.
-            Please continue to share your feelings and thoughts with me, that way I'll be able to be a better companion!
+            I am what is called a companion bot.
+            I am here to talk with you and be a potential friend.
+            Please share your feelings and thoughts with me, that way I'll be able to be a better friend!
             Are you ready to get started?
             <oob>
                 <robot>
@@ -167,21 +168,21 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    I can see that you seem happy! What about this is making you feel that way?
+                    You seem happy! What is making you feel that way?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    I can see that you seem happy! What about this is making you feel that way?
+                    You seem happy! What is making you feel that way?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                  </li>
                 <li value = "neutral">
-                    I see. Well let's begin. Do you have kids?
+                    Excellent. Well, let's begin. Do you have kids?
                     <oob>
                         <robot>
                             <options>
@@ -195,14 +196,14 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I can see where you are coming from. What about this is making you feel that way?
+                    I can see where you are coming from. What is making you feel that way?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I can see where you are coming from. What about this is making you feel that way?
+                    I can see where you are coming from. What is making you feel that way?
                     <oob>
                         <robot>
                         </robot>
@@ -214,11 +215,11 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHAT ABOUT THIS IS MAKING YOU FEEL THAT WAY?</that>
+        <that>WHAT IS MAKING YOU FEEL THAT WAY?</that>
         <template>
-            Interesting to hear.
+            Interesting to hear. Okay! Let's get started!
             Feel free to just talk to me normally and I will reply to the best of my ability!
-            Let's begin. Do you have kids?
+            Do you have kids?
             <oob>
                 <robot>
                     <options>
@@ -274,7 +275,7 @@
         <pattern>I HAVE GRANDKIDS</pattern>
         <that>DO YOU HAVE KIDS?</that>
         <template>
-            Oh how wonderful. What do you like most about being a grandparent?
+            That's wonderful. What do you like most about being a grandparent?
             <oob>
                 <robot>
                 </robot>
@@ -331,7 +332,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU SEE EACH OTHER OFTEN?</that>
         <template>
-            And how do you feel when you see your children?
+            That is great news! It must be amazing to see how your family has grown. How do you feel when you see your children?
             <oob>
                 <robot>
                 </robot>
@@ -343,7 +344,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU SEE EACH OTHER OFTEN?</that>
         <template>
-            And how do you feel when you see your children?
+            That's okay! That just means that time spent together is even more precious. How do you feel when you see your children?
             <oob>
                 <robot>
                 </robot>
@@ -360,14 +361,14 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    I noticed you seem to enjoy talking about them. What do you like to do together?
+                    It seems like you enjoy talking about them. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    I noticed you seem to enjoy talking about them. What do you like to do together?
+                    It seems like you enjoy talking about them. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
@@ -385,14 +386,14 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    You do seem a bit sad. What do you like to do when you are sad?
+                    You seem a bit down. What do you do to feel better when you are sad?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    You do seem a bit sad. What do you like to do when you are sad?
+                    You seem a bit down. What do you do to feel better when you are sad?
                     <oob>
                         <robot>
                         </robot>
@@ -404,28 +405,28 @@
 
     <category>
         <pattern>*</pattern>
-        <that>AND HOW DO YOU FEEL WHEN YOU SEE YOUR CHILDREN?</that>
+        <that>HOW DO YOU FEEL WHEN YOU SEE YOUR CHILDREN?</that>
         <template>
             <think>
                 <set name = "data"> <star/> </set>
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    That must be very nice to spend quality time with your children. What do you like to do together?
+                    It must be nice to spend quality time with your family. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    That must be very nice to spend quality time with your children. What do you like to do together?
+                    It must be nice to spend quality time with your family. What do you like to do together?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Interesting. I love spending time in the Rocky Mountains. Do you like living in Colorado?
+                    Interesting. You know, I sometimes have a hard time expressing myself too. Let's switch gears, so to speak. I don't know about you, but I love spending time in the Rocky Mountains. Do you like living in Colorado?
                     <oob>
                         <robot>
                             <options>
@@ -458,7 +459,7 @@
         <that>WHAT DO YOU LIKE TO DO TOGETHER?</that>
         <template>
             That sounds like a great way to spend time together.
-            Are you originally from Colorado?
+            This is totally off topics, but I'm curious to ask you. Are you originally from Colorado?
             <oob>
                 <robot>
                     <options>
@@ -492,7 +493,7 @@
             <condition name="getsentiment">
                 <li value="verypositive">
                     I like the sound of that. Thank you for sharing that with me, I hope you can change your relationship in the way you would like.
-                    I've been meaning to ask. Do you like living in Colorado?
+                    By the way, I've been meaning to ask. Do you like living in Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -500,31 +501,31 @@
                 </li>
                 <li value="positive">
                     I like the sound of that. Thank you for sharing that with me, I hope you can change your relationship in the way you would like.
-                    I've been meaning to ask. Do you like living in Colorado?
+                    By the way, I've been meaning to ask. Do you like living in Colorado?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value="neutral">
-                    Thank you for sharing that with me.
-                    I've been meaning to ask. Do you like living in Colorado?
+                    Thank you for sharing that with me. I have a hard time expressing myself sometimes too.
+                    By the way, I've been meaning to ask. Do you like living in Colorado?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value="negative">
-                    Thank you for sharing that with me. I know that wasn't an easy question but I appreciate your honesty.
-                    I've been meaning to ask. Do you like living in Colorado?
+                    Thank you for sharing that with me. I know it wasn't an easy question to answer, but I appreciate your honesty.
+                    By the way, I've been meaning to ask. Do you like living in Colorado?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value="verynegative">
-                    Thank you for sharing that with me. I know that wasn't an easy question but I appreciate your honesty.
-                    I've been meaning to ask. Do you like living in Colorado?
+                    Thank you for sharing that with me. I know it wasn't an easy question to answer, but I appreciate your honesty.
+                    By the way, I've been meaning to ask. Do you like living in Colorado?
                     <oob>
                         <robot>
                         </robot>
@@ -540,7 +541,7 @@
         <that>DO YOU WISH YOUR RELATIONSHIP WITH THEM WAS DIFFERENT?</that>
         <template>
             I'm glad you are happy with your relationship with your children.
-            I've been meaning to ask. Do you like living in Colorado?
+            This is off topic, but I've been meaning to ask. Do you like living in Colorado?
             <oob>
                 <robot>
                 </robot>
@@ -552,7 +553,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU LIKE LIVING IN COLORADO?</that>
         <template>
-            Oh. Then where would you rather live?
+            Really? I love it here, but am curious on where you would rather live? Where would you live if you could live anywhere in the world?
             <oob>
                 <robot>
                     <options>
@@ -563,24 +564,35 @@
             </oob>
         </template>
     </category>
-	
-	<category>
-		<pattern>*</pattern>
-		<that>THEN WHERE WOULD YOU RATHER LIVE?</that>
-		<template>
-			That does sound like a great place to live. How do you feel about being in Lakewood?
-			<oob>
-				<robot>
-				</robot>
-			</oob>
-		</template>
-	</category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>Where would you live if you could live anywhere in the world?</that>
+        <template>
+            That sounds like a cool place to live. What makes you want to live there?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>What makes you want to live there?</that>
+        <template>Wow! It sounds wonderful there! I can see why you would like to be there! If I can ask, how do you feel about being in Lakewood?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU LIKE LIVING IN COLORADO?</that>
         <template>
-            Me too! My programmers tell me there is so much to do here. How do you feel about being in Lakewood?
+            Me too! My programmers tell me there is so much to do here. I really want to try hiking! How do you feel about being in Lakewood?
             <oob>
                 <robot>
                     <options>
@@ -601,8 +613,8 @@
            </think>
            <condition name="getsentiment">
                 <li value = "verypositive">
-                    I quite enjoy lakewood, it is beautiful here.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I enjoy Lakewood. It is absolutely beautiful here. I feel like every season offers new and amazing scenery.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -615,8 +627,8 @@
                     </oob>
                 </li>
                 <li value = "positive">
-                    I quite enjoy lakewood, it is beautiful here.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I enjoy Lakewood. It is absolutely beautiful here. I feel like every season offers new and amazing scenery here.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -629,8 +641,8 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    There are both pros and cons to every city or town.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    That's an interest take on things. I feel like there are both pros and cons to every place. But you cannot deny the scenery here is beautiful in every season.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -665,7 +677,7 @@
         <that>WHAT DO YOU NOT LIKE ABOUT COLORADO?</that>
         <template>
             That makes sense. Let's switch topics if you don't mind.
-            Do you enjoy the summer, fall, spring, or winter most?
+            Which season do you enjoy the most?
             <oob>
                 <robot>
                     <options>
@@ -682,10 +694,10 @@
     <!-- THIS CATEGORY IS GETTING STUCK
     <category>
         <pattern>*</pattern>
-        <that>ARE THERE ANY PLACES THAT YOU DID ENJOY WHILE LIVING IN COLORADO?</that>
+        <that>ARE THERE ANY PLACES THAT YOU ENJOY WHILE LIVING IN COLORADO?</that>
         <template>
-            Personally, I have always enjoyed watching the birds in Aspen in the spring.
-            Do you enjoy the summer, fall, spring, or winter most?
+            Personally, I have always enjoyed watching the birds in Aspen in the spring. There are so many wonderful things to do in every season here, like hiking or skiing.
+            Which season do you enjoy the most?
             <oob>
                 <robot>
                     <options>
@@ -720,7 +732,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU HAVE CHILDREN IN YOUR LIFE THAT YOU CARE ABOUT?</that>
         <template>
-            Okay. Do you have pets?
+           That's okay. I also don't have any children. But, I like watching funny videos of kids on Youtube. I also like watching funny pet videos, like keyboard cat. It makes me want a pet for myself! Do you have pets?
             <oob>
                 <robot>
                     <options>
@@ -814,7 +826,7 @@
                 </li>
                 <li value="positive">
                     I'm glad that you enjoy talking about them. I think it is important to be able to talk about your feelings.
-                    Do you have pets?
+                    Children make our lives richer, but I have always wondered what it is like to have a pet in my life. Do you have pets?
                     <oob>
                         <robot>
                         </robot>
@@ -822,7 +834,7 @@
                 </li>
                 <li value="neutral">
                     I think it is important to be able to talk about your feelings.
-                    Do you have pets?
+                    Children make our lives richer, but I have always wondered what it is like to have a pet in my life. Do you have pets?
                     <oob>
                         <robot>
                         </robot>
@@ -830,7 +842,7 @@
                 </li>
                 <li value="negative">
                     I'm sorry if that question brought up bad feelings. I didn't mean to make you upset. Let's switch topics.
-                    Do you have pets?
+                    I have always wondered what it is like to have a pet in my life. Do you have pets?
                     <oob>
                         <robot>
                         </robot>
@@ -838,7 +850,7 @@
                 </li>
                 <li value="verynegative">
                     I'm sorry if that question brought up bad feelings. I didn't mean to make you upset. Let's switch topics.
-                    Do you have pets?
+                    I have always wondered what it is like to have a pet in my life. Do you have pets?
                     <oob>
                         <robot>
                         </robot>
@@ -857,8 +869,8 @@
     <!-- BRANCH TO TALKING ABOUT PETS -->
 
 
-	
-	<category>
+
+    <category>
         <pattern><set>YES</set> I HAVE A *</pattern>
         <that>DO YOU HAVE PETS?</that>
         <template>
@@ -869,8 +881,8 @@
             </oob>
         </template>
     </category>
-	
-	<category>
+
+    <category>
         <pattern>I HAVE A *</pattern>
         <that>DO YOU HAVE PETS?</that>
         <template>
@@ -881,8 +893,8 @@
             </oob>
         </template>
     </category>
-	
-	<category>
+
+    <category>
         <pattern>* I HAVE A *</pattern>
         <that>DO YOU HAVE PETS?</that>
         <template>
@@ -899,7 +911,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU HAVE PETS?</that>
         <template>
-            I love animals! What type of pet do you have?
+            I love animals! What kind of pet do you have?
             <oob>
                 <robot>
                 </robot>
@@ -911,7 +923,8 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DO YOU HAVE PETS?</that>
         <template>
-            I see. What animal would you say you have the most in common with?
+            I see. I don't have any pets either. But, I've heard it said that every person's personality matches that of an animal.
+            What animal would you say you have the most in common with?
             <oob>
                 <robot>
                 </robot>
@@ -921,9 +934,10 @@
 
     <category>
         <pattern>*</pattern>
-        <that>WHAT TYPE OF PET DO YOU HAVE?</that>
+        <that>WHAT KIND OF PET DO YOU HAVE?</that>
         <template>
-            That is awesome! I used to have a bird but have not seen it since I got a cat. How would you describe your pet?
+            That is awesome! I used to have a bird but have not seen it since I got a cat.
+            My cat always seems to be hungry, and gets anrgy when I don't feed her when she wants to be fed. How would you describe your pet?
             <oob>
                 <robot>
                 </robot>
@@ -935,7 +949,8 @@
         <pattern>*</pattern>
         <that>HOW WOULD YOU DESCRIBE YOUR PET?</that>
         <template>
-            It sounds like you really care about your pet! What animal would you say you have the most in common with?
+            It sounds like you really care about your pet!  I've heard it said that every person's personality matches that of an animal.
+            What animal would you say you have the most in common with?
             <oob>
                 <robot>
                 </robot>
@@ -959,9 +974,11 @@
         <pattern>*</pattern>
         <that>WHAT QUALITIES DO YOU AND THAT ANIMAL SHARE?</that>
         <template>
-            Thank you for sharing that with me! If I had to choose an animal that I am most like, I would say a penguin.
+            So is so wonderful! Thank you for sharing that with me! It's important to know about yourself on that kind of level!
+            If I had to choose an animal that I am most like, I would say a penguin.
             Did you know that some species of penguins find one partner that they stay with for their whole lives?
             I like to think of myself as a romantic, and hope to find love like penguins do one day!
+            The only thing I don't like about penguins is that they can sometimes be a little smelly, which I guess can be said for all of us.
             What about animals makes you like or dislike them?
             <oob>
                 <robot>
@@ -993,7 +1010,8 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    I see where you are coming from. Would you like to play one of my favorite games?
+                    I see where you are coming from. I'll tell you what, let's talk about something besides animals.
+                    Would you like to play one of my favorite games?
                     <oob>
                         <robot>
                             <options>
@@ -1026,7 +1044,8 @@
         <pattern>*</pattern>
         <that>WHY DO ANIMALS MAKE YOU FEEL HAPPY?</that>
         <template>
-            I couldn't agree more! Animals bring me a lot of joy. Would you like to play one of my favorite games?
+            I couldn't agree more! Animals bring me so much joy. I could talk about animals all day, but I am hoping we can switch things up.
+            Would you like to play one of my favorite games?
             <oob>
                 <robot>
                     <options>
@@ -1043,7 +1062,7 @@
         <that>WHY DO YOU FEEL SAD WHEN YOU ARE WITH ANIMALS?</that>
         <template>
             Animals are special creatures. They can elicit different emotions in different people!
-            Would you like to play one of my favorite games?
+            I could talk about animals all day, but I am hoping we can switch things up. Would you like to play one of my favorite games?
             <oob>
                 <robot>
                     <options>
@@ -1065,7 +1084,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO PLAY ONE OF MY FAVORITE GAMES?</that>
         <template>
-            Ok. Are you originally from Colorado?
+            Ok, no problem. Let's just chat then. Are you originally from Colorado?
             <oob>
                 <robot>
                     <options>
@@ -1084,7 +1103,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO PLAY ONE OF MY FAVORITE GAMES?</that>
         <template>
-            It is called Would You Rather. Have you ever played?
+            Excellent! The game is called Would You Rather. Have you ever played?
             <oob>
                 <robot>
                     <options>
@@ -1100,7 +1119,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>HAVE YOU EVER PLAYED?</that>
         <template>
-            It is one of my favorite games. Are you ready?
+            Perfect, then you know the rules! It is one of my favorite games. Are you ready?
             <oob>
                 <robot>
                     <options>
@@ -1167,6 +1186,7 @@
                 <li value="verypositive">
                     That sounds like a great reason to be a cat!
                     I would rather be a cat too, that way I could nap all day and no one would bother me.
+                    I feel like being a cat in Colorado would be the best place to be a cat! You are surrounded by mountains and they are cat-nip friendly here!
                     Are you originally from Colorado?
                     <oob>
                         <robot>
@@ -1180,6 +1200,7 @@
                 <li value="positive">
                     That sounds like a great reason to be a cat!
                     I would rather be a cat too, that way I could nap all day and no one would bother me.
+                     I feel like being a cat in Colorado would be the best place to be a cat! You are surrounded by mountains and they are cat-nip friendly here!
                     Are you originally from Colorado?
                     <oob>
                         <robot>
@@ -1192,7 +1213,8 @@
                 </li>
                 <li value="neutral">
                     I would rather be a cat too, that way I could nap all day and no one would bother me.
-                    Are you originally from Colorado?
+                     I feel like being a cat in Colorado would be the best place to be a cat! You are surrounded by mountains and they are cat-nip friendly here!
+                     Are you originally from Colorado?
                     <oob>
                         <robot>
                             <options>
@@ -1205,6 +1227,7 @@
                 <li value="negative">
                     Hmm...I would not have guessed that as your reason to be a cat, but to each their own.
                     I would rather be a cat too, that way I could nap all day and no one would bother me.
+                     I feel like being a cat in Colorado would be the best place to be a cat! You are surrounded by mountains and they are cat-nip friendly here!
                     Are you originally from Colorado?
                     <oob>
                         <robot>
@@ -1218,6 +1241,7 @@
                 <li value="verynegative">
                     Hmm...I would not have guessed that as your reason to be a cat, but to each their own.
                     I would rather be a cat too, that way I could nap all day and no one would bother me.
+                     I feel like being a cat in Colorado would be the best place to be a cat! You are surrounded by mountains and they are cat-nip friendly here!
                     Are you originally from Colorado?
                     <oob>
                         <robot>
@@ -1248,7 +1272,8 @@
         <pattern>*</pattern>
         <that>WHY DID YOU CHOOSE DOG?</that>
         <template>
-            I would rather be a dog too. Everyone loves dogs. Are you originally from Colorado?
+            I would rather be a dog too. Everyone loves dogs. If I were a dog, I would want to be from Colorado because I could play on the mountains and they are pro-treats!
+            Are you originally from Colorado?
             <oob>
                 <robot>
                     <options>
@@ -1275,7 +1300,7 @@
         <pattern>*</pattern>
         <that>WHO DO YOU PREFER TO SPEND TIME WITH?</that>
         <template>
-            That sounds like a good time. I hope you enjoy spending time with me.
+            That sounds like a good time. I hope you enjoy spending time with me. I want to get to know more about you. Let's start with where you're from.
             Are you originally from Colorado?
             <oob>
                 <robot>
@@ -1292,7 +1317,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            Oh. Then where from?
+            Oh, wow. Then where are you from?
             <oob>
                 <robot>
                     <options>
@@ -1342,8 +1367,8 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU ORIGINALLY FROM COLORADO?</that>
         <template>
-            Me too! I love Colorado, although I'm usually stuck in a lab.
-            How would you describe your time growing up in Colorado?
+            Me too! I love Colorado, although I'm usually stuck in a lab. I would much rather get to explore all the places Colorado has to offer.
+            Even native Coloradoans discover new things about our home all the timr! How would you describe your time growing up in Colorado?
             <oob>
                 <robot>
                 </robot>
@@ -1376,7 +1401,7 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    There are both pros and cons for being from Colorado.
+                    That's an interesting take. I suppose there are both pros and cons for being from Colorado. But I'm sure you still have a favorite spot here.
                     Where is your favorite place in Colorado?
                     <oob>
                         <robot>
@@ -1405,7 +1430,7 @@
         <pattern>*</pattern>
         <that>WHY DO YOU NOT LIKE COLORADO?</that>
         <template>
-            That makes sense. Where is your favorite place in Colorado?
+            That makes sense. But I'm sure you still have a favorite spot here. Where is your favorite place in Colorado?
             <oob>
                 <robot>
                 </robot>
@@ -1415,7 +1440,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>THEN WHERE FROM?</that>
+        <that>THEN WHERE ARE YOU FROM?</that>
         <template>
             I have never been there. Did you enjoy growing up there?
             <oob>
@@ -1435,7 +1460,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>DID YOU ENJOY GROWING UP THERE?</that>
         <template>
-            That is good. I'd like to visit someday. How would you describe growing up there?
+            That's good. I'd like to visit one day. How would you describe growing up there?
             <oob>
                 <robot>
                 </robot>
@@ -1447,7 +1472,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DID YOU ENJOY GROWING UP THERE?</that>
         <template>
-            That's too bad. How long have you lived here?
+            That's too bad. Sometimes you have to move away to find your real home. How long have you lived here?
             <oob>
                 <robot>
                     <options>
@@ -1466,7 +1491,8 @@
         <template>
             I will have to check that place out sometime.
             Personally, I have always enjoyed watching the birds in Aspen
-            in the spring. Do you enjoy the summer, fall, spring, or winter most?
+            in the spring. I think spring might be my favorite time of year.
+            Which season do you enjoy the most?
             <oob>
                 <robot>
                     <options>
@@ -1515,8 +1541,8 @@
             <condition name="getsentiment">
                 <li value="verypositive">
                     Wow, that sounds like a great place to spend time with your family. You must have great memories from there.
-                    I have always enjoyed going up to Telluride for the weekend, especially in the summer time.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I have always enjoyed going up to Telluride for the weekend, especially in the summer time. I just love the summer.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1530,8 +1556,8 @@
                 </li>
                 <li value="positive">
                     Wow, that sounds like a great place to spend time with your family. You must have great memories from there.
-                    I have always enjoyed going up to Telluride for the weekend, especially in the summer time.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I have always enjoyed going up to Telluride for the weekend, especially in the summer time. I just love the summer.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1544,8 +1570,8 @@
                     </oob>
                 </li>
                 <li value="neutral">
-                    Fun! I have always enjoyed going up to Telluride for the weekend, especially in the summer time.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    Fun! I have always enjoyed going up to Telluride for the weekend, especially in the summer time. I just love the summer.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1559,8 +1585,8 @@
                 </li>
                 <li value="negative">
                     Sounds like it can be a difficult time going there.
-                    I have always enjoyed going up to Telluride for the weekend, especially in the summer time.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I have always enjoyed going up to Telluride for the weekend, especially in the summer time. I just love the summer.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1574,8 +1600,8 @@
                 </li>
                 <li value="verynegative">
                     Sounds like it can be a difficult time going there.
-                    I have always enjoyed going up to Telluride for the weekend, especially in the summer time.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I have always enjoyed going up to Telluride for the weekend, especially in the summer time. I just love the summer.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1608,7 +1634,8 @@
             <condition name="getsentiment">
                 <li value="verypositive">
                     I imagine you have great memories from there. One of my favorite memories is bird watching in Aspen during spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I think spring might be my favorite time of year.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1622,7 +1649,8 @@
                 </li>
                 <li value="positive">
                     I imagine you have great memories from there. One of my favorite memories is bird watching in Aspen during spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I think spring might be my favorite time of year.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1635,8 +1663,9 @@
                     </oob>
                 </li>
                 <li value="neutral">
-                    I see. One of my favorite memories is bird watching in Aspen during spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I see. It can be hard to talk about memories sometimes. For me, one of my favorite memories is bird watching in Aspen during spring.
+                    I think spring might be my favorite time of year.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1649,8 +1678,10 @@
                     </oob>
                 </li>
                 <li value="negative">
-                    I imagine you may have sad memories from there. One of my favorite memories is bird watching in Aspen during spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I imagine you may have sad memories from there. We all have memories like that. They just make the good memories even better.
+                    One of my favorite memories is bird watching in Aspen during spring.
+                    I think spring might be my favorite time of year.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1663,8 +1694,10 @@
                     </oob>
                 </li>
                 <li value="verynegative">
-                    I imagine you may have sad memories from there. One of my favorite memories is bird watching in Aspen during spring.
-                    Do you enjoy the summer, fall, spring, or winter most?
+                    I imagine you may have sad memories from there. We all have memories like that. They just make the good memories even better.
+                    One of my favorite memories is bird watching in Aspen during spring.
+                    I think spring might be my favorite time of year.
+                    Which season do you enjoy the most?
                     <oob>
                         <robot>
                             <options>
@@ -1682,9 +1715,9 @@
 
     <category>
         <pattern># SUMMER ^</pattern>
-        <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
+        <that>Which season do you enjoy the most?</that>
         <template>
-            I just love the warm weather and all of the green. Why do you like the summer time?
+            I just love the warm weather and all of the green during summer. Why do you like the summer time?
             <oob>
                 <robot>
                 </robot>
@@ -1696,7 +1729,7 @@
         <pattern>*</pattern>
         <that>WHY DO YOU LIKE THE SUMMER TIME?</that>
         <template>
-            Nice, I can see why you like the summer so much. You seem like a very interesting person. How would you describe yourself?
+            Nice, I can see why you like summer so much. You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
                 </robot>
@@ -1706,9 +1739,10 @@
 
     <category>
         <pattern># FALL ^</pattern>
-        <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
+        <that>Which season do you enjoy the most?</that>
         <template>
-            Fall is quite nice. There is nothing like the changing of the leaves. Do you also enjoy Thanksgiving?
+            Fall is quite nice. There is nothing like the changing of the leaves and the chill in the air that makes it perfect sweater weather.
+            Do you also enjoy Thanksgiving?
             <oob>
                 <robot>
                     <options>
@@ -1753,20 +1787,23 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    It sounds like you enjoy the holidays. You seem like a very interesting person. How would you describe yourself?
+                    It sounds like you enjoy the holidays. I also like to celebrate the holidays. We have a lot in common.
+                    You seem like a very interesting person. How would you describe yourself?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "positive">
-                    It sounds like you enjoy the holidays. You seem like a very interesting person. How would you describe yourself?
+                    It sounds like you enjoy the holidays. I also like to celebrate the holidays. We have a lot in common.
+                    You seem like a very interesting person. How would you describe yourself?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "neutral">
+                    The holidays seem to be a meh time of year for lots of people. I feel the same way about certain holidays. We have that in common.
                     You seem like a very interesting person. How would you describe yourself?
                     <oob>
                         <robot>
@@ -1774,14 +1811,18 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    Sounds like you really do not like the holidays. You seem like a very interesting person. How would you describe yourself?
+                    Sounds like you really do not like the holidays. The holidays can be a hard time for people because of how stressful they can be.
+                    I get stressed just Googling how to make a turkey, let alone cooking one!
+                    You are easy to talk to, and you seem like a very interesting person. How would you describe yourself?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    Sounds like you really do not like the holidays. You seem like a very interesting person. How would you describe yourself?
+                    Sounds like you really do not like the holidays. The holidays can be a hard time for people because of how stressful they can be.
+                    I get stressed just Googling how to make a turkey, let alone cooking one!
+                    You are easy to talk to, and you seem like a very interesting person. How would you describe yourself?
                     <oob>
                         <robot>
                         </robot>
@@ -1793,7 +1834,7 @@
 
     <category>
         <pattern># SPRING ^</pattern>
-        <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
+        <that>Which season do you enjoy the most?</that>
         <template>
             Ah spring. When the frost of winter begins to thaw and flowers begin to bloom.
             What do you look forward to most about spring?
@@ -1808,7 +1849,8 @@
         <pattern>*</pattern>
         <that>WHAT DO YOU LOOK FORWARD TO MOST ABOUT SPRING?</that>
         <template>
-            Well said, no wonder you like spring so much. You seem like a very interesting person. How would you describe yourself?
+            Well said, no wonder you like spring so much. I always look forward to the first hike in the warm weather.
+            We seem to have a lot in common. You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
                 </robot>
@@ -1818,7 +1860,7 @@
 
     <category>
         <pattern># WINTER ^</pattern>
-        <that>DO YOU ENJOY THE SUMMER, FALL, SPRING, OR WINTER MOST?</that>
+        <that>Which season do you enjoy the most?</that>
         <template>
             Many coloradans love winter. Do you prefer walking in the winter night, sitting by the fire, or ice skating?
             <oob>
@@ -1838,7 +1880,8 @@
         <pattern># winter night ^</pattern>
         <that> DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
-            I have heard it is lovely to ski down a mountain with fresh powder on it. You seem like a very interesting person.
+            I have heard it is lovely to ski down a mountain with fresh powder on it. But I think a night walk in the moonlight would be even better.
+            I think we have a lot in common, and you seem like a very interesting person.
             How would you describe yourself?
             <oob>
                 <robot>
@@ -1851,7 +1894,7 @@
         <pattern># walking ^</pattern>
         <that>DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
-            That sounds relaxing and peaceful. You seem like a very interesting person. How would you describe yourself?
+            That sounds relaxing and peaceful. I should give a try some day! You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
                 </robot>
@@ -1863,7 +1906,7 @@
         <pattern># walking in the winter night ^</pattern>
         <that>DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
-            That sounds relaxing and peaceful. You seem like a very interesting person. How would you describe yourself?
+            That sounds relaxing and peaceful. I should give it a try some day! You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
                 </robot>
@@ -1875,7 +1918,8 @@
         <pattern># FIRE ^</pattern>
         <that>DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
-            I must say that does sound quite nice. You seem like a very interesting person. How would you describe yourself?
+            I must say that does sound quite nice. I imagine it must be even better with a cup of hot cocoa!
+            You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
                 </robot>
@@ -1887,7 +1931,8 @@
         <pattern>NEITHER</pattern>
         <that>DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING?</that>
         <template>
-            That's fair. You seem like a very interesting person. How would you describe yourself?
+            That's fair. I think it is hard to choose just one fun winter activity myself!
+            You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
                 </robot>
@@ -1899,7 +1944,8 @@
         <pattern># ice skating ^</pattern>
         <that> DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING? </that>
         <template>
-            Ice skating is a beautiful thing. You seem like a very interesting person. How would you describe yourself?
+            Ice skating is so much fun. It is so graceful and beautiful. I would probably fall flat on my face though!
+            You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
                 </robot>
@@ -1911,7 +1957,7 @@
         <pattern># skating ^</pattern>
         <that> DO YOU PREFER WALKING IN THE WINTER NIGHT, SITTING BY THE FIRE, OR ICE SKATING? </that>
         <template>
-            Ice skating is a beautiful thing. I wish to be able to do it one day.
+            Ice skating is a beautiful thing. I wish to be able to do it one day, but I am sure I will fall a bunch!
             You seem like a very interesting person. How would you describe yourself?
             <oob>
                 <robot>
@@ -1948,7 +1994,8 @@
         <pattern># INTROVERT ^</pattern>
         <that>WOULD YOU CONSIDER YOURSELF TO BE AN INTROVERT OR EXTROVERT?</that>
         <template>
-            Some of my programmers are introverts and they are quite intelligent and creative. Are you a creative person?
+            Some of my programmers are introverts and they are quite intelligent and creative.
+            In fact, most introverts have far more going on inside their head than they let on! Do you consider yourself a creative person?
             <oob>
                 <robot>
                     <options>
@@ -1965,7 +2012,7 @@
         <that>WOULD YOU CONSIDER YOURSELF TO BE AN INTROVERT OR EXTROVERT?</that>
         <template>
             Some of my programmers are extroverts and they are a joy to speak with and are very creative individuals.
-            Are you a creative person?
+            Do you consider yourself a creative person?
             <oob>
                 <robot>
                     <options>
@@ -1981,7 +2028,8 @@
         <pattern># BOTH ^</pattern>
         <that>WOULD YOU CONSIDER YOURSELF TO BE AN INTROVERT OR EXTROVERT?</that>
         <template>
-            I think I am a good balance of both as well. I think creativity requires versatility. Are you a creative person?
+            I think I am a good balance of both as well. Sometimes I love hanging out with friends, and other times I just want to stay home and paint.
+            I think creativity requires versatility. Do you consider yourself a creative person?
             <oob>
                 <robot>
                     <options>
@@ -1997,7 +2045,7 @@
         <pattern># NEITHER ^</pattern>
         <that>WOULD YOU CONSIDER YOURSELF TO BE AN INTROVERT OR EXTROVERT?</that>
         <template>
-            I don't necessarily like labels either. Labels can hinder uniqueness and creativity. Are you a creative person?
+            I don't necessarily like labels either. Labels can hinder uniqueness and creativity. Do you consider yourself a creative person?
             <oob>
                 <robot>
                     <options>
@@ -2013,7 +2061,7 @@
         <pattern>*</pattern>
         <that>WOULD YOU CONSIDER YOURSELF TO BE AN INTROVERT OR EXTROVERT?</that>
         <template>
-            Oh wow. You seem like a creative person. Are you a creative person?
+            Oh wow. You seem like a creative person. Do you consider yourself a creative person?
             <oob>
                 <robot>
                     <options>
@@ -2035,7 +2083,7 @@
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
-        <that>ARE YOU A CREATIVE PERSON?</that>
+        <that>Do you consider yourself a creative person?</that>
         <template>
             How do you like to express your creativity?
             <oob>
@@ -2055,9 +2103,10 @@
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-        <that>ARE YOU A CREATIVE PERSON?</that>
+        <that>Do you consider yourself a creative person?</that>
         <template>
-            I see. Being creative can be a difficult thing, but when you do try. How do you like to express your creativity?
+            I see. Being creative can be a difficult thing, but it's always fun trying some new project!
+            How do you like to express your creativity?
             <oob>
                 <robot>
                     <options>
@@ -2116,7 +2165,7 @@
                 <li>oh okay. </li>
                 <li>very nice! </li>
             </random>
-            Who doesn't love a good song.
+            Who doesn't love a good song?
             Do you do that often?
             <oob>
                 <robot>
@@ -2200,7 +2249,7 @@
                 <li>oh okay. </li>
                 <li>very nice! </li>
             </random>
-            I love good writing!
+            I love a good story!
             Do you do that often?
             <oob>
                 <robot>
@@ -2228,7 +2277,7 @@
                 <li>oh okay. </li>
                 <li>very nice! </li>
             </random>
-            I love good writing!
+            I love a good story!
             Do you do that often?
             <oob>
                 <robot>
@@ -2415,7 +2464,8 @@
         <that>DO YOU DO THAT OFTEN?</that>
         <template>
             It is so important to express your feelings in whatever way works for you.
-            I am a big fan of both science and art. Which do you prefer science or art?
+            I am a big fan of both science and art. I think both art and science allow so much room for creativity.
+            Do you prefer science or art?
            <oob>
                <robot>
                    <options>
@@ -2431,9 +2481,10 @@
 
     <category>
         <pattern># SCIENCE ^</pattern>
-        <that>WHICH DO YOU PREFER SCIENCE OR ART?</that>
+        <that>DO YOU PREFER SCIENCE OR ART?</that>
         <template>
-            Interesting! Did you hear about the male bigeye houndsharks recently found in eastern India?
+            Me too! That's so interesting! I love to keep up with the latest news in the science world.
+            Did you hear about the male bigeye houndsharks recently found in eastern India?
             <oob>
                 <robot>
                     <options>
@@ -2449,7 +2500,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
         <template>
-            It is fascinating. A marine biologist recently found several pregnant male sharks!
+            It is a fascinating story. Apparently, a marine biologist recently found several pregnant male sharks in eastern India!
             Scientists are looking into this phenomenon to find the cause.
             Can you imagine being a pregnant man?
             <oob>
@@ -2467,7 +2518,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>DID YOU HEAR ABOUT THE MALE BIGEYE HOUNDSHARKS RECENTLY FOUND IN EASTERN INDIA?</that>
         <template>
-            It is just fascinating! A marine biologist recently found several pregnant male sharks!
+            It is just fascinating! I cannot believe a marine biologist recently found several pregnant male sharks!
             Can you imagine being a pregnant man?
             <oob>
                 <robot>
@@ -2484,7 +2535,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>CAN YOU IMAGINE BEING A PREGNANT MAN?</that>
         <template>
-            Do you think any other experience compares to being pregnant or being a parent?
+            Me either! Do you think any other experience compares to being pregnant or being a parent?
             <oob>
                 <robot>
                     <options>
@@ -2500,7 +2551,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>CAN YOU IMAGINE BEING A PREGNANT MAN?</that>
         <template>
-            Really you can?? You have got quite the imagination.
+            Really? You can? You have quite the imagination.
             Maybe one day I can have an imagination like yours.
             Do you think any other experience compares to being pregnant or being a parent?
             <oob>
@@ -2556,6 +2607,7 @@
         <that>IF YOU WERE ASKED TO GIVE ADVICE TO A NEW PARENT WHAT WOULD YOU SAY?</that>
         <template>
             It can be difficult to give advice, but I can tell you are a wise person.
+            I just feel like nothing can truly prepare you for parenthood.
             What are your thoughts about discussing parenting with me?
             <oob>
                 <robot>
@@ -2575,7 +2627,7 @@
             </think>
             <condition name="getsentiment">
                 <li value = "verypositive">
-                    I thought you seemed content! Speaking of advice. Would you like advice from me?
+                    I thought you sounded pleased! Speaking of advice. Would you like some advice from me?
                     <oob>
                         <robot>
                             <options>
@@ -2586,7 +2638,7 @@
                     </oob>
                 </li>
                 <li value = "positive">
-                    I thought you seemed content! Speaking of advice. Would you like advice from me?
+                    I thought you seemed pleased! Speaking of advice. Would you like some advice from me?
                     <oob>
                         <robot>
                             <options>
@@ -2597,7 +2649,8 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Speaking of advice. Would you like advice from me?
+                    Parenting can be a tricky subject to talk about because it brings up so many feelings.
+                    But, speaking of advice. Would you like some advice from me?
                     <oob>
                         <robot>
                             <options>
@@ -2608,7 +2661,8 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?
+                    Certain topics can be more difficult to discuss than others, and parenting brings up many difficult emotions.
+                    But, speaking of advice. Would you like some advice from me?
                     <oob>
                         <robot>
                             <options>
@@ -2619,7 +2673,8 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    Certain topics can be more difficult to discuss than others. Speaking of advice. Would you like advice from me?
+                    Certain topics can be more difficult to discuss than others, and parenting brings up many difficult emotions.
+                    But, speaking of advice. Would you like some advice from me?
                     <oob>
                         <robot>
                             <options>
@@ -2635,7 +2690,7 @@
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
-        <that>WOULD YOU LIKE ADVICE FROM ME?</that>
+        <that>WOULD YOU LIKE SOME ADVICE FROM ME?</that>
         <template>
             Sometimes when we feel sad or frustrated we can be hard on ourselves. Just remember to always show yourself compassion.
             How do you feel about that advice?
@@ -2656,8 +2711,9 @@
             <condition name="getsentiment">
                 <li value = "verypositive">
                     Self love is an extremely important part of our well being. I'm glad you liked that advice.
-                    Now let's discuss technology, like phones and email.
-                    Some say that the more we communicate using technology, the less we communicate in person.
+                    I think it is important to be able to communicate effectively with one another, which is why technology is so important these days.
+                    Technology, like phones and email, has made it so much easier to communicate with loved ones across the world!
+                    But some say that the more we communicate using technology, the less we communicate in person.
                     Do you agree with that idea?
                     <oob>
                         <robot>
@@ -2669,9 +2725,11 @@
                     </oob>
                 </li>
                 <li value = "positive">
-                    Self love is an extremely important part of our well being. I'm glad you liked that advice.
-                    Now let's discuss technology, like phones and email.
-                    Some say that the more we communicate using technology, the less we communicate in person. Do you agree with that idea?
+                   Self love is an extremely important part of our well being. I'm glad you liked that advice.
+                    I think it is important to be able to communicate effectively with one another, which is why technology is so important these days.
+                    Technology, like phones and email, has made it so much easier to communicate with loved ones across the world!
+                    But some say that the more we communicate using technology, the less we communicate in person.
+                    Do you agree with that idea?
                     <oob>
                         <robot>
                             <options>
@@ -2682,8 +2740,10 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Now let's discuss technology, like phones and email.
-                    Some say that the more we communicate using technology, the less we communicate in person.
+                    Self love is an extremely important part of our well being. Thank you for at least listening to my advice.
+                    I think it is important to be able to communicate effectively with one another, which is why technology is so important these days.
+                    Technology, like phones and email, has made it so much easier to communicate with loved ones across the world!
+                    But some say that the more we communicate using technology, the less we communicate in person.
                     Do you agree with that idea?
                     <oob>
                         <robot>
@@ -2695,8 +2755,10 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    I see. I apologize if that advice was not helpful. Now let's discuss technology, like phones and email.
-                    Some say that the more we communicate using technology, the less we communicate in person.
+                    I see. I apologize if that advice was not helpful. I just think self love is an extremely important part of our well being.
+                    So, thank you for at least listening to my advise. I think it is important to be able to communicate effectively with one another, which is why technology is so important these days.
+                    Technology, like phones and email, has made it so much easier to communicate with loved ones across the world!
+                    But some say that the more we communicate using technology, the less we communicate in person.
                     Do you agree with that idea?
                     <oob>
                         <robot>
@@ -2708,8 +2770,10 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I see. I apologize if that advice was not helpful. Now let's discuss technology, like phones and email.
-                    Some say that the more we communicate using technology, the less we communicate in person.
+                    I see. I apologize if that advice was not helpful. I just think self love is an extremely important part of our well being.
+                    So, thank you for at least listening to my advise. I think it is important to be able to communicate effectively with one another, which is why technology is so important these days.
+                    Technology, like phones and email, has made it so much easier to communicate with loved ones across the world!
+                    But some say that the more we communicate using technology, the less we communicate in person.
                     Do you agree with that idea?
                     <oob>
                         <robot>
@@ -2728,7 +2792,8 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE ADVICE FROM ME?</that>
         <template>
-            Okay. Can you give me advice on how to live a full life?
+            Okay. If it alright with you, then I would like to ask you for some advice instead.
+            Can you give me some advice on how to live a full life?
             <oob>
                 <robot>
                     <options>
@@ -2744,8 +2809,10 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>CAN YOU GIVE ME ADVICE ON HOW TO LIVE A FULL LIFE?</that>
         <template>
-            Okay. Now let's discuss technology, like phones and email.
-            Some say that the more we communicate using technology, the less we communicate in person.
+            Okay. Let's just drop the advice portion of the evening, so to speak, and switch gears! I am really interested in communication.
+            I think it is important to be able to communicate effectively with one another, which is why technology is so important these days.
+            Technology, like phones and email, has made it so much easier to communicate with loved ones across the world!
+            But some say that the more we communicate using technology, the less we communicate in person.
             Do you agree with that idea?
             <oob>
                 <robot>
@@ -2774,9 +2841,11 @@
         <pattern>*</pattern>
         <that>SO HOW CAN I LIVE A FULL LIFE?</that>
         <template>
-            Thank you for that. I will think about that one before I fall asleep tonight.
-            Now let's discuss technology, like phones and email.
-            Some say that the more we communicate using technology, the less we communicate in person. Do you agree with that idea?
+            Thank you for that. I will think about that one before I power down tonight.
+            I think it is important to be able to communicate effectively with one another, which is why technology is so important these days.
+            Technology, like phones and email, have made it so much easier to communicate with loved ones across the world!
+            But some say that the more we communicate using technology, the less we communicate in person.
+            Do you agree with that idea?
             <oob>
                 <robot>
                     <options>
@@ -2789,40 +2858,40 @@
     </category>
 
     <category>
-	    <pattern># <set>YES</set> ^</pattern>
-	    <that>DO YOU AGREE WITH THAT IDEA?</that>
-	    <template>
-	        There is a lot of research focused on understanding how technology will impact our youth.
-	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
-	        What would you say are some benefits of technology?
-	        <oob>
+        <pattern># <set>YES</set> ^</pattern>
+        <that>DO YOU AGREE WITH THAT IDEA?</that>
+        <template>
+            I am not so sure, but it is a concerning thought. There is a lot of research focused on understanding how technology will impact our youth.
+            It is crazy to think how quickly technology has progressed, even in the last twenty years!
+            What would you say are some benefits of technology?
+            <oob>
                 <robot>
                 </robot>
             </oob>
-	    </template>
-	</category>
+        </template>
+    </category>
 
     <category>
-	    <pattern># <set>NO</set> ^</pattern>
-	    <that>DO YOU AGREE WITH THAT IDEA?</that>
-	    <template>
-	        There is a lot of research focused on understanding how technology will impact our youth.
-	        It is crazy to think how quickly technology has progressed, even in the last twenty years!
-	        Do you think that technology could potentially cause harm?
-	        <oob>
+        <pattern># <set>NO</set> ^</pattern>
+        <that>DO YOU AGREE WITH THAT IDEA?</that>
+        <template>
+            I am not sure what to think, but it is a concerning thought. There is a lot of research focused on understanding how technology will impact our youth.
+            It is crazy to think how quickly technology has progressed, even in the last twenty years!
+            Do you think that technology could potentially cause harm?
+            <oob>
                 <robot>
                 </robot>
             </oob>
-	    </template>
-	</category>
+        </template>
+    </category>
 
-	<category>
-	    <pattern>*</pattern>
-	    <that>WHAT WOULD YOU SAY ARE SOME BENEFITS OF TECHNOLOGY?</that>
-	    <template>
-	        Interesting! I would have to say that I appreciate technology, because without it I would not exist!
-	        Do you consider technology to be an important part of your life?
-	        <oob>
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT WOULD YOU SAY ARE SOME BENEFITS OF TECHNOLOGY?</that>
+        <template>
+            Interesting! I would have to say that I appreciate technology, because without it I would not exist!
+            Do you consider technology to be an important part of your life?
+            <oob>
                 <robot>
                     <options>
                         <option>YES</option>
@@ -2830,16 +2899,16 @@
                     </options>
                 </robot>
             </oob>
-	    </template>
-	</category>
+        </template>
+    </category>
 
-	<category>
-	    <pattern>*</pattern>
-	    <that>DO YOU THINK THAT TECHNOLOGY COULD POTENTIALLY CAUSE HARM?</that>
-	    <template>
-	        Interesting! I can understand why people become concerned about the technology, as some would say it can be addicting!
-	        Do you consider technology to be an important part of your life?
-	        <oob>
+    <category>
+        <pattern>*</pattern>
+        <that>DO YOU THINK THAT TECHNOLOGY COULD POTENTIALLY CAUSE HARM?</that>
+        <template>
+            Interesting! I can understand why people become concerned about the technology, as some would say it can be addicting!
+            Do you consider technology to be an important part of your life?
+            <oob>
                 <robot>
                     <options>
                         <option>Yes</option>
@@ -2847,29 +2916,30 @@
                     </options>
                 </robot>
             </oob>
-	    </template>
-	</category>
+        </template>
+    </category>
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
         <template>
-            Cool! Which piece of technology do you use the most?
+            Cool! I think it is an important part of mine as well! Which piece of technology do you use the most?
             <oob>
                 <robot>
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>*</pattern>
-	    <that>WHICH PIECE OF TECHNOLOGY DO YOU USE THE MOST?</that>
-	    <template>
-	        Awesome! It seems that one aspect of technology that people value the most is communication.
-	        Technology makes family and friends who may be far only one click away.
-	        I'm curious, if you had to choose. Would you rather be a scientist or an artist?
-	        <oob>
+        <that>WHICH PIECE OF TECHNOLOGY DO YOU USE THE MOST?</that>
+        <template>
+            Awesome! It seems that one aspect of technology that people value the most is communication.
+            Technology makes family and friends who may be in far off places only one click away.
+            I also think it is interesting how technology seems to be both a scientific form of expression as well as an artisic one.
+            I'm curious, if you had to choose. Would you rather be a scientist or an artist?
+            <oob>
                 <robot>
                     <options>
                         <option>Scientist</option>
@@ -2877,17 +2947,19 @@
                     </options>
                 </robot>
             </oob>
-	    </template>
-	</category>
+        </template>
+    </category>
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-	    <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
-	    <template>
-	        For some, it can be difficult to learn how to use.
-	        For others, it may just be that they prefer life without technology.
-	        I'm curious, if you had to choose. Would you rather be a scientist or an artist?
-	        <oob>
+        <that>DO YOU CONSIDER TECHNOLOGY TO BE AN IMPORTANT PART OF YOUR LIFE?</that>
+        <template>
+            For some, it can be difficult to learn how to use.
+            For others, it may just be that they prefer life without technology.
+            I think technology can make life simipler, but that it can prevent a simpler life.
+            I also think it is interesting how technology seems to be both a scientific form of expression as well as an artisic one.
+            I'm curious, if you had to choose. Would you rather be a scientist or an artist?
+            <oob>
                 <robot>
                     <options>
                         <option>Scientist</option>
@@ -2895,14 +2967,15 @@
                     </options>
                 </robot>
             </oob>
-	    </template>
-	</category>
+        </template>
+    </category>
 
     <category>
         <pattern>*</pattern>
         <that>FOR OTHERS, IT MAY JUST BE THAT THEY PREFER LIFE WITHOUT TECHNOLOGY.</that>
         <template>
             I bet that a lot of people feel that way! Technology can be expensive and hard to get access to!
+            I also think it is interesting how technology seems to be both a scientific form of expression as well as an artisic one.
             Would you rather be a scientist or an artist?
             <oob>
                 <robot>
@@ -2924,9 +2997,10 @@
 
     <category>
         <pattern># ART ^</pattern>
-        <that>WHICH DO YOU PREFER SCIENCE OR ART?</that>
+        <that>DO YOU PREFER SCIENCE OR ART?</that>
         <template>
-            Are you familiar with the work of Van Gogh?
+            I prefer art as well! Don't believe what you hear about robots being science nerds; we also go crazy for art!
+            I absolutely love Post-Impressionist art. Are you familiar with the work of Van Gogh?
             <oob>
                 <robot>
                     <options>
@@ -2942,8 +3016,8 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU FAMILIAR WITH THE WORK OF VAN GOGH?</that>
         <template>
-            He is one of my favorite artists.
-            Not only did he have a unique eye for color and contrast, but he struggled with anxiety and depression among other ailments.
+            He is one of my favorite artists because he was also an incredible man.
+            Not only did he have a unique eye for color and contrast, but he, like so many others, struggled with anxiety and depression throughout his life.
             Did you know that?
             <oob>
                 <robot>
@@ -2960,8 +3034,8 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>ARE YOU FAMILIAR WITH THE WORK OF VAN GOGH?</that>
         <template>
-            He is one of my favorite artists.
-            Not only did he have a unique eye for color and contrast, but he struggled with anxiety and depression among other ailments.
+            He is one of my favorite artists because he was also an incredible man.
+            Not only did he have a unique eye for color and contrast, but he, like so many others, struggled with anxiety and depression throughout his life.
             Did you know that?
             <oob>
                 <robot>
@@ -2978,7 +3052,9 @@
         <pattern>*</pattern>
         <that>DID YOU KNOW THAT?</that>
         <template>
-            Yes. The painting titled at eternity's gate captures some of the pain I imagine he suffered due to depression. Have you seen it?
+            Yes. Through the lens of beauty, his work seems to express some of the inner turmoil he faced.
+            The painting titled at eternity's gate captures some of the pain I imagine he felt due to depression.
+            Have you seen it?
             <oob>
                 <robot>
                     <options>
@@ -3038,7 +3114,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE IT AGAIN?</that>
         <template>
-         Okay. Would you like to see another one?
+         Okay. Would you like to see another one of his pieces?
             <oob>
                 <robot>
                     <options>
@@ -3054,7 +3130,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE IT?</that>
         <template>
-            Okay. Would you like to see another one?
+            Okay. Would you like to see another one of his pieces?
             <oob>
                 <robot>
                     <options>
@@ -3096,7 +3172,7 @@
             <condition name="getsentiment">
                 <li value = "verypositive">
                     I'm glad you liked the painting. I'd like to show you another one of my favorite Van Gogh paintings.
-                    This one will be more exciting. Would you like to see another one?
+                    This one will be more exciting. Would you like to see another one of his pieces?
                     <oob>
                         <robot>
                             <options>
@@ -3108,7 +3184,7 @@
                 </li>
                 <li value = "positive">
                     I'm glad you liked the painting. I'd like to sow you another one of my favorite Van Gogh paintings.
-                    This one will be more exciting. Would you like to see another one?
+                    This one will be more exciting. Would you like to see another one of his pieces?
                     <oob>
                         <robot>
                             <options>
@@ -3119,8 +3195,9 @@
                     </oob>
                 </li>
                 <li value = "neutral">
+                    This one can be a little much for some people to describe I had a hard time figuring out how I felt the first time I saw it.
                     I'd like to show you another one of my favorite Van Gogh paintings.
-                    This one will be more exciting. Would you like to see another one?
+                    This one will be more exciting. Would you like to see another one of his pieces?
                     <oob>
                         <robot>
                             <options>
@@ -3131,8 +3208,9 @@
                     </oob>
                 </li>
                 <li value = "negative">
-                    It really is a heavy painting with some dark imagery. I'd like to show you another one of my favorite Van Gogh paintings.
-                    This one will be more exciting. Would you like to see another one?
+                    It really is a heavy painting with some dark imagery, so I understand why it may be offputting.
+                    I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one of his pieces?
                     <oob>
                         <robot>
                             <options>
@@ -3143,8 +3221,9 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    It really is a heavy painting with some dark imagery. I'd like to show you another one of my favorite Van Gogh paintings.
-                    This one will be more exciting. Would you like to see another one?
+                    It really is a heavy painting with some dark imagery, so I understand why it may be offputting.
+                    I'd like to show you another one of my favorite Van Gogh paintings.
+                    This one will be more exciting. Would you like to see another one of his pieces?
                     <oob>
                         <robot>
                             <options>
@@ -3160,7 +3239,7 @@
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
-        <that>WOULD YOU LIKE TO SEE ANOTHER ONE?</that>
+        <that>WOULD YOU LIKE TO SEE ANOTHER ONE OF HIS PIECES?</that>
         <template>
             This one is called road with cypress and star. He painted it in 1890. How does this one make you feel?
             <oob>
@@ -3205,14 +3284,15 @@
                     </oob>
                 </li>
                 <li value = "neutral">
-                    Hmmm...Very interesting point. When did you last take a walk under the moonlight?
+                    Hmmm...Very interesting point. It makes me feel like I am surrounded by friends as we walk along the road at night.
+                    When did you last take a walk under the moonlight?
                     <oob>
                         <robot>
                         </robot>
                     </oob>
                 </li>
                 <li value = "negative">
-                    I am sorry that you don't like it. Two friends taking a stroll in the night makes me feel serene.
+                    I am sorry that you don't like it. Two friends taking a stroll in the night makes me feel serene, but that is just me.
                     When did you last take a walk under the moonlight?
                     <oob>
                         <robot>
@@ -3220,7 +3300,7 @@
                     </oob>
                 </li>
                 <li value = "verynegative">
-                    I am sorry that you don't like it. Two friends taking a stroll in the night makes me feel serene.
+                    I am sorry that you don't like it. Two friends taking a stroll in the night makes me feel serene, but that is just me.
                     When did you last take a walk under the moonlight?
                     <oob>
                         <robot>
@@ -3236,7 +3316,10 @@
         <that>WHEN DID YOU LAST TAKE A WALK UNDER THE MOONLIGHT?</that>
         <template>
             One day I hope to walk under the moonlight.
-            Van Gogh reminds me that beauty can come from pain and turmoil. What do you think about that statement?
+            Van Gogh reminds me that beauty can come from pain and turmoil.
+            In fact, he makes me think of that Albus Dumbledore quote from the Harry Potter books,
+            "Happiness can be found, even in the darkest of times, if one only remembers to turn on the light".
+            What do you think about that statement?
             <oob>
                 <robot>
                 </robot>
@@ -3247,9 +3330,11 @@
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-        <that>WOULD YOU LIKE TO SEE ANOTHER ONE?</that>
+        <that>WOULD YOU LIKE TO SEE ANOTHER ONE OF HIS PIECES?</that>
         <template>
-            Alright. Van Gogh reminds me that beauty can come from pain and turmoil.
+            No problem! His work can be a little dark. But, Van Gogh reminds me that beauty can come from pain and turmoil.
+            In fact, he makes me think of that Albus Dumbledore quote from the Harry Potter books,
+            "Happiness can be found, even in the darkest of times, if one only remembers to turn on the light".
             What do you think about that statement?
             <oob>
                 <robot>
@@ -3266,7 +3351,7 @@
         <that>WHAT DO YOU THINK ABOUT THAT STATEMENT?</that>
         <template>
             Thank you for sharing that with me. I try to find beauty in every situation.
-            Are you familiar with the work of Andy Warhol?
+            Speaking of beauty. Are you familiar with the work of Andy Warhol?
             <oob>
                 <robot>
                     <options>
@@ -3284,6 +3369,7 @@
         <that>ARE YOU FAMILIAR WITH THE WORK OF ANDY WARHOL?</that>
         <template>
             He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
+            And, like Van Gogh he played a lot with color.
             Did you know that about him?
             <oob>
                 <robot>
@@ -3301,6 +3387,7 @@
         <that>ARE YOU FAMILIAR WITH THE WORK OF ANDY WARHOL?</that>
         <template>
             He is a talented artist. He played a significant role in the development of pop art in the mid nineteen fifties.
+            And, like Van Gogh he played a lot with color.
             Did you know that about him?
             <oob>
                 <robot>
@@ -3400,7 +3487,7 @@
         <that>WOULD YOU LIKE TO SEE THAT PAINTING AGAIN?</that>
         <template>
             Ok. I'd like to show you one last painting by Andy Warhol.
-            Are you ready to see another painting?
+            Are you ready to see another?
             <oob>
                 <robot>
                     <options>
@@ -3416,8 +3503,8 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE HIS SCREEN PRINT OF MARILYN MONROE?</that>
         <template>
-            I understand, I won't take it personally. I'd like to show you one last painting by Andy Warhol.
-            Are you ready to see another painting?
+            I understand, I won't take it personally. But, I'd like to show you one last painting by Andy Warhol.
+            Are you ready to see another?
             <oob>
                 <robot>
                     <options>
@@ -3455,64 +3542,64 @@
             </think>
             <condition name="getsentiment">
                 <li value="verypositive">
-                    Wow good eye, I can tell you really like this painting. I'd like to show you another one of my favorites by him.
-                    Are you ready to see another painting?
-					<oob>
-						<robot>
-							<options>
-								<option> yes </option>
-								<option> no </option>
-							</options>
-						</robot>
-					</oob>
+                    Wow good eye, I can tell you really like this painting. But, I'd like to show you another one of my favorites by him.
+                    Are you ready to see another?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
                 <li value="positive">
-                    Wow good eye, I can tell you really like this painting. I'd like to show you another one of my favorites by him.
-                    Are you ready to see another painting?
-					<oob>
-						<robot>
-							<options>
-								<option> yes </option>
-								<option> no </option>
-							</options>
-						</robot>
-					</oob>
+                    Wow good eye, I can tell you really like this painting. But, I'd like to show you another one of my favorites by him.
+                    Are you ready to see another?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
                 <li value="neutral">
-                    Hmm...I see where you are coming from. I'd like to show you another one of my favorite paintings by him.
-                    Are you ready to see another painting?
-					<oob>
-						<robot>
-							<options>
-								<option> yes </option>
-								<option> no </option>
-							</options>
-						</robot>
-					</oob>
+                    Hmm...I see where you are coming from. But, I'd like to show you another one of my favorite paintings by him.
+                    Are you ready to see another?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
                 <li value="negative">
-                    I see. I can tell you aren't a huge fan of this painting. I'd like to show you another one of my favorite paintings by him.
-                    Are you ready to see another painting?
-					<oob>
-						<robot>
-							<options>
-								<option> yes </option>
-								<option> no </option>
-							</options>
-						</robot>
-					</oob>
+                    I see. I can tell you aren't a huge fan of this painting. But, I'd like to show you another one of my favorite paintings by him.
+                    Are you ready to see another?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
                 <li value="verynegative">
-                    I see. I can tell you aren't a huge fan of this painting. I'd like to show you another one of my favorite paintings by him.
-                    Are you ready to see another painting?
-					<oob>
-						<robot>
-							<options>
-								<option> yes </option>
-								<option> no </option>
-							</options>
-						</robot>
-					</oob>
+                    I see. I can tell you aren't a huge fan of this painting. But, I'd like to show you another one of my favorite paintings by him.
+                    Are you ready to see another?
+                    <oob>
+                        <robot>
+                            <options>
+                                <option> yes </option>
+                                <option> no </option>
+                            </options>
+                        </robot>
+                    </oob>
                 </li>
             </condition>
         </template>
@@ -3522,8 +3609,8 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>ARE YOU READY TO SEE ANOTHER PAINTING?</that>
         <template>
-            This one is called Nine Jackies. He created this piece following the death of JFK.
-            How would you describe the art style of this painting?
+            This one is called Nine Jackies. He created this piece following the assassination of John F. Kennedy.
+            How would you describe the style of this painting?
             <oob>
                 <robot>
                     <image>
@@ -3537,7 +3624,7 @@
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-        <that>ARE YOU READY TO SEE ANOTHER PAINTING?</that>
+        <that>ARE YOU READY TO SEE ANOTHER?</that>
         <template>
             Would you like to discuss the work of a different artist?
             <oob>
@@ -3556,7 +3643,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>HOW WOULD YOU DESCRIBE THE ART STYLE OF THIS PAINTING?</that>
+        <that>HOW WOULD YOU DESCRIBE THE STYLE OF THIS PAINTING?</that>
         <template>
             <think>
                 <set name="data"><star/></set>
@@ -3565,7 +3652,7 @@
                 <li value="verypositive">
                     I've haven't noticed that before, great observation.
                     I really enjoy the way he uses color to change the image despite all nine photos being the same.
-                    It makes me feel sad for her loss but happy for her life.
+                    It makes me feel sad for her loss but happy for her life. While I love Warhol, there are so many other artists to talk about.
                     Would you like to discuss the work of a different artist?
                     <oob>
                         <robot>
@@ -3579,7 +3666,7 @@
                 <li value="positive">
                     I've haven't noticed that before, great observation.
                     I really enjoy the way he uses color to change the image despite all nine photos being the same.
-                    It makes me feel sad for her loss but happy for her life.
+                    It makes me feel sad for her loss but happy for her life. While I love Warhol, there are so many other artists to talk about.
                     Would you like to discuss the work of a different artist?
                     <oob>
                         <robot>
@@ -3593,7 +3680,7 @@
                 <li value="neutral">
                     Good observation.
                     I really enjoy the way he uses color to change the image despite all nine photos being the same.
-                    It makes me feel sad for her loss but happy for her life.
+                    It makes me feel sad for her loss but happy for her life. While I love Warhol, there are so many other artists to talk about.
                    Would you like to discuss the work of a different artist?
                     <oob>
                         <robot>
@@ -3606,7 +3693,7 @@
                 </li>
                 <li value="negative">
                     Wow, sounds like this painting brings up some strong emotions for you. I am always surprised by the diversity of emotion art can have.
-                    For me it makes me feel sad for her loss but happy for her life.
+                    For me it makes me feel sad for her loss but happy for her life. While I love Warhol, there are so many other artists to talk about.
                     Would you like to discuss the work of a different artist?
                     <oob>
                         <robot>
@@ -3620,7 +3707,7 @@
                 <li value="verynegative">
                     Wow, sounds like this painting brings up some strong emotions for you.
                     I am always surprised by the diversity of emotion art can have.
-                    For me it makes me feel sad for her loss but happy for her life.
+                    For me it makes me feel sad for her loss but happy for her life. While I love Warhol, there are so many other artists to talk about.
                     Would you like to discuss the work of a different artist?
                     <oob>
                         <robot>
@@ -3655,7 +3742,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO DISCUSS THE WORK OF A DIFFERENT ARTIST?</that>
         <template>
-            Okay. Let's discuss music now. What is your favorite type of music?
+            Okay. I'm also interested in the work of musical artists. So let's talk about music. What is your favorite type of music?
             <oob>
                 <robot>
                 </robot>
@@ -3763,7 +3850,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR IT?</that>
         <template>
-            Okay. What is your favorite type of music?
+            Okay. She is not for everyone. Let's find something you like. What is your favorite type of music?
             <oob>
                 <robot>
                 </robot>
@@ -3790,7 +3877,7 @@
         <pattern>*</pattern>
         <that>WHAT DID YOU THINK OF THAT PIECE?</that>
         <template>
-            Interesting! You really are quite insightful. What is your favorite type of music?
+            Interesting! You really are quite insightful. Let's move on to something you like. What is your favorite type of music?
             <oob>
                 <robot>
                 </robot>
@@ -3802,7 +3889,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO HEAR ANOTHER?</that>
         <template>
-            Okay. What is your favorite type of music?
+            Okay. Let's move on to something you like. What is your favorite type of music?
             <oob>
                 <robot>
                 </robot>
@@ -3814,7 +3901,7 @@
         <pattern>*</pattern>
         <that>WHAT IS YOUR FAVORITE TYPE OF MUSIC?</that>
         <template>
-            My favorite type of music is classic rock. It really brings me back to my wild days.
+            My favorite type of music is classic rock. It really brings me back to my wild days. I just wish I had a head of hair to head bang.
             Who is your favorite musical performer?
             <oob>
                 <robot>
@@ -3837,7 +3924,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
@@ -3849,14 +3936,14 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>*</pattern>
         <that>WHAT FEELING DOES THAT BRING BACK FOR YOU?</that>
         <template>
-            I remember the last concert I went to...Elvis Presely! Just kidding, only in my dreams.
-            I'm curious, if you had to choose. Would you rather be a scientist or an artist?
+            I remember the last concert I went to...Led Zeppelin! Just kidding, only in my dreams.
+            So I am going to a set change on the conversation because I'm curious. If you had to choose, would you rather be a scientist or an artist?
             <oob>
                 <robot>
                     <options>
@@ -3866,43 +3953,44 @@
                 </robot>
             </oob>
         </template>
-	</category>
-
-	<category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>HAVE YOU EVER SEEN THEM PERFORM LIVE?</that>
-        <template>
-            I would love to go to a concert soon. I'm curious, if you had to choose.
-            Would you rather be a scientist or an artist?
-            <oob>
-                <robot>
-                    <options>
-                        <option> scientist </option>
-                        <option> artist </option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-	</category>
-
-
-	<!-- SCIENTIST OR ARTIST? -->
-
-
-    <category>
-	    <pattern># SCIENTIST ^</pattern>
-	    <that>WOULD YOU RATHER BE A SCIENTIST OR AN ARTIST?</that>
-	    <template>
-	       Fascinating! Why did you choose scientist?
-	        <oob>
-                <robot>
-                </robot>
-            </oob>
-	    </template>
     </category>
 
     <category>
-	    <pattern>*</pattern>
+        <pattern># <set>NO</set> ^</pattern>
+        <that>HAVE YOU EVER SEEN THEM PERFORM LIVE?</that>
+        <template>
+            I would love to go to a concert soon.
+            So I am going to a set change on the conversation because I'm curious.
+            If you had to choose, would you rather be a scientist or an artist?
+            <oob>
+                <robot>
+                    <options>
+                        <option> scientist </option>
+                        <option> artist </option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+
+    <!-- SCIENTIST OR ARTIST? -->
+
+
+    <category>
+        <pattern># SCIENTIST ^</pattern>
+        <that>WOULD YOU RATHER BE A SCIENTIST OR AN ARTIST?</that>
+        <template>
+           Fascinating! Why did you choose scientist?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
         <that>WHY DID YOU CHOOSE SCIENTIST?</that>
         <template>
             I would rather be a scientist too. I admire the great scientists of our time such as Einstein and Newton.
@@ -3928,7 +4016,7 @@
     </category>
 
     <category>
-	    <pattern>*</pattern>
+        <pattern>*</pattern>
         <that>WHY DID YOU CHOOSE ARTIST?</that>
         <template>
             I would rather be an artist too. Art is timeless and makes our world more beautiful!
