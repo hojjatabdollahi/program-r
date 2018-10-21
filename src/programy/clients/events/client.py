@@ -85,7 +85,10 @@ class EventBotClient(BotClient):
 
         if len(client_context.bot.sentiment.values) > 0:
             try:
-                sentiment = client_context.bot.sentiment.final_sentiment_values[-1]
+                if client_context.bot.configuration.emotive:
+                    sentiment = client_context.bot.sentiment.final_sentiment_values[-1]
+                else:
+                    sentiment = -2.0
             except Exception as exep:
                 sentiment = None
         else:
