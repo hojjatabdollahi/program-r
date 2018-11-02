@@ -61,6 +61,11 @@ log files. In linux the folder is /tmp and is already created so you don't need 
 
 
 
+## Docker
+With this, container can use the host network, so mongodb can run on host system.
+```
+docker run -i -t --net=host programr_programr
+```
 ## Introduction
 
 Program Y is an AIML interpreter written in Python. It includes an entire Python 3 framework for building you own chat bots using

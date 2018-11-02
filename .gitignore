@@ -14,6 +14,7 @@ bots/ryan/session_data/*
 # Distribution / packaging
 .Python
 env/
+data/
 build/
 develop-eggs/
 dist/
