@@ -12,7 +12,7 @@ class GetSentiment(DynamicVariable):
         bot = client_context.bot
         nlp = client_context.brain.nlp
         text = variables["data"]
-        print(text)
+        #todo the problem with some forms of text like
 
         #if bot.configuration.emotive:
         #YLogger.info(self, "bot is in emotive mode")

@@ -3,17 +3,11 @@ import yaml
 
 from programy.clients.events.console.config import ConsoleConfiguration
 from programy.clients.events.tcpsocket.config import SocketConfiguration
-from programy.clients.polling.slack.config import SlackConfiguration
 from programy.clients.polling.telegram.config import TelegramConfiguration
 from programy.clients.polling.twitter.config import TwitterConfiguration
 from programy.clients.polling.xmpp.config import XmppConfiguration
 from programy.clients.restful.config import RestConfiguration
 from programy.clients.restful.flask.facebook.config import FacebookConfiguration
-from programy.clients.restful.flask.kik.config import KikConfiguration
-from programy.clients.restful.flask.line.config import LineConfiguration
-from programy.clients.restful.flask.twilio.config import TwilioConfiguration
-from programy.clients.restful.flask.viber.config import ViberConfiguration
-from programy.clients.restful.sanic.config import SanicRestConfiguration
 
 
 class ConfigurationWriter(object):
