@@ -10,13 +10,15 @@ console:
 
 majordomo:
   bot: bot
-  ip: "tcp://localhost"
+  ip: "tcp://10.0.75.1"
+  #ip: "tcp://127.0.0.1"
   port: 5456
   service_name: "programr"
   verbose: false
 
 socket:
   host: 127.0.0.1
+  #host: 0.0.0.0
   port: 9999
   queue: 5
   max_buffer: 1024
@@ -34,7 +36,7 @@ bot:
     empty_string: YEMPTY
     exit_response: So long, and thanks for the fish!
     override_properties: true
-    emotive: true
+    emotive: false
 
     max_question_recursion: 1000
     max_question_timeout: 60
@@ -51,12 +53,12 @@ bot:
       max_histories: 100
       initial_topic: "*"
       restore_last_topic: false
-      type: mongodb
+      type: nn
       config_name: database_config
       empty_on_start: false
 
     session:
-      session_saving_mode: true
+      session_saving_mode: false
       session_saving_dir: $BOT_ROOT/session_data
 
     file_config:

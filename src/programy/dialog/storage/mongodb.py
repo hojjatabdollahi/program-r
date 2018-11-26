@@ -9,8 +9,8 @@ class ConversationMongodbStorage(ConversationStorage):
 
     def __init__(self, config: BotConversationsMongodbStorageConfiguration):
         ConversationStorage.__init__(self, config)
-        #client = MongoClient("172.17.0.1", 27017)
-        client = MongoClient()
+        client = MongoClient("10.0.75.2", 27017)
+        #client = MongoClient()
         self._config = config
         if not config.name in client.list_database_names():
             YLogger.info(self, "Database doesn't exist make a new one!")
