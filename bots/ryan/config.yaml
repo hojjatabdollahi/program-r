@@ -56,7 +56,7 @@ bot:
       empty_on_start: false
 
     session:
-      session_saving_mode: true
+      session_saving_mode: false
       session_saving_dir: $BOT_ROOT/session_data
 
     file_config:

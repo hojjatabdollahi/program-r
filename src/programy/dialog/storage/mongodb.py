@@ -83,6 +83,8 @@ class ConversationMongodbStorage(ConversationStorage):
 
         question_sentence_text, answer_sentence_text = self.create_conversation(last_question, last_answer)
 
+        print("last sentiment: ", last_sentiment_value)
+        print("final_sentiment_value: ", last_final_sentiment_value)
 
         document = {"conversation": {
             "question": question_sentence_text,

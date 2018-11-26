@@ -12,7 +12,7 @@ class GetSentiment(DynamicVariable):
         bot = client_context.bot
         nlp = client_context.brain.nlp
         text = variables["data"]
-
+        print(text)
 
         #if bot.configuration.emotive:
         #YLogger.info(self, "bot is in emotive mode")
@@ -27,7 +27,7 @@ class GetSentiment(DynamicVariable):
 
         if bot.facial_expression_recognition is not None:
             if len(bot.facial_expression_recognition.values):
-                last_fer_value = bot.facial_expression_recognition.last_fer_value
+                last_fer_value = 0#bot.facial_expression_recognition.last_fer_value
 
                 #the logic of mixing fer and sentiment goes here
                 alpha = nlp.sentiment_analysis.alpha
