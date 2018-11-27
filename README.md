@@ -74,7 +74,54 @@ log files. In linux the folder is /tmp and is already created so you don't need 
 
 
 ## Docker
-With this, container can use the host network, so mongodb can run on host system.
+
+### Setting up Docker
+First you need to create a network bridge between the docker container and the host. We are using 192.168.x.x subnet.
 ```
-docker run -i -t --net=host programr_programr
+docker network create -d bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 dockernet
 ```
+
+Then you need to create the docker image:
+```
+docker-compose build
+```
+
+It would be better if you create the image with a proper name:
+```
+docker build -t programr .
+```
+This will take some time. You can make sure that the image is created and has the name that you want by running `docker images`.
+
+To run programr in this container:
+```
+docker run -it --rm --net=dockernet programr ./run.sh
+```
+
+### Making changes
+If you want to change something in the image you can run:
+```
+docker run -it --net=dockernet programr /bin/bash
+```
+This will drop you into a terminal inside the container. You can now use `nano` to make your changes. After you are done you can run:
+```
+docker ps -l
+```
+and see the last change and its hash code, you can then commit the changes using:
+```
+docker commit -m "message for the commit" HASHCODE programr
+```
+note that you can also commit with a new name.
+
+If you run `docker images` you should see all the images that you have.
+
+### Running a precompiled image
+If you just need to run programr and you are not developing for it, you can just pull its image from dockerhub:
+```
+docker pull hojjat12000/programr
+```
+If you run `docker images` you will see an image named `hojjat12000/programr`. Make sure that you have create the network interface and named it `dockernet` (as instructed above).
+Then run the image like so:
+```
+docker run -it --rm --net=dockernet hojjat12000/programr ./run.sh
+```
+`--rm` will remove the new container created after you are done. Note that the image stays and you can just run the command above to run the program again.
