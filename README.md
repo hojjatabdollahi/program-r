@@ -63,6 +63,7 @@ You should see the "linking successful" message.
 
 
 ## Points on using
+
 1 - the rephrase file should contain only one sentence phrases.
 
 
@@ -71,11 +72,10 @@ You should see the "linking successful" message.
 Before running in windows you need to make sure that you have a tmp folder in the root of dive C:. This will keep track of
 log files. In linux the folder is /tmp and is already created so you don't need any configuration.
 
-
-
 ## Docker
 
 ### Setting up Docker
+
 First you need to create a network bridge between the docker container and the host. We are using 192.168.x.x subnet.
 ```
 docker network create -d bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 dockernet
@@ -98,6 +98,7 @@ docker run -it --rm --net=dockernet programr ./run.sh
 ```
 
 ### Making changes
+
 If you want to change something in the image you can run:
 ```
 docker run -it --net=dockernet programr /bin/bash
@@ -115,13 +116,14 @@ note that you can also commit with a new name.
 If you run `docker images` you should see all the images that you have.
 
 ### Running a precompiled image
-If you just need to run programr and you are not developing for it, you can just pull its image from dockerhub:
+
+If you just need to run programr and you are not going to change the code, you can just pull its latest image from dockerhub:
 ```
-docker pull hojjat12000/programr
+docker pull hojjat12000/program-r
 ```
-If you run `docker images` you will see an image named `hojjat12000/programr`. Make sure that you have create the network interface and named it `dockernet` (as instructed above).
+If you run `docker images` you will see an image named `hojjat12000/program-r`. Make sure that you have create the network interface and named it `dockernet` (as instructed above).
 Then run the image like so:
 ```
-docker run -it --rm --net=dockernet hojjat12000/programr ./run.sh
+docker run -it --rm --net=dockernet hojjat12000/program-r ./run.sh
 ```
 `--rm` will remove the new container created after you are done. Note that the image stays and you can just run the command above to run the program again.
