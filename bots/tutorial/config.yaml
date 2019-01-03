@@ -23,6 +23,11 @@ socket:
   debug: true
 
 
+rest:
+  host: 127.0.0.1
+  port: 5000
+  use_api_keys: false
+
 bot:
     brain: brain
 
@@ -30,6 +35,7 @@ bot:
     prompt: ">>>"
     initial_question: Hi, how can I help you today?
     default_response: Sorry, I don't have an answer for that!
+    rephrase_sentences_file: $BOT_ROOT/system/rephrase.txt
     empty_string: YEMPTY
     exit_response: So long, and thanks for the fish!
     override_properties: true
@@ -53,6 +59,10 @@ bot:
       type: mongodb
       config_name: database_config
       empty_on_start: false
+
+    session:
+      session_saving_mode: false
+      session_saving_dir: $BOT_ROOT/session_data
 
     #this is for file configuration
     file_config:

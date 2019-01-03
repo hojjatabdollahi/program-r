@@ -69,7 +69,11 @@ class RestBotClient(BotClient):
         response = ""
         try:
             client_context = self.create_client_context(userid)
-            response = client_context.bot.ask_question(client_context, question, responselogger=self)
+            #response = client_context.bot.ask_question(client_context, question, responselogger=self)
+            #todo add logic of the new changes here
+            print(question)
+            response = client_context.bot.ask_question_with_options(client_context, question)
+            print("response", response)
         except Exception as e:
             print(e)
         return response
