@@ -119,6 +119,26 @@ You should see the "linking successful" message.
 Before running in windows you need to make sure that you have a "tmp" folder in the root of dive C:. This will keep track of
 log files. In linux the folder is /tmp and is already there so you don't need any configuration.
 
+There are different ways to run the programy based on your needs:
+
+### Console run
+Here we run tutorial bot in console mode:
+```
+python ./src/programr/clients/events/console/client.py --config ./bots/tutorial/config.yaml --cformat yaml --logging ./bots/tutorial/logging.yaml
+```
+### Majordomo run
+
+```
+python ./src/programr/clients/events/majordomo/client.py --config ./bots/tutorial/config.yaml --cformat yaml --logging ./bots/tutorial/logging.yaml
+```
+
+### Restful POST run
+
+```
+python ./src/programr/clients/restful/flask/client.py --config ./bots/tutorial/config.yaml --cformat yaml --logging ./bots/tutorial/logging.yaml
+```
+
+
 ## Docker
 
 ### Setting up Docker
