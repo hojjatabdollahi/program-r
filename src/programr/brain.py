@@ -565,11 +565,11 @@ class Brain(object):
 
         response = template_node.template.resolve(client_context)
 
-        if "<oob>" in response:
-            response, oob = self.strip_oob(response)
-            if oob is not None:
-                oob_response = self.process_oob(client_context, oob)
-                response = response + " " + oob_response
+        # if "<oob>" in response:
+        #     response, oob = self.strip_oob(response)
+        #     if oob is not None:
+        #         oob_response = self.process_oob(client_context, oob)
+        #         response = response + " " + oob_response
 
         return response
 

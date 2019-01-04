@@ -112,7 +112,7 @@ You should see the "linking successful" message.
 ## Points on using
 
 1 - the rephrase file should contain only one sentence phrases.
-
+2 - all templates should have the <oob> tag except in the case where template has <srai> tag. In this case, the template itself is just a pointer to another template and we don't need a separate robot tag.
 
 ## Running
 

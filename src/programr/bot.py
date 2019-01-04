@@ -363,7 +363,7 @@ class Bot(object):
             #return Question.create_from_text(client_context.brain.tokenizer, pre_processed, srai=srai)
             return Question.create_from_text(client_context.brain.nlp, pre_processed, srai=srai)
         else:
-            return Question.create_from_text(client_context.brain.nlp, pre_processed, split=False, srai=srai)
+            return Question.create_from_text(client_context.brain.nlp, pre_processed, srai=srai)
 
 
     def get_answer(self, client_context, pre_processed, srai=False):
