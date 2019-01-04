@@ -1,6 +1,6 @@
 import unittest
 
-from programy.services.requestsapi import RequestsAPI
+from programr.services.requestsapi import RequestsAPI
 
 class RequestsAPITests(unittest.TestCase):
 

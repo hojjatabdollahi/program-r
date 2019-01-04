@@ -1,8 +1,8 @@
 import unittest
 import os
 
-from programy.utils.geo.geonames import GeoNamesApi
-from programy.utils.license.keys import LicenseKeys
+from programr.utils.geo.geonames import GeoNamesApi
+from programr.utils.license.keys import LicenseKeys
 
 #############################################################################
 #

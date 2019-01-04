@@ -1,9 +1,9 @@
 import unittest
 import os
 
-from programy.utils.weather.metoffice import MetOffice, DailyForecastDayDataPoint, DailyForecastNightDataPoint, ThreeHourlyForecastDataPoint, ObservationDataPoint
-from programy.utils.text.dateformat import DateFormatter
-from programy.utils.license.keys import LicenseKeys
+from programr.utils.weather.metoffice import MetOffice, DailyForecastDayDataPoint, DailyForecastNightDataPoint, ThreeHourlyForecastDataPoint, ObservationDataPoint
+from programr.utils.text.dateformat import DateFormatter
+from programr.utils.license.keys import LicenseKeys
 
 class MetOfficeWeatherExtensionIntegrationTests(unittest.TestCase):
 

@@ -18,7 +18,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 download_url = "https://github.com/keiffster/program-y/%s.tar.gz"%version
 
 setup(
-  name = 'programy',
+  name = 'programr',
   packages=find_packages(),
   package_data={'': ['*.conf', '*.aiml']},
   include_package_data=True,

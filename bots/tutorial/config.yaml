@@ -47,7 +47,7 @@ bot:
     max_search_timeout: 60
 
     spelling:
-      classname: programy.spelling.norvig.NorvigSpellingChecker
+      classname: programr.spelling.norvig.NorvigSpellingChecker
       corpus: $BOT_ROOT/spelling/corpus.txt
       check_before: false
       check_and_retry: false
@@ -100,8 +100,8 @@ brain:
     # Dynamics
     dynamic:
       variables:
-          gettime: programy.dynamic.variables.datetime.GetTime
-          getsentiment: programy.dynamic.variables.sentiment_analysis.GetSentiment
+          gettime: programr.dynamic.variables.datetime.GetTime
+          getsentiment: programr.dynamic.variables.sentiment_analysis.GetSentiment
 
     # Binary
     #because we added tensorflow it can't save binary anymore
@@ -149,60 +149,60 @@ brain:
 
     services:
         REST:
-            classname: programy.services.rest.GenericRESTService
+            classname: programr.services.rest.GenericRESTService
             method: GET
             host: 0.0.0.0
         Pannous:
-            classname: programy.services.pannous.PannousService
+            classname: programr.services.pannous.PannousService
             url: http://weannie.pannous.com/api
         Pandora:
-            classname: programy.services.pandora.PandoraService
+            classname: programr.services.pandora.PandoraService
             url: http://www.pandorabots.com/pandora/talk-xml
         Wikipedia:
-            classname: programy.services.wikipediaservice.WikipediaService
+            classname: programr.services.wikipediaservice.WikipediaService
 
         Mitsuku:
-            classname: programy.services.mitsuku.MitsukuService
+            classname: programr.services.mitsuku.MitsukuService
             username: epr_finman@yahoo.com
             password: $BOT_ROOT/password.txt
 
         Chomsky:
-            classname: programy.services.chomsky.ChomskyService
+            classname: programr.services.chomsky.ChomskyService
             url: http://demo.vhost.pandorabots.com/pandora/talk?botid=b0dafd24ee35a477
 
 
     oob:
       default:
-        classname: programy.oob.default.DefaultOutOfBandProcessor
+        classname: programr.oob.default.DefaultOutOfBandProcessor
       robot:
-        classname: programy.oob.robot.RobotOutOfBandProcessor
+        classname: programr.oob.robot.RobotOutOfBandProcessor
       alarm:
-        classname: programy.oob.alarm.AlarmOutOfBandProcessor
+        classname: programr.oob.alarm.AlarmOutOfBandProcessor
       camera:
-        classname: programy.oob.camera.CameraOutOfBandProcessor
+        classname: programr.oob.camera.CameraOutOfBandProcessor
       clear:
-        classname: programy.oob.clear.ClearOutOfBandProcessor
+        classname: programr.oob.clear.ClearOutOfBandProcessor
       dial:
-        classname: programy.oob.dial.DialOutOfBandProcessor
+        classname: programr.oob.dial.DialOutOfBandProcessor
       dialog:
-        classname: programy.oob.dialog.DialogOutOfBandProcessor
+        classname: programr.oob.dialog.DialogOutOfBandProcessor
       email:
-        classname: programy.oob.email.EmailOutOfBandProcessor
+        classname: programr.oob.email.EmailOutOfBandProcessor
       geomap:
-        classname: programy.oob.map.MapOutOfBandProcessor
+        classname: programr.oob.map.MapOutOfBandProcessor
       schedule:
-        classname: programy.oob.schedule.ScheduleOutOfBandProcessor
+        classname: programr.oob.schedule.ScheduleOutOfBandProcessor
       search:
-        classname: programy.oob.search.SearchOutOfBandProcessor
+        classname: programr.oob.search.SearchOutOfBandProcessor
       sms:
-        classname: programy.oob.sms.SMSOutOfBandProcessor
+        classname: programr.oob.sms.SMSOutOfBandProcessor
       url:
-        classname: programy.oob.url.URLOutOfBandProcessor
+        classname: programr.oob.url.URLOutOfBandProcessor
       wifi:
-        classname: programy.oob.wifi.WifiOutOfBandProcessor
+        classname: programr.oob.wifi.WifiOutOfBandProcessor
 
     nlp:
-      classname: programy.nlp.nlp.NLP
+      classname: programr.nlp.nlp.NLP
 
       sentiment_analysis:
         method: corenlp
@@ -223,7 +223,7 @@ brain:
 
 
       corenlp:
-        classname: programy.nlp.corenlp.client.Client
+        classname: programr.nlp.corenlp.client.Client
         ip: "http://localhost"
         port: 9000
         jar_dir: libs/stanford-corenlp-full-2018-02-27/*
