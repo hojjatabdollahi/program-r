@@ -54,7 +54,13 @@ pip install -U spacy
 ```
 You should see the "linking successful" message.
 
-4 - Set src:
+4- [Install mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+ - If you want to change the default port number you have to consider changing it in your bot configuration in bot>database_config>port
+ 
+5- download, extract and copy the [corenlp](https://stanfordnlp.github.io/CoreNLP/download.html) to the libs directory in root(after this you need to point to your specific version of corenlp in the config file of the bot you use in the section brain>nlp>corenlp>jar_dir)
+
+
+6 - Set src:
 - In pycharm:
     Right click on src then Mark as directory and then sources root
 

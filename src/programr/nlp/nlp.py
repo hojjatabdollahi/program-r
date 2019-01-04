@@ -33,4 +33,14 @@ class NLP(object):
         return self._sentiment_analysis
 
     def _load_libraries(self, nltk_data_dir):
-        nltk.download("popular", download_dir=nltk_data_dir, quiet=True)
+        if nltk_data_dir:
+            try:
+                nltk.download("popular", download_dir=nltk_data_dir, quiet=True)
+            except Exception as excp:
+                #install data in home directory due to problems in provided dir
+                print("wrong nltk library install in home directory")
+                nltk.download("popular")
+
+        else:
+            nltk.download("popular")
+
