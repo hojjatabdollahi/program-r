@@ -12,6 +12,7 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
     def __init__(self):
         BaseSectionConfigurationData.__init__(self, "nlp")
         self._classname = None
+        self._nltk_data_dir = None
         self._corenlp = BrainCoreNLPConfiguration()
         self._toknizer = BrainTokenizerConfiguration()
         self._sentence_segmentation = BrainSentenceSegmentationConfiguration()
@@ -21,6 +22,10 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
     @property
     def classname(self):
         return self._classname
+
+    @property
+    def nltk_data_dir(self):
+        return self._nltk_data_dir
 
     @property
     def corenlp(self):
@@ -47,6 +52,7 @@ class BrainNLPConfiguration(BaseSectionConfigurationData):
         nlp = configuration_file.get_section("nlp", configuration)
         if nlp is not None:
             self._classname = configuration_file.get_option(nlp, "classname")
+            self._nltk_data_dir = configuration_file.get_option(nlp, "nltk_data_dir")
             corenlp = self._corenlp.load_config_section(configuration_file, nlp, bot_root)
             tokenizer = self._toknizer.load_config_section(configuration_file, nlp, bot_root)
             sentence_segmentation = self._sentence_segmentation.load_config_section(configuration_file, nlp, bot_root)

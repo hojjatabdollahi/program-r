@@ -204,6 +204,8 @@ brain:
     nlp:
       classname: programr.nlp.nlp.NLP
 
+      nltk_data_dir: /home/rohola/Codes/Python/program-r/libs/nltk_data
+
       sentiment_analysis:
         method: corenlp
         alpha: 0.1
@@ -211,11 +213,11 @@ brain:
         negative_threshold: -0.2
 
       tokenizer:
-        libname: spacy
+        libname: nltk
         split_chars: .
       #embedding
       sentence_segmentation:
-        libname: spacy
+        libname: nltk
 
       #embedding
       semantic_similarity:

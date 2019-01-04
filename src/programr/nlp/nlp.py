@@ -4,6 +4,7 @@ from programr.nlp.linguistic_features.tokenizer import Tokenizer
 from programr.nlp.semantic.semantic_similarity import SemanticSimilarity
 from programr.nlp.semantic.sentiment_analysis import SentimentAnalysis
 from programr.utils.logging.ylogger import YLogger
+import nltk
 
 
 class NLP(object):
@@ -13,6 +14,7 @@ class NLP(object):
         self._sentence_segmentation = SentenceSegmentation.factory(configuraion.sentence_segmentation.libname)
         self._semantic_similarity = SemanticSimilarity.factory(configuraion.semantic_similarity.method)
         self._sentiment_analysis = SentimentAnalysis.factory(configuraion)
+        self._load_libraries(configuraion.nltk_data_dir)
 
     @property
     def tokenizer(self):
@@ -29,3 +31,6 @@ class NLP(object):
     @property
     def sentiment_analysis(self):
         return self._sentiment_analysis
+
+    def _load_libraries(self, nltk_data_dir):
+        nltk.download("popular", download_dir=nltk_data_dir, quiet=True)

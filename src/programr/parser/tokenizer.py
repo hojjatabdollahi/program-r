@@ -1,6 +1,4 @@
 import re
-import spacy
-import en_core_web_sm
 
 
 class Tokenizer(object):

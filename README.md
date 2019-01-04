@@ -32,7 +32,7 @@ set-executionpolicy RemoteSigned
 ```
 Now you can run /env/Scripts/activate
 
-5- Install spacy:
+5- Install spacy(if you are using nltk it's already installed in the previous part, no need to do this step):
 
 -  Run powershell as admin in project directory
 
@@ -78,6 +78,7 @@ pip3 install virtualenv
 ```
 virtualenv -p python3 env
 ```
+
 4- Activate virtualenv
 ```
 source env/bin/activate
@@ -88,11 +89,12 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-6- Install spacy and the model
+6- Install spacy (if you are using nltk it's already installed in the previous part, no need to do this step):
 ```
 pip install -U spacy
 python -m spacy download en
 ```
+
 You should see the "linking successful" message.
 
 7- [Install mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
@@ -111,8 +113,9 @@ You should see the "linking successful" message.
 
 ## Points on using
 
-1 - the rephrase file should contain only one sentence phrases.
-2 - all templates should have the <oob> tag except in the case where template has <srai> tag. In this case, the template itself is just a pointer to another template and we don't need a separate robot tag.
+1- the rephrase file should contain only one sentence phrases.
+
+2- all templates should have the <oob> tag except in the case where template has <srai> tag. In this case, the template itself is just a pointer to another template and we don't need a separate robot tag.
 
 ## Running
 

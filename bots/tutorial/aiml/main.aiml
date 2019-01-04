@@ -29,7 +29,7 @@
     <category>
        <pattern>who is albert einstein</pattern>
        <template>
-           Albert Einstein was a German physicist.
+           Albert Einstein was a German physicist. He worked on relativity theory.
             <oob>
                 <robot>
                 </robot>
