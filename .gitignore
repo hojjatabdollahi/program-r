@@ -32,7 +32,7 @@ var/
 results/*
 libs/stanford-corenlp-full-2018-02-27/*
 bots/ryan/password.txt
-
+bots/tutorial/session_data/*
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -123,6 +123,8 @@ bots/scratch/
 
 /bots/multibot/
 bots/multibot/
+
+
 
 # Visual Studio code
 .vscode

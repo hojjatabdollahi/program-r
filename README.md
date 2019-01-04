@@ -62,6 +62,53 @@ You should see the "linking successful" message.
         Add src path to PYTHONPATH
 
 
+### Linux
+
+1 - Clone the repository:
+```
+git clone https://github.com/roholazandie/program-r.git
+```
+
+2- Install virtualenv for linux:
+```
+sudo apt-get install python3-pip
+pip3 install virtualenv
+```
+3 - Create virtualenv named "env"(in the same directory as you cloned):
+```
+virtualenv -p python3 env
+```
+4- Activate virtualenv
+```
+source env/bin/activate
+```
+
+5- Install requirements
+```
+pip install -r requirements.txt
+```
+
+6- Install spacy and the model
+```
+pip install -U spacy
+python -m spacy download en
+```
+You should see the "linking successful" message.
+
+7- [Install mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+ - If you want to change the default port number you have to consider changing it in your bot configuration in bot>database_config>port
+ 
+8- download, extract and copy the [corenlp](https://stanfordnlp.github.io/CoreNLP/download.html) to the libs directory in root(after this you need to point to your specific version of corenlp in the config file of the bot you use in the section brain>nlp>corenlp>jar_dir)
+
+9- Set src:
+- In command line:
+        Add src path to PYTHONPATH
+
+- In pycharm:
+    Right click on src then "Mark as directory" and then "Sources root"
+
+
+
 ## Points on using
 
 1 - the rephrase file should contain only one sentence phrases.
@@ -69,8 +116,8 @@ You should see the "linking successful" message.
 
 ## Running
 
-Before running in windows you need to make sure that you have a tmp folder in the root of dive C:. This will keep track of
-log files. In linux the folder is /tmp and is already created so you don't need any configuration.
+Before running in windows you need to make sure that you have a "tmp" folder in the root of dive C:. This will keep track of
+log files. In linux the folder is /tmp and is already there so you don't need any configuration.
 
 ## Docker
 
