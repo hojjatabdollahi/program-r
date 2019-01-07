@@ -38,9 +38,10 @@ class NLP(object):
                 nltk.download("popular", download_dir=nltk_data_dir, quiet=True)
             except Exception as excp:
                 #install data in home directory due to problems in provided dir
-                print("wrong nltk library install in home directory")
-                nltk.download("popular")
+                nltk.download("popular", quiet=True)
+                YLogger.exception(self, "wrong nltk directory. Install in home directory", excp)
 
         else:
-            nltk.download("popular")
+            nltk.download("popular", quiet=True)
+            YLogger.error(self, "No nltk directory. Install in home directory")
 

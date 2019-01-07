@@ -55,9 +55,9 @@ pip install -U spacy
 You should see the "linking successful" message.
 
 4- [Install mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
- - If you want to change the default port number you have to consider changing it in your bot configuration in bot>database_config>port
+ - If you want to change the default port number you have to consider changing it in your bot configuration in bot > database_config > port
  
-5- download, extract and copy the [corenlp](https://stanfordnlp.github.io/CoreNLP/download.html) to the libs directory in root(after this you need to point to your specific version of corenlp in the config file of the bot you use in the section brain>nlp>corenlp>jar_dir)
+5- download, extract and copy the [corenlp](https://stanfordnlp.github.io/CoreNLP/download.html) to the libs directory in root(after this you need to point to your specific version of corenlp in the config file of the bot you use in the section brain > nlp > corenlp > jar_dir)
 
 
 6 - Set src:
@@ -104,9 +104,9 @@ python -m spacy download en
 You should see the "linking successful" message.
 
 7- [Install mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
- - If you want to change the default port number you have to consider changing it in your bot configuration in bot>database_config>port
+ - If you want to change the default port number you have to consider changing it in your bot configuration in bot > database_config > port
  
-8- download, extract and copy the [corenlp](https://stanfordnlp.github.io/CoreNLP/download.html) to the libs directory in root(after this you need to point to your specific version of corenlp in the config file of the bot you use in the section brain>nlp>corenlp>jar_dir)
+8- download, extract and copy the [corenlp](https://stanfordnlp.github.io/CoreNLP/download.html) to the libs directory in root(after this you need to point to your specific version of corenlp in the config file of the bot you use in the section brain > nlp > corenlp > jar_dir)
 
 9- Set src:
 - In command line:
@@ -121,7 +121,7 @@ You should see the "linking successful" message.
 
 1- the rephrase file should contain only one sentence phrases.
 
-2- all templates should have the <oob> tag except in the case where template has <srai> tag. In this case, the template itself is just a pointer to another template and we don't need a separate robot tag.
+2- all templates should have the &lt;oob> tag except in the case where template has &lt;srai> tag. In this case, the template itself is just a pointer to another template and we don't need a separate robot tag.
 
 ## Running
 
