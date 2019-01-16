@@ -1,8 +1,8 @@
 import unittest
 import os
 
-from programy.utils.license.keys import LicenseKeys
-from programy.utils.newsapi.newsapi import NewsAPI
+from programr.utils.license.keys import LicenseKeys
+from programr.utils.newsapi.newsapi import NewsAPI
 
 class NewsAPIExtensionIntegrationTests(unittest.TestCase):
 

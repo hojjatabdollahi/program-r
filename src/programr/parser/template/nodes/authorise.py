@@ -1,0 +1,94 @@
+from programr.utils.logging.ylogger import YLogger
+
+from programr.parser.template.nodes.base import TemplateNode
+from programr.parser.exceptions import ParserException
+
+class TemplateAuthoriseNode(TemplateNode):
+
+    def __init__(self):
+        TemplateNode.__init__(self)
+        self._role = None
+        self._denied_srai = None
+
+    @property
+    def role(self):
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        self._role = role
+
+    @property
+    def denied_srai(self):
+        return self._denied_srai
+
+    @denied_srai.setter
+    def denied_srai(self, denied_srai):
+        self._denied_srai = denied_srai
+
+    def resolve_to_string(self, client_context):
+        # Check if the user, role or group exists, assumption being, that if defined
+        # in the tag and exists then we can execute the inner children
+        # Assumption is that user has been authenticated and passed and is value
+        if client_context.brain.authorisation is not None:
+            if client_context.brain.authorisation.authorise(client_context.userid, self.role) is False:
+                if self._denied_srai is not None:
+                    srai_text = self._denied_srai
+                else:
+                    srai_text = client_context.brain.authorisation.get_default_denied_srai()
+                resolved = client_context.bot.ask_question(client_context, srai_text, srai=True)
+                YLogger.debug(self, "[%s] resolved to [%s]", self.to_string(), resolved)
+                return resolved
+
+        # Resolve afterwards, as pointless resolving before checking for authorisation
+        resolved = self.resolve_children_to_string(client_context)
+        YLogger.debug(self, "[%s] resolved to [%s]", self.to_string(), resolved)
+        return resolved
+
+    def resolve(self, client_context):
+        try:
+            return self.resolve_to_string(client_context)
+        except Exception as excep:
+            YLogger.exception(client_context, "Failed to resolve", excep)
+            return ""
+
+    def to_string(self):
+        text = "AUTHORISE ("
+        text += "role=%s"%self._role
+        if self._denied_srai is not None:
+            text += ", denied_srai=%s"%self._denied_srai
+        text += ")"
+        return text
+
+    def to_xml(self, client_context):
+        xml = '<authorise'
+        xml += ' role="%s"' % self._role
+        if self._denied_srai is not None:
+            xml += ' denied_srai="%s"' % self._denied_srai
+        xml += '>'
+        xml += self.children_to_xml(client_context)
+        xml += '</authorise>'
+        return xml
+
+    #######################################################################################################
+    # AUTHORISE_ATTRIBUTES ::= role="ROLEID" [, denied_srai="SRAI_TAG"]
+    # AUTHORISE_EXPRESSION ::== <authorise( AUTHORISE_ATTRIBUTES)*>TEMPLATE_EXPRESSION</authorise> |
+
+    def parse_expression(self, graph, expression):
+
+        if 'role' in expression.attrib:
+            self._role = expression.attrib['role']
+
+        if self._role is None:
+            raise ParserException("AUTHORISE role attribute missing !")
+
+        if 'denied_srai' in expression.attrib:
+            self._denied_srai = expression.attrib['denied_srai']
+
+        head_text = self.get_text_from_element(expression)
+        self.parse_text(graph, head_text)
+
+        for child in expression:
+            graph.parse_tag_expression(child, self)
+            tail_text = self.get_tail_from_element(child)
+            self.parse_text(graph, tail_text)

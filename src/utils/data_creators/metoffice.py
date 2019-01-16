@@ -2,13 +2,13 @@ import os
 
 import metoffer
 
-from programy.utils.weather.metoffice import MetOffice
+from programr.utils.weather.metoffice import MetOffice
 
 if __name__ == '__main__':
 
     # Only to be used to create test data for unit aiml_tests
 
-    from programy.utils.license.keys import LicenseKeys
+    from programr.utils.license.keys import LicenseKeys
 
     license_keys = LicenseKeys()
     license_keys.load_license_key_file(os.path.dirname(__file__) + '/../../../../bots/y-bot/config/license.keys')

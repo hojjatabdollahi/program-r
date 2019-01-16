@@ -2,9 +2,9 @@ import csv
 import re
 import datetime
 
-from programy.clients.client import BotClient
-from programy.utils.files.filefinder import FileFinder
-from programy.clients.events.console.config import ConsoleConfiguration
+from programr.clients.client import BotClient
+from programr.utils.files.filefinder import FileFinder
+from programr.clients.events.console.config import ConsoleConfiguration
 
 class TestQuestion(object):
 
@@ -150,7 +150,7 @@ class TestRunnerBotClient(BotClient):
         return self.arguments.args.verbose
 
     def get_description(self):
-        return 'ProgramY Test Runner Client'
+        return 'ProgramR Test Runner Client'
 
     def add_client_arguments(self, parser=None):
         if parser is not None:

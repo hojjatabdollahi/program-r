@@ -1,3 +1,15 @@
+## Introduction
+
+Program R is an AIML interpreter written in Python. It includes an entire Python 3 framework for building you own chat bots using
+Artificial Intelligence Markup Language, or AIML for short. This project was initially forked from [program-y](https://github.com/keiffster/program-y)
+
+Program R is fully cross platform, running on
+
+- Mac OSX
+- Linux
+- Windows
+
+
 ## Installation
 ### Windows
 To install program-r in windows you should do the following:
@@ -20,7 +32,7 @@ set-executionpolicy RemoteSigned
 ```
 Now you can run /env/Scripts/activate
 
-5- Install spacy:
+5- Install spacy(if you are using nltk it's already installed in the previous part, no need to do this step):
 
 -  Run powershell as admin in project directory
 
@@ -42,7 +54,13 @@ pip install -U spacy
 ```
 You should see the "linking successful" message.
 
-4 - Set src:
+4- [Install mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+ - If you want to change the default port number you have to consider changing it in your bot configuration in bot > database_config > port
+ 
+5- download, extract and copy the [corenlp](https://stanfordnlp.github.io/CoreNLP/download.html) to the libs directory in root(after this you need to point to your specific version of corenlp in the config file of the bot you use in the section brain > nlp > corenlp > jar_dir)
+
+
+6 - Set src:
 - In pycharm:
     Right click on src then Mark as directory and then sources root
 
@@ -50,75 +68,138 @@ You should see the "linking successful" message.
         Add src path to PYTHONPATH
 
 
-## Points on using
-1 - the rephrase file should contain only one sentence phrases.
+### Linux
 
+1 - Clone the repository:
+```
+git clone https://github.com/roholazandie/program-r.git
+```
+
+2- Install virtualenv for linux:
+```
+sudo apt-get install python3-pip
+pip3 install virtualenv
+```
+3 - Create virtualenv named "env"(in the same directory as you cloned):
+```
+virtualenv -p python3 env
+```
+
+4- Activate virtualenv
+```
+source env/bin/activate
+```
+
+5- Install requirements
+```
+pip install -r requirements.txt
+```
+
+6- Install spacy (if you are using nltk it's already installed in the previous part, no need to do this step):
+```
+pip install -U spacy
+python -m spacy download en
+```
+
+You should see the "linking successful" message.
+
+7- [Install mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+ - If you want to change the default port number you have to consider changing it in your bot configuration in bot > database_config > port
+ 
+8- download, extract and copy the [corenlp](https://stanfordnlp.github.io/CoreNLP/download.html) to the libs directory in root(after this you need to point to your specific version of corenlp in the config file of the bot you use in the section brain > nlp > corenlp > jar_dir)
+
+9- Set src:
+- In command line:
+        Add src path to PYTHONPATH
+
+- In pycharm:
+    Right click on src then "Mark as directory" and then "Sources root"
+
+
+
+## Points on using
+
+1- the rephrase file should contain only one sentence phrases.
+
+2- all templates should have the &lt;oob> tag except in the case where template has &lt;srai> tag. In this case, the template itself is just a pointer to another template and we don't need a separate robot tag.
 
 ## Running
 
-Before running in windows you need to make sure that you have a tmp folder in the root of dive C:. This will keep track of
-log files. In linux the folder is /tmp and is already created so you don't need any configuration.
+Before running in windows you need to make sure that you have a "tmp" folder in the root of dive C:. This will keep track of
+log files. In linux the folder is /tmp and is already there so you don't need any configuration.
+
+There are different ways to run the programy based on your needs:
+
+### Console run
+Here we run tutorial bot in console mode:
+```
+python ./src/programr/clients/events/console/client.py --config ./bots/tutorial/config.yaml --cformat yaml --logging ./bots/tutorial/logging.yaml
+```
+### Majordomo run
+
+```
+python ./src/programr/clients/events/majordomo/client.py --config ./bots/tutorial/config.yaml --cformat yaml --logging ./bots/tutorial/logging.yaml
+```
+
+### Restful POST run
+
+```
+python ./src/programr/clients/restful/flask/client.py --config ./bots/tutorial/config.yaml --cformat yaml --logging ./bots/tutorial/logging.yaml
+```
 
 
+## Docker
 
-## Introduction
+### Setting up Docker
 
-Program Y is an AIML interpreter written in Python. It includes an entire Python 3 framework for building you own chat bots using
-Artificial Intelligence Markup Language, or AIML for short.
+First you need to create a network bridge between the docker container and the host. We are using 192.168.x.x subnet.
+```
+docker network create -d bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 dockernet
+```
 
-Program Y is fully cross platform, running on
+Then you need to create the docker image:
+```
+docker-compose build
+```
 
-- Mac OSX
-- Linux
-- Windows
+It would be better if you create the image with a proper name:
+```
+docker build -t programr .
+```
+This will take some time. You can make sure that the image is created and has the name that you want by running `docker images`.
 
-100% Support for all AIML 2.0 Tags plus all Pandora bot ones they never documented
+To run programr in this container:
+```
+docker run -it --rm --net=dockernet programr ./run.sh
+```
 
-- Full support for al AIML 2.0 Tags
-- RDF Support through addtriple, deletetriple, select, uniq and uniq
-- List processing with First and Rest
-- Advanced learn support including resetlearn and resetlearnf
-- Full Out Of Band Support
-- Full embedded XML/HTML Support
-- Dynamic Sets, Maps and Variables
+### Making changes
 
-Program Y is extremely extensible, you can
+If you want to change something in the image you can run:
+```
+docker run -it --net=dockernet programr /bin/bash
+```
+This will drop you into a terminal inside the container. You can now use `nano` to make your changes. After you are done you can run:
+```
+docker ps -l
+```
+and see the last change and its hash code, you can then commit the changes using:
+```
+docker commit -m "message for the commit" HASHCODE programr
+```
+note that you can also commit with a new name.
 
-- Add you own AIML tags
-- Add you own Spelling Checker
-- Support User Authorisation
-- Support User Authentication
-- Add your own Out Out Band (OOB) tags
-- Add Dynamic Sets in Python
-- Add Dynamic Maps in Python
-- Add Dynamic Variables in Python
-- Run a variety of clients
+If you run `docker images` you should see all the images that you have.
 
-Program-Y comes with a base set of grammars for various industry sectors, including
+### Running a precompiled image
 
-- Energy Industry
-- Banking
-- Telecoms
-- Weather
-- Surveys
-- News Feeds
-- Maps
-
-Using Program-Y
-----------------
-Full documentation is available on `Program Y Wiki <https://github.com/keiffster/program-y/wiki>`_
-
-Program-Y ships with a very basic bot that has a single answer, after installation you can chat with your Program Y by running one of the many bots found in GitHub repo
-
-- `Y-Bot <https://github.com/keiffster/y-bot>`_
-- `Alice2 <https://github.com/keiffster/alice2-y>`_
-- `Rosie <https://github.com/keiffster/rosie-y>`_
-- `Professor <https://github.com/keiffster/professor-y>`_
-
-See the individual folders for unix and windows scripts required to run a bot.
-
-Getting Started
----------------
-Once you have got the system installed and have run one or more of the bots, head over to the
-`Tutorial <https://github.com/keiffster/program-y/wiki/AIML-Tutorial>`_ on the Wiki for a full
-run down of everything possible in AIML
+If you just need to run programr and you are not going to change the code, you can just pull its latest image from dockerhub:
+```
+docker pull hojjat12000/program-r
+```
+If you run `docker images` you will see an image named `hojjat12000/program-r`. Make sure that you have create the network interface and named it `dockernet` (as instructed above).
+Then run the image like so:
+```
+docker run -it --rm --net=dockernet hojjat12000/program-r ./run.sh
+```
+`--rm` will remove the new container created after you are done. Note that the image stays and you can just run the command above to run the program again.

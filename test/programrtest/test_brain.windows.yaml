@@ -1,0 +1,58 @@
+brain:
+    overrides:
+      allow_system_aiml: true
+      allow_learn_aiml: true
+      allow_learnf_aiml: true
+
+    binaries:
+      save_binary: false
+      load_binary: false
+      binary_filename: C:\Windows\Temp/y-bot.brain
+      load_aiml_on_binary_fail: false
+
+    # Braintree
+    braintree:
+      file: C:\Windows\Temp\braintree.xml
+      content: xml
+
+    files:
+        aiml:
+            files: .
+            extension: .aiml
+            directories: false
+
+    security:
+        authentication:
+            classname: programr.security.authenticate.passthrough.BasicPassThroughAuthenticationService
+            denied_srai: AUTHENTICATION_FAILED
+        authorisation:
+            classname: programr.security.authorise.passthrough.PassThroughAuthorisationService
+            denied_srai: AUTHORISATION_FAILED
+
+    oob:
+      default:
+        classname: programr.oob.default.DefaultOutOfBandProcessor
+      alarm:
+        classname: programr.oob.alarm.AlarmOutOfBandProcessor
+      camera:
+        classname: programr.oob.camera.CameraOutOfBandProcessor
+      clear:
+        classname: programr.oob.clear.ClearOutOfBandProcessor
+      dial:
+        classname: programr.oob.dial.DialOutOfBandProcessor
+      dialog:
+        classname: programr.oob.dialog.DialogOutOfBandProcessor
+      email:
+        classname: programr.oob.email.EmailOutOfBandProcessor
+      map:
+        classname: programr.oob.map.MapOutOfBandProcessor
+      schedule:
+        classname: programr.oob.schedule.ScheduleOutOfBandProcessor
+      search:
+        classname: programr.oob.search.SearchOutOfBandProcessor
+      sms:
+        classname: programr.oob.sms.SMSOutOfBandProcessor
+      url:
+        classname: programr.oob.url.URLOutOfBandProcessor
+      wifi:
+        classname: programr.oob.wifi.WifiOutOfBandProcessor

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version = "2.0">
+
+
+    <category>
+        <pattern>hello</pattern>
+
+        <template>
+            Hi!
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+   </category>
+
+    <category>
+        <pattern>hi</pattern>
+        <template>
+            mmmm
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+       <pattern>who is albert einstein</pattern>
+       <template>
+           Albert Einstein was a German physicist. He worked on relativity theory.
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+       </template>
+    </category>
+
+    <category>
+       <pattern>WHO IS Isaac NEWTON</pattern>
+       <template>
+           Isaac Newton was a English physicist and mathematician.
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+       </template>
+    </category>
+
+      <category>
+       <pattern>DO YOU KNOW WHO * IS</pattern>
+
+       <template>
+          <srai>WHO IS <star/></srai>
+       </template>
+
+    </category>
+
+</aiml>

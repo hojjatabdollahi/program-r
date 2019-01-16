@@ -1,8 +1,8 @@
 import unittest
 import os
 
-from programy.utils.geo.google import GoogleMaps, GoogleDistance, GoogleDirections
-from programy.utils.geo.latlong import LatLong
+from programr.utils.geo.google import GoogleMaps, GoogleDistance, GoogleDirections
+from programr.utils.geo.latlong import LatLong
 
 #############################################################################
 #

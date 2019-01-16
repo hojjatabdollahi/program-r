@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mongodb:
+        image: mongo:latest
+        container_name: "mongodb"
+        environment:
+          - MONGO_DATA_DIR=/data/db
+          - MONGO_LOG_DIR=/dev/null
+          - MONGO_PORT_27017_TCP_ADDR="10.0.75.1"
+        ports:
+            - 27017:27017
+        #command: mongod --logpath=/dev/null # --quiet
+
+  programr:
+        build: .
+        container_name: "programr"
+        volumes:
+          - .:/usr/src/app
+        ports:
+          - 9999:9999
+        links:
+          - mongodb
+        depends_on:
+          - mongodb
+        command: "python ./src/programr/clients/events/majordomo/client.py --config ./bots/ryan/config.yaml --cformat yaml --logging ./bots/ryan/logging.yaml"

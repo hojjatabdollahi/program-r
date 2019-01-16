@@ -1,9 +1,9 @@
 import unittest
 
-from programy.config.bot.redisstorage import BotConversationsRedisStorageConfiguration
-from programy.dialog.storage.redis import ConversationRedisStorage
-from programytest.aiml_tests.client import TestClient
-from programy.dialog.dialog import Conversation, Question
+from programr.config.bot.redisstorage import BotConversationsRedisStorageConfiguration
+from programr.dialog.storage.redis import ConversationRedisStorage
+from programrtest.aiml_tests.client import TestClient
+from programr.dialog.dialog import Conversation, Question
 
 
 class ConversationRedisStorageTests(unittest.TestCase):

@@ -1,9 +1,9 @@
 import unittest
 import os
 
-from programy.utils.license.keys import LicenseKeys
-from programy.services.duckduckgo import DuckDuckGoService
-from programy.services.service import BrainServiceConfiguration
+from programr.utils.license.keys import LicenseKeys
+from programr.services.duckduckgo import DuckDuckGoService
+from programr.services.service import BrainServiceConfiguration
 
 
 class TestBot:
