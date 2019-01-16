@@ -145,8 +145,8 @@ class BotClient(ResponseLogger):
     @property
     def client_context(self):
         session_pickle_dir= self.configuration.client_configuration.configurations[0].session.session_saving_dir
-        session_saving_mode = self.configuration.client_configuration.configurations[0].session.session_saving_mode
-        if session_saving_mode:
+        self._session_saving_mode = self.configuration.client_configuration.configurations[0].session.session_saving_mode
+        if self.session_saving_mode:
             try:
                 client_context = self.load_client_context(
                     self.configuration.client_configuration.default_userid, session_pickle_dir)

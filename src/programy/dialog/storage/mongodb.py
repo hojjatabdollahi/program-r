@@ -107,7 +107,8 @@ class ConversationMongodbStorage(ConversationStorage):
             }
 
         }
-
+        print("###################")
+        print(document)
         self.db[self._config.collection_name].insert_one(document)
 
 

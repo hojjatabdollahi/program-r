@@ -6,6 +6,7 @@
     <template>
         <think><set name="botname">ryan</set></think>
         success
+        <oob><robot></robot></oob>
     </template>
 </category>
 
@@ -13,6 +14,7 @@
     <pattern>salam</pattern>
     <template>
         my name is <get name = "botname"/>.
+        <oob><robot></robot></oob>
     </template>
 </category>
 </aiml>

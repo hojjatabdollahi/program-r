@@ -12,69 +12,43 @@ class GetSentiment(DynamicVariable):
         bot = client_context.bot
         nlp = client_context.brain.nlp
         text = variables["data"]
+        print(text)
 
+        #if bot.configuration.emotive:
+        #YLogger.info(self, "bot is in emotive mode")
+        try:
+            sentiment, sentiment_distribution = nlp.sentiment_analysis.get_sentence_sentiment(text)
+        except Exception as exception:
+            YLogger.exception(self, "sentiment analysis module broke", exception)
+            raise exception
 
-        if bot.configuration.emotive:
-            YLogger.info(self, "bot is in emotive mode")
-            try:
-                sentiment, sentiment_distribution = nlp.sentiment_analysis.get_sentence_sentiment(text)
-            except Exception as exception:
-                YLogger.exception(self, "sentiment analysis module broke", exception)
-                raise exception
+        sentiment_value = None
+        final_sentiment_value = None
 
-            sentiment_value = None
-            final_sentiment_value = None
+        if bot.facial_expression_recognition is not None:
+            if len(bot.facial_expression_recognition.values):
+                last_fer_value = bot.facial_expression_recognition.last_fer_value
 
-            if bot.facial_expression_recognition is not None:
-                if len(bot.facial_expression_recognition.values):
-                    last_fer_value = bot.facial_expression_recognition.last_fer_value
+                #the logic of mixing fer and sentiment goes here
+                alpha = nlp.sentiment_analysis.alpha
+                positive_threshold = nlp.sentiment_analysis.positive_threshold
+                negative_threshold = nlp.sentiment_analysis.negative_threshold
 
+                sentiment_value = nlp.sentiment_analysis.expected_sentiment_value(sentiment_distribution)
 
-                    #the logic of mixing fer and sentiment goes here
-                    alpha = nlp.sentiment_analysis.alpha
-                    positive_threshold = nlp.sentiment_analysis.positive_threshold
-                    negative_threshold = nlp.sentiment_analysis.negative_threshold
+                print("FER: ", last_fer_value)
+                print("Sentiment:", sentiment_value)
 
-                    sentiment_value = nlp.sentiment_analysis.expected_sentiment_value(sentiment_distribution)
-
-                    print("FER: ", last_fer_value)
-                    print("Sentiment:", sentiment_value)
-
-                    final_sentiment_value = alpha * last_fer_value + (1-alpha)*sentiment_value
-                    print("Final sentiment: ", final_sentiment_value)
-                    if final_sentiment_value > positive_threshold:
-                        sentiment = "positive"
-                    elif final_sentiment_value < positive_threshold and final_sentiment_value > negative_threshold:
-                        sentiment = "neutral"
-                    else:
-                        sentiment = "negative"
-
-            else:
-                if sentiment == "positive":
-                    sentiment_value = 1
-                    final_sentiment_value = 1
-                elif sentiment == "neutral":
-                    sentiment_value = 0
-                    final_sentiment_value = 0
-                elif sentiment == "negative":
-                    sentiment_value = -1
-                    final_sentiment_value = -1
-
-
-            bot.sentiment.append_sentiment(sentiment_value)
-            bot.sentiment.append_sentiment_distribution(sentiment_distribution)
-            bot.sentiment.append_final_sentiment(final_sentiment_value)
+                final_sentiment_value = alpha * last_fer_value + (1-alpha)*sentiment_value
+                print("Final sentiment: ", final_sentiment_value)
+                if final_sentiment_value > positive_threshold:
+                    sentiment = "positive"
+                elif final_sentiment_value < positive_threshold and final_sentiment_value > negative_threshold:
+                    sentiment = "neutral"
+                else:
+                    sentiment = "negative"
 
         else:
-            YLogger.info(self, "bot is in non emotive mode")
-
-            #do sentiment analysis even if we return neutral sentiment
-            try:
-                sentiment, sentiment_distribution = nlp.sentiment_analysis.get_sentence_sentiment(text)
-            except Exception as exception:
-                YLogger.exception(self, "sentiment analysis module broke", exception)
-                raise exception
-
             if sentiment == "positive":
                 sentiment_value = 1
                 final_sentiment_value = 1
@@ -85,10 +59,15 @@ class GetSentiment(DynamicVariable):
                 sentiment_value = -1
                 final_sentiment_value = -1
 
-            bot.sentiment.append_sentiment(sentiment_value)
-            bot.sentiment.append_final_sentiment(final_sentiment_value)
 
+        bot.sentiment.append_sentiment(sentiment_value)
+        bot.sentiment.append_sentiment_distribution(sentiment_distribution)
+        bot.sentiment.append_final_sentiment(final_sentiment_value)
 
+        if bot.configuration.emotive:
+            YLogger.info(self, "bot is in emotive mode")
+        else:
+            YLogger.info(self, "bot is in non emotive mode")
             sentiment = "neutral"
 
         print(sentiment)

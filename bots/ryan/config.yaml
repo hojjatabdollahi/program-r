@@ -56,7 +56,7 @@ bot:
       empty_on_start: false
 
     session:
-      session_saving_mode: true
+      session_saving_mode: false
       session_saving_dir: $BOT_ROOT/session_data
 
     file_config:
@@ -68,7 +68,7 @@ bot:
       port: 27017
       password: "password"
       root: "/home/rohola/mongodbtest-data"
-      name: "programr"
+      name: "programr_test"
       collection_name: "conversations"
 
 brain:
@@ -199,7 +199,7 @@ brain:
 
       sentiment_analysis:
         method: corenlp
-        alpha: 0.1
+        alpha: 0.5
         positive_threshold: 0.2
         negative_threshold: -0.2
 
