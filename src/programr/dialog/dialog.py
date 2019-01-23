@@ -1,3 +1,4 @@
+from programr.nlp.linguistic_features.sentence_segmentation import SentenceSegmentation
 from programr.utils.logging.ylogger import YLogger
 import re
 
@@ -226,8 +227,7 @@ class Question(object):
 class Conversation(object):
 
     def __init__(self, client_context):
-        import spacy
-        self._nlp = spacy.load('en')
+        self._sentence_segmentation = client_context.brain.nlp.sentence_segmentation
         self._client_context = client_context
         self._questions = []
         self._answers = []
@@ -339,10 +339,12 @@ class Conversation(object):
             if "#" in response:
                 response = response.split("#")[0]
 
-        doc = self._nlp(response)
-        sentences = list(doc.sents)
-        last_sentence = sentences[-1].text
+        # doc = self._nlp(response)
+        # sentences = list(doc.sents)
+        # last_sentence = sentences[-1].text
 
+        sentences = self._sentence_segmentation.segment(response)
+        last_sentence = sentences[-1]
         that_pattern = last_sentence.strip()#.strip("?")
         if that_pattern == "":
             that_pattern = "*"

@@ -4,7 +4,7 @@ from programr.nlp.linguistic_features.tokenizer import Tokenizer
 from programr.nlp.semantic.semantic_similarity import SemanticSimilarity
 from programr.nlp.semantic.sentiment_analysis import SentimentAnalysis
 from programr.utils.logging.ylogger import YLogger
-import nltk
+import nltk #todo remove dependency on nltk when user wants to use only spacy
 
 
 class NLP(object):
