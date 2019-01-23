@@ -1,4 +1,3 @@
-from programr.nlp.spacylib import spacy_lib
 from nltk.tokenize import sent_tokenize
 from programr.utils.logging.ylogger import YLogger
 
@@ -32,6 +31,7 @@ class SpacySentenceSegmentation(SentenceSegmentation):
         super().__init__()
 
     def segment(self, text):
+        from programr.nlp.spacylib import spacy_lib
         doc = spacy_lib(text)
         sentences = [sent.text for sent in doc.sents]
         return sentences
