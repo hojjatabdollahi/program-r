@@ -7,7 +7,7 @@
         <pattern>hello</pattern>
 
         <template>
-            Hi!
+            what?
             <oob>
                 <robot>
                 </robot>
@@ -18,12 +18,24 @@
     <category>
         <pattern>hi</pattern>
         <template>
-            mmmm
+            I will be at office.
             <oob>
                 <robot>
                 </robot>
             </oob>
         </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>mmmm</that>
+        <template>
+            dd
+            <oob>
+            <robot></robot>
+            </oob>
+        </template>
+
     </category>
 
     <category>

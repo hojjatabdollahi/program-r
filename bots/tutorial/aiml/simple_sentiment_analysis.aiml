@@ -36,8 +36,7 @@
 
            </condition>
           <oob>
-                <robot>
-                </robot>
+                <robot></robot>
           </oob>
       </template>
    </category>
