@@ -1,4 +1,3 @@
-from programr.nlp.spacylib import spacy_lib
 import nltk
 from nltk.tokenize import word_tokenize
 
@@ -33,6 +32,7 @@ class SpacyTokenizer(Tokenizer):
         self.split_chars = ' '
 
     def tokenize(self, text):
+        from programr.nlp.spacylib import spacy_lib
         doc = spacy_lib(text)
         tokens_text = [token.text for token in doc]
         return tokens_text
