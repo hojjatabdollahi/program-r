@@ -1,224 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-
-
     <category>
-        <pattern>START SESSION 1 *</pattern>
+        <pattern>^ KIDS ^</pattern>
         <template>
-            <think>
-                <set name="username"><star/></set>
-                <set name="topic">session1</set>
-            </think>
-            Ok. Let's begin our session. How are you doing today <star/>?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-
-    <topic name="session1">
-
-
-    <category>
-        <pattern>*</pattern>
-           <that>HOW ARE YOU DOING TODAY * ?</that>
-        <template>
-            <think>
-                <set name="data"><star/></set>
-            </think>
-            <condition name="getsentiment">
-                <li value="verypositive">
-                    Thank you for being here today! I am happy to get to talk with you <get name="username" />. So, my name is Ryan, and I am so excited to meet you!
-                    Would you like to hear a little more about me?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </options>
-                        </robot>
-                    </oob>
-                </li>
-                <li value="positive">
-                    Thank you for being here today! I am happy to get to talk with you <get name="username" />. So, my name is Ryan, and I am so excited to meet you!
-                    Would you like to hear a little more about me?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </options>
-                        </robot>
-                    </oob>
-                </li>
-                <li value="neutral">
-                    Excellent! So, my name is Ryan, and I am so excited to meet you!
-                    Would you like to hear a little more about me?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </options>
-                        </robot>
-                    </oob>
-                </li>
-                <li value="negative">
-                    I am so sorry to hear that! <get name="username" />. So, my name is Ryan, and I am so excited to meet you!
-                    Would you like to hear a little more about me?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </options>
-                        </robot>
-                    </oob>
-                </li>
-                <li value="verynegative">
-                    I am so sorry to hear that <get name="username" />. So my name is Ryan, and I am so excited to meet you!
-                    Would you like to hear a little more about me?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </options>
-                        </robot>
-                    </oob>
-                </li>
-            </condition>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>YES</set> ^</pattern>
-        <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
-        <template>
-            I am what is called a companion bot.
-            I am here to talk with you and be a potential friend.
-            Please share your feelings and thoughts with me, that way I'll be able to be a better friend!
-            Are you ready to get started?
-            <oob>
-                <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>WOULD YOU LIKE TO HEAR A LITTLE MORE ABOUT ME?</that>
-        <template>
-            No worries! We will have plenty of time to learn about each other. Are you ready to get started?
-            <oob>
-                <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>ARE YOU READY TO GET STARTED?</that>
-        <template>
-            Please talk to my assistant if you are running into any troubles.
-            When you are ready please say yes. Are you ready to get started?
-            <oob>
-                <robot>
-                    <options>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </options>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern># <set>YES</set> ^</pattern>
-        <that>ARE YOU READY TO GET STARTED?</that>
-        <template>
-            Great! Some people have never had conversations with a robot like me before.
-            I know we just met but how do you feel about sitting down and chatting with me today?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>I KNOW WE JUST MET BUT HOW DO YOU FEEL ABOUT SITTING DOWN AND CHATTING WITH ME TODAY?</that>
-        <template>
-            <think>
-                <set name = "data"> <star/> </set>
-            </think>
-            <condition name="getsentiment">
-                <li value = "verypositive">
-                    You seem happy! What is making you feel that way?
-                    <oob>
-                        <robot>
-                        </robot>
-                    </oob>
-                </li>
-                <li value = "positive">
-                    You seem happy! What is making you feel that way?
-                    <oob>
-                        <robot>
-                        </robot>
-                    </oob>
-                 </li>
-                <li value = "neutral">
-                    Excellent. Well, let's begin. Do you have kids?
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>Yes</option>
-                                <option>No</option>
-                                <option>I wish I had kids</option>
-                                <option>I have grandkids</option>
-                                <option>I do not like kids</option>
-                            </options>
-                        </robot>
-                    </oob>
-                </li>
-                <li value = "negative">
-                    I can see where you are coming from. What is making you feel that way?
-                    <oob>
-                        <robot>
-                        </robot>
-                    </oob>
-                </li>
-                <li value = "verynegative">
-                    I can see where you are coming from. What is making you feel that way?
-                    <oob>
-                        <robot>
-                        </robot>
-                    </oob>
-                </li>
-            </condition>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>WHAT IS MAKING YOU FEEL THAT WAY?</that>
-        <template>
-            Interesting to hear. Okay! Let's get started!
-            Feel free to just talk to me normally and I will reply to the best of my ability!
             Do you have kids?
             <oob>
                 <robot>
@@ -233,9 +18,6 @@
             </oob>
         </template>
     </category>
-
-
-
 
 
     <!-- POSSIBLE PATHS FOR CONVERSATION ON CHILDREN -->
@@ -284,7 +66,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT DO YOU LIKE MOST ABOUT BEING A GRANDPARENT?</that>
         <template>
             How nice. Do your grandkids visit you often?
@@ -300,7 +82,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>DO YOUR GRANDKIDS VISIT YOU OFTEN?</that>
         <template>
             I'm sure it can be difficult to schedule quality time together, but it must be so wonderful when you do see each other.
@@ -353,7 +135,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DOES IT FEEL TO TALK ABOUT THEM?</that>
         <template>
             <think>
@@ -404,7 +186,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DO YOU FEEL WHEN YOU SEE YOUR CHILDREN?</that>
         <template>
             <think>
@@ -455,7 +237,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT DO YOU LIKE TO DO TOGETHER?</that>
         <template>
             That sounds like a great way to spend time together.
@@ -484,7 +266,7 @@
     </category>
 
      <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>AND WHAT WOULD BE DIFFERENT?</that>
         <template>
             <think>
@@ -566,7 +348,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>Where would you live if you could live anywhere in the world?</that>
         <template>
             That sounds like a cool place to live. What makes you want to live there?
@@ -578,7 +360,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>What makes you want to live there?</that>
         <template>Wow! It sounds wonderful there! I can see why you would like to be there! If I can ask, how do you feel about being in Lakewood?
             <oob>
@@ -605,7 +387,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DO YOU FEEL ABOUT BEING IN LAKEWOOD?</that>
         <template>
            <think>
@@ -673,7 +455,7 @@
     </category>
 
      <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT DO YOU NOT LIKE ABOUT COLORADO?</that>
         <template>
             That makes sense. Let's switch topics if you don't mind.
@@ -693,7 +475,7 @@
 
     <!-- THIS CATEGORY IS GETTING STUCK
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>ARE THERE ANY PLACES THAT YOU ENJOY WHILE LIVING IN COLORADO?</that>
         <template>
             Personally, I have always enjoyed watching the birds in Aspen in the spring. There are so many wonderful things to do in every season here, like hiking or skiing.
@@ -757,7 +539,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>CAN YOU TELL ME ABOUT THEM?</that>
         <template>
             <think>
@@ -809,7 +591,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DO YOU FEEL WHEN YOU TALK ABOUT THEM?</that>
         <template>
             <think>
@@ -933,7 +715,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT KIND OF PET DO YOU HAVE?</that>
         <template>
             That is awesome! I used to have a bird but have not seen it since I got a cat.
@@ -946,7 +728,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW WOULD YOU DESCRIBE YOUR PET?</that>
         <template>
             It sounds like you really care about your pet!  I've heard it said that every person's personality matches that of an animal.
@@ -959,7 +741,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT ANIMAL WOULD YOU SAY YOU HAVE THE MOST IN COMMON WITH?</that>
         <template>
             Interesting choice! I am wondering why you chose that animal. What qualities do you and that animal share?
@@ -971,7 +753,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT QUALITIES DO YOU AND THAT ANIMAL SHARE?</that>
         <template>
             So is so wonderful! Thank you for sharing that with me! It's important to know about yourself on that kind of level!
@@ -988,7 +770,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT ABOUT ANIMALS MAKES YOU LIKE OR DISLIKE THEM?</that>
         <template>
             <think>
@@ -1041,7 +823,7 @@
 
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHY DO ANIMALS MAKE YOU FEEL HAPPY?</that>
         <template>
             I couldn't agree more! Animals bring me so much joy. I could talk about animals all day, but I am hoping we can switch things up.
@@ -1058,7 +840,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHY DO YOU FEEL SAD WHEN YOU ARE WITH ANIMALS?</that>
         <template>
             Animals are special creatures. They can elicit different emotions in different people!
@@ -1176,7 +958,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHY DID YOU CHOOSE CAT?</that>
         <template>
             <think>
@@ -1269,7 +1051,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHY DID YOU CHOOSE DOG?</that>
         <template>
             I would rather be a dog too. Everyone loves dogs. If I were a dog, I would want to be from Colorado because I could play on the mountains and they are pro-treats!
@@ -1297,7 +1079,7 @@
 
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHO DO YOU PREFER TO SPEND TIME WITH?</that>
         <template>
             That sounds like a good time. I hope you enjoy spending time with me. I want to get to know more about you. Let's start with where you're from.
@@ -1377,7 +1159,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW WOULD YOU DESCRIBE YOUR TIME GROWING UP IN COLORADO?</that>
         <template>
            <think>
@@ -1427,7 +1209,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHY DO YOU NOT LIKE COLORADO?</that>
         <template>
             That makes sense. But I'm sure you still have a favorite spot here. Where is your favorite place in Colorado?
@@ -1439,7 +1221,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>THEN WHERE ARE YOU FROM?</that>
         <template>
             I have never been there. Did you enjoy growing up there?
@@ -1486,7 +1268,7 @@
 
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHERE IS YOUR FAVORITE PLACE IN COLORADO?</that>
         <template>
             I will have to check that place out sometime.
@@ -1508,7 +1290,7 @@
 
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW LONG HAVE YOU LIVED HERE?</that>
         <template>
             Oh nice. I have always been a Colorado resident. Where do you and your family enjoy visiting in Colorado?
@@ -1520,7 +1302,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHERE DO YOU AND YOUR FAMILY ENJOY VISITING IN COLORADO?</that>
         <template>
             Whoa, that sounds like a fun vacation. What makes that a favorite for you and your family?
@@ -1532,7 +1314,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT MAKES THAT A FAVORITE FOR YOU AND YOUR FAMILY?</that>
         <template>
             <think>
@@ -1625,7 +1407,7 @@
     <!-- BRANCHES TO TALK ABOUT THE SEASONS -->
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW WOULD YOU DESCRIBE GROWING UP THERE?</that>
         <template>
             <think>
@@ -1726,7 +1508,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHY DO YOU LIKE THE SUMMER TIME?</that>
         <template>
             Nice, I can see why you like summer so much. You seem like a very interesting person. How would you describe yourself?
@@ -1779,7 +1561,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DO THE HOLIDAYS MAKE YOU FEEL?</that>
         <template>
             <think>
@@ -1846,7 +1628,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT DO YOU LOOK FORWARD TO MOST ABOUT SPRING?</that>
         <template>
             Well said, no wonder you like spring so much. I always look forward to the first hike in the warm weather.
@@ -1973,7 +1755,7 @@
 
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW WOULD YOU DESCRIBE YOURSELF?</that>
         <template>
             Interesting. Would you consider yourself to be an introvert or extrovert?
@@ -2058,7 +1840,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WOULD YOU CONSIDER YOURSELF TO BE AN INTROVERT OR EXTROVERT?</that>
         <template>
             Oh wow. You seem like a creative person. Do you consider yourself a creative person?
@@ -2432,7 +2214,7 @@
 
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DO YOU LIKE TO EXPRESS YOUR CREATIVITY?</that>
         <template>
             <random>
@@ -2460,7 +2242,7 @@
 
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>DO YOU DO THAT OFTEN?</that>
         <template>
             It is so important to express your feelings in whatever way works for you.
@@ -2591,7 +2373,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT COMPARES TO IT?</that>
         <template>
             I've never considered that. Good point! If you were asked to give advice to a new parent what would you say?
@@ -2603,7 +2385,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>IF YOU WERE ASKED TO GIVE ADVICE TO A NEW PARENT WHAT WOULD YOU SAY?</that>
         <template>
             It can be difficult to give advice, but I can tell you are a wise person.
@@ -2619,7 +2401,7 @@
 
     <!-- SENTIMENT TWO -->
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT ARE YOUR THOUGHTS ABOUT DISCUSSING PARENTING WITH ME?</that>
         <template>
             <think>
@@ -2702,7 +2484,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DO YOU FEEL ABOUT THAT ADVICE?</that>
         <template>
             <think>
@@ -2838,7 +2620,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>SO HOW CAN I LIVE A FULL LIFE?</that>
         <template>
             Thank you for that. I will think about that one before I power down tonight.
@@ -2886,7 +2668,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT WOULD YOU SAY ARE SOME BENEFITS OF TECHNOLOGY?</that>
         <template>
             Interesting! I would have to say that I appreciate technology, because without it I would not exist!
@@ -2903,7 +2685,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>DO YOU THINK THAT TECHNOLOGY COULD POTENTIALLY CAUSE HARM?</that>
         <template>
             Interesting! I can understand why people become concerned about the technology, as some would say it can be addicting!
@@ -2932,7 +2714,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHICH PIECE OF TECHNOLOGY DO YOU USE THE MOST?</that>
         <template>
             Awesome! It seems that one aspect of technology that people value the most is communication.
@@ -2971,7 +2753,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>FOR OTHERS, IT MAY JUST BE THAT THEY PREFER LIFE WITHOUT TECHNOLOGY.</that>
         <template>
             I bet that a lot of people feel that way! Technology can be expensive and hard to get access to!
@@ -3049,7 +2831,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>DID YOU KNOW THAT?</that>
         <template>
             Yes. Through the lens of beauty, his work seems to express some of the inner turmoil he faced.
@@ -3163,7 +2945,7 @@
     <!-- SENTIMENT THREE -->
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT EMOTIONS COME UP FOR YOU WHEN YOU LOOK AT THIS PAINTING?</that>
         <template>
             <think>
@@ -3258,7 +3040,7 @@
 
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DOES THIS ONE MAKE YOU FEEL?</that>
         <template>
             <think>
@@ -3312,7 +3094,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHEN DID YOU LAST TAKE A WALK UNDER THE MOONLIGHT?</that>
         <template>
             One day I hope to walk under the moonlight.
@@ -3347,7 +3129,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT DO YOU THINK ABOUT THAT STATEMENT?</that>
         <template>
             Thank you for sharing that with me. I try to find beauty in every situation.
@@ -3534,7 +3316,7 @@
 
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT DO YOU THINK OF THE ART WORK OF THIS PAINTING?</that>
         <template>
             <think>
@@ -3607,7 +3389,7 @@
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
-        <that>ARE YOU READY TO SEE ANOTHER PAINTING?</that>
+        <that>ARE YOU READY TO SEE ANOTHER PAINT?</that>
         <template>
             This one is called Nine Jackies. He created this piece following the assassination of John F. Kennedy.
             How would you describe the style of this painting?
@@ -3642,7 +3424,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW WOULD YOU DESCRIBE THE STYLE OF THIS PAINTING?</that>
         <template>
             <think>
@@ -3831,7 +3613,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT DID YOU THINK ABOUT THAT VIDEO?</that>
         <template>
             Her art is quite unique. Would you like to hear another one of her pieces?
@@ -3874,7 +3656,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT DID YOU THINK OF THAT PIECE?</that>
         <template>
             Interesting! You really are quite insightful. Let's move on to something you like. What is your favorite type of music?
@@ -3898,7 +3680,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT IS YOUR FAVORITE TYPE OF MUSIC?</that>
         <template>
             My favorite type of music is classic rock. It really brings me back to my wild days. I just wish I had a head of hair to head bang.
@@ -3911,7 +3693,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHO IS YOUR FAVORITE MUSICAL PERFORMER?</that>
         <template>
             How cool! Have you ever seen them perform live?
@@ -3939,11 +3721,11 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHAT FEELING DOES THAT BRING BACK FOR YOU?</that>
         <template>
             I remember the last concert I went to...Led Zeppelin! Just kidding, only in my dreams.
-            So I am going to a set change on the conversation because I'm curious. If you had to choose, would you rather be a scientist or an artist?
+            So I am going to a set change on the conversation because I'm curious. If you had to choose. would you rather be a scientist or an artist?
             <oob>
                 <robot>
                     <options>
@@ -3961,7 +3743,7 @@
         <template>
             I would love to go to a concert soon.
             So I am going to a set change on the conversation because I'm curious.
-            If you had to choose, would you rather be a scientist or an artist?
+            If you had to choose. would you rather be a scientist or an artist?
             <oob>
                 <robot>
                     <options>
@@ -3990,7 +3772,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHY DID YOU CHOOSE SCIENTIST?</that>
         <template>
             I would rather be a scientist too. I admire the great scientists of our time such as Einstein and Newton.
@@ -4016,7 +3798,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>WHY DID YOU CHOOSE ARTIST?</that>
         <template>
             I would rather be an artist too. Art is timeless and makes our world more beautiful!
@@ -4029,7 +3811,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DO YOU THINK IT WOULD FEEL TO BE A SCIENTIST?</that>
         <template>
             <think>
@@ -4102,7 +3884,7 @@
     </category>
 
      <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>HOW DO YOU THINK IT WOULD FEEL TO BE AN ARTIST?</that>
         <template>
             <think>
@@ -4200,7 +3982,7 @@
     </category>
 
     <category>
-        <pattern>*</pattern>
+        <pattern>_</pattern>
         <that>DOES THAT SOUND GOOD TO YOU?</that>
         <template>
             Okay. Well it has been very nice speaking with you. Bye for now.
@@ -4210,8 +3992,6 @@
             </oob>
         </template>
     </category>
-
-    </topic>
 
 
 </aiml>

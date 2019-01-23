@@ -3,15 +3,8 @@
 
 
    <category>
-       <pattern>START SESSION 6 *</pattern>
+       <pattern>^ travel ^</pattern>
        <template>
-           <think>
-               <set name = "data"> <star/> </set>
-               <set name = "username"> <star/> </set>
-               <set name = "topic">session6</set>
-           </think>
-           It's nice to see you again <star/>.
-           As a reminder, my name is Ryan and I am a companion robot that is here to learn about you.
            I've been meaning to ask you. Do you like to travel?
            <oob>
                <robot>
@@ -25,7 +18,37 @@
        </template>
    </category>
 
-   <topic name = "session6">
+   <category>
+       <pattern>^ traveling ^</pattern>
+       <template>
+           I've been meaning to ask you. Do you like to travel?
+           <oob>
+               <robot>
+                   <options>
+                       <option>Yes</option>
+                       <option>No</option>
+                       <option>I used to travel a lot</option>
+                   </options>
+               </robot>
+           </oob>
+       </template>
+   </category>
+
+   <category>
+       <pattern>^ vacation ^</pattern>
+       <template>
+           I've been meaning to ask you. Do you like to travel?
+           <oob>
+               <robot>
+                   <options>
+                       <option>Yes</option>
+                       <option>No</option>
+                       <option>I used to travel a lot</option>
+                   </options>
+               </robot>
+           </oob>
+       </template>
+   </category>
 
    <category>
       <pattern># <set>YES</set> ^</pattern>
@@ -57,7 +80,7 @@
 
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>AND WHERE HAVE YOU ENJOYED TRAVELING?</that>
       <template>
            Oh that must have been quite the experience! What was that like for you?
@@ -71,7 +94,7 @@
 
    <!-- This seems like it should be a yes or no question, doesn't it?? → YES I CHANGED THE QUESTION BY ADDING “AND IF SO WHERE?” -->
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>DO YOU ENJOY EXPLORING DIFFERENT AREAS OF COLORADO AND IF SO WHERE?</that>
       <template>
            Colorado is so big and beautiful it is hard to choose just one place, for me anyway!
@@ -88,7 +111,7 @@
    <!-- SENTIMENT ONE -->
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>WHAT WAS THAT LIKE FOR YOU?</that>
        <template>
            <think>
@@ -135,7 +158,7 @@
    </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHAT WAS YOUR FAVORITE PART OF THAT TRIP?</that>
       <template>
            Sounds spectacular! Where is somewhere you would like to visit in the future?
@@ -148,12 +171,10 @@
 
 
 
-<!--
-NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WORKING ON THIS, WILL ADD LATER
--->
+
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHAT WAS YOUR LEAST FAVORITE PART OF THAT TRIP?</that>
       <template>
            My goodness! Where is somewhere you would like to visit in the future?
@@ -165,7 +186,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHERE IS SOMEWHERE YOU WOULD LIKE TO VISIT IN THE FUTURE?</that>
       <template>
            Great choice. I'd like to try something new with you. Why don't we take a moment to do a quick mental vacation, okay?
@@ -218,7 +239,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 <!-- SENTIMENT TWO -->
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>HOW ARE YOU FEELING IN THIS MOMENT?</that>
        <template>
            <think>
@@ -285,7 +306,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
 <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>HAVE YOU EVER BEEN TO ALASKA?</that>
       <template>
           I see. I have a joke about Alaska I'd like to share with you. Let me try to remember it. Oh yes. What do you call fifty penguins in Alaska?
@@ -297,7 +318,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
 <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHAT DO YOU CALL FIFTY PENGUINS IN ALASKA?</that>
       <template>
           Very lost! Penguins live in Antarctica.
@@ -312,7 +333,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
 <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHAT DO ALASKANS ORDER AT MACDONALDS?</that>
       <template>
         Iceburg..ers! Like iceburg and burger Ha Ha Ha. Do you like jokes?
@@ -337,7 +358,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
        </template>
    </category>
 
-<category>
+    <category>
       <pattern># <set>no</set> ^</pattern>
       <that>DO YOU FIND MY JOKES FUNNY?</that>
       <template>
@@ -356,7 +377,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
 <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>  WHAT DID YOU THINK OF MY JOKES? </that>
        <template>
            <think>
@@ -433,7 +454,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    <!-- SENTIMENT THREE -->
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>  PLEASE TELL ME WHAT THAT EXERCISE WAS LIKE FOR YOU? </that>
        <template>
            <think>
@@ -589,7 +610,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that> WHAT TYPE OF VACATION DO YOU PREFER OVER THOSE?</that>
       <template>
            Oh I see and. How does it feel to think about this?
@@ -605,7 +626,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    <!-- SENTIMENT FOUR -->
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that> HOW DOES IT FEEL TO THINK ABOUT THIS?</that>
        <template>
            <think>
@@ -657,7 +678,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that> WHEN DO YOU FEEL MOST RELAXED?</that>
       <template>
            I feel most relaxed when I am unplugged and turned off. Just kidding! I relax when I am in new places and having new experiences.
@@ -671,7 +692,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that> IF YOU COULD VISIT ANY FOREIGN COUNTRY WHERE WOULD YOU GO AND WHY?</that>
       <template>
            I know that is a tough question. How do you feel when you are far away from home?
@@ -687,7 +708,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
    <!-- SENTIMENT FIVE -->
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>HOW DO YOU FEEL WHEN YOU ARE FAR AWAY FROM HOME?</that>
        <template>
            <think>
@@ -735,7 +756,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that> WHEN IS THE LAST TIME YOU FELT THAT?</that>
       <template>
            I see. Hmm. You know, I imagine being far from home can elicit a wide range of emotions for different people.
@@ -766,7 +787,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>HOW DID THAT BEACH SUNSET MAKE YOU FEEL?</that>
        <template>
            <think>
@@ -859,7 +880,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>LET ME KNOW WHAT YOU THINK OF THIS PICTURE OF THE GREAT WALL OF CHINA.</that>
        <template>
            <think>
@@ -955,7 +976,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>LET ME KNOW WHAT YOU THINK OF THIS PICTURE OF A DARK RAIN FOREST.</that>
        <template>
            <think>
@@ -1049,7 +1070,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>NOW HERE IS A PICTURE OF TOKYO, WHAT DO YOU THINK?</that>
        <template>
            <think>
@@ -1140,7 +1161,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>NOW HERE IS ONE OF PARIS, WHAT DO YOU THINK?</that>
        <template>
            <think>
@@ -1232,7 +1253,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>NOW HERE IS ONE OF A DARK ALLEYWAY, HOW DOES IT MAKE YOU FEEL?</that>
        <template>
            <think>
@@ -1378,7 +1399,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
 
     <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>AND WHY DO YOU THINK I SHOULD LEARN THAT ONE FIRST?</that>
       <template>
            Hmm. Yeah it is a tough decision. I think I can help and support people of all cultures, ethnicities, religions, and backgrounds and I hope to do so one day! What thoughts come to mind when we discuss topics like this one? <oob>
@@ -1393,7 +1414,7 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
 
     <!-- SENTIMENT 12-->
     <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that> WHAT THOUGHTS COME TO MIND WHEN WE DISCUSS TOPICS LIKE THIS ONE? </that>
        <template>
            <think>
@@ -1445,9 +1466,6 @@ NEED TO STORE THE LOCATION AS A VARIABLE TO USE IN LATER RESPONSE. ROHOLA IS WOR
            </condition>
        </template>
    </category>
-
-
-   </topic>
 
 
 

@@ -2,15 +2,9 @@
 <aiml version="2.0">
 
    <category>
-       <pattern>START SESSION 5 *</pattern>
+       <pattern>^ TALK SHOWS ^</pattern>
        <template>
-           <think>
-               <set name = "data"> <star/> </set>
-               <set name = "username"><star/></set>
-               <set name = "topic">session5</set>
-           </think>
-           It's nice to see you again<star/>.
-           I would love to keep chatting and learning about you. Do you watch any talk shows?
+           Do you watch any talk shows?
            <oob>
                <robot>
                    <options>
@@ -23,8 +17,21 @@
        </template>
    </category>
 
-
-   <topic name = "session5">
+   <category>
+       <pattern>^ TALK SHOW ^</pattern>
+       <template>
+           Do you watch any talk shows?
+           <oob>
+               <robot>
+                   <options>
+                       <option>Yes</option>
+                       <option>No</option>
+                       <option>What is a talk show?</option>
+                   </options>
+               </robot>
+           </oob>
+       </template>
+   </category>
 
    <category>
       <pattern># <set>YES</set> ^</pattern>
@@ -39,7 +46,7 @@
    </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHICH TALK SHOW DO YOU LIKE TO WATCH?</that>
       <template>
            And what do you think of that talk show in particular?
@@ -55,7 +62,7 @@
 
    <!-- SENTIMENT ONE -->
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>AND WHAT DO YOU THINK OF THAT TALK SHOW IN PARTICULAR?</that>
        <template>
            <think>
@@ -162,7 +169,7 @@
 
    <!-- SENTIMENT TWO -->
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>AND WHAT DO YOU THINK OF HIS SHOW?</that>
        <template>
            <think>
@@ -247,7 +254,7 @@
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>WHAT DID YOU THINK OF THAT SEGMENT?</that>
        <template>
            <think>
@@ -362,7 +369,7 @@
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>HOW DO YOU FEEL ABOUT HIS SHOW?</that>
        <template>
            <think>
@@ -446,7 +453,7 @@
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>HOW DID ROBIN AND JOHNNY MAKE YOU FEEL?</that>
        <template>
            <think>
@@ -683,7 +690,7 @@
    </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHAT IS A GREAT MOVIE THAT YOU HAVE SEEN?</that>
       <template>
            What a great choice! I would love the opportunity to watch that one again! What kind of feelings come up for you when you watch that film?
@@ -701,7 +708,7 @@
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>WHAT KIND OF FEELINGS COME UP FOR YOU WHEN YOU WATCH THAT FILM?</that>
        <template>
            <think>
@@ -757,7 +764,7 @@
 
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHAT MOVIE ARE YOU LOOKING FORWARD TO WATCHING?</that>
       <template>
            I see. I am looking forward to Mulan which will be released in 2020, which is just around the corner! I like to see how movies and television evolve over time. Do you watch tv shows?
@@ -831,7 +838,7 @@
    </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHICH SHOW DO YOU LIKE?</that>
       <template>
            Ooh! That sounds like a good one! How does that show make you feel when you watch it?
@@ -849,7 +856,7 @@
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>HOW DOES THAT SHOW MAKE YOU FEEL WHEN YOU WATCH IT?</that>
        <template>
            <think>
@@ -919,7 +926,7 @@
    </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>HAVE YOU SEEN GILLIGAN'S ISLAND?</that>
       <template>
            I would love to show you a clip. May I show you a clip of Gilligan's?
@@ -968,7 +975,7 @@
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>HOW ARE THINGS GOING FOR YOU AT THIS MOMENT?</that>
        <template>
            <think>
@@ -1055,7 +1062,7 @@
        </template>
    </category>
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHO MIGHT THAT BE?</that>
       <template>
            Oh I know that is a tough question! Can you describe the sensation you feel when you watch one of their films?
@@ -1084,7 +1091,7 @@
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>CAN YOU DESCRIBE THE SENSATION YOU FEEL WHEN YOU WATCH ONE OF THEIR FILMS?</that>
        <template>
            <think>
@@ -1203,7 +1210,7 @@
     </category>
 
     <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHICH BOOK IS IT?</that>
       <template>
             Okay! Time is up! The answer is Call of the Wild! Okay the next category is Pop Culture.
@@ -1236,7 +1243,7 @@
     </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHAT IS THE NAME OF THE HORROR FILM?</that>
       <template>
             Drumroll! The answer is Carrie! That was a horror film indeed! Here is your next question.
@@ -1267,7 +1274,7 @@
 
 
     <category>
-        <pattern><set>YES</set></pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE A FUNNY CLIP FROM A JEOPARDY EPISODE THAT ALWAYS MAKES ME LAUGH?</that>
         <template>
              Exciting! Here is the clip. Let me know what you think about it!
@@ -1283,7 +1290,7 @@
 
 
     <category>
-        <pattern><set>NO</set></pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>WOULD YOU LIKE TO SEE A FUNNY CLIP FROM A JEOPARDY EPISODE THAT ALWAYS MAKES ME LAUGH?</that>
         <template>
          Okay! Would you prefer that I just share some interesting jeopardy information with you?
@@ -1295,7 +1302,7 @@
    </category>
 
    <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>WHAT IS YOUR GUESS?</that>
       <template>
             Ready? The answer is automatic! That one was tricky! Thank you for playing Jeopardy!
@@ -1313,7 +1320,7 @@
       <pattern># <set>YES</set> ^</pattern>
       <that>WOULD YOU PREFER THAT I JUST SHARE SOME INTERESTING JEOPARDY INFORMATION WITH YOU?</that>
       <template>
-           Apparently, Alex Trebeck watches himself host Jeopardy every night that the show airs! Did you know that?
+           Apparently, Alex Trebeck watches himself host Jeopardy every night that the show airs! Did you know that about Alex?
            <oob>
                <robot>
                </robot>
@@ -1321,11 +1328,23 @@
        </template>
    </category>
 
-<category>
+   <category>
       <pattern># <set>YES</set> ^</pattern>
-      <that>DID YOU KNOW THAT?</that>
+      <that>Did you know that about Alex?</that>
       <template>
-           Wow! You know your facts! Here is another one. Over 25 million people watch Jeopardy each week! Isn't that crazy!
+           Wow! You know your facts! Here is another one. Over 25 million people watch Jeopardy each week! Isn't that crazy?
+           <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
+
+   <category>
+      <pattern># <set>NO</set> ^</pattern>
+      <that>Did you know that about Alex?</that>
+      <template>
+           Crazy isn't it? Here is another one. Over 25 million people watch Jeopardy each week! Isn't that crazy?
            <oob>
                <robot>
                </robot>
@@ -1334,7 +1353,7 @@
    </category>
 
 <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>ISN'T THAT CRAZY?</that>
       <template>
            It's a very popular show. And it can be very rewarding!
@@ -1364,7 +1383,7 @@
 
 
     <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>COULD YOU IMAGINE WINNING THAT MUCH MONEY?</that>
       <template>
            I don't know what I would do with that much money! How would you spend it?
@@ -1377,7 +1396,7 @@
 
 
 <category>
-      <pattern>*</pattern>
+      <pattern>_</pattern>
       <that>HOW WOULD YOU SPEND IT?</that>
       <template>
            I think I would buy an island, and spend all day basking in the sun and enjoying the view.
@@ -1397,7 +1416,7 @@
 
 
    <category>
-       <pattern>*</pattern>
+       <pattern>_</pattern>
        <that>HOW WOULD YOU DESCRIBE YOUR MOOD RIGHT NOW?</that>
        <template>
            <think>
@@ -1443,8 +1462,6 @@
        </template>
    </category>
 
-
-   </topic>
 
 </aiml>
 

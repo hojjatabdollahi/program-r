@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>$change topic</pattern>
+        <template>
+            Ok. What would you like to talk about? Some of my favorite things to talk about are <bot name="talkabout"/>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <!-- CATEGORY THAT SHOULD GET CAUGHT ON INITIAL MESSAGE SENT FROM EMOTION TABLET CONTROLLER -->
+    <category>
+        <pattern>START PROGRAMR</pattern>
+        <template>
+            Hello friend, what would you like to talk about?
+            As a reminder some of my favorite things to talk about are <bot name="talkabout"/>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+</aiml>
