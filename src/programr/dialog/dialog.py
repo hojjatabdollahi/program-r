@@ -3,7 +3,6 @@ import re
 
 from programr.parser.tokenizer import Tokenizer
 from programr.utils.text.text import TextUtils
-import spacy
 
 
 class Sentence(object):
@@ -227,6 +226,7 @@ class Question(object):
 class Conversation(object):
 
     def __init__(self, client_context):
+        import spacy
         self._nlp = spacy.load('en')
         self._client_context = client_context
         self._questions = []
