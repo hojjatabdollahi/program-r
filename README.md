@@ -5,9 +5,9 @@ Artificial Intelligence Markup Language, or AIML for short. This project was ini
 
 Program R is fully cross platform, running on
 
-- Mac OSX
 - Linux
 - Windows
+- Mac OSX
 
 
 ## Installation
