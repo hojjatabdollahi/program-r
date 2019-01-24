@@ -61,6 +61,7 @@ class NLTKTokenizer(Tokenizer):
 
     def __init__(self):
         super().__init__()
+        self.split_chars = ' '
 
     def tokenize(self, text):
         tokens_text = word_tokenize(text)

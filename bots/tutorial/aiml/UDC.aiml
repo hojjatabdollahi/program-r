@@ -9,34 +9,19 @@
     <!-- as adopted by the ALICE A.I. Foundation.  -->
     <!-- Last modified 11/28/2011 -->
     <!-- -->
-    <category>
-        <pattern>*</pattern>
-        <template>
-            <srai>RANDOM PICKUP LINE</srai>
-            <think>
-                <set name="it"><set name="topic"><person/></set></set>
 
-            </think>
-        </template>
-    </category>
-    <category>
-        <pattern>RANDOM PICKUP LINE</pattern>
-        <template>
-            <random>
-                <li>You have a way of putting others at ease. <oob><robot></robot></oob></li>
 
-            </random>
-        </template>
-    </category>
 
 
     <category>
-        <pattern>PUSH dddd</pattern>
+        <pattern>Hello *</pattern>
         <template>
-            this is the end.
+            Ho There
             <oob><robot></robot></oob>
         </template>
     </category>
+
+
 </aiml>
 
 
