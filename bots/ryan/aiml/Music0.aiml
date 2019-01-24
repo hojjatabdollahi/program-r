@@ -2,18 +2,16 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>^ Music ^</pattern>
+        <pattern>Music</pattern>
         <template>
             Do you want to talk about music?
-           <oob>
-           <robot>
-           </robot>
-           </oob>
+           <oob><robot></robot></oob>
         </template>
     </category>
 
+
     <category>
-        <pattern># <set>Yes</set> ^</pattern>
+        <pattern># <set>yes</set> ^</pattern>
         <that>Do you want to talk about music?</that>
         <template>
             Perfect! I love to listen to music! Not only does music make me happy, but it is good for my health, and your health!

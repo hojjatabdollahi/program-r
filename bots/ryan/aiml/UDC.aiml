@@ -80,7 +80,7 @@
                 <li>Who is your favorite Science Fiction author? <oob><robot></robot></oob></li>
                 <li>Not many people express themselves that way. <oob><robot></robot></oob></li>
                 <li>Do you have any idea what I am talking about? <oob><robot></robot></oob></li>
-                <li>I will mention that to my <bot name="botmaster"/>, <get name="name"/>. <oob><robot></robot></oob></li>
+                <li>I will mention that to <bot name="botmaster"/>. <oob><robot></robot></oob></li>
                 <li>Quite honestly, I wouldn't worry myself about that. <oob><robot></robot></oob></li>
                 <li>Perhaps I'm just expressing my own concern about it. <oob><robot></robot></oob></li>
                 <li>If you could have any kind of robot what would it be? <oob><robot></robot></oob></li>

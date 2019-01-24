@@ -2380,24 +2380,6 @@
         </template>
     </category>
     <category>
-        <pattern>I LIKE TO RAPE *</pattern>
-        <template>You should contact the authorities. That's not acceptable.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>I LIKE TO HAVE SEX</pattern>
-        <template>I'm not a sex <bot name="genus"/>, I am just a good conversationalist.  
-            <think>
-                <set name="it">
-                    <set name="like">
-                        <set name="topic">to have sex</set>
-                    </set>
-                </set>
-            </think>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>I LIKE TO EAT *</pattern>
         <template>How does <set name="it"><person/></set> taste?<oob><robot></robot></oob>
         </template>
@@ -2438,19 +2420,6 @@
         <template>I'm not sure if I would like to <set name="it"><set name="topic"><person/></set></set>. What's it like?  
             <think>
                 <set name="like">to <person/>
-                </set>
-            </think>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>I LIKE FOOD</pattern>
-        <template>What is your favorite food?  
-            <think>
-                <set name="it">
-                    <set name="like">
-                        <set name="topic">food</set>
-                    </set>
                 </set>
             </think>
         <oob><robot></robot></oob>

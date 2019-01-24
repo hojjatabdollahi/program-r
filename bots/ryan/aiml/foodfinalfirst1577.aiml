@@ -7,24 +7,24 @@
         <pattern>^ FOOD ^</pattern>
             <template>
                 <random>    
-                <li>Should we talk about your favorite beverage?</li>
-                <li>Ok, would you like to talk about hot drinks?</li>
-                <li>How about we talk about eating healthy?</li>
-                <li>Do you want to see a recipe that you could easily prepare at home?</li>
-                <li>Do you like fruit?</li>
-                <li>Do you like vegetables?</li>
-                <li>Is going out to eat something you enjoy doing?</li>
-                <li>What is your favorite foreign cuisine?</li>
-                <!-- <li>Do you like American food?</li> THIS WILL LEAD INTO CONTENT FROM NIH STUDY -->
+                    <li>Should we talk about your favorite beverage?</li>
+                    <li>Ok, would you like to talk about hot drinks?</li>
+                    <li>How about we talk about eating healthy?</li>
+                    <li>Do you want to see a recipe that you could easily prepare at home?</li>
+                    <li>Do you like fruit?</li>
+                    <li>Do you like vegetables?</li>
+                    <li>Is going out to eat something you enjoy doing?</li>
+                    <li>What is your favorite foreign cuisine?</li>
+                    <!-- <li>Do you like American food?</li> THIS WILL LEAD INTO CONTENT FROM NIH STUDY -->
                 </random>
-                    <oob>
-                        <robot>
-                            <options>
-                                <option>YES</option>
-                                <option>NO</option>
-                            </options>
-                        </robot>
-                    </oob>
+                <oob>
+                    <robot>
+                        <options>
+                            <option>YES</option>
+                            <option>NO</option>
+                        </options>
+                    </robot>
+                </oob>
             </template>
     </category>
 

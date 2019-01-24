@@ -653,7 +653,7 @@
 
 
     <category>
-        <pattern><set>YES</set> I HAVE A *</pattern>
+        <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU HAVE PETS?</that>
         <template>
             Wow that is so cool. I love <star/>s How would you describe your pet?
