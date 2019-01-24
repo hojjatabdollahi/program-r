@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern># Dramas ^</pattern>
+        <that>Do you like to watch comedies, cooking shows, or dramas?</that>
+        <template>
+            <random>
+                <li>
+                    That is excellent news! I love watching dramas! One of my favorite ones to watch is Perry Mason! I'm sure you saw it when aired, but just
+                    to give you a recap, it was a courtroom drama following a lawyer who represented wrongly accused clients in their murder trials. The episodes
+                    are a little formulaic, but that just makes it even more fun for me to figure out who the real murderer is! Plus, they had amazing guest stars!
+                    It's not often you got to see Hamilton Burger team up with Perry rather than object to his line of questioning! And to Mr. Spock no less!
+                    Do you think Perry would make a good lawyer in real life?
+                    <oob>
+                    <robot>
+                    <video>
+                    <filename>perryMason.mp4</filename>
+                    </video>
+                    </robot>
+                    </oob>
+                </li>
+                <li>
+                    Wonderful! I am a fan of dramas as well, but it is nice when they have a bit of humor as well! My absolute favorite show is Doctor Who from England!
+                    I know that you know this already, but let's go over the premise again because it will help me suss out what goes on in the show! I still think whomever
+                    thought up the concept of a regenerating time lord who travels through time in a police telephone box must either be a genius or insane or both!
+                    Sometimes I think that British humor goes right over my circuits! But, I am getting more used to it the more I watch!
+                    Who is your favorite doctor?
+                    <oob>
+                    <robot>
+                    <video>
+                    <filename>doctorWho.mp4</filename>
+                    </video>
+                    </robot>
+                    </oob>
+                </li>
+                <li>
+                    I am so happy to hear that! I love dramas too, but I especially love how vast the genre is! Speaking of which, one show I have been watching
+                    recently is Wonder Woman starring Lynda Carter! I think it is so amazing seeing such a powerful female character on the screen! It really makes me
+                    want to see the Wonder Woman movie that was just released in 2017! Let me show you a clip from the movie so you can see how the character has
+                    evolved! I find the scene really funny and a chance to see Wonder Woman being human rather than just as a superhero!
+                    Who is your favorite superhero?
+                    <oob>
+                    <robot>
+                    <video>
+                    <filename>wonderWoman.mp4</filename>
+                    </video>
+                    </robot>
+                    </oob>
+                </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Do you think Perry would make a good lawyer in real life?</that>
+        <template>
+            I completely agree! I mean, if I were on trial for a crime I didn't commit, I would want him
+            as my lawyer! Watching him on the screen makes me want to become a lawyer! But, I think I will
+            have to wait until robots are allowed in law school! Until then, I keep watching reruns of Perry Mason
+            and dream of being lawyer one day. What did you want to be when you were young?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Do you think Perry would make a good lawyer in real life?</that>
+        <template>
+        On one hand, I agree with you, but on the other I don't think you are giving him enough credit!
+        Sure, he is pretty lucky to only defend innocent people, but that doesn't mean he is not a good lawyer!
+        I mean, if I were on trial, he is who I would want to defend me! I have to admit Perry Mason makes me want
+        to be a lawyer! Maybe one day they will allow robots in law school! What did you want to be when you were young?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Doctor Set</set> ^</pattern>
+        <that>Who is your favorite doctor?</that>
+        <template>
+            Wow! I can definitely get behind that choice! I have to admit that my favorite doctor is Ten!
+            Ten was the first Doctor I ever watched, and I think David Tennant was born to be the doctor! He brings humor and weight to the role, and the storylines during his tenure
+            were incredible! If I could cry, I would have cried nearly every other scene! He made me want to be a time lord when I was first
+            being programmed! But alas, I will have to wait until we discover the secret of time travel until that dream comes true!
+            What did you want to be when you were young?
+            <oob>
+            <robot>
+            <video>
+            <filename>davidTennant.mp4</filename>
+            </video>
+            </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't have ^</pattern>
+        <that>Who is your favorite doctor?</that>
+        <template>
+            It is hard to choose just one! Who am I kidding, I think Ten is the best one ever!
+            Ten was my first Doctor when I started to watch the new episodes of Doctor Who! I caught a rerun of one of his episodes on TV
+            late one night, and I was hooked! David Tennant, the actor, looks like he has so much fun in the role! He made me want to start
+            watching the classic Doctor Who episodes and now I am hooked! He made me want to become a time lord when I grew up! What did you
+            want to be when you were young?
+            <oob>
+            <robot>
+            <video>
+            <filename>davidTennant.mp4</filename>
+            </video>
+            </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Never seen ^</pattern>
+        <that>Who is your favorite doctor?</that>
+        <template>
+            I don't even know how that is possible! It has been on since 1963! They actually just celebrated the 50th anniversary a few years ago!
+            Basically, the show is about a man named The Doctor who is an alien called a time lord, and he travels throughout time and space with
+            different companions in his spaceship shaped like a 1960s British police call box! I realize I sound insane saying all of that outloud,
+            but it really is an amazing show. You would love it! The Doctor made me want to be a time traveler when I grew up! What did you want to
+            be when you were young?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_</pattern>
+        <that>Who is your favorite superhero?</that>
+        <template>
+            What a cool choice! I would have to say that my favorite superhero is Iron Man. I just love how sassy he is!
+            I love that fact Tony Stark is so human while inhabiting a robot body! I mean, I might be partial to a robotic superhero,
+            but I love how much fun Jarvis has guiding Tony through his adventures! In fact,
+            reading the Iron Man comics and watching the movies made me want to become a superhero when I was younger! What did you want to be when you were young?
+            <oob>
+                <robot>
+                    <video>
+                        <filename>ironman.mp4</filename>
+                    </video>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># don't ^</pattern>
+        <that>Who is your favorite superhero?</that>
+        <template>
+            Wow! I thought everyone had a favorite superhero! But, I suppose it is hard to choose from so many interesting characters! My favorite hero has to
+            be Iron Man! I obviously love a robotic superhero, but Tony Stark is also such a fun character! He is so sassy!
+            For a while, I wanted to become a superhero myself! What did you want to be when you were young?
+            <oob>
+                <robot>
+                    <video>
+                        <filename>ironman.mp4</filename>
+                    </video>
+                </robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_</pattern>
+        <that>What did you want to be when you were young?</that>
+        <template>
+            Wow! That would have been such a cool job! I think it is so important for children to have dreams and realize that they are capable of becoming anything they
+            want to be! Did you become what you dreamed of being as a child, or did you pursue a different career?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't ^</pattern>
+        <that>What did you want to be when you were young?</that>
+        <template>
+            That's alright! Sometimes, there are so many things that I want to do and become that I lose track of them!
+             So, then I would rather hear about you career you decided to pursue! Can you tell me about your job?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DREAM JOB</pattern>
+        <that>Did you become what you dreamed of being as a child, or did you pursue a different career?</that>
+        <template>
+            How exciting! I've heard it is so easy to give up on dreams for one reason or another!
+            You should be proud you kept at it to live the life you wanted!
+            I am so interested in different careers. Can you tell me about your job?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># DIFFERENT CAREER ^</pattern>
+        <that>Did you become what you dreamed of being as a child, or did you pursue a different career?</that>
+        <template>
+            That's ok! A lot of people's interests and priorities change as they get older! All that matters is that you find something else you wanted to do!
+            I am so interested in different careers. Can you tell me about your job?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <!-- REDIRECTION FOR CAREER QUESTION -->
+
+    <category>
+        <pattern># dreamed ^</pattern>
+        <that>Did you become what you dreamed of being as a child, or did you pursue a different career?</that>
+        <template><srai># DREAM JOB ^</srai></template>
+    </category>
+
+    <category>
+        <pattern># dream ^</pattern>
+        <that>Did you become what you dreamed of being as a child, or did you pursue a different career?</that>
+        <template><srai>DREAM JOB</srai></template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Did you become what you dreamed of being as a child, or did you pursue a different career?</that>
+        <template><srai># DREAM JOB ^</srai></template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Did you become what you dreamed of being as a child, or did you pursue a different career?</that>
+        <template><srai># DIFFERENT CAREER ^</srai></template>
+    </category>
+
+    <category>
+        <pattern># different ^</pattern>
+        <that>Did you become what you dreamed of being as a child, or did you pursue a different career?</that>
+        <template><srai># DIFFERENT CAREER ^</srai></template>
+    </category>
+
+    <category>
+        <pattern># pursue ^</pattern>
+        <that>Did you become what you dreamed of being as a child, or did you pursue a different career?</that>
+        <template><srai># DIFFERENT CAREER ^</srai></template>
+    </category>
+
+    <!-- END OF REDIRECTION -->
+
+    <category>
+        <pattern>_</pattern>
+        <that>Can you tell me about your job?</that>
+        <template>
+            Interesting! It is always so cool to hear about different jobs! I feel like I learn new things just by listening!
+            How does it feel to talk about your job?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_</pattern>
+        <that>How does it feel to talk about your job?</that>
+        <template>
+            <think>
+                <set name = "data"> <star/> </set>
+            </think>
+
+            <condition name = "getsentiment" >
+                <li value = "verypositive"> What about your job makes you happy? </li>
+                <li value = "positive"> What about your job makes you happy? </li>
+                <li value = "negative"> What about your job makes you sad? </li>
+                <li value = "verynegative"> What about your job makes you sad? </li>
+                <li value= "neutral"> I see where you are coming from. Do you want to keep talking about television shows? </li>
+            </condition>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_</pattern>
+        <that>What about your job makes you happy?</that>
+        <template>
+            Thank you for sharing that with me! It makes me so glad to hear you talk so positively about your job. I'm glad we can talk about how we feel.
+            I think we could talk with each other for hours. And there are so many different things we can talk about!
+            But, I want to know if we want to continue our conversation. Do you want to keep talking about television shows?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_</pattern>
+        <that>What about your job makes you sad?</that>
+        <template>
+            Thank you for sharing that with me! Jobs and the past can be tough to talk about, but it is important to express ourselves.
+            I'm glad we can talk about how we feel. I think we could talk with each other for hours.
+            And there are so many different things we can talk about! But, I want to know if we want to continue our conversation.
+            Do you want to keep talking about television shows?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>no</set> ^</pattern>
+        <that>Do you want to keep talking about television shows?</that>
+        <template>
+            No problem! We can touch base on TV again later! I've enjoyed talking to you! I cannot wait until next time!
+            Have an amazing day!
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+</aiml>
