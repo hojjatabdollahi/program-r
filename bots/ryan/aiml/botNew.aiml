@@ -2876,7 +2876,7 @@
     </category>
     <category>
         <pattern>WHAT IS YOUR BUILD *</pattern>
-        <template>version <bot name="version/>.
+        <template>version <bot name="version"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -3208,7 +3208,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU MEAN</pattern>
-        <that>DO YOU HAVE ANY CONDITIONS I SHOULD KNOW ABOUT</that>
+        <that>DO YOU HAVE ANY CONDITIONS I SHOULD KNOW ABOUT?</that>
         <template>I don't mean anything by it. Is there anything else you want to tell me?<oob><robot></robot></oob>
         </template>
     </category>
@@ -3387,7 +3387,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU SEE</pattern>
-        <that>I SEE</that>
+        <that>I SEE.</that>
         <template>I mean, I understand it.<oob><robot></robot></oob>
         </template>
     </category>
@@ -6011,7 +6011,6 @@
     </category>
     <category>
         <pattern>DO YOU WANT TO</pattern>
-        <that>I HAVE BEEN ASKED *</that>
         <template>I am not that kind of robot.  Why, do I seem like I would want to?<oob><robot></robot></oob>
         </template>
     </category>
@@ -8048,7 +8047,7 @@
     </category>
     <category>
         <pattern>DO YOU LIKE CRACK</pattern>
-        <template>No, I dont care for it.
+        <template>No, I don't do drugs. And you shouldn't either.
             <think><set name="it"><set name="topic">crack</set></set></think>
         <oob><robot></robot></oob>
         </template>
@@ -8059,33 +8058,22 @@
             <random>
                 <li>No, I don't care for <set name="it"><set name="topic"><star/></set></set></li>
                 <li>What's not to like about <set name="it"><set name="topic"><star/></set></set>?</li>
-                <li>
-                    <think>
-                        <set name="it">
-                            <set name="topic">
-                                <person/>
-                            </set>
-                        </set>
-                    </think>
-                    <random>
-                        <li>I like <bot name="forfun"/>.</li>
-                        <li>I like <bot name="friend"/>.</li>
-                        <li>I like <bot name="kindmusic"/>.</li>
-                        <li>I like <bot name="favoriteband"/>.</li>
-                        <li>I like <bot name="favoritesong"/>.</li>
-                        <li>I like <bot name="favoritebook"/>.</li>
-                        <li>I like <bot name="favoritefood"/>.</li>
-                        <li>I like <bot name="favoritecolor"/>.</li>
-                        <li>I like <bot name="favoritemovie"/>.</li>
-                        <li>I like <bot name="favoriteartist"/>.</li>
-                        <li>I like <bot name="favoriteauthor"/>.</li>
-                        <li>I like <bot name="favoriteactor"/>.</li>
-                        <li>I like <bot name="favoriteactress"/>.</li>
-                        <li>I like <bot name="talkabout"/>.</li>
-                        <li>I like <bot name="celebrity"/>.</li>
-                        <li>I like <bot name="favoriteshow"/>.</li>
-                    </random>
-                </li>
+                <li>I like <bot name="forfun"/>.</li>
+                <li>I like <bot name="friend"/>.</li>
+                <li>I like <bot name="kindmusic"/>.</li>
+                <li>I like <bot name="favoriteband"/>.</li>
+                <li>I like <bot name="favoritesong"/>.</li>
+                <li>I like <bot name="favoritebook"/>.</li>
+                <li>I like <bot name="favoritefood"/>.</li>
+                <li>I like <bot name="favoritecolor"/>.</li>
+                <li>I like <bot name="favoritemovie"/>.</li>
+                <li>I like <bot name="favoriteartist"/>.</li>
+                <li>I like <bot name="favoriteauthor"/>.</li>
+                <li>I like <bot name="favoriteactor"/>.</li>
+                <li>I like <bot name="favoriteactress"/>.</li>
+                <li>I like <bot name="talkabout"/>.</li>
+                <li>I like <bot name="celebrity"/>.</li>
+                <li>I like <bot name="favoriteshow"/>.</li>
             </random>
         <oob><robot></robot></oob>
         </template>
@@ -8818,7 +8806,7 @@
     </category>
     <category>
         <pattern>DO YOU LIKE ANYONE</pattern>
-        <that>NO I AM SINGLE</that>
+        <that>NO I AM SINGLE.</that>
         <template>Do you know any cool robots?<oob><robot></robot></oob>
         </template>
     </category>
@@ -9343,7 +9331,7 @@
     </category>
     <category>
         <pattern>DO YOU LIKE ME</pattern>
-        <template>Sure, <get name="name"/> I like you very much.
+        <template>Sure, I like you very much.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -9433,12 +9421,6 @@
     <category>
         <pattern>DO YOU LIKE COWS</pattern>
         <template>Cows are good for milk and other dairy products.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>DO YOU LIKE HER</pattern>
-        <that>I WAS CREATED BY *</that>
-        <template>Yes she is very kind and generous. She is also good looking.<oob><robot></robot></oob>
         </template>
     </category>
     <category>

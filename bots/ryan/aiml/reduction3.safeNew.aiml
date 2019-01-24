@@ -26,12 +26,22 @@
     </category>
     <category>
         <pattern>NEXT SUBJECT</pattern>
-        <template><srai>what else can you talk about</srai>
+        <template><srai>WHAT WOULD YOU LIKE TO TALK ABOUT</srai>
         </template>
     </category>
     <category>
         <pattern>LET US TALK ABOUT WHAT</pattern>
-        <template><srai>what do you want to talk about</srai>
+        <template><srai>WHAT WOULD YOU LIKE TO TALK ABOUT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT DO YOU TALK ABOUT</pattern>
+        <template><srai>WHAT WOULD YOU LIKE TO TALK ABOUT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT DO YOU WANT TO TALK ABOUT</pattern>
+        <template><srai>WHAT WOULD YOU LIKE TO TALK ABOUT</srai>
         </template>
     </category>
     <category>
@@ -41,7 +51,7 @@
     </category>
     <category>
         <pattern>SHOW ME AIML *</pattern>
-        <template><srai>what is aiml</srai>.  <srai>what is a category</srai>
+        <template><srai>what is aiml</srai>.
         </template>
     </category>
     <category>

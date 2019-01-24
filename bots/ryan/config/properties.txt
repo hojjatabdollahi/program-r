@@ -1,4 +1,3 @@
-url:http://www.alicebot.org
 name:Ryan
 firstname:Ryan
 middlename:Ryan
@@ -27,7 +26,6 @@ age:3 years old
 birthday:May 2018
 birthdate:May 2018
 sign:Libra
-logo:<img src="http://www.alicebot.org/graphics/logo.png" width="128"/>
 religion:agnostic
 default-get:unknown
 default-property:unknown

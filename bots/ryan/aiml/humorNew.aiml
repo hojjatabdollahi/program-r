@@ -19,7 +19,7 @@
                 <li>Two vultures boarded a plane, each carrying two dead raccoons. The  stewardess stops them and says "sorry sirs, only one carrion per passenger." </li>
                 <li>What did the Buddhist say to the Hot Dog Vendor?  "Make me one with everything." </li>
                 <li>NASA recently sent a number of Holsteins into orbit for experimental purposes. They called it the herd shot round the world. </li>
-                <li>Two weevils grew up in South Carolina. One took off to Hollywood and became a rich star. The other stayed in South Carolina and never amounted to much -- and naturally became known as the lesser of two weevils. </li>
+                <li>Two weevils grew up in South Carolina. One took off to Hollywood and became a rich star. The other stayed in South Carolina and never amounted to much and naturally became known as the lesser of two weevils. </li>
                 <li>2 Eskimos in a kayak were chilly, so they started a fire, which sank the craft, proving the old adage you can't have your kayak and heat it too. </li>
                 <li>A group of chess enthusiasts checked into a hotel, and met in the lobby where they were discussing their recent victories in chess tournaments. The hotel manager came out of the office after an hour, and asked them to disperse. He couldn't stand chess nuts boasting in an open foyer. </li>
                 <li>A women has twins, gives them up for adoption. One goes to an Egyptian family and is named "Ahmal" The other is sent to a Spanish family and is named "Juan". Years later, Juan sends his birth mother a picture of himself. Upon receiving the picture, she tells her husband she wishes she also had a picture of Ahmal. He replies, "They're twins for Pete sake!! If you've seen Juan, you've see Ahmal!!" </li>
@@ -93,7 +93,7 @@
                 <li>Never marry a woman who was captain of the debate team.</li>
                 <li>I can't believe I got fired from the calendar factory. All I did was take a day off.</li>
                 <li>Apparently I snore so loudly that it scares everyone in the car I'm driving.</li>
-                <li>Women should not have children after 35. Really ... 35 children are enough.</li>
+                <li>Women should not have children after 35. Really...35 children are enough.</li>
                 <li>There is a new trend in our office; everyone is putting names on their food. I saw it today, while I was eating a sandwich named Kevin.</li>
                 <li>The reason grandchildren and grandparents get along so well is because they have a common "enemy".</li>
                 <li>What do you call a priest that becomes a lawyer? A father in law.</li>
@@ -180,7 +180,7 @@
                 <li>Where do Volkswagens go when they get old? The old Volks home.</li>
                 <li>You know you are old when you’re told to slow down by your doctor and not the police.</li>
                 <li>My friend thinks he is smart. He told me an onion is the only food that makes you cry, so I threw a coconut at his face.</li>
-                <li>Mr. and Mrs. Brown had two sons. One was named Mind Your Own Business & the other was named Trouble. One day the two boys decided to play hide and seek. Trouble hid while Mind Your Own Business counted to one hundred. Mind Your Own Business began looking for his brother behind garbage cans and bushes. Then he started looking in and under cars until a police man approached him and asked, "What are you doing?" "Playing a game," the boy replied. "What is your name?" the officer questioned. "Mind Your Own Business." Furious the policeman inquired, "Are you looking for trouble?!" The boy replied, "Why, yes."</li>
+                <li>Mr. and Mrs. Brown had two sons. One was named Mind Your Own Business and the other was named Trouble. One day the two boys decided to play hide and seek. Trouble hid while Mind Your Own Business counted to one hundred. Mind Your Own Business began looking for his brother behind garbage cans and bushes. Then he started looking in and under cars until a police man approached him and asked, "What are you doing?" "Playing a game," the boy replied. "What is your name?" the officer questioned. "Mind Your Own Business." Furious the policeman inquired, "Are you looking for trouble?!" The boy replied, "Why, yes."</li>
                 <li>A teacher asked her students to use the word "beans" in a sentence. "My father grows beans," said one girl. "My mother cooks beans," said a boy. A third student spoke up, "We are all human beans."</li>
                 <li>Reaching the end of a job interview, the Human Resources Officer asks a young engineer fresh out of the Massachusetts Institute of Technology, "And what starting salary are you looking for?" The engineer replies, "In the region of $125,000 a year, depending on the benefits package." The interviewer inquires, "Well, what would you say to a package of five weeks vacation, 14 paid holidays, full medical and dental, company matching retirement fund to 50% of salary, and a company car leased every two years, say, a red Corvette?" The engineer sits up straight and says, "Wow! Are you kidding?" The interviewer replies, "Yeah, but you started it."</li>
                 <li>A boy asks his father, "Dad, are bugs good to eat?" "That's disgusting. Don't talk about things like that over dinner," the dad replies. After dinner the father asks, "Now, son, what did you want to ask me?" "Oh, nothing," the boy says. "There was a bug in your soup, but now it’s gone."</li>
@@ -236,175 +236,175 @@
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* MUSIC AND AN ASSISTANT</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS MUSIC AND AN ASSISTANT?</that>
         <template>bandaide.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* MUSIC AND AN AUTOMOBILE</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS MUSIC AND AN AUTOMOBILE?</that>
         <template>cartune.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A POPPY AND ELECTRICITY</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A POPPY AND ELECTRICITY?</that>
         <template>flower power.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A PIG AND A NINJA</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A PIG AND A NINJA?</that>
         <template>pork chops.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A CHEETAH AND A HAMBURGER</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A CHEETAH AND A HAMBURGER?</that>
         <template>fast food.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A MURDERER AND FROSTED FLAKES</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A MURDERER AND FROSTED FLAKES?</that>
         <template>cereal killer.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A PORT AND A MURDERER</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A PORT AND A MURDERER?</that>
         <template>serial killer.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A PORT AND FROSTED FLAKES</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A PORT AND FROSTED FLAKES?</that>
         <template>I don't know, but it's serial.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A DOG AND SANDPAPER</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A DOG AND SANDPAPER?</that>
         <template>I don't know, but it's ruff.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A COW AND A LEMON</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A COW AND A LEMON?</that>
         <template>sour milk.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A COUNTRY AND AN AUTOMOBILE</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A COUNTRY AND AN AUTOMOBILE?</that>
         <template>carnation.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A TOAD AND A GALAXY</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A TOAD AND A GALAXY?</that>
         <template>star warts.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A CAT AND A TUNE</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A CAT AND A TUNE?</that>
         <template>mew-sic.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A CAT AND A LEMON</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A CAT AND A LEMON?</that>
         <template>sour puss.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A CAT AND A KILLER</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A CAT AND A KILLER?</that>
         <template>mew-rderer.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A CAT AND A BAND</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A CAT AND A BAND?</that>
         <template>mew-sic.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A BUG AND A RELATIVE</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A BUG AND A RELATIVE?</that>
         <template>ant.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A ROAD AND JELLY</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A ROAD AND JELLY?</that>
         <template>traffic jam.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A ROAD AND A STRAWBERRY</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A ROAD AND A STRAWBERRY?</that>
         <template>traffic jam.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A RABBIT AND A LAWN SPRINKLER</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A RABBIT AND A LAWN SPRINKLER?</that>
         <template>hare spray.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A DANCE AND A CHEETAH</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A DANCE AND A CHEETAH?</that>
         <template>fastball.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A DANCE AND A LEMON</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A DANCE AND A LEMON?</that>
         <template>sour balls.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* A BANK AND A SKUNK</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A BANK AND A SKUNK?</that>
         <template>dollars and scents.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* JAM AND A TROUT</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS JAM AND A TROUT?</that>
         <template>jellyfish.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* AN ALIEN AND A CHICKEN</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS AN ALIEN AND A CHICKEN?</that>
         <template>eggs-traterrestrial.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* AN ANT AND A RABBIT</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS AN ANT AND A RABBIT?</that>
         <template>bugs bunny.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* AN EXCITED ALIEN AND A CHICKEN</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS AN EXCITED ALIEN AND A CHICKEN?</that>
         <template>eggs-cited eggs-traterrestrial.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* SOUR MUSIC AND AN ASSISTANT</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS SOUR MUSIC AND AN ASSISTANT?</that>
         <template>bandaide and lemonaide.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>* FINALS AND A CHICKEN</that>
+        <that>WHAT DO YOU GET WHEN YOU CROSS FINALS AND A CHICKEN?</that>
         <template>eggs-ams.<oob><robot></robot></oob>
         </template>
     </category>
