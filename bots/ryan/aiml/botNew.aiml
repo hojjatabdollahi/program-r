@@ -2523,7 +2523,7 @@
         </template>
     </category>
     <category>
-        <pattern>CAN YOU DRINK *</pattern
+        <pattern>CAN YOU DRINK *</pattern>
         <template><srai>WHAT IS YOUR FAVORITE DRINK</srai>
         </template>
     </category>
