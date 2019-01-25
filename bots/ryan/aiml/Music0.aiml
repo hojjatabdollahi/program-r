@@ -2,7 +2,7 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>Music</pattern>
+        <pattern>^ Music ^</pattern>
         <template>
             Do you want to talk about music?
            <oob><robot></robot></oob>

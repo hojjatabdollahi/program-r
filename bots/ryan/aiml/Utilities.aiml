@@ -2,7 +2,7 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>$change topic</pattern>
+        <pattern>$Change topic</pattern>
         <template>
             Ok. What would you like to talk about? Some of my favorite things to talk about are <bot name="talkabout"/>
             <oob><robot></robot></oob>
