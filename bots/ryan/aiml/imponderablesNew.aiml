@@ -10,7 +10,7 @@
     <!-- Last modified 10/5/2011 -->
     <!-- -->
     <category>
-        <pattern># IMPONDERABLES ^</pattern>
+        <pattern>IMPONDERABLES</pattern>
         <template>
             <random>
                 <li>Do fish ever sneeze?</li>

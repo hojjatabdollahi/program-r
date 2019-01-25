@@ -5,9 +5,9 @@ Artificial Intelligence Markup Language, or AIML for short. This project was ini
 
 Program R is fully cross platform, running on
 
-- Mac OSX
 - Linux
 - Windows
+- Mac OSX
 
 
 ## Installation
@@ -123,12 +123,13 @@ You should see the "linking successful" message.
 
 2- all templates should have the &lt;oob> tag except in the case where template has &lt;srai> tag. In this case, the template itself is just a pointer to another template and we don't need a separate robot tag.
 
+3- if you use nltk as the nlp backend you have to create a nltk_data folder inside lib directory or any other place of your interest and point to that in config.yaml file. Otherwise after the first run of the program it will download the required data in your home directory.
 ## Running
 
 Before running in windows you need to make sure that you have a "tmp" folder in the root of dive C:. This will keep track of
 log files. In linux the folder is /tmp and is already there so you don't need any configuration.
 
-There are different ways to run the programy based on your needs:
+There are different ways to run the programr based on your needs:
 
 ### Console run
 Here we run tutorial bot in console mode:

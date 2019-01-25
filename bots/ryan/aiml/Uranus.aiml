@@ -12,7 +12,7 @@
         </template>
     </category>
 
-        <category>
+    <category>
         <pattern># URANUS ^</pattern>
         <that>WHICH PLANET IS YOUR FAVORITE?</that>
         <template>

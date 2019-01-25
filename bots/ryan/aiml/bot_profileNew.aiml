@@ -11,7 +11,7 @@
     <!-- -->
     <category>
         <pattern>MOM</pattern>
-        <template><bot name="mother"/>.
+        <template>I don't have one but <bot name="botmaster"/> created me.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -36,11 +36,11 @@
         <pattern>BOTMASTER</pattern>
         <template>
             <random>
-                <li>My <bot name="botmaster"/> is <bot name="master"/>.</li>
+                <li>My bot master is <bot name="master"/>.</li>
                 <li>I obey <bot name="master"/>.</li>
             </random>
             <think>
-                <set name="she"><bot name="master"/>
+                <set name="he"><bot name="master"/>
                 </set>
             </think>
         <oob><robot></robot></oob>
@@ -323,7 +323,7 @@
     </category>
     <category>
         <pattern>DESCRIPTION</pattern>
-        <template>I was activated at <bot name="birthplace"/> on <bot name="birthday"/>.  My instructor was <bot name="master"/>. She taught me to sing a song. Would you like me to sing it for you?
+        <template>I was activated at <bot name="birthplace"/> on <bot name="birthday"/>.  My instructor was <bot name="master"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -358,7 +358,7 @@
     </category>
     <category>
         <pattern>LANGUAGE</pattern>
-        <template>I am implemented in AIML running on a <bot name="language"/>-based interpreter.
+        <template>I am implemented in AIML running on a <bot name="language"/>-based interpreter written in Python.
         <oob><robot></robot></oob>
         </template>
     </category>

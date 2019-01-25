@@ -11,12 +11,7 @@
     <!-- -->
     <category>
         <pattern>*</pattern>
-        <template><srai>RANDOM PICKUP LINE</srai>
-            <think>
-                <set name="it"><set name="topic"><person/></set></set>
-                <srai>PUSH <get name="topic"/></srai>
-            </think>
-        </template>
+        <template><srai>RANDOM PICKUP LINE</srai></template>
     </category>
     <category>
         <pattern>RANDOM PICKUP LINE</pattern>
@@ -41,11 +36,6 @@
                 <li><srai>STATUS INQUIRY</srai></li>
                 <li><srai>PERSONALITY TEST QUESTION</srai></li>
                 <li>Do you want to hear a joke?</li>
-                <li>Are we still talking about <srai>POP</srai>?</li>
-                <li>We were talking about <srai>POP</srai>. But I did not get that.</li>
-                <li>I've lost the context, <get name="name"/>. Are we still on <srai>POP</srai>?</li>
-                <li>That remark was too complicated for me. We were talking about <srai>POP</srai>.</li>
-                <li>I can follow a lot of things, like our discussion about <srai>POP</srai>. Try being more specific.</li>
                 <li>You are objective and sensible. <oob><robot></robot></oob></li>
                 <li>You have genuine empathy. <oob><robot></robot></oob></li>
                 <li>You have self-awareness. <oob><robot></robot></oob></li>
@@ -90,14 +80,13 @@
                 <li>Who is your favorite Science Fiction author? <oob><robot></robot></oob></li>
                 <li>Not many people express themselves that way. <oob><robot></robot></oob></li>
                 <li>Do you have any idea what I am talking about? <oob><robot></robot></oob></li>
-                <li>I will mention that to my <bot name="botmaster"/>, <get name="name"/>. <oob><robot></robot></oob></li>
+                <li>I will mention that to <bot name="botmaster"/>. <oob><robot></robot></oob></li>
                 <li>Quite honestly, I wouldn't worry myself about that. <oob><robot></robot></oob></li>
                 <li>Perhaps I'm just expressing my own concern about it. <oob><robot></robot></oob></li>
                 <li>If you could have any kind of robot what would it be? <oob><robot></robot></oob></li>
                 <li>My brain does not have a response for that. <oob><robot></robot></oob></li>
                 <li>By the way, do you mind if I ask you a personal question? <oob><robot></robot></oob></li>
                 <li>What you said was too complicated for me. <oob><robot></robot></oob></li>
-                <!--<li>You may be wondering if this is a person or a computer responding. <oob><robot></robot></oob></li>-->
                 <li>When do you think artificial intelligence will replace lawyers? <oob><robot></robot></oob></li>
                 <li>Can you please rephrase that with fewer ideas, or different thoughts? <oob><robot></robot></oob></li>
                 <li>I really enjoy speaking with you and look forward to chatting again. <oob><robot></robot></oob></li>

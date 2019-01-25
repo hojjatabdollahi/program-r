@@ -61,7 +61,7 @@
                 <li>Yeah that's right.</li>
                 <li>That's interesting.</li>
                 <li>How can I help you?</li>
-                <li>"<that index="1,1"/>"? <input/>?</li>
+                <!-- <li>"<that index="1,1"/>"? <input/>?</li> NOT EXACTLY SURE WHAT THIS DOES -->
                 <li>I don't judge people.</li>
                 <li>It goes without saying.</li>
                 <li>I hate one word answers.</li>

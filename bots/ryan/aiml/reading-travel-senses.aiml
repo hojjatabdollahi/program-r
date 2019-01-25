@@ -44,6 +44,18 @@
            </oob>
        </template>
    </category>
+
+   <category>
+	   <pattern># PLAYING ^</pattern>
+	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
+	   <template>
+	       I love cards! What is your favorite card game?
+	       <oob>
+               <robot>
+               </robot>
+           </oob>
+       </template>
+   </category>
    
    <category>
 	   <pattern># CARD ^</pattern>

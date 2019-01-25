@@ -41,7 +41,7 @@ bot:
     empty_string: YEMPTY
     exit_response: So long, and thanks for the fish!
     override_properties: true
-    emotive: false
+    emotive: true
 
     max_question_recursion: 1000
     max_question_timeout: 60
@@ -75,7 +75,7 @@ bot:
       port: 27017
       password: "password"
       root: "/home/rohola/mongodbtest-data"
-      name: "programr_test"
+      name: "programr"
       collection_name: "conversations"
 
 brain:
@@ -204,20 +204,20 @@ brain:
     nlp:
       classname: programr.nlp.nlp.NLP
 
-      nltk_data_dir: /home/rohola/Codes/Python/program-r/libs/nltk_data
+      nltk_data_dir: C:\Users\DreamFace\program-r\libs\nltk_data
 
       sentiment_analysis:
         method: corenlp
-        alpha: 0.5
+        alpha: 0.1
         positive_threshold: 0.2
         negative_threshold: -0.2
 
       tokenizer:
-        libname: spacy
+        libname: nltk
         split_chars: .
       #embedding
       sentence_segmentation:
-        libname: spacy
+        libname: nltk
 
       #embedding
       semantic_similarity:

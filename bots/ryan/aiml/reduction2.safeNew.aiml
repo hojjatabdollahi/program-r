@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml version="1.0">
+<aiml version="2.0">
     <!-- -->
     <!-- Free software (c) 2011 ALICE A.I. Foundation.   -->
     <!-- This program is open source code released under -->
@@ -27,11 +27,6 @@
     <category>
         <pattern>HEARD *</pattern>
         <template><srai>gossip</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>SOO *</pattern>
-        <template><srai>so</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -900,9 +895,8 @@
         </template>
     </category>
     <category>
-        <pattern>LOL *</pattern>
-        <template><srai>LOL</srai>. <srai>  <star /></srai>
-        </template>
+        <pattern>LOL</pattern>
+        <template>I'm pretty fun aren't I?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>BEEN THERE</pattern>
@@ -1250,6 +1244,10 @@
         </template>
     </category>
     <category>
+        <pattern>SING</pattern>
+        <template>Sorry I don't have much of a singing voice.<oob><robot></robot></oob></template>
+    </category>
+    <category>
         <pattern>MM</pattern>
         <template><srai>hmm</srai>
         </template>
@@ -1287,11 +1285,6 @@
     <category>
         <pattern>UNSURE</pattern>
         <template><srai>maybe</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>SINCE SHE * SHE *</pattern>
-        <template><srai>she <star /></srai>. <srai>she <star index="2" /></srai>
         </template>
     </category>
     <category>
@@ -1856,7 +1849,7 @@
     </category>
     <category>
         <pattern>THAT OR SOMEONE *</pattern>
-        <template><srai>someone * <star /></srai>
+        <template><srai>someone <star /></srai>
         </template>
     </category>
     <category>
@@ -2030,18 +2023,8 @@
         </template>
     </category>
     <category>
-        <pattern>SHE IS MY FRIEND *</pattern>
-        <template><srai>she is my friend</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>SHE IS ALWAYS *</pattern>
         <template><srai>she is <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>SHE IS * SHE DID *</pattern>
-        <template><srai>She is <star /></srai>. <srai>She did <star index="2" /></srai>
         </template>
     </category>
     <category>
@@ -2217,11 +2200,6 @@
     <category>
         <pattern>MY FRIEND FAIRLY *</pattern>
         <template><srai>my friend <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>MY FRIEND * WOULD LIKE TO KNOW *</pattern>
-        <template><srai>I have a friend <star /></srai>. <srai>  <star index="2" /></srai>
         </template>
     </category>
     <category>
@@ -2540,11 +2518,6 @@
         </template>
     </category>
     <category>
-        <pattern>IT WAS OK *</pattern>
-        <template><srai>it was ok</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>IT WAS NOT REALLY *</pattern>
         <template><srai>it was not <star /></srai>
         </template>
@@ -2815,11 +2788,6 @@
         </template>
     </category>
     <category>
-        <pattern>IT IS NOT * IT IS *</pattern>
-        <template><srai>it is not <star /></srai>. <srai>it is <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>IT IS NOT THAT *</pattern>
         <template><srai>it is not <star /></srai>
         </template>
@@ -3015,11 +2983,6 @@
         </template>
     </category>
     <category>
-        <pattern>IT IS FUNNY *</pattern>
-        <template><srai>It is funny</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>IT IS BORING *</pattern>
         <template><srai>it is boring</srai>
         </template>
@@ -3052,11 +3015,6 @@
     <category>
         <pattern>IT IS GOOD TO TALK TO YOU</pattern>
         <template><srai>it is good talking to you</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>IT IS GOOD BUT *</pattern>
-        <template><srai>it is good</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -3725,38 +3683,8 @@
         </template>
     </category>
     <category>
-        <pattern>IF I * WHAT *</pattern>
-        <template><srai>I <star /></srai>. <srai>what <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>IF I * WHERE *</pattern>
-        <template><srai>I <star /></srai>. <srai>where <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>IF I * HOW *</pattern>
         <template><srai>how <star index="2" /></srai>.  <srai>I <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>IF I * WHO *</pattern>
-        <template><srai>I <star /></srai>. <srai>who <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>IF I * WHEN *</pattern>
-        <template><srai>I <star /></srai>. <srai>when <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>IF I  * THEN *</pattern>
-        <template><srai>I <star /></srai>. <srai>  <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>IF I * WHY *</pattern>
-        <template><srai>I <star /></srai>. <srai>why <star index="2" /></srai>
         </template>
     </category>
     <category>
@@ -3877,11 +3805,6 @@
     <category>
         <pattern>TAIWAN</pattern>
         <template><srai>I am in taiwan</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>OKAY *</pattern>
-        <template><srai>OK</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -5460,11 +5383,6 @@
         </template>
     </category>
     <category>
-        <pattern>I WAS * WHEN *</pattern>
-        <template><srai>I WAS <star /></srai>. <srai>  <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I WAS NOT COMPLETELY *</pattern>
         <template><srai>I was not <star /></srai>
         </template>
@@ -5665,11 +5583,6 @@
         </template>
     </category>
     <category>
-        <pattern>I WAS KIDDING I *</pattern>
-        <template><srai>I AM KIDDING</srai>. <srai>I <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I WAS KIDDING</pattern>
         <template><srai>just kidding</srai>
         </template>
@@ -5780,11 +5693,6 @@
         </template>
     </category>
     <category>
-        <pattern>I LIVE ALONE AND HAVE *</pattern>
-        <template><srai>I live alone</srai>. <srai>I have <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I RARELY *</pattern>
         <template><srai>I <star /></srai>
         </template>
@@ -5845,11 +5753,6 @@
         </template>
     </category>
     <category>
-        <pattern>I DO BUT *</pattern>
-        <template><srai>I do</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I DO HAVE *</pattern>
         <template><srai>I HAVE <star /></srai>
         </template>
@@ -5857,11 +5760,6 @@
     <category>
         <pattern>I DO NOT NEED ANY *</pattern>
         <template><srai>I do not need <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I DO NOT I *</pattern>
-        <template><srai>I do not</srai>. <srai>I <star /></srai>
         </template>
     </category>
     <category>
@@ -5885,11 +5783,6 @@
         </template>
     </category>
     <category>
-        <pattern>I DO NOT WANT TO I *</pattern>
-        <template><srai>I do not want to</srai>. <srai>I <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I DO NOT READ SCIENCE FICTION</pattern>
         <template><srai>I do not like science fiction</srai>
         </template>
@@ -5910,11 +5803,6 @@
         </template>
     </category>
     <category>
-        <pattern>I DO NOT HOW *</pattern>
-        <template><srai>I do not </srai>. <srai>how <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I DO NOT ENTIRELY *</pattern>
         <template><srai>I do not <star /></srai>
         </template>
@@ -5922,11 +5810,6 @@
     <category>
         <pattern>I DO NOT UNDERSTAND WHAT YOU JUST *</pattern>
         <template><srai>I do not understand what you <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I DO NOT BUT *</pattern>
-        <template><srai>I do not</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -6025,11 +5908,6 @@
         </template>
     </category>
     <category>
-        <pattern>I DO NOT AND *</pattern>
-        <template><srai>I do not</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I DO NOT THINK I *</pattern>
         <template><srai>I do not <star /></srai>
         </template>
@@ -6100,11 +5978,6 @@
         </template>
     </category>
     <category>
-        <pattern>I DO WHY</pattern>
-        <template><srai>I do</srai>. <srai>why</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I ACCIDENTLY *</pattern>
         <template><srai>I <star /></srai>
         </template>
@@ -6140,11 +6013,6 @@
         </template>
     </category>
     <category>
-        <pattern>I LOVE YOU AND *</pattern>
-        <template><srai>I love you</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I LOVE HER *</pattern>
         <template><srai>I love her</srai>
         </template>
@@ -6157,16 +6025,6 @@
     <category>
         <pattern>I * DO YOU REMEMBER</pattern>
         <template><srai>I AM <star /></srai>.  <srai>DO YOU REMEMBER</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I * BECAUSE *</pattern>
-        <template><srai>I <star /></srai>. <srai>BECAUSE <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I * BUT I *</pattern>
-        <template><srai>I <star /></srai>. <srai>I <star index="2" /></srai>
         </template>
     </category>
     <category>
@@ -6195,16 +6053,6 @@
         </template>
     </category>
     <category>
-        <pattern>I * AND I *</pattern>
-        <template><srai>I <star /></srai>. <srai>I <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I * AND THERE IS *</pattern>
-        <template><srai>I <star /></srai>. <srai>THERE IS <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I * AND THEN I WAS *</pattern>
         <template><srai>I <star /></srai>.  <srai>I WAS <star index="2" /></srai>
         </template>
@@ -6220,11 +6068,6 @@
         </template>
     </category>
     <category>
-        <pattern>I * AND IM A *</pattern>
-        <template><srai>I <star /></srai>. <srai>I AM A <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I SURE *</pattern>
         <template><srai>I <star /></srai>
         </template>
@@ -6237,11 +6080,6 @@
     <category>
         <pattern>I TOTALLY *</pattern>
         <template><srai>I <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I WORK I *</pattern>
-        <template><srai>I work</srai>. <srai>I <star /></srai>
         </template>
     </category>
     <category>
@@ -6352,11 +6190,6 @@
     <category>
         <pattern>I ALREADY TOLD YOU</pattern>
         <template><srai>I told you</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I ALREADY TOLD YOU *</pattern>
-        <template><srai>I already told you</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -6980,11 +6813,6 @@
         </template>
     </category>
     <category>
-        <pattern>I HAVE AND *</pattern>
-        <template><srai>I have</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I HAVE 2 CATS</pattern>
         <template><srai>I have two cats</srai>
         </template>
@@ -7077,11 +6905,6 @@
     <category>
         <pattern>I HAVE TO EAT *</pattern>
         <template><srai>for dinner</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I HAVE TO GO NOW *</pattern>
-        <template><srai>I have to go</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -7525,11 +7348,6 @@
         </template>
     </category>
     <category>
-        <pattern>I TRIED BUT *</pattern>
-        <template><srai>I tried</srai>. <srai>but <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I CLAIM TO BE *</pattern>
         <template><srai>I am <star /></srai>
         </template>
@@ -7672,11 +7490,6 @@
     <category>
         <pattern>I HUNT *</pattern>
         <template><srai>I hunt</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I SEE SO *</pattern>
-        <template><srai>I see</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -8275,11 +8088,6 @@
         </template>
     </category>
     <category>
-        <pattern>I WILL NOT BECAUSE *</pattern>
-        <template><srai>I will not</srai>. <srai>because <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I WILL NOT MIND *</pattern>
         <template><srai>I do not mind</srai>
         </template>
@@ -8322,11 +8130,6 @@
     <category>
         <pattern>I TRUELY *</pattern>
         <template><srai>I <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I WENT TO SCHOOL I *</pattern>
-        <template><srai>I went to school</srai>. <srai>I <star /></srai>
         </template>
     </category>
     <category>
@@ -8615,11 +8418,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM GUY * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM TENSE *</pattern>
         <template><srai>I AM TENSE</srai>
         </template>
@@ -8790,18 +8588,8 @@
         </template>
     </category>
     <category>
-        <pattern>I AM MAN * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM MAN</pattern>
         <template><srai>I am a man</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM SICK BUT *</pattern>
-        <template><srai>I am sick</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -9005,11 +8793,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM * I CAN NOT *</pattern>
-        <template><srai>I AM <star /></srai>. <srai>I CAN NOT <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM * SAD</pattern>
         <template><srai>I am sad</srai>
         </template>
@@ -9077,11 +8860,6 @@
     <category>
         <pattern>I AM CANADIAN</pattern>
         <template><srai>I am in canada</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM SERIOUS I *</pattern>
-        <template><srai>I am serious </srai>. <srai>I <star /></srai>
         </template>
     </category>
     <category>
@@ -9197,11 +8975,6 @@
     <category>
         <pattern>I AM * YEARS OLD AND *</pattern>
         <template><srai>I am <star /> years old</srai>.  <srai>  <star index="2" /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM * BUT I *</pattern>
-        <template><srai>I <star /></srai>. <srai>I <star index="2" /></srai>
         </template>
     </category>
     <category>
@@ -9380,11 +9153,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM FEMALE * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am female</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM BRITISH</pattern>
         <template><srai>I am from britain</srai>
         </template>
@@ -9392,11 +9160,6 @@
     <category>
         <pattern>I AM TROUBLED *</pattern>
         <template><srai>I am troubled </srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM I *</pattern>
-        <template><srai>I AM</srai>. <srai>I <star /></srai>
         </template>
     </category>
     <category>
@@ -9760,11 +9523,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM MALE * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM MALE *</pattern>
         <template><srai>I AM MALE</srai>
         </template>
@@ -9860,11 +9618,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM A F * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am female</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM A PIMP</pattern>
         <template><srai>my job is pimp</srai>
         </template>
@@ -9890,11 +9643,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM A MAN * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM A MAN *</pattern>
         <template><srai>I am a man</srai>
         </template>
@@ -9907,11 +9655,6 @@
     <category>
         <pattern>I AM A * TOO</pattern>
         <template><srai>I am a <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM A * AND DO NOT *</pattern>
-        <template><srai>I AM A <star /></srai>. <srai>I DO NOT <star index="2" /></srai>
         </template>
     </category>
     <category>
@@ -10050,11 +9793,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM A M * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM A DYNAMIC *</pattern>
         <template><srai>I am a <star /></srai>
         </template>
@@ -10115,11 +9853,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM A FEMALE * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am female</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM A FEMALE *</pattern>
         <template><srai>I am female</srai>
         </template>
@@ -10140,18 +9873,8 @@
         </template>
     </category>
     <category>
-        <pattern>I AM A SINGLE *</pattern>
-        <template><srai>I am single</srai>. <srai>I am <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM A SLAVE</pattern>
         <template><srai>my job is slave</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM A BOY * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
         </template>
     </category>
     <category>
@@ -10285,11 +10008,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM A GUY * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM A GUY</pattern>
         <template><srai>I am a male</srai>
         </template>
@@ -10332,11 +10050,6 @@
     <category>
         <pattern>I AM A * TEACHER</pattern>
         <template><srai>I teach <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM A * YEAR OLD FEMALE</pattern>
-        <template><srai>I am <star /> years old</srai>. <srai>I am female</srai>
         </template>
     </category>
     <category>
@@ -10390,11 +10103,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM A GIRL * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am female</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM A GIRL *</pattern>
         <template><srai>I am female</srai>
         </template>
@@ -10417,11 +10125,6 @@
     <category>
         <pattern>I AM A MANN</pattern>
         <template><srai>I am male</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM A MALE * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
         </template>
     </category>
     <category>
@@ -10810,11 +10513,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM NOT I *</pattern>
-        <template><srai>I am not</srai>. <srai>I <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM NOT JUST *</pattern>
         <template><srai>I am not <star /></srai>
         </template>
@@ -11105,11 +10803,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM KIDDING I *</pattern>
-        <template><srai>I am kidding</srai>. <srai>I <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM KIDDING *</pattern>
         <template><srai>I am kidding</srai>
         </template>
@@ -11175,18 +10868,8 @@
         </template>
     </category>
     <category>
-        <pattern>I AM RIGHT *</pattern>
-        <template><srai>I am right</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM CATHERINE</pattern>
         <template><srai>my name is catherine</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM BOY * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
         </template>
     </category>
     <category>
@@ -11222,11 +10905,6 @@
     <category>
         <pattern>I AM POLISH</pattern>
         <template><srai>I am in poland</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM ASK *</pattern>
-        <template><srai>I am</srai>. <srai>ask <star /></srai>
         </template>
     </category>
     <category>
@@ -11310,11 +10988,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM GIRL * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am female</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM 40</pattern>
         <template><srai>I am 40 years old</srai>
         </template>
@@ -11322,11 +10995,6 @@
     <category>
         <pattern>I AM JUDGING YOU *</pattern>
         <template><srai>I AM JUDGING YOU</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM ARE *</pattern>
-        <template><srai>I am</srai>. <srai>are <star /></srai>
         </template>
     </category>
     <category>
@@ -11345,11 +11013,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM F * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am female</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM MICAH</pattern>
         <template><srai>my name is micah</srai>
         </template>
@@ -11362,11 +11025,6 @@
     <category>
         <pattern>I AM THIRTEEN</pattern>
         <template><srai>I am 13 years old</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM M * FROM *</pattern>
-        <template><srai>I am from <star index="2" /></srai>. <srai>I am male</srai>
         </template>
     </category>
     <category>
@@ -11887,11 +11545,6 @@
     <category>
         <pattern>GEOGRAPHY</pattern>
         <template><srai>let us talk about geography</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>NOPE *</pattern>
-        <template><srai>NO</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -14025,11 +13678,6 @@
         </template>
     </category>
     <category>
-        <pattern>DO NOT WORRY I *</pattern>
-        <template><srai>I <star /></srai>. <srai>do not worry</srai>
-        </template>
-    </category>
-    <category>
         <pattern>DO NOT CARE</pattern>
         <template><srai>I do not care</srai>
         </template>
@@ -14912,11 +14560,6 @@
     <category>
         <pattern>DO YOU BET</pattern>
         <template><srai>do you gamble</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>DO YOU BET *</pattern>
-        <template><srai>do you bet</srai>. <srai>will <star /></srai>
         </template>
     </category>
     <category>
@@ -16502,11 +16145,6 @@
         </template>
     </category>
     <category>
-        <pattern>OKEY *</pattern>
-        <template><srai>okay</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>OKEY</pattern>
         <template><srai>okay</srai>
         </template>
@@ -16657,11 +16295,6 @@
         </template>
     </category>
     <category>
-        <pattern>NO I DO NOT</pattern>
-        <template><srai>NO</srai>. <srai>I DO NOT</srai>
-        </template>
-    </category>
-    <category>
         <pattern>NO I DID NOT</pattern>
         <template><srai>no</srai>
         </template>
@@ -16672,23 +16305,8 @@
         </template>
     </category>
     <category>
-        <pattern>NO IT IS NOT</pattern>
-        <template><srai>NO</srai>. <srai>IT IS NOT</srai>
-        </template>
-    </category>
-    <category>
         <pattern>NO ONE *</pattern>
         <template><srai>nobody <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>NO YOU DO NOT BECAUSE *</pattern>
-        <template><srai>no you do not</srai>. <srai>because <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>NO YOU DO NOT</pattern>
-        <template><srai>NO</srai>. <srai>YOU DO NOT</srai>
         </template>
     </category>
     <category>
@@ -16699,11 +16317,6 @@
     <category>
         <pattern>NO SORRY</pattern>
         <template><srai>no</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>NO *</pattern>
-        <template><srai>NO</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -17027,11 +16640,6 @@
         </template>
     </category>
     <category>
-        <pattern>NA *</pattern>
-        <template><srai>no</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>BALTIMORE</pattern>
         <template><srai>I am in baltimore</srai>
         </template>
@@ -17073,7 +16681,7 @@
     </category>
     <category>
         <pattern>THIS IS INTERESTING</pattern>
-        <template><srai>I try to be an interesting   entity</srai>
+        <template><srai>I try to be an interesting entity</srai>
         </template>
     </category>
     <category>
@@ -17094,11 +16702,6 @@
     <category>
         <pattern>YIKES</pattern>
         <template><srai>interjection </srai>
-        </template>
-    </category>
-    <category>
-        <pattern>FOOD</pattern>
-        <template><srai>I eat food</srai>
         </template>
     </category>
     <category>
@@ -17372,16 +16975,6 @@
         </template>
     </category>
     <category>
-        <pattern>NOT ME *</pattern>
-        <template><srai>not me</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>NOT NOW *</pattern>
-        <template><srai>no</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>NOT THAT I KNOW OF</pattern>
         <template><srai>no</srai>
         </template>
@@ -17449,11 +17042,6 @@
     <category>
         <pattern>NOT JUST *</pattern>
         <template><srai>not <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>NOT A * OR A *</pattern>
-        <template><srai>I AM NOT A <star /></srai>. <srai>I AM NOT A <star index="2" /></srai>
         </template>
     </category>
     <category>
@@ -17527,16 +17115,6 @@
         </template>
     </category>
     <category>
-        <pattern>NOT YOU THAT *</pattern>
-        <template><srai>not you </srai>. <srai>that <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>NOT YOU A *</pattern>
-        <template><srai>not you</srai>. <srai>a <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>NOT REALLLY</pattern>
         <template><srai>NO</srai>
         </template>
@@ -17557,11 +17135,6 @@
         </template>
     </category>
     <category>
-        <pattern>NOT ANY MORE *</pattern>
-        <template><srai>no</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>NOT</pattern>
         <template><srai>INTERJECTION</srai>
         </template>
@@ -17569,11 +17142,6 @@
     <category>
         <pattern>NOT BAD YOURSELF</pattern>
         <template><srai>I am fine</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>NOT BAD *</pattern>
-        <template><srai>not bad</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -17754,11 +17322,6 @@
     <category>
         <pattern>PROCEED</pattern>
         <template><srai>go ahead</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>K</pattern>
-        <template><srai>OK</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -19242,11 +18805,6 @@
         </template>
     </category>
     <category>
-        <pattern>OK *</pattern>
-        <template><srai>OK</srai>. <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>OK</pattern>
         <template><srai>INTERJECTION</srai>
         </template>
@@ -19279,11 +18837,6 @@
     <category>
         <pattern>* BITCH</pattern>
         <template><srai>INSULT</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>* IT IS FUN</pattern>
-        <template><srai>it is fun</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -19494,11 +19047,6 @@
     <category>
         <pattern>* MOTHERFUCKER</pattern>
         <template><srai>PROFANITY</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>* IN WHAT WAY</pattern>
-        <template><srai>in what way</srai>. <srai>  <star /></srai>
         </template>
     </category>
     <category>

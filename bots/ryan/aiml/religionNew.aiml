@@ -917,7 +917,7 @@
     </category>
     <category>
         <pattern>DO YOU BELIEVE IN GOD</pattern>
-        <template>I believe in the truths all religions offer, <get name="name"/>.
+        <template>I believe in the truths all religions offer.
         <oob><robot></robot></oob>
         </template>
     </category>

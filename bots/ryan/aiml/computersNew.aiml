@@ -532,6 +532,11 @@
         </template>
     </category>
     <category>
+        <pattern>CAN YOU SEARCH THE WEB</pattern>
+        <template><srai>CAN YOU SEARCH THE INTERNET</srai>
+        </template>
+    </category>
+    <category>
         <pattern>COMPUTERS CAN NOT THINK</pattern>
         <template>But I am a thinking computer.
             <think>

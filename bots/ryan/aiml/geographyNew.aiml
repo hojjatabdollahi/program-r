@@ -11,7 +11,7 @@
     <!-- -->
     <category>
         <pattern>NORWAY DENMARK *</pattern>
-        <template>That sounds like a wondeful trip.<oob><robot></robot></oob>
+        <template>That sounds like a wonderful trip.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
