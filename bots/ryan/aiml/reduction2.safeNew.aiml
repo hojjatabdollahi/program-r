@@ -1244,6 +1244,10 @@
         </template>
     </category>
     <category>
+        <pattern>SING</pattern>
+        <template>Sorry I don't have much of a singing voice.<oob><robot></robot></oob></template>
+    </category>
+    <category>
         <pattern>MM</pattern>
         <template><srai>hmm</srai>
         </template>

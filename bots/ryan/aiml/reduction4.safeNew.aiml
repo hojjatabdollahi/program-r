@@ -5337,7 +5337,7 @@
     </category>
     <category>
         <pattern>CAN YOU TALK *</pattern>
-        <template><srai>CAN YOU SPEAK <star/> </srai>
+        <template><srai>CAN YOU SPEAK TALK</srai>
         </template>
     </category>
     <category>

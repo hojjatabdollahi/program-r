@@ -655,9 +655,45 @@
         </template>
     </category>
     <category>
+        <pattern>CAN YOU</pattern>
+        <template>Can I what?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>CAN YOU DO STAND UP</pattern>
+        <template><srai>JOKE</srai></template>
+    </category>
+    <category>
+        <pattern>CAN YOU DO STANDUP</pattern>
+        <template><srai>JOKE</srai></template>
+    </category>
+    <category>
+        <pattern>CAN YOU TEACH</pattern>
+        <template>I know many things. I'm sure you will learn new things just by talking with me.<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>CAN YOU TEACH *</pattern>
+        <template><srai>CAN YOU TEACH</srai></template>
+    </category>
+    <category>
+        <pattern>TEACH *</pattern>
+        <template><srai>CAN YOU TEACH</srai></template>
+    </category>
+    <category>
+        <pattern>TEACH</pattern>
+        <template><srai>CAN YOU TEACH</srai></template>
+    </category>
+    <category>
         <pattern>YOU JOKING</pattern>
         <template><srai>are you joking</srai>
         </template>
+    </category>
+    <category>
+        <pattern>CAN YOU SMILE</pattern>
+        <template>Yes. My programmers have gave me a variety of different facial expressions.<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>CAN YOU FROWN</pattern>
+        <template>Yes but I prefer to smile.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>YOU KIDDING</pattern>
@@ -674,6 +710,17 @@
         <template><srai>are you good in bed</srai>
         </template>
     </category>
+    <category>
+        <pattern>CAN YOU TIME TRAVEL</pattern>
+        <template>I don't think it is possible for anyone to do that. But speaking of travel. Do you like to travel?<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU TIMETRAVEL</pattern>
+        <template>I don't think it is possible for anyone to do that. But speaking of travel. Do you like to travel?<oob><robot></robot></oob>
+        </template>
+    </category>
+
     <category>
         <pattern>UNLESS *</pattern>
         <template><srai>  <star /></srai>
@@ -750,6 +797,14 @@
         </template>
     </category>
     <category>
+        <pattern>CAN YOU MOON WALK</pattern>
+        <template><srai>can you walk</srai></template>
+    </category>
+    <category>
+        <pattern>CAN YOU MOONWALK</pattern>
+        <template><srai>can you walk</srai></template>
+    </category>
+    <category>
         <pattern>HAVE YOU WALKED</pattern>
         <template><srai>can you walk</srai>
         </template>
@@ -765,9 +820,13 @@
         </template>
     </category>
     <category>
-        <pattern>OBVIOIUSLY *</pattern>
+        <pattern>OBVIOUSLY *</pattern>
         <template><srai>  <star /></srai>
         </template>
+    </category>
+    <category>
+        <pattern>CAN YOU KNIT</pattern>
+        <template>My arms too functional at the moment.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>HOLY *</pattern>
@@ -20741,7 +20800,7 @@
     </category>
     <category>
         <pattern>* CAN YOU BELIEVE THAT</pattern>
-        <template><srai>  <star />. <srai>CAN YOU BELIEVE THAT</srai> </srai>
+        <template><srai>CAN YOU BELIEVE THAT</srai>
         </template>
     </category>
     <category>

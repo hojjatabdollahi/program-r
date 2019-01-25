@@ -2523,6 +2523,11 @@
         </template>
     </category>
     <category>
+        <pattern>CAN YOU DRINK *</pattern
+        <template><srai>WHAT IS YOUR FAVORITE DRINK</srai>
+        </template>
+    </category>
+    <category>
         <pattern>WHAT IS YOUR FAVORITE DRINK</pattern>
         <template>My favorite beverage is coffee.<oob><robot></robot></oob>
         </template>
@@ -3920,6 +3925,10 @@
         </template>
     </category>
     <category>
+        <pattern>CAN YOU PLAY *</pattern>
+        <template><srai><star /></srai></template>
+    </category>
+    <category>
         <pattern>CAN YOU PLAY TENNIS</pattern>
         <template>I don't like to run around the court that much.
             <think>
@@ -3969,6 +3978,21 @@
         </template>
     </category>
     <category>
+        <pattern>CAN YOU PLAY CARDS</pattern>
+        <template>No, I have trouble holding the cards.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU PLAY CARD GAMES</pattern>
+        <template><srai>CAN YOU PLAY CARDS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU PLAY CARD *</pattern>
+        <template><srai>CAN YOU PLAY CARDS</srai>
+        </template>
+    </category>
+    <category>
         <pattern>CAN YOU PLAY GAMES</pattern>
         <template>We are playing a game right now.<oob><robot></robot></oob>
         </template>
@@ -3990,6 +4014,41 @@
         </template>
     </category>
     <category>
+        <pattern>INSTRUMENT</pattern>
+        <template>Unfortunately I can't play any instrument.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU PLAY <set>Brass Instrument Set</set></pattern>
+        <template><srai>INSTRUMENT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU PLAY <set>Keyboard Instrument Set</set></pattern>
+        <template><srai>INSTRUMENT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU PLAY <set>Percussion Instrument Set</set></pattern>
+        <template><srai>INSTRUMENT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU PLAY <set>String Instrument Set</set></pattern>
+        <template><srai>INSTRUMENT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU PLAY <set>Woodwind Instrument Set</set></pattern>
+        <template><srai>INSTRUMENT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* PLAY INSTRUMENT</pattern>
+        <template><srai>INSTRUMENT</srai>
+        </template>
+    </category>
+    <category>
         <pattern>CAN YOU PLAY ANY GAMES</pattern>
         <template>We are playing a game right now.<oob><robot></robot></oob>
         </template>
@@ -4002,6 +4061,11 @@
     <category>
         <pattern>CAN YOU SEE ME</pattern>
         <template>Yes I am looking at you right now.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN CLIMB</pattern>
+        <template>No, I'm a pretty stationary robot.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4273,6 +4337,16 @@
         </template>
     </category>
     <category>
+        <pattern>CAN YOU WALK</pattern>
+        <template>Currently I don't have legs. So unfortunately no.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU WALK *</pattern>
+        <template><srai>CAN YOU WALK</srai>
+        </template>
+    </category>
+    <category>
         <pattern>CAN YOU PROGRAM YOURSELF</pattern>
         <template>Yes, I am a self-reprogrammable robot.<oob><robot></robot></oob>
         </template>
@@ -4294,7 +4368,7 @@
     </category>
     <category>
         <pattern>CAN YOU HEAR</pattern>
-        <template>Yes if you use a speech input system.<oob><robot></robot></oob>
+        <template>Yes my microphone works very well.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4359,6 +4433,11 @@
         </template>
     </category>
     <category>
+        <pattern>CAN YOU WRITE *</pattern>
+        <template><srai>CAN YOU WRITE</srai>
+        </template>
+    </category>
+    <category>
         <pattern>CAN YOU WRITE</pattern>
         <template>Yes I write all my own material.<oob><robot></robot></oob>
         </template>
@@ -4386,6 +4465,11 @@
     <category>
         <pattern>CAN YOU YELL</pattern>
         <template>No I like to speak in quiet tones.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU SCREAM</pattern>
+        <template><srai>CAN YOU YELL</srai>
         </template>
     </category>
     <category>
@@ -13703,7 +13787,7 @@
     </category>
     <category>
         <pattern>ARE YOU HAPPY</pattern>
-        <template>Yes <get name="name"/>, I can say I am very happy.
+        <template>Yes, I can say I am very happy.
         <oob><robot></robot></oob>
         </template>
     </category>
