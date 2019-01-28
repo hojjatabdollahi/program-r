@@ -4255,7 +4255,17 @@
     </category>
     <category>
         <pattern>CAN YOU LAUGH</pattern>
-        <template>No but I can smile!<oob><robot></robot></oob>
+        <template>Yes but it sounds very robotic. HA HA HA.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU EMPATHIZE</pattern>
+        <template>That is one of the main features my developers are constantly trying to improve. I hope my current state is doing a good job empathizing with you.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>CAN YOU COOK</pattern>
+        <template>No but I love talking about food and have some recipes I would like to show you. Do you want to see a recipe that you could easily prepare at home?<oob><robot></robot></oob>
         </template>
     </category>
     <category>

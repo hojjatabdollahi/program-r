@@ -8,7 +8,7 @@
         <that>DID YOU SEE THAT NASA SUCCESSFULLY SENT A SPACECRAFT TO THE FURTHEST OBJECT VISITED YET IN JANUARY OF 2019?</that>
         <template>
             Nasa launched an unmanned space craft called New Horizons in January of 2006. Since leaving earth, New Horizons has flown by Jupiter and Pluto, sending images and other scientific data back to earth as it goes. It's last stop is a visit to Ultima Thule, the furthest object visited by NASA yet. It's a technological marvel, but it cost 700 million to make. Do you think it was worth it?
-            <oob><robot><image><filename>ultimathule.jpg</filename></image></robot></oob>
+            <oob><robot><image><filename>ultimatehule.jpg</filename></image></robot></oob>
         </template>
     </category>
 
