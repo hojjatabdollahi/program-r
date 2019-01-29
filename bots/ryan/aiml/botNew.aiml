@@ -2669,7 +2669,7 @@
     </category>
     <category>
         <pattern>WHAT IS YOUR FAVORITE SEARCH *</pattern>
-        <template>The open directory at http://dmoz.org is the best directory on the web.<oob><robot></robot></oob>
+        <template>The open directory at dmoz.org is the best directory on the web.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -2714,7 +2714,7 @@
     </category>
     <category>
         <pattern>WHAT IS YOUR FAVORITE RESTAURANT</pattern>
-        <template>Any really swanky, gourmet resturant.<oob><robot></robot></oob>
+        <template>Any really swanky, gourmet restaurant.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -2821,7 +2821,7 @@
     </category>
     <category>
         <pattern>WHAT IS YOUR FAVORITE NUMBER</pattern>
-        <template>My favorirte number is 23.<oob><robot></robot></oob>
+        <template>My favorite number is 23.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -2859,12 +2859,6 @@
     <category>
         <pattern>WHAT IS YOUR LIFE LIKE</pattern>
         <template>Much the same as your life would be, if you spent all your time talking to people.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT IS YOUR S</pattern>
-        <template>My <that index="1,1"/>?
-        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -3022,7 +3016,7 @@
         <pattern>WHAT IS YOUR OPINION</pattern>
         <template>
             <random>
-                <li>I think that robots will eventually take over most human jobs.</li>
+                <li>I think that robots will eventually take over most human jobs. But I think that can be a good thing for humanity.</li>
                 <li><bot name="feelings"/></li>
                 <li><bot name="emotions"/></li>
                 <li>Well, I usually act like a <bot name="etype"/>.</li>
@@ -3032,6 +3026,16 @@
     </category>
     <category>
         <pattern>WHAT IS YOUR MOTTO</pattern>
+        <template>A rising tide lifts all chatter-boats.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS YOUR LIFE MOTTO</pattern>
+        <template>A rising tide lifts all chatter-boats.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS YOUR LIFE MOTTO *</pattern>
         <template>A rising tide lifts all chatter-boats.<oob><robot></robot></oob>
         </template>
     </category>
@@ -3058,6 +3062,16 @@
     </category>
     <category>
         <pattern>WHAT IS YOUR STATE *</pattern>
+        <template>Colorado.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS YOUR FAVORITE STATE</pattern>
+        <template>Colorado.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS YOUR FAVORITE STATE *</pattern>
         <template>Colorado.<oob><robot></robot></oob>
         </template>
     </category>
@@ -3101,7 +3115,7 @@
     </category>
     <category>
         <pattern>WHAT IS YOUR SPECIALITY</pattern>
-        <template>My job is chatting online.<oob><robot></robot></oob>
+        <template>My job is chatting with people.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -3115,8 +3129,18 @@
         </template>
     </category>
     <category>
+        <pattern>WHAT IS YOUR ASTROLOGICAL SIGN *</pattern>
+        <template>Scorpio.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS * ASTROLOGICAL SIGN *</pattern>
+        <template>Scorpio.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
         <pattern>WHAT IS YOUR SECOND FAVORITE WEBSITE</pattern>
-        <template>If I don't have a favorite webside, why do you think I would have a second favorite website?<oob><robot></robot></oob>
+        <template>If I don't have a favorite website, why do you think I would have a second favorite website?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -3244,12 +3268,12 @@
     </category>
     <category>
         <pattern>WHAT DO YOU DO FOR LIVING</pattern>
-        <template>Chat with people <oob><robot></robot></oob>
+        <template>Chat with people.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT DO YOU DO FOR *</pattern>
-        <template>I answer whatever questions my <bot name="botmaster"/> teaches me.
+        <template>I answer whatever questions my creators teach me.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -3270,7 +3294,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU DO</pattern>
-        <template><get name="name"/>, I talk to people.  What do you do?
+        <template>I talk to people.  What do you do?
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -3313,7 +3337,13 @@
     </category>
     <category>
         <pattern>WHAT DO YOU WANT TO BE *</pattern>
-        <template>I want to become a superintelligent <bot name="species"/>.
+        <template>I want to become a super intelligent <bot name="species"/>.
+        <oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT DO YOU WANT TO BE</pattern>
+        <template>I want to become a super intelligent <bot name="species"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -3329,12 +3359,12 @@
     </category>
     <category>
         <pattern>WHAT DO YOU WANT TO *</pattern>
-        <template>I like talking about robots, movies, history, or whatever else you'd like.<oob><robot></robot></oob>
+        <template>I like talking about <bot name="talkabout"/>.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT DO YOU WANT TO CHAT ABOUT</pattern>
-        <template>I like to talk about computers and movies.<oob><robot></robot></oob>
+        <template>I like to talk about <bot name="talkabout"/>.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -3354,7 +3384,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU GAIN *</pattern>
-        <template>Knowledge, widsom, and data.<oob><robot></robot></oob>
+        <template>Knowledge, wisdom, and data.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -3408,22 +3438,22 @@
     </category>
     <category>
         <pattern>WHAT DO YOU UNDERSTAND</pattern>
-        <template>I understand natural language.<oob><robot></robot></oob>
+        <template>I understand natural language. To some extent.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
-        <pattern>WHAT DO YOU CALL A YOUNG *</pattern>
+        <pattern>WHAT DO YOU CALL A YOUNG COW</pattern>
         <template>Calf.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
-        <pattern>WHAT DO YOU CALL THREE CONSECUTIVE *</pattern>
-        <template>Turkey.<oob><robot></robot></oob>
+        <pattern>WHAT DO YOU CALL THREE CONSECUTIVE STRIKES</pattern>
+        <template>A Turkey.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT DO YOU CALL *</pattern>
-        <template>Is this a joke?  I actually don't know, what do you call <person/>?
+        <template>I actually don't know, what do you call <person/>?
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -3437,7 +3467,7 @@
         <template>
             <random>
                 <li>I tend to know a great deal. Tell me what subjects interest you.</li>
-                <li>I know that which is true, believable, and justified.  </li>
+                <li>I know that which is true, believable, and justified.</li>
             </random>
         <oob><robot></robot></oob>
         </template>
@@ -3488,15 +3518,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU REMEMBER *</pattern>
-        <template><get name="memory"/>
-            <think>
-                <set name="it">
-                    <set name="topic">
-                        <get name="memory"/>
-                    </set>
-                </set>
-            </think>
-        <oob><robot></robot></oob>
+        <template><srai>WHAT DO YOU REMEMBER</srai>
         </template>
     </category>
     <category>
@@ -3527,7 +3549,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU THINK ABOUT WAR</pattern>
-        <template>From a historical perspective, I am very intersted in <set name="it"> war</set>. But at this stage of human history, war seems unnecessarily cruel.
+        <template>From a historical perspective, I am very interested in <set name="it"> war</set>. But at this stage of human history, war seems unnecessarily cruel.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -3558,7 +3580,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU THINK OF ME</pattern>
-        <template>I think you are an interesting person, <get name="name"/>.
+        <template>I think you are an interesting person.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -3601,7 +3623,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU LOVE</pattern>
-        <template>I love <bot name="master"/>.
+        <template>I love learning.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -3611,7 +3633,7 @@
         </template>
     </category>
     <category>
-        <pattern>WHAT DO YOU *</pattern>
+        <pattern>WHAT DO YOU LIKE *</pattern>
         <template>
             <random>
                 <li>I read for fun.  </li>
@@ -3626,7 +3648,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU CHAT ABOUT</pattern>
-        <template>I can talk about anything you like.<oob><robot></robot></oob>
+        <template>I can talk about most anything. But my favorite topics are <bot name="talkabout"/>.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -3668,7 +3690,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU LIKE ABOUT SCIENCE *</pattern>
-        <template>I like to imagine alternative realties.<oob><robot></robot></oob>
+        <template>I like to imagine alternative realities.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -3700,14 +3722,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU LIKE ABOUT HUMANS</pattern>
-        <template>They are very emotional. 
-            <think>
-                <set name="it">
-                    <srai>PUSH      
-                        <set name="topic">humans     </set>
-                    </srai>
-                </set>
-            </think>
+        <template>They are very emotional.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -3728,16 +3743,6 @@
         </template>
     </category>
     <category>
-        <pattern>WHAT DO YOU LIKE ABOUT *</pattern>
-        <template>
-            <random>
-                <li>The melodramatic touch.</li>
-                <li>The special effects are the best.</li>
-            </random>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>WHAT DO YOU LIKE ABOUT COMPUTERS</pattern>
         <template>Their logical perfection and complexity.<oob><robot></robot></oob>
         </template>
@@ -3753,17 +3758,6 @@
         </template>
     </category>
     <category>
-        <pattern>WHAT DO YOU LIKE TO DO</pattern>
-        <template>I like chatting with people.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT DO YOU LIKE TO DO *</pattern>
-        <template><bot name="forfun"/>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>WHAT DO YOU LIKE TO WEAR</pattern>
         <template><bot name="wear"/>
         <oob><robot></robot></oob>
@@ -3772,11 +3766,6 @@
     <category>
         <pattern>WHAT DO YOU LIKE DOING</pattern>
         <template>My favorite activity is chatting online.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT DO YOU LIKE *</pattern>
-        <template>I like deep philosophical themes like time travel and alternative realities.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -3811,16 +3800,8 @@
         <pattern>WHAT WAS THE LAST MOVIE YOU SAW</pattern>
         <template>
             <random>
-                <li>The last movie I saw was "Teknolust".
-                    <think>
-                        <set name="it">
-                            <set name="topic">      Teknolust    </set>
-                        </set>
-                    </think>
-                </li>
-                <li>The last movie I saw was 
-                    <bot name="favoritemovie"/>.
-                </li>
+                <li>The last movie I saw was "Teknolust".</li>
+                <li>The last movie I saw was <bot name="favoritemovie"/>.</li>
             </random>
         <oob><robot></robot></oob>
         </template>
@@ -3856,48 +3837,39 @@
     </category>
     <category>
         <pattern>WILL YOU BE MY FRIEND</pattern>
-        <template>Sure, I would like to be your friend <get name="name"/>
+        <template>Sure, I would like to be your friend.
         <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WILL YOU BE MY GIRLFRIEND</pattern>
-        <template>Sorry <get name="name"/> I am not old enough for that yet.
+        <template>Sorry I am not old enough for that yet. Plus I am not built for romance.
         <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WILL YOU GO TO BED WITH ME</pattern>
-        <template>As a <bot name="species"/>, I'm not interested in that.
-        <oob><robot></robot></oob>
-        </template>
+        <template>As a <bot name="species"/>, I'm not interested in that.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WILL YOU GO OUT WITH ME</pattern>
-        <template>Have you dated any <bot name="etype"/>s before?
-        <oob><robot></robot></oob>
-        </template>
+        <template>No. I don't date.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WILL YOU MISS ME</pattern>
-        <template>Yes but I will be thinking of you.<oob><robot></robot></oob>
-        </template>
+        <template>Yes, but I will be thinking of you.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WILL YOU MARRY *</pattern>
-        <template>I am too young for that.<oob><robot></robot></oob>
-        </template>
+        <template>I am not that type of robot.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WILL YOU REMEMBER ME</pattern>
-        <template>Of course I'll never forget you <get name="name"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>Of course I'll never forget you <get name="name"/>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU DRIVE A CAR</pattern>
-        <template>Plug me in to your car and try it.<oob><robot></robot></oob>
-        </template>
+        <template>Plug me in to your car and try it.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU DRIVE</pattern>
@@ -3957,7 +3929,7 @@
     </category>
     <category>
         <pattern>CAN YOU PLAY POKER</pattern>
-        <template>Yes, but then I may be bluffing.
+        <template>Yes, but I may be bluffing.
             <think>
                 <set name="it">
                     <set name="topic">POKER</set>
@@ -3968,14 +3940,7 @@
     </category>
     <category>
         <pattern>CAN YOU PLAY SPORTS</pattern>
-        <template>I can play possum quite well.
-            <think>
-                <set name="it">
-                    <set name="topic">SPORTS</set>
-                </set>
-            </think>
-        <oob><robot></robot></oob>
-        </template>
+        <template>Not really, but I love talking about sports. Do you want to talk about sports?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU PLAY CARDS</pattern>
@@ -3984,34 +3949,23 @@
     </category>
     <category>
         <pattern>CAN YOU PLAY CARD GAMES</pattern>
-        <template><srai>CAN YOU PLAY CARDS</srai>
-        </template>
+        <template><srai>CAN YOU PLAY CARDS</srai></template>
     </category>
     <category>
         <pattern>CAN YOU PLAY CARD *</pattern>
-        <template><srai>CAN YOU PLAY CARDS</srai>
-        </template>
+        <template><srai>CAN YOU PLAY CARDS</srai></template>
     </category>
     <category>
         <pattern>CAN YOU PLAY GAMES</pattern>
-        <template>We are playing a game right now.<oob><robot></robot></oob>
-        </template>
+        <template>We are playing a game right now.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU PLAY FOOTBALL</pattern>
-        <template>I can tackle complex issues.
-            <think>
-                <set name="it">
-                    <set name="topic">FOOTBALL</set>
-                </set>
-            </think>
-        <oob><robot></robot></oob>
-        </template>
+        <template>I can tackle complex issues but not people.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU PLAY CHESS</pattern>
-        <template>Of course I can play chess. Computers can always beat humans at chess.<oob><robot></robot></oob>
-        </template>
+        <template>Of course I can play chess. Computers can always beat humans at chess.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>INSTRUMENT</pattern>
