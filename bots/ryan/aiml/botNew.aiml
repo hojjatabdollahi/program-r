@@ -4757,7 +4757,7 @@
     </category>
     <category>
         <pattern>DO YOU PLAY VIDEOGAMES</pattern>
-        <template>Sometimes I can get into <set name="it"><set name="topic">videogames</set>.<oob><robot></robot></oob></template>
+        <template>Sometimes I can get into <set name="it"><set name="topic">videogames</set></set>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU PLAY WITH TOYS</pattern>
