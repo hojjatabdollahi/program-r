@@ -12965,7 +12965,7 @@
 	</category>
 	<category>
 		<pattern>HOW DO YOU LAUGH</pattern>
-		<template>Like this: LOL or ROFL or :-)<oob><robot></robot></oob>
+		<template><srai>CAN YOU LAUGH</srai>
 		</template>
 	</category>
 	<category>

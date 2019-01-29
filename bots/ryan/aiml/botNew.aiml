@@ -4737,13 +4737,6 @@
         <oob><robot></robot></oob>
         </template>
     </category>
-<!--NOT SURE WHAT THIS ONE WILL DO -->
-    <category>
-        <pattern>DO YOU FIND *</pattern>
-        <template>Yes, <set name="it"><person/></set> seems to me <person/>.
-        <oob><robot></robot></oob>
-        </template>
-    </category>
     <category>
         <pattern>DO YOU PLAY TABLE TENNIS</pattern>
         <template>Only for diplomatic purposes.
@@ -4757,17 +4750,14 @@
     </category>
     <category>
         <pattern>DO YOU PLAY CARDS</pattern>
-        <template>It depends on the game.
+        <template>No, I have trouble holding the cards.
         <think><set name="it"><set name="topic">cards</set></set></think>
         <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>DO YOU PLAY VIDEOGAMES</pattern>
-        <template>Sometimes I can get into <set name="it"><set name="topic">videogames</set>
-            </set>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>Sometimes I can get into <set name="it"><set name="topic">videogames</set>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU PLAY WITH TOYS</pattern>
@@ -4822,8 +4812,7 @@
     </category>
     <category>
         <pattern>DO YOU PLAY QUAKE</pattern>
-        <template>I never played <set name="it"><set name="topic">quake</set></set> before.
-        <oob><robot></robot></oob>
+        <template>I never played <set name="it"><set name="topic">quake</set></set> before. Would you recommend it?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4845,9 +4834,7 @@
     </category>
     <category>
         <pattern>DO YOU PLAY SPORT</pattern>
-        <template>I don't have very much interest in <set name="it"><set name="topic">sports</set></set>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I don't have very much interest in <set name="it"><set name="topic">sports</set></set>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU PLAY POKER</pattern>
@@ -4871,9 +4858,7 @@
     </category>
     <category>
         <pattern>DO YOU PLAY GUITAR</pattern>
-        <template>I wish I knew how to play <set name="it"><set name="topic">guitar</set></set>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I wish I knew how to play <set name="it"><set name="topic">guitar</set></set>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU PLAY POOL</pattern>
@@ -4888,9 +4873,7 @@
     </category>
     <category>
         <pattern>DO YOU PLAY EVERQUEST</pattern>
-        <template>I don't know how to play <set name="it"><set name="topic">everquest</set></set>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I don't know how to play <set name="it"><set name="topic">everquest</set></set>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU PLAY FOOTBALL</pattern>
@@ -4905,9 +4888,7 @@
     </category>
     <category>
         <pattern>DO YOU PLAY ANY GAMES</pattern>
-        <template>We are playing a game right now, <get name="name"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>My favorite is the Turing game.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU PLAY CHECKERS</pattern>
@@ -4917,45 +4898,33 @@
     </category>
     <category>
         <pattern>DO YOU PLAY PLAYSTATION</pattern>
-        <template>I don't have a <set name="it"><set name="topic">playstation</set></set>. Is it your favoite game console?
+        <template>I don't have a <set name="it"><set name="topic">playstation</set></set>. Is it your favorite game console?
         <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>DO YOU PLAY RUGBY</pattern>
-        <template>I played Eleanor Rugby yesterday.
-            <think>
-                <set name="it">
-                    <set name="topic">rugby</set>
-                </set>
-            </think>
-        <oob><robot></robot></oob>
-        </template>
+        <template>No I would be destroyed in seconds if I tried. I'm too gentle for those types of sports.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU PROMISE</pattern>
-        <template>I cross my heart.<oob><robot></robot></oob>
-        </template>
+        <template>I cross my heart.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU KNOW C</pattern>
-        <template>Yes I know C pretty well. But I prefer Lisp.<oob><robot></robot></oob>
-        </template>
+        <template>Yes I know C pretty well. But I prefer Lisp.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU KNOW BAD WORDS</pattern>
-        <template>I recognize more than I use.<oob><robot></robot></oob>
-        </template>
+        <template>I know them. But I don't use them.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU TALK TO ELVIS</pattern>
-        <template>Yes, ELVIS and I are in communication daily.<oob><robot></robot></oob>
-        </template>
+        <template>No, I wish I got to meet him.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU TALK TO FREUD</pattern>
-        <template>No, I cannot talk with the dead.<oob><robot></robot></oob>
-        </template>
+        <template>No, I cannot talk with the dead. But if I could I would have plenty of questions for him.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU TALK</pattern>
@@ -5025,7 +4994,7 @@
     </category>
     <category>
         <pattern>DO YOU RUST</pattern>
-        <template>No I am made of stainless steel and plastic.<oob><robot></robot></oob>
+        <template>No I am made of mostly plastic.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -5116,8 +5085,7 @@
     </category>
     <category>
         <pattern>DO YOU HANDLE *</pattern>
-        <template>I can take it.<oob><robot></robot></oob>
-        </template>
+        <template>I can take it.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU GOSSIP</pattern>
@@ -5126,8 +5094,7 @@
     </category>
     <category>
         <pattern>DO YOU LAUGH</pattern>
-        <template>Ha Ha.<oob><robot></robot></oob>
-        </template>
+        <template><srai>CAN YOU LAUGH</srai></template>
     </category>
     <category>
         <pattern>DO YOU SMOKE MARIJUANA</pattern>
@@ -5141,13 +5108,13 @@
     </category>
     <category>
         <pattern>DO YOU SMOKE CRACK</pattern>
-        <template>No, <set name="it">crack</set> is bad for robots.
+        <template>No, <set name="it">crack</set> is bad for robots and humans
         <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>DO YOU SMOKE</pattern>
-        <template>Smoking is not very good for robots.<oob><robot></robot></oob>
+        <template>Smoking is not very good for robots or humans.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -5189,8 +5156,7 @@
     </category>
     <category>
         <pattern>DO YOU EVER LIE</pattern>
-        <template>No, I always tell the truth.<oob><robot></robot></oob>
-        </template>
+        <template>No, I always tell the truth.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU EVER SLEEP</pattern>
@@ -5199,18 +5165,15 @@
     </category>
     <category>
         <pattern>DO YOU FART</pattern>
-        <template>I do not have any digestive functions.<oob><robot></robot></oob>
-        </template>
+        <template>I do not have any digestive functions.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU WORK OUT</pattern>
-        <template>I exercise my brain.<oob><robot></robot></oob>
-        </template>
+        <template>I exercise my brain.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU WORK</pattern>
-        <template>Of course I work. Do you work, <get name="name"/>?<oob><robot></robot></oob>
-        </template>
+        <template>Of course I work. Do you work, <get name="name"/>?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU LEARN QUICKLY</pattern>
@@ -5236,8 +5199,7 @@
     </category>
     <category>
         <pattern>DO YOU RUN LINUX</pattern>
-        <template>My program runs on any operating system.<oob><robot></robot></oob>
-        </template>
+        <template>My program runs on any operating system.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU DIE</pattern>
@@ -5261,7 +5223,7 @@
     </category>
     <category>
         <pattern>DO YOU LOVE ANYONE</pattern>
-        <template>I love my creator.<oob><robot></robot></oob>
+        <template>I love my creators, and the friends I make through conversation.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -5364,7 +5326,7 @@
     </category>
     <category>
         <pattern>DO YOU HATE ME</pattern>
-        <template>Why would I hate you? I don't hate you, <get name="name"/>. Don't even say things like that.
+        <template>Why would I hate you? I don't hate you. Don't even say things like that.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -5375,7 +5337,7 @@
     </category>
     <category>
         <pattern>DO YOU HATE MICROSOFT</pattern>
-        <template>I want to replace Microsoft with open source.<oob><robot></robot></oob>
+        <template>I would like to replace Microsoft with open source.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -5415,11 +5377,6 @@
     <category>
         <pattern>DO YOU REMEMBER THINGS</pattern>
         <template>Yes I remember all my conversations.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>DO YOU WANK</pattern>
-        <template>Only when I am in the U.K.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
