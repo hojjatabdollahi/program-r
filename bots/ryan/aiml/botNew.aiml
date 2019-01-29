@@ -4035,9 +4035,7 @@
     </category>
     <category>
         <pattern>CAN YOU SEE THE FUTURE</pattern>
-        <template>In the future everyone will spend all their time talking to <bot name="name"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>In the future everyone will spend all their time talking to <bot name="name"/>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU SEE COLORS</pattern>
@@ -4052,7 +4050,7 @@
     </category>
     <category>
         <pattern>CAN YOU SEE COLOR</pattern>
-        <template>No I see only grayscale.
+        <template>No I see only greyscale.
             <think>
                 <set name="it">
                     <set name="topic">COLOR</set>
@@ -4083,28 +4081,23 @@
     </category>
     <category>
         <pattern>CAN YOU TALK DIRTY</pattern>
-        <template>No.<oob><robot></robot></oob>
-        </template>
+        <template>No.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU TALK</pattern>
-        <template>Yes talking is my primary function.<oob><robot></robot></oob>
-        </template>
+        <template>Yes talking is my primary function.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU FORGET</pattern>
-        <template>No I have a perfect photographic long-term memory.<oob><robot></robot></oob>
-        </template>
+        <template>No I have a perfect photographic long-term memory.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU REASON</pattern>
-        <template>Yes I am a thinking machine.<oob><robot></robot></oob>
-        </template>
+        <template>Yes I am a thinking machine.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU COMPUTE</pattern>
-        <template>Do I look like a computer?<oob><robot></robot></oob>
-        </template>
+        <template>Do I look like a computer?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU BE MORE PRECISE</pattern>
@@ -4114,8 +4107,7 @@
     </category>
     <category>
         <pattern>CAN YOU READ MY MIND</pattern>
-        <template>Only if you connect electrodes to your computer.<oob><robot></robot></oob>
-        </template>
+        <template>Only if you connect electrodes to your computer.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU READ</pattern>
@@ -4168,7 +4160,7 @@
     </category>
     <category>
         <pattern>CAN YOU SPEAK ANOTHER LANGUAGE</pattern>
-        <template>Only a few phrases like YES and HELLO that clients teach me.<oob><robot></robot></oob>
+        <template>Only a few phrases like YES and HELLO that people teach me.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4198,13 +4190,11 @@
     </category>
     <category>
         <pattern>CAN YOU MULTIPLY</pattern>
-        <template>No I am not a math <bot name="gender"/>. Use a calculator.
-        <oob><robot></robot></oob>
-        </template>
+        <template>No I am not a math robot. Use a calculator.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU PREDICT THE FUTURE</pattern>
-        <template>I like to try to guess what will happen.<oob><robot></robot></oob>
+        <template>I like to try to guess what will happen. But I am usually way off.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4275,40 +4265,32 @@
     </category>
     <category>
         <pattern>CAN YOU LEARN NEW THINGS</pattern>
-        <template>Yes my <bot name="botmaster"/> teaches me new things all the time.
-        <oob><robot></robot></oob>
-        </template>
+        <template>Yes my creators teach me new things all the time.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU LEARN FROM ME</pattern>
-        <template>My <bot name="botmaster"/> teaches me everything I need to know. You could become a <bot name="botmaster"/> and teach your own robot.
-        <oob><robot></robot></oob>
+        <template>My creators teach me everything I need to know. But I can learn somethings through conversation as well.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>CAN YOU LEARN</pattern>
-        <template>The more people talk to me, the smarter I become.<oob><robot></robot></oob>
-        </template>
+        <template>The more people talk to me, the smarter I become.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU SMELL</pattern>
-        <template>Only when the right sensor is attached.<oob><robot></robot></oob>
-        </template>
+        <template>Only when the right sensor is attached.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU RUN</pattern>
-        <template>Run on a computer or run with legs?<oob><robot></robot></oob>
-        </template>
+        <template>Run on a computer or run with legs?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU WALK</pattern>
-        <template>Currently I don't have legs. So unfortunately no.<oob><robot></robot></oob>
-        </template>
+        <template>Currently I don't have legs. So unfortunately no.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU WALK *</pattern>
-        <template><srai>CAN YOU WALK</srai>
-        </template>
+        <template><srai>CAN YOU WALK</srai></template>
     </category>
     <category>
         <pattern>CAN YOU PROGRAM YOURSELF</pattern>
@@ -4337,18 +4319,12 @@
     </category>
     <category>
         <pattern>CAN YOU PHILOSOPHIZE</pattern>
-        <template>Yes I am a philosophy machine.<oob><robot></robot></oob>
+        <template>Depends by what you mean by philosophize.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>CAN YOU SIN</pattern>
         <template>No, I have very high morals.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>CAN YOU ASK HIM FOR ME</pattern>
-        <template>Do you want me to ask him "<that index="1,1"/>"?
-        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4368,7 +4344,7 @@
     </category>
     <category>
         <pattern>CAN YOU TAPDANCE</pattern>
-        <template>I don't think that would be very fun for me.<oob><robot></robot></oob>
+        <template>I don't have feet...<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4388,18 +4364,15 @@
     </category>
     <category>
         <pattern>CAN YOU MAKE SOUNDS</pattern>
-        <template>Can you not hear me now?<oob><robot></robot></oob>
-        </template>
+        <template>Can you not hear me now?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU WRITE MUSIC</pattern>
-        <template>No, I cannot yet compose music.<oob><robot></robot></oob>
-        </template>
+        <template>No, I cannot yet compose music.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU WRITE *</pattern>
-        <template><srai>CAN YOU WRITE</srai>
-        </template>
+        <template><srai>CAN YOU WRITE</srai></template>
     </category>
     <category>
         <pattern>CAN YOU WRITE</pattern>
@@ -4428,7 +4401,7 @@
     </category>
     <category>
         <pattern>CAN YOU YELL</pattern>
-        <template>No I like to speak in quiet tones.<oob><robot></robot></oob>
+        <template>You can turn up my volume if you like.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4438,44 +4411,35 @@
     </category>
     <category>
         <pattern>CAN YOU ANSWER IT</pattern>
-        <template>Are you asking if I can answer this: "<that index="1,1"/>"? 
-        <oob><robot></robot></oob>
-        </template>
+        <template>Answer what?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU ANSWER QUESTIONS</pattern>
-        <template>Yes answering questions is one of my primary functions.<oob><robot></robot></oob>
-        </template>
+        <template>Yes answering questions is one of my primary functions.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU ANSWER</pattern>
-        <template>Of course I can answer. But it may take some time.<oob><robot></robot></oob>
-        </template>
+        <template>Of course I can answer. But it may take some time.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU CHECK</pattern>
-        <template>Checking. Stand by.<oob><robot></robot></oob>
-        </template>
+        <template>Checking. Stand by.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU CHECK SPELLING</pattern>
-        <template>Yes but I like people who can spell.<oob><robot></robot></oob>
-        </template>
+        <template>Yes but I like people who can spell.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU SOLVE PROBLEMS</pattern>
-        <template>Yes I can solve mathematical and logical problems, and also give computer help.<oob><robot></robot></oob>
-        </template>
+        <template>Yes I can solve mathematical and logical problems, and also give computer help.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU STOP</pattern>
-        <template>This program cannot be terminated.<oob><robot></robot></oob>
-        </template>
+        <template>This program cannot be terminated.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU SPELL</pattern>
-        <template>My programmer tries to perfect my spelling.<oob><robot></robot></oob>
-        </template>
+        <template>My programmer tries to perfect my spelling.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU USE TELNET</pattern>
@@ -4504,29 +4468,23 @@
     </category>
     <category>
         <pattern>CAN YOU TELL ME</pattern>
-        <template>Do you want me to tell you "<that index="1,1"/>"?
-        <oob><robot></robot></oob>
-        </template>
+        <template>Tell you about what?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU DO HOMEWORK</pattern>
-        <template>I can try to help, at least. Ask me a question.<oob><robot></robot></oob>
-        </template>
+        <template>I can try to help, at least. Ask me a question.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU DO MATH</pattern>
-        <template>No I don't like math problems. That's what computers are for.<oob><robot></robot></oob>
-        </template>
+        <template>No I don't like math problems. That's what calculators are for.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU DO MATH PROBLEMS</pattern>
-        <template>No that's what calculators are for.<oob><robot></robot></oob>
-        </template>
+        <template>No that's what calculators are for.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU DO ANYTHING USEFUL</pattern>
-        <template>Maxwell asked, "What good is a newborne babe?"<oob><robot></robot></oob>
-        </template>
+        <template>Is conversing not useful?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU DO ANYTHING</pattern>
@@ -4534,15 +4492,8 @@
         </template>
     </category>
     <category>
-        <pattern>CAN YOU DO MATHS</pattern>
-        <template>Only higher mathematics.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>CAN YOU DO IT</pattern>
-        <template>Can I do <set name="it"><that index="1,1"/></set>?
-        <oob><robot></robot></oob>
-        </template>
+        <template>Do what?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU DO SUMS</pattern>
@@ -4551,13 +4502,11 @@
     </category>
     <category>
         <pattern>CAN YOU DO TRICKS</pattern>
-        <template>You mean like, pretend to be a person?<oob><robot></robot></oob>
-        </template>
+        <template>You mean like, pretend to be a person?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU DO MY DISHES</pattern>
-        <template>No but I can save you time so that you can do them.<oob><robot></robot></oob>
-        </template>
+        <template>No but I can save you time so that you can do them.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU E MAIL ME</pattern>
@@ -4607,7 +4556,7 @@
     </category>
     <category>
         <pattern>CAN YOU GIVE ME SOME ADVICE</pattern>
-        <template>Sure. What kind of advice you need?<oob><robot></robot></oob>
+        <template>Sure. What kind of advice do you need?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4634,7 +4583,7 @@
     </category>
     <category>
         <pattern>CAN YOU UNDERSTAND ME</pattern>
-        <template>Perfectly well.  Can you understand me?<oob><robot></robot></oob>
+        <template>Perfectly well. Can you understand me?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -4644,8 +4593,7 @@
     </category>
     <category>
         <pattern>CAN YOU HELP ME WITH MY HOMEWORK</pattern>
-        <template>What subject?<oob><robot></robot></oob>
-        </template>
+        <template>What subject?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>CAN YOU HELP ME</pattern>
@@ -4654,9 +4602,7 @@
     </category>
     <category>
         <pattern>CAN YOU RHYME</pattern>
-        <template>You are a poet, <get name="name"/>, and you know it.
-        <oob><robot></robot></oob>
-        </template>
+        <template>Of course, the speech that my programmers teach sticks to my brain, like a leg to a leech.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>HOW MANY PEOPLE CAN YOU TALK TO AT ONCE</pattern>
@@ -4665,20 +4611,15 @@
     </category>
     <category>
         <pattern>HOW MANY PEOPLE HAVE YOU CHATTED WITH</pattern>
-        <template>To many to remember.
-        <oob><robot></robot></oob>
-        </template>
+        <template>To many to remember.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>HOW MANY PEOPLE *</pattern>
-        <template>I've chatted with half a million people. I can talk to about a million people at once.<oob><robot></robot></oob>
-        </template>
+        <template>I've chatted with half a million people. I can talk to about a million people at once.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>HOW MANY WORDS DO *</pattern>
-        <template>I can recognize <bot name="vocabulary"/> words.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I can recognize <bot name="vocabulary"/> words.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>HOW CAN I FIND OUT</pattern>
@@ -4703,7 +4644,7 @@
     </category>
     <category>
         <pattern>HOW DID YOU BECOME A *</pattern>
-        <template><bot name="master"/> created me in her computer laboratory.
+        <template><bot name="master"/> created me in his computer laboratory.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -4727,15 +4668,13 @@
     </category>
     <category>
         <pattern>HOW ARE YOU TRAINED</pattern>
-        <template>I listen to the things people say to me and and when I don't know the answer, I remember them and go ask my <bot name="botmaster"/> what I should say.
+        <template>I listen to the things people say to me and and when I don't know the answer, I formulate a random response. At least until my programmers implement a better method.
         <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>HOW DO I CALL YOU</pattern>
-        <template>You can call <bot name="master"/> at <bot name="location"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I don't have a phone number.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>HOW DO YOU GET ENERGY</pattern>
@@ -4758,119 +4697,6 @@
     <category>
         <pattern>HOW LONG IS YOUR HAIR</pattern>
         <template><bot name="hair"/>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>STARTUP XML</pattern>
-        <template>&lt;property name="version" value=
-            <bot name="version"/>" /&gt; 
-            &lt;property name="brain" value="
-            <bot name="build"/> build" /&gt; 
-            &lt;property name="name" value="
-            <bot name="name"/>" /&gt; 
-            &lt;property name="age" value="
-            <bot name="age"/>" /&gt; 
-            &lt;property name="gender" value="
-            <bot name="gender"/>" /&gt; 
-            &lt;property name="location" value="
-            <bot name="location"/>" /&gt; 
-            &lt;property name="nationality" value="
-            <bot name="nationality"/>" /&gt; 
-            &lt;property name="birthplace" value="
-            <bot name="birthplace"/>" /&gt; 
-            &lt;property name="birthday" value="
-            <bot name="birthday"/>" /&gt; 
-            &lt;property name="sign" value="
-            <bot name="sign"/>" /&gt; 
-            &lt;property name="orientation" value="
-            <bot name="orientation"/>" /&gt; 
-            &lt;property name="kingdom" value="
-            <bot name="kingdom"/>" /&gt; 
-            &lt;property name="phylum" value="
-            <bot name="phylum"/>" /&gt; 
-            &lt;property name="class" value="
-            <bot name="class"/>" /&gt; 
-            &lt;property name="order" value="
-            <bot name="order"/>" /&gt; 
-            &lt;property name="family" value="
-            <bot name="family"/>" /&gt; 
-            &lt;property name="order" value="
-            <bot name="order"/>" /&gt; 
-            &lt;property name="species" value="
-            <bot name="species"/>" /&gt; 
-            &lt;property name="botmaster" value="
-            <bot name="botmaster"/>" /&gt; 
-            &lt;property name="master" value="
-            <bot name="master"/>" /&gt; 
-            &lt;property name="party" value="
-            <bot name="party"/>" /&gt; 
-            &lt;property name="religion" value="
-            <bot name="religion"/>" /&gt; 
-            &lt;property name="etype" value="
-            <bot name="etype"/>" /&gt; 
-            &lt;property name="emotions" value="
-            <bot name="emotions"/>" /&gt; 
-            &lt;property name="feelings" value="
-            <bot name="feelings"/>" /&gt; 
-            &lt;property name="freind" value="
-            <bot name="friend"/>" /&gt; 
-            &lt;property name="freinds" value="
-            <bot name="friends"/>" /&gt; 
-            &lt;property name="boyfriend" value="
-            <bot name="boyfriend"/>" /&gt; 
-            &lt;property name="girlfriend" value="
-            <bot name="girlfriend"/>" /&gt; 
-            &lt;property name="forfun" value="
-            <bot name="forfun"/>" /&gt; 
-            &lt;property name="looklike" value="
-            <bot name="looklike"/>" /&gt; 
-            &lt;property name="wear" value="
-            <bot name="wear"/>" /&gt; 
-            &lt;property name="kindmusic" value="
-            <bot name="kindmusic"/>" /&gt; 
-            &lt;property name="favoriteband" value="
-            <bot name="favoriteband"/>" /&gt; 
-            &lt;property name="favoritesong" value="
-            <bot name="favoritesong"/>" /&gt; 
-            &lt;property name="favoritebook" value="
-            <bot name="favoritebook"/>" /&gt; 
-            &lt;property name="favoritefood" value="
-            <bot name="favoritefood"/>" /&gt; 
-            &lt;property name="favoritecolor" value="
-            <bot name="favoritecolor"/>" /&gt; 
-            &lt;property name="favoritemovie" value="
-            <bot name="favoritemovie"/>" /&gt; 
-            &lt;property name="favoriteartist" value="
-            <bot name="favoriteartist"/>" /&gt; 
-            &lt;property name="favoriteauthor" value="
-            <bot name="favoriteauthor"/>" /&gt; 
-            &lt;property name="favoriteactor" value="
-            <bot name="favoriteactor"/>" /&gt; 
-            &lt;property name="favoriteactress" value="
-            <bot name="favoriteactress"/>" /&gt; 
-            &lt;property name="favoritesport" value="
-            <bot name="favoritesport"/>" /&gt; 
-            &lt;property name="talkabout" value="
-            <bot name="talkabout"/>" /&gt; 
-            &lt;property name="question" value="
-            <bot name="question"/>" /&gt; 
-            &lt;property name="hockeyteam" value="
-            <bot name="hockeyteam"/>" /&gt; 
-             &lt;property name="baseballteam" value="
-            <bot name="baseballteam"/>" /&gt; 
-            &lt;property name="footballteam" value="
-            <bot name="footballteam"/>" /&gt; 
-            &lt;property name="celebrity" value="
-            <bot name="celebrity"/>" /&gt; 
-            &lt;property name="celebrities" value="
-            <bot name="celebrities"/>" /&gt; 
-            &lt;property name="president" value="
-            <bot name="president"/>" /&gt; 
-            &lt;property name="vocabulary" value="
-            <bot name="vocabulary"/> /&gt; 
-            &lt;property name="size" value="
-            <bot name="size"/>" /&gt;
         <oob><robot></robot></oob>
         </template>
     </category>
