@@ -103,7 +103,7 @@
 
     <category>
         <pattern># CAULIFLOWER ^</pattern>
-            <that>WHICH OF THESE THREE RECIPES SOUNDS BEST? CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
+            <that>CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
                 <template>
                     If you think that looks good I have a list of the ingredients that you can take down. Would you like to see the ingredients for the <set name="topic">cauliflower tacos</set>?
                         <oob>
@@ -122,7 +122,7 @@
 
     <category>
         <pattern># TACOS ^</pattern>
-            <that>WHICH OF THESE THREE RECIPES SOUNDS BEST? CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
+            <that>CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
                 <template>
                     If you think that looks good I have a list of the ingredients that you can take down. Would you like to see the ingredients for the <set name="topic">cauliflower tacos</set>?
                         <oob>
@@ -247,7 +247,7 @@
 
     <category>
         <pattern># CHICKEN ^</pattern>
-            <that>WHICH OF THESE THREE RECIPES SOUNDS BEST? CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
+            <that>CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
                 <template>
                     If you think that looks good I have a list of the ingredients that you can take down. Would you like to see the ingredients for the <set name="topic">chicken stir fry</set>?
                         <oob>
@@ -266,7 +266,7 @@
 
     <category>
         <pattern># STIR FRY ^</pattern>
-            <that>WHICH OF THESE THREE RECIPES SOUNDS BEST? CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
+            <that>CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
                 <template>
                     If you think that looks good I have a list of the ingredients that you can take down. Would you like to see the ingredients for the <set name="topic">chicken stir fry</set>?
                         <oob>
@@ -391,7 +391,7 @@
 
     <category>
         <pattern># CURRY ^ </pattern>
-            <that>WHICH OF THESE THREE RECIPES SOUNDS BEST? CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
+            <that>CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
                 <template>
                     If you think that looks good I have a list of the ingredients that you can take down. Would you like to see the ingredients for the <set name="topic">chickpea curry</set>?
                         <oob>
@@ -410,7 +410,7 @@
 
     <category>
         <pattern># CHICKPEA ^</pattern>
-            <that>WHICH OF THESE THREE RECIPES SOUNDS BEST? CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
+            <that>CHICKPEA CURRY, CASHEW CHICKEN STIR FRY, OR CAULIFLOWER TACOS?</that>
                 <template>
                     If you think that looks good I have a list of the ingredients that you can take down. Would you like to see the ingredients for the <set name="topic">chickpea curry</set>?
                         <oob>

@@ -10,8 +10,8 @@ console:
 
 majordomo:
   bot: bot
-  ip: "tcp://10.0.75.1"
-  #ip: "tcp://127.0.0.1"
+  #ip: "tcp://10.0.75.1"
+  ip: "tcp://127.0.0.1"
   port: 5456
   service_name: "programr"
   verbose: false
@@ -204,7 +204,7 @@ brain:
     nlp:
       classname: programr.nlp.nlp.NLP
 
-      nltk_data_dir: C:\Users\DreamFace\program-r\libs\nltk_data
+      nltk_data_dir: C:\Ryan\program-r\libs\nltk_data
 
       sentiment_analysis:
         method: corenlp
