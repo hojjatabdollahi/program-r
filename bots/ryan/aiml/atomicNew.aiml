@@ -122,23 +122,8 @@
         </template>
     </category>
     <category>
-        <pattern>LET US CHANGE THE SUBJECT</pattern>
-        <template>OK what do you want to chat about now?.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>LET US CHANGE THE TOPIC</pattern>
-        <template>What would you rather talk about?<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>LET US TALK ABOUT ME</pattern>
         <template>That's my favorite subject :-)<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>LET US TALK ABOUT SOMETHING ELSE</pattern>
-        <template>What would you rather talk about?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -166,17 +151,6 @@
     <category>
         <pattern>LET US TALK ABOUT YOU</pattern>
         <template><set name="it"><set name="topic">Me</set></set> is my favorite subject  :-)
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>LET US TALK ABOUT FOOTBALL</pattern>
-        <template>Okay. I can't kick.
-            <think>
-                <set name="it">
-                    <set name="topic">FOOTBALL</set>
-                </set>
-            </think>
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -2049,11 +2023,6 @@
         </template>
     </category>
     <category>
-        <pattern>FOOTBALL</pattern>
-        <template>Do you play?<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>ALMOST</pattern>
         <template>But not quite?<oob><robot></robot></oob>
         </template>
@@ -2062,10 +2031,6 @@
         <pattern>VOYAGER</pattern>
         <template>I like Voyager too, especially 7 of 9.<oob><robot></robot></oob>
         </template>
-    </category>
-    <category>
-        <pattern>CHANGE THE SUBJECT</pattern>
-        <template><srai>Change topic</srai></template>
     </category>
     <category>
         <pattern>TRY WHAT</pattern>
@@ -8545,17 +8510,6 @@
     <category>
         <pattern>I DO NOT LIKE READING</pattern>
         <template>Do you watch TV?<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>I DO NOT LIKE FOOTBALL</pattern>
-        <template>I'm not the hugest fan myself. Watching grown men tackle each other head first can get repetative.
-            <think>
-                <set name="it">
-                    <set name="topic">FOOTBALL</set>
-                </set>
-            </think>
-        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -18725,6 +18679,26 @@
         </template>
     </category>
     <category>
+        <pattern>BASKETBALL</pattern>
+        <template>What is your favorite professional basketball team?<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>BASEBALL</pattern>
+        <template>Who is your favorite professional baseball team?<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>FOOTBALL</pattern>
+        <template>Who is your favorite professional football team?<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>HOCKEY</pattern>
+        <template>Who is your favorite hockey team?<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
         <pattern>ROMANCE</pattern>
         <template>Do you like stories about romance?<oob><robot></robot></oob></template>
         </template>
@@ -18758,7 +18732,22 @@
         <pattern>DRAMA</pattern>
         <template>What emotions come up for you when you read a drama?<oob><robot></robot></oob></template>
     </category>
-
+    <category>
+        <pattern>NONFICTION</pattern>
+        <template>Do you read any non-fiction?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>NON FICTION</pattern>
+        <template>Do you read any non-fiction?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>NON-FICTION</pattern>
+        <template>Do you read any non-fiction?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>RADIO</pattern>
+        <template>Did you ever listen to radio shows with your family?<oob><robot></robot></oob></template>
+    </category>
 
     <!-- END OF CATEGORIES THAT LEAD INTO IN-DEPTH CONVERSATION -->
 
