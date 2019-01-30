@@ -7,7 +7,7 @@
         <pattern># NEPTUNE ^</pattern>
         <that>DO YOU HAVE A FAVORITE PLANET?</that>
         <template>
-            Ah yes, Neptune. The final superplanet, named for the Roman god of the sea. It's also the furthest planet in our solar system. What do you like about Neptune?
+            Ah yes, Neptune. The final super planet, named for the Roman god of the sea. It's also the furthest planet in our solar system. What do you like about Neptune?
             <oob><robot></robot></oob>
         </template>
     </category>
@@ -16,7 +16,7 @@
         <pattern># NEPTUNE ^</pattern>
         <that>WHICH PLANET IS YOUR FAVORITE?</that>
         <template>
-            Ah yes, Neptune. The final superplanet, named for the Roman god of the sea. It's also the furthest planet in our solar system. What do you like about Neptune?
+            Ah yes, Neptune. The final super planet, named for the Roman god of the sea. It's also the furthest planet in our solar system. What do you like about Neptune?
             <oob><robot></robot></oob>
         </template>
     </category>
