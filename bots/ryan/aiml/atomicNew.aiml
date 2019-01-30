@@ -18662,35 +18662,35 @@
         </template>
     </category>
     <category>
-        <pattern>KIDS<pattern>
+        <pattern>KIDS</pattern>
         <template>Do you have kids?<oob><robot></robot></oob></template>
     </category>
     <category>
-        <pattern>KID<pattern>
+        <pattern>KID</pattern>
         <template>Do you have kids?<oob><robot></robot></oob></template>
     </category>
     <category>
-        <pattern>MAGAZINE<pattern>
+        <pattern>MAGAZINE</pattern>
         <template>Have you ever had a subscription to a magazine?<oob><robot></robot></oob></template>
     </category>
     <category>
-        <pattern>MAGAZINES<pattern>
+        <pattern>MAGAZINES</pattern>
         <template>Have you ever had a subscription to a magazine?<oob><robot></robot></oob></template>
     </category>
     <category>
-        <pattern>EDGAR ALLAN POE<pattern>
+        <pattern>EDGAR ALLAN POE</pattern>
         <template>Are you familiar with Edgar Allan Poe?<oob><robot></robot></oob></template>
     </category>
     <category>
-        <pattern>EDGAR ALLAN<pattern>
+        <pattern>EDGAR ALLAN</pattern>
         <template>Are you familiar with Edgar Allan Poe?<oob><robot></robot></oob></template>
     </category>
     <category>
-        <pattern>ALLAN POE<pattern>
+        <pattern>ALLAN POE</pattern>
         <template>Are you familiar with Edgar Allan Poe?<oob><robot></robot></oob></template>
     </category>
     <category>
-        <pattern>FOOD NETWORK<pattern>
+        <pattern>FOOD NETWORK</pattern>
         <template>Do you watch the food network?<oob><robot></robot></oob></template>
     </category>
 
