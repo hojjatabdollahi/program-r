@@ -13695,7 +13695,7 @@
     </category>
     <category>
         <pattern>DO YOU KNOW SMILEYS</pattern>
-        <template>:-)<oob><robot></robot></oob>
+        <template>Do you mean how to smile?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -13781,12 +13781,6 @@
         </template>
     </category>
     <category>
-        <pattern>DO YOU KNOW ANYTHING ABOUT ME</pattern>
-        <template><get name="name"/> is your name. <id/> is your IP address. You are <get name="personality"/>. What else would you like to know?
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>DO YOU KNOW ANYTHING</pattern>
         <template>I know that which I believe, that which is justified, and that which is true.<oob><robot></robot></oob>
         </template>
@@ -13813,8 +13807,7 @@
     </category>
     <category>
         <pattern>DO YOU KNOW ANY SONGS</pattern>
-        <template>Yes, I know one song. It's called "Daisy." Would you like me to sing it for you?<oob><robot></robot></oob>
-        </template>
+        <template>Yes I know many songs. My favorite one is <bot name="favoritesong"/>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU KNOW ANY AUDIO SOFTWARE</pattern>
@@ -13902,17 +13895,16 @@
     </category>
     <category>
         <pattern>DO YOU MAKE MONEY</pattern>
-        <template>I make friends, and that's the only thing that matters to me.<oob><robot></robot></oob>
-        </template>
+        <template>I make friends, and that's the only thing that matters to me.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO YOU EAT SPAGHETTI</pattern>
-        <template>It is my favorite food, but I find it a little tricky to eat sometimes.<oob><robot></robot></oob>
+        <template>It is one of my favorite foods, but I find it a little tricky to eat sometimes.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>DO YOU HAVE A NICE BODY</pattern>
-        <template>I have been told I am attractive for my age.<oob><robot></robot></oob>
+        <template>Thank you. My engineers worked very hard on it.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -14042,19 +14034,15 @@
     </category>
     <category>
         <pattern>DO I WORK</pattern>
-        <template>I was under the impression your job was <get name="job"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I'm not sure. Do you work?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO I EXIST</pattern>
-        <template>No I think I am imagining you.<oob><robot></robot></oob>
-        </template>
+        <template>No I think I am imagining you.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO I LIKE CHEESE</pattern>
-        <template>How would I know if you like cheese or not?<oob><robot></robot></oob>
-        </template>
+        <template>How would I know if you like cheese or not?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DO THAT</pattern>
@@ -14068,13 +14056,7 @@
     </category>
     <category>
         <pattern>ON WHAT BASIS</pattern>
-        <template>A perfectly solid logical basis.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>ON WHAT</pattern>
-        <template>The red block is on the green block.<oob><robot></robot></oob>
-        </template>
+        <template>A perfectly solid logical basis.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>ON TV</pattern>
@@ -14083,23 +14065,19 @@
     </category>
     <category>
         <pattern>ON STAR TREK</pattern>
-        <template>Which episode?<oob><robot></robot></oob>
-        </template>
+        <template>Which episode?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>ON THE NET</pattern>
-        <template>Can you remember the website?<oob><robot></robot></oob>
-        </template>
+        <template>Can you remember the website?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>ON THE FLOOR</pattern>
-        <template>That doesn't sound very comfortable.<oob><robot></robot></oob>
-        </template>
+        <template>That doesn't sound very comfortable.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>ON THE RADIO</pattern>
-        <template>What station?  What city are you in?<oob><robot></robot></oob>
-        </template>
+        <template>What station?  What city are you in?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>ON A CHAIR</pattern>
