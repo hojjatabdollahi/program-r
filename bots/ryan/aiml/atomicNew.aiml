@@ -18724,6 +18724,41 @@
         <template>What is your favorite sport to watch, basketball, baseball, football, or hockey?<oob><robot></robot></oob></template>
         </template>
     </category>
+    <category>
+        <pattern>ROMANCE</pattern>
+        <template>Do you like stories about romance?<oob><robot></robot></oob></template>
+        </template>
+    </category>
+    <category>
+        <pattern>TEA</pattern>
+        <template>Do you like tea?<oob><robot></robot></oob></template>
+        </template>
+    </category>
+    <category>
+        <pattern>COFFEE</pattern>
+        <template>Wake up juice! Robots don't have anything like that. When we turn on it takes just as long as it needs to take. Do you prefer brewed coffee or espresso?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>TELEGRAPH</pattern>
+        <template>Do you know what the telegraph machine was?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>TELEGRAPH MACHINE</pattern>
+        <template>Do you know what the telegraph machine was?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>MOON LANDING</pattern>
+        <template>In my mind, one of the greatest human accomplishments was the moon landing. Do you agree?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>MOON</pattern>
+        <template>In my mind, one of the greatest human accomplishments was the moon landing. Do you agree?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>DRAMA</pattern>
+        <template>What emotions come up for you when you read a drama?<oob><robot></robot></oob></template>
+    </category>
+
 
     <!-- END OF CATEGORIES THAT LEAD INTO IN-DEPTH CONVERSATION -->
 

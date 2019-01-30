@@ -108,7 +108,7 @@
         <pattern>YOU ARE DERANGED</pattern>
         <template>
             <random>
-                <li>Derangement is not  a condition I can experience.</li>
+                <li>Derangement is not a condition I can experience.</li>
                 <li><srai>YOU ARE CRAZY</srai></li>
             </random>
         <oob><robot></robot></oob>
