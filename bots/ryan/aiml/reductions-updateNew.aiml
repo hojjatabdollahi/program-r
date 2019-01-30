@@ -76,27 +76,7 @@
     </category>
     <category>
         <pattern>* FOR ME</pattern>
-        <template><srai>FOR ME</srai> <srai><star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>XDMOZ *</pattern>
-        <template><srai>XFIND <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>GOOGLE *</pattern>
-        <template><srai>XFIND <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>ACCESS *</pattern>
-        <template><srai>XFIND <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>XGOOGLE *</pattern>
-        <template><srai>XFIND <star/></srai>
+        <template><srai><star/></srai>
         </template>
     </category>
     <category>

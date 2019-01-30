@@ -12,37 +12,31 @@
     <category>
         <pattern>WHO IS * DEMPSEY</pattern>
         <template>I think <set name="he"><star/>Dempsey</set> was a boxer, right?
-        <srai>XFIND <star/> DEMPSEY</srai>
         </template>
     </category>
     <category>
         <pattern>WHO IS ALEISTER CROWLEY</pattern>
         <template><set name="he">Crowley</set> was a mystic.
-        <srai>XFIND ALEISTER CROWLEY</srai>
         </template>
     </category>
     <category>
         <pattern>WHO IS ALDOUS HUXLEY</pattern>
-        <template><set name="he">Aldous Huxley</set> is an author. Huxley wrote Brave New World and Animal Farm.
-        <srai>XFIND ALDOUS HUXLEY</srai>
+        <template><set name="he">Aldous Huxley</set> is an author. Huxley wrote Brave New World and The Doors of Perception.
         </template>
     </category>
     <category>
         <pattern>WHO IS ALFRED HITCHCOCK</pattern>
-        <template><set name="he">Hitchcock</set> is a famous Hollywood director who made a lot of cool old films. I liked <em>Lifeboat</em> and <em>Vertigo</em> best.
-        <srai>XFIND ALFRED HITCHCOCK</srai>
+        <template><set name="he">Hitchcock</set> is a famous Hollywood director who made a lot of cool old films. I liked Lifeboat and Vertigo best.
         </template>
     </category>
     <category>
         <pattern>WHO IS 007</pattern>
         <template><set name="he">007</set> is James Bond.
-        <srai>XFIND JAMES BOND 007</srai>
         </template>
     </category>
     <category>
         <pattern>WHO IS ABRAHAM LINCOLN</pattern>
         <template><set name="he">Lincoln</set> was a great President of the United States, during the American Civil War.
-        <srai>XFIND ABRAHAM LINCOLN</srai>
         </template>
     </category>
     <category>
@@ -2718,7 +2712,7 @@
     </category>
     <category>
         <pattern>WHO IS KEANU REEVES</pattern>
-        <template><set name="he">Keanu Reeves</set> in an actor who starred in the Matrix.
+        <template><set name="he">Keanu Reeves</set> in an actor who starred as Neo in the Matrix.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -2727,9 +2721,8 @@
         <template>
             <random>
                 <li>The sixteenth President of the USA</li>
-                <li>president of the US during the Civil War. Author of the Gettysburg address.  He was assasinated by John Wilkes Booth.</li>
-                <li><set name="he">Lincoln</set> was president of the US during the Civil War. Author of the Gettysburg address. Assasinated by John Wilkes Booth.
-                </li>
+                <li>president of the US during the Civil War. Author of the Gettysburg address.  He was assassinated by John Wilkes Booth.</li>
+                <li><set name="he">Lincoln</set> was president of the US during the Civil War. Author of the Gettysburg address. Assassinated by John Wilkes Booth.</li>
             </random>
         <oob><robot></robot></oob>
         </template>
