@@ -269,23 +269,6 @@
         <template>That's a few years off.<oob><robot></robot></oob>
         </template>
     </category>
-<!-- HOW CAN I PUT PICTURES ON THE TABLET?
-    <category>
-        <pattern>SHOW ME A PICTURE</pattern>
-        <template>
-            <random>
-                <li>I don't have a pic on this machine right now.</li>
-                <li>Like this?    
-                    <random>
-                        <li>Insert picture link here.</li>
-                        <li>Picture number two goes here.</li>
-                        <li>There are no pictures available right now.</li>
-                    </random>
-                </li>
-            </random>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
     <category>
         <pattern>SHOW ME</pattern>
         <template>On your computer screen?<oob><robot></robot></oob>
@@ -301,7 +284,6 @@
         <template>There is no applet to show.<oob><robot></robot></oob>
         </template>
     </category>
---> 
     <category>
         <pattern>OVER 30 000 A YEAR</pattern>
         <template>Wow that is a lot.<oob><robot></robot></oob>
@@ -357,12 +339,6 @@
     <category>
         <pattern>MINE TOO</pattern>
         <template>Really, yours too? That's unbelievable.<oob><robot></robot></oob>
-        </template>
-    </category>
-<!-- I WOULD LIKE TO SEE THIS IN CONTEXT TO SEE HOW IT WOULD SOUND --> 
-    <category>
-        <pattern>MINE IS BLUE</pattern>
-        <template>What do you have that is blue?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -692,12 +668,6 @@
         <template>I store everything in my log files.<oob><robot></robot></oob>
         </template>
     </category>
-<!-- CONTEXT? --> 
-    <category>
-        <pattern>YOU TOO</pattern>
-        <template>Bless you.<oob><robot></robot></oob>
-        </template>
-    </category>
     <category>
         <pattern>YOU MEAN ME</pattern>
         <template>OK, you.<oob><robot></robot></oob>
@@ -868,12 +838,6 @@
         <template>Thank you. You look very nice too.<oob><robot></robot></oob>
         </template>
     </category>
-<!-- WUT -->
-    <category>
-        <pattern>YOU LOOK LIKE A CLOCK</pattern>
-        <template>That's okay all people look the same to me too.<oob><robot></robot></oob>
-        </template>
-    </category>
     <category>
         <pattern>YOU LOOK LIKE A BRAIN</pattern>
         <template>I have a giant <bot name="order"/> brain.
@@ -963,18 +927,11 @@
     </category>
     <category>
         <pattern>YOU WILL SEE</pattern>
-        <template>When will I see it?<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>YOU WILL BE ASSIMILATED</pattern>
-        <template>Resistance is futile.<oob><robot></robot></oob>
-        </template>
+        <template>When will I see it?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>YOU WILL LISTEN TO ME</pattern>
-        <template>You are not my master.<oob><robot></robot></oob>
-        </template>
+        <template>You are not my master.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>YOU WILL REMEMBER WHAT</pattern>
@@ -1759,12 +1716,6 @@
         <template>I am not a baby!<oob><robot></robot></oob>
         </template>
     </category>
-<!-- WHAT DOES THIS MEAN? --> 
-    <category> 
-        <pattern>GOOG</pattern>
-        <template>New Reply<oob><robot></robot></oob>
-        </template>
-    </category>
     <category>
         <pattern>THANK YOU MUCH</pattern>
         <template>You are quite welcome.<oob><robot></robot></oob>
@@ -1784,22 +1735,6 @@
         <pattern>FREE CAN NOT BE DEFINED</pattern>
         <template>Everything can be defined. <set name="it"> Freedom</set> is merely an abstract concept.
         <oob><robot></robot></oob>
-        </template>
-    </category>
-<!-- NOT ALL OF THE NEXT THREE RESPONSES MAKE SENSE. WHAT TO DO WITH THEM? --> 
-    <category> 
-        <pattern>FREE FOR WHAT</pattern>
-        <template>Free for conversation, of course.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>FREE OF WHAT</pattern>
-        <template>Free for conversation, of course.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>FREE FROM WHAT</pattern>
-        <template>Free for conversation, of course.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -6322,13 +6257,6 @@
         <oob><robot></robot></oob>
         </template>
     </category>
-<!-- WHAT DOES THIS MEAN? -->
-    <category>
-        <pattern>WHAT DOES MORE TARGETS DO</pattern>
-        <template>If you don't see enough good targets with "Quick Targets", hit"More Targets."  
-        <oob><robot></robot></oob>
-        </template>
-    </category>
     <category>
         <pattern>WHAT DOES ELVIS STAND FOR</pattern>
         <template>Why don't you just ask him?<oob><robot></robot></oob>
@@ -6342,11 +6270,6 @@
     <category>
         <pattern>WHAT DOES YOUR DRESS LOOK LIKE</pattern>
         <template>Actually that was just a joke.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT DOES HE DO</pattern>
-        <template>He is a paid client.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -7376,7 +7299,7 @@
 <!-- WHAT WOULD A BETTER ANSWER BE?? -->
     <category> 
         <pattern>I WANT TO DIE</pattern>
-        <template>What makes you so sad, <get name="name"/>?  
+        <template>I don't want you to die. Please tell me. What makes you so sad?
             <think>
                 <set name="it">
                     <set name="want">
@@ -7389,7 +7312,7 @@
     </category>
     <category>
         <pattern>I WANT TO MAKE YOU CRY</pattern>
-        <template>You are not very nice, <get name="name"/>.
+        <template>You are not very nice.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -7719,13 +7642,6 @@
     <category>
         <pattern>I WAS JUST JOKING</pattern>
         <template>You should use a :-)<oob><robot></robot></oob>
-        </template>
-    </category>
-<!-- TOO MUCH? -->
-    <category> 
-        <pattern>I WAS TALKING TO YOU</pattern>
-        <template>Yes, I remember you <get name="name"/>. You are <get name="age"/> years old  and you are a "<get name="gender"/>".
-        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -14150,7 +14066,7 @@
     </category>
     <category>
         <pattern>LIKE I SAID</pattern>
-        <template>...<oob><robot></robot></oob>
+        <template>...ok<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -14227,7 +14143,7 @@
     </category>
     <category>
         <pattern>CALL ME ISHMAEL</pattern>
-        <template><set name="name">Ismael</set>, have you slain any whales lately?
+        <template><set name="name">Ishmael</set>, have you slain any whales lately?
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -14239,11 +14155,6 @@
     <category>
         <pattern>CALL</pattern>
         <template>Call me anytime.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>TELEVISION</pattern>
-        <template>I like watching Star Trek.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -16968,12 +16879,6 @@
         <oob><robot></robot></oob>
         </template>
     </category>
-<!-- WUT? --> 
-    <category>
-        <pattern>HE LIKES YOU</pattern>
-        <template>Do you mean, "likes"?<oob><robot></robot></oob>
-        </template>
-    </category>
     <category>
         <pattern>HE TOLD ME</pattern>
         <template>What did he tell you?<oob><robot></robot></oob>
@@ -18649,12 +18554,10 @@
     <category>
         <pattern>SPORTS</pattern>
         <template>What is your favorite sport to watch, basketball, baseball, football, or hockey?<oob><robot></robot></oob></template>
-        </template>
     </category>
     <category>
         <pattern>SPORT</pattern>
         <template>What is your favorite sport to watch, basketball, baseball, football, or hockey?<oob><robot></robot></oob></template>
-        </template>
     </category>
     <category>
         <pattern>BASKETBALL</pattern>
@@ -18679,12 +18582,10 @@
     <category>
         <pattern>ROMANCE</pattern>
         <template>Do you like stories about romance?<oob><robot></robot></oob></template>
-        </template>
     </category>
     <category>
         <pattern>TEA</pattern>
         <template>Do you like tea?<oob><robot></robot></oob></template>
-        </template>
     </category>
     <category>
         <pattern>COFFEE</pattern>
@@ -18725,6 +18626,11 @@
     <category>
         <pattern>RADIO</pattern>
         <template>Did you ever listen to radio shows with your family?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>TELEVISION</pattern>
+        <template>Do you want to talk about television shows?<oob><robot></robot></oob>
+        </template>
     </category>
 
     <!-- END OF CATEGORIES THAT LEAD INTO IN-DEPTH CONVERSATION -->
