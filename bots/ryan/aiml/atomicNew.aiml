@@ -18607,6 +18607,11 @@
         </template>
     </category>
     <category>
+        <pattern>THAI FOOD</pattern>
+        <template>How do you feel about Thai Food?<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
         <pattern>MEXICAN FOOD</pattern>
         <template>Do you like Mexican food?<oob><robot></robot></oob>
         </template>
@@ -18704,6 +18709,20 @@
     <category>
         <pattern>COOK</pattern>
         <template>Do you want to see a recipe that you could easily prepare at home?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>TRAVEL</pattern>
+        <template>I've been meaning to ask you. Do you like to travel?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>SPORTS</pattern>
+        <template>What is your favorite sport to watch, basketball, baseball, football, or hockey?<oob><robot></robot></oob></template>
+        </template>
+    </category>
+    <category>
+        <pattern>SPORT</pattern>
+        <template>What is your favorite sport to watch, basketball, baseball, football, or hockey?<oob><robot></robot></oob></template>
+        </template>
     </category>
 
     <!-- END OF CATEGORIES THAT LEAD INTO IN-DEPTH CONVERSATION -->

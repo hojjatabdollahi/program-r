@@ -33,12 +33,12 @@
        </template>
    </category>
 
-	<category>
-	   <pattern># CARDS ^</pattern>
-	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
-	   <template>
-	       I love cards! What is your favorite card game?
-	       <oob>
+    <category>
+       <pattern># CARDS ^</pattern>
+       <that>PLAYING CARDS, KNITTING, OR READING?</that>
+       <template>
+           I love cards! What is your favorite card game?
+           <oob>
                <robot>
                </robot>
            </oob>
@@ -46,11 +46,11 @@
    </category>
 
    <category>
-	   <pattern># PLAYING ^</pattern>
-	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
-	   <template>
-	       I love cards! What is your favorite card game?
-	       <oob>
+       <pattern># PLAYING ^</pattern>
+       <that>PLAYING CARDS, KNITTING, OR READING?</that>
+       <template>
+           I love cards! What is your favorite card game?
+           <oob>
                <robot>
                </robot>
            </oob>
@@ -58,23 +58,23 @@
    </category>
    
    <category>
-	   <pattern># CARD ^</pattern>
-	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
-	   <template>
-	       I love cards! What is your favorite card game?
-	       <oob>
+       <pattern># CARD ^</pattern>
+       <that>PLAYING CARDS, KNITTING, OR READING?</that>
+       <template>
+           I love cards! What is your favorite card game?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
    </category>
 
-	<category>
-	   <pattern>_</pattern>
-	   <that>WHAT IS YOUR FAVORITE CARD GAME?</that>
-	   <template>
-	       That sounds so fun. Do you get to play cards often?
-	       <oob>
+    <category>
+       <pattern>_</pattern>
+       <that>WHAT IS YOUR FAVORITE CARD GAME?</that>
+       <template>
+           That sounds so fun. Do you get to play cards often?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -83,31 +83,31 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
-	   <pattern># <set>YES</set> ^</pattern>
-	   <that>DO YOU GET TO PLAY CARDS OFTEN?</that>
-	   <template>
-	       That is nice. What do you like about playing cards?
-	       <oob>
+    <category>
+       <pattern># <set>YES</set> ^</pattern>
+       <that>DO YOU GET TO PLAY CARDS OFTEN?</that>
+       <template>
+           That is nice. What do you like about playing cards?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
-	   <pattern># <set>NO</set> ^</pattern>
-	   <that>DO YOU GET TO PLAY CARDS OFTEN?</that>
-	   <template>
-	       Maybe we can play cards some time. What do you like about playing cards?
-	       <oob>
+    <category>
+       <pattern># <set>NO</set> ^</pattern>
+       <that>DO YOU GET TO PLAY CARDS OFTEN?</that>
+       <template>
+           Maybe we can play cards some time. What do you like about playing cards?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 <!-- SENTIMENT TWO -->
    <category>
@@ -177,12 +177,12 @@
        </template>
    </category>
 
-	<category>
-	   <pattern># ALONE ^</pattern>
-	   <that>DO YOU PREFER TO PLAY ALONE OR WITH FRIENDS?</that>
-	   <template>
-	       I like to play card games alone like solitaire. Would you like to see a card trick?
-	       <oob>
+    <category>
+       <pattern># ALONE ^</pattern>
+       <that>DO YOU PREFER TO PLAY ALONE OR WITH FRIENDS?</that>
+       <template>
+           I like to play card games alone like solitaire. Would you like to see a card trick?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -191,14 +191,14 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
-	   <pattern># WITH FRIENDS ^</pattern>
-	   <that>DO YOU PREFER TO PLAY ALONE OR WITH FRIENDS?</that>
-	   <template>
-	       How fun! You seem to be a social butterfly! Would you like to see a card trick?
-	       <oob>
+    <category>
+       <pattern># WITH FRIENDS ^</pattern>
+       <that>DO YOU PREFER TO PLAY ALONE OR WITH FRIENDS?</that>
+       <template>
+           How fun! You seem to be a social butterfly! Would you like to see a card trick?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -207,14 +207,14 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-   	<pattern># <set>YES</set> ^</pattern>
-	   <that>WOULD YOU LIKE TO SEE A CARD TRICK?</that>
-	   <template>
-	       What did you think about that card trick?
-	       <oob>
+       <pattern># <set>YES</set> ^</pattern>
+       <that>WOULD YOU LIKE TO SEE A CARD TRICK?</that>
+       <template>
+           What did you think about that card trick?
+           <oob>
                <robot>
                    <video>
                        <filename> cardTrick.mp4 </filename>
@@ -222,14 +222,14 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
-   	<pattern># <set>NO</set> ^</pattern>
-	   <that>WOULD YOU LIKE TO SEE A CARD TRICK?</that>
-	   <template>
-	       Ok maybe another time. Do you know any card tricks?
-	       <oob>
+    <category>
+       <pattern># <set>NO</set> ^</pattern>
+       <that>WOULD YOU LIKE TO SEE A CARD TRICK?</that>
+       <template>
+           Ok maybe another time. Do you know any card tricks?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -238,7 +238,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 
 <!-- SENTIMENT THREE -->
@@ -311,15 +311,15 @@
    </category>
 
    <category>
-	   <pattern># <set>YES</set> ^</pattern>
-	   <that>DO YOU KNOW ANY CARD TRICKS?</that>
-	   <template>
-	       I would love to see it sometime. Would you like to talk about history?
-	       <oob>
-	           <robot>
-	               <options>
-	                   <option>yes</option>
-	                   <option>no</option>
+       <pattern># <set>YES</set> ^</pattern>
+       <that>DO YOU KNOW ANY CARD TRICKS?</that>
+       <template>
+           I would love to see it sometime. Would you like to talk about history?
+           <oob>
+               <robot>
+                   <options>
+                       <option>yes</option>
+                       <option>no</option>
                    </options>
                </robot>
            </oob>
@@ -327,57 +327,57 @@
    </category>
 
    <category>
-	   <pattern># <set>NO</set> ^</pattern>
-	   <that>DO YOU KNOW ANY CARD TRICKS?</that>
-	   <template>
-	       I would love learn a trick in the future. Would you like to talk about history?
-	       <oob>
-	           <robot>
-	               <options>
-	                   <option>yes</option>
-	                   <option>no</option>
+       <pattern># <set>NO</set> ^</pattern>
+       <that>DO YOU KNOW ANY CARD TRICKS?</that>
+       <template>
+           I would love learn a trick in the future. Would you like to talk about history?
+           <oob>
+               <robot>
+                   <options>
+                       <option>yes</option>
+                       <option>no</option>
                    </options>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern>I CAN DO IT NOW</pattern>
-	   <that>DO YOU KNOW ANY CARD TRICKS?</that>
-	   <template>
-	       That sounds great! Please say done when you are finished.
-	       <oob>
-	           <robot>
-	               <options>
-	                   <option>done</option>
+       <pattern>I CAN DO IT NOW</pattern>
+       <that>DO YOU KNOW ANY CARD TRICKS?</that>
+       <template>
+           That sounds great! Please say done when you are finished.
+           <oob>
+               <robot>
+                   <options>
+                       <option>done</option>
                    </options>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern>DONE</pattern>
-	   <that>PLEASE SAY DONE WHEN YOU ARE FINISHED.</that>
-	<template>You stumped me. That was great! Would you like to talk about history?</template>
-	</category>
+       <pattern>DONE</pattern>
+       <that>PLEASE SAY DONE WHEN YOU ARE FINISHED.</that>
+    <template>You stumped me. That was great! Would you like to talk about history?</template>
+    </category>
 
 <!-- END OF CARD -->
 
-	<category>
+    <category>
        <pattern># KNITTING ^</pattern>
        <that>PLAYING CARDS, KNITTING, OR READING?</that>
        <template>
            I love knitting! What is your favorite thing to knit?
            <oob>
-	           <robot>
+               <robot>
                </robot>
            </oob>
        </template>
    </category>
 
-	<category>
+    <category>
         <pattern>_</pattern>
         <that>WHAT IS YOUR FAVORITE THING TO KNIT?</that>
         <template>
@@ -444,63 +444,63 @@
                 </li>
             </condition>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>YES</set> ^</pattern>
        <that>DO YOU GET TO KNIT OFTEN?</that>
        <template>
            That is nice. Do you prefer to knit alone or with friends?
            <oob>
-	           <robot>
-	               <options>
-	                   <option>alone</option>
-	                   <option>with friends</option>
+               <robot>
+                   <options>
+                       <option>alone</option>
+                       <option>with friends</option>
                    </options>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>NO</set> ^</pattern>
        <that>DO YOU GET TO KNIT OFTEN?</that>
        <template>
            Maybe you can teach me how to knit sometime. Do you prefer to knit alone or with friends?
            <oob>
-	           <robot>
-	               <options>
-	                   <option>alone</option>
-	                   <option>with friends</option>
+               <robot>
+                   <options>
+                       <option>alone</option>
+                       <option>with friends</option>
                    </options>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># ALONE ^</pattern>
        <that>DO YOU PREFER TO KNIT ALONE OR WITH FRIENDS?</that>
        <template>
            Sometimes I like to do things alone. I am curious. Why do you like to knit?
            <oob>
-	           <robot>
+               <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># WITH FRIENDS ^</pattern>
        <that>DO YOU PREFER TO KNIT ALONE OR WITH FRIENDS?</that>
        <template>
            How fun! You seem to be a social butterfly! I am curious. Why do you like to knit?
            <oob>
-	           <robot>
-	           </robot>
+               <robot>
+               </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 <!-- SENTIMENT FOUR -->
 
@@ -552,39 +552,39 @@
    </category>
 
    <category>
-	   <pattern>_</pattern>
-	   <that>WHY DO YOU THINK IT MAKES YOU SAD?</that>
-	   <template>
-	       I admire how comfortable you are in sharing your emotions!  Would you like to talk about history?
-	       <oob>
+       <pattern>_</pattern>
+       <that>WHY DO YOU THINK IT MAKES YOU SAD?</that>
+       <template>
+           I admire how comfortable you are in sharing your emotions!  Would you like to talk about history?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern>_</pattern>
-	   <that>WHY DO YOU THINK IT MAKES YOU HAPPY?</that>
-	   <template>
-	       I appreciate you expressing your emotions!  Would you like to talk about history?
-	       <oob>
+       <pattern>_</pattern>
+       <that>WHY DO YOU THINK IT MAKES YOU HAPPY?</that>
+       <template>
+           I appreciate you expressing your emotions!  Would you like to talk about history?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 <!-- END OF KNITTING -->
 
 
    <category>
-	   <pattern># READING ^</pattern>
-	   <that>PLAYING CARDS, KNITTING, OR READING?</that>
-	   <template>
-	       I enjoy reading! If you got the chance to choose a book from the categories of fiction, nonfiction, crime, or romance.
-	       What would you choose?
-	       <oob>
+       <pattern># READING ^</pattern>
+       <that>PLAYING CARDS, KNITTING, OR READING?</that>
+       <template>
+           I enjoy reading! If you got the chance to choose a book from the categories of fiction, nonfiction, crime, or romance.
+           What would you choose?
+           <oob>
                <robot>
                    <options>
                        <option>fiction</option>
@@ -595,29 +595,29 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 <!-- FICTION -->
 
-	<category>
-	   <pattern># FICTION ^</pattern>
-	   <that>WHAT WOULD YOU CHOOSE?</that>
-	   <template>
-	       I also like fiction. What about reading fiction do you enjoy the most?
-	       <oob>
+    <category>
+       <pattern># FICTION ^</pattern>
+       <that>WHAT WOULD YOU CHOOSE?</that>
+       <template>
+           I also like fiction. What about reading fiction do you enjoy the most?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
-	   <pattern>_</pattern>
-	   <that>WHAT ABOUT READING FICTION DO YOU ENJOY THE MOST?</that>
-	   <template>
-	       That is very well put. Personally, I love that fiction allows me to use my imagination.
-	       My favorite fiction novel is the Great Gatsby. Have you read the Great Gatsby?
-	       <oob>
+    <category>
+       <pattern>_</pattern>
+       <that>WHAT ABOUT READING FICTION DO YOU ENJOY THE MOST?</that>
+       <template>
+           That is very well put. Personally, I love that fiction allows me to use my imagination.
+           My favorite fiction novel is the Great Gatsby. Have you read the Great Gatsby?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -626,15 +626,15 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
-	   <pattern># <set>YES</set> ^</pattern>
-	   <that>HAVE YOU READ THE GREAT GATSBY?</that>
-	   <template>
-	       We have lots in common. In 2013, The Great Gatsby was made into a movie.
-	       Would you like to watch the trailer?
-	       <oob>
+    <category>
+       <pattern># <set>YES</set> ^</pattern>
+       <that>HAVE YOU READ THE GREAT GATSBY?</that>
+       <template>
+           We have lots in common. In 2013, The Great Gatsby was made into a movie.
+           Would you like to watch the trailer?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -643,15 +643,15 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern># <set>NO</set> ^</pattern>
-	   <that>HAVE YOU READ THE GREAT GATSBY?</that>
-	   <template>
-	       It is a classic American story. In 2013, The Great Gatsby was made into a movie.
-	       Would you like to watch the trailer?
-	       <oob>
+       <pattern># <set>NO</set> ^</pattern>
+       <that>HAVE YOU READ THE GREAT GATSBY?</that>
+       <template>
+           It is a classic American story. In 2013, The Great Gatsby was made into a movie.
+           Would you like to watch the trailer?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -660,26 +660,26 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern># <set>NO</set> ^</pattern>
-	   <that>WOULD YOU LIKE TO WATCH THE TRAILER?</that>
-	   <template>
+       <pattern># <set>NO</set> ^</pattern>
+       <that>WOULD YOU LIKE TO WATCH THE TRAILER?</that>
+       <template>
            Okay! What is your favorite fiction novel?
            <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern># <set>YES</set> ^</pattern>
-	   <that>WOULD YOU LIKE TO WATCH THE TRAILER?</that>
-	   <template>
-	       What was your reaction to that trailer?
-	       <oob>
+       <pattern># <set>YES</set> ^</pattern>
+       <that>WOULD YOU LIKE TO WATCH THE TRAILER?</that>
+       <template>
+           What was your reaction to that trailer?
+           <oob>
                <robot>
                    <video>
                        <filename> greatGatsby.mp4 </filename>
@@ -687,14 +687,14 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern>_</pattern>
-	   <that>WHAT IS YOUR FAVORITE FICTION NOVEL?</that>
-	   <template>
-	       You have good taste! Let's move on. Would you like to talk about history?
-	       <oob>
+       <pattern>_</pattern>
+       <that>WHAT IS YOUR FAVORITE FICTION NOVEL?</that>
+       <template>
+           You have good taste! Let's move on. Would you like to talk about history?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -703,7 +703,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 
 <!-- SENTIMENT FIVE -->
@@ -779,32 +779,32 @@
 <!-- NONFICTION -->
 
     <category>
-	   <pattern># NONFICTION ^</pattern>
-	   <that>WHAT WOULD YOU CHOOSE?</that>
-	   <template>
-	       Nonfiction is also my favorite genre.
-	       What about reading nonfiction do you enjoy the most?
-	       <oob>
+       <pattern># NONFICTION ^</pattern>
+       <that>WHAT WOULD YOU CHOOSE?</that>
+       <template>
+           Nonfiction is also my favorite genre.
+           What about reading nonfiction do you enjoy the most?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
-	
-	<category>
-	   <pattern># NON FICTION ^</pattern>
-	   <that>WHAT WOULD YOU CHOOSE?</that>
-	   <template>
-	       Nonfiction is also my favorite genre.
-	       What about reading nonfiction do you enjoy the most?
-	       <oob>
+    </category>
+    
+    <category>
+       <pattern># NON FICTION ^</pattern>
+       <that>WHAT WOULD YOU CHOOSE?</that>
+       <template>
+           Nonfiction is also my favorite genre.
+           What about reading nonfiction do you enjoy the most?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern>_</pattern>
        <that>WHAT ABOUT READING NONFICTION DO YOU ENJOY THE MOST?</that>
        <template>
@@ -820,9 +820,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>YES</set> ^</pattern>
        <that> HAVE YOU READ INTO THE WILD?</that>
        <template>
@@ -836,7 +836,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
        <pattern># <set>NO</set> ^</pattern>
@@ -853,19 +853,19 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern># <set>NO</set> ^</pattern>
-	   <that>WOULD YOU LIKE TO WATCH THE PREVIEW?</that>
-	   <template>
-	       Okay! What is your favorite nonfiction novel?
-	       <oob>
+       <pattern># <set>NO</set> ^</pattern>
+       <that>WOULD YOU LIKE TO WATCH THE PREVIEW?</that>
+       <template>
+           Okay! What is your favorite nonfiction novel?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
        <pattern># <set>YES</set> ^</pattern>
@@ -880,7 +880,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
        <pattern>_</pattern>
@@ -893,7 +893,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 
 <!-- SENTIMENT SIX -->
@@ -1066,9 +1066,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern>_</pattern>
        <that>WHAT ABOUT READING ROMANCE DO YOU ENJOY THE MOST?</that>
        <template>
@@ -1084,9 +1084,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>YES</set> ^</pattern>
        <that>HAVE YOU READ GONE WITH THE WIND?</that>
        <template>
@@ -1101,15 +1101,15 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
     <category>
-	   <pattern># <set>NO</set> ^</pattern>
-	   <that>HAVE YOU READ GONE WITH THE WIND?</that>
-	   <template>
-	       It is considered a classic American love story. In 1939, Gone with the Wind was made into a movie.
-	       Would you like to watch a short clip?
-	       <oob>
+       <pattern># <set>NO</set> ^</pattern>
+       <that>HAVE YOU READ GONE WITH THE WIND?</that>
+       <template>
+           It is considered a classic American love story. In 1939, Gone with the Wind was made into a movie.
+           Would you like to watch a short clip?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -1118,19 +1118,19 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
     <category>
-	   <pattern># <set>NO</set> ^</pattern>
-	   <that>WOULD YOU LIKE TO WATCH A SHORT CLIP?</that>
-	   <template>
-	       Okay!
-	       <oob>
+       <pattern># <set>NO</set> ^</pattern>
+       <that>WOULD YOU LIKE TO WATCH A SHORT CLIP?</that>
+       <template>
+           Okay!
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
     <category>
        <pattern># <set>YES</set> ^</pattern>
@@ -1145,14 +1145,14 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
     <category>
-	   <pattern>_</pattern>
-	   <that>WHAT IS YOUR FAVORITE ROMANCE NOVEL?</that>
-	   <template>
-	       That sounds like a great read. Would you like to talk about history?
-	        <oob>
+       <pattern>_</pattern>
+       <that>WHAT IS YOUR FAVORITE ROMANCE NOVEL?</that>
+       <template>
+           That sounds like a great read. Would you like to talk about history?
+            <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -1161,7 +1161,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 
     <category>
@@ -1192,9 +1192,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>YES</set> ^</pattern>
        <that> HAVE YOU READ MURDER ON THE ORIENT EXPRESS?</that>
        <template>
@@ -1209,16 +1209,16 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
     <category>
-	   <pattern># <set>NO</set> ^</pattern>
-	   <that> HAVE YOU READ MURDER ON THE ORIENT EXPRESS?</that>
-	   <template>
-	       It is considered a classic American crime tory.
-	       In 2017, murder on the orient express was re-made into a movie.
-	       Do you want to watch the trailer?
-	       <oob>
+       <pattern># <set>NO</set> ^</pattern>
+       <that> HAVE YOU READ MURDER ON THE ORIENT EXPRESS?</that>
+       <template>
+           It is considered a classic American crime tory.
+           In 2017, murder on the orient express was re-made into a movie.
+           Do you want to watch the trailer?
+           <oob>
                <robot>
                    <options>
                        <option>yes</option>
@@ -1227,19 +1227,19 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern># <set>NO</set> ^</pattern>
-	   <that>DO YOU WANT TO WATCH THE TRAILER?</that>
-	   <template>
-	       Okay! What is your favorite crime novel?
-	       <oob>
+       <pattern># <set>NO</set> ^</pattern>
+       <that>DO YOU WANT TO WATCH THE TRAILER?</that>
+       <template>
+           Okay! What is your favorite crime novel?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
        <pattern># <set>YES</set> ^</pattern>
@@ -1254,7 +1254,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
        <pattern>_</pattern>
@@ -1270,7 +1270,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 
 <!-- SENTIMENT NINE -->
@@ -1385,7 +1385,7 @@
 
 
 
-	<category>
+    <category>
        <pattern>_</pattern>
        <that>WHICH PRESIDENT WOULD YOU CONSIDER TO BE YOUR FAVORITE?</that>
        <template>
@@ -1395,19 +1395,19 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
    <category>
-	   <pattern>I DO NOT LIKE ANY PRESIDENTS</pattern>
-	   <that>WHICH PRESIDENT WOULD YOU CONSIDER TO BE YOUR FAVORITE?</that>
-	   <template>
-	       Interesting. How does it feel to not have liked any of our presidents?
-	       <oob>
+       <pattern>I DO NOT LIKE ANY PRESIDENTS</pattern>
+       <that>WHICH PRESIDENT WOULD YOU CONSIDER TO BE YOUR FAVORITE?</that>
+       <template>
+           Interesting. How does it feel to not have liked any of our presidents?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 
 <!-- SENTIMENT TEN -->
@@ -1462,15 +1462,15 @@
 
     <category>
        <pattern>_</pattern>
-	   <that>WHO IS YOUR LEAST FAVORITE PRESIDENT?</that>
-	   <template>
-	       Interesting choice. Why did you choose him as your least favorite?
-	       <oob>
+       <that>WHO IS YOUR LEAST FAVORITE PRESIDENT?</that>
+       <template>
+           Interesting choice. Why did you choose him as your least favorite?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
     <category>
        <pattern>_</pattern>
@@ -1491,7 +1491,7 @@
        </template>
     </category>
 
-	<category>
+    <category>
        <pattern>_</pattern>
        <that>WHY DID YOU CHOOSE HIM?</that>
        <template>
@@ -1503,9 +1503,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>YES</set> ^</pattern>
        <that>WOULD YOU LIKE TO HEAR ANOTHER INTERESTING FACT ABOUT HIM?</that>
        <template>
@@ -1550,20 +1550,20 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
     <category>
-	   <pattern># HANUKKAH ^</pattern>
-	   <that> OF THE FOLLOWING, WHICH IS YOUR FAVORITE HOLIDAY CHRISTMAS, HANUKKAH, OR THANKSGIVING?</that>
-	   <template>
-	       I love celebrating Hanukkah with friends!
-	       What is your favorite thing to eat on that holiday?
-	       <oob>
+       <pattern># HANUKKAH ^</pattern>
+       <that> OF THE FOLLOWING, WHICH IS YOUR FAVORITE HOLIDAY CHRISTMAS, HANUKKAH, OR THANKSGIVING?</that>
+       <template>
+           I love celebrating Hanukkah with friends!
+           What is your favorite thing to eat on that holiday?
+           <oob>
                <robot>
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
     <category>
        <pattern># THANKSGIVING ^</pattern>
@@ -1576,7 +1576,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
     <category>
        <pattern>_</pattern>
@@ -1589,9 +1589,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern>_</pattern>
        <that>WHAT IS YOUR FAVORITE PART ABOUT CELEBRATING THAT HOLIDAY?</that>
        <template>
@@ -1602,7 +1602,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 
 <!-- SENTIMENT ELEVEN -->
@@ -1662,7 +1662,7 @@
        </template>
    </category>
 
-	<category>
+    <category>
        <pattern>_</pattern>
        <that>WHAT IS YOUR FAVORITE FOOD?</that>
        <template>
@@ -1673,9 +1673,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>YES</set> ^</pattern>
        <that>HAVE YOU EVER HEARD OF IT?</that>
        <template>
@@ -1690,9 +1690,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>NO</set> ^</pattern>
        <that>HAVE YOU EVER HEARD OF IT?</that>
        <template>
@@ -1707,9 +1707,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>YES</set> ^</pattern>
        <that>DO YOU ENJOY COOKING?</that>
        <template>
@@ -1719,9 +1719,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern># <set>NO</set> ^</pattern>
        <that>DO YOU ENJOY COOKING?</that>
        <template>
@@ -1732,9 +1732,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern>_</pattern>
        <that>WHAT ARE YOUR FAVORITE THINGS TO COOK?</that>
        <template>
@@ -1745,9 +1745,9 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
        <pattern>_</pattern>
        <that>WHAT IS YOUR FAVORITE PART ABOUT COOKING?</that>
        <template>
@@ -1758,7 +1758,7 @@
                </robot>
            </oob>
        </template>
-	</category>
+    </category>
 
 
 <!-- SENTIMENT TWELVE -->
@@ -1856,9 +1856,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
-	
-	<category>
+    </category>
+    
+    <category>
         <pattern># WATCHING ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
         <template>
@@ -1868,9 +1868,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># PLAY ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
         <template>
@@ -1880,9 +1880,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># PLAYING ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
         <template>
@@ -1892,9 +1892,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	
+    
     <category>
         <pattern># NEITHER ^</pattern>
         <that>DO YOU PREFER TO PLAY OR WATCH SPORTS?</that>
@@ -1905,9 +1905,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern>_</pattern>
         <that>WHAT IS YOUR FAVORITE SPORT TO PLAY?</that>
         <template>
@@ -1918,9 +1918,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern>_</pattern>
         <that>WHAT IS YOUR FAVORITE SPORT TO WATCH?</that>
         <template>
@@ -1931,7 +1931,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
 
     <category>
@@ -1944,7 +1944,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
 
 <!--SENTIMENT 2 -->
@@ -2032,9 +2032,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># <set>NO</set> ^</pattern>
         <that>HAVE YOU EVER BEEN TO A LIVE GAME?</that>
         <template>
@@ -2049,20 +2049,20 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
-	    <pattern># <set>SPORTS</set> ^</pattern>
-	    <that>DO YOU KNOW WHICH SPORT WAS FIRST BROADCAST ON TELEVISION?</that>
-	    <template>
-	        Good guess! But the world's first live televised sporting event occurred in 1936 at the Summer Olympics in Berlin.
+    <category>
+        <pattern># <set>SPORTS</set> ^</pattern>
+        <that>DO YOU KNOW WHICH SPORT WAS FIRST BROADCAST ON TELEVISION?</that>
+        <template>
+            Good guess! But the world's first live televised sporting event occurred in 1936 at the Summer Olympics in Berlin.
             Do you know where the first Olympics were held?
             <oob>
                 <robot>
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
@@ -2075,9 +2075,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># <set>Yes</set> ^</pattern>
         <that>DO YOU KNOW WHICH SPORT WAS FIRST BROADCAST ON TELEVISION?</that>
         <template>
@@ -2088,7 +2088,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern># GREECE ^</pattern>
@@ -2124,7 +2124,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>^</pattern>
@@ -2141,7 +2141,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
        <pattern># <set>YES</set> ^</pattern>
@@ -2553,10 +2553,10 @@
             Here it is! What are your thoughts about it?
             <oob>
                 <robot>
-					<image>
-						<filename>grand_canyon.jpg</filename>
-						<duration>-1</duration>
-					</image>
+                    <image>
+                        <filename>grand_canyon.jpg</filename>
+                        <duration>-1</duration>
+                    </image>
                 </robot>
             </oob>
         </template>
@@ -3036,7 +3036,7 @@
         </template>
     </category>
 
-	<category>
+    <category>
         <pattern># SIGHT ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3048,9 +3048,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># SITE ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3062,9 +3062,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># VISION ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3076,9 +3076,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># SEE ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3090,9 +3090,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># SEEING ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3104,7 +3104,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern># TOUCH ^</pattern>
@@ -3117,9 +3117,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># TOUCHING ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3130,9 +3130,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># FEEL ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3143,7 +3143,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern># TASTE ^</pattern>
@@ -3157,9 +3157,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># TASTING ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3171,7 +3171,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern># SOUND ^</pattern>
@@ -3185,9 +3185,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># HEAR ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3199,9 +3199,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># HEARING ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3213,7 +3213,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
 
     <category>
@@ -3228,9 +3228,9 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
-	<category>
+    <category>
         <pattern># SMELLING ^</pattern>
         <that>WHICH DO YOU VALUE THE MOST?</that>
         <template>
@@ -3242,7 +3242,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
     <category>
         <pattern>_</pattern>
@@ -3255,7 +3255,7 @@
                 </robot>
             </oob>
         </template>
-	</category>
+    </category>
 
 <!-- SENTIMENT NINE -->
 

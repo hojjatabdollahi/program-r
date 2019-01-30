@@ -16092,13 +16092,6 @@
         <template><srai>for example</srai>
         </template>
     </category>
-    <!-- REDIRECTION INTERFERING WITH SPORTS DIALOUGE
-    <category>
-        <pattern>SPORTS</pattern>
-        <template><srai>do you like sports</srai>
-        </template>
-    </category>
-    -->
     <category>
         <pattern>NEVER MIND</pattern>
         <template><srai>NEVERMIND</srai>
