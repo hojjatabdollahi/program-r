@@ -34,7 +34,7 @@
             <oob>
                 <robot>
                     <video>
-                        <filename>http://www.loudlit.org/audio/raven/pages/01_01_raven.htm</filename>
+                        <filename>theRaven.mp4</filename>
                     </video>
                 </robot>
             </oob>
@@ -208,7 +208,7 @@
             <oob>
                 <robot>
                     <video>
-                        <filename>https://www.youtube.com/watch?v=x-387NMCR6w</filename>
+                        <filename>EdgarAllen.mp4</filename>
                     </video>
                 </robot>
             </oob>
