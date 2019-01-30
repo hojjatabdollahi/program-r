@@ -18693,6 +18693,18 @@
         <pattern>FOOD NETWORK</pattern>
         <template>Do you watch the food network?<oob><robot></robot></oob></template>
     </category>
+    <category>
+        <pattern>HEALTHY FOOD</pattern>
+        <template>How about we talk about eating healthy?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>COOKING</pattern>
+        <template>Do you want to see a recipe that you could easily prepare at home?<oob><robot></robot></oob></template>
+    </category>
+    <category>
+        <pattern>COOK</pattern>
+        <template>Do you want to see a recipe that you could easily prepare at home?<oob><robot></robot></oob></template>
+    </category>
 
     <!-- END OF CATEGORIES THAT LEAD INTO IN-DEPTH CONVERSATION -->
 
