@@ -232,9 +232,16 @@ class MajorDomoBotClient(EventBotClient):
                     YLogger.exception(self, "chatbot encounter an internal crash", e)
 
     def worker_run_loop2(self):
+        '''
+        This loop is for the case that we don't have session and user info
+        :return:
+        '''
         majordomo_worker = MajorDomoWorker(self.configuration.client_configuration)
         response = None
         client_context = None
+
+        session_number = None
+        username = None
 
         print("before while")
         while True:
@@ -257,31 +264,6 @@ class MajorDomoBotClient(EventBotClient):
                 response = [request.command]
 
 
-            elif type(request) is SessionUserRequest:
-                YLogger.info(self, "session user request")
-
-                if client_context:
-                    session_number = request.session_number
-                    username = request.username
-
-                    if self.session_saving_mode:
-                        #response = ["welcome to session saving mode"]#todo should pull the latest question we asked
-                        last_question = client_context.bot.conversations[self.configuration.client_configuration.id].questions[-1].sentences[-1].response
-                        response = self.render_response(client_context, last_question)
-
-                    else:
-                        question = self.initial_question(request, request.username)
-                        print("question", question)
-
-                        answer = self.process_question_with_options(client_context, question)
-                        print("answer", answer)
-                        response = self.render_response(client_context, answer)
-                else:
-
-                    response = ["client context is not initiated. Initial Session request"]
-
-
-
             elif type(request) is QuestionRequest:
                 try:
                     YLogger.info(self, "question request")
@@ -294,6 +276,11 @@ class MajorDomoBotClient(EventBotClient):
 
 
                         userid = client_context.userid
+                        if session_number is None:
+                            session_number = 1
+                        if username is None:
+                            username = "test"
+
                         client_context.bot.conversations[userid].set_property("session_number", session_number)
                         client_context.bot.conversations[userid].set_property("username", username)
 
