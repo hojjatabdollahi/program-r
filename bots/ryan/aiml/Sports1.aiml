@@ -195,6 +195,18 @@
             </oob>
         </template>
     </category>
+    <category>
+        <pattern># AT HOME ^</pattern>
+        <that>Do you prefer to watch games at home or at the stadium?</that>
+        <template>
+            Same here! I love watching games from my house! I have all the snacks I want, and my friends and I get to hang out all day!
+            What is your favorite sport to watch, basketball, baseball, football, or hockey?
+            <oob>
+                <robot>
+                </robot>
+            </oob>
+        </template>
+    </category>
 
     <category>
         <pattern># stadium ^</pattern>
