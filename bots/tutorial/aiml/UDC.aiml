@@ -21,6 +21,14 @@
         </template>
     </category>
 
+    <category>
+        <pattern>can you play <set>keyboard instrument set</set></pattern>
+        <template>
+            Nope.
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
 
 </aiml>
 

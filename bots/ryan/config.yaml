@@ -204,7 +204,7 @@ brain:
     nlp:
       classname: programr.nlp.nlp.NLP
 
-      nltk_data_dir: C:\Ryan\program-r\libs\nltk_data
+      nltk_data_dir: C:\Users\Dreamface\program-r\libs\nltk_data
 
       sentiment_analysis:
         method: corenlp

@@ -231,7 +231,70 @@ class MajorDomoBotClient(EventBotClient):
                 except Exception as e:
                     YLogger.exception(self, "chatbot encounter an internal crash", e)
 
+    def worker_run_loop2(self):
+        '''
+        This loop is for the case that we don't have session and user info
+        :return:
+        '''
+        majordomo_worker = MajorDomoWorker(self.configuration.client_configuration)
+        response = None
+        client_context = None
 
+        session_number = None
+        username = None
+
+        print("before while")
+        while True:
+            print(str(response))
+            request = majordomo_worker.receive(response)
+            if request is None:
+                YLogger.debug(self, "worker was interrupted")
+                break
+
+            if type(request) is ReadyRequest:
+                YLogger.info(self, "ready request")
+
+                # if the robot sends the ready message again
+                # it will NOT reload anything.
+                # we can change this part to use it as a signal
+                # to initialize client_context
+                client_context = self.client_context #MAYBE initialize client context??!
+
+                client_context.bot.initiate_conversation_storage()
+                response = [request.command]
+
+
+            elif type(request) is QuestionRequest:
+                try:
+                    YLogger.info(self, "question request")
+                    if client_context is not None:
+                        print(request.question)
+
+                        # if self._first_time:
+                        #     client_context = self.client_context
+                        #     self._first_time = False
+
+
+                        userid = client_context.userid
+                        if session_number is None:
+                            session_number = 1
+                        if username is None:
+                            username = "test"
+
+                        client_context.bot.conversations[userid].set_property("session_number", session_number)
+                        client_context.bot.conversations[userid].set_property("username", username)
+
+                        client_context.bot.facial_expression_recognition.append(request.emotion)
+
+                        answer = self.process_question_with_options(client_context, request.question)
+
+                        #client_context.bot.save_conversation(client_context)
+                        response = self.render_response(client_context, answer)
+                    else:
+                        response = ["client context is not initiated. Initial Session request"]
+
+                except Exception as e:
+                    YLogger.exception(self, "chatbot encounter an internal crash", e)
 
 
     def run(self):
@@ -240,7 +303,7 @@ class MajorDomoBotClient(EventBotClient):
 
             self.prior_to_run_loop()
 
-            self.worker_run_loop1()
+            self.worker_run_loop2()
 
             self.post_run_loop()
 

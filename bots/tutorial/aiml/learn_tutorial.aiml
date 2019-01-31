@@ -1,0 +1,49 @@
+<aiml>
+
+<category>
+    <pattern>bad answer</pattern>
+    <template>
+    <think>
+    <set name="badanswer-input"><input index="2" /></set>
+    </think>
+    Would you like to teach me a new answer for <get name="badanswer-input"/>?</template>
+</category>
+
+<category>
+    <pattern>yes</pattern>
+    <that>Would you like to teach me a new answer for *</that>
+    <template>Ok, what should I have said?</template>
+</category>
+
+<category>
+    <pattern>no</pattern>
+    <that>Would you like to teach me a new answer</that>
+    <template>Ok, forget it then.</template>
+</category>
+
+<category>
+    <pattern>yes</pattern>
+    <that>Would you like to teach me a new answer?</that>
+    <template>Ok, what should I have said?</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>Ok, what should I have said</that>
+    <template><think>
+    <learn>
+        <category>
+            <pattern>
+                <eval><uppercase><get name="badanswer-input" /></uppercase></eval>
+            </pattern>
+            <template>
+                <eval><star/></eval>
+            </template>
+        </category>
+    </learn>
+    </think>
+    I will try to remember that.
+    </template>
+</category>
+
+</aiml>
