@@ -17,7 +17,7 @@
         <template>
             <think>
                 <set name="badanswer-input">
-                    <input index="2" />
+                    <input index="1" />
                 </set>
                 <set name="badanswer-that">
                     <that index="2,1" />
@@ -25,12 +25,12 @@
                 <set name="badanswer-that-full">
                     <that index="2,*" />
                 </set>
-                <set name="topic">BADANSWER-PRELIM</set>
             </think>Would you like to teach me a new answer to "<get name="badanswer-input"/>"?
+            <think><set name="topic">BADANSWER-PRELIM</set></think>.
         <oob><robot></robot></oob>
         </template>
     </category>
-    <topic name="BADANSWER DASH PRELIM">
+    <topic name="BADANSWER-PRELIM">
         <category>
             <pattern>_</pattern>
             <template>
@@ -39,12 +39,12 @@
                         <star />
                     </set>
                 </think>
-                <condition>
-                    <li name="star" value="yes">OK, what should I have said?
+                <condition name="star">
+                    <li value="yes">OK, what should I have said?
                         <think>
                             <set name="topic">learning new answers</set>
                         </think></li>
-                    <li name="star" value="no">OK, let's forget it then.
+                    <li value="no">OK, let's forget it then.
                         <think>
                             <set name="topic">learning new answers</set>
                         </think></li>
@@ -61,10 +61,10 @@
     </topic>
     <category>
         <pattern>_</pattern>
-        <that>OK WHAT SHOULD I HAVE SAID</that>
+        <that>OK, WHAT SHOULD I HAVE SAID</that>
         <template>"<set name="badanswer-newresp"><input index="1" /></set>..."?
-            <condition>
-                <li name="badanswer-that" value="*">
+            <condition name="badanswer-that">
+                <li value="*">
                     <think>
                         <set name="topic">BADANSWER</set>
                     </think>Does this depend on me having just said, "<get name="badanswer-that-full" />"?
@@ -92,8 +92,8 @@
                     <set name="star"><star /></set>
                     <set name="response1"><response index = "1" /></set>
                     <set name="response2"><response index = "2" /></set>
-                    <condition>
-                        <li name="response2" value="OK, what should I have said">
+                    <condition name="response2">
+                        <li value="OK, what should I have said">
                             <set name="badanswer-newresp"><request index = "1" /></set>
                         </li>
                     </condition>
@@ -118,7 +118,7 @@
                                         <get name="badanswer-newresp" />
                                     </eval>
                                 <oob><robot></robot></oob>
-        </template>
+                                </template>
                             </category>
                         </learn>
                         <think>
@@ -151,7 +151,7 @@
                                         <get name="badanswer-newresp" />
                                     </eval>
                                 <oob><robot></robot></oob>
-        </template>
+            </template>
                             </category>
                         </learn>
                         <think>
@@ -230,12 +230,14 @@
             <oob><robot></robot></oob>
         </template>
         </category>
+
         <category>
             <pattern>_ _</pattern>
-            <template><sr/><oob><robot></robot></oob>
-        </template>
+            <template><sr/><oob><robot></robot></oob></template>
         </category>
     </topic>
+
+    <!-- redirections to bad answer category -->
     <category>
         <pattern>WRONG</pattern>
         <template>

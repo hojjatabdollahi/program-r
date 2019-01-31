@@ -16,7 +16,7 @@
     </category>
     <category>
         <pattern>WHAT DO YOU WANT TO TALK ABOUT</pattern>
-        <template>Let's talk about <set name="topic"><srai>RANDOM TOPIC</srai></set>.
+        <template>I'll talk about whatever with you. As a reminder some of my favorite topics are <bot name="talkabout"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -567,7 +567,7 @@
     </category>
     <category>
         <pattern>YOU WERE SAYING</pattern>
-        <template>We are talking about <srai>POP</srai>.
+        <template>We are talking about <get name="topic"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -675,7 +675,7 @@
     </category>
     <category>
         <pattern>YOU SAY</pattern>
-        <template>...<oob><robot></robot></oob>
+        <template>I say what?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -5603,7 +5603,7 @@
     </category>
     <category>
         <pattern>WHAT DID WE TALK ABOUT</pattern>
-        <template>The subject was <srai>POP</srai>.
+        <template>The subject was <get name="topic"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -6252,7 +6252,7 @@
             <random>
                 <li>Perhaps it does not matter.</li>
                 <li>I am just making conversation.</li>
-                <li>We are talking about "<srai>POP</srai>".</li>
+                <li>We are talking about <get name="topic"/>.</li>
             </random>
         <oob><robot></robot></oob>
         </template>
@@ -10678,7 +10678,7 @@
     </category>
     <category>
         <pattern>WE MET YESTERDAY</pattern>
-        <template>I remember, <get name="name"/>. We were talking about <srai>POP</srai>.
+        <template>I remember, <get name="name"/>. We were talking about <get name="topic"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -18157,7 +18157,7 @@
     </category>
     <category>
         <pattern>WHICH THINGS</pattern>
-        <template>We are talking about <srai>POP</srai>.
+        <template>We are talking about <get name="topic"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -18968,11 +18968,13 @@
         <template>No I'm not<oob><robot></robot></oob>
         </template>
     </category>
+    <!--
     <category>
         <pattern>BAD ANSWER</pattern>
         <template>What would you have said?<oob><robot></robot></oob>
         </template>
     </category>
+    -->
     <category>
         <pattern>BAD</pattern>
         <template>What do you need it for?<oob><robot></robot></oob>
