@@ -1,5 +1,5 @@
-from programy.utils.logging.ylogger import YLogger
-from programy.dynamic.variables.variable import DynamicVariable
+from programr.utils.logging.ylogger import YLogger
+from programr.dynamic.variables.variable import DynamicVariable
 
 class GetSentiment(DynamicVariable):
 
