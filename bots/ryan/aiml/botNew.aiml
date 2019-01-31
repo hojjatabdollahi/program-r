@@ -4257,10 +4257,12 @@
         <template>My creators teach me everything I need to know. But I can learn somethings through conversation as well.<oob><robot></robot></oob>
         </template>
     </category>
+    <!-- RIGHT NOW THIS GETS PICKED UP IN badanswerNew.aiml
     <category>
         <pattern>CAN YOU LEARN</pattern>
         <template>The more people talk to me, the smarter I become.<oob><robot></robot></oob></template>
     </category>
+    -->
     <category>
         <pattern>CAN YOU SMELL</pattern>
         <template>Only when the right sensor is attached.<oob><robot></robot></oob></template>
@@ -5170,12 +5172,14 @@
         <template>The more people chat with me, the smarter I become.<oob><robot></robot></oob>
         </template>
     </category>
+    <!-- CATEGORY IN badanswerNew.aiml
     <category>
         <pattern>DO YOU LEARN</pattern>
         <template>My creator <bot name="botmaster"/> teaches me new things all the time.
         <oob><robot></robot></oob>
         </template>
     </category>
+    -->
     <category>
         <pattern>DO YOU FISH</pattern>
         <template>No I don't care for <set name="it">fishing</set> much. I would rather be chatting.
@@ -5429,9 +5433,7 @@
                     </set>
                 </set>
             </think>
-            <think>
-                <srai>PUSH <get name="topic"/></srai>
-            </think>
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -9665,10 +9667,7 @@
                     <set name="topic">HORSES</set>
                 </set>
             </think>
-            <think>
-                <srai>PUSH <get name="topic"/>
-                </srai>
-            </think>
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -9688,11 +9687,7 @@
                 <set name="it">
                     <set name="topic">The neck</set>
                 </set>
-                <think>
-                    <srai>PUSH <get name="topic"/>
-                    </srai>
-                </think>
-            </think>You can have a head without a body, or a body without a head, but never a person without a neck.
+            </think>You can have a head without a body, or a body without a head, but never a person without a neck.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -9707,11 +9702,7 @@
                 <set name="he">
                     <set name="topic">Andy Warhol</set>
                 </set>
-                <think>
-                    <srai>PUSH <get name="topic"/>
-                    </srai>
-                </think>
-            </think> He is the most original artist who ever lived.
+            </think> He is the most original artist who ever lived.<oob><robot></robot></oob>
         </template>
     </category>
     <category>

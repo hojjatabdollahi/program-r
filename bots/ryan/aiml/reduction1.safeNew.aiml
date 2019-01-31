@@ -4574,11 +4574,6 @@
         </template>
     </category>
     <category>
-        <pattern>CAN I TEACH YOU</pattern>
-        <template><srai>CAN YOU LEARN</srai>
-        </template>
-    </category>
-    <category>
         <pattern>CAN I TALK TO SOME OF *</pattern>
         <template><srai>can I talk to  <star /></srai>
         </template>

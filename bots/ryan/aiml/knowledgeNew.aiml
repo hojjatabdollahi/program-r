@@ -8857,13 +8857,7 @@
     </category>
     <category>
         <pattern>WHAT IS PRIMATE</pattern>
-        <template>The highest order of mammals. It includes man, together with the apes and monkeys.  
-            <think>
-                <set name="it">
-                    <srai>PUSH <set name="topic">Primate</set></srai>
-                </set>
-            </think>
-        </template>
+        <template>The highest order of mammals. It includes man, together with the apes and monkeys.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHAT IS ROBOTICS</pattern>
