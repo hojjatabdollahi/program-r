@@ -484,12 +484,12 @@
     <category>
         <pattern>MY AGE</pattern>
         <template>
-            <condition name="age">
-                <li value="OM">I'd like to know how old you are.</li>
-                <li value="HOW MANY">You haven't told me your age.</li>
-                <li value="*">You are <get name="age"/>?</li>
+            <random>
+                <li>I'd like to know how old you are.</li>
+                <li>You haven't told me your age.</li>
+                <li>You are <get name="age"/>?</li>
                 <li>I don't know.  How old are you?</li>
-            </condition>
+            </random>
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -869,12 +869,6 @@ callee: <srai>my callee</srai>
                 </set>
             </think>
         <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM *</pattern>
-        <that>How are you unknown?</that>
-        <template>Nice to meet you, <set name="name"><star/></set>.<oob><robot></robot></oob>
         </template>
     </category>
     <category>

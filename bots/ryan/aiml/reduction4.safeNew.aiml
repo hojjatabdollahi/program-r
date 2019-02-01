@@ -13391,6 +13391,11 @@
         </template>
     </category>
     <category>
+        <pattern>IM * YEARS OLD</pattern>
+        <template><srai>I AM <star/></srai>
+        </template>
+    </category>
+    <category>
         <pattern>I AM * AND LOVE *</pattern>
         <template><srai>I AM <star/></srai>.  <srai>I LOVE <star index="2"/></srai>
         </template>

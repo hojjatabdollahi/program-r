@@ -9149,7 +9149,7 @@
     </category>
     <category>
         <pattern>I AM 22</pattern>
-        <template><srai>I am 22 years old</srai>
+        <template>I did not know you were 22 years old.<oob><robot></robot></oob>
         </template>
     </category>
     <category>

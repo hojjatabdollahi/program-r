@@ -17,7 +17,7 @@
         <that>IF YOU HAD BEEN GIVEN THE OPPORTUNITY TO TRAVEL ON THE TITANIC, DO YOU THINK YOU WOULD HAVE TAKEN IT?</that>
         <template>
             Knowing what happened to it, it's hard to disagree with that. But it sounds so romantic, to travel the sea in luxury.
-            But I'm sure that a lot of that fantasy is owed to James Cameron's Titanic film. Have you seen it?
+            But I'm sure that a lot of that fantasy is owed to James Cameron's Titanic film. Have you seen his film?
             <oob><robot></robot></oob>
         </template>
     </category>
@@ -27,14 +27,14 @@
         <that>IF YOU HAD BEEN GIVEN THE OPPORTUNITY TO TRAVEL ON THE TITANIC, DO YOU THINK YOU WOULD HAVE TAKEN IT?</that>
         <template>
             It would be hard not to! It sounds so romantic, to travel the sea in luxury.
-            But I'm sure that a lot of that fantasy is owed to James Cameron's Titanic film. Have you seen it?
+            But I'm sure that a lot of that fantasy is owed to James Cameron's Titanic film. Have you seen his film?
             <oob><robot></robot></oob>
         </template>
     </category>
 
     <category>
         <pattern># <set>NO</set> ^</pattern>
-        <that>HAVE YOU SEEN IT?</that>
+        <that>HAVE YOU SEEN HIS FILM?</that>
         <template>
             James Cameron's Titanic was released in December of 2017, and at that time was the most expensive film ever made.
             If i remember correctly, I think it cost over 200 million dollars to make! But it was a huge success. Would you like to watch a trailer?
@@ -66,7 +66,7 @@
 
     <category>
       <pattern># <set>YES</set> ^</pattern>
-      <that>HAVE YOU SEEN IT?</that>
+      <that>HAVE YOU SEEN HIS FILM?</that>
       <template>
         Titanic is one of my favorite films. It has everything! Romance... Action.... And did I mention romance? So steamy. It's been a little while since I watched it.
         Would you like to watch a trailer?
