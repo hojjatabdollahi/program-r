@@ -8204,6 +8204,16 @@
         <template><srai>what can you talk about</srai>
         </template>
     </category>
+     <category>
+        <pattern>WHAT SHOULD WE TALK ABOUT *</pattern>
+        <template><srai>what can you talk about</srai>
+        </template>
+    </category>
+     <category>
+        <pattern>* WHAT SHOULD WE TALK ABOUT</pattern>
+        <template><srai>what can you talk about</srai>
+        </template>
+    </category>
     <category>
         <pattern>WHAT STATE DO YOU LIVE IN</pattern>
         <template><srai>STATE</srai>
