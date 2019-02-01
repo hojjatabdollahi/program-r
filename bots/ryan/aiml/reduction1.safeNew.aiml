@@ -3359,11 +3359,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 20 YEARS OLD *</pattern>
-        <template><srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM CALLED *</pattern>
         <template><srai>call me <star /></srai>
         </template>

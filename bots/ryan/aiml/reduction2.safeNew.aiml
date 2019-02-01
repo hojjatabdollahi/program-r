@@ -8178,16 +8178,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM TWENTY</pattern>
-        <template><srai>I am 20 years old</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 30</pattern>
-        <template><srai>I am 30 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM TOO *</pattern>
         <template><srai>I am <star /></srai>
         </template>
@@ -8233,11 +8223,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 33</pattern>
-        <template><srai>I am 33 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM MURPHY</pattern>
         <template><srai>my name is murphy</srai>
         </template>
@@ -8250,11 +8235,6 @@
     <category>
         <pattern>I AM ALICIA</pattern>
         <template><srai>my name is alicia</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 55</pattern>
-        <template><srai>I am 55 years old</srai>
         </template>
     </category>
     <category>
@@ -8303,11 +8283,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 36</pattern>
-        <template><srai>I am 36 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM SWEDISH</pattern>
         <template><srai>I am from sweden</srai>
         </template>
@@ -8330,11 +8305,6 @@
     <category>
         <pattern>I AM PAL</pattern>
         <template><srai>my name is pal</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 69</pattern>
-        <template><srai>I am 69 years old</srai>
         </template>
     </category>
     <category>
@@ -8448,11 +8418,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 42</pattern>
-        <template><srai>I am 42 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM DUTCH</pattern>
         <template><srai>I am from holland</srai>
         </template>
@@ -8478,18 +8443,8 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 23</pattern>
-        <template><srai>I am 23 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM BEGINNING TO *</pattern>
         <template><srai>I <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 34</pattern>
-        <template><srai>I am 34 years old</srai>
         </template>
     </category>
     <category>
@@ -8500,11 +8455,6 @@
     <category>
         <pattern>I AM BELGIAN</pattern>
         <template><srai>I am in belgium</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 45</pattern>
-        <template><srai>I am 45 years old</srai>
         </template>
     </category>
     <category>
@@ -8535,11 +8485,6 @@
     <category>
         <pattern>I AM LUKE</pattern>
         <template><srai>my name is luke</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 26</pattern>
-        <template><srai>I am 26 years old</srai>
         </template>
     </category>
     <category>
@@ -8703,11 +8648,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 10</pattern>
-        <template><srai>I am 10 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM GLAD TO SEE YOU</pattern>
         <template><srai>NICE TO SEE YOU</srai>
         </template>
@@ -8733,11 +8673,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 32</pattern>
-        <template><srai>I am 32 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM IMPORTANT *</pattern>
         <template><srai>I am important</srai>
         </template>
@@ -8755,11 +8690,6 @@
     <category>
         <pattern>I AM DANIELA</pattern>
         <template><srai>my name is daniela</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM EIGHTEEN</pattern>
-        <template><srai>I am 18 years old</srai>
         </template>
     </category>
     <category>
@@ -8785,11 +8715,6 @@
     <category>
         <pattern>I AM LOUISE</pattern>
         <template><srai>my name is louise</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 13</pattern>
-        <template><srai>I am 13 years old</srai>
         </template>
     </category>
     <category>
@@ -8833,11 +8758,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 24</pattern>
-        <template><srai>I am 24 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM DOROTHY</pattern>
         <template><srai>my name is dorothy</srai>
         </template>
@@ -8850,11 +8770,6 @@
     <category>
         <pattern>I AM NICOLAI</pattern>
         <template><srai>my name is nicolai</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 35</pattern>
-        <template><srai>I am 35 years old</srai>
         </template>
     </category>
     <category>
@@ -8918,18 +8833,8 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 16</pattern>
-        <template><srai>I am 16 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM PAUL</pattern>
         <template><srai>my name is paul</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 8</pattern>
-        <template><srai>I am 8 years old</srai>
         </template>
     </category>
     <category>
@@ -8938,18 +8843,8 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 27</pattern>
-        <template><srai>I am 27 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM JONATHAN</pattern>
         <template><srai>my name is jonathan</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 38</pattern>
-        <template><srai>I am 38 years old</srai>
         </template>
     </category>
     <category>
@@ -9093,11 +8988,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM TEN</pattern>
-        <template><srai>I am 10 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM DOUG</pattern>
         <template><srai>my name is doug</srai>
         </template>
@@ -9133,11 +9023,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 11</pattern>
-        <template><srai>I am 11 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM GEIGER</pattern>
         <template><srai>my name is geiger</srai>
         </template>
@@ -9146,12 +9031,7 @@
         <pattern>I AM SANDY</pattern>
         <template><srai>my name is sandy</srai>
         </template>
-    </category>
-    <category>
-        <pattern>I AM 22</pattern>
-        <template>I did not know you were 22 years old.<oob><robot></robot></oob>
-        </template>
-    </category>
+    </category>>
     <category>
         <pattern>I AM BRITISH</pattern>
         <template><srai>I am from britain</srai>
@@ -9268,11 +9148,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 25</pattern>
-        <template><srai>I am 25 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM LOST</pattern>
         <template><srai>I am confused</srai>
         </template>
@@ -9280,11 +9155,6 @@
     <category>
         <pattern>I AM CONFUSED *</pattern>
         <template><srai>I am confused</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM NINETEEN</pattern>
-        <template><srai>I am 19 years old</srai>
         </template>
     </category>
     <category>
@@ -9308,23 +9178,8 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 7 *</pattern>
-        <template><srai>I am 7</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 7</pattern>
-        <template><srai>I am 7 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM VERY *</pattern>
         <template><srai>I am <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 17</pattern>
-        <template><srai>I am 17 years old</srai>
         </template>
     </category>
     <category>
@@ -9408,11 +9263,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 28</pattern>
-        <template><srai>I am 28 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM SERIOUSLY *</pattern>
         <template><srai>I am <star /></srai>
         </template>
@@ -9420,11 +9270,6 @@
     <category>
         <pattern>I AM ANNA</pattern>
         <template><srai>my name is anna</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 39</pattern>
-        <template><srai>I am 39 years old</srai>
         </template>
     </category>
     <category>
@@ -9473,11 +9318,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM FIFTEEN</pattern>
-        <template><srai>I am 15 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM ENRICO</pattern>
         <template><srai>my name is enrico</srai>
         </template>
@@ -9513,11 +9353,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM FOURTEEN</pattern>
-        <template><srai>I am 14 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM IF *</pattern>
         <template><srai>if <star /></srai>
         </template>
@@ -9530,11 +9365,6 @@
     <category>
         <pattern>I AM HAPPILY *</pattern>
         <template><srai>I am <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM SEVENTEEN</pattern>
-        <template><srai>I am 17 years old</srai>
         </template>
     </category>
     <category>
@@ -9565,11 +9395,6 @@
     <category>
         <pattern>I AM REQUESTING *</pattern>
         <template><srai>give me <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 12</pattern>
-        <template><srai>I am 12 years old</srai>
         </template>
     </category>
     <category>
@@ -9669,7 +9494,7 @@
     </category>
     <category>
         <pattern>I AM A TEENAGER</pattern>
-        <template><srai>I am 13 to 19 years old</srai>
+        <template>What a crazy time in life it is for you humans.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -10178,16 +10003,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 15 *</pattern>
-        <template><srai>I am 15</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 15</pattern>
-        <template><srai>I am 15 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM DAVID</pattern>
         <template><srai>my name is david</srai>
         </template>
@@ -10338,18 +10153,8 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 18</pattern>
-        <template><srai>I AM 18 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM GOD</pattern>
         <template><srai>MY NAME IS GOD</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 29</pattern>
-        <template><srai>I am 29 years old</srai>
         </template>
     </category>
     <category>
@@ -10858,11 +10663,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 19</pattern>
-        <template><srai>I am 19 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM BILL</pattern>
         <template><srai>my name is bill</srai>
         </template>
@@ -10943,11 +10743,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM TWELVE</pattern>
-        <template><srai>I am 12 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM EMMA</pattern>
         <template><srai>my name is emma</srai>
         </template>
@@ -10988,11 +10783,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 40</pattern>
-        <template><srai>I am 40 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM JUDGING YOU *</pattern>
         <template><srai>I AM JUDGING YOU</srai>
         </template>
@@ -11023,11 +10813,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM THIRTEEN</pattern>
-        <template><srai>I am 13 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM MICHAEL</pattern>
         <template><srai>my name is michael</srai>
         </template>
@@ -11038,18 +10823,8 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 43</pattern>
-        <template><srai>I am 43 years old</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM VICKY</pattern>
         <template><srai>my name is vicky</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM ELEVEN</pattern>
-        <template><srai>I am 11 years old</srai>
         </template>
     </category>
     <category>
@@ -11100,11 +10875,6 @@
     <category>
         <pattern>I AM NATE</pattern>
         <template><srai>my name is nate</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM SIXTEEN</pattern>
-        <template><srai>I am 16 years old</srai>
         </template>
     </category>
     <category>

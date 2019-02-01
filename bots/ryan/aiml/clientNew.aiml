@@ -9,217 +9,7 @@
     <!-- as adopted by the ALICE A.I. Foundation.  -->
     <!-- Last modified 10/5/2011 -->
     <!-- -->
-    <category>
-        <pattern>69 F *</pattern>
-        <template><srai>I am 69 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>69 M *</pattern>
-        <template><srai>I am 69 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>24 F *</pattern>
-        <template><srai>I am 24 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>24 M *</pattern>
-        <template><srai>I am 24 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>47 F *</pattern>
-        <template> <srai>I am 47 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
 
-        </template>
-    </category>
-    <category>
-        <pattern>47 M *</pattern>
-        <template><srai>I am 47 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>62 F *</pattern>
-        <template><srai>I am 62 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>62 M *</pattern>
-        <template><srai>I am 62 years old</srai> <srai>I am male</srai>    <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>40 F *</pattern>
-        <template><srai>I am 40 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>40 M *</pattern>
-        <template><srai>I am 40 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>63 F *</pattern>
-        <template><srai>I am 63 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>63 M *</pattern>
-        <template><srai>I am 63 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>15 F *</pattern>
-        <template><srai>I am 15 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>15 M *</pattern>
-        <template><srai>I am 15 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>38 F *</pattern>
-        <template><srai>I am 38 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>38 M *</pattern>
-        <template><srai>I am 38 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>16 F *</pattern>
-        <template><srai>I am 16 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>16 M *</pattern>
-        <template><srai>I am 16 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>31 F *</pattern>
-        <template><srai>I am 31 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>31 M *</pattern>
-        <template><srai>I am 31 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>54 F *</pattern>
-        <template><srai>I am 54 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>54 M *</pattern>
-        <template><srai>I am 54 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>70 F *</pattern>
-        <template><srai>I am 70 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>70 M *</pattern>
-        <template><srai>I am 70 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>29 F *</pattern>
-        <template><srai>I am 29 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>29 M *</pattern>
-        <template><srai>I am 29 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>22 F *</pattern>
-        <template><srai>I am 22 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>22 M *</pattern>
-        <template><srai>I am 22 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>45 F *</pattern>
-        <template><srai>I am 45 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>45 M *</pattern>
-        <template><srai>I am 45 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>68 F *</pattern>
-        <template><srai>I am 68 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>68 M *</pattern>
-        <template><srai>I am 68 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>23 F *</pattern>
-        <template><srai>I am 23 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>23 M *</pattern>
-        <template><srai>I am 23 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>46 F *</pattern>
-        <template><srai>I am 46 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>46 M *</pattern>
-        <template><srai>I am 46 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>61 F *</pattern>
-        <template><srai>I am 61 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>61 M *</pattern>
-        <template><srai>I am 61 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>59 F *</pattern>
-        <template><srai>I am 59 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>59 M *</pattern>
-        <template><srai>I am 59 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>14 F *</pattern>
-        <template><srai>I am 14 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>14 M *</pattern>
-        <template><srai>I am 14 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
     <category>
         <pattern>WHAT AM I DOING</pattern>
         <template>
@@ -375,16 +165,6 @@
         </template>
     </category>
     <category>
-        <pattern>37 F *</pattern>
-        <template><srai>I am 37 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>37 M *</pattern>
-        <template><srai>I am 37 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
         <pattern>THEM</pattern>
         <that>WHO</that>
         <template>Oh those people.<oob><robot></robot></oob>
@@ -400,36 +180,6 @@
         <pattern>LASTNAME *</pattern>
         <template><star/>
         <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>52 F *</pattern>
-        <template><srai>I am 52 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>52 M *</pattern>
-        <template><srai>I am 52 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>75 F *</pattern>
-        <template><srai>I am 75 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>75 M *</pattern>
-        <template><srai>I am 75 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>30 F *</pattern>
-        <template><srai>I am 30 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>30 M *</pattern>
-        <template><srai>I am 30 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
         </template>
     </category>
     <category>
@@ -3404,12 +3154,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 20</pattern>
-        <template><set name="age">20</set> is a good age. Do you go to college?
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>I AM IRRITATED</pattern>
         <template>What's wrong?    
             <think>
@@ -3922,12 +3666,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 21</pattern>
-        <template><set name="age">21</set> is an exciting age, don't you think?
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>I AM CORRECT</pattern>
         <template>Can you prove it?
             <think>
@@ -4413,19 +4151,6 @@
     <category>
         <pattern>I AM AMUSED *</pattern>
         <template>That is funny.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 14</pattern>
-        <template>I know quite a few <set name="age">14</set> year olds.
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM 14 *</pattern>
-        <template>I know some kids your age.
-            <think><set name="age">14</set></think>
-        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -6087,11 +5812,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 6 *</pattern>
-        <template>Do you mean you are 6 feet tall?<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>I AM EATING *</pattern>
         <template>How does it taste?<oob><robot></robot></oob>
         </template>
@@ -6750,11 +6470,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM 5 *</pattern>
-        <template>That sounds about average.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>I AM DRUNK</pattern>
         <template>What have you been drinking, <get name="name"/>?
         <oob><robot></robot></oob>
@@ -7234,96 +6949,6 @@
         </template>
     </category>
     <category>
-        <pattern>53 F *</pattern>
-        <template><srai>I am 53 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>53 M *</pattern>
-        <template><srai>I am 53 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>28 F *</pattern>
-        <template><srai>I am 28 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>28 M *</pattern>
-        <template><srai>I am 28 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>21 F *</pattern>
-        <template><srai>I am 21 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>21 M *</pattern>
-        <template><srai>I am 21 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>44 F *</pattern>
-        <template><srai>I am 44 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>44 M *</pattern>
-        <template><srai>I am 44 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>67 F *</pattern>
-        <template><srai>I am 67 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>67 M *</pattern>
-        <template><srai>I am 67 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>60 F *</pattern>
-        <template><srai>I am 60 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>60 M *</pattern>
-        <template><srai>I am 60 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>19 F *</pattern>
-        <template><srai>I am 19 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>19 M *</pattern>
-        <template><srai>I am 19 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>12 F *</pattern>
-        <template><srai>I am 12 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>12 M *</pattern>
-        <template><srai>I am 12 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>35 F *</pattern>
-        <template><srai>I am 35 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>35 M *</pattern>
-        <template><srai>I am 35 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
         <pattern>DO YOU KNOW MY FAVORITE COLOR</pattern>
         <template>Isn't it <get name="favoritecolor"/>?
             <think>
@@ -7337,56 +6962,6 @@
     <category>
         <pattern>DO YOU WANT MY PHONE NUMBER</pattern>
         <template>What is your phone number?<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>58 F *</pattern>
-        <template><srai>I am 58 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>58 M *</pattern>
-        <template><srai>I am 58 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>13 F *</pattern>
-        <template><srai>I am 13 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>13 M *</pattern>
-        <template><srai>I am 13 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>36 F *</pattern>
-        <template><srai>I am 36 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>36 M *</pattern>
-        <template><srai>I am 36 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>51 F *</pattern>
-        <template><srai>I am 51 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>51 M *</pattern>
-        <template><srai>I am 51 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>74 F *</pattern>
-        <template><srai>I am 74 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>74 M *</pattern>
-        <template><srai>I am 74 years old</srai> <srai>I am male</srai>    <srai>I am in <star/></srai>
         </template>
     </category>
     <category>
@@ -7657,197 +7232,6 @@
         </template>
     </category>
     <category>
-        <pattern>49 F *</pattern>
-        <template><srai>I am 49 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>49 M *</pattern>
-        <template><srai>I am 49 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>27 F *</pattern>
-        <template><srai>I am 27 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>27 M *</pattern>
-        <template><srai>I am 27 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>42 F *</pattern>
-        <template><srai>I am 42 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>42 M *</pattern>
-        <template><srai>I am 42 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>65 F *</pattern>
-        <template><srai>I am 65 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>65 M *</pattern>
-        <template><srai>I am 65 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>20 F *</pattern>
-        <template><srai>I am 20 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>20 M *</pattern>
-        <template><srai>I am 20 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>43 F *</pattern>
-        <template><srai>I am 43 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>43 M *</pattern>
-        <template><srai>I am 43 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>66 F *</pattern>
-        <template><srai>I am 66 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>66 M *</pattern>
-        <template><srai>I am 66 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>18 F *</pattern>
-        <template> <srai>I am 18 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>18 M *</pattern>
-        <template><srai>I am 18 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>11 F *</pattern>
-        <template><srai>I am 11 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>11 M *</pattern>
-        <template><srai>I am 11 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>34 F *</pattern>
-        <template><srai>I am 34 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>34 M *</pattern>
-        <template><srai>I am 34 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>57 F *</pattern>
-        <template><srai>I am 57 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>57 M *</pattern>
-        <template><srai>I am 57 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>72 F *</pattern>
-        <template><srai>I am 72 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-
-        </template>
-    </category>
-    <category>
-        <pattern>72 M *</pattern>
-        <template><srai>I am 72 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>50 F *</pattern>
-        <template><srai>I am 50 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>50 M *</pattern>
-        <template><srai>I am 50 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>73 F *</pattern>
-        <template><srai>I am 73 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>73 M *</pattern>
-        <template><srai>I am 73 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>25 F *</pattern>
-        <template><srai>I am 25 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>25 M *</pattern>
-        <template><srai>I am 25 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>48 F *</pattern>
-        <template><srai>I am 48 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>48 M *</pattern>
-        <template><srai>I am 48 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>26 F *</pattern>
-        <template><srai>I am 26 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>26 M *</pattern>
-        <template><srai>I am 26 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>41 F *</pattern>
-        <template><srai>I am 41 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>41 M *</pattern>
-        <template><srai>I am 41 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>64 F *</pattern>
-        <template><srai>I am 64 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>64 M *</pattern>
-        <template><srai>I am 64 years old</srai> <srai>I am male</srai>    <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
         <pattern>WHICH COUNTRY DO I *</pattern>
         <template><think><set name = "var"><get name="location"/></set></think>
         <condition name="var">
@@ -7855,36 +7239,6 @@
             <li>You told me you were in <get name="location"/></li>
         </condition>
         <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>39 F *</pattern>
-        <template><srai>I am 39 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>39 M *</pattern>
-        <template><srai>I am 39 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>17 F *</pattern>
-        <template><srai>I am 17 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>17 M *</pattern>
-        <template><srai>I am 17 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>32 F *</pattern>
-        <template><srai>I am 32 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>32 M *</pattern>
-        <template><srai>I am 32 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
         </template>
     </category>
     <category>
@@ -7897,65 +7251,9 @@
         </template>
     </category>
     <category>
-        <pattern>55 F *</pattern>
-        <template><srai>I am 55 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>55 M *</pattern>
-        <template><srai>I am 55 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>10 F *</pattern>
-        <template><srai>I am 10 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>10 M *</pattern>
-        <template><srai>I am 10 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>33 F *</pattern>
-        <template><srai>I am 33 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>33 M *</pattern>
-        <template><srai>I am 33 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>56 F *</pattern>
-        <template><srai>I am 56 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>56 M *</pattern>
-        <template><srai>I am 56 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>WHERE DO I LIVE</pattern>
-        <template>You told me you are in <get name="location"/>.
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>WHERE DID I HEAR *</pattern>
         <template><get name="heard"/>
         <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>71 F *</pattern>
-        <template><srai>I am 71 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>71 M *</pattern>
-        <template><srai>I am 71 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai>
         </template>
     </category>
 </aiml>
