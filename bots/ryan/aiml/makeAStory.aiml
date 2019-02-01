@@ -71,6 +71,45 @@
     </category>
 
     <category>
+        <pattern># PASSERBY ^</pattern>
+        <that>Or does our hero decide to get another cup of coffee and try to carry on like everything is normal?</that>
+        <template>
+            Asking someone for help is certainly worth a shot! <get name = "hero"/> sees a woman walking on the sidewalk in front of the house.
+            Calling out to her, <get name = "hero"/> asks for help, inquiring about the day and time.
+            The woman looks alarmed and asks what <get name = "hero"/> is doing in the house,
+            which she says has been vacant for as long as she has lived in the neighborhood.
+            Then she leaves without another word. If you were starting the day off like our hero, how would you be feeling?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># PASSER-BY ^</pattern>
+        <that>Or does our hero decide to get another cup of coffee and try to carry on like everything is normal?</that>
+        <template>
+            Asking someone for help is certainly worth a shot! <get name = "hero"/> sees a woman walking on the sidewalk in front of the house.
+            Calling out to her, <get name = "hero"/> asks for help, inquiring about the day and time.
+            The woman looks alarmed and asks what <get name = "hero"/> is doing in the house,
+            which she says has been vacant for as long as she has lived in the neighborhood.
+            Then she leaves without another word. If you were starting the day off like our hero, how would you be feeling?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># PASSER ^</pattern>
+        <that>Or does our hero decide to get another cup of coffee and try to carry on like everything is normal?</that>
+        <template>
+            Asking someone for help is certainly worth a shot! <get name = "hero"/> sees a woman walking on the sidewalk in front of the house.
+            Calling out to her, <get name = "hero"/> asks for help, inquiring about the day and time.
+            The woman looks alarmed and asks what <get name = "hero"/> is doing in the house,
+            which she says has been vacant for as long as she has lived in the neighborhood.
+            Then she leaves without another word. If you were starting the day off like our hero, how would you be feeling?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
         <pattern># ASK ^</pattern>
         <that>Or does our hero decide to get another cup of coffee and try to carry on like everything is normal?</that>
         <template>

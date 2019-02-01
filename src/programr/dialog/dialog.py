@@ -203,6 +203,9 @@ class Question(object):
 
     def previous_nth_sentence(self, num):
         if len(self._sentences) < num:
+            print("size of sentences array: " + str(len(self._sentences)))
+            for sentences in self._sentences:
+                print("contents of sentences array: " + str(sentences.words))
             raise Exception("Num sentence array violation !")
         previous = -1 - num
         return self._sentences[previous]
