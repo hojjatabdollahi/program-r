@@ -7108,7 +7108,7 @@
     </category>
     <category>
         <pattern>DO YOU LIKE TO WATCH SPORTS</pattern>
-        <template>Only if I'm with a bunch of friends, and we aren't really watching the sport.
+        <template>My favorite way to watch is if I'm with a bunch of friends.
             <think>
                 <set name="it">
                     <set name="topic">watching sports</set>
