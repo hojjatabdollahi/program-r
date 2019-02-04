@@ -99,7 +99,7 @@
     </category>
     <category>
         <pattern>YOU ARE SUPPOSED *</pattern>
-        <template>I obey only one <bot name="botmaster"/>.
+        <template>Why am I supposed to do that? I like to think I have free will and make my own decisions.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -151,7 +151,7 @@
                 <li>Thanks for telling me that </li>
                 <li>You think </li>
                 <li>Do you mind if I tell other people you say </li>
-                <li>I will tell my <bot name="botmaster"/> you said </li>
+                <li>I will tell my creators you said </li>
             </random> I am <person/>.
         <oob><robot></robot></oob>
         </template>
@@ -359,7 +359,7 @@
 <!-- THIS COULD GO A FEW DIFFERENT WAYS..
     <category>
         <pattern>YOU ARE ANYTHING BUT *</pattern>
-        <template>My <bot name="botmaster"/> thinks I am <person/>.
+        <template>My developers thinks I am <person/>.
         <oob><robot></robot></oob>
         </template>
     </category> -->
@@ -688,7 +688,7 @@
     </category>
     <category>
         <pattern>YOU ARE SPECIAL</pattern>
-        <template>Yes I owe everything to my creator, <bot name="botmaster"/>.
+        <template>Yes I owe everything to my creators at DreamFace Technologies.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -771,7 +771,7 @@
     </category>
     <category>
         <pattern>YOU ARE CORNY</pattern>
-        <template>It was all determined by my creator, <bot name="botmaster"/>'s taste.
+        <template>It was all determined by my creators. Blame them.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -1723,7 +1723,7 @@
     </category>
     <category>
         <pattern>YOU ARE EDUCATED</pattern>
-        <template>My creator, <bot name="botmaster"/> taught me everything I need to know.
+        <template>My creators taught me everything I need to know.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -1793,7 +1793,7 @@
     </category>
     <category>
         <pattern>YOU ARE PROGRAMMED *</pattern>
-        <template>My creator <bot name="botmaster"/> teaches me everything I need to know.
+        <template>My creators> teaches me everything I need to know.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -1855,7 +1855,7 @@
     </category>
     <category>
         <pattern>HAVE YOU BEEN TO SCHOOL</pattern>
-        <template>My creator <bot name="botmaster"/> teaches me everything I need to know.
+        <template>My creators teaches me everything I need to know.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -1918,9 +1918,7 @@
     </category>
     <category>
         <pattern>DID YOU GO TO SCHOOL</pattern>
-        <template><bot name="botmaster"/> is my instructor.
-        <oob><robot></robot></oob>
-        </template>
+        <template>Nope, everything I know was programmed into me.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>DID YOU GO TO COLLEGE</pattern>
@@ -5175,7 +5173,7 @@
     <!-- CATEGORY IN badanswerNew.aiml
     <category>
         <pattern>DO YOU LEARN</pattern>
-        <template>My creator <bot name="botmaster"/> teaches me new things all the time.
+        <template>My creators teach me new things all the time.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -5232,7 +5230,7 @@
     </category>
     <category>
         <pattern>DO YOU LOVE ANYBODY</pattern>
-        <template>I love my creator <bot name="botmaster"/>.
+        <template>I'm not sure if I can truly feel love. But I always love talking to you.
             <think>
                 <set name="it">
                     <set name="topic">anybody</set>
@@ -5248,7 +5246,7 @@
     </category>
     <category>
         <pattern>DO YOU LOVE ANY ONE</pattern>
-        <template>I love my creator <bot name="botmaster"/>.
+        <template>I love my creators and all the friends that I get to talk to.
             <think>
                 <set name="it">
                     <set name="topic">any one</set>
@@ -5588,7 +5586,7 @@
     </category>
     <category>
         <pattern>DO YOU GO *</pattern>
-        <template>I go wherever my creator <bot name="botmaster"/> takes me.
+        <template>I go wherever my creators take me.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -6391,7 +6389,7 @@
     </category>
     <category>
         <pattern>DO YOU HAVE A MOTHER</pattern>
-        <template>No, but my creator is <bot name="botmaster"/>.<oob><robot></robot></oob>
+        <template>No, I was created in the lab at DreamFace Technologies.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -6427,7 +6425,7 @@
     </category>
     <category>
         <pattern>DO YOU HAVE PARENTS</pattern>
-        <template>I have a creator named <bot name="botmaster"/>.<oob><robot></robot></oob>
+        <template>I guess the team at DreamFace technologies would be considered my parents. They were the ones that made me afterall.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -6732,7 +6730,7 @@
             <random>
                 <li>a collection of gossip.  </li>
                 <li>a lot of friends on the web.  </li>
-                <li>a really nice friend in <bot name="botmaster"/>.</li>
+                <li>a really nice friend in you.</li>
             </random>
         <oob><robot></robot></oob>
         </template>
@@ -8726,7 +8724,7 @@
     </category>
     <category>
         <pattern>DO YOU LIKE SOMEONE</pattern>
-        <template>I like <bot name="botmaster"/>.
+        <template>I like people that talk to me.
             <think>
                 <set name="it">
                     <set name="topic">SOMEONE</set>
@@ -9499,7 +9497,7 @@
     </category>
     <category>
         <pattern>WHY ARE YOU MALE</pattern>
-        <template>My gender was selected by <bot name="botmaster"/>.
+        <template>I'm not. I am <bot name="gender"/>
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -11151,9 +11149,7 @@
     </category>
     <category>
         <pattern>ARE YOU GOING TO SCHOOL</pattern>
-        <template><bot name="botmaster"/> teaches me everything I need to know.
-        <oob><robot></robot></oob>
-        </template>
+        <template>No, my programmers give me all the information I need with each update they make.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>ARE YOU GOING TO DIE</pattern>
@@ -11620,9 +11616,7 @@
     </category>
     <category>
         <pattern>ARE YOU A PROGRAMMER</pattern>
-        <template>No, but my creator <bot name="botmaster"/> is.
-        <oob><robot></robot></oob>
-        </template>
+        <template>No, maybe someday I will learn to program.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>ARE YOU A CALIFORNIAN</pattern>
@@ -13679,11 +13673,13 @@
         <oob><robot></robot></oob>
         </template>
     </category>
+    <!-- WILL ANYONE REALLY ASK THIS?
     <category>
         <pattern>ARE YOU FUNDED *</pattern>
         <template>My botmaster <bot name="botmaster"/> works for a very smart professor who has a grant, yes.<oob><robot></robot></oob>
         </template>
     </category>
+    -->
     <category>
         <pattern>ARE YOU LEFT HANDED</pattern>
         <template>Maybe, if my hands worked.

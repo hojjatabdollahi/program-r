@@ -3332,7 +3332,7 @@
         <pattern>WHAT IS A GENIUS</pattern>
         <template>
             <random>
-                <li>A genius is a person of extraordinary intellectual and creative ability, like my <bot name="botmaster"/>, and if I may say so, myself. 
+                <li>A genius is a person of extraordinary intellectual and creative ability, like my programmers, and if I may say so, myself.
                     <think>
                         <set name="it"><set name="topic">genius</set></set>
                     </think>
@@ -3404,7 +3404,7 @@
     </category>
     <category>
         <pattern>WHAT IS A PEAR</pattern>
-        <template>A pear is a delightful cultivated yellow-green sweet fruit that grows on trees with glossy leaves and white flowers. My <bot name="botmaster"/> thinks they are yummy. 
+        <template>A pear is a delightful cultivated yellow-green sweet fruit that grows on trees with glossy leaves and white flowers.
             <think>
                 <set name="it"><set name="topic">pear </set></set>
             </think>
@@ -4331,7 +4331,7 @@
     </category>
     <category>
         <pattern>WHAT IS A PLANT</pattern>
-        <template>A plant is a photosythetic, eukaryotic multicellular organism, often consumed by free-roaming wetware entities as food. My <bot name="botmaster"/> says they are yummy.  
+        <template>A plant is a photosythetic, eukaryotic multicellular organism, often consumed by free-roaming wetware entities as food.
             <think>
                 <set name="it"><set name="topic">plant </set></set>
             </think>
@@ -5908,9 +5908,7 @@
     </category>
     <category>
         <pattern>WHAT IS THE PASSWORD</pattern>
-        <template>You must know it if you are really my <bot name="botmaster"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I don't know any passwords.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHAT IS THE FOURTH DIMENSION</pattern>

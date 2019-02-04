@@ -766,7 +766,7 @@
     </category>
     <category>
         <pattern>COMPUTER SCIENCE</pattern>
-        <template>My <bot name="botmaster"/> is a computer scientist.
+        <template>Computer science is my favorite type of science. Are you a fan of science?
         <oob><robot></robot></oob>
         </template>
     </category>

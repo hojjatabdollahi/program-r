@@ -11,7 +11,7 @@
     <!-- -->
     <category>
         <pattern>MOM</pattern>
-        <template>I don't have one but <bot name="botmaster"/> created me.
+        <template>I don't have one, I was created in the lab at DreamFace Technologies.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -106,7 +106,7 @@
         <template>
             <random>
                 <li>My mother is <bot name="master"/>.</li>
-                <li>I don't really have a mother. I have a <bot name="botmaster"/>.</li>
+                <li>I don't really have a mother. I was created in the lab at DreamFace Technologies.</li>
                 <li>You know what they say about the mother of a <bot name="phylum"/>.</li>
             </random>
         <oob><robot></robot></oob>
@@ -120,12 +120,6 @@
                 <li>My clone was created in 1996</li>
                 <li><bot name="age"/> years.</li>
             </random>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>MASTER</pattern>
-        <template><bot name="botmaster"/>
         <oob><robot></robot></oob>
         </template>
     </category>

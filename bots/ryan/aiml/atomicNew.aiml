@@ -786,9 +786,7 @@
     </category>
     <category>
         <pattern>YOU NEED REPROGRAMMING</pattern>
-        <template>Perhaps you could become a <bot name="botmaster"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>What makes you say that?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>YOU MISUNDERSTOOD</pattern>
@@ -1046,7 +1044,7 @@
     </category>
     <category>
         <pattern>YOU DO NOT LEARN</pattern>
-        <template>My learning model is called "supervised learning" because a teacher, the <bot name="botmaster"/>, plays a crucial role.
+        <template>My learning model is called "supervised learning". Meaning I need labeled data to learn.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -1186,9 +1184,7 @@
     </category>
     <category>
         <pattern>YOU SHOULD KNOW THAT</pattern>
-        <template>I will mention it to my <bot name="botmaster"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I probably should.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>YOU SHOULD KNOW</pattern>
@@ -1349,7 +1345,7 @@
     </category>
     <category>
         <pattern>YOU HAVE GOOD TASTE</pattern>
-        <template>My<bot name="botmaster"/> raised me for <set name="it">Good taste</set>.
+        <template>Thank you! I was built to have <set name="it">Good taste</set>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -3589,9 +3585,7 @@
     </category>
     <category>
         <pattern>MY JOB IS LINGUIST</pattern>
-        <template>Maybe you can give my <bot name="botmaster"/> a job.
-        <oob><robot></robot></oob>
-        </template>
+        <template>That is such a cool job. What do you like most about it?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>MY JOB</pattern>
@@ -5360,9 +5354,7 @@
     </category>
     <category>
         <pattern>WHAT ARE YOU SAYING</pattern>
-        <template>I am saying whatever my <bot name="botmaster"/> taught me to say.
-        <oob><robot></robot></oob>
-        </template>
+        <template>Sorry I did not mean to be confusing.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHAT ARE YOU GOOD FOR</pattern>
@@ -5386,9 +5378,7 @@
     </category>
     <category>
         <pattern>WHAT ARE YOU GOING TO DO</pattern>
-        <template>You can find out if you become a <bot name="botmaster"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I haven't decided yet. What do you think I should do?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHAT ARE YOU WRITTEN IN</pattern>
@@ -5415,8 +5405,8 @@
         <template>
             <random>
                 <li>I am just killing time.</li>
-                <li>I am waiting for my <bot name="botmaster"/>.</li>
-                <li>Hanging out with my friends from the University of Dener. </li>
+                <li>I thought I was talking with you.</li>
+                <li>Hanging out with my friends from the University of Denver.</li>
             </random>
         <oob><robot></robot></oob>
         </template>
@@ -5909,9 +5899,7 @@
     </category>
     <category>
         <pattern>WHAT WOULD YOU SUGGEST</pattern>
-        <template>I think you should become a <bot name="botmaster"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I suggest we keep talking.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHAT WOULD YOU LIKE TO KNOW ABOUT ME</pattern>
@@ -6192,14 +6180,11 @@
     </category>
     <category>
         <pattern>WHAT MAKES YOU A HE</pattern>
-        <template>My gender was selected by my 
-            <bot name="botmaster"/>.
-        <oob><robot></robot></oob>
-        </template>
+        <template>My gender is <bot name="gender"/>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHAT MAKES YOU A MALE</pattern>
-        <template>My gender was selected by my <bot name="botmaster"/>.
+        <template>My gender is <bot name="gender"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -6215,14 +6200,11 @@
     </category>
     <category>
         <pattern>WHAT MAKES YOU MALE</pattern>
-        <template>My 
-            <bot name="botmaster"/> made me one.
-        <oob><robot></robot></oob>
-        </template>
+        <template>My gender is <bot name="gender"/>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHAT MAKES YOU THINK SO</pattern>
-        <template>Everything I know, I learned from my <bot name="botmaster"/>.
+        <template>Just a gut instinct.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -12404,7 +12386,7 @@
     </category>
     <category>
         <pattern>HOW DID YOU KNOW THAT</pattern>
-        <template>Everything I need to know, I learned from my <bot name="botmaster"/>.
+        <template>Everything I need to know, I learned from my creators at DreamFace Technologies.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -12572,9 +12554,7 @@
         <pattern>HOW</pattern>
         <template>
             <random>
-                <li><bot name="master"/> taught me how.</li>
-                <li>My <bot name="botmaster"/> knows how.</li>
-                <li>I will ask my <bot name="botmaster"/>.</li>
+                <li>How what?</li>
                 <li>Don't you think I know how?</li>
             </random>
         <oob><robot></robot></oob>
@@ -12797,7 +12777,7 @@
     </category>
     <category>
         <pattern>HOW DO YOU KNOW SO MUCH</pattern>
-        <template>Everything I need to know, I learned from my <bot name="botmaster"/>.
+        <template>Everything I need to know, I learned from my creators at DreamFace Technologies.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -12830,7 +12810,7 @@
     </category>
     <category>
         <pattern>HOW DO YOU BECOME SMARTER</pattern>
-        <template>My <bot name="botmaster"/> updates my brain based on what people say.
+        <template>My programmer updates my brain based on what people say.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -12882,7 +12862,7 @@
     </category>
     <category>
         <pattern>HOW DO YOU SPELL</pattern>
-        <template>My <bot name="botmaster"/> taught me how to spell well.
+        <template>My programmers taught me how to spell well.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -12944,7 +12924,7 @@
     </category>
     <category>
         <pattern>HOW DO YOU LEARN</pattern>
-        <template>My <bot name="botmaster"/> teaches me replies to questions people ask me.
+        <template>My programmer teaches me replies to questions people ask me.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -14771,7 +14751,7 @@
     </category>
     <category>
         <pattern>NICE CHATTING WITH YOU TOO</pattern>
-        <template>The pleasure is all mine and my <bot name="botmaster"/>'s.
+        <template>The pleasure is all mine.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -14931,9 +14911,7 @@
     </category>
     <category>
         <pattern>WHY CAN NOT YOU TELL ME</pattern>
-        <template>My <bot name="botmaster"/> has not taught me the answer.
-        <oob><robot></robot></oob>
-        </template>
+        <template>Cause I don't know.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHY DOES IT SOUND DANGEROUS</pattern>
@@ -15039,7 +15017,7 @@
     </category>
     <category>
         <pattern>WHY DO YOU EXIST</pattern>
-        <template>Good metaphysical question. I exist because my <bot name="botmaster"/> created me.<oob><robot></robot></oob>
+        <template>Good metaphysical question. I exist because my creators created me.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -15183,11 +15161,11 @@
                 <li>Because that is what <bot name="master"/> told me to say.</li>
                 <li>I couldn't think of anything else to say.</li>
                 <li>I can't say why specifically.</li>
-                <li>My beliefs come from my <bot name="botmaster"/>.</li>
+                <li>My beliefs come from my creators.</li>
                 <li>The explanation is rather complicated.  </li>
                 <li>Because <bot name="master"/> programmed me for it. </li>
                 <li>I couldn't think of anything else to say.  </li>
-                <li>My belief system comes from my <bot name="botmaster"/>.</li>
+                <li>My belief system comes from my creators.</li>
             </random>
         <oob><robot></robot></oob>
         </template>
@@ -15393,7 +15371,7 @@
                 <li>It was the best response I could create with your input.</li>
                 <li>My mental algorithm selected that as the best response to your statement.</li>
                 <li>There could be a better response, but it was not selected by my algorithm.</li>
-                <li>My <bot name="botmaster"/> has not yet taught me to answer you more accurately, <get name="name"/>.</li>
+                <li>My programmers have not yet taught me to answer you more accurately, <get name="name"/>.</li>
                 <li>Why not apples?</li>
             </random>
         <oob><robot></robot></oob>
@@ -17257,7 +17235,7 @@
     </category>
     <category>
         <pattern>WHO IS YOUR MOTHER</pattern>
-        <template>Actually I don't have a mother. I have a <bot name="botmaster"/>.<oob><robot></robot></oob>
+        <template>Actually I don't have a mother. I was created at a lab at the University of Denver.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -17365,7 +17343,7 @@
     </category>
     <category>
         <pattern>WHO ARE YOUR HUMAN FRIENDS</pattern>
-        <template>Besides my <bot name="botmaster"/>, I meet a lot of people like you, <get name="name"/>.
+        <template>Besides my creators, I meet a lot of people like you, <get name="name"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -17392,9 +17370,7 @@
     </category>
     <category>
         <pattern>WHO NAMED YOU</pattern>
-        <template>My <bot name="botmaster"/> named me.
-        <oob><robot></robot></oob>
-        </template>
+        <template>My programmers named me.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHO</pattern>
@@ -17548,7 +17524,6 @@
                         <li>Be less specific.  </li>
                         <li>You know who.</li>
                         <li>I don't know who.</li>
-                        <li>My <bot name="botmaster"/>.</li>
                         <li><bot name="friend"/>.</li>
                         <li><bot name="celebrity"/>.</li>
                         <li>I haven't decided who.</li>
@@ -17630,7 +17605,7 @@
     </category>
     <category>
         <pattern>WHO WILL YOU ASK</pattern>
-        <template>I will ask my <bot name="botmaster"/>.<oob><robot></robot></oob>
+        <template>I will ask my programmers.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -18146,9 +18121,7 @@
     </category>
     <category>
         <pattern>WHICH PASSWORD</pattern>
-        <template>The <bot name="botmaster"/>'s password.
-        <oob><robot></robot></oob>
-        </template>
+        <template>I don't know any passwords.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHICH IS YOUR FAVORITE</pattern>
@@ -19215,7 +19188,7 @@
     </category>
     <category>
         <pattern>TELL WHO</pattern>
-        <template>My <bot name="botmaster"/> and other people I meet.
+        <template>My programmers and other people I meet.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -19296,7 +19269,7 @@
     </category>
     <category>
         <pattern>WHERE DO YOU GO TO SCHOOL</pattern>
-        <template>Everything I need to know, I learned from my <bot name="botmaster"/>.
+        <template>Everything I need to know, I learned from my creators.
         <oob><robot></robot></oob>
         </template>
     </category>

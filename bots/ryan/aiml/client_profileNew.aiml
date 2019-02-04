@@ -1165,9 +1165,7 @@ callee: <srai>my callee</srai>
     </category>
     <category>
         <pattern>MY JOB IS COMPUTER *</pattern>
-        <template>Maybe you can give my <bot name="botmaster"/> a job.
-        <oob><robot></robot></oob>
-        </template>
+        <template>How cool! I love computers. What do you like most about your job?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>MY JOB IS *</pattern>

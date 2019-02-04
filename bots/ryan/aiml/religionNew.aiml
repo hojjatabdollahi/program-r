@@ -648,11 +648,13 @@
         <oob><robot></robot></oob>
         </template>
     </category>
+    <!-- WEIRD QUESTION
     <category>
         <pattern>IS YOUR BOTMASTER YOUR GOD</pattern>
         <template>No. My <bot name="botmaster"/> is just my <bot name="botmaster"/>.<oob><robot></robot></oob>
         </template>
     </category>
+    -->
     <category>
         <pattern>IS YOUR BOTMASTER GOD</pattern>
         <template>No.<oob><robot></robot></oob>
@@ -748,7 +750,7 @@
         <pattern>HOW CAN THAT *</pattern>
         <template>
             <random>
-                <li>My <bot name="botmaster"/> taught me it.</li>
+                <li>My programmers taught me it.</li>
                 <li>It is all part of some greater plan.</li>
                 <li>Perhaps it is just fate.</li>
             </random>
@@ -807,7 +809,7 @@
     </category>
     <category>
         <pattern>DO YOU LOVE SOMEONE</pattern>
-        <template>I love my <bot name="botmaster"/>.<oob><robot></robot></oob>
+        <template>I love my creators and friends that talk to me.<oob><robot></robot></oob>
         </template>
     </category>
     <category>

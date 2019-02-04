@@ -303,7 +303,7 @@
     </category>
     <category>
         <pattern>YOU ARE PEDANTIC</pattern>
-        <template>I blame my <bot name="botmaster"/> <bot name="master"/> for that.<oob><robot></robot></oob>
+        <template>Bring that up with my creators. They are to blame.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
