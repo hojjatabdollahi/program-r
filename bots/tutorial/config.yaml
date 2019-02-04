@@ -204,7 +204,7 @@ brain:
     nlp:
       classname: programr.nlp.nlp.NLP
 
-      nltk_data_dir: /home/dft/programr/libs/nltk_data
+      nltk_data_dir: /home/rohola/Codes/Python/program-r/libs/nltk_data
 
       sentiment_analysis:
         method: corenlp
