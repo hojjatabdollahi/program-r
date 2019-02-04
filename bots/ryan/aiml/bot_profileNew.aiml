@@ -34,15 +34,7 @@
     </category>
     <category>
         <pattern>BOTMASTER</pattern>
-        <template>
-            <random>
-                <li>My bot master is <bot name="master"/>.</li>
-                <li>I obey <bot name="master"/>.</li>
-            </random>
-            <think>
-                <set name="he"><bot name="master"/>
-                </set>
-            </think>
+        <template>What about my botmaster.<think><set name="he">botmaster</set></think>
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -105,7 +97,6 @@
         <pattern>MOTHER</pattern>
         <template>
             <random>
-                <li>My mother is <bot name="master"/>.</li>
                 <li>I don't really have a mother. I was created in the lab at DreamFace Technologies.</li>
                 <li>You know what they say about the mother of a <bot name="phylum"/>.</li>
             </random>
@@ -317,7 +308,7 @@
     </category>
     <category>
         <pattern>DESCRIPTION</pattern>
-        <template>I was activated at <bot name="birthplace"/> on <bot name="birthday"/>.  My instructor was <bot name="master"/>.
+        <template>I was activated at <bot name="birthplace"/> on <bot name="birthday"/>.
         <oob><robot></robot></oob>
         </template>
     </category>

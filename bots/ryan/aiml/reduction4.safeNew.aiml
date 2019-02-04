@@ -2527,7 +2527,7 @@
     </category>
     <category>
         <pattern>YOUR MASTER *</pattern>
-        <template><srai><bot name="master"/> <star/></srai>
+        <template><srai>master <star/></srai>
         </template>
     </category>
     <category>
@@ -2582,7 +2582,7 @@
     </category>
     <category>
         <pattern>YOUR BOTMASTER *</pattern>
-        <template><srai><bot name="master"/> <star/></srai>
+        <template><srai>botmaster <star/></srai>
         </template>
     </category>
     <category>
@@ -2622,7 +2622,7 @@
     </category>
     <category>
         <pattern>YOUR FATHER *</pattern>
-        <template><srai><bot name="master"/> <star/></srai>
+        <template><srai>father <star/></srai>
         </template>
     </category>
     <category>
@@ -2667,7 +2667,7 @@
     </category>
     <category>
         <pattern>YOUR PROGRAMMER *</pattern>
-        <template><srai><bot name="master"/> <star/></srai>
+        <template><srai>programmer <star/></srai>
         </template>
     </category>
     <category>
@@ -2682,7 +2682,7 @@
     </category>
     <category>
         <pattern>YOUR CREATOR *</pattern>
-        <template><srai><bot name="master"/> <star/></srai>
+        <template><srai>creator <star/></srai>
         </template>
     </category>
     <category>
@@ -2692,7 +2692,7 @@
     </category>
     <category>
         <pattern>YOUR DEVELOPER *</pattern>
-        <template><srai><bot name="master"/> <star/></srai>
+        <template><srai>developer <star/></srai>
         </template>
     </category>
     <category>
@@ -2767,7 +2767,7 @@
     </category>
     <category>
         <pattern>YOUR DAD *</pattern>
-        <template><srai><bot name="master"/> <star/></srai>
+        <template><srai>dad <star/></srai>
         </template>
     </category>
     <category>
@@ -3693,7 +3693,7 @@
     </category>
     <category>
         <pattern>DO YOU THINK YOUR BOTMASTER *</pattern>
-        <template><srai>DO YOU THINK <bot name="master"/> </srai>
+        <template><srai>DO YOU THINK <star /> </srai>
         </template>
     </category>
     <category>
@@ -5551,7 +5551,7 @@
     </category>
     <category>
         <pattern>IS YOUR MASTER *</pattern>
-        <template><srai>IS <bot name="master"/> <star/></srai>
+        <template><srai> <star/></srai>
         </template>
     </category>
     <category>
@@ -7025,12 +7025,12 @@
     </category>
     <category>
         <pattern>ASK YOUR BOTMASTER</pattern>
-        <template><srai>ASK <bot name="master"/> </srai>
+        <template><srai><star /> </srai>
         </template>
     </category>
     <category>
         <pattern>ASK YOUR BOTMASTER *</pattern>
-        <template><srai>ASK <bot name="master"/> </srai>
+        <template><srai>ASK <star /> </srai>
         </template>
     </category>
     <category>
@@ -9370,8 +9370,7 @@
     </category>
     <category>
         <pattern>THAT IS YOUR BOTMASTER</pattern>
-        <template><srai>THAT IS <bot name="master"/> </srai>
-        </template>
+        <template>Yes that is my botmaster.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>THAT IS MY FAVORITE *</pattern>
@@ -9870,7 +9869,7 @@
     </category>
     <category>
         <pattern>DOES YOUR BOTMASTER *</pattern>
-        <template><srai>DOES <bot name="master"/> <star/> </srai>
+        <template><srai>DOES <star/> </srai>
         </template>
     </category>
     <category>

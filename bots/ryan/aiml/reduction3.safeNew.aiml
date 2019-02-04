@@ -19906,8 +19906,7 @@
     </category>
     <category>
         <pattern>WHERE IS YOUR MASTER</pattern>
-        <template><srai>where is <bot name="master" /></srai>
-        </template>
+        <template>Probably in the lab, working on trying to improve me.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHERE IS YOUR COMPUTER</pattern>

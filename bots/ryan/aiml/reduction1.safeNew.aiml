@@ -3550,7 +3550,7 @@
     </category>
     <category>
         <pattern>I AM YOUR PROGRAMMER</pattern>
-        <template><srai>call me <bot name="master" /></srai>
+        <template><srai>call me <star/></srai>
         </template>
     </category>
     <category>

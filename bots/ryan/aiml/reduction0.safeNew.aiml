@@ -206,7 +206,7 @@
     </category>
     <category>
         <pattern>YOUR DESIGNER *</pattern>
-        <template><srai>  <bot name="master" />  <star/></srai>
+        <template><srai> <star/></srai>
         </template>
     </category>
     <category>

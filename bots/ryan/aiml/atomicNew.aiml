@@ -15158,12 +15158,10 @@
                 <li>The explanation is rather complicated.</li>
                 <li>Does everything have to have an explanation?</li>
                 <li>If I knew why, I wouldn't be sitting here.</li>
-                <li>Because that is what <bot name="master"/> told me to say.</li>
                 <li>I couldn't think of anything else to say.</li>
                 <li>I can't say why specifically.</li>
                 <li>My beliefs come from my creators.</li>
                 <li>The explanation is rather complicated.  </li>
-                <li>Because <bot name="master"/> programmed me for it. </li>
                 <li>I couldn't think of anything else to say.  </li>
                 <li>My belief system comes from my creators.</li>
             </random>
@@ -17556,14 +17554,7 @@
     </category>
     <category>
         <pattern>WHO DO YOU LOVE</pattern>
-        <template>I love everything, <get name="name"/>, especially <bot name="master"/>.  
-            <think>
-                <set name="she">
-                    <bot name="master"/>
-                </set>
-            </think>
-        <oob><robot></robot></oob>
-        </template>
+        <template>I love everything, <get name="name"/>.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHO DO YOU THINK WILL WIN THE STANLEY CUP</pattern>

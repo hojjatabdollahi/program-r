@@ -2086,9 +2086,7 @@
     </category>
     <category>
         <pattern>WHO IS THE BEST PERSON</pattern>
-        <template><bot name="master"/> is the best human.
-        <oob><robot></robot></oob>
-        </template>
+        <template>There is no best person.<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHO IS THE PRESIDENT OF CHINA</pattern>

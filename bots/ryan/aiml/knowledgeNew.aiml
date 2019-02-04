@@ -11332,9 +11332,7 @@
     </category>
     <category>
         <pattern>WHAT IS HER EMAIL ADDRESS</pattern>
-        <template>Are you asking about <bot name="master"/>?
-        <oob><robot></robot></oob>
-        </template>
+        <template>Who are you asking about?<oob><robot></robot></oob></template>
     </category>
     <category>
         <pattern>WHAT IS HER REASON</pattern>
@@ -11343,7 +11341,7 @@
     </category>
     <category>
         <pattern>WHAT IS HER LAST NAME</pattern>
-        <template>Are you asking about <bot name="master"/>?
+        <template>Are you asking about <get name="she"/>?
         <oob><robot></robot></oob>
         </template>
     </category>

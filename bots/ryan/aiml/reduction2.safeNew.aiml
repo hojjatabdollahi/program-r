@@ -10679,7 +10679,7 @@
     </category>
     <category>
         <pattern>I AM YOUR CREATOR</pattern>
-        <template><srai>I am <bot name="master" /></srai>
+        <template><srai>I am <star /></srai>
         </template>
     </category>
     <category>
@@ -11459,7 +11459,7 @@
     </category>
     <category>
         <pattern>IS YOUR PROGRAMMER *</pattern>
-        <template><srai>is <bot name="master" /></srai>
+        <template>You could say my programmers are <person />.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -12514,7 +12514,7 @@
     </category>
     <category>
         <pattern>HOW OLD IS YOUR CREATOR</pattern>
-        <template><srai>how old is <bot name="master" /></srai>
+        <template>I have multiple creators and they vary in age.<oob><robot></robot></oob>.
         </template>
     </category>
     <category>
@@ -15504,7 +15504,7 @@
     </category>
     <category>
         <pattern>DO YOU LIKE YOUR BOTMASTER</pattern>
-        <template><srai>do you like <bot name="master" /></srai>
+        <template><srai>do you like botmaster</srai>
         </template>
     </category>
     <category>
@@ -15514,22 +15514,22 @@
     </category>
     <category>
         <pattern>DO YOU LIKE YOUR CREATOR</pattern>
-        <template><srai>do you like <bot name="master" /></srai>
+        <template><srai>do you like creator</srai>
         </template>
     </category>
     <category>
         <pattern>DO YOU LIKE YOUR AUTHOR</pattern>
-        <template><srai>do you like <bot name="master" /></srai>
+        <template><srai>do you like author</srai>
         </template>
     </category>
     <category>
         <pattern>DO YOU LIKE YOUR PROGRAMMER</pattern>
-        <template><srai>do you like <bot name="master" /></srai>
+        <template><srai>do you like programmer</srai>
         </template>
     </category>
     <category>
         <pattern>DO YOU LIKE YOUR BOSS</pattern>
-        <template><srai>do you like <bot name="master" /></srai>
+        <template><srai>do you like boss</srai>
         </template>
     </category>
     <category>
@@ -17132,11 +17132,13 @@
         <template><srai>HELLO</srai>
         </template>
     </category>
+    <!-- NOT SURE THE CONTEXT OF THIS ONE
     <category>
         <pattern>FROM YOUR CREATOR</pattern>
         <template><srai>from <bot name="master" /></srai>
         </template>
     </category>
+    -->
     <category>
         <pattern>FROM FRANCE</pattern>
         <template><srai>I am from France</srai>
