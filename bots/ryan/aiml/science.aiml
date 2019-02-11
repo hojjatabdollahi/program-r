@@ -59,7 +59,7 @@
     </category>
 
 
-<!-- SENTIMENT TWO -->
+    <!-- SENTIMENT TWO -->
 
     <category>
         <pattern>_</pattern>
@@ -101,7 +101,6 @@
             <oob><robot></robot></oob>
         </template>
     </category>
-
 
     <category>
         <pattern># <set>yes</set> ^</pattern>

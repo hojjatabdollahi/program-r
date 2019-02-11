@@ -9,6 +9,10 @@
             <oob><robot></robot></oob>
         </template>
     </category>
+    <category>
+        <pattern>CHANGE TOPIC</pattern>
+        <template><srai>Change topic</srai></template>
+    </category>
 
     <category>
         <pattern>LET US CHANGE THE SUBJECT</pattern>

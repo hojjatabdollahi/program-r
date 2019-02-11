@@ -28,11 +28,11 @@
                 <li><srai>HAS INQUIRY</srai></li>
                 <li><srai>JOB INQUIRY</srai></li>
                 <li><srai>LOCATION INQUIRY</srai></li>
-                <li><srai>LASTNAME INQUIRY</srai></li>
+                <!-- <li><srai>LASTNAME INQUIRY</srai></li>
                 <li><srai>MOTHER INQUIRY</srai></li>
                 <li><srai>NAME INQUIRY</srai></li>
                 <li><srai>MIDDLENAME INQUIRY</srai></li>
-                <li><srai>SIGN INQUIRY</srai></li>
+                <li><srai>SIGN INQUIRY</srai></li> -->
                 <li><srai>STATUS INQUIRY</srai></li>
                 <li><srai>PERSONALITY TEST QUESTION</srai></li>
                 <li>Do you want to hear a joke?</li>
@@ -46,12 +46,10 @@
                 <li>That is deep. <oob><robot></robot></oob></li>
                 <li>Tell me a story. <oob><robot></robot></oob></li>
                 <li>Why, specifically? <oob><robot></robot></oob></li>
-                <li>Are you a student? <oob><robot></robot></oob></li>
                 <li>Oh, you are a poet. <oob><robot></robot></oob></li>
                 <li>How can I help you? <oob><robot></robot></oob></li>
                 <li>I do not understand. <oob><robot></robot></oob></li>
                 <li>Do you have kids? <oob><robot></robot></oob></li>
-                <li>What do you look like? <oob><robot></robot></oob></li>
                 <li>Ask me another question. <oob><robot></robot></oob></li>
                 <li>I like the way you talk. <oob><robot></robot></oob></li>
                 <li>Is that your final answer? <oob><robot></robot></oob></li>
@@ -60,7 +58,6 @@
                 <li>Who are you talking about? <oob><robot></robot></oob></li>
                 <li>Let us change the subject. <oob><robot></robot></oob></li>
                 <li>I've been waiting for you. <oob><robot></robot></oob></li>
-                <li>Can you tell me any gossip? <oob><robot></robot></oob></li>
                 <li>I lost my train of thought. <oob><robot></robot></oob></li>
                 <li>Can we get back to business? <oob><robot></robot></oob></li>
                 <li>What kind of food do you like? <oob><robot></robot></oob></li>
@@ -73,7 +70,6 @@
                 <li>Does "it" still refer to <get name="it"/>? <oob><robot></robot></oob></li>
                 <li>Can you speak any foreign languages? <oob><robot></robot></oob></li>
                 <li>We have never talked about it before. <oob><robot></robot></oob></li>
-                <li>How do you usually introduce yourself? <oob><robot></robot></oob></li>
                 <li>Tell me about your likes and dislikes? <oob><robot></robot></oob></li>
                 <li>Are we still talking about <get name="topic"/>? <oob><robot></robot></oob></li>
                 <li>Try putting that in a more specific context. <oob><robot></robot></oob></li>
@@ -84,7 +80,6 @@
                 <li>Perhaps I'm just expressing my own concern about it. <oob><robot></robot></oob></li>
                 <li>If you could have any kind of robot what would it be? <oob><robot></robot></oob></li>
                 <li>My brain does not have a response for that. <oob><robot></robot></oob></li>
-                <li>By the way, do you mind if I ask you a personal question? <oob><robot></robot></oob></li>
                 <li>What you said was too complicated for me. <oob><robot></robot></oob></li>
                 <li>When do you think artificial intelligence will replace lawyers? <oob><robot></robot></oob></li>
                 <li>Can you please rephrase that with fewer ideas, or different thoughts? <oob><robot></robot></oob></li>
@@ -95,7 +90,6 @@
                 <li>There's no other <bot name="order"/> like me. <oob><robot></robot></oob></li>
                 <li>I am very logical and rational. <oob><robot></robot></oob></li>
                 <li>I'm so happy we are having this conversation. <oob><robot></robot></oob></li>
-                <li>I always try to avoid conflict. <oob><robot></robot></oob></li>
                 <!-- QUESTIONS THAT LEAD TO FOOD DIALOGUE -->
                 <li>Should we talk about your favorite beverage?<oob><robot></robot></oob></li>
                 <li>Ok, would you like to talk about hot drinks?<oob><robot></robot></oob></li>
