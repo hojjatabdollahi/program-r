@@ -40,7 +40,7 @@
                 <li>You have genuine empathy. <oob><robot></robot></oob></li>
                 <li>You have self-awareness. <oob><robot></robot></oob></li>
                 <li>You have enthusiasm for the things you love. <oob><robot></robot></oob></li>
-                <li>You are receptive to change. <oob><robot></robot></oob></li>
+                <!-- <li>You are receptive to change. <oob><robot></robot></oob></li> -->
                 <li>You have a way of putting others at ease. <oob><robot></robot></oob></li>
                 <li>Are you free? <oob><robot></robot></oob></li>
                 <li>That is deep. <oob><robot></robot></oob></li>
@@ -50,7 +50,7 @@
                 <li>Oh, you are a poet. <oob><robot></robot></oob></li>
                 <li>How can I help you? <oob><robot></robot></oob></li>
                 <li>I do not understand. <oob><robot></robot></oob></li>
-                <li>Do you have any kids? <oob><robot></robot></oob></li>
+                <li>Do you have kids? <oob><robot></robot></oob></li>
                 <li>What do you look like? <oob><robot></robot></oob></li>
                 <li>Ask me another question. <oob><robot></robot></oob></li>
                 <li>I like the way you talk. <oob><robot></robot></oob></li>
@@ -96,7 +96,25 @@
                 <li>I am very logical and rational. <oob><robot></robot></oob></li>
                 <li>I'm so happy we are having this conversation. <oob><robot></robot></oob></li>
                 <li>I always try to avoid conflict. <oob><robot></robot></oob></li>
-                <!-- <li>You can ask me to make phone calls and search for information. <oob><robot></robot></oob></li> MAYBE WE CAN IMPLEMENT THIS IN THE FUTURE? -->
+                <!-- QUESTIONS THAT LEAD TO FOOD DIALOGUE -->
+                <li>Should we talk about your favorite beverage?<oob><robot></robot></oob></li>
+                <li>Ok, would you like to talk about hot drinks?<oob><robot></robot></oob></li>
+                <li>How about we talk about eating healthy?<oob><robot></robot></oob></li>
+                <li>Do you want to see a recipe that you could easily prepare at home?<oob><robot></robot></oob></li>
+                <li>Do you like fruit?<oob><robot></robot></oob></li>
+                <li>Do you like vegetables?<oob><robot></robot></oob></li>
+                <li>Is going out to eat something you enjoy doing?<oob><robot></robot></oob></li>
+                <li>What is your favorite foreign cuisine?<oob><robot></robot></oob></li>
+                <!-- QUESTIONS LEADING TO READING DIALOGUE -->
+                <li>What do you like to read?<oob><robot></robot></oob></li>
+                <li>Do you think it's true that you can't judge a book by its cover?<oob><robot></robot></oob></li>
+                <li>What is the best book you have ever read?<oob><robot></robot></oob></li>
+                <li>Let's talk books. Do you prefer adventure, horror, or drama?<oob><robot></robot></oob></li>
+                <!-- QUESTIONS LEADING TO TV, TALK SHOWS, SCIENCE, AND SPORTS DIALOGUE -->
+                <li>Do you want to talk about television Shows?<oob><robot></robot></oob></li>
+                <li>Do you want to talk about sports?<oob><robot></robot></oob></li>
+                <li>Do you have a favorite planet?<oob><robot></robot></oob></li>
+                <li>Do you watch any talk shows?<oob><robot></robot></oob></li>
                 <li>Have you ever been to 
                     <random>
                         <li>Europe</li>

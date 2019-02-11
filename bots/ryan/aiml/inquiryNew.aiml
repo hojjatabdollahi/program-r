@@ -246,12 +246,12 @@
     </category>
     <category>
         <pattern>SIGN INQUIRY YOUR STARSIGN</pattern>
-        <template>What is your sign?<oob><robot></robot></oob>
+        <template>What is your astrological sign?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>SIGN INQUIRY OM</pattern>
-        <template>What is your sign?<oob><robot></robot></oob>
+        <template>What is your astrological sign?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
