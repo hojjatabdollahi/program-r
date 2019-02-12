@@ -105,6 +105,7 @@
                 <li>Do you think it's true that you can't judge a book by its cover?<oob><robot></robot></oob></li>
                 <li>What is the best book you have ever read?<oob><robot></robot></oob></li>
                 <li>Let's talk books. Do you prefer adventure, horror, or drama?<oob><robot></robot></oob></li>
+                <li>Have you ever had a subscription to a magazine?<oob><robot></robot></oob></li>
                 <!-- QUESTIONS LEADING TO TV, TALK SHOWS, SCIENCE, SPORTS, AND NIH DIALOGUES -->
                 <li>Do you want to talk about television Shows?<oob><robot></robot></oob></li>
                 <li>Do you want to talk about sports?<oob><robot></robot></oob></li>
@@ -115,6 +116,7 @@
                 <li>Do you like to travel?<oob><robot></robot></oob></li>
                 <li>Which activity do you enjoy the most. Playing cards, knitting, or reading?<oob><robot></robot></oob></li>
                 <li>What is your favorite sport to watch, basketball, baseball, football, or hockey?<oob><robot></robot></oob></li>
+                <li>Do you have any siblings?<oob><robot></robot></oob></li>
                 <li>Have you ever been to
                     <random>
                         <li>Europe</li>
