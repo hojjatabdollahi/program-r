@@ -3854,7 +3854,6 @@
                         </robot>
                     </oob>
                 </li>
-
                 <li value = "negative">
                     These topics can be difficult to discuss. Alright, we have talked quite a bit today.
                     Why don't we stop here today. Does that sound good to you?
@@ -3883,7 +3882,7 @@
         </template>
     </category>
 
-     <category>
+    <category>
         <pattern>_</pattern>
         <that>HOW DO YOU THINK IT WOULD FEEL TO BE AN ARTIST?</that>
         <template>

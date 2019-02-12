@@ -5,7 +5,7 @@
     <category>
         <pattern>$Change topic</pattern>
         <template>
-            Ok. What would you like to talk about? Some of my favorite things to talk about are <bot name="talkabout"/>
+            Ok. What would you like to talk about?
             <oob><robot></robot></oob>
         </template>
     </category>
