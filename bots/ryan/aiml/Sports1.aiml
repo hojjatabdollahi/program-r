@@ -5,10 +5,7 @@
         <pattern>^ Sports ^</pattern>
         <template>
             Do you want to talk about sports?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
+            <oob><robot></robot></oob>
         </template>
     </category>
 
@@ -18,10 +15,7 @@
         <template>
             Perfect! I love to watch sports! I really enjoy going to games, but I also love watching from the comfort of my couch!
             Do you prefer to watch games at home or at the stadium?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
+            <oob><robot></robot></oob>
         </template>
     </category>
 
@@ -30,10 +24,7 @@
         <that>Do you want to talk about sports?</that>
         <template>
             Alright! Well, let's talk about something else for a second then until you are ready to talk sports! Do you like dancing?
-            <oob>
-                <robot>
-                </robot>
-            </oob>
+            <oob><robot></robot></oob>
         </template>
     </category>
 

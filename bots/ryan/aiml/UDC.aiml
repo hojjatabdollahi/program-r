@@ -18,13 +18,13 @@
         <template>
             <random>
                 <li><srai>AGE INQUIRY</srai></li>
-                <li><srai>BIRTHDAY INQUIRY</srai></li>
+                <!-- <li><srai>BIRTHDAY INQUIRY</srai></li> -->
                 <li><srai>DOES INQUIRY</srai></li>
                 <li><srai>FATHER INQUIRY</srai></li>
                 <li><srai>FAVORITECOLOR INQUIRY</srai></li>
                 <li><srai>FAVORITEMOVIE INQUIRY</srai></li>
-                <li><srai>FIRSTNAME INQUIRY</srai></li>
-                <li><srai>GENDER INQUIRY</srai></li>
+                <!-- <li><srai>FIRSTNAME INQUIRY</srai></li>
+                <li><srai>GENDER INQUIRY</srai></li> -->
                 <li><srai>HAS INQUIRY</srai></li>
                 <li><srai>JOB INQUIRY</srai></li>
                 <li><srai>LOCATION INQUIRY</srai></li>
@@ -99,17 +99,25 @@
                 <li>Do you like vegetables?<oob><robot></robot></oob></li>
                 <li>Is going out to eat something you enjoy doing?<oob><robot></robot></oob></li>
                 <li>What is your favorite foreign cuisine?<oob><robot></robot></oob></li>
+                <li>Are you more of a coffee or tea person?<oob><robot></robot></oob></li>
                 <!-- QUESTIONS LEADING TO READING DIALOGUE -->
                 <li>What do you like to read?<oob><robot></robot></oob></li>
                 <li>Do you think it's true that you can't judge a book by its cover?<oob><robot></robot></oob></li>
                 <li>What is the best book you have ever read?<oob><robot></robot></oob></li>
                 <li>Let's talk books. Do you prefer adventure, horror, or drama?<oob><robot></robot></oob></li>
-                <!-- QUESTIONS LEADING TO TV, TALK SHOWS, SCIENCE, AND SPORTS DIALOGUE -->
+                <li>Have you ever had a subscription to a magazine?<oob><robot></robot></oob></li>
+                <!-- QUESTIONS LEADING TO TV, TALK SHOWS, SCIENCE, SPORTS, AND NIH DIALOGUES -->
                 <li>Do you want to talk about television Shows?<oob><robot></robot></oob></li>
                 <li>Do you want to talk about sports?<oob><robot></robot></oob></li>
                 <li>Do you have a favorite planet?<oob><robot></robot></oob></li>
                 <li>Do you watch any talk shows?<oob><robot></robot></oob></li>
-                <li>Have you ever been to 
+                <li>What kind of music do you like, big band, crooner, jazz, or rock?<oob><robot></robot></oob></li>
+                <li>Do you prefer science or art?<oob><robot></robot></oob></li>
+                <li>Do you like to travel?<oob><robot></robot></oob></li>
+                <li>Which activity do you enjoy the most. Playing cards, knitting, or reading?<oob><robot></robot></oob></li>
+                <li>What is your favorite sport to watch, basketball, baseball, football, or hockey?<oob><robot></robot></oob></li>
+                <li>Do you have any siblings?<oob><robot></robot></oob></li>
+                <li>Have you ever been to
                     <random>
                         <li>Europe</li>
                         <li>Asia</li>

@@ -67,5 +67,6 @@ if __name__ == "__main__":
     b._port = "9000"
     #b._jar_dir = "C:/Users/DreamFace/Codes/libs/stanford-corenlp-full-2018-02-27/*"
     b._jar_dir = "/home/rohola/Codes/Python/program-r/libs/stanford-corenlp-full-2018-02-27/*"
-    c = Client(b)
-    print(c.get_sentence_sentiment("I am happy."))
+    for i in range(100):
+        c = Client(b)
+        print(c.get_sentence_sentiment("I am happy."))
