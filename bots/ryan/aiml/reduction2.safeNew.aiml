@@ -1724,7 +1724,7 @@
     </category>
     <category>
         <pattern>HI *</pattern>
-        <template><srai>HELLO</srai>.  <srai>  <star /></srai>
+        <template><!-- <srai>HELLO</srai>. -->  <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -5134,8 +5134,27 @@
     </category>
     <category>
         <pattern>I WANT TO KILL MYSELF</pattern>
-        <template><srai>should I kill myself</srai>
+        <template>
+            I am sorry that you are feeling upset. You should call a suicide hot line if you need consulting.
+            The number of the National Suicide Prevention Lifeline is 1-800-273-8255.
+            <oob><robot></robot></oob>
         </template>
+    </category>
+    <category>
+        <pattern>I WANT TO COMMIT SUICIDE</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I FEELING SUICIDAL</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I DONT WANT TO LIVE</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I WANT TO DIE</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
     </category>
     <category>
         <pattern>I WANT TO KILL YOU</pattern>
@@ -11229,7 +11248,7 @@
     </category>
     <category>
         <pattern>GOOD MORNING *</pattern>
-        <template><srai>HELLO</srai>.  <srai>  <star /></srai>
+        <template><!-- <srai>HELLO</srai>. --> <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -12560,6 +12579,11 @@
     <category>
         <pattern>HOW ARE YOU *</pattern>
         <template><srai>how are you</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>I am doing well, thanks for asking. What would you care to talk about today?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -16694,7 +16718,7 @@
     </category>
     <category>
         <pattern>HELLO THERE *</pattern>
-        <template><srai>HELLO</srai>.  <srai>  <star /></srai>
+        <template><!-- <srai>HELLO</srai>. --> <srai>  <star /></srai>
         </template>
     </category>
     <category>
@@ -16704,7 +16728,7 @@
     </category>
     <category>
         <pattern>HELLO *</pattern>
-        <template><srai>HELLO</srai>.  <srai>  <star /></srai>
+        <template><!-- <srai>HELLO</srai>. -->  <srai>  <star /></srai>
         </template>
     </category>
     <category>

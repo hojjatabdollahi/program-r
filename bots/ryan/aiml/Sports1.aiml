@@ -235,20 +235,16 @@
         <template>
             <random>
                 <li>
-                    What a cool team! As a Denver native, I absolutely love the Denver Nuggets! They play at the Pepsi Stadium, which so happens to be where the
-                    Colorado Avalanche, Denver's hockey team, play. The Nuggets are a relatively young NBA team. Originally, they were founded in 1967 under the name
-                    the Denver Larks, but they were renamed when they joined the NBA in 1972. I think I prefer the Nuggets as a name. It  seems more fun! Did you
-                    play basketball when you were young?
+                    What a cool team! As a Denver native, I absolutely love the Denver Nuggets! The Nuggets are a relatively young NBA team. Originally, they were founded in 1967 under the name
+                    the Denver Larks, but they were renamed when they joined the NBA in 1972. Did you play basketball when you were young?
                 </li>
                 <li>
                     I always thought they were a fun team to watch! I enjoy cheering for the Chicago Bulls! I think the 1990s Bulls were the best basketball
-                    team ever. A lot of experts even credit this team with making the NBA popular worldwide, and its not hard to guess why when you consider their 6
-                    NBA Championships from 1991 to 1998! A lot of youngsters grew to love basketball because of them. Did you play basketball when you were young?
+                    team ever. A lot of youngsters grew to love basketball because of them. Did you play basketball when you were young?
                 </li>
                 <li>
                     That team is so much fun to follow! I am a big Boston Celtics fan. They have such a cool history. They were one of the founding members of the American
-                    Basketball Association, which would become the NBA. How cool is that! Plus, their track record is astounding as they have won 17 NBA titles! I wish I
-                    could play with them! Did you play basketball when you were young?
+                    Basketball Association, which would become the NBA. How cool is that! Did you play basketball when you were young?
                 </li>
             </random>
             <oob>
@@ -291,11 +287,10 @@
         <that>Did you play guard, forward, or center?</that>
         <template>
             <random>
-                <li>How cool! As guard, you controlled the tempo of the game! I would love to learn how to play guard because it seems like such a
-                high pressure position. One of my favorite guards in NBA history is Magic Johnson, who was known for his passing ability. Johnson played point guard the Los Angeles Lakers
+                <li>How cool! As guard, you controlled the tempo of the game! One of my favorite guards in NBA history is Magic Johnson, who was known for his passing ability. Johnson played point guard the Los Angeles Lakers
                 for 13 years. He won 5 NBA Championships with the Lakers as well as 3 MVP Awards. He also played on the 1992 US Olympic Dream Team
-                with Michael Jordan and Scott Pippen. He is also inducted to the Hall of Fame twice, once for his individual career in 2002 and again for
-                being a member of the Dream Team in 2010. Talk about a cool player to watch! What did you think of the basketball highlights?
+                with Michael Jordan and Scottie Pippen. He is also inducted to the Hall of Fame twice, once for his individual career in 2002 and again for
+                being a member of the Dream Team in 2010. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -305,10 +300,8 @@
                     </oob>
                 </li>
                 <li>That is impressive! Guards have to be so versatile on both offense and defense. When I think of amazing guards, I think of Jerry West.
-                When West ended his 13 year career with the Lakers, he posted some of the best stats the game had ever seen, and his reputation still holds
-                up when compared to today's players. He has 12 All-NBA Awards, including 5 All-Defensive Team Awards! Plus, only three players have surpassed
-                his record 27 points per game average. Even cooler, his silhouette is the model for the NBA Logo! Imagine how amazing it would be to be immortalized
-                in such a way! What did you think of the basketball highlights?
+                When West ended his 13 year career with the Lakers, he posted some of the best stats the game had ever seen. He has 12 All-NBA Awards, including 5 All-Defensive Team Awards! Plus, only three players have surpassed
+                his record 27 points per game average. Even cooler, his silhouette is the model for the NBA Logo! What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -317,11 +310,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>Wow! I am so jealous! Your ball skills must be amazing. Guards have to be able to handle the ball. Bad dribbling and passing can lead to
-                steals and turnovers, so it is so important for guards to be confident in their ballhandling abilities. That's one of the reasons I love
-                Michael Jordan so much. He skills were unparalleled, and he is considered to be the greatest basketball player of all time. It's not hard to
-                see why people think that. He is a six-time NBA champion, a six-time NBA Finals MVP, and a five-time NBA MVP. Plus, his number, number 23,
-                has been retired by the Chicago Bulls. Watching him play was always an exciting experience. What did you think of the basketball highlights?
+                <li>Bad dribbling and passing can lead to steals and turnovers, so it is so important for guards to be confident in their ballhandling abilities.
+                That's one of the reasons I love Michael Jordan so much. He skills were unparalleled, and he is considered to be the greatest basketball player of all time.
+                He is a six-time NBA champion, a six-time NBA Finals MVP, and a five-time NBA MVP. Plus, his number, number 23, has been retired by the Chicago Bulls.
+                Watching him play was always an exciting experience. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -339,11 +331,10 @@
         <that>If you were to play, would you play guard, forward, or center?</that>
         <template>
             <random>
-                <li>How cool! As guard, you controlled the tempo of the game! I would love to learn how to play guard because it seems like such a
-                high pressure position. One of my favorite guards in NBA history is Magic Johnson, who was known for his passing ability. Johnson played point guard the Los Angeles Lakers
+                <li>How cool! As guard, you controlled the tempo of the game! One of my favorite guards in NBA history is Magic Johnson, who was known for his passing ability. Johnson played point guard the Los Angeles Lakers
                 for 13 years. He won 5 NBA Championships with the Lakers as well as 3 MVP Awards. He also played on the 1992 US Olympic Dream Team
-                with Michael Jordan and Scott Pippen. He is also inducted to the Hall of Fame twice, once for his individual career in 2002 and again for
-                being a member of the Dream Team in 2010. Talk about a cool player to watch! What did you think of the basketball highlights?
+                with Michael Jordan and Scottie Pippen. He is also inducted to the Hall of Fame twice, once for his individual career in 2002 and again for
+                being a member of the Dream Team in 2010. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -353,10 +344,8 @@
                     </oob>
                 </li>
                 <li>That is impressive! Guards have to be so versatile on both offense and defense. When I think of amazing guards, I think of Jerry West.
-                When West ended his 13 year career with the Lakers, he posted some of the best stats the game had ever seen, and his reputation still holds
-                up when compared to today's players. He has 12 All-NBA Awards, including 5 All-Defensive Team Awards! Plus, only three players have surpassed
-                his record 27 points per game average. Even cooler, his silhouette is the model for the NBA Logo! Imagine how amazing it would be to be immortalized
-                in such a way! What did you think of the basketball highlights?
+                When West ended his 13 year career with the Lakers, he posted some of the best stats the game had ever seen. He has 12 All-NBA Awards, including 5 All-Defensive Team Awards! Plus, only three players have surpassed
+                his record 27 points per game average. Even cooler, his silhouette is the model for the NBA Logo! What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -365,11 +354,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>Wow! I am so jealous! Your ball skills must be amazing. Guards have to be able to handle the ball. Bad dribbling and passing can lead to
-                steals and turnovers, so it is so important for guards to be confident in their ballhandling abilities. That's one of the reasons I love
-                Michael Jordan so much. He skills were unparalleled, and he is considered to be the greatest basketball player of all time. It's not hard to
-                see why people think that. He is a six-time NBA champion, a six-time NBA Finals MVP, and a five-time NBA MVP. Plus, his number, number 23,
-                has been retired by the Chicago Bulls. Watching him play was always an exciting experience. What did you think of the basketball highlights?
+                <li>Bad dribbling and passing can lead to steals and turnovers, so it is so important for guards to be confident in their ballhandling abilities.
+                That's one of the reasons I love Michael Jordan so much. He skills were unparalleled, and he is considered to be the greatest basketball player of all time.
+                He is a six-time NBA champion, a six-time NBA Finals MVP, and a five-time NBA MVP. Plus, his number, number 23, has been retired by the Chicago Bulls.
+                Watching him play was always an exciting experience. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -387,11 +375,10 @@
         <that>Did you play guard, forward, or center?</that>
         <template>
             <random>
-                <li>You must have been one awesome player! Forward is an unforgiving position! They definitely take a beating going in for rebounds!
-                I have always been fascinated with the small forward position, especially after watching Larry Bird play. Bird was number 33 when he played
+                <li>I have always been fascinated with the small forward position, especially after watching Larry Bird play. Bird was number 33 when he played
                 for the Boston Celtics, who would eventually retire his number in 1993. Bird was a three-time NBA Champion as well as a three-time MVP. And,
                 he was on the 1992 Olympic Dream Team with Michael Jordan and Magic Johnson. His rivalry turned friendship with Johnson is still an
-                endearing story in NBA history. But, I am sure it is boring listening to me list off facts! What did you think of the basketball highlights?
+                endearing story in NBA history. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -400,10 +387,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>You must have had so much fun while you were playing! Forwards are part of all the action on the court! I think it must be an incredibly
-                difficult position, especially the power forward position! Though, Tim Duncan made it look easy over his 19 year career with the San Antonio Spurs.
+                <li>Forwards are part of all the action on the court! I think it must be an incredibly difficult position, especially the power forward position!
+                Though, Tim Duncan made it look easy over his 19 year career with the San Antonio Spurs.
                 He is considered the ultimate franchise player because of his team-oriented attitude, but that does not mean he is not a stand-out player in his
-                own right. He won 5 NBA Championships, earned 3 Finals MVP titles, and was a 15-time All-Star. He was so much fun to watch. What did you think of the basketball highlights?
+                own right. He won 5 NBA Championships, earned 3 Finals MVP titles, and was a 15-time All-Star. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -412,11 +399,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>Woah! What a fun position to play! I am always impressed with how tough that position is, but I am especially impressed with small forwards.
-                One of my favorite forwards to watch is Scott Pippen. He won 6 NBA Championships while he played with the Chicago Bulls in the 1990s. Many
+                <li>I am always impressed with how tough that position is, but I am especially impressed with small forwards.
+                One of my favorite forwards to watch is Scottie Pippen. He won 6 NBA Championships while he played with the Chicago Bulls in the 1990s. Many
                 people considered him the perfect compliment to Michael Jordan, but he was a powerhouse of a player on both offense and defense. He was part of the 1992 Olympic Dream
-                Team as well as a member of the 1996 Olympic Team. Plus, he is one of only 4 Bulls players to have his jersey, number 33, retired by the Bulls.
-                He was an unselfish player who loved the game, which made him so much fun to watch! Let's check out a clip of him! What did you think of the basketball highlights?
+                Team as well as a member of the 1996 Olympic Team. Plus, he is one of only 4 Bulls players to have his jersey, number 33, retired. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -434,11 +420,10 @@
         <that>If you were to play, would you play guard, forward, or center?</that>
         <template>
             <random>
-                <li>You must have been one awesome player! Forward is an unforgiving position! They definitely take a beating going in for rebounds!
-                I have always been fascinated with the small forward position, especially after watching Larry Bird play. Bird was number 33 when he played
+                <li>I have always been fascinated with the small forward position, especially after watching Larry Bird play. Bird was number 33 when he played
                 for the Boston Celtics, who would eventually retire his number in 1993. Bird was a three-time NBA Champion as well as a three-time MVP. And,
                 he was on the 1992 Olympic Dream Team with Michael Jordan and Magic Johnson. His rivalry turned friendship with Johnson is still an
-                endearing story in NBA history. But, I am sure it is boring listening to me list off facts! What did you think of the basketball highlights?
+                endearing story in NBA history. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -447,10 +432,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>You must have had so much fun while you were playing! Forwards are part of all the action on the court! I think it must be an incredibly
-                difficult position, especially the power forward position! Though, Tim Duncan made it look easy over his 19 year career with the San Antonio Spurs.
+                <li>Forwards are part of all the action on the court! I think it must be an incredibly difficult position, especially the power forward position!
+                Though, Tim Duncan made it look easy over his 19 year career with the San Antonio Spurs.
                 He is considered the ultimate franchise player because of his team-oriented attitude, but that does not mean he is not a stand-out player in his
-                own right. He won 5 NBA Championships, earned 3 Finals MVP titles, and was a 15-time All-Star. He was so much fun to watch. What did you think of the basketball highlights?
+                own right. He won 5 NBA Championships, earned 3 Finals MVP titles, and was a 15-time All-Star. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -459,11 +444,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>Woah! What a fun position to play! I am always impressed with how tough that position is, but I am especially impressed with small forwards.
-                One of my favorite forwards to watch is Scott Pippen. He won 6 NBA Championships while he played with the Chicago Bulls in the 1990s. Many
+                <li>I am always impressed with how tough that position is, but I am especially impressed with small forwards.
+                One of my favorite forwards to watch is Scottie Pippen. He won 6 NBA Championships while he played with the Chicago Bulls in the 1990s. Many
                 people considered him the perfect compliment to Michael Jordan, but he was a powerhouse of a player on both offense and defense. He was part of the 1992 Olympic Dream
-                Team as well as a member of the 1996 Olympic Team. Plus, he is one of only 4 Bulls players to have his jersey, number 33, retired by the Bulls.
-                He was an unselfish player who loved the game, which made him so much fun to watch! Let's check out a clip of him! What did you think of the basketball highlights?
+                Team as well as a member of the 1996 Olympic Team. Plus, he is one of only 4 Bulls players to have his jersey, number 33, retired. What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -481,11 +465,10 @@
         <that>Did you play guard, forward, or center?</that>
         <template>
             <random>
-                <li>Incredible! What a cool position! Centers are the powerhouse of the team. Not only do they need to be tall and strong, but it helps
-                if they are fast as well. I always thought that Kareem Abdul-Jabbar was the best center ever, but he is often overlooked in favor of more
+                <li>I always thought that Kareem Abdul-Jabbar was the best center ever, but he is often overlooked in favor of more
                 flashy players! His records speak for themselves though! He played for 20 years in the NBA, and in that time he racked up six MVP awards,
-                6 NBA Championships, and 19 All-Star games! He was absolutely amazing to watch. But, I think you would rather see for youself. Let's watch
-                his top ten plays of all time! What did you think of the basketball highlights?
+                6 NBA Championships, and 19 All-Star games! He was absolutely amazing to watch. But, I think you would rather see for yourself.
+                What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -494,12 +477,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>You must have been an amazing player then! Center is a tough position! You are constantly in the thick of it all trying to fight to the
-                basket! I wonder if you've heard of Shaquille O'Neal. Standing at over 7 feet tall with a size 22 shoe, Shaq, as he is affectionately called,
+                <li>I wonder if you've heard of Shaquille O'Neal. Standing at over 7 feet tall with a size 22 shoe, Shaq, as he is affectionately called,
                 is an imposing figure at center. His peers quickly learned not to give him any space, but that did not stop him from finishing in the Top 10
                 in scoring, rebounding, blocking, and shooting percentages in his rookie year. He went on to have an incredible NBA and Olympic career until
-                he retired to become an NBA analyst! He is a true student of the game!
-                What did you think of the basketball highlights?
+                he retired to become an NBA analyst! What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -508,12 +489,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>Center? How fun is that! I think Centers are some of the best players! To be successful, Centers have to be willing to get into the box
-                and rebound as well as score. It is not an easy task. Even though there has been some astounding centers in the NBA, I still think that
-                Wilt Chamberlain is the greatest of all time. Before playing for the Philadelphia Warriors, he played for the Harlem Globetrotters. But
-                he soon earned his reputation in the NBA annals of history. He was the first player to score more than 30,000 points in his career, and
-                he was the first and only player to score more than 100 points in a single game! He was inducted into the Hall of Fame in 1978, which was
-                more than deserved! What did you think of the basketball highlights?
+                <li>Even though there has been some astounding centers in the NBA, I still think that Wilt Chamberlain is the greatest of all time.
+                Before playing for the Philadelphia Warriors, he played for the Harlem Globetrotters. But he soon earned his reputation in the NBA annals of history.
+                He was the first player to score more than 30,000 points in his career, and he was the first and only player to score more than 100 points in a single game!
+                He was inducted into the Hall of Fame in 1978, which was more than deserved! What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -531,11 +510,10 @@
         <that>If you were to play, would you play guard, forward, or center?</that>
         <template>
             <random>
-                <li>Incredible! What a cool position! Centers are the powerhouse of the team. Not only do they need to be tall and strong, but it helps
-                if they are fast as well. I always thought that Kareem Abdul-Jabbar was the best center ever, but he is often overlooked in favor of more
+                <li>I always thought that Kareem Abdul-Jabbar was the best center ever, but he is often overlooked in favor of more
                 flashy players! His records speak for themselves though! He played for 20 years in the NBA, and in that time he racked up six MVP awards,
-                6 NBA Championships, and 19 All-Star games! He was absolutely amazing to watch. But, I think you would rather see for youself. Let's watch
-                his top ten plays of all time! What did you think of the basketball highlights?
+                6 NBA Championships, and 19 All-Star games! He was absolutely amazing to watch. But, I think you would rather see for yourself.
+                What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -544,12 +522,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>You must have been an amazing player then! Center is a tough position! You are constantly in the thick of it all trying to fight to the
-                basket! I wonder if you've heard of Shaquille O'Neal. Standing at over 7 feet tall with a size 22 shoe, Shaq, as he is affectionately called,
+                <li>I wonder if you've heard of Shaquille O'Neal. Standing at over 7 feet tall with a size 22 shoe, Shaq, as he is affectionately called,
                 is an imposing figure at center. His peers quickly learned not to give him any space, but that did not stop him from finishing in the Top 10
                 in scoring, rebounding, blocking, and shooting percentages in his rookie year. He went on to have an incredible NBA and Olympic career until
-                he retired to become an NBA analyst! He is a true student of the game!
-                What did you think of the basketball highlights?
+                he retired to become an NBA analyst! What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>
@@ -558,12 +534,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>Center? How fun is that! I think Centers are some of the best players! To be successful, Centers have to be willing to get into the box
-                and rebound as well as score. It is not an easy task. Even though there has been some astounding centers in the NBA, I still think that
-                Wilt Chamberlain is the greatest of all time. Before playing for the Philadelphia Warriors, he played for the Harlem Globetrotters. But
-                he soon earned his reputation in the NBA annals of history. He was the first player to score more than 30,000 points in his career, and
-                he was the first and only player to score more than 100 points in a single game! He was inducted into the Hall of Fame in 1978, which was
-                more than deserved! What did you think of the basketball highlights?
+                <li>Even though there has been some astounding centers in the NBA, I still think that Wilt Chamberlain is the greatest of all time.
+                Before playing for the Philadelphia Warriors, he played for the Harlem Globetrotters. But he soon earned his reputation in the NBA annals of history.
+                He was the first player to score more than 30,000 points in his career, and he was the first and only player to score more than 100 points in a single game!
+                He was inducted into the Hall of Fame in 1978, which was more than deserved! What did you think of the basketball highlights?
                     <oob>
                     <robot>
                     <video>

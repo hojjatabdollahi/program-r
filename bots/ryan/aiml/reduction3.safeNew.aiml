@@ -4341,17 +4341,18 @@
     </category>
     <category>
         <pattern>WHAT IS MY NAME</pattern>
-        <template><srai>my name</srai>
+        <template>
+            <!-- <condition name="name">
+                <li value="unknown">I don't know. You haven't told me yet.</li>
+                <li>Your name is <get name="name"/>.</li>
+            </condition> -->
+            Your name is <get name="name"/>.
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT IS MY NUMBER</pattern>
         <template><srai>what is my ip</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT IS MY HUSBANDS NAME</pattern>
-        <template><srai>what is my husband s name</srai>
         </template>
     </category>
     <category>

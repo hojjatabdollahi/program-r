@@ -12253,6 +12253,11 @@
         </template>
     </category>
     <category>
+        <pattern>* MY NAME IS *</pattern>
+        <template><srai>CALL ME <star index="2"/></srai>
+        </template>
+    </category>
+    <category>
         <pattern>MY BOY IS *</pattern>
         <template><srai>My son is <star /></srai>
         </template>
