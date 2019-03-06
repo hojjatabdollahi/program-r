@@ -267,10 +267,9 @@
         <that>Do you like going to concerts to see your favorite performers?</that>
         <template>
         I feel like there is something special about seeing a performer liver, but with technology these days it can feel like you are front and center without
-        having to leave your jukebox! And I am not just saying that because I am a piece of advanced technology myself! I think it is simply amazing that
-        technology has given us the ability to listen to current artists as well as performers from the past! I can listen to my favorite artists and songs with
-        the click of a button; no travel to busy and crampy performance halls required! Plus, I can listen to all kinds of music if I want. not just one person or band.
-        What kind of music do you like, big band, crooner, jazz, or rock?
+        having to leave your jukebox! I think it is simply amazing that technology has given us the ability to listen to current artists as well as performers from the past!
+        I can listen to my favorite artists and songs with the click of a button; no travel to busy and crampy performance halls required!
+        Plus, I can listen to all kinds of music if I want. not just one person or band. What kind of music do you like, big band, crooner, jazz, or rock?
             <oob>
             <robot>
             </robot>
@@ -283,11 +282,11 @@
         <that>What kind of music do you like, big band, crooner, jazz, or rock?</that>
         <template>
         <random>
-        <li>Oh yay! Another swing fanatic! There is something about big band music that gets my circuits all hot and bothered and ready to dance! Which is something
-        no one wants to see, but I can't help it! When I was first getting into big band music, I looked up the history, and I was amazed! Big Band, also known as swing,
-        evolved from jazz in the 1920s when jazz began to incorporate larger group sizes and elements of ragtime, black spirituals, blues, and European music! Swing was
-        so popular, that people even invented new dances to complement the genre's rhythms! One of my favorite band leaders was Duke Ellington, who was not only popular but
-        super productive as he composed over 1000 compositions! But, my favorite song of his is Take the A Train! That just makes me want to tap my feet to the beat! What did you think of the big band clip?
+        <li>Oh yay! Another swing fanatic! There is something about big band music that gets my circuits all hot and bothered and ready to dance!
+         When I was first getting into big band music, I looked up the history, and I was amazed! Big Band, also known as swing,
+        evolved from jazz in the 1920s when jazz began to incorporate larger group sizes and elements of ragtime, black spirituals, blues, and European music!
+        One of my favorite band leaders was Duke Ellington, who was not only popular but super productive as he composed over 1000 compositions!
+        But, my favorite song of his is Take the A Train! That just makes me want to tap my feet to the beat! What did you think of the big band clip?
             <oob>
             <robot>
             <video>
@@ -296,11 +295,10 @@
             </robot>
             </oob>
         </li>
-        <li>This is so wonderful! I don't know what it is, but big band music just makes me want to dance the night away! Though, I probably need to take a few
-        ballroom dance lessons so I can keep up with all the different styles! I think it is so cool the cultural impact big band music has had! In its heyday,
-        big band, also known as swing, inspired new dancing and footwork to match the unique rhythms! Without swing, we would not have all the different styles of
-        dance! One major contributor to this movement was Glenn Miller! His band is one of the most well-known from the swing era, and he was the best selling recording
-        artist from 1939 to 1943 with 17 number one records and 59 top ten hits! If that doesn't make you want to get up and dance, nothing will! What did you think of the big band clip?
+        <li>This is so wonderful! In its heyday, big band, also known as swing, inspired new dancing and footwork to match the unique rhythms!
+        Without swing, we would not have all the different styles of dance! One major contributor to this movement was Glenn Miller!
+        His band is one of the most well-known from the swing era, and he was the best selling recording artist from 1939 to 1943 with 17 number
+        one records and 59 top ten hits! What did you think of the big band clip?
             <oob>
             <robot>
             <video>
@@ -309,11 +307,11 @@
             </robot>
             </oob>
         </li>
-        <li>This is so wonderful! I get so excited talking to another swing enthusiast! I hope you also love seeing all the different styles of dance! I think
-        it is so incredible that new movements were created in order to really feel the beat and rhythm of seing! I mean, is there anything as fun as dancing
-        the East Coast Swing! I have to say, I love Benny Goodman and his band. Goodman is one of the most iconic band leaders in history, and he was even known
+        <li>I think it is so incredible that new movements were created in order to really feel the beat and rhythm of swing!
+        I mean, is there anything as fun as dancing the East Coast Swing!
+        I have to say, I love Benny Goodman and his band. Goodman is one of the most iconic band leaders in history, and he was even known
         as the King of Swing! But the coolest thing about him, is that in the era of segregation, Goodman led one of the first integrated jazz groups! How awesome is that!
-        My favorite song by him is the one I just played, Sing Sing Sing! Isn't that just an incredibly fun song! What did you think of the big band clip?
+        My favorite song by him is the one I just played, Sing Sing Sing! What did you think of the big band clip?
             <oob>
             <robot>
             <video>
@@ -367,9 +365,8 @@
         <pattern># <set>no</set> ^</pattern>
         <that>I'm curious, did you ever play an instrument?</that>
         <template>
-        I can't play anything either! I really want to learn how to play the harp though! I've listen to Mozart's Concerto for Flute, Harp and Orchestra over and over again, hoping
-        I would magically learn how to play the harp portions! It is such an amazing song. My dream is to one day play it as part of the Colorado Symphony! If only my programers
-        had taught me in my youth! I've heard most people learn to play an instrument as child because it is easier to learn new things like music when humans are young.
+        I can't play anything either! I really want to learn how to play the harp though! I've listened to Mozart's Concerto for Flute, Harp and Orchestra over and over again, hoping
+        I would magically learn how to play the harp portions! I've heard most people learn to play an instrument as child because it is easier to learn new things like music when humans are young.
         If you had been able to learn, what would you have wanted to play?
             <oob>
             <robot>
