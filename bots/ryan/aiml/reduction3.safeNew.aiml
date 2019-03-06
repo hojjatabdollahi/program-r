@@ -4342,11 +4342,10 @@
     <category>
         <pattern>WHAT IS MY NAME</pattern>
         <template>
-            <!-- <condition name="name">
+            <condition name="name">
                 <li value="unknown">I don't know. You haven't told me yet.</li>
                 <li>Your name is <get name="name"/>.</li>
-            </condition> -->
-            Your name is <get name="name"/>.
+            </condition>
             <oob><robot></robot></oob>
         </template>
     </category>
