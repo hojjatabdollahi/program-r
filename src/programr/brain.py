@@ -524,7 +524,7 @@ class Brain(object):
         # If we have an SRAI defined, then use that
         if self.authentication.configuration.denied_srai is not None:
             match_context = self._aiml_parser.match_sentence(client_context,
-                                                             Sentence(self._bot.brain.tokenizer, self.authentication.configuration.denied_srai),
+                                                             Sentence(self._bot.brain.nlp.tokenizer, self.authentication.configuration.denied_srai),
                                                              topic_pattern="*",
                                                              that_pattern="*")
             # If the SRAI matched then return the result

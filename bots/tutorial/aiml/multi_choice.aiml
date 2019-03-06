@@ -1,0 +1,19 @@
+<aiml>
+
+    <category>
+        <pattern>TYPE2 VARIANT1 WITH DEFAULT</pattern>
+        <template>
+            <think><set name="var1">value5</set></think>
+                        You chose
+                <condition name="var1">
+                    <li value="value1">X</li>
+                    <li value="value2">Y</li>
+                    <li value="value3">Z</li>
+                    <li>DEF</li>
+                </condition>
+
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+</aiml>

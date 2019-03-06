@@ -389,7 +389,7 @@ class TemplateConditionNode(TemplateConditionVariable):
 
             # Condition comparison is always case insensetive
             if value.upper() == condition_value:
-                resolved = client_context.brain.tokenizer.words_to_texts([child.resolve(client_context) for child in self.children])
+                resolved = client_context.brain.nlp.tokenizer.words_to_texts([child.resolve(client_context) for child in self.children])
             else:
                 resolved = ""
 
@@ -420,7 +420,7 @@ class TemplateConditionNode(TemplateConditionVariable):
 
             default = self.get_default()
             if default is not None:
-                resolved = client_context.brain.tokenizer.words_to_texts([child_node.resolve(client_context) for child_node in default.children])
+                resolved = client_context.brain.nlp.tokenizer.words_to_texts([child_node.resolve(client_context) for child_node in default.children])
 
                 if default.loop is True:
                     resolved = resolved.strip() + " " + self.resolve(client_context)
@@ -443,7 +443,7 @@ class TemplateConditionNode(TemplateConditionVariable):
 
                     # Condition comparison is always case insensetive
                     if value.upper() == condition_value.upper():
-                        resolved = client_context.brain.tokenizer.words_to_texts([child_node.resolve(client_context) for child_node in condition.children])
+                        resolved = client_context.brain.nlp.tokenizer.words_to_texts([child_node.resolve(client_context) for child_node in condition.children])
                         YLogger.debug(client_context, "[%s] resolved to [%s]", self.to_string(), resolved)
 
                         if condition.loop is True:
@@ -453,7 +453,7 @@ class TemplateConditionNode(TemplateConditionVariable):
 
             default = self.get_default()
             if default is not None:
-                resolved = client_context.brain.tokenizer.words_to_texts([child_node.resolve(client_context) for child_node in default.children])
+                resolved = client_context.brain.nlp.tokenizer.words_to_texts([child_node.resolve(client_context) for child_node in default.children])
 
                 if default.loop is True:
                     resolved = resolved.strip() + " " + self.resolve(client_context).strip()

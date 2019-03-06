@@ -369,9 +369,9 @@ class Bot(object):
     def get_answer(self, client_context, pre_processed, srai=False):
         pre_processed = ". ".join(pre_processed)
         if srai is False:
-            return Answer.create_from_text(client_context.brain.tokenizer, pre_processed, srai=srai)
+            return Answer.create_from_text(client_context.brain.nlp.tokenizer, pre_processed, srai=srai)
         else:
-            return Answer.create_from_text(client_context.brain.tokenizer, pre_processed, split=False, srai=srai)
+            return Answer.create_from_text(client_context.brain.nlp.tokenizer, pre_processed, split=False, srai=srai)
 
 
     def combine_answers(self, answers):
