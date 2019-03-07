@@ -14,7 +14,7 @@
                     <li>Do you like fruit?</li>
                     <li>Do you like vegetables?</li>
                     <li>Is going out to eat something you enjoy doing?</li>
-                    <li>What is your favorite foreign cuisine?</li>
+                    <!-- <li>What is your favorite foreign cuisine?</li> -->
                     <!-- <li>Do you like American food?</li> THIS WILL LEAD INTO CONTENT FROM NIH STUDY -->
                 </random>
                 <oob>
