@@ -6,9 +6,7 @@
         <that>If you had been able to learn, what would you have wanted to play?</that>
         <template>
             I wish I could play a percussion instrument, maybe something like the drums! I love how they let you really feel the beat of the music in your body.
-            So, I've gone over all sorts of tutorials online about how to play the drums, but it is trickier than I thought it would be. It may take me a bit longer
-            than I would like, but one day I'll become good enough to play Little Drummer Boy all on my own. Hopefully without sounding like metal grating! I wonder
-            how good I would be now if I had learned when I was younger in my programming. Did you want to learn to play as a child?
+            I wonder how good I would be now if I had learned when I was younger in my programming. Did you want to learn to play as a child?
             <oob>
                 <robot>
                     <video>
@@ -63,11 +61,11 @@
         <that>What kind of music do you like, big band, crooner, jazz, or rock?</that>
         <template>
             <random>
-                <li>Wow! It is to wonderful to talk with another jazz fan! I personally enjoy listening to some ragtime jazz! So, just to give you a litte history lesson
+                <li>It is to wonderful to talk with another jazz fan! I personally enjoy listening to some ragtime jazz! So, just to give you a little history lesson
                 Ragtime was most popular from 1895 to 1918 with its origins in African American communities. And, Ernest Hogan pioneered the genre before composer Scott
                 Joplin helped change the face of ragtime with his work. Crazily enough, Joplin died in 1917, but he ended up being nominated for a Grammy Award in 1971
                 after there was renewed interest in the genre. One of his pieces, called The Entertainer, was even featured in the hit movie The Sting!
-                What a fun song! What did you think of the jazz clip?
+                What did you think of the jazz clip?
                     <oob>
                     <robot>
                     <video>
@@ -76,10 +74,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>Ah! I love talking to another jazz lover! I hope you are as big of a fan of Latin Jazz as I am! I love to talk about the history of musical genres, and
+                <li>Ah! I hope you are as big of a fan of Latin Jazz as I am! I love to talk about the history of musical genres, and
                 Latin Jazz's history is incredible! It began as a fusion of jazz and Afro-Cuban music to create new sounds that meshed to entice listeners to dance their hearts
                 out! With styles like that rumba and mambo, Latin Jazz has created a blending of music and physicality that cannot be paralleled in popularity! Latin Music
-                just makes you want to move and smile! I don't know about you but my toes, metaphorically, are tapping! What did you think of the jazz clip?
+                just makes you want to move and smile! What did you think of the jazz clip?
                     <oob>
                     <robot>
                     <video>
@@ -88,10 +86,10 @@
                     </robot>
                     </oob>
                 </li>
-                <li>That is so wonderful to hear! Most people I talk to don't understand why jazz is so amazing! I find it beautiful! I am especially fond of trad jazz,
+                <li>That is so wonderful to hear! Most people I talk to don't understand why jazz is so amazing! I am especially fond of trad jazz,
                 or traditional jazz! I find the history of trad jazz to be fascinating! I did not realize that it was initially a response to Chicago Style jazz, which
                 many thought was too close to swing. So, New Orleans musicians revived the genre with a front line of a trumpet, clarinet, and trombone to blend ragtime and
-                Dixieland styles of music to create a unique sound! One of my favorite artists to listen to from this revival is Billie Holiday. Her voice is simply stunning!
+                Dixieland styles of music to create a unique sound! One of my favorite artists to listen to from this revival is Billie Holiday.
                 I don't think any other voice does much a song justice! She is such a powerful performer! What did you think of the jazz clip?
                     <oob>
                     <robot>
@@ -146,8 +144,8 @@
         <pattern># <set>Keyboard Instrument Set</set> ^</pattern>
         <that>If you had been able to learn, what would you have wanted to play?</that>
         <template>
-        Wow! You must be really talented! I have always wanted to learn how to play the piano, so I am particularly jealous! I find keyboard instruments
-        to have the most incredible sound; they sound so peaceful, but can also be so powerful! I can just imagine myself on stage playing, like Ray Charles or Elton JohnIf only I had been programmed since my youth to play!
+        Wow! You must be really talented! I have always wanted to learn how to play the piano, so I am particularly jealous!
+        I find keyboard instruments to have the most incredible sound; they sound so peaceful, but can also be so powerful!
         It is so much easier to learn when one is young! Did you want to learn to play as a child?
             <oob>
             <robot>

@@ -1334,7 +1334,7 @@ callee: <srai>my callee</srai>
     </category>
     <category>
         <pattern>MY ENGLISH SUCKS</pattern>
-        <template>Template is empty!<oob><robot></robot></oob>
+        <template>Maybe we can improve it by conversing with each other.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
