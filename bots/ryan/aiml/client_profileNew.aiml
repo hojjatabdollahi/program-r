@@ -33,8 +33,12 @@
     </category>
     <category>
         <pattern>MY birthplace</pattern>
-        <template><get name="birthplace"/>.
-        <oob><robot></robot></oob>
+        <template>
+            <condition name="birthplace">
+                <li value="Unknown">I'm not sure you haven't told me.</li>
+                <li><get name="birthplace"/>.</li>
+            </condition>
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>

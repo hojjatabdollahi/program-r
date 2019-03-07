@@ -48,7 +48,7 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>Is going out to eat something you enjoy doing?</that>
         <template>
-            Here
+            Do you want to see a recipe that you could easily prepare at home?
                 <oob>
                     <robot>
                         <options>
@@ -67,7 +67,7 @@
             <random>
                 <li>Do you like Asian food?</li>
                 <li>Do you like Mexican food?</li>
-                <li>Do you like European Food?</li>
+                <!-- <li>Do you like European Food?</li> -->
             </random>
                 <oob><robot></robot></oob>
         </template>

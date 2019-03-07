@@ -2124,7 +2124,7 @@
     </category>
     <category>
         <pattern>HAH *</pattern>
-        <template><srai>ha</srai>.     <srai>  <star /></srai>
+        <template><srai>ha</srai>.     <!-- <srai>  <star /></srai> -->
         </template>
     </category>
     <category>
@@ -11383,7 +11383,7 @@
     </category>
     <category>
         <pattern>HA *</pattern>
-        <template><srai>HA</srai>.  <srai>  <star /></srai>
+        <template><srai>HA</srai>.  <!-- <srai>  <star /></srai> -->
         </template>
     </category>
     <category>
@@ -17755,7 +17755,7 @@
     </category>
     <category>
         <pattern>FUNNY *</pattern>
-        <template><srai>LOL</srai>.  <srai>  <star /></srai>
+        <template><srai>LOL</srai>.  <!-- <srai>  <star /></srai> -->
         </template>
     </category>
     <category>

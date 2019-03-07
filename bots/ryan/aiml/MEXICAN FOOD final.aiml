@@ -17,7 +17,7 @@
             <random>
                 <li>Do you like Asian food?</li>
                 <li>Do you like Mexican food?</li>
-                <li>Do you like European Food?</li>
+                <!-- <li>Do you like European Food?</li> -->
             </random>
                 <oob><robot></robot></oob>
         </template>

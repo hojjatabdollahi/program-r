@@ -4336,7 +4336,7 @@
     </category>
     <category>
         <pattern>WHAT IS MY NAME *</pattern>
-        <template><srai>what is my name</srai>.     <srai>  <star /></srai>
+        <template><srai>what is my name</srai>.   <!--  <srai>  <star /></srai> -->
         </template>
     </category>
     <category>

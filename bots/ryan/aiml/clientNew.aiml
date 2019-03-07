@@ -58,14 +58,22 @@
     </category>
     <category>
         <pattern>WHAT IS MY MIDDLE NAME</pattern>
-        <template><get name="middlename"/>
-        <oob><robot></robot></oob>
+        <template>
+            <condition name="middlename">
+                <li value="unknown">I'm not sure. I don't believe you have told me.</li>
+                <li><get name="middlename"/></li>
+            </condition>
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT IS MY FIRSTNAME</pattern>
-        <template><get name="firstname"/>
-        <oob><robot></robot></oob>
+        <template>
+            <condition name="firstname">
+                <li value="unknown">I'm not sure. I don't believe you have told me.</li>
+                <li><get name="firstname"/></li>
+            </condition>
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -75,8 +83,12 @@
     </category>
     <category>
         <pattern>WHAT IS MY AGE</pattern>
-        <template>You said you were <get name="age"/> years old.
-        <oob><robot></robot></oob>
+        <template>
+            <condition name="age">
+                <li value="unknown">I don't know, you haven't told me yet.</li>
+                <li>You said you were <get name="age"/> years old.</li>
+            </condition>
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -98,8 +110,12 @@
     </category>
     <category>
         <pattern>WHAT IS MY GENDER</pattern>
-        <template>You said that you are <get name="gender"/>.
-        <oob><robot></robot></oob>
+        <template>
+            <condition name="gender">
+                <li value="unknown">I don't know. You haven't told me.</li>
+                <li>You said that you are <get name="gender"/>.</li>
+            </condition>
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -126,8 +142,12 @@
     </category>
     <category>
         <pattern>WHAT IS MY LAST NAME</pattern>
-        <template><get name="lastname"/>
-        <oob><robot></robot></oob>
+        <template>
+            <condition name="lastname">
+                <li value="unknown">I'm not sure. I don't believe you have told me.</li>
+                <li><get name="lastname"/></li>
+            </condition>
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>

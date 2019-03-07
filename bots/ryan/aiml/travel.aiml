@@ -92,7 +92,7 @@
    </category>
 
 
-   <!-- This seems like it should be a yes or no question, doesn't it?? → YES I CHANGED THE QUESTION BY ADDING “AND IF SO WHERE?” -->
+   <!-- This seems like it should be a yes or no question, doesn't it?? YES I CHANGED THE QUESTION BY ADDING “AND IF SO WHERE?” -->
    <category>
       <pattern>_</pattern>
       <that>DO YOU ENJOY EXPLORING DIFFERENT AREAS OF COLORADO AND IF SO WHERE?</that>
