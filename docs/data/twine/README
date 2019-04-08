@@ -1,8 +1,0 @@
-TWINE:
-
-"An open-source tool for telling interactive, nonlinear stories."
-
-Twine can be thought of as an interactive flowchart. Twine uses Harlowe, an HTML markup language.
-
-Twine was originally implemented to design chat sessions with the bot and is in the process of being converted to AIML.
-
