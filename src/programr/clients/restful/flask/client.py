@@ -73,19 +73,19 @@ class FlaskRestBotClient(RestBotClient):
 
 if __name__ == '__main__':
 
-    REST_CLIENT = None
+    rest_client = None
 
     print("Initiating Flask REST Service...")
-    APP = Flask(__name__)
+    app = Flask(__name__)
 
-    @APP.route('/api/rest/v1.0/ask', methods=['POST'])
+    @app.route('/api/rest/v1.0/ask', methods=['POST'])
     def ask():
-        response_data, status = REST_CLIENT.process_request(request)
-        return REST_CLIENT.create_response(response_data, status)
+        response_data, status = rest_client.process_request(request)
+        return rest_client.create_response(response_data, status)
 
     print("Loading, please wait...")
-    REST_CLIENT = FlaskRestBotClient("flask")
-    REST_CLIENT.run(APP)
+    rest_client = FlaskRestBotClient("flask")
+    rest_client.run(app)
 
 
 #curl --header "Content-Type: application/json" --request POST --data '{"question":"hellooo","userid":123456}' http://localhost:5000/api/rest/v1.0/ask

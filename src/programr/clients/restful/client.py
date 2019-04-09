@@ -94,5 +94,4 @@ class RestBotClient(BotClient):
             return self.format_success_response(userid, question, answer), 200
 
         except Exception as excep:
-
             return self.format_error_response(userid, question, str(excep)), 500
