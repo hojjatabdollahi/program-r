@@ -27,7 +27,8 @@ socket:
 
 rest:
   host: 0.0.0.0 #now should be visible to outside docker
-  port: 5000
+  # port: 5000
+  port: 27017
   use_api_keys: false
 
 bot:
@@ -227,4 +228,4 @@ brain:
         classname: programr.nlp.corenlp.client.Client
         ip: "http://localhost"
         port: 9000
-        jar_dir: libs/stanford-corenlp-full-2018-02-27/*
+        jar_dir: libs/stanford-corenlp-full-2018-10-05/*
