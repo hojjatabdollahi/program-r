@@ -10,6 +10,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 ENV PYTHONPATH="/usr/src/app/src:/usr/src/app/src/programr${PYTHONPATH}"
+EXPOSE 5000
 RUN pip install --upgrade setuptools
 RUN pip install spacy
 RUN pip install -r requirements.txt
