@@ -27,8 +27,8 @@ socket:
 
 rest:
   host: 0.0.0.0 #now should be visible to outside docker
-  # port: 5000
-  port: 27017
+  port: 5000
+  # port: 27017
   use_api_keys: false
 
 bot:
