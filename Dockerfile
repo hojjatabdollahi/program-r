@@ -4,8 +4,7 @@ RUN apt-get update \
   && apt-get install -y python3-pip python3-dev net-tools nano vim\
   && cd /usr/local/bin \
   && ln -s /usr/bin/python3 python \
-  && pip3 install --upgrade pip
-  && pip3 install setuptools
+  && pip3 install --upgrade pip 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata  
   
 COPY . /usr/src/app
