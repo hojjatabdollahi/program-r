@@ -82,16 +82,28 @@ class RestBotClient(BotClient):
         question = "Unknown"
         userid = "Unknown"
         try:
+            YLogger.debug(self, "In process_request")
             response, status = self.verify_api_key_usage(request)
+            YLogger.debug(self, "verify_api_key_usage returned successfully")
+
+            YLogger.debug(self, f"response: {response}")
+            YLogger.debug(self, f"status: {status}")
             if response is not None:
                 return response, status
 
+            YLogger.debug(self, f"request: {request}")
+
             question = self.get_question(request)
+            YLogger.debug(self, f"Got question: {question}")
+            
             userid = self.get_userid(request)
+            YLogger.debug(self, f"Got userid: {userid}")
 
             answer = self.ask_question(userid, question)
+            YLogger.debug(self, f"Got answer: {answer}")
 
             return self.format_success_response(userid, question, answer), 200
 
         except Exception as excep:
+            YLogger.error(self, excep)
             return self.format_error_response(userid, question, str(excep)), 500

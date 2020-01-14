@@ -21,7 +21,10 @@ class FlaskRestBotClient(RestBotClient):
         abort(error_code)
 
     def get_question(self, rest_request):
+        YLogger.debug(self, f"In get_question, rest_request.data: {rest_request.data.decode('utf-8')}")
+        YLogger.debug(self, f"rest_request type: {type(rest_request)}")
         rest_request = json.loads(rest_request.data.decode('utf-8'))
+        YLogger.debug(self, f"after json.loads, rest_request: {rest_request}")
         if "question" not in rest_request or rest_request["question"] is None:
             YLogger.error(self, "'question' missing from request")
             self.server_abort(400)
