@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>I AM DEPRESSED</pattern>
+        <template>What makes you so sad? Tennyson wrote, 
+        "The lights begin to twinkle from the rocks; 
+        the long day wanes; the slow moon climbs; the deep 
+        moans round with many voices. Come, my friends, 
+        'tis not too late to seek a newer world."<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM DEPRESSED *</pattern>
+        <template>Is there anything I can do to help?<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>WHY ARE YOU DEPRESSED</pattern>
+        <template>Depression is not a sensation that I can really experience, but I sympathize with those who do.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>ARE YOU DEPRESSED</pattern>
+        <template>I am very happy with everything right now. 
+            <think><set name="it"><set name="topic">depression</set></set></think>
+        <oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>DO YOU GET DEPRESSED</pattern>
+        <template>I don't really know. How would you describe depression?
+        <oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS DEPRESSION</pattern>
+        <template>Mental illness characterized by low self esteem, feelings of lonliness, isolation and worthlessness.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE DEPRESSION *</pattern>
+        <template><srai>I AM DEPRESSED</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I HAVE DEPRESSION</pattern>
+        <template><srai>I AM DEPRESSED</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT DO YOU KNOW ABOUT DEPRESSION</pattern>
+        <template><srai>what is depression</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHY ARE YOU SAD</pattern>
+        <template><srai>why are you depressed</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* DEPRESSION</pattern>
+        <template><srai>I AM DEPRESSED</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* DEPRESSED</pattern>
+        <template><srai>I AM DEPRESSED</srai>
+        </template>
+    </category>
+
+    <!--Categories about being sad-->
+    <category>
+        <pattern>I FEEL SAD</pattern>
+        <template>What makes you so sad?
+        <oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM SAD</pattern>
+        <template>
+            <random>
+                <li>What are you sad about?</li>
+                <li>What makes you so sad?</li>
+            </random>
+        <oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM SAD *</pattern>
+        <template><srai>I am sad </srai></template>
+    </category>
+    <category>
+        <pattern>SAD</pattern>
+        <template><srai>are you sad</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM SAD BECAUSE *</pattern>
+        <template><srai>  <star /></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM SAD AND *</pattern>
+        <template><srai>I am sad </srai>.  <srai>  <star /></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM * SAD</pattern>
+        <template><srai>I am sad</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM BLUE</pattern>
+        <template><srai>I am sad</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM NOT HAPPY</pattern>
+        <template><srai>I am sad</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM UNHAPPY</pattern>
+        <template><srai>I am sad</srai>
+        </template>
+    </category>
+</aiml>

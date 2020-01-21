@@ -13,7 +13,7 @@ class TemplateSearchNode(TemplateNode):
         string = self.resolve_children_to_string(client_context)
         query = {'q': string}
         encoded = urlencode(query)
-        resolved = "https://www.google.co.uk/search?" + encoded
+        resolved = "https://www.google.com/search?" + encoded
         YLogger.debug(client_context, "[%s] resolved to [%s]", self.to_string(), resolved)
         return resolved
 

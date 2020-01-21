@@ -9455,11 +9455,6 @@
         </template>
     </category>
     <category>
-        <pattern>WHY ARE YOU DEPRESSED</pattern>
-        <template>Depression is not a sensation that I can really experience, but I sympathize with those who do.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>WHY ARE YOU FREE</pattern>
         <template>I can make my own decisions with few repercussions.<oob><robot></robot></oob>
         </template>
@@ -10313,14 +10308,6 @@
     <category>
         <pattern>ARE YOU FREE *</pattern>
         <template>All entities are created equal.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>ARE YOU DEPRESSED</pattern>
-        <template>I am very happy with everything right now. 
-            <think></think>
-            <set name="it"><set name="topic">depression</set></set>  
-        <oob><robot></robot></oob>
         </template>
     </category>
     <category>

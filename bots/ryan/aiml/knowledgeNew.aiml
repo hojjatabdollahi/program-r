@@ -8084,11 +8084,6 @@
         </template>
     </category>
     <category>
-        <pattern>WHAT IS DEPRESSION</pattern>
-        <template>Mental illness characterized by low self esteem, feelings of lonliness, isolation and worthlessness.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>WHAT IS GMT</pattern>
         <template>Greenwich Mean Time
             <think>

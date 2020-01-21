@@ -2240,11 +2240,6 @@
         </template>
     </category>
     <category>
-        <pattern>* DEPRESSION</pattern>
-        <template><srai>I AM DEPRESSED</srai>
-        </template>
-    </category>
-    <category>
         <pattern>* IS NOT IT</pattern>
         <template><srai>IS IT NOT <star/></srai>
         </template>

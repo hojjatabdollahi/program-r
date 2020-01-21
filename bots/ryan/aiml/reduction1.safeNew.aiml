@@ -10,11 +10,6 @@
     <!-- Last modified 10/5/2011 -->
     <!-- -->
     <category>
-        <pattern>SAD</pattern>
-        <template><srai>are you sad</srai>
-        </template>
-    </category>
-    <category>
         <pattern>EUH *</pattern>
         <template><srai>  <star /></srai>
         </template>
@@ -3350,11 +3345,6 @@
     </category>
     <category>
         <pattern>I AM TOLD *</pattern>
-        <template><srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM SAD BECAUSE *</pattern>
         <template><srai>  <star /></srai>
         </template>
     </category>

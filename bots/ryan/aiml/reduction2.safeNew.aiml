@@ -7122,16 +7122,6 @@
         </template>
     </category>
     <category>
-        <pattern>I HAVE DEPRESSION *</pattern>
-        <template><srai>I am sick</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I HAVE DEPRESSION</pattern>
-        <template><srai>I am sick</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I HAVE AN IQ OF *</pattern>
         <template><srai>my iq is <star /></srai>
         </template>
@@ -8397,11 +8387,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM SAD AND *</pattern>
-        <template><srai>I am sad </srai>.  <srai>  <star /></srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM VANESSA</pattern>
         <template><srai>my name is vanessa</srai>
         </template>
@@ -8737,11 +8722,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM * SAD</pattern>
-        <template><srai>I am sad</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM * SHE</pattern>
         <template><srai>I am female</srai>
         </template>
@@ -8894,11 +8874,6 @@
     <category>
         <pattern>I AM * ARE YOU</pattern>
         <template><srai>I am <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM BLUE</pattern>
-        <template><srai>I am sad</srai>
         </template>
     </category>
     <category>
@@ -9987,11 +9962,6 @@
         </template>
     </category>
     <category>
-        <pattern>I AM UNHAPPY</pattern>
-        <template><srai>I am sad</srai>
-        </template>
-    </category>
-    <category>
         <pattern>I AM MARY</pattern>
         <template><srai>my name is mary</srai>
         </template>
@@ -10409,11 +10379,6 @@
     <category>
         <pattern>I AM NOT EASILY *</pattern>
         <template><srai>I am not <star /></srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM NOT HAPPY</pattern>
-        <template><srai>I am sad</srai>
         </template>
     </category>
     <category>

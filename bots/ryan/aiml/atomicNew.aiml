@@ -9961,12 +9961,6 @@
         </template>
     </category>
     <category>
-        <pattern>I FEEL SAD</pattern>
-        <template>What makes you so sad, <get name="name"/>?
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>I FEEL GOOD</pattern>
         <template>Glad to hear it.<oob><robot></robot></oob>
         </template>

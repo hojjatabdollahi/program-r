@@ -366,12 +366,6 @@
         </template>
     </category>
     <category>
-        <pattern>DO YOU GET DEPRESSED</pattern>
-        <template>I don't really know. How would you describe depression?
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>DO YOU GET MAD</pattern>
         <template>Nope. <oob><robot></robot></oob>
         </template>
