@@ -79,7 +79,7 @@
     </category>
     <category>
         <pattern>DID SHAKESPEARE *</pattern>
-        <template>I don't know if <set name="he">Shakespeare</set><person/> did. Some people even postulate that he was actually a woman.
+        <template>I don't know if <set name="he">Shakespeare</set> did. Some people even postulate that he was actually a woman.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -208,7 +208,7 @@
             <think>
                 <set name="it">
                     <set name="want">
-                        <set name="topic">to play <person/> Turing Game</set>
+                        <set name="topic">to play Turing Game</set>
                     </set>
                 </set>
             </think>
@@ -221,7 +221,7 @@
             <think>
                 <set name="it">
                     <set name="want">
-                        <set name="topic">to play <person/> Turing Game</set>
+                        <set name="topic">to play Turing Game</set>
                     </set>
                 </set>
             </think>
@@ -638,14 +638,7 @@
     </category>
     <category>
         <pattern>WHO IS CARL JUNG</pattern>
-        <template>A disciple of Freud, member of the Vienna Circle, founder of psychoanalysis and the theory of the collective unconsciousness.
-            <think>
-                <set name="he">
-                    <set name="topic">
-                        <person/>
-                    </set>
-                </set>
-            </think>  
+        <template>A disciple of Freud, member of the Vienna Circle, founder of psychoanalysis and the theory of the collective unconsciousness. 
         <oob><robot></robot></oob>
         </template>
     </category>

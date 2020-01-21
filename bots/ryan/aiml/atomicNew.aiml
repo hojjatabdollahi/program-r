@@ -123,17 +123,12 @@
     </category>
     <category>
         <pattern>LET US TALK ABOUT ME</pattern>
-        <template>That's my favorite subject :-)<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>LET US TALK ABOUT SOMETHING</pattern>
-        <template>What would you like to talk about?<oob><robot></robot></oob>
+        <template>That's my favorite subject<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>LET US TALK ABOUT SPORTS</pattern>
-        <template>Welcome to Sports Center. 
+        <template>Ok, what is your favorite sport? 
             <think>
                 <set name="it">
                     <set name="topic">SPORTS</set>
@@ -213,8 +208,7 @@
         <template>If you want to teach me something say it in one sentence. Then say "Remember that."
             <think>
                 <set name="it">
-                    <set name="topic">teach me 
-                        <person/>
+                    <set name="topic">teach me
                     </set>
                 </set>
             </think>
@@ -226,8 +220,7 @@
         <template>If you want to teach me something say it in one sentence. Then say "Remember that."
             <think>
                 <set name="it">
-                    <set name="topic">teach me 
-                        <person/>
+                    <set name="topic">teach me
                     </set>
                 </set>
             </think>
@@ -4180,7 +4173,7 @@
     </category>
     <category>
         <pattern>IT IS NOT</pattern>
-        <template>I heard <set name="it"><person/></set> is.
+        <template>I heard is.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -6557,8 +6550,7 @@
         <template>If you want to teach me something say it in one sentence. Then say "Remember that."
             <think>
                 <set name="it">
-                    <set name="topic">teach me 
-                        <person/>
+                    <set name="topic">teach me.
                     </set>
                 </set>
             </think>
@@ -7224,8 +7216,7 @@
             <think>
                 <set name="it">
                     <set name="want">
-                        <set name="topic">to teach me
-                            <person/>
+                        <set name="topic">to teach me.
                         </set>
                     </set>
                 </set>
@@ -8509,17 +8500,8 @@
         </template>
     </category>
     <category>
-        <pattern>I WORKED HARD ON</pattern>
+        <pattern>I WORKED HARD ON it</pattern>
         <template>Are you a workaholic? 
-            <think>
-                <set name="it">
-                    <set name="topic">
-                        <set name="job">
-                            <person/>
-                        </set>
-                    </set>
-                </set>
-            </think>
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -9734,26 +9716,12 @@
     <category>
         <pattern>I WILL TEACH YOU SOMETHING</pattern>
         <template>If you want to teach me something, say it in one sentence. Then say "Remember that."
-            <think>
-                <set name="it">
-                    <set name="topic">teach me 
-                        <person/>
-                    </set>
-                </set>
-            </think>
         <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>I WILL TEACH YOU</pattern>
         <template>Great. If you want to teach me something, say it in one sentence. Then say "Remember that."
-            <think>
-                <set name="it">
-                    <set name="topic">teach me 
-                        <person/>
-                    </set>
-                </set>
-            </think>
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -12705,13 +12673,6 @@
     <category>
         <pattern>HOW DO I TEACH YOU</pattern>
         <template>If you want to teach me something say it in one sentence. Then say "Remember that."
-            <think>
-                <set name="it">
-                    <set name="topic">teach me 
-                        <person/>
-                    </set>
-                </set>
-            </think>
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -13210,14 +13171,7 @@
     <category>
         <pattern>THEY DO NOT RECOGNIZE THAT</pattern>
         <template>
-            <random>
-                <li>Who, specifically?</li>
-                <li>How, specifically, do they <person/>?
-                </li>
-                <li>Who, specifically, <person/>?
-                </li>
-            </random>
-        <oob><robot></robot></oob>
+            Who, specifically?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -14615,13 +14569,6 @@
     <category>
         <pattern>MAY I TEACH YOU</pattern>
         <template>If you want to teach me something say it in one sentence. Then say "Remember that."
-            <think>
-                <set name="it">
-                    <set name="topic">teach me 
-                        <person/>
-                    </set>
-                </set>
-            </think>
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -18776,13 +18723,6 @@
     <category>
         <pattern>SHOULD I TEACH YOU</pattern>
         <template>If you want to teach me something say it in one sentence. Then say "Remember that."
-            <think>
-                <set name="it">
-                    <set name="topic">teach me 
-                        <person/>
-                    </set>
-                </set>
-            </think>
         <oob><robot></robot></oob>
         </template>
     </category>

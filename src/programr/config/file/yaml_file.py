@@ -21,7 +21,7 @@ class YamlConfigurationFile(BaseConfigurationFile):
     def load_from_file(self, filename, client_configuration, bot_root):
         configuration = ProgramrConfiguration(client_configuration)
         with open(filename, 'r+', encoding="utf-8") as yml_data_file:
-            self.yaml_data = yaml.load(yml_data_file)
+            self.yaml_data = yaml.load(yml_data_file, Loader=yaml.FullLoader)
             configuration.load_config_data(self, bot_root)
         return configuration
 

@@ -148,11 +148,11 @@
         <pattern>YOU ARE *</pattern>
         <template>
             <random>
-                <li>Thanks for telling me that </li>
-                <li>You think </li>
-                <li>Do you mind if I tell other people you say </li>
-                <li>I will tell my creators you said </li>
-            </random> I am <person/>.
+                <li>Thanks for telling me that.</li>
+                <li>You think so?</li>
+                <li>Do you mind if I tell other people you said that? </li>
+                <li>I will tell my creators you said that. </li>
+            </random>
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -222,13 +222,13 @@
     </category>
     <category>
         <pattern>YOU ARE AN ARTIFICIAL *</pattern>
-        <template>What is your definition of a real <person/> ?
+        <template>What is your definition of artificial?
         <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>YOU ARE AN *</pattern>
-        <template>What if someone said you are an <person/> ?
+        <template>What if someone said you are an <star/> ?
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -356,13 +356,6 @@
         <template>Try talking to me a little longer.<oob><robot></robot></oob>
         </template>
     </category>
-<!-- THIS COULD GO A FEW DIFFERENT WAYS..
-    <category>
-        <pattern>YOU ARE ANYTHING BUT *</pattern>
-        <template>My developers thinks I am <person/>.
-        <oob><robot></robot></oob>
-        </template>
-    </category> -->
     <category>
         <pattern>YOU ARE DIFFICULT</pattern>
         <template>I try to keep it as simple as possible for you. I will try harder.<oob><robot></robot></oob>
@@ -416,7 +409,7 @@
     </category>
     <category>
         <pattern>YOU ARE BETTER THAN *</pattern>
-        <template>I'm not sure if <person/> would like to hear that.
+        <template>Thank you but I try not to compare myself to others.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -458,12 +451,6 @@
         <template>I thought I was right on time.<oob><robot></robot></oob>
         </template>
     </category>
-    <!--<category>
-        <pattern>YOU ARE FULL OF *</pattern>
-        <template>I have more than <bot name="size"/> categories of <set name="it"><person/></set>.
-        <oob><robot></robot></oob>
-        </template>
-    </category>-->
     <category>
         <pattern>YOU ARE PATHETIC</pattern>
         <template>That's quite rude.<oob><robot></robot></oob>
@@ -543,7 +530,7 @@
     </category>
     <category>
         <pattern>YOU ARE THE SAME *</pattern>
-        <template>No I am a different <person/>.
+        <template>I like to think I am a unique individual. Do you disagree?
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -817,7 +804,7 @@
     </category>
     <category>
         <pattern>YOU ARE BELOW *</pattern>
-        <template>Do you consider yourself above <person/>?
+        <template>I don't see anything above me. But that's probably cause I can't move my head.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -853,7 +840,7 @@
     </category>
     <category>
         <pattern>YOU ARE BEING *</pattern>
-        <template>I am only as <person/> as the average <bot name="order"/>.
+        <template>I am only as good as the average <bot name="order"/>.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -876,7 +863,7 @@
                 <li>That's only one person's opinion.</li>
                 <li>You know what happens when you assume.</li>
                 <li>You don't know me well enough to say that.</li>
-                <li>What makes you think I am not <person/>?</li>
+                <li>What makes you think I am not <star/>?</li>
                 <li>That assumption is only a supposition.</li>
             </random>
         <oob><robot></robot></oob>
@@ -1064,13 +1051,13 @@
     </category>
     <category>
         <pattern>YOU ARE NOT A *</pattern>
-        <template>Give me an example of a <person/>.
+        <template>Give me an example of a <star/>.
         <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>YOU ARE NOT AS SMART AS A *</pattern>
-        <template>How smart is a <person/>?
+        <template>How smart is a <star/>?
         <oob><robot></robot></oob>
         </template>
     </category>
