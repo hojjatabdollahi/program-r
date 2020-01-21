@@ -37,6 +37,10 @@
         <template><srai>Change topic</srai></template>
     </category>
     <category>
+        <pattern>LETS TALK ABOUT SOMETHING ELSE</pattern>
+        <template><srai>Change topic</srai></template>
+    </category>
+    <category>
         <pattern>$Let us talk about something else</pattern>
         <template><srai>Change topic</srai></template>
     </category>

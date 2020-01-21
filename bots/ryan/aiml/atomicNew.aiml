@@ -276,7 +276,7 @@
     </category>
     <category>
         <pattern>SHOW CALCULATOR</pattern>
-        <template>Use a calculator!<oob><robot></robot></oob>
+        <template>Sorry, I don't have a calculator.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -332,11 +332,6 @@
         </template>
     </category>
     <category>
-        <pattern>2009</pattern>
-        <template>That was a few years ago.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>MINE TOO</pattern>
         <template>Really, yours too? That's unbelievable.<oob><robot></robot></oob>
         </template>
@@ -358,7 +353,7 @@
     </category>
     <category>
         <pattern>YOU TURN ME ON</pattern>
-        <template>How can a <bot name="genus"/> online do that to a person?
+        <template>You have a power switch as well?
         <oob><robot></robot></oob>
         </template>
     </category>
