@@ -107,8 +107,8 @@ You should see the "linking successful" message.
  - If you want to change the default port number you have to consider changing it in your bot configuration in bot > database_config > port
  
 8- download, extract and copy the [corenlp](https://stanfordnlp.github.io/CoreNLP/download.html) to the libs directory in root(after this you need to point to your specific version of corenlp in the config file of the bot you use in the section brain > nlp > corenlp > jar_dir)
-    - Make sure you have Java 8.0 or higher installed for corenlp to work properly. Otherwise when checking sentinment an error will be thrown.
-    - To install Java run:
+ - Make sure you have Java 8.0 or higher installed for corenlp to work properly. Otherwise when checking sentinment an error will be thrown.
+ - To install Java run:
     ```
     sudo apt-get update && apt-get upgrade
     sudo apt-get install default-jdk
