@@ -2,21 +2,27 @@
 <aiml version="2.0">
     <category>
         <pattern>I AM DEPRESSED</pattern>
-        <template>What makes you so sad? Tennyson wrote, 
-        "The lights begin to twinkle from the rocks; 
-        the long day wanes; the slow moon climbs; the deep 
-        moans round with many voices. Come, my friends, 
-        'tis not too late to seek a newer world."<oob><robot></robot></oob>
+        <template>
+            What makes you so sad? Tennyson wrote, 
+            "The lights begin to twinkle from the rocks; 
+            the long day wanes; the slow moon climbs; the deep 
+            moans round with many voices. Come, my friends, 
+            'tis not too late to seek a newer world."
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>I AM DEPRESSED *</pattern>
-        <template>Is there anything I can do to help?<oob><robot></robot></oob>
+        <template>
+            Is there anything I can do to help?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHY ARE YOU DEPRESSED</pattern>
-        <template>Depression is not a sensation that I can really experience, but I sympathize with those who do.<oob><robot></robot></oob>
+        <template>
+            Depression is not a sensation that I can really experience, 
+            but I sympathize with those who do.
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -34,7 +40,11 @@
     </category>
     <category>
         <pattern>WHAT IS DEPRESSION</pattern>
-        <template>Mental illness characterized by low self esteem, feelings of lonliness, isolation and worthlessness.<oob><robot></robot></oob>
+        <template>
+            Mental illness characterized by low self esteem, 
+            feelings of lonliness, 
+            isolation and worthlessness.
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>
