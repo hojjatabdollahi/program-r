@@ -106,12 +106,12 @@
     </category>
     <category>
         <pattern>I AM SAD BECAUSE *</pattern>
-        <template><srai>  <star /></srai>
+        <template><srai><star /></srai>
         </template>
     </category>
     <category>
         <pattern>I AM SAD AND *</pattern>
-        <template><srai>I am sad </srai>.  <srai>  <star /></srai>
+        <template><srai>I am sad </srai>. <srai><star /></srai>
         </template>
     </category>
     <category>
