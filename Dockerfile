@@ -18,4 +18,3 @@ RUN python -m spacy download en
 RUN mkdir bots/ryan/session_data
 RUN chmod +x run.sh
 RUN sed -i -e 's/\r$//' run.sh
-RUN run.sh
