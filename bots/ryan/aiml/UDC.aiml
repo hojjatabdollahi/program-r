@@ -35,12 +35,11 @@
                 <li><srai>SIGN INQUIRY</srai></li> -->
                 <li><srai>STATUS INQUIRY</srai></li>
                 <li><srai>PERSONALITY TEST QUESTION</srai></li>
-                <li>Do you want to hear a joke?</li>
+                <li>Do you want to hear a joke?<oob><robot></robot></oob></li>
                 <li>You are objective and sensible. <oob><robot></robot></oob></li>
                 <li>You have genuine empathy. <oob><robot></robot></oob></li>
                 <li>You have self-awareness. <oob><robot></robot></oob></li>
                 <li>You have enthusiasm for the things you love. <oob><robot></robot></oob></li>
-                <!-- <li>You are receptive to change. <oob><robot></robot></oob></li> -->
                 <li>You have a way of putting others at ease. <oob><robot></robot></oob></li>
                 <li>Are you free? <oob><robot></robot></oob></li>
                 <li>That is deep. <oob><robot></robot></oob></li>
