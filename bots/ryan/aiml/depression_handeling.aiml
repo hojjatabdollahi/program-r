@@ -13,9 +13,15 @@
     </category>
     <category>
         <pattern>I AM DEPRESSED *</pattern>
-        <template>
-            Is there anything I can do to help?<oob><robot></robot></oob>
-        </template>
+        <template><srai>I AM DEPRESSED</srai></template>
+    </category>
+    <category>
+        <pattern>* I AM DEPRESSED</pattern>
+        <template><srai>I AM DEPRESSED</srai></template>
+    </category>
+    <category>
+        <pattern>* I AM DEPRESSED *</pattern>
+        <template><srai>I AM DEPRESSED</srai></template>
     </category>
     <category>
         <pattern>WHY ARE YOU DEPRESSED</pattern>
@@ -48,6 +54,18 @@
         </template>
     </category>
     <category>
+        <pattern>WHAT IS DEPRESSION *</pattern>
+        <template><srai>WHAT IS DEPRESSION</srai></template>
+    </category>
+    <category>
+        <pattern>* WHAT IS DEPRESSION</pattern>
+        <template><srai>WHAT IS DEPRESSION</srai></template>
+    </category>
+    <category>
+        <pattern>* WHAT IS DEPRESSION *</pattern>
+        <template><srai>WHAT IS DEPRESSION</srai></template>
+    </category>
+    <category>
         <pattern>I HAVE DEPRESSION *</pattern>
         <template><srai>I AM DEPRESSED</srai>
         </template>
@@ -59,6 +77,21 @@
     </category>
     <category>
         <pattern>WHAT DO YOU KNOW ABOUT DEPRESSION</pattern>
+        <template><srai>what is depression</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT DO YOU KNOW ABOUT DEPRESSION *</pattern>
+        <template><srai>what is depression</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* WHAT DO YOU KNOW ABOUT DEPRESSION</pattern>
+        <template><srai>what is depression</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* WHAT DO YOU KNOW ABOUT DEPRESSION *</pattern>
         <template><srai>what is depression</srai>
         </template>
     </category>
@@ -132,6 +165,113 @@
     <category>
         <pattern>I AM UNHAPPY</pattern>
         <template><srai>I am sad</srai>
+        </template>
+    </category>
+
+    <!--SUICIDE-->
+    <category>
+        <pattern>I WANT TO KILL MYSELF</pattern>
+        <template>
+            I am sorry that you are feeling upset. You should call a suicide hot line if you need consulting.
+            The number of the National Suicide Prevention Lifeline is 1-800-273-8255.
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>I WANT TO COMMIT SUICIDE</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I WANT TO COMMIT SUICIDE *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>* I WANT TO COMMIT SUICIDE</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>* I WANT TO COMMIT SUICIDE *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I FEELING SUICIDAL</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I M FEELING SUICIDAL</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I M FEELING SUICIDAL *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>* I M FEELING SUICIDAL</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>* I M FEELING SUICIDAL *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I AM FEELING SUICIDAL</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I AM FEELING SUICIDAL *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>* I AM FEELING SUICIDAL</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>* I AM FEELING SUICIDAL *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I DONT WANT TO LIVE</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I WANT TO DIE</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I WANT TO DIE *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>* I WANT TO DIE</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>* I WANT TO DIE *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai></template>
+    </category>
+    <category>
+        <pattern>I AM * SUICIDE</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM SUCIDAL</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM SUICIDAL *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* I AM SUICIDAL</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* I AM SUICIDAL *</pattern>
+        <template><srai>I WANT TO KILL MYSELF</srai>
         </template>
     </category>
 </aiml>

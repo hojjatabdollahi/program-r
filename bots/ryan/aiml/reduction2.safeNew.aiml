@@ -5133,30 +5133,6 @@
         </template>
     </category>
     <category>
-        <pattern>I WANT TO KILL MYSELF</pattern>
-        <template>
-            I am sorry that you are feeling upset. You should call a suicide hot line if you need consulting.
-            The number of the National Suicide Prevention Lifeline is 1-800-273-8255.
-            <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>I WANT TO COMMIT SUICIDE</pattern>
-        <template><srai>I WANT TO KILL MYSELF</srai></template>
-    </category>
-    <category>
-        <pattern>I FEELING SUICIDAL</pattern>
-        <template><srai>I WANT TO KILL MYSELF</srai></template>
-    </category>
-    <category>
-        <pattern>I DONT WANT TO LIVE</pattern>
-        <template><srai>I WANT TO KILL MYSELF</srai></template>
-    </category>
-    <category>
-        <pattern>I WANT TO DIE</pattern>
-        <template><srai>I WANT TO KILL MYSELF</srai></template>
-    </category>
-    <category>
         <pattern>I WANT TO KILL YOU</pattern>
         <template><srai>I will kill you</srai>
         </template>
@@ -8554,11 +8530,6 @@
     <category>
         <pattern>I AM NATHAN</pattern>
         <template><srai>my name is nathan</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>I AM SUICIDAL</pattern>
-        <template><srai>I want to kill myself</srai>
         </template>
     </category>
     <category>
