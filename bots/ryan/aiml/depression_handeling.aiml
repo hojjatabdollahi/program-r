@@ -133,6 +133,14 @@
         <template><srai>I am sad </srai></template>
     </category>
     <category>
+        <pattern>* I AM SAD</pattern>
+        <template><srai>I am sad </srai></template>
+    </category>
+    <category>
+        <pattern>* I AM SAD *</pattern>
+        <template><srai>I am sad </srai></template>
+    </category>
+    <category>
         <pattern>SAD</pattern>
         <template><srai>are you sad</srai>
         </template>
