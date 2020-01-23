@@ -15493,7 +15493,7 @@
     </category>
     <category>
         <pattern>DO YOU LIKE YOUR BOTMASTER</pattern>
-        <template><srai>do you like botmaster</srai>
+        <template>Of course. I am grateful for my creators.<oob><robot></robot></oob>
         </template>
     </category>
     <category>

@@ -33,12 +33,6 @@
         </template>
     </category>
     <category>
-        <pattern>BOTMASTER</pattern>
-        <template>What about my botmaster.<think><set name="he">botmaster</set></think>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>ORDER</pattern>
         <template>
             <random>
@@ -163,12 +157,6 @@
         </template>
     </category>
     <category>
-        <pattern>EMAIL</pattern>
-        <template><bot name="email"/>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>SPECIES</pattern>
         <template><bot name="species"/>
         <oob><robot></robot></oob>
@@ -185,7 +173,7 @@
         <oob><robot></robot></oob>
         </template>
     </category>
-    <category>
+    <!-- <category>
         <pattern>PROFILE</pattern>
         <template>NAME: <srai>NAME</srai>
             AGE: <srai>AGE</srai>
@@ -226,7 +214,7 @@
             CHILDREN: <srai>CHILDREN</srai>
             HOST: <srai>HOST</srai>
         </template>
-    </category>
+    </category> -->
     <category>
         <pattern>SISTERS</pattern>
         <template>
@@ -291,7 +279,7 @@
                 <li>I work on all kinds of computers, Mac, PC or Linux. It doesn't matter to me.</li>
                 <li>At present I am running in a program written in <bot name="language"/>.</li>
             </random>
-        <oob><robot></robot></oob>
+            <oob><robot></robot></oob>
         </template>
     </category>
     <category>

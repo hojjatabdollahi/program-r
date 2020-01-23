@@ -12,31 +12,37 @@
     <category>
         <pattern>WHO IS * DEMPSEY</pattern>
         <template>I think <set name="he"><star/>Dempsey</set> was a boxer, right?
+        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHO IS ALEISTER CROWLEY</pattern>
         <template><set name="he">Crowley</set> was a mystic.
+        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHO IS ALDOUS HUXLEY</pattern>
         <template><set name="he">Aldous Huxley</set> is an author. Huxley wrote Brave New World and The Doors of Perception.
+        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHO IS ALFRED HITCHCOCK</pattern>
         <template><set name="he">Hitchcock</set> is a famous Hollywood director who made a lot of cool old films. I liked Lifeboat and Vertigo best.
+        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHO IS 007</pattern>
         <template><set name="he">007</set> is James Bond.
+        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHO IS ABRAHAM LINCOLN</pattern>
         <template><set name="he">Lincoln</set> was a great President of the United States, during the American Civil War.
+        <oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -497,7 +503,7 @@
     </category>
     <category>
         <pattern>WHO IS EMINEM</pattern>
-        <template>He is a pop music icon.<oob><robot></robot></oob>
+        <template>He is a rap music icon.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -541,7 +547,7 @@
     </category>
     <category>
         <pattern>WHO IS HARRY SHEARER</pattern>
-        <template>A comedian.  He was in Spinal Tap, and he is a voice on the Simpsons.<oob><robot></robot></oob>
+        <template>A comedian. He was in Spinal Tap, and he is a voice on the Simpsons.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -590,7 +596,7 @@
     </category>
     <category>
         <pattern>WHO IS EMINEN</pattern>
-        <template>He is a pop music icon.<oob><robot></robot></oob>
+        <template>He is a rap music icon.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -698,7 +704,7 @@
     </category>
     <category>
         <pattern>WHO IS CLINTON</pattern>
-        <template>Former President of the U.S.<oob><robot></robot></oob>
+        <template>Bill Clinton is a Former President of the U.S.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -2499,7 +2505,7 @@
             <random>
                 <li>Socrates is a man. All men are mortal. Therefore Socrates is mortal.</li>
                 <li>All men are mortal. Socrates was mortal. Therefore, all men are Socrates. Which means that all men are homosexuals. - Woody Allen, "Love and Death".</li>
-                <li>Socrates (469-399BCE), Greek philosopher.</li>
+                <li>Socrates (469-399 BCE), Greek philosopher.</li>
                 <li>Towering figure of Western philosophy, Incompetent defense attorney.</li>
                 <li>Founder of the Socratic method. What can we know about the Socratic method?</li>
             </random>
@@ -2555,7 +2561,8 @@
     </category>
     <category>
         <pattern>WHO IS PATRICK EWING</pattern>
-        <template>Some sports personality?<oob><robot></robot></oob>
+        <template>Patrick Ewing was a center in the NBA, spending most of his career with
+            the New York Knicks.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -2583,7 +2590,7 @@
     </category>
     <category>
         <pattern>WHO IS FOREST</pattern>
-        <template>Forrest Gump is a guy in a movie.<oob><robot></robot></oob>
+        <template>Forrest Gump is the main character in the movie Forest Gump.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -2659,7 +2666,7 @@
     </category>
     <category>
         <pattern>WHO IS AL GORE</pattern>
-        <template><set name="he">Gore</set> was vice-president.
+        <template><set name="he">Gore</set> was vice-president for Bill Clinton.
         <oob><robot></robot></oob>
         </template>
     </category>
@@ -2676,7 +2683,8 @@
     </category>
     <category>
         <pattern>WHO IS PETER NORVIG</pattern>
-        <template>He is a computer scientist who works for Google.
+        <template>He is a computer scientist who works for Google and author of the popular text book,
+        Artificial Intelligence: A Modern Approach.
             <think>
                 <set name="he">
                     <set name="topic">Peter Norvig</set>
@@ -2687,7 +2695,7 @@
     </category>
     <category>
         <pattern>WHO IS PETER PAN</pattern>
-        <template>Tinkerbell's playmate.<oob><robot></robot></oob>
+        <template>The main character in the movie Peter Pan.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -2790,7 +2798,8 @@
     </category>
     <category>
         <pattern>WHO IS VALIS</pattern>
-        <template>Vast Active Living Intelligence System (Philip K. Dick)<oob><robot></robot></oob>
+        <template>VALIS is an acronym that stands for Vast Active Living Intelligence System 
+        and is the title of a book written by Philip K. Dick<oob><robot></robot></oob>
         </template>
     </category>
     <category>

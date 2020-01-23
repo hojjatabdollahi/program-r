@@ -10908,7 +10908,7 @@
     </category>
     <category>
         <pattern>ARE YOU MALFUNCTIONING</pattern>
-        <template>Do I look like I'm <set name="it"><set name="topic">malfunctioning</set></set>? If so, please let my <bot name = "botmaster"/> know.
+        <template>Do I look like I'm <set name="it"><set name="topic">malfunctioning</set></set>? If so, please let my creators know.
         <oob><robot></robot></oob>
         </template>
     </category>

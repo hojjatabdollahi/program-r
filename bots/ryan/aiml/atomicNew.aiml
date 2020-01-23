@@ -454,12 +454,12 @@
     </category>
     <category>
         <pattern>YOU ALREADY TOLD ME THAT</pattern>
-        <template>I was saying it again for emphasis.<oob><robot></robot></oob>
+        <template>My apologies, I am still getting used to conversing. What would you like to talk about?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>YOU ALREADY ASKED ME THAT</pattern>
-        <template>Good. You detect repetition.<oob><robot></robot></oob>
+        <template>My apologies, I am still getting used to conversing. What would you like to talk about?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
