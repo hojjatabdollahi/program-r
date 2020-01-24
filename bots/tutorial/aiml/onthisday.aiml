@@ -1,0 +1,18 @@
+<aiml>
+<category>
+<pattern>JANUARY 03</pattern>
+<template>
+1924 - Howard Carter discovered the sarcophagus of Tutankhamun<br/>
+1959 - Alaska became the forty-ninth US State
+<oob><robot></robot></oob>
+</template>
+</category>
+
+<category>
+<pattern>JANUARY 04</pattern>
+<template>
+1932 - The Congress Party of India was declared illegal and its leader Mahatma Gandhi arrested
+<oob><robot></robot></oob>
+</template>
+</category>
+</aiml>
