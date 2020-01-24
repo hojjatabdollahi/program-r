@@ -10,6 +10,7 @@ __pycache__/
 
 ##Avoiding to commit session data
 bots/ryan/session_data/*
+bots/tutorial/session_data/*
 
 # Distribution / packaging
 .Python

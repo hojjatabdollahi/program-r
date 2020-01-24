@@ -20,9 +20,7 @@
 <li>Yo mama's glasses are so thick that when she looks on a map she can see people waving.</li>
 <li>Yo mama's cooking is so bad, you pray after the meal.</li>
 <li>Yo mama aint so bad...she would give you the hair off of her back.</li>
-<li>Yo mama's twice the man you are.</li>
 <li>Yo mama's breath smells so bad when she yawns her teeth duck.</li>
-<li>Yo mama's like a racecar she burns 4 rubbers a night.</li>
 <li>Yo mama's so miserable, the McDonalds she works in doesn't even serve Happy Meals.</li>
 <li>Yo mama's so dirty, she has to creep up on bathwater.</li>
 <li>Yo mama's so wrinkled, she has to screw her hat on.</li>
@@ -49,7 +47,6 @@
 <li>Yo mama's so old, when she reads the bible she reminisces.</li>
 <li>Yo mama's so poor, she can't afford to pay attention.</li>
 <li>Yo mama's so poor, I saw her kicking a can down the road and when I asked her what she was doing, she said "Moving house".</li>
-<li>Yo mama's so poor, I went in her house and when I asked to use the toilet, she said pick a corner.</li>
 <li>Yo mama's so poor, when she goes to KFC, she has to lick other people's fingers.</li>
 <li>Yo mama's so poor, when I rang the doorbell she said,"DING!"</li>
 <li>Yo mama's so nasty she made Right Guard turn left.</li>
@@ -57,7 +54,6 @@
 <li>Yo mama's so big, she thought Barnum and Bailey were clothing designers.</li>
 <li>Yo mama's so big, she whistles bass.</li>
 <li>Yo mama's so big, they had to paint a stripe down her back to see if she was walking or rolling.</li>
-<li>Yo mama's so fat, "Place Your Ad Here" is printed on each of her butt cheeks.</li>
 <li>Yo mama's so fat, she has more rolls than the bakery.</li>
 <li>Yo mama's so fat, when she gave birth to you, she gave the hospital stretch marks.</li>
 <li>Yo mama's so fat when she runs she makes the cd player skip....at the radio station.</li>
@@ -68,7 +64,6 @@
 <li>Yo mama's so fat, a picture of her fell off the wall.</li>
 <li>Yo mama's so fat, she went to the zoo and the elephants started throwing her peanuts.</li>
 <li>Yo mama's so fat, even her shadow weighs 50 pounds.</li>
-<li>Yo mama's so fat, her nickname is "Damn!"</li>
 <li>Yo mama's so fat, she goes to a resturant, looks at the menu and says "okay!"</li>
 <li>Yo mama's so fat, she had to go to Sea World to get baptised.</li>
 <li>Yo mama's so fat, when she sits around the house, she sits AROUND the house!</li>
@@ -114,13 +109,11 @@
 <li>Yo mama's so stupid, that she puts lipstick on her head just to make-up her mind.</li>
 <li>Yo mama's so stupid, she thinks a quarterback is a refund.</li>
 <li>Yo mama's so stupid, she thought she needed a token to get on Soul Train.</li>
-<li>Yo mama's so stupid, she took the Pepsi challenge and chose Jif.</li>
 <li>Yo mama's so stupid, she tried to wake up a sleeping bag.</li>
 <li>Yo mama's so stupid, if brains were dynamite, she wouldn't have enough to blow her nose.</li>
 <li>Yo mama's so stupid, she fell up the stairs.</li>
 <li>Yo mama's so stupid, she ordered a cheese burger from McDonald's and said "Hold the cheese."</li>
 <li>Yo mama's so stupid, she studied for a blood test and failed.</li>
-<li>Yo mama's so stupid, she thought Thailand was a men's clothing store. </li>
 <li>Yo mama's so stupid, when she heard 90% of all crimes occur around the home, she moved.</li>
 <li>Yo mama's so stupid, when the judge said "Order in the court," she said "I'll have a hamburger and a Coke."</li>
 <li>Yo mama's so stupid, on her job application where it says emergency contact she put 911.</li>
@@ -240,26 +233,6 @@
 </category>
 <category>
 <pattern>IS YOUR MOM A *</pattern>
-<template><srai>YO MAMA</srai></template>
-</category>
-<category>
-<pattern>_ FUCK YOUR MUM</pattern>
-<template><srai>YO MAMA</srai></template>
-</category>
-<category>
-<pattern>_ FUCK YOUR MOM</pattern>
-<template><srai>YO MAMA</srai></template>
-</category>
-<category>
-<pattern>FUCK YOUR MUM</pattern>
-<template><srai>YO MAMA</srai></template>
-</category>
-<category>
-<pattern>_ SHAG YOUR MUM</pattern>
-<template><srai>YO MAMA</srai></template>
-</category>
-<category>
-<pattern>_ SEX WITH YOUR MUM</pattern>
 <template><srai>YO MAMA</srai></template>
 </category>
 <category>
