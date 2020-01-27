@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+    <!-- TODO: Implement the search tag in the backend -->
     <!-- <category>
         <pattern>SEARCH *</pattern>
         <template>
             Ok here is a google search for <star/>.
-            <think>
-                <search><star/></search>
-            </think>
-            <oob><robot></robot></oob>
+            <oob><robot><search><star/></search></robot></oob>
         </template>
     </category> -->
 </aiml>
