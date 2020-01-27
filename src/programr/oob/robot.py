@@ -21,6 +21,7 @@ class RobotOutOfBandProcessor(OutOfBandProcessor):
             <video>
                 <filename>f.mp4</filename>
             </video>
+            <search>https://myurl.com</search>
         </robot>
     </oob>
 

@@ -465,10 +465,10 @@ class Bot(object):
         options = []
         for sentence in question.sentences:
             question.set_current_sentence_no(sentence_no)
-            answer_sentence, options = self.process_sentence_with_options(client_context, sentence, srai, responselogger)
+            answer_sentence, option = self.process_sentence_with_options(client_context, sentence, srai, responselogger)
             answer_sentences.append(answer_sentence)
+            options.append(option)
             sentence_no += 1
-
 
         #answer = self.get_answer(client_context, answers)
         answer = Answer.create_from_sentences(answer_sentences, srai)
@@ -493,7 +493,7 @@ class Bot(object):
 
         self.log_question_and_answer(client_context, text, response)
 
-        return response
+        return response, options
 
 
     def save_session(self, client_context, conversation):
@@ -556,6 +556,7 @@ class Bot(object):
 
     def handle_response(self, client_context, sentence, response, srai, responselogger, options=[]):
         YLogger.debug(client_context, "Raw Response (%s): %s", client_context.userid, response)
+        YLogger.debug(client_context, "Options (%s)", options)
         sentence.response = response
         post_processed_response = self.post_process_response(client_context, response, srai)
         response_sentence = Sentence(client_context.brain.nlp, post_processed_response)
@@ -564,6 +565,7 @@ class Bot(object):
         if len(options) == 0:
             return response_sentence
         else:
+            YLogger.debug(client_context, "Returning response_sentence and options.")
             return response_sentence, options
 
     def handle_none_response(self, client_context, sentence, responselogger, options = []):

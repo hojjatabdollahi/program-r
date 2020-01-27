@@ -58,8 +58,11 @@ class RestBotClient(BotClient):
 
         return None, None
 
-    def format_success_response(self, userid, question, answer):
-        return {"question": question, "answer": answer, "userid": userid}
+    def format_success_response(self, userid, question, answer, options):
+        if len(options) is 0:
+            return {"question": question, "answer": answer, "userid": userid}
+        else:
+            return {"question": question, "answer": answer, "option": options[0], "userid": userid}
 
     def format_error_response(self, userid, question, error):
         client_context = self.create_client_context(userid)
@@ -72,11 +75,12 @@ class RestBotClient(BotClient):
             #response = client_context.bot.ask_question(client_context, question, responselogger=self)
             #todo add logic of the new changes here
             print(question)
-            response = client_context.bot.ask_question_with_options(client_context, question)
-            print("response", response)
+            response, options = client_context.bot.ask_question_with_options(client_context, question)
+            YLogger.debug(client_context, "response from ask_question_with_options (%s)", response)
+            YLogger.debug(client_context, "options from ask_question_with_options (%s)", options)
         except Exception as e:
             print(e)
-        return response
+        return response, options
 
     def process_request(self, request):
         question = "Unknown"
@@ -99,10 +103,10 @@ class RestBotClient(BotClient):
             userid = self.get_userid(request)
             YLogger.debug(self, f"Got userid: {userid}")
 
-            answer = self.ask_question(userid, question)
+            answer, options = self.ask_question(userid, question)
             YLogger.debug(self, f"Got answer: {answer}")
 
-            return self.format_success_response(userid, question, answer), 200
+            return self.format_success_response(userid, question, answer, options), 200
 
         except Exception as excep:
             YLogger.error(self, excep)

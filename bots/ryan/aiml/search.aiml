@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     <!-- TODO: Implement the search tag in the backend -->
-    <!-- <category>
+    <category>
         <pattern>SEARCH *</pattern>
         <template>
             Ok here is a google search for <star/>.
             <oob><robot><search><star/></search></robot></oob>
         </template>
-    </category> -->
+    </category>
+
+    <category>
+        <pattern>WIKI *</pattern>
+        <template>
+            <sraix service="WIKIPEDIA">SUMMARY <star/></sraix>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
 </aiml>

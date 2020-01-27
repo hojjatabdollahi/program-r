@@ -262,8 +262,8 @@ class Brain(object):
         YLogger.info(self, "Loading collections")
         self.load_collections(configuration)
 
-        #YLogger.info(self, "Loading services")
-        #self.load_services(configuration)
+        YLogger.info(self, "Loading services")
+        self.load_services(configuration)
 
         YLogger.info(self, "Loading security services")
         self.load_security_services(configuration)
@@ -411,6 +411,7 @@ class Brain(object):
         self._load_postprocessors(configuration)
 
     def load_services(self, configuration):
+        YLogger.debug(self, "Loading Services.")
         ServiceFactory.preload_services(configuration.services)
 
     def load_security_services(self, configuration):

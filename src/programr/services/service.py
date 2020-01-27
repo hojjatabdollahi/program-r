@@ -30,6 +30,7 @@ class ServiceFactory(object):
 
     @classmethod
     def preload_services(cls, services_config):
+        YLogger.debug(None, "In preload_services in ServiceFactory")
         loader = ClassLoader()
         for service_name in services_config.services():
             name = service_name.upper()
@@ -45,6 +46,7 @@ class ServiceFactory(object):
 
     @classmethod
     def get_service(cls, service):
+
         name = service.upper()
         if name in ServiceFactory.services:
             return ServiceFactory.services[name]
