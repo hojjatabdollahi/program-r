@@ -57,21 +57,8 @@ class ConsoleBotClient(EventBotClient):
         question = self.get_question(client_context)
         # FIXME: Right now nothing is being done with the options being returned.
         response, options = self.process_question_with_options(client_context, question)
-        
-        response = self.clean_response(response)
-        
+
         self.render_response(client_context, response)
-
-    def clean_response(self, response):
-        # NOTE: Often wikipedia articles will have this in the summary
-        response = response.replace("(listen);", "")
-        response = response.replace("(listen),", "")
-        response = response.replace("(listen)", "")
-        response = response.replace("( )", "")
-
-        response.encode("ascii", errors="ignore")
-        response = re.sub('\[.*\]', '', response)
-        return response
 
     def wait_and_answer(self, client_context):
         running = True

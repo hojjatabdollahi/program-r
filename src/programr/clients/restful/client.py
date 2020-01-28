@@ -60,19 +60,7 @@ class RestBotClient(BotClient):
 
         return None, None
 
-    def clean_response(self, response):
-        # NOTE: Often wikipedia articles will have this in the summary
-        response = response.replace("(listen);", "")
-        response = response.replace("(listen),", "")
-        response = response.replace("(listen)", "")
-        response = response.replace("( )", "")
-
-        response.encode("ascii", errors="ignore")
-        response = re.sub('\[.*\]', '', response)
-        return response
-
     def format_success_response(self, userid, question, answer, options):
-        answer = self.clean_response(answer)
         return {"question": question, "answer": answer, "option": options[0], "userid": userid}
 
     def format_error_response(self, userid, question, error):

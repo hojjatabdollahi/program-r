@@ -1,6 +1,8 @@
-from programr.utils.logging.ylogger import YLogger
+import re
+
 import wikipedia
 
+from programr.utils.logging.ylogger import YLogger
 from programr.services.service import Service
 
 
@@ -26,12 +28,25 @@ class WikipediaService(Service):
         else:
             self._api = api
 
+    def clean_summary(self, summary):
+        # NOTE: Often wikipedia articles will have this in the summary
+        summary = summary.replace("(listen);", "")
+        summary = summary.replace("(listen),", "")
+        summary = summary.replace("(listen)", "")
+        summary = summary.replace("( )", "")
+
+        summary.encode("ascii", errors="ignore")
+        summary = re.sub('\[.*\]', '', summary)
+        return summary
+
     def ask_question(self, client_context, question: str):
         try:
             words  = question.split()
             question = " ".join(words[1:])
             if words[0] == 'SUMMARY':
                 search = self._api.summary(question, sentences=1)
+                search = self.clean_summary(search)
+                YLogger.debug(client_context, f"search in wikipediaservice: {search}")
             elif words[0] == 'SEARCH':
                 results = self._api.search(question)
                 search = ", ".join(results)
