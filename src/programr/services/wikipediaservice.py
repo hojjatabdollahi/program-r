@@ -29,7 +29,9 @@ class WikipediaService(Service):
             self._api = api
 
     def clean_summary(self, summary):
-        # NOTE: Often wikipedia articles will have this in the summary
+        # NOTE: Often wikipedia articles will have a listen plug-in in the summary.
+        #       We need to make sure to get rid of extraneous characters
+        #       so Ryan sounds natural, hence the cleaning.
         summary = summary.replace("(listen);", "")
         summary = summary.replace("(listen),", "")
         summary = summary.replace("(listen)", "")
