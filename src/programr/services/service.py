@@ -46,7 +46,6 @@ class ServiceFactory(object):
 
     @classmethod
     def get_service(cls, service):
-
         name = service.upper()
         if name in ServiceFactory.services:
             return ServiceFactory.services[name]

@@ -1,3 +1,5 @@
+import re
+
 from programr.utils.logging.ylogger import YLogger
 from abc import ABCMeta, abstractmethod
 
@@ -58,11 +60,20 @@ class RestBotClient(BotClient):
 
         return None, None
 
+    def clean_response(self, response):
+        # NOTE: Often wikipedia articles will have this in the summary
+        response = response.replace("(listen);", "")
+        response = response.replace("(listen),", "")
+        response = response.replace("(listen)", "")
+        response = response.replace("( )", "")
+
+        response.encode("ascii", errors="ignore")
+        response = re.sub('\[.*\]', '', response)
+        return response
+
     def format_success_response(self, userid, question, answer, options):
-        if len(options) is 0:
-            return {"question": question, "answer": answer, "userid": userid}
-        else:
-            return {"question": question, "answer": answer, "option": options[0], "userid": userid}
+        answer = self.clean_response(answer)
+        return {"question": question, "answer": answer, "option": options[0], "userid": userid}
 
     def format_error_response(self, userid, question, error):
         client_context = self.create_client_context(userid)
