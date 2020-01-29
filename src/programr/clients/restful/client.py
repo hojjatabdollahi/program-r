@@ -71,12 +71,12 @@ class RestBotClient(BotClient):
         response = ""
         try:
             client_context = self.create_client_context(userid)
-            #response = client_context.bot.ask_question(client_context, question, responselogger=self)
-            #todo add logic of the new changes here
+            #TODO: add logic of the new changes here.
+            #      Not sure what Rohola meant by above comment.
             print(question)
             response, options = client_context.bot.ask_question_with_options(client_context, question)
-            YLogger.debug(client_context, "response from ask_question_with_options (%s)", response)
-            YLogger.debug(client_context, "options from ask_question_with_options (%s)", options)
+            # YLogger.debug(client_context, "response from ask_question_with_options (%s)", response)
+            # YLogger.debug(client_context, "options from ask_question_with_options (%s)", options)
         except Exception as e:
             print(e)
         return response, options

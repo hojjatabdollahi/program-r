@@ -504,8 +504,7 @@ class Bot(object):
         properties_pickle_file = open(properties_save_dir, 'wb')
         pickle.dump(conversation.questions, questions_pickle_file)
         pickle.dump(conversation.properties, properties_pickle_file)
-
-
+        
 
     def log_question_and_answer(self, client_context, text, response):
         convo_logger = logging.getLogger("conversation")
@@ -572,7 +571,6 @@ class Bot(object):
         sentence.response = self.get_default_response(client_context)
         non_hanlde_sentence = Sentence(client_context.brain.nlp, sentence.response)
         non_hanlde_sentence._no_response = True
-
 
         if responselogger is not None:
             responselogger.log_unknown_response(non_hanlde_sentence)

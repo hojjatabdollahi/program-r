@@ -504,7 +504,6 @@ class Brain(object):
         return response, None
 
     def process_oob(self, client_context, oob_command):
-
         oob_content = ET.fromstring(oob_command)
 
         if oob_content.tag == 'oob':
@@ -544,7 +543,6 @@ class Brain(object):
         return None
 
     def resolve_matched_template_with_options(self, client_context, match_context):
-
         template_node = match_context.template_node()
 
         YLogger.debug(client_context, "AIML Parser evaluating template [%s]", template_node.to_string())
