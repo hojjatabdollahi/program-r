@@ -14,6 +14,9 @@ class WeatherAPI(object):
     def weather(self, location):
         return OWM(self.api_key).weather_at_place(location)
 
+    def todays_forecast(self, location):
+        return OWM(self.api_key).daily_forecast(location, limit=1)
+
 
 class WeatherService(Service):
 
@@ -27,22 +30,34 @@ class WeatherService(Service):
         else:
             self._api = api
 
-    def get_weather_info(self, observation):
+    def get_temp_info(self, observation):
         weather = observation.get_weather()
-        return weather.get_temperature(unit='fahrenheit')
+        return str(weather.get_temperature(unit='fahrenheit')['temp'])
+
+    def get_forecast_info(self, forecaster):
+        forecast = forecaster.get_forecast()
+        return str(forecast)
+
+    def get_status_info(self, observation):
+        weather = observation.get_weather()
+        return str(weather.get_status())
 
     def ask_question(self, client_context, question: str):
         try:
             words  = question.split()
             question = " ".join(words[1:])
-            if words[0] == 'WEATHER':
+            if words[0] == 'TEMPERATURE':
                 observation = self._api.weather(question)
-                search = str(self.get_weather_info(observation)['temp'])
+                search = self.get_temp_info(observation)
                 search += ' degrees fahrenheit'
                 YLogger.debug(client_context, f"weather report: {search}")
-            # elif words[0] == 'SEARCH':
-            #     results = self._api.search(question)
-            #     search = ", ".join(results)
+            elif words[0] == "STATUS":
+                observation = self._api.weather(question)
+                search = self.get_status_info(observation)
+            # NOTE: This API call doesn't work with free API subscriptions
+            # elif words[0] == 'FORECAST':
+            #     forecaster = self._api.todays_forecast(question)
+            #     search = self.get_forecast_info(observation)
             else:
                 YLogger.error(client_context, "Unknown Open Weather Map command [%s]", words[0])
                 search = ""

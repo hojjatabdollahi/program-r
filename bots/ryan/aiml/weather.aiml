@@ -1,11 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <aiml version="1.0">
+
+    <!-- GETTING TEMPERATURE -->
     <category>
-        <pattern>WHAT IS THE WEATHER TODAY</pattern>
+        <pattern>WHAT IS THE TEMPERATURE RIGHT NOW</pattern>
         <template>
-            <sraix service="WEATHER">WEATHER Denver, USA</sraix>
+            It is currently <sraix service="WEATHER">TEMPERATURE Denver, USA</sraix> in Denver Colorado.
             <oob><robot></robot></oob>
         </template>
+    </category>
+
+    <category>
+        <pattern>HOW COLD IS IT</pattern>
+        <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
+    </category>
+
+    <category>
+        <pattern>HOW COOL IS IT</pattern>
+        <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
+    </category>
+
+    <category>
+        <pattern>HOW HOW IS IT</pattern>
+        <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
+    </category>
+
+    <category>
+        <pattern>HOW WARM IS IT</pattern>
+        <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
+    </category>
+
+    <!-- GETTING SNOW INFO -->
+    <!-- <category>
+        <pattern>WHAT IS TODAY S FORECAST</pattern>
+        <template>
+            <sraix service="WEATHER">FORECAST Denver, USA</sraix>
+            <oob><robot></robot></oob>
+        </template>
+    </category> -->
+
+    <!--GETTING SHORT DESCRIPTION OF TODAY'S WEATHER-->
+    <category>
+        <pattern>WHAT IS TODAY S FORECAST</pattern>
+        <template>
+            <sraix service="WEATHER">STATUS Denver, USA</sraix>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS TODAY S WEATHER</pattern>
+        <template><srai>WHAT IS TODAY S FORECAST</srai></template>
     </category>
 
 
