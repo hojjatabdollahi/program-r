@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<aiml version="1.0">
+    <category>
+        <pattern>WHAT IS THE WEATHER TODAY</pattern>
+        <template>
+            <sraix service="WEATHER">WEATHER Denver, USA</sraix>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+
+</aiml>

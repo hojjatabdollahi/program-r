@@ -161,8 +161,6 @@ brain:
         #     url: http://www.pandorabots.com/pandora/talk-xml
         Wikipedia:
             classname: programr.services.wikipediaservice.WikipediaService
-        Weather:
-            classname: programr.services.openweathermap.WeatherService
 
         # Mitsuku:
         #     classname: programr.services.mitsuku.MitsukuService

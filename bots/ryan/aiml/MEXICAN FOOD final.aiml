@@ -5,14 +5,14 @@
         <pattern># <set>YES</set> ^</pattern>
             <that>Shall we talk about a different cuisine?</that>
             <template>
-                Would you like to talk about a American Food or Foreign food?
+                Would you like to talk about an American Food or Foreign food?
                 <oob><robot></robot></oob>
             </template>
     </category>
 
     <category>
         <pattern># FOREIGN ^</pattern>
-        <that>Would you like to talk about a American Food or Foreign food?</that>
+        <that>Would you like to talk about an American Food or Foreign food?</that>
         <template>
             <random>
                 <li>Do you like Asian food?</li>

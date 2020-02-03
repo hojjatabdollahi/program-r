@@ -51,6 +51,9 @@ class BrainServicesConfiguration(BaseSectionConfigurationData):
             data['Wikipedia'] = {}
             data['Wikipedia']['classname'] = 'programr.services.wikipediaservice.WikipediaService'
 
+            data['OpenWeatherMap'] = {}
+            data['OpenWeatherMap']['classname'] = 'programr.services.openweathermap.WeatherService'
+
             data['DuckDuckGo'] = {}
             data['DuckDuckGo']['classname'] = 'programr.services.duckduckgo.DuckDuckGoService'
             data['DuckDuckGo']['url'] = 'http://api.duckduckgo.com'
