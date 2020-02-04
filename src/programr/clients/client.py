@@ -180,6 +180,7 @@ class BotClient(ResponseLogger):
     def load_license_keys(self):
         if self.configuration is not None:
             if self.configuration.client_configuration.license_keys is not None:
+                YLogger.debug(self, f"filename containing license keys: {self.configuration.client_configuration.license_keys}")
                 self._license_keys.load_license_key_file(self.configuration.client_configuration.license_keys)
             else:
                 YLogger.warning(self, "No client configuration setting for license_keys")

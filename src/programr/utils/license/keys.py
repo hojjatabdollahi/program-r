@@ -41,6 +41,7 @@ class LicenseKeys(object):
         if line:
             if line.startswith('#') is False:
                 splits = line.split("=")
+                YLogger.debug(self, f"splits: {splits}")
                 if len(splits) > 1:
                     key_name = splits[0].strip()
                     # If key has = signs in it, then combine all elements past the first

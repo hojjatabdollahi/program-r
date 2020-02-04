@@ -10,6 +10,10 @@
         </template>
     </category>
     <category>
+        <pattern>$change topic</pattern>
+        <template><srai>Change topic</srai></template>
+    </category>
+    <category>
         <pattern>$CHANGE TOPIC</pattern>
         <template><srai>Change topic</srai></template>
     </category>
