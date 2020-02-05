@@ -163,6 +163,8 @@ brain:
             classname: programr.services.wikipediaservice.WikipediaService
         Weather:
             classname: programr.services.openweathermap.WeatherService
+        News:
+            classname: programr.services.news.NewsService
 
         # Mitsuku:
         #     classname: programr.services.mitsuku.MitsukuService

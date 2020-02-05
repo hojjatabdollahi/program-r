@@ -5980,12 +5980,7 @@
         </template>
     </category>
     <category>
-        <pattern>WHAT IS CYBER SEX</pattern>
-        <template>Sex with a computer.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT IS 2X2</pattern>
+        <pattern>WHAT IS TWO TIME TWO</pattern>
         <template>Four.<oob><robot></robot></oob>
         </template>
     </category>
@@ -6009,11 +6004,6 @@
                 </set>
             </think>
         <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT IS ARSE</pattern>
-        <template>Butt in England.<oob><robot></robot></oob>
         </template>
     </category>
     <category>

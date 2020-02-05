@@ -11,6 +11,26 @@
     </category>
 
     <category>
+        <pattern>WHAT S THE TEMPERATURE</pattern>
+        <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE TEMPERATURE</pattern>
+        <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHAT S THE TEMPERATURE *</pattern>
+        <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
+    </category>
+
+    <category>
+        <pattern>* WHAT S THE TEMPERATURE</pattern>
+        <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
+    </category>
+
+    <category>
         <pattern>HOW COLD IS IT</pattern>
         <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
     </category>
@@ -21,7 +41,7 @@
     </category>
 
     <category>
-        <pattern>HOW HOW IS IT</pattern>
+        <pattern>HOW HOT IS IT</pattern>
         <template><srai>WHAT IS THE TEMPERATURE RIGHT NOW</srai></template>
     </category>
 
@@ -53,5 +73,24 @@
         <template><srai>WHAT IS TODAY S FORECAST</srai></template>
     </category>
 
+    <category>
+        <pattern>WHAT S THE WEATHER</pattern>
+        <template><srai>WHAT IS TODAY S FORECAST</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHAT S THE WEATHER *</pattern>
+        <template><srai>WHAT IS TODAY S FORECAST</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE WEATHER</pattern>
+        <template><srai>WHAT IS TODAY S FORECAST</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE WEATHER *</pattern>
+        <template><srai>WHAT IS TODAY S FORECAST</srai></template>
+    </category>
 
 </aiml>

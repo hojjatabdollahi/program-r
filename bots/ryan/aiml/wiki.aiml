@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <!--THESE CATEGORIES WILL RETRIEVE THE SUMMARY FROM WIKIPEDIA ARTICLES-->
+    <category>
+        <pattern>WIKI *</pattern>
+        <template>
+            <sraix service="WIKIPEDIA">SUMMARY <star/></sraix>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>* WIKI *</pattern>
+        <template>
+            <srai>WIKI <star index="2"/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ASK WIKI *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>RYAN WIKI *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>RYAN * WIKI *</pattern>
+        <template>
+            <srai>WIKI <star index="2"/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WIKIPEDIA *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* WIKIPEDIA *</pattern>
+        <template>
+            <srai>WIKI <star index="2"/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ASK WIKIPEDIA *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>RYAN WIKIPEDIA *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>RYAN * WIKIPEDIA *</pattern>
+        <template>
+            <srai>WIKI <star index="2"/></srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>RYAN WHAT IS *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>RYAN WHAT S *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>RYAN WHAT S AN *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>RYAN WHO IS *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>RYAN WHO S *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS THE *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT S *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT S THE *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS THE *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHO IS *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WHO S *</pattern>
+        <template>
+            <srai>WIKI <star/></srai>
+        </template>
+    </category>
+
+</aiml>

@@ -2,7 +2,7 @@
 <aiml version="2.0">
 
     <!--TODO: There is an issue with reading the API Key  -->
-
+    <!-- This is the extension method -->
     <!-- <category>
         <pattern>HEY RYAN WHAT S THE NEWS * </pattern>
         <template>
@@ -10,6 +10,15 @@
             <oob><robot></robot></oob>
         </template>
     </category> -->
+
+    <!-- This is the service method -->
+    <category>
+        <pattern>GET BBC NEWS</pattern>
+        <template>
+            <sraix service="NEWS">DESCRIPTION bbc-news</sraix>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
 
 
 </aiml>
