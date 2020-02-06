@@ -54,11 +54,15 @@ class ConsoleBotClient(EventBotClient):
         self.render_response(client_context, response)
 
     def process_question_answer_with_options(self, client_context):
-        question = self.get_question(client_context)
-        # FIXME: Right now nothing is being done with the options being returned.
-        response, options = self.process_question_with_options(client_context, question)
+        try:
+            YLogger.debug(client_context, "before get_question")
+            question = self.get_question(client_context)
+            # FIXME: Right now nothing is being done with the options being returned.
+            response, options = self.process_question_with_options(client_context, question)
 
-        self.render_response(client_context, response)
+            self.render_response(client_context, response)
+        except Exception as ex:
+            YLogger.exception(client_context, "Exception caught in process_question_answer_with_options !", ex)
 
     def wait_and_answer(self, client_context):
         running = True

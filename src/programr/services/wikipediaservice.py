@@ -35,6 +35,7 @@ class WikipediaService(Service):
         summary = summary.replace("(listen);", "")
         summary = summary.replace("(listen),", "")
         summary = summary.replace("(listen)", "")
+        summary = summary.replace("IPA: ", "")
         summary = summary.replace("( )", "")
 
         summary.encode("ascii", errors="ignore")
@@ -58,6 +59,8 @@ class WikipediaService(Service):
             return search
         except wikipedia.exceptions.DisambiguationError:
             YLogger.error(client_context, "Wikipedia search is ambiguous for question [%s]", question)
+            search = f"Wikipedia search is ambiguous for your question: {question}"
+            return search
         except wikipedia.exceptions.PageError:
             YLogger.error(client_context, "No page on Wikipedia for question [%s]", question)
         except Exception:

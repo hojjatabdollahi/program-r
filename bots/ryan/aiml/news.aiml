@@ -15,7 +15,15 @@
     <category>
         <pattern>GET BBC NEWS</pattern>
         <template>
-            <sraix service="NEWS">DESCRIPTION bbc-news</sraix>
+            <sraix service="NEWS">SOURCE bbc-news</sraix>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>GET US NEWS</pattern>
+        <template>
+            <sraix service="NEWS">COUNTRY us</sraix>
             <oob><robot></robot></oob>
         </template>
     </category>

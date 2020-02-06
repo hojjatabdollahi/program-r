@@ -619,4 +619,3 @@ class Brain(object):
             return self.resolve_matched_template_with_options(client_context, match_context)
 
         return None, {"robot": None}
-

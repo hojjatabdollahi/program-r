@@ -2987,18 +2987,6 @@
         </template>
     </category>
     <category>
-        <pattern>WHO IS MICHAEL JACKSON</pattern>
-        <template><set name="he">Michael Jackson</set> was a singer of many of the greatest songs of all time. He mysteriously turned more white during his lifetime.
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHO IS MICHAEL JORDAN</pattern>
-        <template><set name="he">Michael Jordan</set> is a famous  basketball player.  
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>WHO IS MICHAEL MOORE</pattern>
         <template><set name="he">MICHAEL MOORE</set> is a comedian and film maker.
         <oob><robot></robot></oob>

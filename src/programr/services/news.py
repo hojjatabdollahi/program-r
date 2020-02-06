@@ -6,14 +6,19 @@ from programr.services.service import Service
 
 class NewsAPI(object):
 
+    # NOTE: website of the news api
+    # https://newsapi.org
+
     def __init__(self, api_key):
         self.api_key = api_key
 
 
     # NOTE: sources is a str to identify what news source to pull from
     #       ex: 'bbc-news'
-    def headlines(self, sources=None):
-        return NewsApiClient(self.api_key).get_top_headlines(sources=sources)
+    #       You can find a list of acceptable country codes here: 
+    #       https://github.com/mattlisiv/newsapi-python/blob/master/newsapi/const.py
+    def headlines(self, sources=None, country=None):
+        return NewsApiClient(self.api_key).get_top_headlines(sources=sources, country=country)
 
 
 class NewsService(Service):
@@ -28,18 +33,51 @@ class NewsService(Service):
         else:
             self._api = api
 
-    def get_headlines_info(self, top_headlines):
+    def get_content_info(self, top_headlines):
         content = top_headlines['articles'][0]['content']
         return content
+
+    def get_title_info(self, top_headlines):
+        title = top_headlines['articles'][0]['title']
+        return title
+
+    def get_description_info(self, top_headlines):
+        description = top_headlines['articles'][0]['description']
+        return description
+
+    def clean_text(self, text):
+        text = text.replace("Image copyrightReutersImage caption", "")
+        text = text.replace("\n", " ")
+        text.encode("ascii", errors="ignore")
+        # summary = re.sub('\[.*\]', '', summary)
+        return text
 
     def ask_question(self, client_context, question: str):
         try:
             words  = question.split()
             question = " ".join(words[1:])
-            if words[0] == 'DESCRIPTION':
-                YLogger.debug(client_context, f"source: {question}")
-                top_headlines = self._api.headlines(question)
-                search = self.get_headlines_info(top_headlines)
+            if words[0] == 'SOURCE':
+                top_headlines = self._api.headlines(sources=question)
+                YLogger.debug(client_context, f"top_headlines: {top_headlines}")
+
+                description = self.get_description_info(top_headlines)
+                title = self.get_title_info(top_headlines)
+                
+                YLogger.debug(client_context, f"article description: {description}")
+
+                search = f"The title of the article is {title}, here is a quick summary...{description}"
+
+                # YLogger.debug(client_context, f"search: {search}")
+                # YLogger.debug(client_context, f"search type: {type(search)}")
+            elif words[0] == 'COUNTRY':
+                top_headlines = self._api.headlines(country=question)
+
+                description = self.get_description_info(top_headlines)
+                title = self.get_title_info(top_headlines)
+                
+                YLogger.debug(client_context, f"article description: {description}")
+
+                search = f"The title of the article is {title}, here is a quick summary...{description}"
             else:
                 YLogger.error(client_context, "Unknown News API command [%s]", words[0])
                 search = ""
