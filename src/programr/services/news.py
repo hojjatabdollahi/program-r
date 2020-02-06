@@ -77,7 +77,14 @@ class NewsService(Service):
                 
                 YLogger.debug(client_context, f"article description: {description}")
 
-                search = f"The title of the article is {title}, here is a quick summary...{description}"
+                search = f"The title of the article is {title}, here is a quick summary...{description} ."
+                search += " Should I read the full article?"
+            elif words[0] == 'ARTICLE':
+                top_headlines = self._api.headlines(country=question)
+                search = self.get_content_info(top_headlines)
+                search = self.clean_text(search)
+            elif words[0] == 'NEXT':
+                # TODO: Need to find a way to iterate through articles
             else:
                 YLogger.error(client_context, "Unknown News API command [%s]", words[0])
                 search = ""
