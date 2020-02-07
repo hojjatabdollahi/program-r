@@ -148,27 +148,27 @@ brain:
         postprocessors: $BOT_ROOT/config/postprocessors.conf
 
     services:
-        REST:
-            classname: programr.services.rest.GenericRESTService
-            method: GET
-            host: 0.0.0.0
-        Pannous:
-            classname: programr.services.pannous.PannousService
-            url: http://weannie.pannous.com/api
-        Pandora:
-            classname: programr.services.pandora.PandoraService
-            url: http://www.pandorabots.com/pandora/talk-xml
+        # REST:
+        #     classname: programr.services.rest.GenericRESTService
+        #     method: GET
+        #     host: 0.0.0.0
+        # Pannous:
+        #     classname: programr.services.pannous.PannousService
+        #     url: http://weannie.pannous.com/api
+        # Pandora:
+        #     classname: programr.services.pandora.PandoraService
+        #     url: http://www.pandorabots.com/pandora/talk-xml
         Wikipedia:
             classname: programr.services.wikipediaservice.WikipediaService
 
-        Mitsuku:
-            classname: programr.services.mitsuku.MitsukuService
-            username: epr_finman@yahoo.com
-            password: $BOT_ROOT/password.txt
+        # Mitsuku:
+        #     classname: programr.services.mitsuku.MitsukuService
+        #     username: epr_finman@yahoo.com
+        #     password: $BOT_ROOT/password.txt
 
-        Chomsky:
-            classname: programr.services.chomsky.ChomskyService
-            url: http://demo.vhost.pandorabots.com/pandora/talk?botid=b0dafd24ee35a477
+        # Chomsky:
+        #     classname: programr.services.chomsky.ChomskyService
+        #     url: http://demo.vhost.pandorabots.com/pandora/talk?botid=b0dafd24ee35a477
 
 
     oob:

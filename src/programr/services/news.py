@@ -85,6 +85,7 @@ class NewsService(Service):
                 search = self.clean_text(search)
             elif words[0] == 'NEXT':
                 # TODO: Need to find a way to iterate through articles
+                search = ""
             else:
                 YLogger.error(client_context, "Unknown News API command [%s]", words[0])
                 search = ""
