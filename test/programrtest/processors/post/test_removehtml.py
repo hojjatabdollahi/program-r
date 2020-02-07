@@ -17,7 +17,7 @@ class RemoveHTMLTests(unittest.TestCase):
         self.assertIsNotNone(result)
         self.assertEqual("Hello World", result)
 
-        result = processor.process(context, "Hello <br/> World")
+        result = processor.process(context, "Hello  
         self.assertIsNotNone(result)
         if os.name == 'posix':
             self.assertEqual("Hello\nWorld", result)

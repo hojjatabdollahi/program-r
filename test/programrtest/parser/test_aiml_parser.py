@@ -589,7 +589,7 @@ class AIMLParserTests(unittest.TestCase):
             <aiml>
                 <category>
                     <pattern>HELLO</pattern>
-                    <template>Hello  <br/> World</template>
+                    <template>Hello    World</template>
                 </category>
             </aiml>
             """)

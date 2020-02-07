@@ -45,7 +45,7 @@ For more information see [url]
 		<pattern>TEST2</pattern>
 		<template>
 			Line1
-			<br/>
+			 
 			Line2
 		</template>
 	</category>

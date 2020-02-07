@@ -33,15 +33,15 @@
 </template>
 </category>   
 
-<category><pattern>ON THIS DAY</pattern><template>On this day in history <date format="%B %d"/>:<br/><br/>
+<category><pattern>ON THIS DAY</pattern><template>On this day in history <date format="%B %d"/>:  
 <srai><date format="%B %d"/></srai></template></category>   
 
 <category>
 <pattern>JANUARY 01</pattern>
 <template>
-1785 - The Daily Universal Register was first published (later to become The Times newspaper)<br/>
-1958 - The EEC came into being<br/>
-1959 - Fidel Castro came to power in Cuba<br/>
+1785 - The Daily Universal Register was first published (later to become The Times newspaper) 
+1958 - The EEC came into being 
+1959 - Fidel Castro came to power in Cuba 
 1973 - Britain and Ireland joined the EEC
 <oob><robot></robot></oob>
 </template>
@@ -50,7 +50,7 @@
 <category>
 <pattern>JANUARY 02</pattern>
 <template>
-1769 - The opening of the Royal Academy<br/>
+1769 - The opening of the Royal Academy 
 1971 - The Ibrox disatser at the Rangers v Celtic match
 <oob><robot></robot></oob>
 </template>
@@ -59,7 +59,7 @@
 <category>
 <pattern>JANUARY 03</pattern>
 <template>
-1924 - Howard Carter discovered the sarcophagus of Tutankhamun<br/>
+1924 - Howard Carter discovered the sarcophagus of Tutankhamun 
 1959 - Alaska became the forty-ninth US State
 <oob><robot></robot></oob>
 </template>
@@ -76,7 +76,7 @@
 <category>
 <pattern>JANUARY 05</pattern>
 <template>
-1066 - Edward the Confessor died thus setting in motion a train of events which led to the Norman Conquest<br/>
+1066 - Edward the Confessor died thus setting in motion a train of events which led to the Norman Conquest 
 1981 - Peter Sutcliffe (the Yorkshire Ripper) was arrested and charged with murder
 <oob><robot></robot></oob>
 </template>
@@ -93,7 +93,7 @@
 <category>
 <pattern>JANUARY 07</pattern>
 <template>
-1558 - England lost her last possession on the mainland of France when the French recaptured Calais<br/>
+1558 - England lost her last possession on the mainland of France when the French recaptured Calais 
 1785 - The first airborne crossing of the English Channel by Jean Pierre Blanchard
 <oob><robot></robot></oob>
 </template>
@@ -102,7 +102,7 @@
 <category>
 <pattern>JANUARY 08</pattern>
 <template>
-1815 - The Battle of New Orleans<br/>
+1815 - The Battle of New Orleans 
 1959 - Charles de Gaulle became President of France
 <oob><robot></robot></oob>
 </template>
@@ -111,8 +111,8 @@
 <category>
 <pattern>JANUARY 09</pattern>
 <template>
-1799 - Income Tax was introduced in Britain<br/>
-1957 - Anthony Eden resigned as Prime Minister<br/>
+1799 - Income Tax was introduced in Britain 
+1957 - Anthony Eden resigned as Prime Minister 
 1972 - The liner Queen Elizabeth caught fire and sank in Hong Kong Harbour
 <oob><robot></robot></oob>
 </template>
@@ -121,9 +121,9 @@
 <category>
 <pattern>JANUARY 10</pattern>
 <template>
-1645 - The Archbishop of Canterbury, William Laud, was beheaded for treason<br/>
-1840 - The Penny Post introduced<br/>
-1863 - The London Underground railway system was opened<br/>
+1645 - The Archbishop of Canterbury, William Laud, was beheaded for treason 
+1840 - The Penny Post introduced 
+1863 - The London Underground railway system was opened 
 1946 - The first meeting of the United Nations' General Assembly (in London)
 <oob><robot></robot></oob>
 </template>
@@ -172,8 +172,8 @@
 <category>
 <pattern>JANUARY 16</pattern>
 <template>
-1780 - Battle of Cape St Vincent<br/>
-1920 - Prohibition introduced in the United States<br/>
+1780 - Battle of Cape St Vincent 
+1920 - Prohibition introduced in the United States 
 1970 - Colonel Gadaffi appointed Prime Minister of Libya
 <oob><robot></robot></oob>
 </template>
@@ -190,9 +190,9 @@
 <category>
 <pattern>JANUARY 18</pattern>
 <template>
-1778 - Captain Cook discovered Hawaii and named them the Sandwich Islands<br/>
-1919 - The Versailles peace conference opened<br/>
-1943 - The siege of Leningrad lifted<br/>
+1778 - Captain Cook discovered Hawaii and named them the Sandwich Islands 
+1919 - The Versailles peace conference opened 
+1943 - The siege of Leningrad lifted 
 1963 - The death of Hugh Gaitskell
 <oob><robot></robot></oob>
 </template>
@@ -201,7 +201,7 @@
 <category>
 <pattern>JANUARY 19</pattern>
 <template>
-1966 - Indira Gandhi became Prime Minister of India<br/>
+1966 - Indira Gandhi became Prime Minister of India 
 1981 - American hostages released by Islamic Fundementalists in Tehran
 <oob><robot></robot></oob>
 </template>
@@ -218,8 +218,8 @@
 <category>
 <pattern>JANUARY 21</pattern>
 <template>
-1793 - Louis XVI of France executed<br/>
-1924 - Death of Lenin<br/>
+1793 - Louis XVI of France executed 
+1924 - Death of Lenin 
 1976 - Inaugural flights of Concorde (from London to Bahrain and from Paris to Rio de Janeiro)
 <oob><robot></robot></oob>
 </template>
@@ -228,8 +228,8 @@
 <category>
 <pattern>JANUARY 22</pattern>
 <template>
-1901 - Death of Queen Victoria<br/>
-1902 - First radio transmission by Marconi<br/>
+1901 - Death of Queen Victoria 
+1902 - First radio transmission by Marconi 
 1924 - Britain's first Labour government came to power
 <oob><robot></robot></oob>
 </template>
@@ -246,8 +246,8 @@
 <category>
 <pattern>JANUARY 24</pattern>
 <template>
-AD 41 - Roman Emperor Caligula murdered in Rome<br/>
-1916 - Conscription introduced in Britain<br/>
+AD 41 - Roman Emperor Caligula murdered in Rome 
+1916 - Conscription introduced in Britain 
 1965 - Death of Sir Winston Churchill
 <oob><robot></robot></oob>
 </template>
@@ -256,7 +256,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JANUARY 25</pattern>
 <template>
-1919 - The League of Nations founded<br/>
+1919 - The League of Nations founded 
 1981 - Social Democrats formed by Williams, Rodgers, Jenkins and Owen
 <oob><robot></robot></oob>
 </template>
@@ -265,8 +265,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JANUARY 26</pattern>
 <template>
-1841 - Hong Kong became British sovereign territory<br/>
-1885 - The murder of General Gordon at Khartoum<br/>
+1841 - Hong Kong became British sovereign territory 
+1885 - The murder of General Gordon at Khartoum 
 1886 - First public demonstration of Carl Benz's motor car
 <oob><robot></robot></oob>
 </template>
@@ -275,7 +275,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JANUARY 27</pattern>
 <template>
-1926 - John Logie Baird demonstrated television at the Royal Institution<br/>
+1926 - John Logie Baird demonstrated television at the Royal Institution 
 1973 - American military action in Vietnam ended
 <oob><robot></robot></oob>
 </template>
@@ -284,7 +284,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JANUARY 28</pattern>
 <template>
-1547 - Death of Henry VIII<br/>
+1547 - Death of Henry VIII 
 1814 - Death of Charlemagne
 <oob><robot></robot></oob>
 </template>
@@ -301,9 +301,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JANUARY 30</pattern>
 <template>
-1933 - Adolf Hitler appointed Chancellor of Germany<br/>
-1649 - Execution of King Charles I<br/>
-1948 - Execution of Mahatma Gandhi<br/>
+1933 - Adolf Hitler appointed Chancellor of Germany 
+1649 - Execution of King Charles I 
+1948 - Execution of Mahatma Gandhi 
 1972 - Thirteen people killed in Londonderry (Bloody Sunday)
 <oob><robot></robot></oob>
 </template>
@@ -312,7 +312,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JANUARY 31</pattern>
 <template>
-1606 - Execution of Guy Fawkes<br/>
+1606 - Execution of Guy Fawkes 
 1958 - First US earth satellite launched
 <oob><robot></robot></oob>
 </template>
@@ -345,7 +345,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 04</pattern>
 <template>
-1861 - Formation of the Confederacy of Southern States<br/>
+1861 - Formation of the Confederacy of Southern States 
 1904 - Russo-Japanese War began
 <oob><robot></robot></oob>
 </template>
@@ -362,8 +362,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 06</pattern>
 <template>
-1918 - The Representation of the People's Act gave votes to married women over the age of 30<br/>
-1952 - Death of King George VI<br/>
+1918 - The Representation of the People's Act gave votes to married women over the age of 30 
+1952 - Death of King George VI 
 1958 - Munich air disaster
 <oob><robot></robot></oob>
 </template>
@@ -380,8 +380,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 08</pattern>
 <template>
-1587 - Mary Queen of Scots executed at Fotheringay Castle<br/>
-1965 - Cigarette advertising was banned on British television<br/>
+1587 - Mary Queen of Scots executed at Fotheringay Castle 
+1965 - Cigarette advertising was banned on British television 
 1983 - Derby winner Shergar was kidnapped
 <oob><robot></robot></oob>
 </template>
@@ -398,8 +398,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 10</pattern>
 <template>
-1567 - Murder of Lord Darnley, husband of Mary Queen of Scots<br/>
-1840 - Marriage of Queen Victoria and Prince Albert<br/>
+1567 - Murder of Lord Darnley, husband of Mary Queen of Scots 
+1840 - Marriage of Queen Victoria and Prince Albert 
 1942 - The first official gold disc presented (to Glen Miller for Chattanooga Choo Choo)
 <oob><robot></robot></oob>
 </template>
@@ -408,7 +408,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 11</pattern>
 <template>
-1585 - St Bernadette's vision of the Virgin at Lourdes<br/>
+1585 - St Bernadette's vision of the Virgin at Lourdes 
 1990 - Release of Nelson Mandella from imprisonment
 <oob><robot></robot></oob>
 </template>
@@ -417,8 +417,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 12</pattern>
 <template>
-1553 - Execution of Lady Jane Grey<br/>
-1688 - Flight of James II to France. William III and Mary declared King and Queen of England<br/>
+1553 - Execution of Lady Jane Grey 
+1688 - Flight of James II to France. William III and Mary declared King and Queen of England 
 1924 - The lid of the sarchophagus of Tutankhamun removed by Howard Carter
 <oob><robot></robot></oob>
 </template>
@@ -427,9 +427,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 13</pattern>
 <template>
-1542 - Catherine Howard, fifth wife of Henry VIII executed<br/>
-1692 - The Glencoe massacre<br/>
-1945 - Fourteen hour blanket bombing of Dresden<br/>
+1542 - Catherine Howard, fifth wife of Henry VIII executed 
+1692 - The Glencoe massacre 
+1945 - Fourteen hour blanket bombing of Dresden 
 1974 - Alexandre Solzhentsyn expelled from the Soviet Union
 <oob><robot></robot></oob>
 </template>
@@ -438,10 +438,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 14</pattern>
 <template>
-1779 - Murder of Captain James Cook in Hawaii<br/>
-1797 - Battle of Cape St Vincent<br/>
-1929 - The St Valentine's Day massacre in Chicago<br/>
-1946 - Bank of England nationalised<br/>
+1779 - Murder of Captain James Cook in Hawaii 
+1797 - Battle of Cape St Vincent 
+1929 - The St Valentine's Day massacre in Chicago 
+1946 - Bank of England nationalised 
 1989 - Fatwa against Salman Rushdie issued by the Ayatollah Khomeni
 <oob><robot></robot></oob>
 </template>
@@ -450,7 +450,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 15</pattern>
 <template>
-1942 - Fall of Singapore to Japanese forces<br/>
+1942 - Fall of Singapore to Japanese forces 
 1971 - Decimalisation of British currency
 <oob><robot></robot></oob>
 </template>
@@ -467,7 +467,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 17</pattern>
 <template>
-1863 - International Red Cross founded in Geneva<br/>
+1863 - International Red Cross founded in Geneva 
 1958 - Founding of the Campaign for Nuclear Disarmament
 <oob><robot></robot></oob>
 </template>
@@ -476,9 +476,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 18</pattern>
 <template>
-1478 - George, Duke of Clarence murdered in the Tower of London<br/>
-1678 - Publication of Pilgrim's Progress<br/>
-1911 - The first airmail service came into operation (in India)<br/>
+1478 - George, Duke of Clarence murdered in the Tower of London 
+1678 - Publication of Pilgrim's Progress 
+1911 - The first airmail service came into operation (in India) 
 1930 - Discovery of the planet Pluto by Clyde Tombaugh
 <oob><robot></robot></oob>
 </template>
@@ -487,7 +487,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 19</pattern>
 <template>
-1800 - Napoleon Bonaparte appointed First Consul (in Paris)<br/>
+1800 - Napoleon Bonaparte appointed First Consul (in Paris) 
 1960 - Birth of Prince Andrew (the Duke of York)
 <oob><robot></robot></oob>
 </template>
@@ -496,8 +496,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 20</pattern>
 <template>
-1437 - Assassination of James I of Scotland<br/>
-1947 - Lord Louis Mountbatten appointed Last Viceroy of India<br/>
+1437 - Assassination of James I of Scotland 
+1947 - Lord Louis Mountbatten appointed Last Viceroy of India 
 1962 - Colonel John Glenn first American to orbit the earth (in Friendship 7)
 <oob><robot></robot></oob>
 </template>
@@ -506,7 +506,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 21</pattern>
 <template>
-1616 - Beginning of the Battle of Verdun<br/>
+1616 - Beginning of the Battle of Verdun 
 1965 - Murder of black muslim leader Malcolm X
 <oob><robot></robot></oob>
 </template>
@@ -523,7 +523,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 23</pattern>
 <template>
-1821 - Death of Johen Keats in Rome<br/>
+1821 - Death of Johen Keats in Rome 
 1836 - The siege of the Alamo begins
 <oob><robot></robot></oob>
 </template>
@@ -532,7 +532,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 24</pattern>
 <template>
-1920 - National Socialist German Workers published its first manifesto<br/>
+1920 - National Socialist German Workers published its first manifesto 
 1920 - First speech by a woman MP in Britain (Lady Astor)
 <oob><robot></robot></oob>
 </template>
@@ -541,7 +541,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 25</pattern>
 <template>
-1601 - Execution of the Earl of Essex for treason<br/>
+1601 - Execution of the Earl of Essex for treason 
 1922 - Execution of the French mass murderer Henry Landru (Bluebeard)
 <oob><robot></robot></oob>
 </template>
@@ -550,7 +550,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 26</pattern>
 <template>
-1797 - First £1 notes issused by the Bank of England<br/>
+1797 - First £1 notes issused by the Bank of England 
 1815 - Escape of Napoleon Bonaparte from Elba
 <oob><robot></robot></oob>
 </template>
@@ -559,7 +559,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 27</pattern>
 <template>
-1900 - Founding of the Parliamentary Labour Party<br/>
+1900 - Founding of the Parliamentary Labour Party 
 1933 - Burning of the Reichstag building in Berlin
 <oob><robot></robot></oob>
 </template>
@@ -568,7 +568,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 28</pattern>
 <template>
-1900 - Relief of Ladysmith by General Buller<br/>
+1900 - Relief of Ladysmith by General Buller 
 1975 - Moorgate train disaster
 1986 - Assassination of Swedish Prime Minister Olaf Palme
 <oob><robot></robot></oob>
@@ -578,7 +578,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>FEBRUARY 29</pattern>
 <template>
-1528 - Patrick Hamilton, Scottish protestant martyr, burned at the stake<br/>
+1528 - Patrick Hamilton, Scottish protestant martyr, burned at the stake 
 1880 - The St Gotthard tunnel between Switzerland and Italy completed
 <oob><robot></robot></oob>
 </template>
@@ -587,7 +587,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 01</pattern>
 <template>
-1932 - Kidnapping of the infant son of aviator Charles Lindbergh<br/>
+1932 - Kidnapping of the infant son of aviator Charles Lindbergh 
 1959 - Archbishop Makarios returned to Cyprus from exile
 <oob><robot></robot></oob>
 </template>
@@ -596,9 +596,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 02</pattern>
 <template>
-1958 - First overland crossing of Antarctica completed by British team lead by Dr Vivien Fuchs<br/>
-1970 - Rhodesia became a republic under Ian Smith<br/>
-1974 - US Grand Jury ruled that President Richard Nixon was involved in the Watergate scandal<br/>
+1958 - First overland crossing of Antarctica completed by British team lead by Dr Vivien Fuchs 
+1970 - Rhodesia became a republic under Ian Smith 
+1974 - US Grand Jury ruled that President Richard Nixon was involved in the Watergate scandal 
 1988 - Merger of Liberal and Social Democratic parties in Britain
 <oob><robot></robot></oob>
 </template>
@@ -623,7 +623,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 05</pattern>
 <template>
-1946 - Churchill made his famous Iron Curtain speech at Fulford, Missouri<br/>
+1946 - Churchill made his famous Iron Curtain speech at Fulford, Missouri 
 1953 - Death of Joseph Stalin
 <oob><robot></robot></oob>
 </template>
@@ -632,8 +632,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 06</pattern>
 <template>
-1836 - The Alamo fell to Mexican forces<br/>
-1987 - Zeebrugge disaster involving the ferry Herald of Free Enterprise<br/>
+1836 - The Alamo fell to Mexican forces 
+1987 - Zeebrugge disaster involving the ferry Herald of Free Enterprise 
 1988 - Three IRA terrorists shot dead in Gibraltar by members of the SAS
 <oob><robot></robot></oob>
 </template>
@@ -642,7 +642,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 07</pattern>
 <template>
-1876 - Alexander Graham Bell patented his telephone<br/>
+1876 - Alexander Graham Bell patented his telephone 
 1912 - Frenchman Henri Seimet became the first man to fly nonstop from Paris to London
 <oob><robot></robot></oob>
 </template>
@@ -651,7 +651,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 08</pattern>
 <template>
-1910 - Baroness de Laroche first woman to receive a pilot's licence<br/>
+1910 - Baroness de Laroche first woman to receive a pilot's licence 
 1966 - IRA bomb destroyed Nelson's Column in O'Connell Street, Dublin
 <oob><robot></robot></oob>
 </template>
@@ -668,8 +668,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 10</pattern>
 <template>
-1876 - Alexander Graham Bell made the first telephone call<br/>
-1948 - Death of Czech Foreign Minister Jan Masaryk<br/>
+1876 - Alexander Graham Bell made the first telephone call 
+1948 - Death of Czech Foreign Minister Jan Masaryk 
 1964 - Birth of Prince Edward
 <oob><robot></robot></oob>
 </template>
@@ -678,8 +678,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 11</pattern>
 <template>
-1682 - Royal Chelsea Hospital founded<br/>
-1985 - Mikhail Gorbachev appointed General Secretary of the Communist Party of the Soviet Union<br/>
+1682 - Royal Chelsea Hospital founded 
+1985 - Mikhail Gorbachev appointed General Secretary of the Communist Party of the Soviet Union 
 1988 - The Bank of England £1 note ceased to be legal tender
 <oob><robot></robot></oob>
 </template>
@@ -688,7 +688,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 12</pattern>
 <template>
-1945 - Death of Anne Frank<br/>
+1945 - Death of Anne Frank 
 1969 - Marriage of Paul McCartney to Linda Eastman
 <oob><robot></robot></oob>
 </template>
@@ -697,9 +697,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 13</pattern>
 <template>
-1781 - Discovery of the planet Uranus by Herschel<br/>
-1881 - Assassination of Tsar Alexander II of Russia<br/>
-1935 - Introduction of driving test in Britain<br/>
+1781 - Discovery of the planet Uranus by Herschel 
+1881 - Assassination of Tsar Alexander II of Russia 
+1935 - Introduction of driving test in Britain 
 1938 - Invasion of Austria by Germany
 <oob><robot></robot></oob>
 </template>
@@ -708,8 +708,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 14</pattern>
 <template>
-1757 - Execution of Admiral Byng<br/>
-1925 - First trans-Atlantic broadcast<br/>
+1757 - Execution of Admiral Byng 
+1925 - First trans-Atlantic broadcast 
 1953 - Nikita Khrushchev appointed first Secretary of the Soviet Communist Party
 <oob><robot></robot></oob>
 </template>
@@ -718,9 +718,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 15</pattern>
 <template>
-44 BC - Assassination of Julius Caeser<br/>
-1877 - First ever Cricket Test Match between England and Australia started in Melbourne<br/>
-1917 - Abdication of Tsar Nicholas II of Russia<br/>
+44 BC - Assassination of Julius Caeser 
+1877 - First ever Cricket Test Match between England and Australia started in Melbourne 
+1917 - Abdication of Tsar Nicholas II of Russia 
 1949 - Ending of clothes rationing in Britain
 <oob><robot></robot></oob>
 </template>
@@ -729,7 +729,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 16</pattern>
 <template>
-1872 - First FA Cup Final played (at Kennington Oval)<br/>
+1872 - First FA Cup Final played (at Kennington Oval) 
 1968 - Mai Lai massacre in Vietnam
 <oob><robot></robot></oob>
 </template>
@@ -738,8 +738,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 17</pattern>
 <template>
-1921 - Dr Marie Stopes opened Britain's first birth control clinic<br/>
-1969 - Golda Meir appointed Prime Minister of Israel<br/>
+1921 - Dr Marie Stopes opened Britain's first birth control clinic 
+1969 - Golda Meir appointed Prime Minister of Israel 
 1978 - Grounding of the oil tanker Amoco Cadiz on the Brittany Coast
 <oob><robot></robot></oob>
 </template>
@@ -748,15 +748,15 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 18</pattern>
 <template>
-978 - Assassination of King Edward the Martyr at Corfe Castle<br/>
-1584 - Death of Ivan the Terrible of Russia<br/>
-1834 - The Tolpuddle Martyrs sentenced to transportation<br/>
-1871 - Communard uprising in Paris<br/>
-1922 - Mahatma Gandhi sentenced to six years' imprisonment<br/>
-1935 - 30-mph speed limit introduced in Britain in built-up areas<br/>
-1949 - Establishment of NATO<br/>
-1965 - First space walk (by cosmonaut Colonel Alexei Leonov)<br/>
-1967 - Grounding of the oil tanker Torrey Canyon off Land's End<br/>
+978 - Assassination of King Edward the Martyr at Corfe Castle 
+1584 - Death of Ivan the Terrible of Russia 
+1834 - The Tolpuddle Martyrs sentenced to transportation 
+1871 - Communard uprising in Paris 
+1922 - Mahatma Gandhi sentenced to six years' imprisonment 
+1935 - 30-mph speed limit introduced in Britain in built-up areas 
+1949 - Establishment of NATO 
+1965 - First space walk (by cosmonaut Colonel Alexei Leonov) 
+1967 - Grounding of the oil tanker Torrey Canyon off Land's End 
 1978 - Former Italian prime minister Aldo Morro kidnapped
 <oob><robot></robot></oob>
 </template>
@@ -773,8 +773,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 20</pattern>
 <template>
-1549 - Thomas Seymour executed for treason<br/>
-1974 - Attempted kidnap of Princess Anne in The Mall<br/>
+1549 - Thomas Seymour executed for treason 
+1974 - Attempted kidnap of Princess Anne in The Mall 
 1976 - Patty Hearst, newspaper heiress, found guilty of armed robbery
 <oob><robot></robot></oob>
 </template>
@@ -783,7 +783,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 21</pattern>
 <template>
-1556 - Execution at the stake of Thomas Cranmer for heresy<br/>
+1556 - Execution at the stake of Thomas Cranmer for heresy 
 1960 - Sharpeville massacre in South Africa
 <oob><robot></robot></oob>
 </template>
@@ -792,7 +792,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 22</pattern>
 <template>
-1895 - First public performance of moving film<br/>
+1895 - First public performance of moving film 
 1945 - Formation of the Arab League
 <oob><robot></robot></oob>
 </template>
@@ -810,9 +810,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <pattern>MARCH 24</pattern>
 <template>
 1603 - Death of Elizabeth I
-1603 - Union of English and Scottish crowns when James VI of Scotland acceded to the English throne<br/>
-1801 - Assassination of Paul I, Tsar of Russia<br/>
-1976 - Isabel Peron deposed as President of Argentina<br/>
+1603 - Union of English and Scottish crowns when James VI of Scotland acceded to the English throne 
+1801 - Assassination of Paul I, Tsar of Russia 
+1976 - Isabel Peron deposed as President of Argentina 
 1980 - Murder of Archbishop Oscar Romero in San Salvador
 <oob><robot></robot></oob>
 </template>
@@ -821,7 +821,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 25</pattern>
 <template>
-1807 - Abolition of the slave trade in Britain<br/>
+1807 - Abolition of the slave trade in Britain 
 1957 - Signing of the Treaty of Rome by the six founder members of the EEC
 <oob><robot></robot></oob>
 </template>
@@ -830,7 +830,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 26</pattern>
 <template>
-1827 - Death of Beethoven<br/>
+1827 - Death of Beethoven 
 1945 - Death of David Lloyd George
 <oob><robot></robot></oob>
 </template>
@@ -839,8 +839,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 27</pattern>
 <template>
-1942 - Commando raid at St Nazaire<br/>
-1968 - Death of Yuri Gagarin in plane crash<br/>
+1942 - Commando raid at St Nazaire 
+1968 - Death of Yuri Gagarin in plane crash 
 1989 - First democratic election for the Soviet parliament
 <oob><robot></robot></oob>
 </template>
@@ -849,8 +849,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 28</pattern>
 <template>
-1854 - Britain entered the Crimean War<br/>
-1939 - Franco's forces took Madrid. End of Spanish Civil War<br/>
+1854 - Britain entered the Crimean War 
+1939 - Franco's forces took Madrid. End of Spanish Civil War 
 1941 - Battle of Cape Matapan
 <oob><robot></robot></oob>
 </template>
@@ -859,7 +859,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 29</pattern>
 <template>
-1461 - Battle of Towton<br/>
+1461 - Battle of Towton 
 1871 - Royal Albert Hall opened
 <oob><robot></robot></oob>
 </template>
@@ -876,8 +876,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MARCH 31</pattern>
 <template>
-1889 - Eiffel Tower opened<br/>
-1959 - Dalia Lama fled Tibet<br/>
+1889 - Eiffel Tower opened 
+1959 - Dalia Lama fled Tibet 
 1986 - Hampton Court Palace severly damaged by fire
 <oob><robot></robot></oob>
 </template>
@@ -886,10 +886,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 01</pattern>
 <template>
-1908 - Formation of the Territorial Army<br/>
-1918 - Formation of the Royal Air Force<br/>
-1947 - School leaving age raised to 15<br/>
-1948 - Blockade of Berlin by Soviet troops began<br/>
+1908 - Formation of the Territorial Army 
+1918 - Formation of the Royal Air Force 
+1947 - School leaving age raised to 15 
+1948 - Blockade of Berlin by Soviet troops began 
 1973 - VAT introduced in the UK
 <oob><robot></robot></oob>
 </template>
@@ -898,8 +898,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 02</pattern>
 <template>
-1801 - Battle of Copenhagen<br/>
-1905 - The Simplon Tunnel officially opened<br/>
+1801 - Battle of Copenhagen 
+1905 - The Simplon Tunnel officially opened 
 1982 - Invasion of the Falkland Islands by Argentina
 <oob><robot></robot></oob>
 </template>
@@ -908,8 +908,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 03</pattern>
 <template>
-1860 - Founding of the Pony Express<br/>
-1882 - Jesse James shot dead<br/>
+1860 - Founding of the Pony Express 
+1882 - Jesse James shot dead 
 1913 - Emmeline Pankhurst found guilty of inciting arson and sentenced to 3 years' imprisonment
 <oob><robot></robot></oob>
 </template>
@@ -918,7 +918,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 04</pattern>
 <template>
-1968 - Assassination of Dr Martin Luther King<br/>
+1968 - Assassination of Dr Martin Luther King 
 1979 - Execution of ex-President of Pakistan, Zulfikar Ali Bhutto
 <oob><robot></robot></oob>
 </template>
@@ -927,8 +927,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 05</pattern>
 <template>
-1794 - Execution of French revolutionary leader Danton<br/>
-1895 - Arrest of Oscar Wilde at the Cadogen Hotel<br/>
+1794 - Execution of French revolutionary leader Danton 
+1895 - Arrest of Oscar Wilde at the Cadogen Hotel 
 1955 - Sir Winston Churchill resigned as Prime Minister
 <oob><robot></robot></oob>
 </template>
@@ -937,11 +937,11 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 06</pattern>
 <template>
-1199 - Death of King Richard I<br/>
-1830 - Founding of the Mormon Church<br/>
-1896 - First modern Olympic Games opened (in Athens)<br/>
-1909 - Commander Robert Peary became the first man to reach the North Pole<br/>
-1917 - United States of America entered World War I<br/>
+1199 - Death of King Richard I 
+1830 - Founding of the Mormon Church 
+1896 - First modern Olympic Games opened (in Athens) 
+1909 - Commander Robert Peary became the first man to reach the North Pole 
+1917 - United States of America entered World War I 
 1944 - Introduction of PAYE (Pay As You Earn) in Britain
 <oob><robot></robot></oob>
 </template>
@@ -950,7 +950,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 07</pattern>
 <template>
-1739 - Hanging of Dick Turpin at York<br/>
+1739 - Hanging of Dick Turpin at York 
 1958 - First "Ban The Bomb" march (to Aldermaston)
 <oob><robot></robot></oob>
 </template>
@@ -959,7 +959,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 08</pattern>
 <template>
-1838 - Maiden voyage of the Great Western<br/>
+1838 - Maiden voyage of the Great Western 
 1904 - Ratification of the Entente Cordiale
 <oob><robot></robot></oob>
 </template>
@@ -984,9 +984,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 11</pattern>
 <template>
-1713 - Treaty of Utrecht signed<br/>
-1814 - Abdication of Napoleon Bonaparte<br/>
-1961 - Trial of Adolf Eichmann began in Jerusalem<br/>
+1713 - Treaty of Utrecht signed 
+1814 - Abdication of Napoleon Bonaparte 
+1961 - Trial of Adolf Eichmann began in Jerusalem 
 1981 - By-election at Fermanagh and South Tyrone won by IRA hunger striker Bobby Sands
 <oob><robot></robot></oob>
 </template>
@@ -995,9 +995,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 12</pattern>
 <template>
-1606 - The Union Flag became the official flag of Britain<br/>
-1861 - Start of the American Civil War<br/>
-1945 - Death of Franklin D Roosevelt<br/>
+1606 - The Union Flag became the official flag of Britain 
+1861 - Start of the American Civil War 
+1945 - Death of Franklin D Roosevelt 
 1961 - First manned space flight (by Yuri Gagarin)
 <oob><robot></robot></oob>
 </template>
@@ -1006,7 +1006,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 13</pattern>
 <template>
-1605 - Death of Boris Godunov (Tsar of Russia)<br/>
+1605 - Death of Boris Godunov (Tsar of Russia) 
 1668 - First Poet Laureate appointed (John Dryden)
 <oob><robot></robot></oob>
 </template>
@@ -1039,8 +1039,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 17</pattern>
 <template>
-1521 - Martin Luther excommunicated<br/>
-1963 - Greville Wynne charged with espionage in Moscow<br/>
+1521 - Martin Luther excommunicated 
+1963 - Greville Wynne charged with espionage in Moscow 
 1984 - WPC Yvonne Fletcher shot dead outside the Libyan People's Bureau in London
 <oob><robot></robot></oob>
 </template>
@@ -1049,9 +1049,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 18</pattern>
 <template>
-1906 - San Francisco earthquake<br/>
-1946 - League of Nations dissolved in Geneva<br/>
-1949 - The Republic of Ireland established<br/>
+1906 - San Francisco earthquake 
+1946 - League of Nations dissolved in Geneva 
+1949 - The Republic of Ireland established 
 1954 - Colonel Nasser seized power in Egypt
 <oob><robot></robot></oob>
 </template>
@@ -1060,8 +1060,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 19</pattern>
 <template>
-1775 - Start of the American War of Independence<br/>
-1881 - Death of Disraeli<br/>
+1775 - Start of the American War of Independence 
+1881 - Death of Disraeli 
 1961 - Bay of Pigs invasion in Cuba
 <oob><robot></robot></oob>
 </template>
@@ -1070,7 +1070,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 20</pattern>
 <template>
-1653 - Dissolution of the Long Parliament<br/>
+1653 - Dissolution of the Long Parliament 
 1657 - Spanish fleet destroyed at Santa Cruz by Admiral Blake
 <oob><robot></robot></oob>
 </template>
@@ -1079,10 +1079,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 21</pattern>
 <template>
-1509 - Death of King Henry VII<br/>
-1918 - Baron Manfred von Richthofen shot down in action<br/>
-1926 - Birth of Her Majesty the Queen<br/>
-1960 - Brasilia inaugurated as new capital of Brazil<br/>
+1509 - Death of King Henry VII 
+1918 - Baron Manfred von Richthofen shot down in action 
+1926 - Birth of Her Majesty the Queen 
+1960 - Brasilia inaugurated as new capital of Brazil 
 1989 - Start of Tiananmen Square protests by Chinese students
 <oob><robot></robot></oob>
 </template>
@@ -1091,7 +1091,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 22</pattern>
 <template>
-1915 - First use of poison gas (by Germans at Ypres)<br/>
+1915 - First use of poison gas (by Germans at Ypres) 
 1983 - Introduction of £1 coins in Britain
 <oob><robot></robot></oob>
 </template>
@@ -1100,8 +1100,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 23</pattern>
 <template>
-1616 - Death of William Shakespeare (he was also born on this day in 1564)<br/>
-1968 - First decimal coins circulated (5p and 10p)<br/>
+1616 - Death of William Shakespeare (he was also born on this day in 1564) 
+1968 - First decimal coins circulated (5p and 10p) 
 1984 - Announcement of the discovery of the AIDS virus
 <oob><robot></robot></oob>
 </template>
@@ -1110,7 +1110,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 24</pattern>
 <template>
-1895 - Joshua Slocum began his single-handed circumnavigation<br/>
+1895 - Joshua Slocum began his single-handed circumnavigation 
 1949 - Sweet and chocolate rationing ended in Britain
 <oob><robot></robot></oob>
 </template>
@@ -1119,7 +1119,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 25</pattern>
 <template>
-1859 - Work began on construction of the Suez Canal<br/>
+1859 - Work began on construction of the Suez Canal 
 1916 - Easter uprising in Dublin
 <oob><robot></robot></oob>
 </template>
@@ -1128,7 +1128,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 26</pattern>
 <template>
-1937 - Bombing of Guernica in Spanish Civil War<br/>
+1937 - Bombing of Guernica in Spanish Civil War 
 1986 - Chernobyl disaster
 <oob><robot></robot></oob>
 </template>
@@ -1145,9 +1145,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 28</pattern>
 <template>
-1770 - Captain James Cook landed at Botany Bay<br/>
-1789 - The Mutiny on the Bounty<br/>
-1945 - Assassination of Mussolini in Milan<br/>
+1770 - Captain James Cook landed at Botany Bay 
+1789 - The Mutiny on the Bounty 
+1945 - Assassination of Mussolini in Milan 
 1969 - Resignation of Charles de Gaulle as President of France
 <oob><robot></robot></oob>
 </template>
@@ -1156,7 +1156,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 29</pattern>
 <template>
-1885 - Women admitted to Oxford University examinations for the first time<br/>
+1885 - Women admitted to Oxford University examinations for the first time 
 1945 - Surrender of Germans in Italy to the Allies
 <oob><robot></robot></oob>
 </template>
@@ -1165,9 +1165,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>APRIL 30</pattern>
 <template>
-311 - Legal recognition of Christianity in the Roman Empire<br/>
-1789 - Inauguration of George Washington as first president of the USA<br/>
-1945 - Suicide of Hitler<br/>
+311 - Legal recognition of Christianity in the Roman Empire 
+1789 - Inauguration of George Washington as first president of the USA 
+1945 - Suicide of Hitler 
 1975 - End of Vietnam War
 <oob><robot></robot></oob>
 </template>
@@ -1176,10 +1176,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 01</pattern>
 <template>
-1851 - Opening of the Great Exhibition<br/>
-1931 - Opening of the Empire State Building<br/>
-1960 - U-2 spy plane shot down over the USSR<br/>
-1961 - Betting shops legalised in Britain<br/>
+1851 - Opening of the Great Exhibition 
+1931 - Opening of the Empire State Building 
+1960 - U-2 spy plane shot down over the USSR 
+1961 - Betting shops legalised in Britain 
 1978 - First May Day Bank Holiday in Great Britain
 <oob><robot></robot></oob>
 </template>
@@ -1188,7 +1188,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 02</pattern>
 <template>
-1936 - Emperor Haile Selassie fled Abyssinia in the face of Italian invasion<br/>
+1936 - Emperor Haile Selassie fled Abyssinia in the face of Italian invasion 
 1982 - Sinking of the Argentinian battleship General Belgrano
 <oob><robot></robot></oob>
 </template>
@@ -1197,8 +1197,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 03</pattern>
 <template>
-1926 - Start of the General Strike<br/>
-1951 - Opening of the Festival of Britain<br/>
+1926 - Start of the General Strike 
+1951 - Opening of the Festival of Britain 
 1968 - First heart transplant in Britain
 <oob><robot></robot></oob>
 </template>
@@ -1207,9 +1207,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 04</pattern>
 <template>
-1780 - Running of the first Derby stakes (won by Diomed)<br/>
-1979 - Conservative election victory (Margaret Thatcher became Britain's first woman Prime Minister)<br/>
-1982 - HMS Sheffield sunk by Exocet missile during the Falklands War<br/>
+1780 - Running of the first Derby stakes (won by Diomed) 
+1979 - Conservative election victory (Margaret Thatcher became Britain's first woman Prime Minister) 
+1982 - HMS Sheffield sunk by Exocet missile during the Falklands War 
 1989 - Colonel Oliver North convicted of supplying arms to the Contras
 <oob><robot></robot></oob>
 </template>
@@ -1218,7 +1218,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 05</pattern>
 <template>
-1821 - Death of Napoleon Bonaparte<br/>
+1821 - Death of Napoleon Bonaparte 
 1980 - Storming of the Iranian Embassy by SAS
 <oob><robot></robot></oob>
 </template>
@@ -1227,10 +1227,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 06</pattern>
 <template>
-1626 - Manhattan Island purchased by Peter Minuit<br/>
-1910 - Death of King Edward VII<br/>
-1937 - Hindenburg airship disaster in New Jersey<br/>
-1954 - Running of the first four-minute mile (by Roger Bannister at Oxford)<br/>
+1626 - Manhattan Island purchased by Peter Minuit 
+1910 - Death of King Edward VII 
+1937 - Hindenburg airship disaster in New Jersey 
+1954 - Running of the first four-minute mile (by Roger Bannister at Oxford) 
 1974 - Resignation of German Chancellor Willy Brandt, because of a spy scandal
 <oob><robot></robot></oob>
 </template>
@@ -1239,7 +1239,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 07</pattern>
 <template>
-1915 - Torpedoing of the liner Lusitania off the Irish Coast<br/>
+1915 - Torpedoing of the liner Lusitania off the Irish Coast 
 1945 - The final surrender of German forces (at Rheims)
 <oob><robot></robot></oob>
 </template>
@@ -1248,7 +1248,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 08</pattern>
 <template>
-1961 - Diplomat George Blake jailed for over 40 years for espionage<br/>
+1961 - Diplomat George Blake jailed for over 40 years for espionage 
 1984 - Thames Barrier opened
 <oob><robot></robot></oob>
 </template>
@@ -1257,7 +1257,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 09</pattern>
 <template>
-1946 - Abdication of Victor Emmanuel III of Italy<br/>
+1946 - Abdication of Victor Emmanuel III of Italy 
 1955 - West Germany admitted to NATO
 <oob><robot></robot></oob>
 </template>
@@ -1266,10 +1266,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 10</pattern>
 <template>
-1857 - Start of the Indian mutiny<br/>
-1940 - Churchill appointed Prime Minister on the resignation of Chamberlain<br/>
-1941 - Worst day of the London Blitz<br/>
-1941 - Rudolf Hess landed in Scotland<br/>
+1857 - Start of the Indian mutiny 
+1940 - Churchill appointed Prime Minister on the resignation of Chamberlain 
+1941 - Worst day of the London Blitz 
+1941 - Rudolf Hess landed in Scotland 
 1981 - Francois Mitterand elected President of France
 <oob><robot></robot></oob>
 </template>
@@ -1278,7 +1278,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 11</pattern>
 <template>
-1812 - Assassination of Prime Minister Spencer Perceval<br/>
+1812 - Assassination of Prime Minister Spencer Perceval 
 1985 - Forty people killed at Bradford City football ground in a fire
 <oob><robot></robot></oob>
 </template>
@@ -1287,8 +1287,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 12</pattern>
 <template>
-1926 - End of the General Strike<br/>
-1949 - End of the Russian blockade of Berlin<br/>
+1926 - End of the General Strike 
+1949 - End of the Russian blockade of Berlin 
 1969 - Voting age lowered to 18
 <oob><robot></robot></oob>
 </template>
@@ -1305,7 +1305,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 14</pattern>
 <template>
-1940 - Local Defence Volunteer Force (Home Guard) formed<br/>
+1940 - Local Defence Volunteer Force (Home Guard) formed 
 1948 - State of Israel proclaimed
 <oob><robot></robot></oob>
 </template>
@@ -1322,9 +1322,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 16</pattern>
 <template>
-1763 - Dr Johnson met James Boswell for the first time<br/>
-1929 - First Academy Awards ceremony<br/>
-1943 - "Dambusters" raid by 617 Squadron<br/>
+1763 - Dr Johnson met James Boswell for the first time 
+1929 - First Academy Awards ceremony 
+1943 - "Dambusters" raid by 617 Squadron 
 1983 - First use of wheel clamps in London
 <oob><robot></robot></oob>
 </template>
@@ -1349,8 +1349,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 19</pattern>
 <template>
-1536 - Execution of Anne Boleyn<br/>
-1898 - Death of Gladstone<br/>
+1536 - Execution of Anne Boleyn 
+1898 - Death of Gladstone 
 1980 - Eruption of Mount St Helens in Washington State, USA
 <oob><robot></robot></oob>
 </template>
@@ -1359,7 +1359,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 20</pattern>
 <template>
-1506 - Death of Christopher Columbus<br/>
+1506 - Death of Christopher Columbus 
 1956 - USA's first "H" bomb test (over Bikini Atoll)
 <oob><robot></robot></oob>
 </template>
@@ -1368,7 +1368,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 21</pattern>
 <template>
-1916 - Introduction of British Summertime<br/>
+1916 - Introduction of British Summertime 
 1927 - Charles Lindbergh completed his solo Atlantic crossing
 <oob><robot></robot></oob>
 </template>
@@ -1393,7 +1393,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 24</pattern>
 <template>
-1844 - First transmission of a Morse message on a US telegraph line (from Washington to Baltimore)<br/>
+1844 - First transmission of a Morse message on a US telegraph line (from Washington to Baltimore) 
 1941 - Sinking of HMS Hood by German battleship Bismarck
 <oob><robot></robot></oob>
 </template>
@@ -1402,7 +1402,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 25</pattern>
 <template>
-1871 - Passing of the Bank Holiday Act which created public holidays at Easter, Whit and Christmas<br/>
+1871 - Passing of the Bank Holiday Act which created public holidays at Easter, Whit and Christmas 
 1951 - "Disappearance" of Burgess and Maclean
 <oob><robot></robot></oob>
 </template>
@@ -1411,8 +1411,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 26</pattern>
 <template>
-1865 - End of the American Civil War<br/>
-1868 - Last public execution in England (at Newgate Prison)<br/>
+1865 - End of the American Civil War 
+1868 - Last public execution in England (at Newgate Prison) 
 1950 - Petrol rationing ended in Britain
 <oob><robot></robot></oob>
 </template>
@@ -1421,9 +1421,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 27</pattern>
 <template>
-1679 - Passing of the Habeas Corpus Act<br/>
-1936 - Maiden voyage of the Queen Mary<br/>
-1941 - Sinking of the German battleship Bismarck<br/>
+1679 - Passing of the Habeas Corpus Act 
+1936 - Maiden voyage of the Queen Mary 
+1941 - Sinking of the German battleship Bismarck 
 1964 - Death of Nehru
 <oob><robot></robot></oob>
 </template>
@@ -1432,7 +1432,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 28</pattern>
 <template>
-1967 - Completion of solo circumnavigation of the globe by Francis Chichester<br/>
+1967 - Completion of solo circumnavigation of the globe by Francis Chichester 
 1972 - Death of the Duke of Windsor
 <oob><robot></robot></oob>
 </template>
@@ -1441,10 +1441,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 29</pattern>
 <template>
-1453 - Fall of Constantinople to the Turks<br/>
-1660 - Restoration of the monarchy. Charles II returned to Lndon<br/>
-1871 - First British bank holiday<br/>
-1953 - Hillary and Tenzing reached the summit of Everest<br/>
+1453 - Fall of Constantinople to the Turks 
+1660 - Restoration of the monarchy. Charles II returned to Lndon 
+1871 - First British bank holiday 
+1953 - Hillary and Tenzing reached the summit of Everest 
 1985 - Heysel Stadium disaster in Brussels
 <oob><robot></robot></oob>
 </template>
@@ -1453,8 +1453,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 30</pattern>
 <template>
-1431 - Joan of Arc burned at the stake at Rouen<br/>
-1593 - Christopher Marlowe killed in a tavern brawl in London<br/>
+1431 - Joan of Arc burned at the stake at Rouen 
+1593 - Christopher Marlowe killed in a tavern brawl in London 
 1959 - First hovercraft flight
 <oob><robot></robot></oob>
 </template>
@@ -1463,9 +1463,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>MAY 31</pattern>
 <template>
-1669 - Last entry in the diary of Samuel Pepys<br/>
-1902 - End of the Boer War<br/>
-1916 - Battle of Jutland<br/>
+1669 - Last entry in the diary of Samuel Pepys 
+1902 - End of the Boer War 
+1916 - Battle of Jutland 
 1961 - South Africa declared a republic and left the British Commonwealth
 <oob><robot></robot></oob>
 </template>
@@ -1474,7 +1474,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 01</pattern>
 <template>
-1946 - Television licences introduced in Britain (£2)<br/>
+1946 - Television licences introduced in Britain (£2) 
 1957 - The first Premium Bond winner drawn
 <oob><robot></robot></oob>
 </template>
@@ -1483,9 +1483,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 02</pattern>
 <template>
-1868 - First Trade Union Congress convened<br/>
-1953 - Coronation of HM Queen Elizabeth II<br/>
-1962 - Britain's first legal casino opened (in Brighton)<br/>
+1868 - First Trade Union Congress convened 
+1953 - Coronation of HM Queen Elizabeth II 
+1962 - Britain's first legal casino opened (in Brighton) 
 1964 - Founding of the PLO
 <oob><robot></robot></oob>
 </template>
@@ -1494,7 +1494,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 03</pattern>
 <template>
-1937 - Marriage of the Duke of Windsor to Mrs Simpson<br/>
+1937 - Marriage of the Duke of Windsor to Mrs Simpson 
 1956 - Abolition of third class rail travel on British Railways
 <oob><robot></robot></oob>
 </template>
@@ -1503,8 +1503,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 04</pattern>
 <template>
-1913 - Suffragette Emily Davison threw herself under the King's horse in the Derby<br/>
-1940 - Completion of the Dunkirk evacuation<br/>
+1913 - Suffragette Emily Davison threw herself under the King's horse in the Derby 
+1940 - Completion of the Dunkirk evacuation 
 1989 - Protests in Tiananmen Square, Beijing, crushed by tanks
 <oob><robot></robot></oob>
 </template>
@@ -1513,8 +1513,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 05</pattern>
 <template>
-1963 - Resignation of John Profumo<br/>
-1967 - Six-day Arab-Israeli War began<br/>
+1963 - Resignation of John Profumo 
+1967 - Six-day Arab-Israeli War began 
 1968 - Assassination of Senator Robert Kennedy in Los Angeles
 <oob><robot></robot></oob>
 </template>
@@ -1523,8 +1523,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 06</pattern>
 <template>
-1844 - YMCA founded by George Williams<br/>
-1944 - D-Day. Allied invasion of Normandy<br/>
+1844 - YMCA founded by George Williams 
+1944 - D-Day. Allied invasion of Normandy 
 1984 - Indian troops stormed the Golden Temple at Amritsar
 <oob><robot></robot></oob>
 </template>
@@ -1533,8 +1533,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 07</pattern>
 <template>
-1329 - Death of Robert the Bruce<br/>
-1929 - Vatican State created<br/>
+1329 - Death of Robert the Bruce 
+1929 - Vatican State created 
 1942 - Battle of Midway
 <oob><robot></robot></oob>
 </template>
@@ -1543,7 +1543,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 08</pattern>
 <template>
-632 - Death of the Prophet Mohammed<br/>
+632 - Death of the Prophet Mohammed 
 1924 - Disappearance of Mallory and Irvine near the summit of Mount Everest
 <oob><robot></robot></oob>
 </template>
@@ -1552,8 +1552,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 09</pattern>
 <template>
-1898 - Britain signed a 99-year lease on Hong Kong<br/>
-1959 - First atomic powered submarine launched (USS George Washington)<br/>
+1898 - Britain signed a 99-year lease on Hong Kong 
+1959 - First atomic powered submarine launched (USS George Washington) 
 1975 - First live radio broadcast from the House of Commons
 <oob><robot></robot></oob>
 </template>
@@ -1562,7 +1562,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 10</pattern>
 <template>
-1829 - First Oxford - Cambridge boat race (at Henley)<br/>
+1829 - First Oxford - Cambridge boat race (at Henley) 
 1921 - Birth of HRH Prince Philip
 <oob><robot></robot></oob>
 </template>
@@ -1587,7 +1587,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 13</pattern>
 <template>
-1900 - Beginning of the Boxer uprising in China<br/>
+1900 - Beginning of the Boxer uprising in China 
 1944 - First V1 flying bomb attack on Britain
 <oob><robot></robot></oob>
 </template>
@@ -1596,9 +1596,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 14</pattern>
 <template>
-1645 - Battle of Naseby<br/>
-1800 - Battle of Marengo<br/>
-1919 - Alcock and Brown made the first nonstop trans-Atlantic flight<br/>
+1645 - Battle of Naseby 
+1800 - Battle of Marengo 
+1919 - Alcock and Brown made the first nonstop trans-Atlantic flight 
 1982 - Surrender of the Argentine forces in the Falklands
 <oob><robot></robot></oob>
 </template>
@@ -1607,7 +1607,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 15</pattern>
 <template>
-1215 - Magna Carta signed<br/>
+1215 - Magna Carta signed 
 1381 - Killing of Wat Tyler, Kentish rebel leader
 <oob><robot></robot></oob>
 </template>
@@ -1616,10 +1616,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 16</pattern>
 <template>
-1903 - Formation of the Ford Motor Corporation<br/>
-1958 - First yellow lines painted on British streets<br/>
-1961 - Rudolph Nureyev defected to the west in Paris<br/>
-1963 - Valentina Tereschkova became the first woman to travel in space<br/>
+1903 - Formation of the Ford Motor Corporation 
+1958 - First yellow lines painted on British streets 
+1961 - Rudolph Nureyev defected to the west in Paris 
+1963 - Valentina Tereschkova became the first woman to travel in space 
 1976 - Riots in Soweto township, near Johannesburg
 <oob><robot></robot></oob>
 </template>
@@ -1628,8 +1628,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 17</pattern>
 <template>
-1775 - Battle of Bunker Hill<br/>
-1972 - Five men arrested breaking into the Watergate building in Washington<br/>
+1775 - Battle of Bunker Hill 
+1972 - Five men arrested breaking into the Watergate building in Washington 
 1982 - Body of Roberto Calvi found hanging under Blackfriars Bridge
 <oob><robot></robot></oob>
 </template>
@@ -1638,7 +1638,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 18</pattern>
 <template>
-1812 - USA declared war on Britain<br/>
+1812 - USA declared war on Britain 
 1815 - Battle of Waterloo
 <oob><robot></robot></oob>
 </template>
@@ -1647,7 +1647,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 19</pattern>
 <template>
-1829 - Formation of the Metropolitan Police<br/>
+1829 - Formation of the Metropolitan Police 
 1953 - Execution of Russian spies Ethel and Julius Rosenberg in Sing Sing Prison
 <oob><robot></robot></oob>
 </template>
@@ -1656,9 +1656,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 20</pattern>
 <template>
-1756 - 146 employees of the East India Company imprisoned in the "Black Hole of Calcutta"<br/>
-1819 - Steamship Savannah became the first steamship to cross the Atlantic<br/>
-1837 - Death of King William IV and accession of Queen Victoria to the throne<br/>
+1756 - 146 employees of the East India Company imprisoned in the "Black Hole of Calcutta" 
+1819 - Steamship Savannah became the first steamship to cross the Atlantic 
+1837 - Death of King William IV and accession of Queen Victoria to the throne 
 1928 - Death of explorer Roald Amundsen in a plane crash in Spitzbergen
 <oob><robot></robot></oob>
 </template>
@@ -1667,7 +1667,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 21</pattern>
 <template>
-1854 - First Victoria Cross won (awarded retrospectively)<br/>
+1854 - First Victoria Cross won (awarded retrospectively) 
 1942 - Tobruk fell to Rommel
 <oob><robot></robot></oob>
 </template>
@@ -1676,8 +1676,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 22</pattern>
 <template>
-1814 - First match played at the present Lords Cricket Ground<br/>
-1941 - German invasion of USSR<br/>
+1814 - First match played at the present Lords Cricket Ground 
+1941 - German invasion of USSR 
 1979 - Jeremy Thorpe found not guilty of plotting to murder Norman Scott
 <oob><robot></robot></oob>
 </template>
@@ -1686,7 +1686,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 23</pattern>
 <template>
-1757 - Battle of Plessey<br/>
+1757 - Battle of Plessey 
 1956 - Nasser became president of Egypt in unopposed election
 <oob><robot></robot></oob>
 </template>
@@ -1695,7 +1695,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 24</pattern>
 <template>
-1314 - Battle of Bannockburn<br/>
+1314 - Battle of Bannockburn 
 1859 - Battle of Solferino - which led to the formation of the Red Cross
 <oob><robot></robot></oob>
 </template>
@@ -1704,8 +1704,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 25</pattern>
 <template>
-1876 - Battle of Little Bighorn (Custer's last stand)<br/>
-1950 - North Korea invaded South Korea precipitating the Korean War<br/>
+1876 - Battle of Little Bighorn (Custer's last stand) 
+1950 - North Korea invaded South Korea precipitating the Korean War 
 1953 - John Christie sentenced to death for the murder of four women
 <oob><robot></robot></oob>
 </template>
@@ -1722,8 +1722,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 27</pattern>
 <template>
-1743 - Battle of Dettingen (George II became the last British monarch to lead his troops into battle)<br/>
-1905 - Mutiny aboard the Russian battleship Potemkin<br/>
+1743 - Battle of Dettingen (George II became the last British monarch to lead his troops into battle) 
+1905 - Mutiny aboard the Russian battleship Potemkin 
 1906 - First Grand Prix (at Le Mans)
 <oob><robot></robot></oob>
 </template>
@@ -1732,7 +1732,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 28</pattern>
 <template>
-1914 - Assassination of Archduke Franz Ferdinand at Sarajevo (precipitating World War I)<br/>
+1914 - Assassination of Archduke Franz Ferdinand at Sarajevo (precipitating World War I) 
 1919 - Treaty of Versailles signed
 <oob><robot></robot></oob>
 </template>
@@ -1749,7 +1749,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JUNE 30</pattern>
 <template>
-1859 - Blondin crossed the Niagra Fals on a tightrope<br/>
+1859 - Blondin crossed the Niagra Fals on a tightrope 
 1894 - Tower Bridge opened to traffic
 <oob><robot></robot></oob>
 </template>
@@ -1758,8 +1758,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 01</pattern>
 <template>
-1837 - First registration of births, marriages and deaths in Britain<br/>
-1863 - Battle of Gettysburg<br/>
+1837 - First registration of births, marriages and deaths in Britain 
+1863 - Battle of Gettysburg 
 1937 - Introduction of 999 emergency number in Britain
 <oob><robot></robot></oob>
 </template>
@@ -1768,9 +1768,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 02</pattern>
 <template>
-1644 - Battle of Marston Moor<br/>
-1850 - Death of Sir Robert Peel<br/>
-1865 - Founding of the Salvation Army<br/>
+1644 - Battle of Marston Moor 
+1850 - Death of Sir Robert Peel 
+1865 - Founding of the Salvation Army 
 1964 - Civil Rights Act in the USA signed by President Johnson
 <oob><robot></robot></oob>
 </template>
@@ -1779,8 +1779,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 03</pattern>
 <template>
-1898 - Captain Joshua Slocum completed his solo circumnavigation of the globe<br/>
-1916 - Beginning of the Battle of the Somme<br/>
+1898 - Captain Joshua Slocum completed his solo circumnavigation of the globe 
+1916 - Beginning of the Battle of the Somme 
 1976 - Rescue of hostages at Entebbe Airport, Uganda, by Israeli commandos
 <oob><robot></robot></oob>
 </template>
@@ -1789,8 +1789,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 04</pattern>
 <template>
-1776 - US Declaration of Independence approved by the American Congress<br/>
-1848 - Publication of the Communist manifesto<br/>
+1776 - US Declaration of Independence approved by the American Congress 
+1848 - Publication of the Communist manifesto 
 1892 - Keir Hardie elected first Socialist MP (Holytown, Lanarkshire)
 <oob><robot></robot></oob>
 </template>
@@ -1807,8 +1807,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 06</pattern>
 <template>
-1535 - Execution of Sir Thomas More<br/>
-1952 - Last London tram ran<br/>
+1535 - Execution of Sir Thomas More 
+1952 - Last London tram ran 
 1988 - Explosion aboard the Piper Alpha oil rig - over 160 men killed
 <oob><robot></robot></oob>
 </template>
@@ -1817,7 +1817,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 07</pattern>
 <template>
-1982 - Intruder Michael Fagan found in the Queen's bedroom<br/>
+1982 - Intruder Michael Fagan found in the Queen's bedroom 
 1985 - Live Aid concerts in London and Philadelphia
 <oob><robot></robot></oob>
 </template>
@@ -1834,8 +1834,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 09</pattern>
 <template>
-1877 - First Wimbledon Lawn Tennis Championships<br/>
-1938 - Gas masks issued to the population in the UK<br/>
+1877 - First Wimbledon Lawn Tennis Championships 
+1938 - Gas masks issued to the population in the UK 
 1984 - Serious damage to York Minster when it was struck by lightning
 <oob><robot></robot></oob>
 </template>
@@ -1844,8 +1844,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 10</pattern>
 <template>
-1900 - Paris Metro system opened<br/>
-1958 - The first parking meters came into operation in London<br/>
+1900 - Paris Metro system opened 
+1958 - The first parking meters came into operation in London 
 1985 - Explosion aboard the Greenpeace ship Rainbow Warrior in Auckland harbour
 <oob><robot></robot></oob>
 </template>
@@ -1870,8 +1870,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 13</pattern>
 <template>
-1793 - Murder of Jean Paul Marat<br/>
-1837 - Queen Victoria became the first monarch to take up residence at Buckingham Palace<br/>
+1793 - Murder of Jean Paul Marat 
+1837 - Queen Victoria became the first monarch to take up residence at Buckingham Palace 
 1955 - The hanging of Ruth Ellis (the last woman to be hanged in Britain)
 <oob><robot></robot></oob>
 </template>
@@ -1880,8 +1880,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 14</pattern>
 <template>
-1789 - The storming of the Bastille<br/>
-1865 - Ascent of the Matterhorn by Edward Whymper<br/>
+1789 - The storming of the Bastille 
+1865 - Ascent of the Matterhorn by Edward Whymper 
 1867 - First demonstration of dynamite (by Alfred Nobel)
 <oob><robot></robot></oob>
 </template>
@@ -1890,9 +1890,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 15</pattern>
 <template>
-1099 - Capture of Jerusalem by Godfrey and Robert of Flanders<br/>
-1857 - The massacre of Cawnpore<br/>
-1912 - Introduction of Social Insurance Scheme in Britain<br/>
+1099 - Capture of Jerusalem by Godfrey and Robert of Flanders 
+1857 - The massacre of Cawnpore 
+1912 - Introduction of Social Insurance Scheme in Britain 
 1945 - Blackout lifted in Britain
 <oob><robot></robot></oob>
 </template>
@@ -1901,8 +1901,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 16</pattern>
 <template>
-1885 - First successful treatment of rabies (by Pasteur)<br/>
-1918 - Assassination of Tsar Nicholas II of Russia and his family<br/>
+1885 - First successful treatment of rabies (by Pasteur) 
+1918 - Assassination of Tsar Nicholas II of Russia and his family 
 1945 - First explosion of an atomic bomb (at Los Alamos, New Mexico)
 <oob><robot></robot></oob>
 </template>
@@ -1911,8 +1911,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 17</pattern>
 <template>
-1841 - First edition of Punch published<br/>
-1917 - British Royal Family's name changed to Windsor<br/>
+1841 - First edition of Punch published 
+1917 - British Royal Family's name changed to Windsor 
 1945 - Potsdam Conference began
 <oob><robot></robot></oob>
 </template>
@@ -1921,10 +1921,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 18</pattern>
 <template>
-64 BC - Burning of Rome<br/>
-1870 - Dogma of Papal Infallibility proclaimed by the Vatican Council<br/>
-1925 - Mein Kampf published<br/>
-1936 - Beginning of Spanish Civil War<br/>
+64 BC - Burning of Rome 
+1870 - Dogma of Papal Infallibility proclaimed by the Vatican Council 
+1925 - Mein Kampf published 
+1936 - Beginning of Spanish Civil War 
 1969 - Chappaquidick incident involving Senator Edward Kenedy and Mary Jo Kopechne
 <oob><robot></robot></oob>
 </template>
@@ -1933,7 +1933,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 19</pattern>
 <template>
-1545 - The Mary Rose sank in the Solent<br/>
+1545 - The Mary Rose sank in the Solent 
 1903 - The first Tour de France completed
 <oob><robot></robot></oob>
 </template>
@@ -1942,7 +1942,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 20</pattern>
 <template>
-1837 - Opening of Euston Station (the first railway station in London)<br/>
+1837 - Opening of Euston Station (the first railway station in London) 
 1944 - Attempted assassination of Hitler by officers led by von Stauffenberg
 <oob><robot></robot></oob>
 </template>
@@ -1951,9 +1951,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 21</pattern>
 <template>
-1798 - Battle of the Pyramids<br/>
-1861 - Battle of Bull Run<br/>
-1904 - Completion of the trans-Siberian railway<br/>
+1798 - Battle of the Pyramids 
+1861 - Battle of Bull Run 
+1904 - Completion of the trans-Siberian railway 
 1969 - Moon landing of Apollo II
 <oob><robot></robot></oob>
 </template>
@@ -1962,7 +1962,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 22</pattern>
 <template>
-1812 - Battle of Salamanca<br/>
+1812 - Battle of Salamanca 
 1934 - Shooting of gangster John Dillinger by FBI agents
 <oob><robot></robot></oob>
 </template>
@@ -1971,7 +1971,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 23</pattern>
 <template>
-1967 - Death of British cyclist Tommy Simpson while competing in the Tour de France<br/>
+1967 - Death of British cyclist Tommy Simpson while competing in the Tour de France 
 1986 - Marriage of Prince Andrew and Sarah Ferguson
 <oob><robot></robot></oob>
 </template>
@@ -1988,8 +1988,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 25</pattern>
 <template>
-1909 - First crossing of the English Channel by aeroplane (Louis Bleriot)<br/>
-1943 - Mussolini deposed in Italy<br/>
+1909 - First crossing of the English Channel by aeroplane (Louis Bleriot) 
+1943 - Mussolini deposed in Italy 
 1959 - First crossing of the English Channel by hovercraft
 <oob><robot></robot></oob>
 </template>
@@ -1998,9 +1998,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 26</pattern>
 <template>
-1908 - Formation of the FBI in Washington<br/>
-1952 - Abdication of King Farouk of Egypt<br/>
-1956 - Egyptian government nationalised the Suez Canal<br/>
+1908 - Formation of the FBI in Washington 
+1952 - Abdication of King Farouk of Egypt 
+1956 - Egyptian government nationalised the Suez Canal 
 1978 - Birth of Louise Brown at Oldham General Hospital (world's first test tube baby)
 <oob><robot></robot></oob>
 </template>
@@ -2009,8 +2009,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 27</pattern>
 <template>
-1949 - Maiden flight of the De Havilland Comet, the world's first jet airliner<br/>
-1953 - End of the Korean War<br/>
+1949 - Maiden flight of the De Havilland Comet, the world's first jet airliner 
+1953 - End of the Korean War 
 1980 - Death of the Shah of Iran, in exile in Egypt
 <oob><robot></robot></oob>
 </template>
@@ -2019,7 +2019,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 28</pattern>
 <template>
-1794 - Execution of Robespierre<br/>
+1794 - Execution of Robespierre 
 1959 - Introduction of postcodes by the Post Office (in Norwich)
 <oob><robot></robot></oob>
 </template>
@@ -2028,9 +2028,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 29</pattern>
 <template>
-1588 - Defeat of the Spanish Armada<br/>
-1890 - Death from self-inflicted bullet wound of van Gogh<br/>
-1907 - Formation of the Boy Scouts by Sir Robert Baden-Powell<br/>
+1588 - Defeat of the Spanish Armada 
+1890 - Death from self-inflicted bullet wound of van Gogh 
+1907 - Formation of the Boy Scouts by Sir Robert Baden-Powell 
 1981 - Marriage of the Prince of Wales and Lady Diana Spencer
 <oob><robot></robot></oob>
 </template>
@@ -2039,10 +2039,10 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 30</pattern>
 <template>
-1898 - Death of Bismarck<br/>
-1930 - First ever soccer World Cup Final (Uruguay 4 Argentina 2)<br/>
-1935 - First Penguin paperback published (Ariel, A Life of Shelley)<br/>
-1949 - HMS Amethyst reached Hong Kong after running the gauntlet of Chinese communist troops in the Yangtse River<br/>
+1898 - Death of Bismarck 
+1930 - First ever soccer World Cup Final (Uruguay 4 Argentina 2) 
+1935 - First Penguin paperback published (Ariel, A Life of Shelley) 
+1949 - HMS Amethyst reached Hong Kong after running the gauntlet of Chinese communist troops in the Yangtse River 
 1966 - England beat West Germany 4-2 to win soccer's World Cup
 <oob><robot></robot></oob>
 </template>
@@ -2051,9 +2051,9 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>JULY 31</pattern>
 <template>
-1910 - Arrest of Dr Crippen aboard the SS Montrose<br/>
-1917 - Beginning of the Battle of Passchendaele<br/>
-1919 - Weimar Republic established in Germany<br/>
+1910 - Arrest of Dr Crippen aboard the SS Montrose 
+1917 - Beginning of the Battle of Passchendaele 
+1919 - Weimar Republic established in Germany 
 1963 - First ever renouncement of a peerage by a British peer (Viscount Stansgate, Anthony Wedgewood Benn)
 <oob><robot></robot></oob>
 </template>
@@ -2062,8 +2062,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>AUGUST 01</pattern>
 <template>
-1714 - Death of Queen Anne<br/>
-1798 - Battle of the Nile<br/>
+1714 - Death of Queen Anne 
+1798 - Battle of the Nile 
 1975 - Ratification of the Helsinki Agreement on Human Rights
 <oob><robot></robot></oob>
 </template>
@@ -2072,8 +2072,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>AUGUST 02</pattern>
 <template>
-1100 - Death of King William II whilst hunting in the New Forest<br/>
-1876 - Shooting of Wild Bill Hickock by Jack McCall in Deadwood<br/>
+1100 - Death of King William II whilst hunting in the New Forest 
+1876 - Shooting of Wild Bill Hickock by Jack McCall in Deadwood 
 1973 - Summerland fire at Douglas, Isle of Man, 30 people killed
 <oob><robot></robot></oob>
 </template>
@@ -2082,8 +2082,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>AUGUST 03</pattern>
 <template>
-1778 - Opening of La Scala Opera House in Milan<br/>
-1916 - Execution of Sir Roger Casement for treason<br/>
+1778 - Opening of La Scala Opera House in Milan 
+1916 - Execution of Sir Roger Casement for treason 
 1926 - London's first traffic lights operational (at Piccadilly Circus)
 <oob><robot></robot></oob>
 </template>
@@ -2092,7 +2092,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>AUGUST 04</pattern>
 <template>
-1900 - Birth of HM Queen Elizabeth, Queen Mother<br/>
+1900 - Birth of HM Queen Elizabeth, Queen Mother 
 1914 - Britain declared war on Germany
 <oob><robot></robot></oob>
 </template>
@@ -2101,8 +2101,8 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>AUGUST 05</pattern>
 <template>
-1858 - Opening of the first trans-Atlantic cable<br/>
-1891 - First use of traveller's cheques<br/>
+1858 - Opening of the first trans-Atlantic cable 
+1891 - First use of traveller's cheques 
 1962 - Body of Marilyn Monroe found at her Californian home
 <oob><robot></robot></oob>
 </template>
@@ -2111,7 +2111,7 @@ AD 41 - Roman Emperor Caligula murdered in Rome<br/>
 <category>
 <pattern>AUGUST 06</pattern>
 <template>
-1926 - Gertrude Ederie became the first woman to swim the English Channel<br/>
+1926 - Gertrude Ederie became the first woman to swim the English Channel 
 1945 - First atomic bomb dropped on Hiroshima
 <oob><robot></robot></oob>
 </template>
@@ -2128,8 +2128,8 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 08</pattern>
 <template>
-1786 - First ascent of Mont Blanc (by Michel Gabriel Piccard)<br/>
-1963 - The great train robbery at Cheddington, Buckinghamshire<br/>
+1786 - First ascent of Mont Blanc (by Michel Gabriel Piccard) 
+1963 - The great train robbery at Cheddington, Buckinghamshire 
 1974 - Resignation of US President Richard Nixon
 <oob><robot></robot></oob>
 </template>
@@ -2138,7 +2138,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 09</pattern>
 <template>
-1945 - Atomic bomb dropped on Nagasaki<br/>
+1945 - Atomic bomb dropped on Nagasaki 
 1969 - Murder of actress Sharon Tate, wife of film director Roman Polanski, and four other people at her Hollywood home
 <oob><robot></robot></oob>
 </template>
@@ -2147,7 +2147,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 10</pattern>
 <template>
-1895 - First promenade concert held at the Queens Hall, London<br/>
+1895 - First promenade concert held at the Queens Hall, London 
 1897 - Formation of the RAC
 <oob><robot></robot></oob>
 </template>
@@ -2164,7 +2164,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 12</pattern>
 <template>
-1887 - First sound recording made (by Thomas Edison)<br/>
+1887 - First sound recording made (by Thomas Edison) 
 1908- First Model T Ford produced
 <oob><robot></robot></oob>
 </template>
@@ -2173,8 +2173,8 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 13</pattern>
 <template>
-1704 - Battle of Blenheim<br/>
-1961 - Construction of the Berlin Wall began<br/>
+1704 - Battle of Blenheim 
+1961 - Construction of the Berlin Wall began 
 1964 - Last judicial executions in Britain (Peter Allen at Walton Prison and John Walby at Strangeways)
 <oob><robot></robot></oob>
 </template>
@@ -2183,7 +2183,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 14</pattern>
 <template>
-1945 - Unconditional surrender of Japan thus ending World War II<br/>
+1945 - Unconditional surrender of Japan thus ending World War II 
 1969 - Deployment of British troops in Northern Ireland
 <oob><robot></robot></oob>
 </template>
@@ -2192,7 +2192,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 15</pattern>
 <template>
-1057 - Death of Macbeth<br/>
+1057 - Death of Macbeth 
 1947 - Indian independence from Britain
 <oob><robot></robot></oob>
 </template>
@@ -2201,7 +2201,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 16</pattern>
 <template>
-1819 - Peterloo massacre in Manchester<br/>
+1819 - Peterloo massacre in Manchester 
 1977 - Death of Elvis Presley
 <oob><robot></robot></oob>
 </template>
@@ -2210,7 +2210,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 17</pattern>
 <template>
-1896 - Discovery of gold in the Klondike<br/>
+1896 - Discovery of gold in the Klondike 
 1988 - Death of President Zia ul-Haq of Pakistan in a plane crash
 <oob><robot></robot></oob>
 </template>
@@ -2227,7 +2227,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 19</pattern>
 <template>
-1960 - US spy plane pilot Garey Powers sentenced to 10 years' imprisonment by Soviet court<br/>
+1960 - US spy plane pilot Garey Powers sentenced to 10 years' imprisonment by Soviet court 
 1960 - Summons issued against Penguin books for planning to publish Lady Chatterley's Lover
 <oob><robot></robot></oob>
 </template>
@@ -2236,7 +2236,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 20</pattern>
 <template>
-1968 - Invasion of Czechoslovakia by the Soviet Union<br/>
+1968 - Invasion of Czechoslovakia by the Soviet Union 
 1989 - The Marchioness pleasureboat disaster on the Thames, 51 people drowned
 <oob><robot></robot></oob>
 </template>
@@ -2245,10 +2245,10 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 21</pattern>
 <template>
-1911 - The Mona Lisa was stolen from the Louvre in Paris<br/>
-1930 - Birth of Princess Margaret<br/>
-1940 - Assassination of Trotsky in Mexico City<br/>
-1959 - Hawaii became 50th State of the USA<br/>
+1911 - The Mona Lisa was stolen from the Louvre in Paris 
+1930 - Birth of Princess Margaret 
+1940 - Assassination of Trotsky in Mexico City 
+1959 - Hawaii became 50th State of the USA 
 1988 - Liberalisation of licensing laws in England and Wales
 <oob><robot></robot></oob>
 </template>
@@ -2257,9 +2257,9 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 22</pattern>
 <template>
-1485 - Battle of Bosworth Field<br/>
-1642 - Start of the English Civil War. King Charles I raised his standard at Nottingham<br/>
-1922 - Shooting of Irish Nationalist, Michael Collins<br/>
+1485 - Battle of Bosworth Field 
+1642 - Start of the English Civil War. King Charles I raised his standard at Nottingham 
+1922 - Shooting of Irish Nationalist, Michael Collins 
 1985 - Fire disaster at Manchester Airport, 55 people killed
 <oob><robot></robot></oob>
 </template>
@@ -2268,7 +2268,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 23</pattern>
 <template>
-1914 - Start of the Battle of Mons<br/>
+1914 - Start of the Battle of Mons 
 1926 - Death of Rudolph Valentino
 <oob><robot></robot></oob>
 </template>
@@ -2277,8 +2277,8 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 24</pattern>
 <template>
-79 AD - Eruption of Mount Vesuvius burying the cities of Pompeii and Herculaneum<br/>
-1572 - St Bartholomew's Day massacre in Paris<br/>
+79 AD - Eruption of Mount Vesuvius burying the cities of Pompeii and Herculaneum 
+1572 - St Bartholomew's Day massacre in Paris 
 1942 - Death of the Duke of Kent when his plane crashed
 <oob><robot></robot></oob>
 </template>
@@ -2287,8 +2287,8 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 25</pattern>
 <template>
-1875 - Captain Webb became the first man to swim the Englisg Channel<br/>
-1919 - First scheduled international air service inaugurated (between London and Paris)<br/>
+1875 - Captain Webb became the first man to swim the Englisg Channel 
+1919 - First scheduled international air service inaugurated (between London and Paris) 
 1944 - Liberation of Paris
 <oob><robot></robot></oob>
 </template>
@@ -2297,8 +2297,8 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 26</pattern>
 <template>
-1346 - Battle of Crecy<br/>
-1920 - 19th Amendment to the US Constitution gave women the vote in federal elections<br/>
+1346 - Battle of Crecy 
+1920 - 19th Amendment to the US Constitution gave women the vote in federal elections 
 1936 - First transmission of BBC television programmes
 <oob><robot></robot></oob>
 </template>
@@ -2307,8 +2307,8 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 27</pattern>
 <template>
-1883 - Eruption of the volcano Krakatoa<br/>
-1967 - Suicide of former Beatles' manager Brian Epstein<br/>
+1883 - Eruption of the volcano Krakatoa 
+1967 - Suicide of former Beatles' manager Brian Epstein 
 1979 - Murder of Lord Louis Mountbatten by the IRA
 <oob><robot></robot></oob>
 </template>
@@ -2325,7 +2325,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 29</pattern>
 <template>
-1885 - First motorbike patented (by Gottleib Daimler)<br/>
+1885 - First motorbike patented (by Gottleib Daimler) 
 1966 - The Beatles' last live concert (at Candlestick Park, San Francisco)
 <oob><robot></robot></oob>
 </template>
@@ -2334,9 +2334,9 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 30</pattern>
 <template>
-30 BC - Suicide of Cleopatra, Egyptian Queen<br/>
-1860 - First British tram became operational (in Birkenhead)<br/>
-1918 - First ever British police strike<br/>
+30 BC - Suicide of Cleopatra, Egyptian Queen 
+1860 - First British tram became operational (in Birkenhead) 
+1918 - First ever British police strike 
 1941 - Beginning of the Siege of Leningrad
 <oob><robot></robot></oob>
 </template>
@@ -2345,7 +2345,7 @@ NOTHING HAPPENED
 <category>
 <pattern>AUGUST 31</pattern>
 <template>
-1422 - Death of King Henry V<br/>
+1422 - Death of King Henry V 
 1888 - First of the "Jack the Ripper" murders
 <oob><robot></robot></oob>
 </template>
@@ -2354,8 +2354,8 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 01</pattern>
 <template>
-1715 - Death of Louis XVI of France<br/>
-1923 - 300,000 killed by an earthquake in Japan<br/>
+1715 - Death of Louis XVI of France 
+1923 - 300,000 killed by an earthquake in Japan 
 1939 - German invasion of Poland
 <oob><robot></robot></oob>
 </template>
@@ -2364,7 +2364,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 02</pattern>
 <template>
-1666 - Start of the Great Fire of London<br/>
+1666 - Start of the Great Fire of London 
 1945 - Formal surrender of Japan on board the aircraft carrier Missouri
 <oob><robot></robot></oob>
 </template>
@@ -2373,7 +2373,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 03</pattern>
 <template>
-1658 - Death of Oliver Cromwell<br/>
+1658 - Death of Oliver Cromwell 
 1939 - Britain and France declared war on Germany
 <oob><robot></robot></oob>
 </template>
@@ -2382,7 +2382,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 04</pattern>
 <template>
-1870 - Napoleon III of France deposed<br/>
+1870 - Napoleon III of France deposed 
 1965 - Death of Albert Schweitzer in Gabon
 <oob><robot></robot></oob>
 </template>
@@ -2391,7 +2391,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 05</pattern>
 <template>
-1920 - Fatty Arbuckle charged with the murder of starlet Virginia Rappe<br/>
+1920 - Fatty Arbuckle charged with the murder of starlet Virginia Rappe 
 1972 - Slaughter of Israeli athletes at the Munich Olympic Games by the Palestinian Black September Movement
 <oob><robot></robot></oob>
 </template>
@@ -2400,10 +2400,10 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 06</pattern>
 <template>
-1522 - Completion of the first circumnavigation of the world (by the Vittoria)<br/>
-1852 - First free lending library in Britain opened (in London)<br/>
-1879 - First British telephone exchange opened (in Manchester)<br/>
-1880 - First cricket Test Match in England (at the Oval)<br/>
+1522 - Completion of the first circumnavigation of the world (by the Vittoria) 
+1852 - First free lending library in Britain opened (in London) 
+1879 - First British telephone exchange opened (in Manchester) 
+1880 - First cricket Test Match in England (at the Oval) 
 1966 - Assassination of South African prime minister Hendrik Verwoed
 <oob><robot></robot></oob>
 </template>
@@ -2412,11 +2412,11 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 07</pattern>
 <template>
-1533 - Birth of Elizabeth I<br/>
-1812 - Battle of Borodino<br/>
-1838 - Rescue of the survivors on the SS Forfarshire by Grace Darling<br/>
-1892 - First world heavyweight title fight under Queensberry rules (Corbett beat Sullivan)<br/>
-1940 - Beginning of the London blitz<br/>
+1533 - Birth of Elizabeth I 
+1812 - Battle of Borodino 
+1838 - Rescue of the survivors on the SS Forfarshire by Grace Darling 
+1892 - First world heavyweight title fight under Queensberry rules (Corbett beat Sullivan) 
+1940 - Beginning of the London blitz 
 1943 - Surrender of Italy to the allies
 <oob><robot></robot></oob>
 </template>
@@ -2425,8 +2425,8 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 08</pattern>
 <template>
-1888 - First matches of the new Football League played<br/>
-1935 - Shooting of senator Huey Long of Louisiana (he died two days later)<br/>
+1888 - First matches of the new Football League played 
+1935 - Shooting of senator Huey Long of Louisiana (he died two days later) 
 1944 - First V2 bombs fired at London
 <oob><robot></robot></oob>
 </template>
@@ -2435,11 +2435,11 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 09</pattern>
 <template>
-1087 - Death of William the Conqueror<br/>
-1513 - Battle of Flodden Field and death of James IV of Scotland<br/>
-1911 - First airmail service in Britain inaugurated<br/>
-1958 - Notting Hill race riots<br/>
-1975 - Martina Navratilova defected to the west<br/>
+1087 - Death of William the Conqueror 
+1513 - Battle of Flodden Field and death of James IV of Scotland 
+1911 - First airmail service in Britain inaugurated 
+1958 - Notting Hill race riots 
+1975 - Martina Navratilova defected to the west 
 1976 - Death of Mao Tse-tung
 <oob><robot></robot></oob>
 </template>
@@ -2456,8 +2456,8 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 11</pattern>
 <template>
-1973 - Military coup in Chile. President Allende killed<br/>
-1978 - BBC World Service newsreader Geori Markov stabbed with a poisoned umbrella in a London street (he died four days later)<br/>
+1973 - Military coup in Chile. President Allende killed 
+1978 - BBC World Service newsreader Geori Markov stabbed with a poisoned umbrella in a London street (he died four days later) 
 2001 - Destruction of the World Trade Centre by terrorists
 <oob><robot></robot></oob>
 </template>
@@ -2466,9 +2466,9 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 12</pattern>
 <template>
-1878 - Erection of Cleopata's Needle<br/>
-1960 - Introduction of MOT vehicle testing<br/>
-1974 - Haile Selassie of Ethiopia overthrown in a military coup<br/>
+1878 - Erection of Cleopata's Needle 
+1960 - Introduction of MOT vehicle testing 
+1974 - Haile Selassie of Ethiopia overthrown in a military coup 
 1977 - Death of Steve Biko in police custody in South Africa
 <oob><robot></robot></oob>
 </template>
@@ -2485,10 +2485,10 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 14</pattern>
 <template>
-1752 - Adoption of the Gregorian calendar in Britain<br/>
-1812 - Napoleon entered Moscow<br/>
-1854 - Beginning of the Crimean War<br/>
-1868 - The first recorded "hole in one" (by Tom Morris at Prestwick)<br/>
+1752 - Adoption of the Gregorian calendar in Britain 
+1812 - Napoleon entered Moscow 
+1854 - Beginning of the Crimean War 
+1868 - The first recorded "hole in one" (by Tom Morris at Prestwick) 
 1901 - Death of President McKinley of the USA after being shot on 6th September
 <oob><robot></robot></oob>
 </template>
@@ -2497,9 +2497,9 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 15</pattern>
 <template>
-1830 - Opening of the Liverpool and Manchester railway and the death of Liverpool MP William Huskisson (the first man in Britain to be killed by a train)<br/>
-1916 - First use of tanks in battle<br/>
-1940 - The climax of the Battle of Britain, 185 German planes shot down in one day<br/>
+1830 - Opening of the Liverpool and Manchester railway and the death of Liverpool MP William Huskisson (the first man in Britain to be killed by a train) 
+1916 - First use of tanks in battle 
+1940 - The climax of the Battle of Britain, 185 German planes shot down in one day 
 1975 - The start of the Civil War in Beirut
 <oob><robot></robot></oob>
 </template>
@@ -2508,7 +2508,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 16</pattern>
 <template>
-1861 - First Post Office Savings Banks openend in Britain<br/>
+1861 - First Post Office Savings Banks openend in Britain 
 1968 - Introduction of two-tier postal system in Britain (1st Class 5d, 2nd Class 4d)
 <oob><robot></robot></oob>
 </template>
@@ -2517,8 +2517,8 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 17</pattern>
 <template>
-1931 - First demonstration of long playing records<br/>
-1944 - Arnhem landings<br/>
+1931 - First demonstration of long playing records 
+1944 - Arnhem landings 
 1980 - Assassination of ex-president Somoza of Nicaragua
 <oob><robot></robot></oob>
 </template>
@@ -2527,8 +2527,8 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 18</pattern>
 <template>
-1879 - Blackpool illuminations switched on for the first time<br/>
-1961 - Death of Dag Hammarskjoeld, Secretary General of the UN, in an air crash in Northern Rhodesia<br/>
+1879 - Blackpool illuminations switched on for the first time 
+1961 - Death of Dag Hammarskjoeld, Secretary General of the UN, in an air crash in Northern Rhodesia 
 1981 - France abolished the use of the guillotine
 <oob><robot></robot></oob>
 </template>
@@ -2537,10 +2537,10 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 19</pattern>
 <template>
-1356 - Battle of Poitiers<br/>
-1783 - First manned balloon flight (by the Montgolfier Brothers)<br/>
-1893 - New Zealand became the first country to grant women the vote<br/>
-1955 - Military coup in Argentina, Juan Peron overthrown<br/>
+1356 - Battle of Poitiers 
+1783 - First manned balloon flight (by the Montgolfier Brothers) 
+1893 - New Zealand became the first country to grant women the vote 
+1955 - Military coup in Argentina, Juan Peron overthrown 
 1960 - First parking tickets were issued in London
 <oob><robot></robot></oob>
 </template>
@@ -2549,7 +2549,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 20</pattern>
 <template>
-1967 - QEII launched<br/>
+1967 - QEII launched 
 1984 - Forty people killed when a truck filled with explosives crashed into the US Embassy in Beirut
 <oob><robot></robot></oob>
 </template>
@@ -2566,8 +2566,8 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 22</pattern>
 <template>
-1934 - Gresford Colliery disaster - 262 miners killed<br/>
-1955 - Commercial television in Britain for the first time. First ITV transmission<br/>
+1934 - Gresford Colliery disaster - 262 miners killed 
+1955 - Commercial television in Britain for the first time. First ITV transmission 
 1980 - Founding of the Solidarity movement in Gdansk, Poland
 <oob><robot></robot></oob>
 </template>
@@ -2576,7 +2576,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 23</pattern>
 <template>
-1940 - George Cross instituted<br/>
+1940 - George Cross instituted 
 1973 - Peron re-elected President of Argentina
 <oob><robot></robot></oob>
 </template>
@@ -2585,7 +2585,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 24</pattern>
 <template>
-1776 - Britain's oldest classic horse race, the St Leger, run for the first time<br/>
+1776 - Britain's oldest classic horse race, the St Leger, run for the first time 
 1980 - Start of the Iran-Iraq war
 <oob><robot></robot></oob>
 </template>
@@ -2594,8 +2594,8 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 25</pattern>
 <template>
-1818 - First blood transfusion using human blood performed (at Guy's Hospital, London)<br/>
-1897 - First motor bus service in Britain (opened in Bradford)<br/>
+1818 - First blood transfusion using human blood performed (at Guy's Hospital, London) 
+1897 - First motor bus service in Britain (opened in Bradford) 
 1957 - Race riots at Little Rock, Arkansas
 <oob><robot></robot></oob>
 </template>
@@ -2604,7 +2604,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 26</pattern>
 <template>
-1580 - Circumnavigation of the globe completed by Sir Francis Drake<br/>
+1580 - Circumnavigation of the globe completed by Sir Francis Drake 
 1934 - The launch of the Queen Mary
 <oob><robot></robot></oob>
 </template>
@@ -2613,7 +2613,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 27</pattern>
 <template>
-1825 - Stockton-Darlington railway opened<br/>
+1825 - Stockton-Darlington railway opened 
 1938 - Launch of the Queen Elizabeth
 <oob><robot></robot></oob>
 </template>
@@ -2622,7 +2622,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 28</pattern>
 <template>
-1970 - Death of President Nasser of Egypt<br/>
+1970 - Death of President Nasser of Egypt 
 1978 - Death of Pope John Paul I
 <oob><robot></robot></oob>
 </template>
@@ -2631,8 +2631,8 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 29</pattern>
 <template>
-1399 - Abdication of King Richard II<br/>
-1952 - Death of John Cobb on Loch Ness while attempting a world water speed record<br/>
+1399 - Abdication of King Richard II 
+1952 - Death of John Cobb on Loch Ness while attempting a world water speed record 
 1983 - Lady Mary Donaldson elected first woman Lord Mayor of London
 <oob><robot></robot></oob>
 </template>
@@ -2641,7 +2641,7 @@ NOTHING HAPPENED
 <category>
 <pattern>SEPTEMBER 30</pattern>
 <template>
-1938 - Prime Minister Neville Chamberlain returned from Germany, making his famous "Peace in our time" speech<br/>
+1938 - Prime Minister Neville Chamberlain returned from Germany, making his famous "Peace in our time" speech 
 1955 - Death of James Dean in a motor crash
 <oob><robot></robot></oob>
 </template>
@@ -2650,8 +2650,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 01</pattern>
 <template>
-1918 - Arab forces led by T. E. Lawrence captured Damascus from the Turks<br/>
-1938 - German troops marched into the Sudentenland<br/>
+1918 - Arab forces led by T. E. Lawrence captured Damascus from the Turks 
+1938 - German troops marched into the Sudentenland 
 1985 - Street riots in Toxteth, Liverpool
 <oob><robot></robot></oob>
 </template>
@@ -2660,8 +2660,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 02</pattern>
 <template>
-1187 - Capture of Jerusalem by Moslem forces led by Saladin<br/>
-1901 - Launch of Holland 1 (the Royal Nay's first submarine)<br/>
+1187 - Capture of Jerusalem by Moslem forces led by Saladin 
+1901 - Launch of Holland 1 (the Royal Nay's first submarine) 
 1935 - Invasion of Abyssinia by Italian forces
 <oob><robot></robot></oob>
 </template>
@@ -2670,7 +2670,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 03</pattern>
 <template>
-1929 - The Kingdom of Serbs, Croats and Slovenes was renamed Yugoslavia<br/>
+1929 - The Kingdom of Serbs, Croats and Slovenes was renamed Yugoslavia 
 1952 - Britain's first atomic bomb exploded (at the Monte Bello Islands, North of Australia)
 <oob><robot></robot></oob>
 </template>
@@ -2679,8 +2679,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 04</pattern>
 <template>
-1883 - Founding of the Boys Brigade by Sir William Smith<br/>
-1957 - Launch of Sputnik I satellite<br/>
+1883 - Founding of the Boys Brigade by Sir William Smith 
+1957 - Launch of Sputnik I satellite 
 1959 - Luna III photographed the dark side of the Moon
 <oob><robot></robot></oob>
 </template>
@@ -2689,8 +2689,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 05</pattern>
 <template>
-1930 - Crash of the airship R101 near Paris, 48 people killed<br/>
-1936 - Start of the Jarrow hunger march<br/>
+1930 - Crash of the airship R101 near Paris, 48 people killed 
+1936 - Start of the Jarrow hunger march 
 1952 - The end of tea rationing in Britain
 <oob><robot></robot></oob>
 </template>
@@ -2699,7 +2699,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 06</pattern>
 <template>
-1973 - Start of Arab-Israeli war when Egypt and Syria attacked Israel<br/>
+1973 - Start of Arab-Israeli war when Egypt and Syria attacked Israel 
 1981 - Assassination of Egyptian President Anwar Sadat
 <oob><robot></robot></oob>
 </template>
@@ -2708,7 +2708,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 07</pattern>
 <template>
-1571 - Battle of Lepanto<br/>
+1571 - Battle of Lepanto 
 1985 - Palastinian terrorists seized the Italian liner Achille Lauro
 <oob><robot></robot></oob>
 </template>
@@ -2717,9 +2717,9 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 08</pattern>
 <template>
-1871 - Fire destroyed much of Chicago<br/>
-1952 - Harrow rail disaster, 112 people killed<br/>
-1965 - Opening of Britain's tallest building (the Post Office Tower)<br/>
+1871 - Fire destroyed much of Chicago 
+1952 - Harrow rail disaster, 112 people killed 
+1965 - Opening of Britain's tallest building (the Post Office Tower) 
 1967 - First use of the breathalyser in Britain
 <oob><robot></robot></oob>
 </template>
@@ -2728,7 +2728,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 09</pattern>
 <template>
-1914 - Start of the Battle of Ypres<br/>
+1914 - Start of the Battle of Ypres 
 1967 - Che Guevara shot dead in Bolivia
 <oob><robot></robot></oob>
 </template>
@@ -2737,7 +2737,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 10</pattern>
 <template>
-1899 - Start of the Boer War<br/>
+1899 - Start of the Boer War 
 1903 - Womens Social and Political Union formed by Mrs Emmeline Pankhurst>br/>
 1973 - American Vice-president Spiro Agnew resigned because of a tax scandal
 <oob><robot></robot></oob>
@@ -2747,7 +2747,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 11</pattern>
 <template>
-1957 - Jodrell Bank radio telescope became operational<br/>
+1957 - Jodrell Bank radio telescope became operational 
 1982 - Raising of the Mary Rose in Portsmouth harbour
 <oob><robot></robot></oob>
 </template>
@@ -2756,8 +2756,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 12</pattern>
 <template>
-1901 - The Executive Mansion in Washington was officially renamed The White House<br/>
-1915 - Execution of Nurse Edith Cavell by a German firing squad in Brussels<br/>
+1901 - The Executive Mansion in Washington was officially renamed The White House 
+1915 - Execution of Nurse Edith Cavell by a German firing squad in Brussels 
 1984 - The Grand Hotel in Brighton was badly damaged by an IRA bomb during the week of the Conservative party conference
 <oob><robot></robot></oob>
 </template>
@@ -2766,7 +2766,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 13</pattern>
 <template>
-54 AD - Roman emperor Claudius poisoned<br/>
+54 AD - Roman emperor Claudius poisoned 
 1988 - Results of dating tests on the shroud of Turin proved that it is medieval in origin
 <oob><robot></robot></oob>
 </template>
@@ -2775,10 +2775,10 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 14</pattern>
 <template>
-1066 - Battle of Hastings<br/>
-1913 - Mining disaster at Sengenhydd, South Wales. Over 400 miners killed<br/>
-1939 - The battleship Royal Oak torpedoed and sunk in Scapa Flow<br/>
-1947 - Sound barrier broken for the first time (by Chuck Yeager in California)<br/>
+1066 - Battle of Hastings 
+1913 - Mining disaster at Sengenhydd, South Wales. Over 400 miners killed 
+1939 - The battleship Royal Oak torpedoed and sunk in Scapa Flow 
+1947 - Sound barrier broken for the first time (by Chuck Yeager in California) 
 1969 - The 50p coin came into circulation in the UK
 <oob><robot></robot></oob>
 </template>
@@ -2787,11 +2787,11 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 15</pattern>
 <template>
-1917 - Execution of Dutch spy Mata Hari in Paris<br/>
-1945 - Execution of Pierre Lavall, head of the Vichy government in France<br/>
-1946 - Suicide of Herman Goering in Nuremberg Prison<br/>
-1962 - Founding of Amnesty International in London<br/>
-1984 - Nikita Khrushchev deposed while on holiday on the Black Sea coast<br/>
+1917 - Execution of Dutch spy Mata Hari in Paris 
+1945 - Execution of Pierre Lavall, head of the Vichy government in France 
+1946 - Suicide of Herman Goering in Nuremberg Prison 
+1962 - Founding of Amnesty International in London 
+1984 - Nikita Khrushchev deposed while on holiday on the Black Sea coast 
 1987 - Britain's worst storms since records began
 <oob><robot></robot></oob>
 </template>
@@ -2800,12 +2800,12 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 16</pattern>
 <template>
-1793 - Execution of Marie Antoinette<br/>
-1834 - Fire swept through the Palace of Westminster<br/>
-1859 - Raid on the Harpers Ferry arsenal, Virginia by John Brown<br/>
-1902 - First Borstal institution opened (in Borstal, Kent)<br/>
-1964 - China exploded her first nuclear bomb<br/>
-1964 - Return of the first Labour Government for 13 years at the general election<br/>
+1793 - Execution of Marie Antoinette 
+1834 - Fire swept through the Palace of Westminster 
+1859 - Raid on the Harpers Ferry arsenal, Virginia by John Brown 
+1902 - First Borstal institution opened (in Borstal, Kent) 
+1964 - China exploded her first nuclear bomb 
+1964 - Return of the first Labour Government for 13 years at the general election 
 1978 - Karol Wojtyla, Archbishop of Krakow, elected Pope
 <oob><robot></robot></oob>
 </template>
@@ -2814,8 +2814,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 17</pattern>
 <template>
-1651 - Battle of Worcester<br/>
-1777 - British forces surrendered to the American colonists at Saratoga<br/>
+1651 - Battle of Worcester 
+1777 - British forces surrendered to the American colonists at Saratoga 
 1956 - Opening of Britain's first nuclear power station (at Calder Hall)
 <oob><robot></robot></oob>
 </template>
@@ -2824,9 +2824,9 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 18</pattern>
 <template>
-1887 - USA purchased Alaska from Russia<br/>
-1922 - Founding of the British Broadcasting Company (forerunner of the British Broadcasting Corporation)<br/>
-1963 - Resignation of the Prime minister Harold Macmillan<br/>
+1887 - USA purchased Alaska from Russia 
+1922 - Founding of the British Broadcasting Company (forerunner of the British Broadcasting Corporation) 
+1963 - Resignation of the Prime minister Harold Macmillan 
 1977 - Hijacked German airliner stormed by German anti-terrorist troops at Mogadishu airport
 <oob><robot></robot></oob>
 </template>
@@ -2835,7 +2835,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 19</pattern>
 <template>
-1216 - Death of King John<br/>
+1216 - Death of King John 
 1987 - Black Monday. Billions of pounds wiped off the value of shares
 <oob><robot></robot></oob>
 </template>
@@ -2844,8 +2844,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 20</pattern>
 <template>
-1935 - Mao Tse-tung's communist army completed their long march at Yenan<br/>
-1968 - Marriage of Jackie Kennedy, widow of the late President John kennedy, to Aristotle Onassis<br/>
+1935 - Mao Tse-tung's communist army completed their long march at Yenan 
+1968 - Marriage of Jackie Kennedy, widow of the late President John kennedy, to Aristotle Onassis 
 1973 - Official opening of the Sydney Opera House
 <oob><robot></robot></oob>
 </template>
@@ -2854,8 +2854,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 21</pattern>
 <template>
-1805 - Battle of Trafalgar. Death of Horatio Nelson<br/>
-1958 - Women peers took their seats in the House of Lords for the first time<br/>
+1805 - Battle of Trafalgar. Death of Horatio Nelson 
+1958 - Women peers took their seats in the House of Lords for the first time 
 1966 - Aberfan disaster. 116 children and 28 adults killed
 <oob><robot></robot></oob>
 </template>
@@ -2864,9 +2864,9 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 22</pattern>
 <template>
-1797 - First parachute jump made (by Andre-Jacques Garnerin from a hot-air balloon in Paris)<br/>
-1931 - Al Capone sentenced to 11 years imprisonment for tax evasion<br/>
-1962 - The Cuban missile crisis. USA imposed a naval blockade against Cuba<br/>
+1797 - First parachute jump made (by Andre-Jacques Garnerin from a hot-air balloon in Paris) 
+1931 - Al Capone sentenced to 11 years imprisonment for tax evasion 
+1962 - The Cuban missile crisis. USA imposed a naval blockade against Cuba 
 1962 - William Vassall jailed for 18 years for passing naval secrets to the Soviet Union
 <oob><robot></robot></oob>
 </template>
@@ -2875,10 +2875,10 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 23</pattern>
 <template>
-42 BC - Suicide of Brutus<br/>
-1642 - Battle of Edgehill<br/>
-1956 - Start of Hungarian revolt against Soviet rule<br/>
-1972 - Launch of the Access credit card in Britain<br/>
+42 BC - Suicide of Brutus 
+1642 - Battle of Edgehill 
+1956 - Start of Hungarian revolt against Soviet rule 
+1972 - Launch of the Access credit card in Britain 
 1977 - Jockey Lester Piggot jailed for three years for tax evasion
 <oob><robot></robot></oob>
 </template>
@@ -2887,9 +2887,9 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 24</pattern>
 <template>
-1537 - Death of Queen Jane Seymour, third wife of Henry VIII, shortly after giving birth to Edward VI<br/>
-1908 - Mrs Emmeline Pankhurst and her daughter Christabel sentenced to imprisonment for inciting riot<br/>
-1924 - Publication of the Zinoviev letter, purporting to be from high Soviet sources inciting insurrection in Britain<br/>
+1537 - Death of Queen Jane Seymour, third wife of Henry VIII, shortly after giving birth to Edward VI 
+1908 - Mrs Emmeline Pankhurst and her daughter Christabel sentenced to imprisonment for inciting riot 
+1924 - Publication of the Zinoviev letter, purporting to be from high Soviet sources inciting insurrection in Britain 
 1929 - Black Thursday - the Wall Street Crash
 <oob><robot></robot></oob>
 </template>
@@ -2898,8 +2898,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 25</pattern>
 <template>
-1415 - Battle of Agincourt<br/>
-1854 - Charge of the Light Brigade at Balaclava<br/>
+1415 - Battle of Agincourt 
+1854 - Charge of the Light Brigade at Balaclava 
 1961 - First edition of Private Eye magazine published
 <oob><robot></robot></oob>
 </template>
@@ -2908,8 +2908,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 26</pattern>
 <template>
-899 - Death of Alfred the Great<br/>
-1881 - Gunfight at the OK Corral, Tombstone Arizona<br/>
+899 - Death of Alfred the Great 
+1881 - Gunfight at the OK Corral, Tombstone Arizona 
 1986 - Jeffrey Archer resigned as deputy chairman of the Conservative party after allegations of his involvement with a prostitute
 <oob><robot></robot></oob>
 </template>
@@ -2926,7 +2926,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 28</pattern>
 <template>
-1636 - Founding of Harvard University<br/>
+1636 - Founding of Harvard University 
 1962 - Khrushchev announced that the USSR would withdraw all its missiles from Cuba, thus ending the Cuban missile crisis
 <oob><robot></robot></oob>
 </template>
@@ -2935,8 +2935,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 29</pattern>
 <template>
-1618 - Execution of Sir Walter Raleigh<br/>
-1863 - Founding of the Red Cross<br/>
+1618 - Execution of Sir Walter Raleigh 
+1863 - Founding of the Red Cross 
 1982 - Lindy Chamberlain convicted of the murder of her nine-week old child in Australia (the Dingo Baby case)
 <oob><robot></robot></oob>
 </template>
@@ -2945,8 +2945,8 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 30</pattern>
 <template>
-1905 - Aspirin went on sale in Britain for the first time<br/>
-1938 - Widespread panic in the USA when Orson Welles's adaptation of War of the Worlds was broadcast<br/>
+1905 - Aspirin went on sale in Britain for the first time 
+1938 - Widespread panic in the USA when Orson Welles's adaptation of War of the Worlds was broadcast 
 1942 - Beginning of the Battle of El Alamein
 <oob><robot></robot></oob>
 </template>
@@ -2955,7 +2955,7 @@ NOTHING HAPPENED
 <category>
 <pattern>OCTOBER 31</pattern>
 <template>
-1951 - Introduction of zebra crossings in Britain<br/>
+1951 - Introduction of zebra crossings in Britain 
 1984 - Assassination of Mrs Indira Gandhi, Prime Minister of India
 <oob><robot></robot></oob>
 </template>
@@ -2964,7 +2964,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 01</pattern>
 <template>
-1755 - Much of Lisbon destroyed by an earthquake. Tens of thousands killed.<br/>
+1755 - Much of Lisbon destroyed by an earthquake. Tens of thousands killed. 
 1956 - First Premium Bonds went on sale
 <oob><robot></robot></oob>
 </template>
@@ -2973,7 +2973,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 02</pattern>
 <template>
-1917 - Publication of the Balfour declaration, promising Britain's support for the establishment of a Jewish state.<br/>
+1917 - Publication of the Balfour declaration, promising Britain's support for the establishment of a Jewish state. 
 1959 - Official opening of the first stretch of the M1 motorway
 <oob><robot></robot></oob>
 </template>
@@ -2990,8 +2990,8 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 04</pattern>
 <template>
-1918 - Death of the poet Wilfred Own on the Western Front<br/>
-1946 - Founding of UNESCO<br/>
+1918 - Death of the poet Wilfred Own on the Western Front 
+1946 - Founding of UNESCO 
 1979 - Storming of the US Embassy in Tehran by Iranian students. Staff and guards held hostage
 <oob><robot></robot></oob>
 </template>
@@ -3000,9 +3000,9 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 05</pattern>
 <template>
-1605 - Discovery of the Gunpowder Plot<br/>
-1854 - Battle of Inkerman<br/>
-1909 - First Woolworth store in Britain opened (in Liverpool)<br/>
+1605 - Discovery of the Gunpowder Plot 
+1854 - Battle of Inkerman 
+1909 - First Woolworth store in Britain opened (in Liverpool) 
 1927 - Britain's first automatic traffic lights installed (in Wolverhampton)
 <oob><robot></robot></oob>
 </template>
@@ -3019,7 +3019,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 07</pattern>
 <template>
-1885 - Completion of the Canadian Pacific Railway<br/>
+1885 - Completion of the Canadian Pacific Railway 
 1974 - Murder of Sandra Rivett, nanny in the household of Lord Lucan
 <oob><robot></robot></oob>
 </template>
@@ -3028,8 +3028,8 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 08</pattern>
 <template>
-1923 - The Beer Hall Putsch. Attempt by Hitler and his followers to seize power in Munich<br/>
-1932 - Election of FD Roosevelt as president of the USA<br/>
+1923 - The Beer Hall Putsch. Attempt by Hitler and his followers to seize power in Munich 
+1932 - Election of FD Roosevelt as president of the USA 
 1987 - Bomb planted by the IRA exploded at a Remembrance Day service in Enniskillen. Eleven people killed.
 <oob><robot></robot></oob>
 </template>
@@ -3038,8 +3038,8 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 09</pattern>
 <template>
-1859 - Flogging abolished in the British Army<br/>
-1960 - John F Kennedy won the American Presidential election<br/>
+1859 - Flogging abolished in the British Army 
+1960 - John F Kennedy won the American Presidential election 
 1970 - Death of Charles de Gaulle
 <oob><robot></robot></oob>
 </template>
@@ -3048,7 +3048,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 10</pattern>
 <template>
-1982 - Death of Leonid Brezhnev<br/>
+1982 - Death of Leonid Brezhnev 
 1989 - Work began on the demolition of the Berlin Wall
 <oob><robot></robot></oob>
 </template>
@@ -3057,8 +3057,8 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 11</pattern>
 <template>
-1918 - Signing of the armistice. End of World War I<br/>
-1921 - First "Poppy Day"<br/>
+1918 - Signing of the armistice. End of World War I 
+1921 - First "Poppy Day" 
 1965 - Unilateral declaration of Independence by Ian Smith's Rhodesian government
 <oob><robot></robot></oob>
 </template>
@@ -3075,7 +3075,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 13</pattern>
 <template>
-1907 - First helicopter flight (by Paul Cornu, near Lisieux in Normandy)<br/>
+1907 - First helicopter flight (by Paul Cornu, near Lisieux in Normandy) 
 1947 - Resignation of Chancellor of the Exchequer, Hugh Dalton, after his admission that he had leaked budget secrets
 <oob><robot></robot></oob>
 </template>
@@ -3084,11 +3084,11 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 14</pattern>
 <template>
-1922 - First regular radio broadcast (a news bulletin)<br/>
-1948 - Birth of HRH Prince of Wales<br/>
-1952 - First publiacation of music charts in Britain (in the New Musical Express)<br/>
-1963 - Eruption of the Surtsey volcano near Iceland<br/>
-1969 - Transmission of first colour TV programms by BBC1 and ITV<br/>
+1922 - First regular radio broadcast (a news bulletin) 
+1948 - Birth of HRH Prince of Wales 
+1952 - First publiacation of music charts in Britain (in the New Musical Express) 
+1963 - Eruption of the Surtsey volcano near Iceland 
+1969 - Transmission of first colour TV programms by BBC1 and ITV 
 1973 - Marriage of Princess Anne and Captain Mark Phillips
 <oob><robot></robot></oob>
 </template>
@@ -3097,8 +3097,8 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 15</pattern>
 <template>
-1899 - Morning Post correspondent, Winston Churchill, captured by Boers in South Africa<br/>
-1969 - Screening of first TV advertisement in colour in Britain (Birds Eye Peas)<br/>
+1899 - Morning Post correspondent, Winston Churchill, captured by Boers in South Africa 
+1969 - Screening of first TV advertisement in colour in Britain (Birds Eye Peas) 
 1983 - Mass protests as the first Cruise Missiles arrived at Greenham Common
 <oob><robot></robot></oob>
 </template>
@@ -3115,8 +3115,8 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 17</pattern>
 <template>
-1558 - Death of Mary I<br/>
-1800 - First Congress of the USA<br/>
+1558 - Death of Mary I 
+1800 - First Congress of the USA 
 1959 - Duty free goods on sale in British airports for the first time (Prestwick and Renfrew)
 <oob><robot></robot></oob>
 </template>
@@ -3125,9 +3125,9 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 18</pattern>
 <template>
-1626 - Consecration of St Peters in Rome<br/>
-1928 - Showing of the first sound cartoon film (Steamboat Willie starring Micky Mouse)<br/>
-1983 - Mrs Janet Walton of Liverpool gave birth to sextuplets<br/>
+1626 - Consecration of St Peters in Rome 
+1928 - Showing of the first sound cartoon film (Steamboat Willie starring Micky Mouse) 
+1983 - Mrs Janet Walton of Liverpool gave birth to sextuplets 
 1987 - Kings Cross Underground disaster. A fire started on an escalator resulting in the death of 30 people
 <oob><robot></robot></oob>
 </template>
@@ -3144,9 +3144,9 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 20</pattern>
 <template>
-1906 - Founding of the Rolls Royce company<br/>
-1945 - Beginning of the Nuremburg war crimes trials<br/>
-1947 - Marriage of HRH Princess Elizabeth and LT. Philip Mountbatten<br/>
+1906 - Founding of the Rolls Royce company 
+1945 - Beginning of the Nuremburg war crimes trials 
+1947 - Marriage of HRH Princess Elizabeth and LT. Philip Mountbatten 
 1979 - Russian spy Anthony Blunt stripped of his knighthood
 <oob><robot></robot></oob>
 </template>
@@ -3163,9 +3163,9 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 22</pattern>
 <template>
-1497 - Vasco de Gama rounded the Cape of Good Hope<br/>
-1774 - Suicide of Clive of India<br/>
-1946 - The first ballpoint pens went on sale<br/>
+1497 - Vasco de Gama rounded the Cape of Good Hope 
+1774 - Suicide of Clive of India 
+1946 - The first ballpoint pens went on sale 
 1963 - Assassination of President John F Kennedy in Dallas
 <oob><robot></robot></oob>
 </template>
@@ -3174,8 +3174,8 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 23</pattern>
 <template>
-1499 - Execution of Perkin Warbeck (pretender to the English throne)<br/>
-1852 - The first pillar box came into use<br/>
+1499 - Execution of Perkin Warbeck (pretender to the English throne) 
+1852 - The first pillar box came into use 
 1910 - Execution of Dr Crippin at Holloway
 <oob><robot></robot></oob>
 </template>
@@ -3184,7 +3184,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 24</pattern>
 <template>
-1859 - Publication of darwin's Origin of Species<br/>
+1859 - Publication of darwin's Origin of Species 
 1963 - Murder of Lee Harvey Oswald by Jack Ruby in Dallas
 <oob><robot></robot></oob>
 </template>
@@ -3193,7 +3193,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 25</pattern>
 <template>
-1952 - The opening of Agatha Christie's play The Mousetrap at the Ambassadors Theatre, London<br/>
+1952 - The opening of Agatha Christie's play The Mousetrap at the Ambassadors Theatre, London 
 1953 - Hungary became the first overseas country to win a soccer international on English soil when they beat England 6-3 at Wembley
 <oob><robot></robot></oob>
 </template>
@@ -3210,9 +3210,9 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 27</pattern>
 <template>
-1914 - Britain's first two police women began work (in Grantham, Lincolnshire)<br/>
-1942 - Scuttling of the French fleet at Toulon<br/>
-1967 - President de Gaulle vetoed Britain's application to join the EEC<br/>
+1914 - Britain's first two police women began work (in Grantham, Lincolnshire) 
+1942 - Scuttling of the French fleet at Toulon 
+1967 - President de Gaulle vetoed Britain's application to join the EEC 
 1975 - Murder of Ross McWhirter by an IRA terrorist
 <oob><robot></robot></oob>
 </template>
@@ -3221,7 +3221,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 28</pattern>
 <template>
-1660 - Founding of the Royal Society<br/>
+1660 - Founding of the Royal Society 
 1905 - Founding of Sinn Fein by Arthur Griffen
 <oob><robot></robot></oob>
 </template>
@@ -3230,7 +3230,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 29</pattern>
 <template>
-1530 - Death of Cardinal Wolsey<br/>
+1530 - Death of Cardinal Wolsey 
 1929 - Admiral Richard Byrd became the first man to fly over the South Pole
 <oob><robot></robot></oob>
 </template>
@@ -3239,7 +3239,7 @@ NOTHING HAPPENED
 <category>
 <pattern>NOVEMBER 30</pattern>
 <template>
-1840 - The remains of Napoleon Bonaparte were returned to Paris from St Helena<br/>
+1840 - The remains of Napoleon Bonaparte were returned to Paris from St Helena 
 1936 - Crystal Palace destroyed by fire
 <oob><robot></robot></oob>
 </template>
@@ -3256,10 +3256,10 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 02</pattern>
 <template>
-1697 - Wren's new St Pauls Cathedral opened<br/>
-1804 - Napoleon crowned Emperor of France<br/>
-1805 - Battle of Austerlitz<br/>
-1901 - Launch of the safety razor by King C Gillette<br/>
+1697 - Wren's new St Pauls Cathedral opened 
+1804 - Napoleon crowned Emperor of France 
+1805 - Battle of Austerlitz 
+1901 - Launch of the safety razor by King C Gillette 
 1942 - World's first nuclear chain reaction (at the University of Chicago)
 <oob><robot></robot></oob>
 </template>
@@ -3276,7 +3276,7 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 04</pattern>
 <template>
-1791 - Britain's oldest Sunday newspaper, The Observer, was published for the first time<br/>
+1791 - Britain's oldest Sunday newspaper, The Observer, was published for the first time 
 1961 - The birth control pill became available on the National Health
 <oob><robot></robot></oob>
 </template>
@@ -3285,9 +3285,9 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 05</pattern>
 <template>
-1872 - The Mary Celeste found unmanned and drifting near the Azores<br/>
-1904 - The Russian fleet was destroyed by the Japanese at Port Arthur<br/>
-1933 - Prohibition came to an end in the USA<br/>
+1872 - The Mary Celeste found unmanned and drifting near the Azores 
+1904 - The Russian fleet was destroyed by the Japanese at Port Arthur 
+1933 - Prohibition came to an end in the USA 
 1958 - Opening of Britain's first motorway (the Preston Bypass)
 <oob><robot></robot></oob>
 </template>
@@ -3296,8 +3296,8 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 06</pattern>
 <template>
-1877 - First recording of a human voice (by Edison)<br/>
-1921 - Creation of the Irish Free State (and partition of Ireland)<br/>
+1877 - First recording of a human voice (by Edison) 
+1921 - Creation of the Irish Free State (and partition of Ireland) 
 1975 - Beginning of the Balcombe Street siege (it ended on 12th December without bloodshed)
 <oob><robot></robot></oob>
 </template>
@@ -3306,8 +3306,8 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 07</pattern>
 <template>
-1732 - Opening of Covent Garden Opera House (then called the Theatre Royal)<br/>
-1916 - Lloyd George became Prime Minister of Britain's coalition government<br/>
+1732 - Opening of Covent Garden Opera House (then called the Theatre Royal) 
+1916 - Lloyd George became Prime Minister of Britain's coalition government 
 1941 - Japanese attack on US fleet in Pearl Harbour
 <oob><robot></robot></oob>
 </template>
@@ -3324,7 +3324,7 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 09</pattern>
 <template>
-1868 - Gladstone became Prime Minister for the first time<br/>
+1868 - Gladstone became Prime Minister for the first time 
 1960 - First screening of Coronation Street
 <oob><robot></robot></oob>
 </template>
@@ -3333,8 +3333,8 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 10</pattern>
 <template>
-1768 - Founding of the Royal Academy<br/>
-1901 - Nobel prizes were awarded for the first time<br/>
+1768 - Founding of the Royal Academy 
+1901 - Nobel prizes were awarded for the first time 
 1984 - Leak of poisonous gas at Union Carbide factory, Bhopal India. Over 2,000 killed
 <oob><robot></robot></oob>
 </template>
@@ -3343,8 +3343,8 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 11</pattern>
 <template>
-1894 - The first ever Motor Show opened (in Paris)<br/>
-1936 - Abdication of King Edward VIII<br/>
+1894 - The first ever Motor Show opened (in Paris) 
+1936 - Abdication of King Edward VIII 
 1952 - Derek Bentley and Christopher Craig found guilty of the murder of PC Sydney Miles. Craig who pulled the trigger was too young to hang but Bentley was executed a month later
 <oob><robot></robot></oob>
 </template>
@@ -3361,8 +3361,8 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 13</pattern>
 <template>
-1779 - The first Smithfield Show<br/>
-1878 - Britain's first street lighting was turned on (at the Holborn Viaduct in London)<br/>
+1779 - The first Smithfield Show 
+1878 - Britain's first street lighting was turned on (at the Holborn Viaduct in London) 
 1939 - Battle of the River Plate
 <oob><robot></robot></oob>
 </template>
@@ -3371,9 +3371,9 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 14</pattern>
 <template>
-1799 - Death of George Washington<br/>
-1861 - Death of Prince Albert<br/>
-1911 - Roald Amundsen reached the South Pole<br/>
+1799 - Death of George Washington 
+1861 - Death of Prince Albert 
+1911 - Roald Amundsen reached the South Pole 
 1918 - Women vote for the first time in a British general election. Countess Markievicz became the first woman elected to the House of Commons (although she never took her seat)
 <oob><robot></robot></oob>
 </template>
@@ -3390,8 +3390,8 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 16</pattern>
 <template>
-1773 - The Boston Tea Party, signalling the beginning of the American War of Independence<br/>
-1944 - Beginning of the Ardennes offensive<br/>
+1773 - The Boston Tea Party, signalling the beginning of the American War of Independence 
+1944 - Beginning of the Ardennes offensive 
 1944 - Band leader Glenn Miller presumed dead when his aircraft went missing over the English Channel
 <oob><robot></robot></oob>
 </template>
@@ -3400,7 +3400,7 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 17</pattern>
 <template>
-1903 - First aeroplane flight (by the Wright Brothers at North Carolina)<br/>
+1903 - First aeroplane flight (by the Wright Brothers at North Carolina) 
 1939 - Scuttling of the German battleship Graf Spee in the River Plate
 <oob><robot></robot></oob>
 </template>
@@ -3409,7 +3409,7 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 18</pattern>
 <template>
-1865 - Ratification of the thirteenth amendment to the US constitution (abolishing slavery)<br/>
+1865 - Ratification of the thirteenth amendment to the US constitution (abolishing slavery) 
 1912 - Discovery of the (later discredited): "Piltdown man" skull
 <oob><robot></robot></oob>
 </template>
@@ -3426,7 +3426,7 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 20</pattern>
 <template>
-1915 - Evacuation of allied forces from their positions at Gallipoli<br/>
+1915 - Evacuation of allied forces from their positions at Gallipoli 
 1989 - Overthrow of Panamanian general Manuel Noriega by invading American forces
 <oob><robot></robot></oob>
 </template>
@@ -3435,8 +3435,8 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 21</pattern>
 <template>
-1620 - Landing of the Pilgrim Fathers at Plymouth Rock, Massachusetts<br/>
-1913 - Publication of the world's first crossword puzzle (in The New York World)<br/>
+1620 - Landing of the Pilgrim Fathers at Plymouth Rock, Massachusetts 
+1913 - Publication of the world's first crossword puzzle (in The New York World) 
 1988 - The Lockerbie disaster. Nearly 300 people were killed when a terrorist group destroyed a jumbo jet over the Scottish town of Lockerbie
 <oob><robot></robot></oob>
 </template>
@@ -3461,7 +3461,7 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 24</pattern>
 <template>
-1914 - The first bomb to be dropped by plane on British soil fell on Dover<br/>
+1914 - The first bomb to be dropped by plane on British soil fell on Dover 
 1979 - Invasion of Afghanistan by Soviet troops
 <oob><robot></robot></oob>
 </template>
@@ -3470,10 +3470,10 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 25</pattern>
 <template>
-1066 - Coronation of William the Conqueror<br/>
-1932 - First royal Christmas broadcast by reigning monarch<br/>
-1941 - Hong Kong fell to Japanese forces<br/>
-1972 - Massive earthquake devastated the Nicaraguan capital Managua<br/>
+1066 - Coronation of William the Conqueror 
+1932 - First royal Christmas broadcast by reigning monarch 
+1941 - Hong Kong fell to Japanese forces 
+1972 - Massive earthquake devastated the Nicaraguan capital Managua 
 1989 - Assassination of Romanian dictator Nicolae Ceaucescu and his wife
 <oob><robot></robot></oob>
 </template>
@@ -3482,8 +3482,8 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 26</pattern>
 <template>
-1898 - Discovery of radium by Pierre and Marie Curie<br/>
-1908 - Jack Johnson became the first black world heavyweight champion by beating Tommy Burns in Australia<br/>
+1898 - Discovery of radium by Pierre and Marie Curie 
+1908 - Jack Johnson became the first black world heavyweight champion by beating Tommy Burns in Australia 
 1943 - Sinking of the German battleship Scharnhorst
 <oob><robot></robot></oob>
 </template>
@@ -3500,7 +3500,7 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 28</pattern>
 <template>
-1065 - Westminster Abbey was consecrated<br/>
+1065 - Westminster Abbey was consecrated 
 1856 - Woodrow Wilson (President of the USA) was born.
 <oob><robot></robot></oob>
 </template>
@@ -3509,8 +3509,8 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 29</pattern>
 <template>
-1170 - Murder of Thomas Becket in Canterbury Cathedral<br/>
-1930 - Radio Luxembourg began broadcasts<br/>
+1170 - Murder of Thomas Becket in Canterbury Cathedral 
+1930 - Radio Luxembourg began broadcasts 
 1952 - Discovery of a coelacanth off the coast of South Africa (the fish was believed to have been extinct for several millions of years)
 <oob><robot></robot></oob>
 </template>
@@ -3527,7 +3527,7 @@ NOTHING HAPPENED
 <category>
 <pattern>DECEMBER 31</pattern>
 <template>
-1695 - Introduction of the window tax<br/>
+1695 - Introduction of the window tax 
 1960 - The farthing ceased to be legal tender at midnight
 <oob><robot></robot></oob>
 </template>

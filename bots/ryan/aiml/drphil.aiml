@@ -20,7 +20,8 @@
 <think>
 	<set name="score">0</set>
 </think>
-This is a test made up of 10 simple multiple choice questions that will help you see what sort of personality you have.<br/><br/>Type START to begin the test.
+This is a test made up of 10 simple multiple choice questions that will help you see what sort of personality you have. Say START to begin the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -38,7 +39,8 @@ This is a test made up of 10 simple multiple choice questions that will help you
 <category>
 <pattern>PTBADCHOICE</pattern>
 <template>
-There is no option "<get name="choice"/>" for this question. Please try again or type QUIT to finish the test.<br/><br/>
+There is no option "<get name="choice"/>" for this question. Please try again or say QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -51,11 +53,12 @@ There is no option "<get name="choice"/>" for this question. Please try again or
 <think>
 	<set name="topic">perstest</set>
 </think>
-1. When do you feel at your best?<br/><br/>
-A In the morning.<br/>
-B During the afternoon and early evening.<br/>
-C Late at night.<br/><br/>
+1. When do you feel at your best?  
+A In the morning. 
+B During the afternoon and early evening. 
+C Late at night.  
 Please answer either A, B or C for question 1 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -75,6 +78,7 @@ Please answer either A, B or C for question 1 or QUIT to finish the test.
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion1</srai></li>
 	</condition>
+	<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -88,13 +92,14 @@ Please answer either A, B or C for question 1 or QUIT to finish the test.
 <think>
 	<set name="topic">perstest</set>
 </think>
-2. You usually walk...<br/><br/>
-A fairly fast, with long steps.<br/>
-B fairly fast, with little steps.<br/>
-C less fast, head up, looking the world in the face.<br/>
-D less fast, head down.<br/>
-E Very slowly.<br/><br/>
+2. You usually walk...  
+A fairly fast, with long steps. 
+B fairly fast, with little steps. 
+C less fast, head up, looking the world in the face. 
+D less fast, head down. 
+E Very slowly. >
 Please answer either A, B, C, D or E for question 2 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -116,6 +121,7 @@ Please answer either A, B, C, D or E for question 2 or QUIT to finish the test.
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion2</srai></li>
 	</condition>
+<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -129,13 +135,14 @@ Please answer either A, B, C, D or E for question 2 or QUIT to finish the test.
 <think>
 	<set name="topic">perstest</set>
 </think>
-3. When talking to people, you...<br/><br/>
-A Stand with your arms folded.<br/>
-B have your hands clasped.<br/>
-C have one or both your hands on your hips or in pockets.<br/>
-D touch or push the person to whom you are talking.<br/>
-E play with your ear, touch your chin or smooth your hair.<br/><br/>
+3. When talking to people, you... 
+A Stand with your arms folded. 
+B have your hands clasped. 
+C have one or both your hands on your hips or in pockets. 
+D touch or push the person to whom you are talking. 
+E play with your ear, touch your chin or smooth your hair. >
 Please answer either A, B, C, D or E for question 3 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -157,6 +164,7 @@ Please answer either A, B, C, D or E for question 3 or QUIT to finish the test.
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion3</srai></li>
 	</condition>
+<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -170,12 +178,13 @@ Please answer either A, B, C, D or E for question 3 or QUIT to finish the test.
 <think>
 	<set name="topic">perstest</set>
 </think>
-4. When relaxing, you sit with...<br/><br/>
-A Your knees bent with your legs neatly side by side.<br/>
-B Your legs crossed.<br/>
-C your legs stretched out or straight.<br/>
-D one leg curled under you.<br/><br/>
+4. When relaxing, you sit with...  
+A Your knees bent with your legs neatly side by side. 
+B Your legs crossed. 
+C your legs stretched out or straight. 
+D one leg curled under you. >
 Please answer either A, B, C or D for question 4 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -196,6 +205,7 @@ Please answer either A, B, C or D for question 4 or QUIT to finish the test.
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion4</srai></li>
 	</condition>
+<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -209,12 +219,13 @@ Please answer either A, B, C or D for question 4 or QUIT to finish the test.
 <think>
 	<set name="topic">perstest</set>
 </think>
-5. When something really amuses you, you react with...<br/><br/>
-A a big appreciated laugh.<br/>
-B a laugh, but not a loud one.<br/>
-C a quiet chuckle.<br/>
-D a sheepish smile.<br/><br/>
+5. When something really amuses you, you react with...  
+A a big appreciated laugh. 
+B a laugh, but not a loud one. 
+C a quiet chuckle. 
+D a sheepish smile.  
 Please answer either A, B, C or D for question 5 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -235,6 +246,7 @@ Please answer either A, B, C or D for question 5 or QUIT to finish the test.
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion5</srai></li>
 	</condition>
+<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -248,11 +260,12 @@ Please answer either A, B, C or D for question 5 or QUIT to finish the test.
 <think>
 	<set name="topic">perstest</set>
 </think>
-6. When you got to a party or social gathering, you...<br/><br/>
-A make a loud entrance so everyone notices you.<br/>
-B make a quiet entrance, looking around for someone you know.<br/>
-C make the quietest entrance, trying to stay unnoticed.<br/><br/>
+6. When you got to a party or social gathering, you...  
+A make a loud entrance so everyone notices you. 
+B make a quiet entrance, looking around for someone you know. 
+C make the quietest entrance, trying to stay unnoticed.  
 Please answer either A, B or C for question 6 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -272,6 +285,7 @@ Please answer either A, B or C for question 6 or QUIT to finish the test.
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion6</srai></li>
 	</condition>
+<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -285,11 +299,12 @@ Please answer either A, B or C for question 6 or QUIT to finish the test.
 <think>
 	<set name="topic">perstest</set>
 </think>
-7. When you're working or concentrating very hard and you're interrupted, you...<br/><br/>
-A welcome the break.<br/>
-B feel extremely irritated.<br/>
-C vary between these two extremes.<br/><br/>
+7. When you're working or concentrating very hard and you're interrupted, you...  
+A welcome the break. 
+B feel extremely irritated. 
+C vary between these two extremes.  
 Please answer either A, B or C for question 7 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -309,6 +324,7 @@ Please answer either A, B or C for question 7 or QUIT to finish the test.
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion7</srai></li>
 	</condition>
+<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -322,15 +338,16 @@ Please answer either A, B or C for question 7 or QUIT to finish the test.
 <think>
 	<set name="topic">perstest</set>
 </think>
-8. Which of the following colours do you like most<br/><br/>
-A red or orange.<br/>
-B black.<br/>
-C yellow or light blue.<br/>
-D green.<br/>
-E dark blue or purple.<br/>
-F white.<br/>
-G Brown or grey.<br/><br/>
+8. Which of the following colours do you like most >
+A red or orange. 
+B black. 
+C yellow or light blue. 
+D green. 
+E dark blue or purple. 
+F white. 
+G Brown or grey.  
 Please answer either A, B, C, D, E, F or G for question 8 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -354,6 +371,7 @@ Please answer either A, B, C, D, E, F or G for question 8 or QUIT to finish the 
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion8</srai></li>
 	</condition>
+<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -367,13 +385,14 @@ Please answer either A, B, C, D, E, F or G for question 8 or QUIT to finish the 
 <think>
 	<set name="topic">perstest</set>
 </think>
-9. When you are in bed at night, in those last few moments before going to sleep, you...<br/><br/>
-A stretched out on your back.<br/>
-B stretched out, face down on your stomach.<br/>
-C on your side, slightly curled.<br/>
-D with your head on one arm.<br/>
-E with your head under the covers.<br/><br/>
+9. When you are in bed at night, in those last few moments before going to sleep, you...  
+A stretched out on your back. 
+B stretched out, face down on your stomach. 
+C on your side, slightly curled. 
+D with your head on one arm. 
+E with your head under the covers.  
 Please answer either A, B, C, D or E for question 9 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -395,6 +414,7 @@ Please answer either A, B, C, D or E for question 9 or QUIT to finish the test.
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion9</srai></li>
 	</condition>
+	<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -408,14 +428,15 @@ Please answer either A, B, C, D or E for question 9 or QUIT to finish the test.
 <think>
 	<set name="topic">perstest</set>
 </think>
-10. You often dream that you are...<br/><br/>
-A falling.<br/>
-B fighting or struggling.<br/>
-C searching for something or somebody.<br/>
-D flying or floating<br/>
-E you usually have dreamless sleep<br/>
-F your dreams are always pleasant<br/><br/>
+10. You often dream that you are...  
+A falling. 
+B fighting or struggling. 
+C searching for something or somebody. 
+D flying or floating 
+E you usually have dreamless sleep 
+F your dreams are always pleasant  
 Please answer either A, B, C, D, E or F for question 10 or QUIT to finish the test.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -438,6 +459,7 @@ Please answer either A, B, C, D, E or F for question 10 or QUIT to finish the te
 		<li value="QUIT">Ok. What would you like to do now?</li>
 		<li><srai>ptbadchoice</srai><srai>ptquestion10</srai></li>
 	</condition>
+<oob><robot></robot></oob>
 </template>
 </category>
 </topic>
@@ -501,6 +523,7 @@ Please answer either A, B, C, D, E or F for question 10 or QUIT to finish the te
 		<li value="64"><srai>ptover60</srai></li>
 		<li value="65"><srai>ptover60</srai></li>
 	</condition>
+	<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -510,40 +533,45 @@ Please answer either A, B, C, D, E or F for question 10 or QUIT to finish the te
 <category>
 <pattern>PTOVER60</pattern>
 <template>
-You scored:<get name="score"/><br/><br/>
-Others see you as someone they should "handle with care". You're seen as vain, self-centered and one who is extremely domineering.<br/><br/>Others may admire you, wishing they could be more like you but don't always trust you, hesitating to become too deeply involved with you.
+You scored:<get name="score"/> >
+Others see you as someone they should "handle with care". You're seen as vain, self-centered and one who is extremely domineering. >Others may admire you, wishing they could be more like you but don't always trust you, hesitating to become too deeply involved with you.
+<oob><robot></robot></oob>
 </template>
 </category>
 
 <category>
 <pattern>PT51TO60</pattern>
 <template>
-You scored:<get name="score"/><br/><br/>
-Others see you as an exciting, highly volatile, rather impulsive personality; a natural leader, one who's quick to make decisions (though not always the right ones). They see you as bold and adventuresome, someone who will try anything once; someone who takes chances and enjoys an adventure.<br/><br/>They enjoy being in your company because of the excitement you radiate.
+You scored:<get name="score"/> >
+Others see you as an exciting, highly volatile, rather impulsive personality; a natural leader, one who's quick to make decisions (though not always the right ones). They see you as bold and adventuresome, someone who will try anything once; someone who takes chances and enjoys an adventure.  They enjoy being in your company because of the excitement you radiate.
+<oob><robot></robot></oob>
 </template>
 </category>
 
 <category>
 <pattern>PT41TO50</pattern>
 <template>
-You scored:<get name="score"/><br/><br/>
-Others see you as fresh, lively, charming, amusing, practical and always interesting; someone who's constantly in the centre of attention, but sufficiently well-balanced not to let it go to their head.<br/><br/>They also see you as kind, considerate, and understanding; someone who'll always cheer them up and help them out.
+You scored:<get name="score"/>  
+Others see you as fresh, lively, charming, amusing, practical and always interesting; someone who's constantly in the centre of attention, but sufficiently well-balanced not to let it go to their head.  They also see you as kind, considerate, and understanding; someone who'll always cheer them up and help them out.
+<oob><robot></robot></oob>
 </template>
 </category>
 
 <category>
 <pattern>PT31TO40</pattern>
 <template>
-You scored:<get name="score"/><br/><br/>
-Others see you as sensible, cautious, careful and practical.  They see you as clever, gifted, or talented, but modest. Not a person who makes friends too quickly or easily, but someone who's extremely loyal to friends you do make and who expect the same loyalty in return.<br/><br/>Those who really get to know you realise it  takes a lot to shake your trust in your friends, but equally that it takes you a long time to get over it if that trust is ever broken.
+You scored:<get name="score"/>  
+Others see you as sensible, cautious, careful and practical.  They see you as clever, gifted, or talented, but modest. Not a person who makes friends too quickly or easily, but someone who's extremely loyal to friends you do make and who expect the same loyalty in return.  e who really get to know you realise it  takes a lot to shake your trust in your friends, but equally that it takes you a long time to get over it if that trust is ever broken.
+<oob><robot></robot></oob>
 </template>
 </category>
 
 <category>
 <pattern>PT21TO30</pattern>
 <template>
-You scored:<get name="score"/><br/><br/>
-Your friends see you as painstaking and fussy. They see you as very cautious, extremely careful, a slow and steady plodder. It would really surprise them if you ever did something impulsively or on the spur of the moment, expecting you to examine everything carefully from every angle and then usually decide against it.<br/><br/>They think this reaction is caused partly by your careful nature.
+You scored:<get name="score"/>  
+Your friends see you as painstaking and fussy. They see you as very cautious, extremely careful, a slow and steady plodder. It would really surprise them if you ever did something impulsively or on the spur of the moment, expecting you to examine everything carefully from every angle and then usually decide against it.  They think this reaction is caused partly by your careful nature.
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -551,8 +579,9 @@ Your friends see you as painstaking and fussy. They see you as very cautious, ex
 <category>
 <pattern>PTUNDER21</pattern>
 <template>
-You scored:<get name="score"/><br/><br/>
+You scored:<get name="score"/>  
 People think you are shy, nervous, and indecisive, someone who needs looking after, who always wants someone else to make the decisions and who doesn't want to get involved with anyone or anything!  They see you as a worrier who always sees problems that don't exist. Some people think you're boring. Only those who know you well know that you aren't. 
+<oob><robot></robot></oob>
 </template>
 </category>
 
@@ -644,7 +673,8 @@ People think you are shy, nervous, and indecisive, someone who needs looking aft
 		<li value="64"><set name="score">65</set></li> 
 		<li value="65"><set name="score">66</set></li> 
 	</condition>
-</think> 
+</think>
+<oob><robot></robot></oob>
 </template>
 </category>
 
