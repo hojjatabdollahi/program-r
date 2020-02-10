@@ -72,7 +72,7 @@
                         <oob>
                             <robot>
                                 <image>
-                                    <filename>palisade peach orchard.jpg</filename>
+                                    <filename>palisade_peach_orchard.jpg</filename>
                                   </image>
                                 <options>
                                     <option>YES</option>
@@ -259,7 +259,7 @@
                         <oob>
                             <robot>
                                 <image>
-                                    <filename>palisade peach orchard.jpg</filename>
+                                    <filename>palisade_peach_orchard.jpg</filename>
                                   </image>
                                 <options>
                                     <option>YES</option>
@@ -279,7 +279,7 @@
             <oob>
                 <robot>
                     <image>
-                        <filename>palisade peach orchard.jpg</filename>
+                        <filename>palisade_peach_orchard.jpg</filename>
                       </image>
                     <options>
                         <option>YES</option>

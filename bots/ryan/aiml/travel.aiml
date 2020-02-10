@@ -767,9 +767,7 @@
            <oob>
                <robot>
                    <image>
-                       <filename>
-                            sunset.jpg
-                       </filename>
+                       <filename>sunset.jpg</filename>
                        <duration>-1</duration>
                    </image>
                </robot>
@@ -801,9 +799,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   greatWall.jpg
-                               </filename>
+                               <filename>greatWall.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -816,9 +812,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   greatWall.jpg
-                               </filename>
+                               <filename>greatWall.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -831,9 +825,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   greatWall.jpg
-                               </filename>
+                               <filename>greatWall.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -846,9 +838,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   greatWall.jpg
-                               </filename>
+                               <filename>greatWall.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -861,9 +851,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   greatWall.jpg
-                               </filename>
+                               <filename>greatWall.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -895,9 +883,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   amazon.jpg
-                               </filename>
+                               <filename>amazon.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -910,9 +896,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   amazon.jpg
-                               </filename>
+                               <filename>amazon.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -925,9 +909,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   amazon.jpg
-                               </filename>
+                               <filename>amazon.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -940,9 +922,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   amazon.jpg
-                               </filename>
+                               <filename>amazon.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -955,9 +935,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   amazon.jpg
-                               </filename>
+                               <filename>amazon.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -990,9 +968,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   tokyo.jpg
-                               </filename>
+                               <filename>tokyo.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1005,9 +981,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   tokyo.jpg
-                               </filename>
+                               <filename>tokyo.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1020,9 +994,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   tokyo.jpg
-                               </filename>
+                               <filename>tokyo.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1035,9 +1007,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   tokyo.jpg
-                               </filename>
+                               <filename>tokyo.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1050,9 +1020,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   tokyo.jpg
-                               </filename>
+                               <filename>tokyo.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1084,9 +1052,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   paris.jpg
-                               </filename>
+                               <filename>paris.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1098,9 +1064,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   paris.jpg
-                               </filename>
+                               <filename>paris.jpg</filename>
                                <duration>-1</duration>
                             </image>
                        </robot>
@@ -1112,9 +1076,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   paris.jpg
-                               </filename>
+                               <filename>paris.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1127,9 +1089,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   paris.jpg
-                               </filename>
+                               <filename>paris.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1142,9 +1102,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   paris.jpg
-                               </filename>
+                               <filename>paris.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1175,9 +1133,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   alley.jpg
-                               </filename>
+                               <filename>alley.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1189,9 +1145,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   alley.jpg
-                               </filename>
+                               <filename>alley.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1203,9 +1157,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   alley.jpg
-                               </filename>
+                               <filename>alley.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1218,9 +1170,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   alley.jpg
-                               </filename>
+                               <filename>alley.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
@@ -1233,9 +1183,7 @@
                    <oob>
                        <robot>
                            <image>
-                               <filename>
-                                   alley.jpg
-                               </filename>
+                               <filename>alley.jpg</filename>
                                <duration>-1</duration>
                            </image>
                        </robot>
