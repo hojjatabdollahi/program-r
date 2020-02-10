@@ -27,7 +27,7 @@ This is a test made up of 10 simple multiple choice questions that will help you
 
 <category>
 <pattern>START</pattern>
-<that>TYPE START TO BEGIN THE TEST</that>
+<that>SAY START TO BEGIN THE TEST.</that>
 <template>
 <srai>ptquestion1</srai>
 </template>
@@ -53,11 +53,11 @@ There is no option "<get name="choice"/>" for this question. Please try again or
 <think>
 	<set name="topic">perstest</set>
 </think>
-1. When do you feel at your best?  
-A In the morning. 
-B During the afternoon and early evening. 
-C Late at night.  
-Please answer either A, B or C for question 1 or QUIT to finish the test.
+Question 1: When do you feel at your best?  
+A, In the morning. 
+B, During the afternoon and early evening. 
+C, Late at night.  
+Please answer either A, B, or C for question 1 or QUIT to finish the test.
 <oob><robot></robot></oob>
 </template>
 </category>
@@ -220,10 +220,10 @@ Please answer either A, B, C or D for question 4 or QUIT to finish the test.
 	<set name="topic">perstest</set>
 </think>
 5. When something really amuses you, you react with...  
-A a big appreciated laugh. 
-B a laugh, but not a loud one. 
-C a quiet chuckle. 
-D a sheepish smile.  
+A, a big appreciated laugh. 
+B, a laugh, but not a loud one. 
+C, a quiet chuckle. 
+D, a sheepish smile.  
 Please answer either A, B, C or D for question 5 or QUIT to finish the test.
 <oob><robot></robot></oob>
 </template>

@@ -15815,11 +15815,6 @@
         </template>
     </category>
     <category>
-        <pattern>A</pattern>
-        <template>A B C...<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>NOWHERE</pattern>
         <template>I have been to the middle of nowhere.<oob><robot></robot></oob>
         </template>
