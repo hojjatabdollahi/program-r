@@ -89,11 +89,17 @@ class NewsService(Service):
                 search = self.get_content_info(top_headlines)
                 search = self.clean_text(search)
             elif words[0] == 'NEXT':
-                # FIXME: On second iteration of next goes to UDC category, not here
                 top_headlines = self._api.headlines(country=question)
                 YLogger.debug(client_context, f"top_headlines: {top_headlines}")
 
                 self._current_article += 1
+                YLogger.debug(client_context, f"current_article index: {self._current_article}")
+                search = self.format_response(top_headlines)
+            elif words[0] == 'PREVIOUS':
+                top_headlines = self._api.headlines(country=question)
+                YLogger.debug(client_context, f"top_headlines: {top_headlines}")
+
+                self._current_article -= 1
                 YLogger.debug(client_context, f"current_article index: {self._current_article}")
                 search = self.format_response(top_headlines)
             else:

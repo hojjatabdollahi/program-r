@@ -37,15 +37,6 @@
         </template>
     </category>
 
-    <!-- <category>
-        <pattern># <set>NO</set> ^</pattern>
-        <that>SHOULD I READ THE FULL ARTICLE?</that>
-        <template>
-            Ok. What would you like to talk about?
-            <oob><robot></robot></oob>
-        </template>
-    </category> -->
-
     <category>
         <pattern>NO</pattern>
         <that>SHOULD I READ THE FULL ARTICLE?</that>
@@ -65,10 +56,20 @@
     </category>
 
     <category>
-        <pattern># <set>YES</set> ^</pattern>
+        <pattern># <set>NO</set> ^</pattern>
         <that>OK SHOULD WE GO ON TO THE NEXT ARTICLE?</that>
         <template>
-            <sraix service="NEWS">NEXT us</sraix>
+            If you want me to go back to the last article say, back.
+            Other wise we can talk about something else.
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>BACK</pattern>
+        <that>OTHER WISE WE CAN TALK ABOUT SOMETHING ELSE?</that>
+        <template>
+            <sraix service="NEWS">PREVIOUS us</sraix>
             <oob><robot></robot></oob>
         </template>
     </category>
