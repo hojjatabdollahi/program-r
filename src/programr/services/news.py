@@ -33,16 +33,18 @@ class NewsService(Service):
         else:
             self._api = api
 
+        self._current_article = 0
+
     def get_content_info(self, top_headlines):
-        content = top_headlines['articles'][0]['content']
+        content = top_headlines['articles'][self._current_article]['content']
         return content
 
     def get_title_info(self, top_headlines):
-        title = top_headlines['articles'][0]['title']
+        title = top_headlines['articles'][self._current_article]['title']
         return title
 
     def get_description_info(self, top_headlines):
-        description = top_headlines['articles'][0]['description']
+        description = top_headlines['articles'][self._current_article]['description']
         return description
 
     def clean_text(self, text):
@@ -51,6 +53,16 @@ class NewsService(Service):
         text.encode("ascii", errors="ignore")
         # summary = re.sub('\[.*\]', '', summary)
         return text
+
+    def format_response(self, top_headlines):
+        description = self.get_description_info(top_headlines)
+        title = self.get_title_info(top_headlines)
+        
+        # YLogger.debug(client_context, f"article description: {description}")
+
+        search = f"The title of the article is {title}, here is a quick summary...{description} ."
+        search += " Should I read the full article?"
+        return search
 
     def ask_question(self, client_context, question: str):
         try:
@@ -71,21 +83,19 @@ class NewsService(Service):
                 # YLogger.debug(client_context, f"search type: {type(search)}")
             elif words[0] == 'COUNTRY':
                 top_headlines = self._api.headlines(country=question)
-
-                description = self.get_description_info(top_headlines)
-                title = self.get_title_info(top_headlines)
-                
-                YLogger.debug(client_context, f"article description: {description}")
-
-                search = f"The title of the article is {title}, here is a quick summary...{description} ."
-                search += " Should I read the full article?"
+                search = self.format_response(top_headlines)
             elif words[0] == 'ARTICLE':
                 top_headlines = self._api.headlines(country=question)
                 search = self.get_content_info(top_headlines)
                 search = self.clean_text(search)
             elif words[0] == 'NEXT':
-                # TODO: Need to find a way to iterate through articles
-                search = ""
+                # FIXME: On second iteration of next goes to UDC category, not here
+                top_headlines = self._api.headlines(country=question)
+                YLogger.debug(client_context, f"top_headlines: {top_headlines}")
+
+                self._current_article += 1
+                YLogger.debug(client_context, f"current_article index: {self._current_article}")
+                search = self.format_response(top_headlines)
             else:
                 YLogger.error(client_context, "Unknown News API command [%s]", words[0])
                 search = ""

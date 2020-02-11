@@ -41,6 +41,15 @@
         <pattern># <set>NO</set> ^</pattern>
         <that>SHOULD I READ THE FULL ARTICLE?</that>
         <template>
+            Ok. What would you like to talk about?
+            <oob><robot></robot></oob>
+        </template>
+    </category> -->
+
+    <category>
+        <pattern># <set>NO</set> ^</pattern>
+        <that>SHOULD I READ THE FULL ARTICLE?</that>
+        <template>
             Ok should we go on to the next article?
             <oob><robot></robot></oob>
         </template>
@@ -48,12 +57,21 @@
 
     <category>
         <pattern># <set>YES</set> ^</pattern>
-        <that>Ok should we go on to the next article?</that>
+        <that>OK SHOULD WE GO ON TO THE NEXT ARTICLE?</that>
         <template>
             <sraix service="NEWS">NEXT us</sraix>
             <oob><robot></robot></oob>
         </template>
-    </category> -->
+    </category>
+
+    <category>
+        <pattern># <set>YES</set> ^</pattern>
+        <that>OK SHOULD WE GO ON TO THE NEXT ARTICLE?</that>
+        <template>
+            <sraix service="NEWS">NEXT us</sraix>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
 
 
 </aiml>

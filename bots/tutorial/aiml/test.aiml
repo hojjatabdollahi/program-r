@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<aiml version="1.0">
+
+    <category>
+        <pattern>HOW ARE YOU DOING ^</pattern>
+        <template>
+            <srai> <star/> </srai>
+        </template>
+    </category>
+
+    <category>
+        <patter>TODAY</pattern>
+        <template>I'm doing great today</template?
+    </category>
+
+    <category>
+        <patter>YESTERDAY</pattern>
+        <template>yESTERDAY was great</template?
+    </category>
+
+</aiml>
