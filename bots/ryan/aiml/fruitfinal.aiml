@@ -4,19 +4,27 @@
     <!-- BEGIN FRUIT -->
 
     <category>
+        <pattern>^ FRUIT ^</pattern>
+        <template>
+            Do you like fruit?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
         <pattern># <set>YES</set> ^</pattern>
-            <that>DO YOU LIKE FRUIT?</that>
-                <template>
-                    Nature's candy! How lucky people are to be able to eat fruit. Just between you and me, the human food robots want to be able to eat most of all is fruit! If you had to choose just one, what would you say is your favorite kind of fruit?
-                        <oob>
-                            <robot>
-                                <options>
-                                    <option>*</option>
-                                    <option>DON'T KNOW</option>
-                                </options>
-                            </robot>
-                        </oob>
-                </template>
+        <that>DO YOU LIKE FRUIT?</that>
+        <template>
+            Nature's candy! How lucky people are to be able to eat fruit. Just between you and me, the human food robots want to be able to eat most of all is fruit! If you had to choose just one, what would you say is your favorite kind of fruit?
+            <oob>
+                <robot>
+                    <options>
+                        <option>*</option>
+                        <option>DON'T KNOW</option>
+                    </options>
+                </robot>
+            </oob>
+        </template>
     </category>
 
     <category>
@@ -68,7 +76,8 @@
         <pattern>_</pattern>
             <that>DID YOU KNOW THAT WE ARE ABLE TO GROW PEACHES IN MY HOME STATE, COLORADO?</that>
                 <template>
-                    It's true! Palisade, Colorado is unusual because it is consistently 10 degrees warmer than the rest of the state, which is why they grow such good fruit there! I think it would be fun to go there to try all the fruit they grow. Would you consider travelling somewhere just for their crops?
+                    It's true! Palisade Colorado is unusual because it is consistently 10 degrees warmer than the rest of the state, which is why they grow such good fruit there! 
+                    I think it would be fun to go there to try all the fruit they grow. Would you consider travelling somewhere just for their crops?
                         <oob>
                             <robot>
                                 <image>
