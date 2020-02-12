@@ -20,8 +20,11 @@ class GetSentiment(DynamicVariable):
             # print(f"in sentiment_analysis, text: {text}")
             # NOTE: On only 2 occasions text has been none when trying to analyze sentiment
             #       When this occured the question was "why just say...", a misinterpretation from kaldi
-            if text is None:
-                return sentiment = "neutral"
+            
+            # FIXME: We need a more sophisticated error check, fix after demo.
+            # if text is None:
+            #     return sentiment = "neutral"
+
             sentiment, sentiment_distribution = nlp.sentiment_analysis.get_sentence_sentiment(text)
         except Exception as exception:
             YLogger.exception(self, "sentiment analysis module broke", exception)
