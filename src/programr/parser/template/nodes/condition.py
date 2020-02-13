@@ -408,7 +408,7 @@ class TemplateConditionNode(TemplateConditionVariable):
                 if condition.is_default() is False:
                     condition_value = condition.value.resolve(client_context)
 
-                    # Condition comparison is always case insensetive
+                    # Condition comparison is always case insensitive
                     if client_context.brain.nlp.tokenizer.compare(value.upper(), condition_value.upper()):
                         resolved = client_context.brain.nlp.tokenizer.words_to_texts([child_node.resolve(client_context) for child_node in condition.children])
                         YLogger.debug(client_context, "[%s] resolved to [%s]", self.to_string(), resolved)
