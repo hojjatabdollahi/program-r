@@ -12,6 +12,22 @@
     </category>
 
     <category>
+        <pattern>^ PEACHES ^</pattern>
+        <template>
+            Did you know that we are able to grow peaches in my home state, Colorado?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>^ PEACH ^</pattern>
+        <template>
+            Did you know that we are able to grow peaches in my home state, Colorado?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
         <pattern># <set>YES</set> ^</pattern>
         <that>DO YOU LIKE FRUIT?</that>
         <template>
