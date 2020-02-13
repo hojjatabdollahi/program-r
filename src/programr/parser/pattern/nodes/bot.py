@@ -3,6 +3,8 @@ from programr.parser.pattern.nodes.base import PatternNode
 from programr.parser.pattern.matcher import EqualsMatch
 from programr.parser.exceptions import ParserException
 
+DEBUG = False
+
 class PatternBotNode(PatternNode):
 
     def __init__(self, attribs, text, userid='*'):
@@ -54,7 +56,7 @@ class PatternBotNode(PatternNode):
 
         if client_context.brain.properties.has_property(self.property):
             if word == client_context.brain.properties.property(self.property):
-                YLogger.debug(client_context, "Found word [%s] as bot property", word)
+                if DEBUG: YLogger.debug(client_context, "Found word [%s] as bot property", word)
                 return EqualsMatch(True, word_no, word)
 
         return EqualsMatch(False, word_no)
