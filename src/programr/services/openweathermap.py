@@ -41,9 +41,9 @@ class WeatherService(Service):
     def get_status_info(self, observation):
         weather = observation.get_weather()
         print(f"weather: {weather.get_status()}")
-        if weather.get_status() == "clouds":
+        if weather.get_status() == "Clouds":
             return "cloudy weather"
-        elif weather.get_status() == "clear":
+        elif weather.get_status() == "Clear":
             return "clear sky"
         else:
             return str(weather.get_status())

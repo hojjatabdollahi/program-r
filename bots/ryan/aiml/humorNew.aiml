@@ -196,30 +196,21 @@
                 <li>I came up with a new word yesterday. Plagiarism.</li>
                 <li>You don't need a parachute to go skydiving. You need a parachute to go skydiving more than once.</li>
                 <li>What do you get when you cross a murderer and frosted flakes?</li>
-                <li>What do you get when you cross a country and an automobile?</li>
                 <li>What do you get when you cross a cheetah and a hamburger?</li>
                 <li>What do you get when you cross finals and a chicken?</li>
                 <li>What do you get when you cross a rabbit and a lawn sprinkler?</li>
-                <li>What do you get when you cross an excited alien and a chicken?</li>
-                <li>What do you get when you cross an alien and a chicken?</li>
                 <li>What do you get when you cross music and an automobile?</li>
                 <li>What do you get when you cross sour music and an assistant?</li>
                 <li>What do you get when you cross music and an assistant?</li>
                 <li>What do you get when you cross a poppy and electricity?</li>
                 <li>What do you get when you cross a dance and a cheetah?</li>
                 <li>What do you get when you cross a dance and a lemon?</li>
-                <li>What do you get when you cross a port and frosted flakes?</li>
-                <li>What do you get when you cross a port and a murderer?</li>
-                <li>What do you get when you cross a bank and a skunk?</li>
                 <li>What do you get when you cross a road and a strawberry?</li>
                 <li>What do you get when you cross a road and jelly?</li>
-                <li>What do you get when you cross a toad and a galaxy?</li>
                 <li>What do you get when you cross a dog and sandpaper?</li>
                 <li>What do you get when you cross a bug and a relative?</li>
                 <li>What do you get when you cross an ant and a rabbit?</li>
-                <li>What do you get when you cross a cat and a killer?</li>
                 <li>What do you get when you cross a cat and a lemon?</li>
-                <li>What do you get when you cross a cat and a band?</li>
                 <li>What do you get when you cross a pig and a ninja?</li>
                 <li>What do you get when you cross a cow and a lemon?</li>
                 <li>What do you get when you cross jam and a trout?</li>
@@ -245,7 +236,7 @@
     <category>
         <pattern>WHAT</pattern>
         <that>WHAT DO YOU GET WHEN YOU CROSS MUSIC AND AN AUTOMOBILE?</that>
-        <template>cartune.<oob><robot></robot></oob>
+        <template>car tune.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -274,18 +265,6 @@
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS A PORT AND A MURDERER?</that>
-        <template>serial killer.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS A PORT AND FROSTED FLAKES?</that>
-        <template>I don't know, but it's serial.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
         <that>WHAT DO YOU GET WHEN YOU CROSS A DOG AND SANDPAPER?</that>
         <template>I don't know, but it's ruff.<oob><robot></robot></oob>
         </template>
@@ -298,38 +277,8 @@
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS A COUNTRY AND AN AUTOMOBILE?</that>
-        <template>carnation.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS A TOAD AND A GALAXY?</that>
-        <template>star warts.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS A CAT AND A TUNE?</that>
-        <template>mew-sic.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
         <that>WHAT DO YOU GET WHEN YOU CROSS A CAT AND A LEMON?</that>
         <template>sour puss.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS A CAT AND A KILLER?</that>
-        <template>mew-rderer.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS A CAT AND A BAND?</that>
-        <template>mew-sic.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -359,7 +308,7 @@
     <category>
         <pattern>WHAT</pattern>
         <that>WHAT DO YOU GET WHEN YOU CROSS A DANCE AND A CHEETAH?</that>
-        <template>fastball.<oob><robot></robot></oob>
+        <template>a fast ball.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -370,32 +319,14 @@
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS A BANK AND A SKUNK?</that>
-        <template>dollars and scents.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
         <that>WHAT DO YOU GET WHEN YOU CROSS JAM AND A TROUT?</that>
         <template>jellyfish.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS AN ALIEN AND A CHICKEN?</that>
-        <template>eggs-traterrestrial.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
         <that>WHAT DO YOU GET WHEN YOU CROSS AN ANT AND A RABBIT?</that>
         <template>bugs bunny.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT</pattern>
-        <that>WHAT DO YOU GET WHEN YOU CROSS AN EXCITED ALIEN AND A CHICKEN?</that>
-        <template>eggs-cited eggs-traterrestrial.<oob><robot></robot></oob>
         </template>
     </category>
     <category>
@@ -418,7 +349,7 @@
     </category>
     <category>
         <pattern>DO YOU HAVE A SENSE OF HUMOUR</pattern>
-        <template><srai>JOKE</srai>
+        <template>Of course, let me show you with a joke...<srai>JOKE</srai>
         </template>
     </category>
     <category>
