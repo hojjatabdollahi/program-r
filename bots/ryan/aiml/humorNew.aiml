@@ -16,7 +16,6 @@
                 <li>Did you hear the one about the Mountain Goats in the Andes? It was Ba a a a a a d.</li>
                 <li>Two vultures boarded a plane, each carrying two dead raccoons. The  stewardess stops them and says "sorry sirs, only one carrion per passenger." </li>
                 <li>What did the Buddhist say to the Hot Dog Vendor?  "Make me one with everything." </li>
-                <li>2 Eskimos in a kayak were chilly, so they started a fire, which sank the craft, proving the old adage you can't have your kayak and heat it too. </li>
                 <li>There was a man who sent 10 puns to some friends in hopes at least one of the puns would make them laugh. Unfortunately no pun in ten did!!!</li>
                 <li>People with narrow minds usually have broad tongues.</li>
                 <li>He who laughs last didn't get the joke</li>
@@ -185,6 +184,8 @@
                 <li>The recommended age to have a Ouija Board is 8+ years old. So, you need to be 21 years old to drink alcohol and 8 to summon the devil.</li>
                 <li>Wine improves with age. I improve with wine.</li>
                 <li>How are stars like false teeth? They both come out at night!</li>
+                <li>Three seniors are out for a stroll. One of them remarks, "It's windy." Another replies, "No way. It's Thursday." The last one says, "Me too. Let's have a soda."</li>
+                <li>An elderly man was having hearing problems and went to see a specialist. The doctor fitted him with some hearing aids that brought his hearing back to full strength. After a few weeks the man came back to make sure the new equipment was working properly, which it was. The hearing specialist said,"“It all seems perfect. Your family should be delighted you can hear everything now." "Oh no," the man responded. "I haven't told any of them. I just sit quietly, listening carefully. I've changed my will four times."</li>
                 <li>Why do Retirees smile all the time? Because they can't hear a word you're saying!</li>
                 <li>The worst time to have a heart attack is during a game of charades.</li>
                 <li>I have the world's largest collection of seashells, you may have seen it, I keep it scattered on beaches all over.</li>
@@ -305,6 +306,12 @@
         <pattern>WHAT</pattern>
         <that>WHAT DO YOU GET WHEN YOU CROSS A TOAD AND A GALAXY?</that>
         <template>star warts.<oob><robot></robot></oob>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT</pattern>
+        <that>WHAT DO YOU GET WHEN YOU CROSS A CAT AND A TUNE?</that>
+        <template>mew-sic.<oob><robot></robot></oob>
         </template>
     </category>
     <category>

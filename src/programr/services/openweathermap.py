@@ -40,6 +40,7 @@ class WeatherService(Service):
 
     def get_status_info(self, observation):
         weather = observation.get_weather()
+        print(f"weather: {weather}")
         return str(weather.get_status())
 
     def ask_question(self, client_context, question: str):
