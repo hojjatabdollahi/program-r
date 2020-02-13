@@ -40,8 +40,13 @@ class WeatherService(Service):
 
     def get_status_info(self, observation):
         weather = observation.get_weather()
-        print(f"weather: {weather}")
-        return str(weather.get_status())
+        print(f"weather: {weather.get_status()}")
+        if weather.get_status() == "clouds":
+            return "cloudy weather"
+        elif weather.get_status() == "clear":
+            return "clear sky"
+        else:
+            return str(weather.get_status())
 
     def ask_question(self, client_context, question: str):
         try:
