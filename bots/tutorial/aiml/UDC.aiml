@@ -10,9 +10,6 @@
     <!-- Last modified 11/28/2011 -->
     <!-- -->
 
-
-
-
     <category>
         <pattern>Hello *</pattern>
         <template>
@@ -28,8 +25,6 @@
             <oob><robot></robot></oob>
         </template>
     </category>
-
-
 </aiml>
 
 

@@ -5,17 +5,18 @@
         <pattern>HOW ARE YOU DOING ^</pattern>
         <template>
             <srai> <star/> </srai>
+            <oob><robot></robot></oob>
         </template>
     </category>
 
     <category>
         <patter>TODAY</pattern>
-        <template>I'm doing great today</template?
+        <template>I'm doing great today<oob><robot></robot></oob></template>
     </category>
 
     <category>
         <patter>YESTERDAY</pattern>
-        <template>yESTERDAY was great</template?
+        <template>Yesterday was great<oob><robot></robot></oob></template>
     </category>
 
 </aiml>

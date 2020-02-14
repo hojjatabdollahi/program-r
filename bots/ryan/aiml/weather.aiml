@@ -63,7 +63,7 @@
     <category>
         <pattern>WHAT IS TODAY S FORECAST</pattern>
         <template>
-            In Denver, Colorado <sraix service="WEATHER">STATUS Denver, USA</sraix> is expected sometime today.
+            In Denver, Colorado <sraix service="WEATHER">STATUS Denver, USA</sraix> expected sometime today.
             <oob><robot></robot></oob>
         </template>
     </category>
