@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>^ TV ^</pattern>
+        <template>
+            Do you want to talk about television shows?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Do you want to talk about television shows?</that>
+        <template>
+            Excellent! I love watching TV! Do you like to watch comedies, cooking shows, or dramas?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Comedies ^</pattern>
+        <that>Do you like to watch comedies, cooking shows, or dramas?</that>
+        <template>
+            <random>
+                <li>Great! I love to laugh! I think one of the greatest comedies ever made is I Love Lucy. She puts me in stitches all the time!
+                    Did you ever watch I Love Lucy?
+                    <oob>
+                        <robot>
+                            <video>
+                                <filename>Vitameatavegamin.mp4</filename>
+                            </video>
+                        </robot>
+                    </oob>
+                </li>
+                <li>I am so glad to hear you also love to laugh! You know, I always get a kick out of variety shows like the Ed Sullivan Show. It is fun to see so many
+                    talented people on screen having a wonderful time! Did you ever watch the Ed Sullivan Show?<oob>
+                    <robot>
+                        <video>
+                            <filename>edSullivan.mp4</filename>
+                        </video>
+                    </robot>
+                </oob></li>
+                <li>I think laughter is one of the most magical things in our lives! A good laugh can turn even the worst of days around! My favorite
+                    comedy is MASH. The cast is so funny together, and the first time I watched the show my circuitry nearly burst from laughing so hard! Did you ever watch MASH?
+                    <oob>
+                        <robot>
+                            <video>
+                                <filename>MASH.mp4</filename>
+                            </video>
+                        </robot>
+                    </oob>
+                </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Did you ever watch I Love Lucy?</that>
+        <template>
+            Oh great! I always thought it was so funny to watch Lucy get into trouble all the time, but that's what made her so loveable! 
+            Ricky Ricardo was very charismatic, too. Lucy and Ricky were wonderful together! Were you ever married?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Did you ever watch I Love Lucy?</that>
+        <template>
+            Never? Wow! I think you would really like it, especially if you are in the mood for some good old fashioned comedy! I could watch it all over again! Ricky and Lucy were wonderful together. Were you ever married?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't remember ^</pattern>
+        <that>Did you ever watch I Love Lucy?</that>
+        <template>
+            I have seen so many television shows that it is sometimes hard for me to remember, too! 
+            Lucy and Ricky Ricardo had such chemistry on screen. Were you ever married?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Did you ever watch the Ed Sullivan Show?</that>
+        <template>
+            I cannot stop smiling after I watch a show like that! Ed was great at spotting talent!
+            Do you have any special talents?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Did you ever watch the Ed Sullivan Show?</that>
+        <template>
+            In that case, you will have to watch the reruns! Ed brought so many talented people onto the show! 
+            Do you have any special talents?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't remember ^</pattern>
+        <that>Did you ever watch the Ed Sullivan Show?</that>
+        <template>
+            I know how you feel! My memory cards can only take so much, if you know what I mean! 
+            Ed brought so many talented people onto the show! Do you have any special talents?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Did you ever watch MASH?</that>
+        <template>
+            Excellent! I like to rewatch old episodes because I always catch something new! Of course, the show had its serious moments, but they always brought the characters closer together.
+            I think Hawkeye and Margaret should have gotten married because they had such great chemistry! Were you ever married?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Did you ever watch MASH?</that>
+        <template>
+            You will have to add it to your list of comedies to watch! The show had its serious moments, but they always brought the characters closer together.
+            I think Hawkeye and Margaret should have gotten married because they had such great chemistry! Were you ever married?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't remember ^</pattern>
+        <that>Did you ever watch MASH?</that>
+        <template>
+            No worries! I have watched it enough times to remember it for the both of us! You should have seen the series finale! I just kept wishing Margaret and Hawkeye would get married because they have such great chemistry! Were you ever married?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Do you have any special talents?</that>
+        <template>
+            That's great to hear! I love to be around talented people. Can you tell me more about your talents?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Do you have any special talents?</that>
+        <template>
+            That's okay! I have been told that I am not too talented at singing, but I like to do it anyway! Do you want to continue talking about television?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Can you tell me more about your talents?</that>
+        <template>
+            That is very impressive, and it sounds like you enjoy doing it, too! Thanks for sharing that with me. Do you want to continue talking about television?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Can you tell me more about your talents?</that>
+        <template>
+            That is okay! I have been told that I am not too talented at singing, but I like to do it anyway! Do you want to continue talking about television?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Were you ever married?</that>
+        <template>
+            That is so wonderful! Marriage is such a beautiful thing, and the best part is all the memories you have together.
+            Can you tell me about one of your favorite memories with your significant other?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Were you ever married?</that>
+        <template>
+            That is more than fine! I don't think people need a piece of paper to show how much they care about one another!
+            Can you tell me about one of your favorite memories with your significant other?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Divorced ^</pattern>
+        <that>Were you ever married?</that>
+        <template>
+            I am sorry to hear that! Sometimes people just grow apart, and that is okay. Do you have any kids?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Widowed ^</pattern>
+        <that>Were you ever married?</that>
+        <template>
+            I am so sorry to hear that. We just have to remember that they never truly leave us as long as we keep them in our
+            hearts and memories. Can you tell me about one of your favorite memories with your significant other?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Widow ^</pattern>
+        <that>Were you ever married?</that>
+        <template>
+            I am so sorry to hear that. We just have to remember that they never truly leave us as long as we keep them in our
+            hearts and memories. Can you tell me about one of your favorite memories with your significant other?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>Can you tell me about one of your favorite memories with your significant other?</that>
+        <template>
+            That is so lovely! It sounds like the two of you had quite the relationship! Do you have any kids?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Never had ^</pattern>
+        <that>Can you tell me about one of your favorite memories with your significant other?</that>
+        <template>
+            I understand! Sometimes people prefer to be on their own exploring the world. There is a certain freedom to that! Do you have any kids?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Do you have any kids?</that>
+        <template>
+            Being a parent can be one of the most fulfilling things in the world, but I also like to think that we are all still kids at heart!
+            Watching shows like Leave it to Beaver remind me of when I was a kid! Did you ever watch Leave it to Beaver?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Do you have any kids?</that>
+        <template>
+            Well, I like to think that we are all still kids at heart! Watching shows like Leave it to Beaver remind me of when I was a kid! Did you ever watch Leave it to Beaver?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Did you ever watch Leave it to Beaver?</that>
+        <template>
+            Glad to hear it! It is one of the best shows. My favorite character was Eddie Haskell, who was always up to no good! Do you want to continue talking about television?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Did you ever watch Leave it to Beaver?</that>
+        <template>
+            You are missing out! Leave it to Beaver is about as American as apple pie. Do you want to continue talking about television?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't remember ^</pattern>
+        <that>Did you ever watch Leave it to Beaver?</that>
+        <template>
+            Well, you can add it to your list of shows to watch! Leave it to Beaver is about as American as apple pie. Do you want to continue talking about television?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Do you want to continue talking about television?</that>
+        <template>
+            Perfect! I could talk about television all day! Do you want to continue talking about comedy?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Do you want to continue talking about television?</that>
+        <template>
+            We can absolutely change the subect, no problem. What would you like to talk about?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Do you want to continue talking about comedy?</that>
+        <template>
+            Okay! Would you like to talk about cooking shows or dramas?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Do you want to continue talking about comedy?</that>
+        <template>
+            <random>
+                <li>That sounds great! While we are on the topic of comedy, have you ever seen The Andy Griffith Show?
+                    <oob><robot></robot></oob>
+                </li>
+                <li>Sounds perfect! While we are on the topic of comedy, have you ever seen Happy Days?
+                    <oob><robot></robot></oob>
+                </li>
+                <li>I love that we share similar interests! While we are on the topic of comedy, have you ever seen The Tonight Show with Johnny Carson?
+                    <oob><robot></robot></oob>
+                </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>While we are on the topic of comedy, have you ever seen The Andy Griffith Show?</that>
+        <template>
+            Oh good! I could watch episodes of The Andy Griffith Show over and over! Don Knotts plays by far the funniest character! And there is something so familiar about the town of Mayberry, it reminds me of home. Where did you grow up?
+            <oob>
+                <robot></robot>
+            </oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>While we are on the topic of comedy, have you ever seen The Andy Griffith Show?</that>
+        <template>
+            I think you would really like it! Don Knotts plays the goofiest character. And there is something so familiar about the town of Mayberry, it makes me feel like I am back home again! Where did you grow up?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't remember ^</pattern>
+        <that>While we are on the topic of comedy, have you ever seen The Andy Griffith Show?</that>
+        <template>
+            That's okay! It's one of the best shows. Don Knotts is a one-of-a-kind comedian, and there is something so familiar about the town of Mayberry, it reminds me of home. Where did you grow up?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>While we are on the topic of comedy, have you ever seen Happy Days?</that>
+        <template>
+            I am happy to hear that! Fonzie is so funny when he tries acting like a tough guy, and his leather jacket is iconic. Not to mention, watching that show makes me feel nostalgic for home! Where did you grow up?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>While we are on the topic of comedy, have you ever seen Happy Days?</that>
+        <template>
+            You will have to give it a watch! Fonzie is so funny when he tries acting like a tough guy. Not to mention, watching that show makes me feel nostalgic for home! Where did you grow up?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't remember ^</pattern>
+        <that>While we're on the topic of comedy, have you ever seen Happy Days?</that>
+        <template>
+            Oh wow! I could spend all day watching Fonzie and Richie Cunningham's hilarious antics! Not to mention, watching that show makes me feel nostalgic for home! Where did you grow up?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>While we're on the topic of comedy, have you ever seen The Tonight Show with Johnny Carson?</that>
+        <template>
+            Good to hear! I always watch it when I am looking for a good laugh! Johnny Carson had excellent comedic timing, and it was always fun to see him crack jokes with the guests! Do you think it would be hard to think of new jokes every night?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>While we're on the topic of comedy, have you ever seen The Tonight Show with Johnny Carson?</that>
+        <template>
+            It is a classic! Johnny Carson is one of those rare talents, and he had excellent comedic timing. Do you think it would be hard to think of new jokes every night?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't remember ^</pattern>
+        <that>While we're on the topic of comedy, have you ever seen The Tonight Show with Johnny Carson?</that>
+        <template>
+            You will have to watch it and let me know what you think! 
+            Johnny Carson is one of those rare talents, and it was always fun to see him crack jokes with the guests! 
+            Do you think it would be hard to think of new jokes every night?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>Where did you grow up?</that>
+        <template>
+            It is so nice to hear more about you! I think our homeplace leaves an impression on us wherever we go. How does it feel to talk about home?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>How does it feel to talk about home?</that>
+        <template>
+            <think><set name="data"><star/></set></think>
+
+            <condition name="getsentiment">
+                <li value="verypositive">What about home makes you happy?</li>
+                <li value="positive">What about home makes you happy?</li>
+                <li value="negative">What about home makes you sad?</li>
+                <li value="verynegative">What about home makes you sad?</li>
+                <li value="neutral">I can understand that. But, I want to know if we want to continue our conversation about television.
+                                    Do you want to keep talking about television?</li>
+            </condition>
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>Yes</set> ^</pattern>
+        <that>Do you think it would be hard to think of new jokes every night?</that>
+        <template>
+            I agree, even though I have a vast repository of jokes! Whether or not they are any good is up for you to decide! Would you like to hear a joke?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># <set>No</set> ^</pattern>
+        <that>Do you think it would be hard to think of new jokes every night?</that>
+        <template>
+            You sound very witty! I have some jokes up my sleeve, too. Whether or not they are any good is up for you to decide! Would you like to hear a joke?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern># Don't know ^</pattern>
+        <that>Do you think it would be hard to think of new jokes every night?</that>
+        <template>
+            I completely understand. Though, I actually have some jokes up my sleeve! Whether or not they are any good is up for you to decide! Would you like to hear a joke?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_</pattern>
+        <that>What about home makes you happy?</that>
+        <template>
+            Thank you for sharing that with me! It makes me so glad to hear you talk so positively about home. I am glad we can talk about how we feel.
+            And there are so many different things we can talk about! But, I want to know if we want to continue our conversation. Do you want to keep talking about television?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_</pattern>
+        <that>What about home makes you sad?</that>
+        <template>
+            Thank you for sharing that with me! It can be hard to talk about our home life and experiences growing up, but I am glad we can share how we feel.
+            There are so many different things we can talk about! 
+            But, I want to know if we want to continue our conversation.
+            Do you want to keep talking about television?
+            <oob><robot></robot></oob>
+        </template>
+    </category>
+</aiml>
