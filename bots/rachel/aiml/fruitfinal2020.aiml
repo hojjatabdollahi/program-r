@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     <category>
         <pattern># <set>YES</set> ^</pattern>
@@ -587,31 +588,9 @@
 
     <category>
         <pattern>*</pattern>
-        <that>I think it changed me.</that>
+        <that>I think it changed me...</that>
         <template>
             There's pre-starfruit Ryan and then there's post-starfruit Ryan.
-            <oob>
-                <robot></robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>And they are not the same.</that>
-        <template>
-            I'm totally joking!... I think.
-            <oob>
-                <robot></robot>
-            </oob>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>Or, atleast I think I am.</that>
-        <template>
-            And buddha's hand citrus. Don't even get me started on that!
             <oob>
                 <robot></robot>
             </oob>

@@ -29,7 +29,7 @@
         <pattern># <set>YES</set> ^</pattern>
         <that>Do you like Mexican food?</that>
         <template>
-            <think><set name="topic">mexican food</set></think>
+            <!-- <think><set name="topic">mexican food</set></think> -->
 
             <random>
                 <li>Have I told you about the best street taco I've ever had?</li>
@@ -41,7 +41,7 @@
         </template>
     </category>
 
-    <topic name="mexican food">
+    <!-- <topic name="mexican food"> -->
         <category>
             <pattern># <set>YES</set> ^</pattern>
             <that>You know that sound that fajita's make when they come out of the kitchen sizzling?</that>
@@ -608,7 +608,7 @@
 
         <category>
             <pattern>* PROMISE *</pattern>
-            <that></that>
+            <that>Just promise me that you'll think about asking about me getting more noises?</that>
             <template>
                 Thanks,
                 <get name="name" />. You're a good friend to annoying robots everywhere.
@@ -1424,5 +1424,5 @@
         </category>
 
         <!-- End Mexican Food -->
-</topic>
+<!-- </topic> -->
 </aiml>

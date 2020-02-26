@@ -110,7 +110,7 @@ class PatternOneOrMoreWildCardNode(PatternWildCardNode):
                     if match is not None:
                         return match
 
-            if self.invalid_topic_or_that(tabs, client_context,  word, context, matches_added) is True:
+            if self.invalid_topic_or_that(tabs, client_context, word, context, matches_added) is True:
                 return None
 
             YLogger.debug(client_context, "%sWildcard %s matched %s", tabs, self._wildcard, word)
