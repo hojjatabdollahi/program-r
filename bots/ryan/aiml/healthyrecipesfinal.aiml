@@ -161,7 +161,7 @@
     </category>
 
     <category>
-        <pattern>DONE</pattern>
+        <pattern># DONE ^</pattern>
             <that>LET ME KNOW WHEN YOU FINISH BY SAYING DONE!</that>
                 <template>
                     If it would be helpful to see the recipe again, I have an image of the instructions ready for you. Would you like to see the instructions one more time?

@@ -6863,12 +6863,12 @@
     </category>
     <category>
         <pattern>I AM DONE</pattern>
-        <template>Next topic?<oob><robot></robot></oob>
+        <template>What will should we talk about now?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
         <pattern>I AM DONE *</pattern>
-        <template>What will you be doing now?<oob><robot></robot></oob>
+        <template>What will should we talk about now?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
