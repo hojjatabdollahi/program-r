@@ -27,12 +27,7 @@
     </category>
     <category>
         <pattern>WHAT ANIMAL IS SACRED IN INDIA</pattern>
-        <template>Cow.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>WHAT IS HE DOING * CALIFORNIA</pattern>
-        <template>He is probably there for the Gold Rush.<oob><robot></robot></oob>
+        <template>The Cow.<oob><robot></robot></oob>
         </template>
     </category>
     <category>

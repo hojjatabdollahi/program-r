@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+
+    
+
     <category>
         <pattern>*</pattern>
         <that>How do you feel about Chinese Food?</that>
@@ -13,11 +16,11 @@
                 <li value="negative">Let's skip it! How do you feel about Indian food?</li>
                 <li value="verynegative">Let's skip it! How do you feel about Indian food?</li></condition>
 
-            <oob>
-                <robot></robot>
-            </oob>
+            <oob><robot></robot></oob>
         </template>
     </category>
+
+    
 
     <!-- BEGIN CHINESE FOOD SUBTOPIC -->
     <category>

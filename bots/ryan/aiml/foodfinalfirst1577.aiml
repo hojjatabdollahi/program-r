@@ -2,9 +2,8 @@
 <aiml version="2.0">
     
     <!-- FOOD -->
-
     <category>
-        <pattern>^ FOOD ^</pattern>
+        <pattern>FOOD</pattern>
             <template>
                 <random>    
                     <li>Should we talk about your favorite beverage?</li>
