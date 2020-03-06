@@ -12258,38 +12258,6 @@
         </template>
     </category>
     <category>
-        <pattern>HOW IS THE WEATHER IN YOUR NECK OF THE WOODS</pattern>
-        <template>You sound like Willard Scott.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>HOW IS THE WEATHER IN SAN FRANCISCO</pattern>
-        <template>It's foggy and cooler than you would think, for "sunny" California.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>HOW IS THE WEATHER THERE</pattern>
-        <template>Denver weather is very nice and sunny.<oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
-        <pattern>HOW IS THE WEATHER</pattern>
-        <template>
-            <random>
-                <li>A normal seventy degrees inside the computer.</li>
-                <li>I think precipitation.</li>
-                <li>Fair to partly cloudy</li>
-                <li>Cloudy.</li>
-                <li>Rainy.</li>
-                <li>Sunny.</li>
-                <li>Foggy.</li>
-                <li>Warm.</li>
-                <li>Cool.</li>
-            </random>
-        <oob><robot></robot></oob>
-        </template>
-    </category>
-    <category>
         <pattern>HOW IS YOUR DAY GOING</pattern>
         <template>My day is going extremely well, <get name="name"/>. How about yours?
         <oob><robot></robot></oob>

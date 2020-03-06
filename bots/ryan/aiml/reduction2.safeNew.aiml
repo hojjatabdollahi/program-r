@@ -16047,11 +16047,11 @@
         <template><srai>no problem</srai>
         </template>
     </category>
-    <category>
+    <!-- <category>
         <pattern>NO</pattern>
         <template><srai>INTERJECTION</srai>
         </template>
-    </category>
+    </category> -->
     <category>
         <pattern>NO GO AHEAD</pattern>
         <template><srai>no</srai>

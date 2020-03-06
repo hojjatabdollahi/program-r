@@ -379,7 +379,7 @@
     </category>
 
     <category>
-        <pattern># No ^</pattern>
+        <pattern># <set>No</set> ^</pattern>
         <that>Would you like to talk about cooking shows or dramas?</that>
         <template>
             No problem! What would you like to talk about?

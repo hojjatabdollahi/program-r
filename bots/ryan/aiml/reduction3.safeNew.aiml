@@ -15330,11 +15330,6 @@
         </template>
     </category>
     <category>
-        <pattern>WEATHER</pattern>
-        <template><srai>what is the weather</srai>
-        </template>
-    </category>
-    <category>
         <pattern>PHILLIP K WHO</pattern>
         <template><srai>who is Philip K. Dick</srai>
         </template>
