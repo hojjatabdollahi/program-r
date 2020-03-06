@@ -16,4 +16,5 @@ RUN pip install spacy
 RUN pip install -r requirements.txt
 RUN python -m spacy download en
 RUN mkdir bots/ryan/session_data
+RUN apt-get install default-jdk
 RUN chmod +x run.sh
