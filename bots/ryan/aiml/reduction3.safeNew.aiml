@@ -6526,7 +6526,7 @@
     </category>
     <category>
         <pattern>WHAT SHALL WE TALK ABOUT</pattern>
-        <template>I will talk about anything with you?<oob><robot></robot></oob>
+        <template><srai>WHAT DO YOU WANT TO TALK ABOUT</srai>
         </template>
     </category>
     <category>
@@ -8241,7 +8241,7 @@
     </category>
     <category>
         <pattern>WHAT CAN WE TALK ABOUT</pattern>
-        <template><srai>what is your favorite subject</srai>
+        <template><srai>WHAT DO YOU WANT TO TALK ABOUT</srai>
         </template>
     </category>
     <category>

@@ -16,7 +16,6 @@
     <category>
         <pattern>RANDOM PICKUP LINE</pattern>
         <template>
-            <!-- <think><set name="topic">*</set></think> -->
             <random>
                 <li><srai>AGE INQUIRY</srai></li>
                 <!-- <li><srai>BIRTHDAY INQUIRY</srai></li> -->
