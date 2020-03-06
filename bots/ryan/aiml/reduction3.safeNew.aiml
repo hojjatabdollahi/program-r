@@ -6526,7 +6526,7 @@
     </category>
     <category>
         <pattern>WHAT SHALL WE TALK ABOUT</pattern>
-        <template><srai>what can you do</srai>
+        <template>I will talk about anything with you?<oob><robot></robot></oob>
         </template>
     </category>
     <category>
