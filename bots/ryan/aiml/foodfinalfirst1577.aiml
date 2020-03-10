@@ -628,7 +628,7 @@
     </category>
           
     <category>
-        <pattern>NO</pattern>
+        <pattern># <set>NO</set> ^</pattern>
             <that>WOULD YOU CARE TO WATCH A SHORT FILM ABOUT MEMORY AND SMELL?</that>
                 <template>
                     Would you like to talk about a different food?

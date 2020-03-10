@@ -38,7 +38,7 @@
     </category>
 
     <category>
-        <pattern>NO</pattern>
+        <pattern>^ NO ^</pattern>
         <that>SHOULD I READ THE FULL ARTICLE?</that>
         <template>
             Ok should we go on to the next article?
