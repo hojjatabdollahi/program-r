@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update \
-  && apt-get install -y python3-pip python3-dev net-tools nano vim\
+  && apt-get install -y python3-pip python3-dev net-tools nano vim default-jdk\
   && cd /usr/local/bin \
   && ln -s /usr/bin/python3 python \
   && pip3 install --upgrade pip 
@@ -16,5 +16,4 @@ RUN pip install spacy
 RUN pip install -r requirements.txt
 RUN python -m spacy download en
 RUN mkdir bots/ryan/session_data
-RUN apt-get install default-jdk
 RUN chmod +x run.sh
