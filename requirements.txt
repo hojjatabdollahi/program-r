@@ -22,7 +22,7 @@ fbchat==1.3.9
 beautifulsoup4==4.6.3
 zmq
 pycorenlp
-tensorflow
+tensorflow==1.12
 tensorflow-hub
 pymongo
 Flask
